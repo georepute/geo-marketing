@@ -1,0 +1,239 @@
+/* ============================================================================
+   GeoRepute — "Quiet Authority" design tokens
+   Plan §5. Single source of truth: these custom properties drive both Tailwind
+   utilities (via @theme in globals.css) and raw SVG fills in components/viz/.
+   Brief §16: premium executive. No generic SaaS gradients, no excessive colour,
+   no playful illustration.
+
+   THEMING
+   Both themes are first-class peers. Tokens are declared per theme on
+   [data-theme]; nothing outside this file may hardcode a colour. The root
+   attribute is stamped pre-hydration (see ThemeScript) so there is no flash.
+
+   CONTRAST
+   Every text token is verified against the surfaces it can sit on:
+     · body / caption / label  ≥ 4.5:1   (WCAG AA)
+     · display and 24px+       ≥ 3:1
+   Ratios are noted inline. If you change a value, recompute it.
+   ========================================================================= */
+
+/* ============================================================================
+   DARK — the command environment. Default.
+   ========================================================================= */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* --- Surfaces ---------------------------------------------------------- */
+  --gr-surface-canvas: #0a0910;
+  --gr-surface-raised: #131019;
+  --gr-surface-panel: #1a1622;
+  --gr-surface-inset: #221d2c;
+  --gr-line-subtle: #262031;
+  --gr-line-strong: #38304a;
+
+  /* --- Text -------------------------------------------------------------- */
+  --gr-text-primary: #f3f0f7; /* 17.6:1 on canvas */
+  --gr-text-secondary: #a79fb8; /* 7.84:1 on canvas · 7.03:1 on panel */
+  /* Was #6e667f — 3.28:1 on panel, failed AA for 11px labels and 13px
+     captions, which is most of the small text in the product. Lightened to
+     clear 4.5:1 on the LIGHTEST surface it sits on (inset). */
+  --gr-text-tertiary: #8c8499; /* 5.54:1 canvas · 4.97:1 panel · 4.59:1 inset */
+  --gr-text-inverse: #0a0910;
+
+  /* --- Brand (the brief's deep violet) ----------------------------------- */
+  --gr-brand-900: #22093a;
+  --gr-brand-700: #3f1566;
+  --gr-brand-500: #6b32a3;
+  --gr-brand-400: #8b54c4;
+  --gr-brand-300: #b189de; /* 7.2:1 on canvas — safe for link text */
+
+  /* --- Accent (the brief's gold). SIGNAL ONLY — never decorative. -------- */
+  --gr-accent-500: #dfa22c;
+  --gr-accent-300: #f0c56a;
+
+  /* --- Semantic: muted, institutional. No pure hues. --------------------- */
+  --gr-critical: #e0776a; /* raised from #c9564a for 4.5:1 as text */
+  --gr-warning: #d9a047;
+  --gr-neutral: #97a0ac;
+  --gr-positive: #58b394;
+  --gr-info: #78a4d6;
+
+  /* --- Confidence: colour + glyph, never colour alone (§15.3) ------------ */
+  --gr-conf-high: #58b394;
+  --gr-conf-medium: #d9a047;
+  --gr-conf-directional: #78a4d6;
+  --gr-conf-insufficient: #8c8499;
+
+  /* --- Elevation: 1px border + ONE soft drop. Never stacked. ------------- */
+  --gr-elev-1: 0 1px 2px -1px rgb(0 0 0 / 0.4);
+  --gr-elev-2: 0 8px 24px -14px rgb(0 0 0 / 0.7);
+  --gr-elev-3: 0 24px 48px -20px rgb(0 0 0 / 0.8);
+
+  /* --- Focus ring -------------------------------------------------------- */
+  --gr-focus: #c9a7ea;
+
+  /* --- Ambient field (Phase E imagery). Theme-aware, token-driven. ------- */
+  --gr-grid-dot: rgb(255 255 255 / 0.05);
+  --gr-mesh-a: color-mix(in oklab, var(--gr-brand-500) 26%, transparent);
+  --gr-mesh-b: color-mix(in oklab, var(--gr-accent-500) 11%, transparent);
+  --gr-mesh-c: color-mix(in oklab, var(--gr-info) 13%, transparent);
+  --gr-noise-opacity: 0.032;
+  --gr-scrim: linear-gradient(
+    180deg,
+    var(--gr-surface-canvas) 0%,
+    color-mix(in oklab, var(--gr-surface-canvas) 55%, transparent) 45%,
+    var(--gr-surface-canvas) 100%
+  );
+}
+
+/* ============================================================================
+   LIGHT — warm neutral, never stark white. Same institutional restraint:
+   paper and ink, not a bright marketing page.
+   ========================================================================= */
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* Warm off-white. #fbfaf8 rather than #ffffff so long reading stays calm
+     and panels can sit *above* the canvas without needing a shadow. */
+  --gr-surface-canvas: #faf8f5;
+  --gr-surface-raised: #ffffff;
+  --gr-surface-panel: #ffffff;
+  --gr-surface-inset: #f2efea;
+  --gr-line-subtle: #e4dfd8;
+  --gr-line-strong: #cdc5ba;
+
+  --gr-text-primary: #1a1622; /* 15.9:1 on canvas */
+  --gr-text-secondary: #514a5c; /* 8.1:1 on canvas · 8.6:1 on white */
+  --gr-text-tertiary: #6e6678; /* 5.6:1 on canvas · 4.9:1 on inset */
+  --gr-text-inverse: #faf8f5;
+
+  /* Violet holds up on paper when darkened — the 300 step becomes the
+     *lightest* usable value here, so the ramp inverts in practice. */
+  --gr-brand-900: #f0eaf7;
+  --gr-brand-700: #e0d3ef;
+  --gr-brand-500: #6b32a3; /* 7.1:1 on canvas */
+  --gr-brand-400: #592a89;
+  --gr-brand-300: #46206c; /* link text — 9.8:1 */
+
+  /* Gold is near-invisible on white; darkened to a bronze that still reads
+     as the same signal colour. */
+  --gr-accent-500: #9a6b12; /* 4.7:1 on canvas */
+  --gr-accent-300: #7d560c;
+
+  --gr-critical: #a8352a; /* 6.0:1 */
+  --gr-warning: #8a5b12; /* 5.6:1 */
+  --gr-neutral: #5d646d; /* 6.3:1 */
+  --gr-positive: #1f6b52; /* 6.1:1 */
+  --gr-info: #2c5c8f; /* 6.4:1 */
+
+  --gr-conf-high: #1f6b52;
+  --gr-conf-medium: #8a5b12;
+  --gr-conf-directional: #2c5c8f;
+  --gr-conf-insufficient: #6e6678;
+
+  /* Light-theme shadows must be far softer or the page looks bruised. */
+  --gr-elev-1: 0 1px 2px -1px rgb(26 22 34 / 0.08);
+  --gr-elev-2: 0 6px 20px -12px rgb(26 22 34 / 0.18);
+  --gr-elev-3: 0 20px 40px -18px rgb(26 22 34 / 0.22);
+
+  --gr-focus: #6b32a3;
+
+  --gr-grid-dot: rgb(26 22 34 / 0.055);
+  --gr-mesh-a: color-mix(in oklab, var(--gr-brand-500) 12%, transparent);
+  --gr-mesh-b: color-mix(in oklab, var(--gr-accent-500) 8%, transparent);
+  --gr-mesh-c: color-mix(in oklab, var(--gr-info) 9%, transparent);
+  --gr-noise-opacity: 0.022;
+  --gr-scrim: linear-gradient(
+    180deg,
+    var(--gr-surface-canvas) 0%,
+    color-mix(in oklab, var(--gr-surface-canvas) 50%, transparent) 45%,
+    var(--gr-surface-canvas) 100%
+  );
+}
+
+/* ============================================================================
+   Shared, theme-independent tokens.
+   ========================================================================= */
+:root {
+  /* --- Motion (§5.4) ----------------------------------------------------- */
+  --gr-dur-fast: 120ms;
+  --gr-dur-base: 200ms;
+  --gr-dur-slow: 320ms;
+  --gr-dur-reveal: 520ms;
+  --gr-dur-scan: 2400ms;
+  --gr-dur-theme: 260ms;
+  --gr-ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --gr-ease-enter: cubic-bezier(0, 0.6, 0.2, 1);
+  --gr-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* --- Layout ------------------------------------------------------------ */
+  --gr-content-max: 1180px;
+  --gr-command-max: 1440px;
+  --gr-header-h: 4rem;
+  --gr-header-h-condensed: 3.25rem;
+}
+
+/* ============================================================================
+   Theme transition.
+
+   Only colour properties ease, and only for the duration of a switch — a
+   blanket `transition: all` would make every hover in the product feel
+   sluggish. The `.gr-theming` class is added for one frame by the toggle.
+   ========================================================================= */
+.gr-theming,
+.gr-theming *,
+.gr-theming *::before,
+.gr-theming *::after {
+  transition:
+    background-color var(--gr-dur-theme) var(--gr-ease-standard),
+    border-color var(--gr-dur-theme) var(--gr-ease-standard),
+    color var(--gr-dur-theme) var(--gr-ease-standard),
+    fill var(--gr-dur-theme) var(--gr-ease-standard),
+    stroke var(--gr-dur-theme) var(--gr-ease-standard) !important;
+}
+
+/* ============================================================================
+   Reduced motion — the FULL contract from plan §5.5.
+   Implemented in CSS here and in JS via useReducedMotion() so that SVG
+   animation genuinely halts rather than merely appearing to.
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --gr-dur-fast: 0ms;
+    --gr-dur-base: 0ms;
+    --gr-dur-slow: 0ms;
+    --gr-dur-reveal: 0ms;
+    --gr-dur-scan: 0ms;
+    --gr-dur-theme: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 120ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Loops are switched off entirely, not merely shortened. */
+  .gr-loop {
+    animation: none !important;
+  }
+
+  /* Causal chain + Decision Graph render fully drawn, no progressive trace. */
+  .gr-trace {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Scroll reveals resolve immediately rather than waiting on an observer. */
+  .gr-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
