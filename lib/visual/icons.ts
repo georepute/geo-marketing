@@ -46,6 +46,17 @@ export const ENGINE_ICON: Record<string, LucideIcon> = {
   'global-market': Globe,
 }
 
+/** The seven intelligence categories. Slugs never collide with engine slugs. */
+export const CATEGORY_ICON: Record<string, LucideIcon> = {
+  'ai-visibility-intelligence': Radar,
+  'search-intelligence': Split,
+  'competitive-intelligence': Crosshair,
+  'trust-intelligence': ShieldCheck,
+  'content-intelligence': Megaphone,
+  'market-intelligence': Globe,
+  'executive-intelligence': Compass,
+}
+
 export const TIER_ICON: Record<string, LucideIcon> = {
   entry: ScanSearch,
   advanced: FileSearch,
@@ -74,6 +85,7 @@ export const TILE_ICON: Record<string, LucideIcon> = {
  */
 export const ICON_BY_KEY: Record<string, LucideIcon> = {
   ...ENGINE_ICON,
+  ...CATEGORY_ICON,
   ...TIER_ICON,
   ...TILE_ICON,
 }

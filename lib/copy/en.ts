@@ -62,6 +62,55 @@ export const copy = {
     ],
   },
 
+  /* ==========================================================================
+     EXECUTIVE FRAME — product direction, "Every page must answer one
+     executive question".
+
+     The home page is not a feature tour. It is a sequence of seven executive
+     questions, each answered in business language and each closing on a
+     decision rather than an insight. Product names never lead; the question
+     leads and the machinery is named underneath it.
+
+     Vocabulary discipline lives here too. The direction bans "analytics",
+     "reports", "SEO", "scans" and "dashboards" as self-description — the one
+     survivor is §19's `analyticsDisruption`, which attacks the category
+     rather than claiming membership of it.
+     ======================================================================= */
+  exec: {
+    /* The seven questions, in the order the page asks them. */
+    q1: 'Does AI know your business?',
+    q2: 'Where are you losing decisions?',
+    q3: 'Why is your competitor recommended instead?',
+    q4: 'Why doesn’t AI trust you yet?',
+    q5: 'How much time is left?',
+    q6: 'What should happen next?',
+    q7: 'What is the executive position?',
+
+    /* Section-level labels. */
+    prescriptionLabel: 'Executive Prescription',
+    interventionLabel: 'Strategic Intervention',
+    recoveryLabel: 'Decision Recovery Plan',
+    windowLabel: 'Strategic Window',
+    actionPlanLabel: 'Executive Action Plan',
+    positionLabel: 'Executive Position',
+
+    /* The three questions every KPI must answer. */
+    kpiWhat: 'What it is',
+    kpiWhy: 'Why it matters',
+    kpiImpact: 'Business impact',
+
+    /* Standing explanation of the two composite measures, so a number is
+       never displayed without the sentence that makes it mean something. */
+    decisionHealthDefinition:
+      'Decision Health measures whether AI systems can recognise, verify and safely recommend your business at the moment a buyer is choosing a supplier.',
+    strategicWindowDefinition:
+      'The Strategic Window is the period during which category language is still forming. Authority built inside it becomes the default answer. Authority built after it has to displace an incumbent recommendation, which costs materially more.',
+
+    /* Standing caption under any composite figure. */
+    everyFigureCaption:
+      'Every figure carries its evidence, its confidence and the limits of what it can claim.',
+  },
+
   /* --- Navigation (brief §4, restricted to routes built in v1) -----------
      Grouped rather than flat. Four unrelated links in a row is the shape of a
      brochure; an operating system navigates by what you are trying to do.
@@ -93,6 +142,18 @@ export const copy = {
             label: 'Decision Reconstruction',
             description:
               'Enter a domain, pick a commercial question, watch the decision rebuild.',
+          },
+          {
+            href: '/app/campaign-readiness',
+            label: 'Campaign Readiness',
+            description:
+              'Should we launch this campaign today? Assesses the business, not the campaign.',
+          },
+          {
+            href: '/app/narrative',
+            label: 'Narrative Intelligence',
+            description:
+              'What story is the market telling, and how is it influencing decisions?',
           },
           {
             href: '/app/actions',
@@ -142,29 +203,31 @@ export const copy = {
       {
         id: 'marketplace',
         label: 'Marketplace',
-        summary: 'Buy one diagnostic, or monitor continuously.',
+        summary: 'Intelligence for questions most businesses never measure.',
+        /* Navigates the ecosystem by category rather than by price tier. The
+           tiers still exist and still describe who is buying, but they are a
+           commercial ladder — they say nothing about what can be known, which
+           is what someone opening this menu is trying to find out. */
         items: [
           {
-            href: '/marketplace',
-            label: 'Entry scans',
+            href: '/marketplace/category/ai-visibility-intelligence',
+            label: 'AI Visibility Intelligence',
             description:
-              'One focused examination of a single business question.',
+              'Does AI know the business exists, and what does it think it is?',
           },
           {
-            href: '/marketplace/decision-journey-diagnostic',
-            label: 'Advanced diagnostics',
-            description:
-              'Why a condition exists, with a structured comparison.',
+            href: '/marketplace/category/competitive-intelligence',
+            label: 'Competitive Intelligence',
+            description: 'Who receives the decision instead, and what do they have?',
           },
           {
-            href: '/marketplace/executive-intelligence-brief',
-            label: 'Executive briefs',
-            description:
-              'A board-ready position with risk, timing and prescribed actions.',
+            href: '/marketplace/category/executive-intelligence',
+            label: 'Executive Intelligence',
+            description: 'What is it worth, and what happens next?',
           },
         ],
         allHref: '/marketplace',
-        allLabel: 'Browse all intelligence products',
+        allLabel: 'See the full intelligence ecosystem',
       },
     ],
 

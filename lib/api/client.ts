@@ -40,6 +40,13 @@ export const getDecisionGraph = ADAPTER.getDecisionGraph.bind(ADAPTER)
 export const getActions = ADAPTER.getActions.bind(ADAPTER)
 export const getProducts = ADAPTER.getProducts.bind(ADAPTER)
 export const getProduct = ADAPTER.getProduct.bind(ADAPTER)
+export const getEcosystem = ADAPTER.getEcosystem.bind(ADAPTER)
+export const getCategory = ADAPTER.getCategory.bind(ADAPTER)
+export const getCampaignReadiness = ADAPTER.getCampaignReadiness.bind(ADAPTER)
+export const getNarrativeIntelligence =
+  ADAPTER.getNarrativeIntelligence.bind(ADAPTER)
+export const getElectionIntelligence =
+  ADAPTER.getElectionIntelligence.bind(ADAPTER)
 export const getPlans = ADAPTER.getPlans.bind(ADAPTER)
 export const getPlan = ADAPTER.getPlan.bind(ADAPTER)
 

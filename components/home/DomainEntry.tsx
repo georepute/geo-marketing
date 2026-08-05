@@ -163,7 +163,7 @@ export function DomainEntry({
                 <Link href="/app/mission-control">Unlock full intelligence</Link>
               </Button>
               <Button asChild variant="secondary">
-                <Link href="/marketplace">Buy a single scan</Link>
+                <Link href="/marketplace">Buy a single answer</Link>
               </Button>
             </div>
           </div>

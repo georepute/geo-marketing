@@ -26,6 +26,10 @@ export const ACTIONS: Action[] = [
     successMetric: 'Independent source count 3 → 12',
     measuredChange: null,
     horizon: 90,
+    /* Root of the chain. r-authority: authority "is the constraint that holds
+       every other signal down". Nothing precedes it, which is precisely why
+       it ranks first. */
+    dependsOn: [],
   },
   {
     id: 'a2',
@@ -43,6 +47,10 @@ export const ACTIONS: Action[] = [
     successMetric: 'Category association correct on 5 of 6 engines',
     measuredChange: null,
     horizon: 30,
+    /* Independent of a1: an entity record can be corrected before any
+       third-party evidence exists. This is why a low-effort action sits
+       alongside the hardest one rather than behind it. */
+    dependsOn: [],
   },
   {
     id: 'a3',
@@ -60,6 +68,9 @@ export const ACTIONS: Action[] = [
     successMetric: 'Gemini resolves the correct entity on 4 of 6 category questions',
     measuredChange: null,
     horizon: 30,
+    /* r-recognition treats disambiguation as a propagation problem. The
+       canonical description a2 produces is the thing being propagated. */
+    dependsOn: ['a2'],
   },
   {
     id: 'a4',
@@ -77,6 +88,9 @@ export const ACTIONS: Action[] = [
     successMetric: 'Presence on 12 of 24 tracked questions',
     measuredChange: null,
     horizon: 60,
+    /* a2's own reason, verbatim: "No content investment can move an answer
+       while the entity record is wrong." */
+    dependsOn: ['a2'],
   },
   {
     id: 'a5',
@@ -94,6 +108,10 @@ export const ACTIONS: Action[] = [
     successMetric: 'Blended CPC below break-even on reallocated set',
     measuredChange: null,
     horizon: 60,
+    /* This action's own text names "a viable organic replacement path" as the
+       precondition. a4 is what builds it. Reallocating before then removes
+       the paid position without putting anything in its place. */
+    dependsOn: ['a4'],
   },
   {
     id: 'a6',
@@ -111,6 +129,10 @@ export const ACTIONS: Action[] = [
     successMetric: 'Response time cited among the first three criteria by 3 of 6 engines',
     measuredChange: null,
     horizon: 90,
+    /* r-narrative lists authority evidence as a supporting signal. An
+       evaluation framework nobody can corroborate does not become the
+       category's language — it stays one vendor's opinion. */
+    dependsOn: ['a1'],
   },
 ]
 

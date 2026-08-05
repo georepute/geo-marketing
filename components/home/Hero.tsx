@@ -35,12 +35,20 @@ import type { Reconstruction } from '@/lib/api/types'
 
 const TRUST = [
   { icon: BadgeCheck, label: 'Six AI engines observed' },
-  { icon: Boxes, label: '24 decision questions' },
+  { icon: Boxes, label: '24 commercial decisions tracked' },
   { icon: LineChart, label: 'Evidence on every claim' },
   { icon: ShieldCheck, label: 'Confidence and limits stated' },
 ]
 
-export function Hero({ reconstruction }: { reconstruction: Reconstruction | null }) {
+export function Hero({
+  reconstruction,
+  ownAuthoritySources,
+  competitorAuthoritySources,
+}: {
+  reconstruction: Reconstruction | null
+  ownAuthoritySources: number
+  competitorAuthoritySources: number
+}) {
   const reduced = useReducedMotion()
 
   const beat = (index: number) =>
@@ -169,9 +177,15 @@ export function Hero({ reconstruction }: { reconstruction: Reconstruction | null
             </ul>
           </div>
 
-          {/* 4 — the reconstructed question, entering last. */}
+          {/* 4 — the reconstructed decision, entering last. */}
           <div style={beat(2)}>
-            {reconstruction ? <HeroVisual data={reconstruction} /> : null}
+            {reconstruction ? (
+              <HeroVisual
+                data={reconstruction}
+                ownAuthoritySources={ownAuthoritySources}
+                competitorAuthoritySources={competitorAuthoritySources}
+              />
+            ) : null}
           </div>
         </div>
       </div>

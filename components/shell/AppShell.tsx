@@ -19,6 +19,8 @@ import { cn } from '@/lib/utils/cn'
 const NAV = [
   { href: '/app/mission-control', label: 'Mission Control' },
   { href: '/app/reconstruct', label: 'Decision Reconstruction' },
+  { href: '/app/campaign-readiness', label: 'Campaign Readiness' },
+  { href: '/app/narrative', label: 'Narrative Intelligence' },
   { href: '/app/actions', label: 'Action Center' },
 ]
 
