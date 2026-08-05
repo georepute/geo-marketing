@@ -121,6 +121,105 @@ export function buildExposure(options: {
   }
 }
 
+/* ============================================================================
+   CAMPAIGN BUDGET AT RISK.
+
+   A second model, deliberately separate from the decision-gap model above,
+   because it answers a different question and rests on different assumptions.
+
+     Planned spend × Verification-dependent share × Verification failure rate
+
+   The middle term is the share of campaign spend that reaches a buyer who will
+   go on to check the business against a third party before acting. The last is
+   how often that check currently fails, taken from the ratio of independent
+   sources held to the category median.
+
+   The range comes from the honest uncertainty in the middle term: some buyers
+   act without verifying, and nobody can say precisely how many. Presenting a
+   single figure here would be the most dangerous kind of false precision on
+   this page, because it is the number an executive would quote in a budget
+   meeting.
+   ========================================================================= */
+
+export interface BudgetRiskInputs {
+  plannedBudgetUsd: number
+  /** Low and high bounds on the share of spend exposed to verification. */
+  verificationDependentLowPct: number
+  verificationDependentHighPct: number
+  /** Independent sources held, against the category median. */
+  authoritySources: number
+  categoryMedianSources: number
+  campaignMonths: number
+}
+
+export function buildBudgetAtRisk(
+  inputs: BudgetRiskInputs,
+  confidence: Confidence,
+): ExposureRange {
+  const {
+    plannedBudgetUsd,
+    verificationDependentLowPct,
+    verificationDependentHighPct,
+    authoritySources,
+    categoryMedianSources,
+    campaignMonths,
+  } = inputs
+
+  /* Failure rate: how far short of the category median the evidence falls.
+     Clamped at 0 so a business at or above the median carries no risk from
+     this term rather than a negative one. */
+  const failureRate = Math.max(
+    0,
+    1 - authoritySources / categoryMedianSources,
+  )
+
+  const low = roundToHundred(
+    plannedBudgetUsd * (verificationDependentLowPct / 100) * failureRate,
+  )
+  const high = roundToHundred(
+    plannedBudgetUsd * (verificationDependentHighPct / 100) * failureRate,
+  )
+
+  return {
+    low,
+    high,
+    currency: 'USD',
+    period: 'quarter',
+    confidence,
+    methodologyVersion: METHODOLOGY_VERSION,
+    assumptions: [
+      {
+        label: 'Planned campaign budget',
+        value: `${money(plannedBudgetUsd)} over ${campaignMonths} months`,
+        source: 'customer-configured',
+      },
+      {
+        label: 'Spend reaching a buyer who verifies',
+        value: percentRange(
+          verificationDependentLowPct,
+          verificationDependentHighPct,
+        ),
+        source: 'benchmark',
+      },
+      {
+        label: 'Verification failure rate',
+        value: `${percent(Number((failureRate * 100).toFixed(1)))} — ${count(
+          authoritySources,
+        )} independent sources against a category median of ${count(
+          categoryMedianSources,
+        )}`,
+        source: 'connected',
+      },
+      {
+        label: 'Model',
+        value:
+          'Planned spend × verification-dependent share × verification failure rate',
+        source: 'benchmark',
+      },
+    ],
+  }
+}
+
 /**
  * The full-book exposure. This is the figure the spine pins, and the one the
  * invariant suite checks against §13.1.

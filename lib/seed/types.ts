@@ -122,6 +122,15 @@ export interface Action {
   successMetric: string
   measuredChange: string | null
   horizon: 30 | 60 | 90
+  /**
+   * Action ids that must land before this one can move its signal.
+   *
+   * Not scheduling metadata — a causal claim, and every entry is read off a
+   * sentence that already exists in the readout this action cites. An
+   * intervention with an unmet dependency is activity, not movement, which is
+   * exactly what the sequence exists to prevent.
+   */
+  dependsOn: string[]
 }
 
 /* --------------------------------------------------------------------------
