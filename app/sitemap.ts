@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getEngines, getProducts } from '@/lib/api/client'
+import { getEcosystem, getEngines, getProducts } from '@/lib/api/client'
 
 /**
  * Public surfaces only. Product and app routes are included because they are
@@ -7,7 +7,11 @@ import { getEngines, getProducts } from '@/lib/api/client'
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://georepute.ai'
-  const [engines, products] = await Promise.all([getEngines(), getProducts()])
+  const [engines, products, ecosystem] = await Promise.all([
+    getEngines(),
+    getProducts(),
+    getEcosystem(),
+  ])
 
   const staticRoutes = [
     { path: '', priority: 1 },
@@ -24,13 +28,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((e) => e.built)
     .map((e) => ({ path: `/engines/${e.slug}`, priority: 0.7 }))
 
+  /* Category pages rank above product pages: they are the entry point to the
+     ecosystem, and each one is the parent of a dozen modules. */
+  const categoryPages = ecosystem.data.categories.map((c) => ({
+    path: `/marketplace/category/${c.slug}`,
+    priority: 0.8,
+  }))
+
   const productPages = [
     ...products.data.entry,
     ...products.data.advanced,
     ...products.data.premium,
   ].map((p) => ({ path: `/marketplace/${p.slug}`, priority: 0.7 }))
 
-  return [...staticRoutes, ...enginePages, ...productPages].map((route) => ({
+  return [
+    ...staticRoutes,
+    ...enginePages,
+    ...categoryPages,
+    ...productPages,
+  ].map((route) => ({
     url: `${base}${route.path}`,
     changeFrequency: 'weekly' as const,
     priority: route.priority,

@@ -41,6 +41,11 @@ export const httpAdapter: DataAdapter = {
   getActions: () => notImplemented('getActions'),
   getProducts: () => notImplemented('getProducts'),
   getProduct: () => notImplemented('getProduct'),
+  getEcosystem: () => notImplemented('getEcosystem'),
+  getCategory: () => notImplemented('getCategory'),
+  getCampaignReadiness: () => notImplemented('getCampaignReadiness'),
+  getNarrativeIntelligence: () => notImplemented('getNarrativeIntelligence'),
+  getElectionIntelligence: () => notImplemented('getElectionIntelligence'),
   getPlans: () => notImplemented('getPlans'),
   getPlan: () => notImplemented('getPlan'),
 }

@@ -164,6 +164,7 @@ export const actionSchema = z.object({
   successMetric: z.string().min(1),
   measuredChange: z.string().nullable(),
   horizon: z.union([z.literal(30), z.literal(60), z.literal(90)]),
+  dependsOn: z.array(z.string().min(1)),
 })
 
 export const productSchema = z.object({

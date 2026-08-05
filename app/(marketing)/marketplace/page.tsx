@@ -1,49 +1,52 @@
 import type { Metadata } from 'next'
-import { Price } from '@/components/commerce/Price'
-import { FeatureCard } from '@/components/visual/FeatureCard'
+import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
+import { CategoryCard } from '@/components/marketplace/CategoryCard'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
-import { TIER_IMAGE } from '@/lib/visual/imagery'
-import { copy } from '@/lib/copy/en'
-import { getProducts } from '@/lib/api/client'
-import type { IntelligenceProduct } from '@/lib/api/types'
+import { Reveal } from '@/components/motion/Reveal'
+import { count } from '@/lib/format'
+import { getEcosystem } from '@/lib/api/client'
 
 export const metadata: Metadata = {
-  title: 'Intelligence Marketplace',
-  // Composed from the copy module rather than retyped — §19 strings have one
-  // source of truth, including in metadata.
-  description: `${copy.marketplace} ${copy.home.marketplaceSub}`,
+  title: 'Intelligence Ecosystem',
+  description:
+    'Seven categories of decision intelligence, covering the commercial questions a business needs answered — including the ones most companies have never thought to measure.',
 }
 
-const TIERS = [
-  {
-    key: 'entry' as const,
-    label: 'Entry',
-    note: 'A fast, focused examination of one business question.',
-  },
-  {
-    key: 'advanced' as const,
-    label: 'Advanced',
-    note: 'A deeper explanation of why a condition exists, with a structured comparison.',
-  },
-  {
-    key: 'premium' as const,
-    label: 'Premium',
-    note: 'An executive interpretation designed for action, with expert review.',
-  },
-]
+/* ============================================================================
+   THE INTELLIGENCE ECOSYSTEM.
+
+   Direction: this page is not a marketplace of reports. Its job is to make a
+   visitor think "whatever business question I have, this platform already has
+   intelligence built for it" — and, more specifically, "I did not know that
+   could be measured."
+
+   WHAT CHANGED AND WHY
+   The page was a flat grid of eight purchasable products under three depth
+   headings. That framing had two problems. It capped the platform's apparent
+   scope at eight things, and it sold outputs — a visitor read "these are the
+   documents I would receive" rather than "this is the range of what can be
+   understood". Depth was invisible because everything was on one plane.
+
+   It is now three planes: ecosystem → category → module. A visitor sees seven
+   things, each admitting to more underneath, and reaches the individual
+   modules only by choosing to. That is what makes sixty-one feel like range
+   rather than like a catalogue dump.
+
+   The counts are computed from the module catalogue on every render. Nothing
+   on this page is a typed-in number, so the page cannot overstate the platform
+   even by accident.
+   ========================================================================= */
 
 export default async function MarketplacePage() {
-  const products = await getProducts()
-  const groups = {
-    entry: products.data.entry,
-    advanced: products.data.advanced,
-    premium: products.data.premium,
-  }
-  const total =
-    groups.entry.length + groups.advanced.length + groups.premium.length
+  const ecosystem = await getEcosystem()
+  const { categories, totalModules, liveModules, totalEngines } = ecosystem.data
 
   return (
     <>
+      {/* ================================================================
+          THE CLAIM
+          ============================================================== */}
       <section className="relative isolate overflow-hidden">
         <ImageWithScrim
           image="board"
@@ -56,64 +59,135 @@ export default async function MarketplacePage() {
           aria-hidden
           className="absolute inset-0 gr-dotgrid opacity-40 -z-10"
         />
+
         <div className="gr-rail-wide relative pt-20 pb-16 lg:pt-24 lg:pb-20">
           <p className="text-label uppercase text-brand-300">
-            Intelligence marketplace
+            The intelligence ecosystem
           </p>
-          <h1 className="text-display-1 text-ink mt-6 max-w-3xl text-balance">
-            {copy.marketplace}
+
+          <h1 className="text-display-1 text-ink mt-6 max-w-4xl text-balance">
+            Whatever the business question, there is already intelligence built
+            for it.
           </h1>
+
           <p className="text-body-lg text-ink-2 mt-6 max-w-2xl">
-            Monitor continuously when the decision becomes strategic. Every
-            product states the question it answers, what it detects, what it
-            needs from you, how confident it can be and what it costs — no
-            sales call required.
+            Seven categories of decision intelligence, each holding the models
+            that answer one kind of commercial question. Most of them measure
+            things a business has never been able to see — not because the
+            questions are exotic, but because nothing existed to answer them.
           </p>
-          <p className="text-caption text-ink-3 mt-6" data-numeric="">
-            {total} intelligence products across three depths.
+
+          {/* The scale of the thing, stated once and computed. */}
+          <dl className="grid gap-px bg-line border border-line rounded-md overflow-hidden mt-10 sm:grid-cols-3 max-w-2xl">
+            <Figure
+              value={count(categories.length)}
+              label="Intelligence categories"
+            />
+            <Figure value={count(totalModules)} label="Intelligence modules" />
+            <Figure
+              value={count(totalEngines)}
+              label="Engines beneath them"
+            />
+          </dl>
+
+          <p className="text-caption text-ink-3 mt-5 max-w-2xl">
+            <span data-numeric="">{count(liveModules)}</span> of these modules
+            run live in this environment against a real reconstructed business.
+            The rest are available in the platform.
           </p>
         </div>
       </section>
 
-      {TIERS.map((tier) => (
-        <section key={tier.key} className="gr-hairline">
-          <div className="gr-rail-wide gr-section">
-            <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8">
-              <div>
-                <p className="text-label uppercase text-brand-300">
-                  {tier.label}
-                </p>
-                <p className="text-body-lg text-ink-2 mt-3 max-w-xl">
-                  {tier.note}
-                </p>
-              </div>
-              <span className="text-label uppercase text-ink-3" data-numeric="">
-                {groups[tier.key].length} products
-              </span>
+      {/* ================================================================
+          THE SEVEN CATEGORIES
+          ============================================================== */}
+      <section className="gr-hairline">
+        <div className="gr-rail-wide gr-section">
+          <Reveal>
+            <h2 className="text-display-2 text-ink max-w-3xl text-balance">
+              Start with the question you actually have.
+            </h2>
+            <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
+              Each category opens into the modules underneath it. Every module
+              answers one business question and returns evidence, an analysis
+              and a recommendation — never a figure on its own.
+            </p>
+          </Reveal>
+
+          <Reveal delay={80} className="mt-10">
+            <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 items-stretch">
+              {categories.map((category) => (
+                <CategoryCard key={category.slug} category={category} />
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ================================================================
+          POSITIONING — what is actually being sold.
+          ============================================================== */}
+      <section className="gr-hairline">
+        <div className="gr-rail gr-section">
+          <Reveal>
+            <p className="text-label uppercase text-brand-300">
+              What you are buying
+            </p>
+            <h2 className="text-display-2 text-ink mt-4 max-w-3xl text-balance">
+              The document is the output. The intelligence is the product.
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-3 mt-10">
+              <Plank
+                step="Evidence"
+                body="Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion."
+              />
+              <Plank
+                step="Analysis"
+                body="What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied."
+              />
+              <Plank
+                step="Recommendation"
+                body="What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved."
+              />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {groups[tier.key].map((product) => (
-                <ProductCard key={product.slug} product={product} />
-              ))}
+            <div className="flex flex-wrap gap-3 mt-10">
+              <Button asChild variant="primary" size="lg">
+                <Link href="/app/reconstruct">See a module run live</Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href="/methodology">How the models work</Link>
+              </Button>
+              <Button asChild variant="ghost" size="lg">
+                <Link href="/pricing">Monitor continuously instead</Link>
+              </Button>
             </div>
-          </div>
-        </section>
-      ))}
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
 
-function ProductCard({ product }: { product: IntelligenceProduct }) {
+/* ------------------------------------------------------------------------ */
+
+function Figure({ value, label }: { value: string; label: string }) {
   return (
-    <FeatureCard
-      href={`/marketplace/${product.slug}`}
-      image={TIER_IMAGE[product.tier]}
-      iconKey={product.tier}
-      eyebrow={product.depth}
-      title={product.name}
-      description={product.businessQuestion}
-      footer={<Price amount={product.priceUsd} period="one-time" size="sm" />}
-    />
+    <div className="bg-panel p-5">
+      <dt className="text-label uppercase text-ink-3">{label}</dt>
+      <dd className="text-data-lg text-ink mt-3" data-numeric="">
+        {value}
+      </dd>
+    </div>
+  )
+}
+
+function Plank({ step, body }: { step: string; body: string }) {
+  return (
+    <div className="border-t-2 pt-5" style={{ borderColor: 'var(--gr-brand-400)' }}>
+      <p className="text-label uppercase text-ink">{step}</p>
+      <p className="text-caption text-ink-2 mt-3">{body}</p>
+    </div>
   )
 }
