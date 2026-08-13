@@ -9,10 +9,9 @@ import { getElectionIntelligence } from '@/lib/api/client'
 import type { ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
 
-export const metadata: Metadata = {
-  title: 'Election Intelligence',
-  description:
-    'Real-time election intelligence: which narratives are circulating, who is carrying them, which audiences are moving, and what must change to move them back.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.election.navLabel, description: copy.election.lede }
 }
 
 /* ============================================================================

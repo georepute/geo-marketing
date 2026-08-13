@@ -7,10 +7,9 @@ import { localeConfig } from '@/lib/i18n/config'
 import { listPosts } from '@/lib/blog/source'
 import { cn } from '@/lib/utils/cn'
 
-export const metadata: Metadata = {
-  title: 'Intelligence Notes',
-  description:
-    'Writing on decision intelligence — how businesses are recognised, evaluated, recommended and chosen across AI engines, search and market perception.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.blog.title, description: copy.blog.lede }
 }
 
 /* ============================================================================

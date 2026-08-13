@@ -22,7 +22,7 @@ import { GoogleVsAIGapMatrix } from '@/components/viz/GoogleVsAIGapMatrix'
 import { FeatureCard } from '@/components/visual/FeatureCard'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ENGINE_IMAGE } from '@/lib/visual/imagery'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { flags } from '@/lib/flags'
 import { count, dateFull, percentWhole } from '@/lib/format'
 import {
@@ -42,9 +42,15 @@ import {
   getActions,
 } from '@/lib/api/client'
 
-export const metadata: Metadata = {
-  title: `GeoRepute — ${copy.category}`,
-  description: copy.meta.description,
+/* generateMetadata, not a static export: the title and description come from
+   the active dictionary, and a module-scope constant is evaluated once at
+   import time when no locale exists yet. */
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return {
+    title: `GeoRepute — ${copy.category}`,
+    description: copy.meta.description,
+  }
 }
 
 /* ============================================================================
@@ -74,6 +80,7 @@ export const metadata: Metadata = {
    ========================================================================= */
 
 export default async function Home() {
+  const copy = await getDictionary()
   const [
     org,
     chain,

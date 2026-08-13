@@ -7,7 +7,7 @@ import { ActionCard } from '@/components/action/ActionCard'
 import { ReadoutDrawer } from '@/components/readout/ReadoutDrawer'
 import { useRoleLens } from '@/components/readout/RoleLens'
 import { Button } from '@/components/ui/Button'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { count, dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Action, OrgSummary, Readout } from '@/lib/api/types'
@@ -39,6 +39,7 @@ export function ActionCenter({
   actions: Action[]
   readouts: Readout[]
 }) {
+  const copy = useDict()
   const { role, setRole } = useRoleLens('operator')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [view, setView] = useState<View>('priority')

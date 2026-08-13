@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState } from 'react'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -41,11 +41,9 @@ export function defaultOpen(role: Role) {
   }
 }
 
-const ROLES: { id: Role; label: string }[] = [
-  { id: 'executive', label: copy.roleLens.executive },
-  { id: 'analyst', label: copy.roleLens.analyst },
-  { id: 'operator', label: copy.roleLens.operator },
-]
+/* Ids only. The labels come from the active dictionary at render time — a
+   module-scope array would freeze them in English. */
+const ROLE_IDS: Role[] = ['executive', 'analyst', 'operator']
 
 export function RoleLensControl({
   role,
@@ -56,6 +54,9 @@ export function RoleLensControl({
   onChange: (role: Role) => void
   className?: string
 }) {
+  const copy = useDict()
+  const ROLES = ROLE_IDS.map((id) => ({ id, label: copy.roleLens[id] }))
+
   return (
     <div className={cn('flex items-center gap-3', className)}>
       <span className="text-label uppercase text-ink-3 hidden sm:inline">

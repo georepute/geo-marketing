@@ -1,7 +1,7 @@
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { Reveal } from '@/components/motion/Reveal'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -17,7 +17,8 @@ import { cn } from '@/lib/utils/cn'
    a fifth bullet saying so would not land.
    ========================================================================= */
 
-export function ClosedLoopBand() {
+export async function ClosedLoopBand() {
+  const copy = await getDictionary()
   const loop = copy.loop
 
   return (

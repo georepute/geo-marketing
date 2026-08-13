@@ -2,7 +2,7 @@ import { Link } from '@/components/i18n/Link'
 import { Wordmark } from './Wordmark'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { imageCredits } from '@/lib/visual/imagery'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { flags } from '@/lib/flags'
 
 /* ============================================================================
@@ -16,59 +16,8 @@ import { flags } from '@/lib/flags'
    one click away.
    ========================================================================= */
 
-interface FooterLink {
-  href: string
-  label: string
-  /** Names a flag in lib/flags.ts. Omitted means always shown. */
-  flag?: keyof typeof flags
-}
-
-const COLUMNS: { title: string; links: FooterLink[] }[] = [
-  {
-    title: 'Product',
-    links: [
-      { href: '/app/mission-control', label: 'Executive Mission Control' },
-      { href: '/app/reconstruct', label: 'Decision Reconstruction' },
-      { href: '/app/actions', label: 'Action Center' },
-      { href: '/engines', label: 'Intelligence Engines' },
-      { href: '/briefing', label: 'Book a Briefing' },
-      { href: '/pricing', label: 'Pricing and Plans', flag: 'pricing' },
-    ],
-  },
-  {
-    title: 'Intelligence',
-    links: [
-      { href: '/marketplace', label: 'Intelligence Marketplace' },
-      { href: '/engines/ai-recognition', label: 'AI Recognition' },
-      { href: '/engines/google-vs-ai', label: 'Google vs AI Visibility' },
-      { href: '/engines/competitor-decision', label: 'Competitor Decision' },
-      { href: '/engines/action', label: 'Action Intelligence' },
-    ],
-  },
-  {
-    title: 'Methodology',
-    links: [
-      { href: '/methodology#geon', label: 'The GEON framework' },
-      { href: '/methodology#sources', label: 'Evidence sources' },
-      { href: '/methodology#confidence', label: 'Confidence model' },
-      { href: '/methodology#model', label: 'Financial model' },
-      { href: '/methodology#limitations', label: 'Limitations' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { href: '/blog', label: 'Intelligence Notes' },
-      { href: '/signin', label: 'Sign In' },
-      { href: '/legal#privacy', label: 'Privacy' },
-      { href: '/legal#terms', label: 'Terms of service' },
-      { href: '/legal#data', label: 'Data processing' },
-      { href: '/legal#security', label: 'Security' },
-    ],
-  },
-]
-
-export function Footer() {
+export async function Footer() {
+  const copy = await getDictionary()
   const year = 2026
 
   return (
@@ -106,17 +55,19 @@ export function Footer() {
 
           {/* --- Link columns ------------------------------------------- */}
           <nav
-            aria-label="Footer"
+            aria-label={copy.footer.ariaLabel}
             className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4"
           >
-            {COLUMNS.map((column) => (
+            {copy.footer.columns.map((column) => (
               <div key={column.title}>
                 <h2 className="text-label uppercase text-ink-3">
                   {column.title}
                 </h2>
                 <ul className="mt-5 space-y-3">
                   {column.links
-                    .filter((link) => !link.flag || flags[link.flag])
+                    /* Only some links declare a gating flag, so the union
+                       needs narrowing before the property is read. */
+                    .filter((link) => !('flag' in link) || flags[link.flag])
                     .map((link) => (
                       <li key={link.href}>
                         <Link
@@ -165,25 +116,24 @@ export function Footer() {
         {/* --- Standing limitation notice — brief §15.4 ----------------- */}
         <div className="mt-16 pt-8 border-t border-line">
           <p className="text-caption text-ink-3 max-w-4xl">
-            <span className="text-ink-2">Directional modelling.</span>{' '}
-            {copy.exposure.limitation} Commercial figures are estimates for
-            prioritisation, not audited financial statements.
+            <span className="text-ink-2">{copy.footer.limitationLead}</span>{' '}
+            {copy.exposure.limitation} {copy.footer.limitationTail}
           </p>
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
           <p className="text-caption text-ink-3">
-            © {year} GeoRepute. Decision Intelligence Infrastructure.
+            © {year} {copy.footer.rights}
           </p>
           <p className="text-label uppercase text-ink-3">
-            Demonstration environment · Seeded data
+            {copy.footer.environment}
           </p>
         </div>
 
         {/* Attribution. The Unsplash Licence does not require this, but
             crediting photographers costs one line and is the right default. */}
         <p className="text-caption text-ink-3 mt-4">
-          Photography via{' '}
+          {copy.footer.photography}{' '}
           <a
             href="https://unsplash.com/license"
             target="_blank"

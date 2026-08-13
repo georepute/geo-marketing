@@ -9,7 +9,7 @@ import { PRODUCT_SCREEN } from '@/lib/visual/screens'
 import { IntelligenceReadout } from '@/components/readout/IntelligenceReadout'
 import { RoleProvider } from '@/components/readout/RoleLens'
 import { Button } from '@/components/ui/Button'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { flags } from '@/lib/flags'
 import { getProduct, getProducts, getReadout } from '@/lib/api/client'
 
@@ -41,6 +41,7 @@ export default async function ProductPage({
 }: {
   params: Promise<{ slug: string }>
 }) {
+  const copy = await getDictionary()
   const { slug } = await params
   const product = await getProduct(slug)
   if (!product.data) notFound()

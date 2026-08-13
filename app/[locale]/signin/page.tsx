@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/components/i18n/Link'
 import { Wordmark } from '@/components/shell/Wordmark'
 import { Button } from '@/components/ui/Button'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 
 export const metadata: Metadata = {
   title: 'Sign In',
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
    `AuthAdapter` interface; this screen is the only surface it touches.
    ========================================================================= */
 
-export default function SignInPage() {
+export default async function SignInPage() {
+  const copy = await getDictionary()
   return (
     <div className="min-h-dvh flex flex-col bg-canvas">
       <header className="border-b border-line">

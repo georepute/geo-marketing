@@ -3,7 +3,7 @@
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { useEntitlements } from './EntitlementProvider'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { flags } from '@/lib/flags'
 import type { PurchaseKind } from '@/lib/commerce/types'
 
@@ -36,6 +36,7 @@ export function BuyButton({
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }) {
+  const copy = useDict()
   const { has, ready } = useEntitlements()
   const owned = ready && has(kind, slug)
 

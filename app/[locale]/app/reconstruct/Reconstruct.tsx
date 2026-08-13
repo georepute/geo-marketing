@@ -13,7 +13,7 @@ import { ActionCard } from '@/components/action/ActionCard'
 import { Button } from '@/components/ui/Button'
 import { StageSkeleton, ProcessingBar } from '@/components/ui/Skeleton'
 import { count, dateFull, observedCost, percent, percentWhole } from '@/lib/format'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { cn } from '@/lib/utils/cn'
 import type {
   GraphEdge,
@@ -68,6 +68,7 @@ export function Reconstruct({
   readouts: Readout[]
   fetchReconstruction: (promptId: string) => Promise<Reconstruction | null>
 }) {
+  const copy = useDict()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [domain, setDomain] = useState(org.domain)

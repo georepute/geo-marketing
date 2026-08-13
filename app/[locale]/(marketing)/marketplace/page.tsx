@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getDictionary } from '@/lib/i18n/server'
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { CategoryCard } from '@/components/marketplace/CategoryCard'
@@ -7,10 +8,9 @@ import { Reveal } from '@/components/motion/Reveal'
 import { count } from '@/lib/format'
 import { getEcosystem } from '@/lib/api/client'
 
-export const metadata: Metadata = {
-  title: 'Intelligence Ecosystem',
-  description:
-    'Seven categories of decision intelligence, covering the commercial questions a business needs answered — including the ones most companies have never thought to measure.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.nav.marketplace, description: copy.home.marketplaceSub }
 }
 
 /* ============================================================================

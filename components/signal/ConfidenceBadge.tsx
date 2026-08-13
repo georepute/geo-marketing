@@ -1,7 +1,7 @@
 'use client'
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/Primitives'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { cn } from '@/lib/utils/cn'
 import type { Confidence } from '@/lib/seed/types'
 
@@ -43,6 +43,7 @@ export function ConfidenceBadge({
   showLabel?: boolean
   className?: string
 }) {
+  const copy = useDict()
   const definition = copy.confidence[confidence].definition
 
   return (

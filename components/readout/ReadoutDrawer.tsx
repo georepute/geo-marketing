@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/Primitives'
 import { IntelligenceReadout } from './IntelligenceReadout'
 import { RoleProvider, RoleLensControl, type Role } from './RoleLens'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import type { Readout } from '@/lib/seed/types'
 
 /* ============================================================================
@@ -36,6 +36,7 @@ export function ReadoutDrawer({
   onRoleChange: (role: Role) => void
   onOpenSignal?: (id: string) => void
 }) {
+  const copy = useDict()
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent aria-describedby={undefined}>

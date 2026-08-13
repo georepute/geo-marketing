@@ -11,7 +11,7 @@ import { ActionCard } from '@/components/action/ActionCard'
 import { useRoleLens } from '@/components/readout/RoleLens'
 import { ScoreMeter } from '@/components/signal/Indicators'
 import { Button } from '@/components/ui/Button'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { cn } from '@/lib/utils/cn'
 import type {
   Action,
@@ -51,6 +51,7 @@ export function MissionControl({
   readouts: Readout[]
   actions: Action[]
 }) {
+  const copy = useDict()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [activeLink, setActiveLink] = useState<string | null>(null)

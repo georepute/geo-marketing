@@ -3,14 +3,13 @@ import { Link } from '@/components/i18n/Link'
 import { GeonHexagon } from '@/components/viz/GeonHexagon'
 import { Button } from '@/components/ui/Button'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { count, observedCost, percent } from '@/lib/format'
 import { getOrg, getEconomics, getPrompts } from '@/lib/api/client'
 
-export const metadata: Metadata = {
-  title: 'Methodology',
-  description:
-    'GEON framework, evidence sources, the confidence model and the directional financial model — with its limitations stated.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.nav.methodology, description: copy.exec.everyFigureCaption }
 }
 
 /* Brief §15.2 */
@@ -45,15 +44,20 @@ const EVIDENCE_SOURCES = [
   },
 ]
 
-/* Brief §15.3, definitions verbatim */
-const CONFIDENCE = [
-  ['high', copy.confidence.high],
-  ['medium', copy.confidence.medium],
-  ['directional', copy.confidence.directional],
-  ['insufficient-history', copy.confidence['insufficient-history']],
+/* Brief §15.3. Ids only at module scope — the definitions are pulled from the
+   active dictionary inside the component, since they must translate. */
+const CONFIDENCE_IDS = [
+  'high',
+  'medium',
+  'directional',
+  'insufficient-history',
 ] as const
 
 export default async function MethodologyPage() {
+  const copy = await getDictionary()
+  const CONFIDENCE = CONFIDENCE_IDS.map(
+    (id) => [id, copy.confidence[id]] as const,
+  )
   const [org, economics, prompts] = await Promise.all([
     getOrg(),
     getEconomics(),

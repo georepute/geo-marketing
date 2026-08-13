@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { BookingCalendar } from '@/components/booking/BookingCalendar'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 
-export const metadata: Metadata = {
-  title: 'Book an Executive Briefing',
-  description:
-    'A working session against your own market. We reconstruct one commercial decision in your category and show you what determined it.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.home.heroCtaEnterprise, description: copy.briefing.sub }
 }
 
 /* ============================================================================
@@ -26,6 +25,7 @@ export default async function BriefingPage({
 }: {
   searchParams: Promise<{ interest?: string }>
 }) {
+  const copy = await getDictionary()
   /* Buy controls and the Election CTA arrive here with ?interest=<slug>. It
      is passed into the booking notes so the session starts from what the
      visitor was actually looking at. */

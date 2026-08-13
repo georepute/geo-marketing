@@ -9,10 +9,9 @@ import { getDictionary } from '@/lib/i18n/server'
 import type { ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
 
-export const metadata: Metadata = {
-  title: 'How It Works — The Closed-Loop Intelligence System',
-  description:
-    'GeoRepute diagnoses the decision environment, turns it into strategy, executes, measures whether the targeted signals moved, and uses the result to decide what happens next.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.loop.navLabel, description: copy.loop.lede }
 }
 
 /* ============================================================================

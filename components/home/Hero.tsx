@@ -13,7 +13,7 @@ import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ParticleField } from '@/components/visual/ParticleField'
 import { HeroVisual } from './HeroVisual'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { cn } from '@/lib/utils/cn'
 import type { Reconstruction } from '@/lib/api/types'
 
@@ -49,6 +49,7 @@ export function Hero({
   ownAuthoritySources: number
   competitorAuthoritySources: number
 }) {
+  const copy = useDict()
   const reduced = useReducedMotion()
 
   const beat = (index: number) =>

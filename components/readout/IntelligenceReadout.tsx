@@ -15,7 +15,7 @@ import {
   RelationshipTag,
 } from '@/components/signal/Indicators'
 import { defaultOpen, useRole } from './RoleLens'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Readout } from '@/lib/seed/types'
@@ -50,6 +50,8 @@ export function IntelligenceReadout({
   onOpenSignal?: (id: string) => void
   className?: string
 }) {
+  /* No dictionary here — this is a dispatcher. Both branches read it
+     themselves. */
   if (variant === 'compact') {
     return <CompactReadout readout={readout} className={className} />
   }
@@ -78,6 +80,7 @@ function FullReadout({
   onOpenSignal?: (id: string) => void
   className?: string
 }) {
+  const copy = useDict()
   const role = useRole()
   const open = defaultOpen(role)
 
@@ -328,6 +331,8 @@ function CompactReadout({
   readout: Readout
   className?: string
 }) {
+  const copy = useDict()
+
   return (
     <article
       className={cn(

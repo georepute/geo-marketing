@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils/cn'
 import { Reveal } from '@/components/motion/Reveal'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 
 /* ============================================================================
    Shared section furniture for the home page. Keeping the rhythm in one place
@@ -173,13 +173,14 @@ const TONE_TOKEN = {
   neutral: 'var(--gr-text-primary)',
 } as const
 
-export function KpiGrid({
+export async function KpiGrid({
   items,
   columns = 3,
 }: {
   items: Kpi[]
   columns?: 2 | 3
 }) {
+  const copy = await getDictionary()
   return (
     <dl
       className={cn(
@@ -233,8 +234,10 @@ function Aside({ label, body }: { label: string; body: string }) {
    quietly trail off into observation.
    ========================================================================= */
 
-export function Prescription({
-  label = copy.exec.prescriptionLabel,
+export async function Prescription({
+  /* Resolved in the body, not as a default: a default parameter is evaluated
+     in the signature, where the dictionary has not been awaited yet. */
+  label: labelProp,
   statement,
   because,
   owner,
@@ -251,6 +254,8 @@ export function Prescription({
   movement: string
   confidence?: React.ReactNode
 }) {
+  const copy = await getDictionary()
+  const label = labelProp ?? copy.exec.prescriptionLabel
   return (
     <div
       className="mt-8 rounded-md border p-6 md:p-7"

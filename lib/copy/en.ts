@@ -939,6 +939,61 @@ export const copy = {
     ],
   },
 
+  /* --- Footer (doc §8: every menu is translated) -------------------------- */
+  footer: {
+    ariaLabel: 'Footer',
+    limitationLead: 'Directional modelling.',
+    limitationTail:
+      'Commercial figures are estimates for prioritisation, not audited financial statements.',
+    rights: 'GeoRepute. Decision Intelligence Infrastructure.',
+    environment: 'Demonstration environment · Seeded data',
+    photography: 'Photography via',
+    columns: [
+      {
+        title: 'Product',
+        links: [
+          { href: '/app/mission-control', label: 'Executive Mission Control' },
+          { href: '/app/reconstruct', label: 'Decision Reconstruction' },
+          { href: '/app/actions', label: 'Action Center' },
+          { href: '/engines', label: 'Intelligence Engines' },
+          { href: '/briefing', label: 'Book a Briefing' },
+          { href: '/pricing', label: 'Pricing and Plans', flag: 'pricing' },
+        ],
+      },
+      {
+        title: 'Intelligence',
+        links: [
+          { href: '/marketplace', label: 'Intelligence Marketplace' },
+          { href: '/engines/ai-recognition', label: 'AI Recognition' },
+          { href: '/engines/google-vs-ai', label: 'Google vs AI Visibility' },
+          { href: '/engines/competitor-decision', label: 'Competitor Decision' },
+          { href: '/engines/action', label: 'Action Intelligence' },
+        ],
+      },
+      {
+        title: 'Methodology',
+        links: [
+          { href: '/methodology#geon', label: 'The GEON framework' },
+          { href: '/methodology#sources', label: 'Evidence sources' },
+          { href: '/methodology#confidence', label: 'Confidence model' },
+          { href: '/methodology#model', label: 'Financial model' },
+          { href: '/methodology#limitations', label: 'Limitations' },
+        ],
+      },
+      {
+        title: 'Company',
+        links: [
+          { href: '/blog', label: 'Intelligence Notes' },
+          { href: '/signin', label: 'Sign In' },
+          { href: '/legal#privacy', label: 'Privacy' },
+          { href: '/legal#terms', label: 'Terms of service' },
+          { href: '/legal#data', label: 'Data processing' },
+          { href: '/legal#security', label: 'Security' },
+        ],
+      },
+    ],
+  },
+
   /* --- Blog (doc §8) ------------------------------------------------------ */
   blog: {
     eyebrow: 'Intelligence notes',

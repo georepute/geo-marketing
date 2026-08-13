@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils/cn'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import type { OrgSummary } from '@/lib/api/types'
 
 /* ============================================================================
@@ -28,7 +28,7 @@ import type { OrgSummary } from '@/lib/api/types'
    nothing between them competes for attention.
    ========================================================================= */
 
-export function ExecutivePosition({
+export async function ExecutivePosition({
   org,
   weights,
 }: {
@@ -36,6 +36,7 @@ export function ExecutivePosition({
   /** Published index weights, so "carries the heaviest weight" is checkable. */
   weights: Record<string, number>
 }) {
+  const copy = await getDictionary()
   /**
    * The binding constraint is DERIVED, never asserted: it is the vector with
    * the largest weighted deficit — how many index points are currently being

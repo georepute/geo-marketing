@@ -1,5 +1,5 @@
 import { count, dateFull, daysUntil } from '@/lib/format'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import type { OrgSummary } from '@/lib/api/types'
 
 /* ============================================================================
@@ -25,7 +25,7 @@ function position(iso: string, start: number, span: number): number {
   return Math.min(Math.max(at, 0), 100)
 }
 
-export function StrategicWindow({
+export async function StrategicWindow({
   timing,
   asOf,
   evidence,
@@ -36,6 +36,7 @@ export function StrategicWindow({
   /** Why the estimate exists — the observations behind it. */
   evidence: { subject: string; observation: string }[]
 }) {
+  const copy = await getDictionary()
   const start = new Date(timing.windowOpenedAt).getTime()
   const span = new Date(timing.windowClosesAt).getTime() - start
 

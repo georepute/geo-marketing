@@ -7,16 +7,16 @@ import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { GlassCard } from '@/components/visual/Primitives'
 import { ENGINE_IMAGE } from '@/lib/visual/imagery'
 import { ENGINE_ICON } from '@/lib/visual/icons'
-import { copy } from '@/lib/copy/en'
+import { getDictionary } from '@/lib/i18n/server'
 import { getEngines, getReadouts } from '@/lib/api/client'
 
-export const metadata: Metadata = {
-  title: 'Intelligence Engines',
-  description:
-    'Twelve intelligence engines. One operating system. Each answers a board-level business question and routes into action.',
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getDictionary()
+  return { title: copy.nav.engines, description: copy.home.enginesSub }
 }
 
 export default async function EnginesPage() {
+  const copy = await getDictionary()
   const [engines, readouts] = await Promise.all([getEngines(), getReadouts()])
 
   const built = engines.data.filter((e) => e.built)
