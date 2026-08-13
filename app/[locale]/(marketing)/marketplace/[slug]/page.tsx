@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import { Price } from '@/components/commerce/Price'
 import { BuyButton } from '@/components/commerce/BuyButton'
 import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
+import { ProductScreen } from '@/components/product/ProductScreen'
+import { PRODUCT_SCREEN } from '@/lib/visual/screens'
 import { IntelligenceReadout } from '@/components/readout/IntelligenceReadout'
 import { RoleProvider } from '@/components/readout/RoleLens'
 import { Button } from '@/components/ui/Button'
@@ -228,6 +230,17 @@ export default async function ProductPage({
               signals, competitor context, commercial exposure, timing, trend,
               prescription, expected movement, owner and measurement.
             </p>
+
+            {/* Doc §2: the delivered report as it actually appears, above
+                the live readout that shows its anatomy. */}
+            {PRODUCT_SCREEN[p.slug] ? (
+              <div className="mb-8">
+                <ProductScreen
+                  id={PRODUCT_SCREEN[p.slug]!}
+                  sizes="(min-width: 1024px) 75vw, 100vw"
+                />
+              </div>
+            ) : null}
 
             <RoleProvider role="executive">
               <div className="rounded-md border border-line bg-panel p-6 md:p-8">

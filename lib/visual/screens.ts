@@ -264,6 +264,15 @@ export const SCREEN_SLOTS = {
     alt: 'An election narrative screen separating positive from negative narratives about a candidate, each with its reach, direction of movement and the sources carrying it.',
     ready: false,
   },
+  'election-polarity': {
+    file: '/screens/election-polarity.png',
+    aspect: PANEL,
+    surface: 'Positive vs negative narratives — the polarity split',
+    caption:
+      'Positive against negative, by reach and by direction of travel. Fictional race, demonstration data.',
+    alt: 'A panel splitting the narratives about a candidate into positive and negative, with the reach and momentum of each side shown side by side.',
+    ready: false,
+  },
   'election-audience': {
     file: '/screens/election-audience.png',
     aspect: PANEL,
@@ -339,6 +348,49 @@ export const SCREEN_SLOTS = {
 } as const satisfies Record<string, ScreenSlot>
 
 export type ScreenSlotId = keyof typeof SCREEN_SLOTS
+
+/* ---------------------------------------------------------------------------
+   Which screen belongs to which engine.
+
+   Doc §2 asks for a real screen wherever the site discusses an intelligence
+   engine. The engine roster (lib/seed/engines.ts) is longer than the screen
+   register because several engines share a surface — AI Recognition and AI
+   Search Presence are two questions asked of the same panel — so this is a
+   deliberate many-to-one map rather than a missing-slot list.
+   ------------------------------------------------------------------------ */
+export const ENGINE_SCREEN: Record<string, ScreenSlotId> = {
+  'ai-recognition': 'ai-intelligence',
+  'ai-search-presence': 'ai-intelligence',
+  'google-vs-ai': 'google-vs-ai',
+  'search-economics': 'search-intelligence',
+  'competitor-decision': 'competitor-intelligence',
+  narrative: 'narrative-intelligence',
+  'trust-authority': 'trust-authority',
+  action: 'action-plan',
+  'opportunity-revenue': 'executive-position',
+  'strategic-timing': 'mission-control',
+  distribution: 'distribution',
+  'global-market': 'market-intelligence',
+}
+
+/**
+ * Which screen a marketplace product delivers.
+ *
+ * Keyed by product slug rather than derived from the engine, because
+ * `IntelligenceProduct` carries no engine reference — the two catalogues are
+ * deliberately independent, and a product can be the output of more than one
+ * engine.
+ */
+export const PRODUCT_SCREEN: Record<string, ScreenSlotId> = {
+  'ai-recognition-scan': 'ai-intelligence',
+  'ai-search-presence-scan': 'ai-intelligence',
+  'google-vs-ai-gap-scan': 'google-vs-ai',
+  'competitor-recommendation-scan': 'competitor-intelligence',
+  'competitive-position-assessment': 'competitor-intelligence',
+  'trust-signals-scan': 'trust-authority',
+  'decision-journey-diagnostic': 'decision-reconstruction',
+  'executive-intelligence-brief': 'executive-position',
+}
 
 /** Slots still waiting on a real anonymised export. Used by `npm run screens`. */
 export function pendingSlots(): (ScreenSlot & { id: ScreenSlotId })[] {

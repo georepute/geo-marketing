@@ -30,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
        crawlers to index the absence, so it leaves the sitemap with the flag. */
     ...(flags.pricing ? [{ path: '/pricing', priority: 0.8 }] : []),
     { path: '/how-it-works', priority: 0.9 },
+    { path: '/election-intelligence', priority: 0.9 },
     { path: '/briefing', priority: 0.8 },
     { path: '/methodology', priority: 0.7 },
     { path: '/app/mission-control', priority: 0.8 },

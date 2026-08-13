@@ -161,6 +161,12 @@ export const copy = {
             description:
               'Prioritised interventions with owners, deadlines and measurement.',
           },
+          {
+            href: '/election-intelligence',
+            label: 'Election Intelligence',
+            description:
+              'Which narratives are moving the electorate, who is carrying them, and what must change.',
+          },
         ],
         feature: {
           eyebrow: 'Signature experience',
@@ -713,6 +719,173 @@ export const copy = {
     homeSub:
       'GeoRepute diagnoses the decision environment, turns that into a strategy, executes it, measures whether the signals it targeted actually moved, and uses the result to decide what happens next.',
     homeCta: 'See how the loop runs',
+  },
+
+  /* ==========================================================================
+     ELECTION INTELLIGENCE — requirements doc §3.
+
+     "This should be presented as a serious intelligence solution."
+
+     The same machinery as the commercial product, pointed at a different
+     decision. A voter choosing a candidate and a buyer choosing a supplier
+     are both deciding under the influence of narratives they did not author,
+     carried by sources they did not choose, in languages the campaign may
+     not be watching.
+
+     EVERY EXAMPLE ON THIS SURFACE IS FICTIONAL. The doc is explicit: no real
+     political client data, no confidential information. The seeded subject
+     (lib/seed/election.ts) is an invented county race, labelled as such
+     wherever it renders.
+     ======================================================================= */
+  election: {
+    navLabel: 'Election Intelligence',
+    eyebrow: 'Real-time election intelligence',
+    title: 'Know what is moving the election — and what will move it back.',
+    lede: 'GeoRepute reconstructs how a political position is actually formed: which narratives are circulating, who is carrying them, which audiences are moving, and what has to change to move them back.',
+
+    /* The doc's key message, stated where it cannot be missed. */
+    keyMessageLabel: 'The distinction that matters',
+    keyMessageNot: 'The system does not only show what is happening.',
+    keyMessage:
+      'It explains why the political position is changing, who is influencing it, where support is being lost or gained, and what should be done now to change the direction.',
+
+    /* --- Audiences (doc §3) --------------------------------------------- */
+    forLabel: 'Built for',
+    audiences: [
+      {
+        name: 'National elections',
+        body: 'Country-scale narrative and perception intelligence across every language and region in play.',
+      },
+      {
+        name: 'Local elections',
+        body: 'District-level resolution, where a few thousand persuadable voters decide the seat.',
+      },
+      {
+        name: 'Political parties',
+        body: 'Party-level perception tracked separately from the candidates who carry it.',
+      },
+      {
+        name: 'Candidates',
+        body: 'How a candidate is understood, described and recommended across the surfaces voters actually use.',
+      },
+      {
+        name: 'Campaign headquarters',
+        body: 'One operational picture the whole campaign works from, updated as the environment moves.',
+      },
+      {
+        name: 'Political strategists',
+        body: 'The evidence behind a strategic call, with the assumptions and limits stated.',
+      },
+      {
+        name: 'Election war rooms',
+        body: 'Live narrative movement, emerging risks and prioritised responses during the decisive window.',
+      },
+    ],
+
+    /* --- Capability clusters (doc §3, every listed capability) ----------- */
+    capabilitiesLabel: 'What the system analyzes',
+    capabilitiesSub:
+      'Every capability below is a question the campaign can put to the system and get an evidenced answer to.',
+    capabilities: [
+      {
+        id: 'perception',
+        name: 'Perception and narrative',
+        question: 'What is the electorate actually being told about this candidate?',
+        items: [
+          'Public perception',
+          'Political narratives',
+          'Positive and negative narratives',
+          'Narrative movement',
+          'Candidate and party perception',
+        ],
+      },
+      {
+        id: 'opponent',
+        name: 'Opponent and influence',
+        question: 'Who is strengthening the position, and who is damaging it?',
+        items: [
+          'Competitor and opponent narratives',
+          'Who is strengthening a candidate or party',
+          'Who is damaging them',
+          'Media and online information sources',
+          'Social and digital signals',
+        ],
+      },
+      {
+        id: 'audience',
+        name: 'Audience movement',
+        question: 'Which voters are moving, in which direction, and over what?',
+        items: [
+          'Which audiences are moving closer',
+          'Which audiences are moving away',
+          'Which issues are changing voter perception',
+        ],
+      },
+      {
+        id: 'discovery',
+        name: 'Search and AI visibility',
+        question: 'What does a voter find when they look this candidate up?',
+        items: [
+          'Google visibility',
+          'AI engine visibility and recommendations',
+          'What each engine leads with',
+          'Where the accounts diverge from one another',
+        ],
+      },
+      {
+        id: 'language',
+        name: 'Multilingual intelligence',
+        question: 'Is the same candidate being described differently in each language?',
+        items: [
+          'Multilingual political intelligence',
+          'Narrative gaps between languages and audiences',
+        ],
+      },
+      {
+        id: 'risk',
+        name: 'Risk and opportunity',
+        question: 'What is emerging, and what is still unclaimed?',
+        items: [
+          'Risks and emerging threats',
+          'Opportunities',
+          'Unowned issues available to the campaign',
+        ],
+      },
+      {
+        id: 'action',
+        name: 'Prioritized action',
+        question: 'What should happen now, and how will we know it worked?',
+        items: [
+          'Prioritized actions',
+          'What should be done immediately',
+          'Who should be responsible',
+          'What needs to change',
+          'How movement should be measured over time',
+        ],
+      },
+    ],
+
+    /* --- Product screens (doc §3, "Real Product Screens") ---------------- */
+    screensLabel: 'Inside the system',
+    screensSub:
+      'The Election Intelligence surfaces, on demonstration data. No real candidate, party or campaign appears anywhere on this page.',
+
+    /* --- Live demo pointer ----------------------------------------------- */
+    liveLabel: 'See it running',
+    liveHeadline: 'Election Mode is live in this environment.',
+    liveBody:
+      'Narrative Intelligence switches subject from a commercial organisation to a fictional county race, so the structure of the analysis can be examined end to end before any real campaign data is involved.',
+    liveCta: 'Open Election Mode',
+
+    /* --- Confidentiality, stated plainly --------------------------------- */
+    confidentialLabel: 'On confidentiality',
+    confidentialBody:
+      'Campaign intelligence is handled as campaign intelligence. No client race, candidate or dataset appears in any public material, demonstration or reference. Every example on this page is an invented subject built to show the shape of the analysis.',
+
+    /* --- CTAs (doc §3, verbatim) ----------------------------------------- */
+    ctaHeadline: 'The position is already moving. The question is in which direction.',
+    ctaPrimary: 'See What Is Moving the Election',
+    ctaSecondary: 'Book an Election Intelligence Briefing',
   },
 
   /* --- Product shell (doc §8: dashboards are translated too) ------------- */

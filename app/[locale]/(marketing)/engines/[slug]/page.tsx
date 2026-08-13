@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Link } from '@/components/i18n/Link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
+import { ProductScreen } from '@/components/product/ProductScreen'
+import { ENGINE_SCREEN } from '@/lib/visual/screens'
 import { Button } from '@/components/ui/Button'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ENGINE_IMAGE } from '@/lib/visual/imagery'
@@ -173,6 +175,16 @@ export default async function EnginePage({
           <h2 className="text-h1 text-ink mt-3 mb-8">
             Screens this engine provides
           </h2>
+
+          {/* Doc §2: show the real screen, not only its name. */}
+          {ENGINE_SCREEN[engine.data.slug] ? (
+            <div className="mb-10">
+              <ProductScreen
+                id={ENGINE_SCREEN[engine.data.slug]!}
+                sizes="(min-width: 1024px) 75vw, 100vw"
+              />
+            </div>
+          ) : null}
 
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {engine.data.screens.map((screen) => (

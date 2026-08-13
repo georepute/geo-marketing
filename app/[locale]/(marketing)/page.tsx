@@ -15,6 +15,7 @@ import { ExecutivePosition } from '@/components/home/ExecutivePosition'
 import { ExecutiveActionPlan } from '@/components/home/ExecutiveActionPlan'
 import { EcosystemStrip } from '@/components/home/EcosystemStrip'
 import { ClosedLoopBand } from '@/components/home/ClosedLoopBand'
+import { ProductScreen } from '@/components/product/ProductScreen'
 import { HomeInteractive } from './HomeClient'
 import { DecisionJourneyTrack } from '@/components/viz/DecisionJourneyTrack'
 import { GoogleVsAIGapMatrix } from '@/components/viz/GoogleVsAIGapMatrix'
@@ -422,6 +423,15 @@ export default async function Home() {
 
         <ExecutiveActionPlan actions={actions.data} />
 
+        {/* Doc §2: the Action Plan as it actually appears in the platform. */}
+        <div className="mt-8">
+          <ProductScreen
+            id="action-plan"
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="max-w-lg"
+          />
+        </div>
+
         <div className="mt-6">
           <Button asChild variant="secondary">
             <Link href="/app/actions">Open the full intervention plan</Link>
@@ -439,6 +449,15 @@ export default async function Home() {
         context={decisionHealth.businessMeaning}
       >
         <ExecutivePosition org={org.data} weights={org.data.indexWeights} />
+
+        {/* Doc §2: Executive / Mission Control, the screen this section
+            describes. */}
+        <div className="mt-8">
+          <ProductScreen
+            id="mission-control"
+            sizes="(min-width: 1024px) 70vw, 100vw"
+          />
+        </div>
 
         <Prescription
           label={copy.exec.recoveryLabel}
