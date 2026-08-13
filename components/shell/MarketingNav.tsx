@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { usePathname } from 'next/navigation'
 import { Wordmark } from './Wordmark'
 import { Button } from '@/components/ui/Button'
@@ -13,7 +13,10 @@ import {
   Chevron,
   CloseIcon,
 } from '@/components/ui/Primitives'
-import { copy } from '@/lib/copy/en'
+import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
+import { useDict } from '@/lib/i18n/context'
+import { stripLocale } from '@/lib/i18n/config'
+import type { copy } from '@/lib/copy/en'
 import { flags } from '@/lib/flags'
 import { cn } from '@/lib/utils/cn'
 
@@ -34,16 +37,28 @@ import { cn } from '@/lib/utils/cn'
    hard to notice.
    ========================================================================= */
 
-const GROUPS = copy.nav.groups
-
-/* A flat item may declare the flag that gates it. Pricing is gated this way
-   (doc §4) so the route survives while the link does not. */
-const FLAT = copy.nav.flat.filter(
-  (link) => !('flag' in link) || flags[link.flag],
-)
+/* The SHAPE comes from the English module — it is the schema — while the
+   labels come from the active dictionary at render time. Hoisting the whole
+   structure to module scope, as this file used to, would freeze every nav
+   label in English no matter which locale was being rendered. */
+type Group = (typeof copy.nav.groups)[number]
 
 export function MarketingNav() {
-  const pathname = usePathname()
+  const dict = useDict()
+  const GROUPS: readonly Group[] = dict.nav.groups
+
+  /* A flat item may declare the flag that gates it. Pricing is gated this way
+     (doc §4) so the route survives while the link does not. */
+  const FLAT = dict.nav.flat.filter(
+    (link) => !('flag' in link) || flags[link.flag],
+  )
+
+  /* The live URL carries a locale prefix (/he/marketplace) while every href
+     in the copy module is locale-free (/marketplace). Comparing the two
+     directly leaves the whole navigation permanently inactive in every
+     language — including English, where /en/marketplace never equals
+     /marketplace. Strip the prefix once, here. */
+  const pathname = stripLocale(usePathname())
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<string | null>(null)
@@ -155,7 +170,7 @@ export function MarketingNav() {
 
           {/* --- Desktop navigation ---------------------------------- */}
           <nav
-            aria-label="Primary"
+            aria-label={dict.a11y.primaryNav}
             className="hidden lg:flex items-center gap-0.5 ms-5"
           >
             {GROUPS.map((group) => {
@@ -212,24 +227,28 @@ export function MarketingNav() {
           </nav>
 
           <div className="ms-auto flex items-center gap-2">
+            {/* Doc §8: available across the entire website. The marketing
+                shell is on every public page, so it belongs here. */}
+            <LanguageSwitcher className="hidden md:inline-flex" />
+
             <Button
               asChild
               variant="ghost"
               size="sm"
               className="hidden sm:inline-flex"
             >
-              <Link href="/signin">{copy.nav.signIn}</Link>
+              <Link href="/signin">{dict.nav.signIn}</Link>
             </Button>
 
             {/* The one weighted control in the bar. */}
             <Button asChild variant="primary" size="sm">
-              <Link href="/app/reconstruct">{copy.nav.startAnalysis}</Link>
+              <Link href="/app/reconstruct">{dict.nav.startAnalysis}</Link>
             </Button>
 
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
-              aria-label="Open menu"
+              aria-label={dict.a11y.openMenu}
               aria-expanded={menuOpen}
               className={cn(
                 'lg:hidden grid place-items-center size-9 rounded-sm',
@@ -273,10 +292,10 @@ export function MarketingNav() {
         >
           <div className="flex items-center justify-between p-5 border-b border-line">
             <DrawerTitle asChild>
-              <span className="text-label uppercase text-ink-3">Navigate</span>
+              <span className="text-label uppercase text-ink-3">{dict.a11y.navigate}</span>
             </DrawerTitle>
             <DrawerClose
-              aria-label="Close menu"
+              aria-label={dict.a11y.closeMenu}
               className={cn(
                 'grid place-items-center size-8 rounded-sm border border-line',
                 'text-ink-2 hover:text-ink hover:bg-inset active:bg-line',
@@ -288,7 +307,7 @@ export function MarketingNav() {
           </div>
 
           <nav
-            aria-label="Mobile"
+            aria-label={dict.a11y.mobileNav}
             className="overflow-y-auto flex-1 flex flex-col"
           >
             {GROUPS.map((group) => (
@@ -326,14 +345,14 @@ export function MarketingNav() {
                     className="inline-flex items-center gap-2 text-caption text-brand-300 mt-3 hover:text-ink transition-colors"
                   >
                     {'allLabel' in group ? group.allLabel : 'See all'}{' '}
-                    <span aria-hidden>→</span>
+                    <span aria-hidden className="gr-arrow">→</span>
                   </Link>
                 ) : null}
               </div>
             ))}
 
             <div className="p-5 border-b border-line space-y-1">
-              {[...FLAT, { href: '/signin', label: copy.nav.signIn }].map(
+              {[...FLAT, { href: '/signin', label: dict.nav.signIn }].map(
                 (link) => (
                   <Link
                     key={link.href}
@@ -346,12 +365,21 @@ export function MarketingNav() {
               )}
             </div>
 
+            {/* Doc §8: the switcher must be reachable on mobile too — it is
+                hidden from the bar below the md breakpoint. */}
+            <div className="p-5 border-b border-line">
+              <p className="text-label uppercase text-ink-3">
+                {dict.language.label}
+              </p>
+              <LanguageSwitcher align="start" className="mt-3 -ms-2.5" />
+            </div>
+
             <div className="p-5 mt-auto">
               <Button asChild variant="primary" size="lg" className="w-full">
-                <Link href="/app/reconstruct">{copy.nav.startAnalysis}</Link>
+                <Link href="/app/reconstruct">{dict.nav.startAnalysis}</Link>
               </Button>
               <p className="text-caption text-ink-3 mt-4 text-center text-balance">
-                {copy.categoryPositioning}
+                {dict.categoryPositioning}
               </p>
             </div>
           </nav>
@@ -380,8 +408,6 @@ function Indicator({ show }: { show: boolean }) {
 }
 
 /* ------------------------------------------------------------------------ */
-
-type Group = (typeof GROUPS)[number]
 
 function MegaPanel({
   group,
@@ -459,7 +485,7 @@ function MegaPanel({
                 href={allHref}
                 className="inline-flex items-center gap-2 text-caption text-brand-300 mt-5 ms-4 hover:text-ink transition-colors"
               >
-                {allLabel} <span aria-hidden>→</span>
+                {allLabel} <span aria-hidden className="gr-arrow">→</span>
               </Link>
             ) : null}
           </div>
@@ -486,7 +512,7 @@ function MegaPanel({
                 {feature.body}
               </span>
               <span className="inline-flex items-center gap-2 text-caption text-ink mt-5">
-                {feature.cta} <span aria-hidden>→</span>
+                {feature.cta} <span aria-hidden className="gr-arrow">→</span>
               </span>
             </Link>
           ) : null}

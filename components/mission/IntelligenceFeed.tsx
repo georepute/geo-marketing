@@ -92,7 +92,7 @@ export function IntelligenceFeed({
             <div className="mt-3 flex items-center gap-3">
               <ConfidenceBadge confidence={event.confidence} />
               <span className="text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors">
-                Open evidence →
+                Open evidence <span aria-hidden className="gr-arrow">→</span>
               </span>
             </div>
           </button>

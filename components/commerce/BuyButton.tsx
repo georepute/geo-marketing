@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { useEntitlements } from './EntitlementProvider'
 import { copy } from '@/lib/copy/en'

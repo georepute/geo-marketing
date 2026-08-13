@@ -115,7 +115,7 @@ export function MissionTile({
       <div className="mt-auto pt-4 flex items-center justify-between gap-3">
         <TrendChip trend={tile.trend} />
         <span className="text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors inline-flex items-center gap-2">
-          Evidence <span aria-hidden>→</span>
+          Evidence <span aria-hidden className="gr-arrow">→</span>
         </span>
       </div>
     </button>

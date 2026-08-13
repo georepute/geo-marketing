@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
 import { ScoreMeter } from '@/components/signal/Indicators'

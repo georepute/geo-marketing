@@ -342,6 +342,51 @@ export const copy = {
     hint: 'Changes how much detail opens by default. No data is hidden.',
   },
 
+  /* ==========================================================================
+     ACCESSIBLE NAMES — doc §8.
+
+     These are read aloud rather than seen, which is exactly why they were the
+     strings most likely to be left in English by a translation pass that
+     worked from the visible page. A screen-reader user navigating the Hebrew
+     site should not meet an English landmark.
+     ======================================================================= */
+  a11y: {
+    skipToContent: 'Skip to content',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    navigate: 'Navigate',
+    primaryNav: 'Primary',
+    mobileNav: 'Mobile',
+    footerNav: 'Footer',
+    breadcrumb: 'Breadcrumb',
+  },
+
+  /* --- Product shell (doc §8: dashboards are translated too) ------------- */
+  appNav: {
+    ariaLabel: 'Product',
+    exit: 'Exit',
+    observed: 'Observed',
+    environment: 'Seeded demonstration environment · Methodology GEON-2.4',
+    methodologyLink: 'How these conclusions are reached',
+    items: [
+      { href: '/app/mission-control', label: 'Mission Control' },
+      { href: '/app/reconstruct', label: 'Decision Reconstruction' },
+      { href: '/app/campaign-readiness', label: 'Campaign Readiness' },
+      { href: '/app/narrative', label: 'Narrative Intelligence' },
+      { href: '/app/actions', label: 'Action Center' },
+    ],
+  },
+
+  /* --- Language switcher (doc §8) ---------------------------------------- */
+  language: {
+    label: 'Language',
+    choose: 'Choose a language',
+    /* Announced with the endonym, which is never translated — the point of
+       listing a language in its own script is that it is recognisable to
+       someone who cannot read the current one. */
+    current: 'Current language',
+  },
+
   meta: {
     description:
       'GeoRepute reconstructs how businesses are recognized, evaluated, recommended, trusted and chosen across AI engines, Google, digital channels and market perception.',

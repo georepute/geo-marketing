@@ -1,9 +1,11 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { usePathname } from 'next/navigation'
 import { Wordmark } from './Wordmark'
 import { RoleLensControl, type Role } from '@/components/readout/RoleLens'
+import { useDict } from '@/lib/i18n/context'
+import { stripLocale } from '@/lib/i18n/config'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 
@@ -15,14 +17,6 @@ import { cn } from '@/lib/utils/cn'
    what an operator needs constantly — which organisation, which domain, how
    fresh the observation is — rather than decoration.
    ========================================================================= */
-
-const NAV = [
-  { href: '/app/mission-control', label: 'Mission Control' },
-  { href: '/app/reconstruct', label: 'Decision Reconstruction' },
-  { href: '/app/campaign-readiness', label: 'Campaign Readiness' },
-  { href: '/app/narrative', label: 'Narrative Intelligence' },
-  { href: '/app/actions', label: 'Action Center' },
-]
 
 export function AppShell({
   org,
@@ -37,7 +31,10 @@ export function AppShell({
   onRoleChange: (role: Role) => void
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
+  const dict = useDict()
+  /* The URL carries a locale prefix; these hrefs do not. Without stripping it
+     the product nav highlights nothing in any language. */
+  const pathname = stripLocale(usePathname())
 
   return (
     <div className="min-h-dvh flex flex-col bg-canvas">
@@ -72,17 +69,17 @@ export function AppShell({
               href="/"
               className="text-caption text-ink-2 hover:text-ink transition-colors whitespace-nowrap"
             >
-              Exit
+              {dict.appNav.exit}
             </Link>
           </div>
         </div>
 
         {/* --- Section nav ---------------------------------------------- */}
         <nav
-          aria-label="Product"
+          aria-label={dict.appNav.ariaLabel}
           className="gr-rail-wide flex items-center gap-1 -mb-px overflow-x-auto"
         >
-          {NAV.map((item) => {
+          {dict.appNav.items.map((item) => {
             const active = pathname.startsWith(item.href)
             return (
               <Link
@@ -127,13 +124,13 @@ export function AppShell({
       <footer className="gr-hairline">
         <div className="gr-rail-wide py-4 flex flex-wrap items-center justify-between gap-3">
           <p className="text-label uppercase text-ink-3">
-            Seeded demonstration environment · Methodology GEON-2.4
+            {dict.appNav.environment}
           </p>
           <Link
             href="/methodology"
             className="text-caption text-ink-2 hover:text-ink transition-colors"
           >
-            How these conclusions are reached
+            {dict.appNav.methodologyLink}
           </Link>
         </div>
       </footer>
@@ -149,6 +146,7 @@ export function AppShell({
  * nothing else does.
  */
 function ObservationStatus({ asOf }: { asOf: string }) {
+  const dict = useDict()
   return (
     <span className="hidden sm:flex items-center gap-2 whitespace-nowrap">
       <span
@@ -160,7 +158,8 @@ function ObservationStatus({ asOf }: { asOf: string }) {
         }}
       />
       <span className="text-label uppercase text-ink-3">
-        Observed <span className="text-ink-2">{dateFull(asOf)}</span>
+        {dict.appNav.observed}{' '}
+        <span className="text-ink-2">{dateFull(asOf)}</span>
       </span>
     </span>
   )

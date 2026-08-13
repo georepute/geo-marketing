@@ -62,7 +62,7 @@ function walk(dir: string, files: string[] = []): string[] {
 /* Internal-only surfaces are excluded: the design-system page quotes §19
    sentences as typography specimens, which is a legitimate use and not
    customer-facing copy. Everything a customer can reach is scanned. */
-const INTERNAL = [join('app', 'kitchen-sink'), join('app', 'debug')]
+const INTERNAL = [join('app', '[locale]', 'kitchen-sink'), join('app', '[locale]', 'debug')]
 
 const screenFiles = [
   ...walk(join(ROOT, 'app')),

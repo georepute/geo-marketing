@@ -171,6 +171,55 @@
     font-feature-settings: 'tnum' 1;
   }
 
+  /* ==========================================================================
+     BIDIRECTIONAL TEXT — doc §8, full RTL for Hebrew and Arabic.
+
+     The layout mirrors from `dir` on <html> because the whole stylesheet is
+     written in logical properties. These two rules cover what `dir` alone
+     gets wrong.
+     ======================================================================= */
+
+  /* MEASUREMENTS DO NOT MIRROR. The bidi algorithm treats digits as neutral
+     and will happily reorder "38 → 55" into "55 ← 38" inside an RTL
+     paragraph, silently inverting the meaning of every trend, range and
+     before/after figure in the product. Numbers, percentages, currency and
+     dates read left-to-right in every language, so each numeric run is
+     isolated and pinned.
+
+     `text-align: right` restores the block alignment that `direction: ltr`
+     would otherwise steal — it is inert on the inline spans, which are the
+     majority, and correct on the display-size figures, which are blocks. */
+  [dir='rtl'] [data-numeric],
+  [dir='rtl'] .gr-data {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: right;
+  }
+
+  /* NAVIGATIONAL ARROWS DO MIRROR. An arrow meaning "onward" points the way
+     the reader travels, so it flips with the text. Carried by a class rather
+     than applied to every "→" on the page, because the arrows inside a
+     measurement ("38 → 55") mean "becomes" and must not move. */
+  .gr-arrow {
+    display: inline-block;
+  }
+
+  /* Lucide puts the icon's own name in its class list (`lucide-arrow-right`),
+     so the directional icons are mirrored centrally here rather than at each
+     of their call sites — and any added later is covered by construction
+     rather than by remembering.
+
+     `scale`, not `transform: scaleX(-1)`. Several of these icons carry a
+     Tailwind `group-hover:translate-x-*` nudge, and a `transform` declaration
+     here would win on specificity and silently delete that hover. The
+     standalone transform properties compose instead of colliding. */
+  [dir='rtl'] .gr-arrow,
+  [dir='rtl'] [class*='lucide-arrow-'],
+  [dir='rtl'] [class*='lucide-chevron-'],
+  [dir='rtl'] [class*='lucide-move-'] {
+    scale: -1 1;
+  }
+
   /* One focus treatment, everywhere, in both themes. */
   :focus-visible {
     outline: 2px solid var(--gr-focus);

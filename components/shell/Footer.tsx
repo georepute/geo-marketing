@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { Wordmark } from './Wordmark'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { imageCredits } from '@/lib/visual/imagery'

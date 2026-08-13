@@ -203,7 +203,7 @@ function ChainBody({
       {inner}
       <span className="inline-flex items-center gap-2 mt-3 text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors">
         View evidence
-        <span aria-hidden>→</span>
+        <span aria-hidden className="gr-arrow">→</span>
       </span>
     </button>
   )

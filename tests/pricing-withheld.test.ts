@@ -69,11 +69,11 @@ const screens = [
 const PRICING_SURFACES = [
   join('components', 'commerce', 'Price.tsx'),
   join('components', 'commerce', 'BuyButton.tsx'),
-  join('app', '(marketing)', 'pricing', 'page.tsx'),
-  join('app', '(commerce)', 'checkout', 'CheckoutFlow.tsx'),
-  join('app', '(commerce)', 'checkout', 'page.tsx'),
-  join('app', 'kitchen-sink'),
-  join('app', 'debug'),
+  join('app', '[locale]', '(marketing)', 'pricing', 'page.tsx'),
+  join('app', '[locale]', '(commerce)', 'checkout', 'CheckoutFlow.tsx'),
+  join('app', '[locale]', '(commerce)', 'checkout', 'page.tsx'),
+  join('app', '[locale]', 'kitchen-sink'),
+  join('app', '[locale]', 'debug'),
 ]
 
 const isPricingSurface = (file: string) =>
@@ -112,9 +112,9 @@ describe('Every price passes through a guarded choke point', () => {
 
   it('the pricing page and checkout 404 while the flag is off', () => {
     for (const route of [
-      join('app', '(marketing)', 'pricing', 'page.tsx'),
-      join('app', '(commerce)', 'checkout', 'page.tsx'),
-      join('app', '(commerce)', 'checkout', 'success', 'page.tsx'),
+      join('app', '[locale]', '(marketing)', 'pricing', 'page.tsx'),
+      join('app', '[locale]', '(commerce)', 'checkout', 'page.tsx'),
+      join('app', '[locale]', '(commerce)', 'checkout', 'success', 'page.tsx'),
     ]) {
       const source = read(join(ROOT, route))
       expect(source, route).toMatch(/if \(!flags\.pricing\) notFound\(\)/)
@@ -161,8 +161,8 @@ describe('The pricing code still exists', () => {
        behind after someone "cleaned up" would pass the leak tests above
        while quietly destroying the work. */
     for (const [route, marker] of [
-      [join('app', '(marketing)', 'pricing', 'page.tsx'), 'ADD_ONS'],
-      [join('app', '(commerce)', 'checkout', 'CheckoutFlow.tsx'), 'catalogPrice'],
+      [join('app', '[locale]', '(marketing)', 'pricing', 'page.tsx'), 'ADD_ONS'],
+      [join('app', '[locale]', '(commerce)', 'checkout', 'CheckoutFlow.tsx'), 'catalogPrice'],
       [join('components', 'commerce', 'Price.tsx'), 'catalogPrice'],
     ] as const) {
       const source = read(join(ROOT, route))

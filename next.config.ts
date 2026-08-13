@@ -2,6 +2,12 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    /* The root layout lives under app/[locale], so an unmatched URL has no
+       layout to build a 404 from. `global-not-found` is the documented answer
+       for exactly that case. See app/global-not-found.tsx. */
+    globalNotFound: true,
+  },
   images: {
     // Only these two hosts. Both are free for commercial use; every photo in
     // lib/visual/imagery.ts was inspected before inclusion.

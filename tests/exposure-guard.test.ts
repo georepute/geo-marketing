@@ -23,8 +23,8 @@ const MONEY_ALLOWLIST = [
   // it costs. These are exempt because they make no predictive claim.
   join('components', 'commerce'),
   // Internal-only surfaces, never shipped to a customer.
-  join('app', 'kitchen-sink'),
-  join('app', 'debug'),
+  join('app', '[locale]', 'kitchen-sink'),
+  join('app', '[locale]', 'debug'),
   // Catalogue pricing lives here — facts, not model output.
   join('lib', 'seed', 'products.ts'),
   // The causal chain's exposure node is a summary that opens the full readout;
