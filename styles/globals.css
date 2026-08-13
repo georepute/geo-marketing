@@ -427,6 +427,39 @@
   }
 }
 
+/* ============================================================================
+   Closed-loop centrepiece — doc §10, "a strong visual/animated representation
+   of the complete loop".
+
+   Both carry .gr-loop, so the reduced-motion contract switches them off
+   outright rather than merely shortening them (§5.5).
+   ========================================================================= */
+
+/* A charge travelling the ring. The dash pattern is a short lit segment
+   against a long gap, so one pulse circulates rather than the whole path
+   appearing to crawl. */
+@keyframes gr-loop-sweep {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Each stage lights as the charge reaches it. Delays are staggered by
+   position, so the sequence reads as one signal moving around the cycle
+   rather than seven independent blinks. */
+@keyframes gr-loop-node {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 0.4;
+  }
+}
+
 @keyframes gr-shimmer {
   0% {
     background-position: -180% 0;

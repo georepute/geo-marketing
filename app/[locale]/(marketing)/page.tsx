@@ -14,6 +14,7 @@ import { StrategicWindow } from '@/components/home/StrategicWindow'
 import { ExecutivePosition } from '@/components/home/ExecutivePosition'
 import { ExecutiveActionPlan } from '@/components/home/ExecutiveActionPlan'
 import { EcosystemStrip } from '@/components/home/EcosystemStrip'
+import { ClosedLoopBand } from '@/components/home/ClosedLoopBand'
 import { HomeInteractive } from './HomeClient'
 import { DecisionJourneyTrack } from '@/components/viz/DecisionJourneyTrack'
 import { GoogleVsAIGapMatrix } from '@/components/viz/GoogleVsAIGapMatrix'
@@ -156,6 +157,14 @@ export default async function Home() {
         ownAuthoritySources={self.authoritySources}
         competitorAuthoritySources={topCompetitor.authoritySources}
       />
+
+      {/* ================================================================
+          THE CLOSED LOOP — doc §10 places this immediately after the hero,
+          before the page starts asking its seven questions. It is the frame
+          those questions sit inside: each one ends in a prescription, and
+          this is what happens to a prescription after it is issued.
+          ============================================================== */}
+      <ClosedLoopBand />
 
       {/* ================================================================
           THE PREMISE — why a business needs this at all.
