@@ -287,6 +287,41 @@ export const copy = {
     format: 'Video call',
     costLabel: 'Cost',
     cost: 'None',
+
+    /* --- The scheduling panel (doc §5) ---------------------------------- */
+    scheduleLabel: 'Arrange the session',
+    pickDate: 'Choose a date',
+    pickTime: 'Choose a time',
+    noTimes: 'No times available on this date.',
+    loadingTimes: 'Checking availability…',
+    timeZoneNote: 'Times shown in your local time zone',
+    noticeNote: 'The earliest available session is 48 hours from now.',
+    nameLabel: 'Full name',
+    emailLabel: 'Work email',
+    orgLabel: 'Organisation',
+    notesLabel: 'What would you like the session to cover?',
+    optional: 'Optional',
+    submit: 'Confirm the briefing',
+    submitting: 'Confirming…',
+    back: 'Change time',
+
+    confirmedTitle: 'The briefing is confirmed.',
+    confirmedBody:
+      'A calendar invitation is on its way to your inbox, and to ours. Reschedule and cancel links are in that email.',
+    confirmedAdd: 'Booked for',
+
+    /* Failure states. Each says what happened and what to do next, because
+       "something went wrong" on a booking form loses the meeting. */
+    errorConflict:
+      'That time was taken while you were filling this in. Choose another and nothing else will be lost.',
+    errorInvalid: 'Please check the details and try again.',
+    errorUpstream:
+      'The calendar could not be reached. Try again in a moment, or email us and we will arrange it directly.',
+
+    /* Shown when CAL_API_KEY is absent — see lib/booking/config.ts. */
+    unconfiguredTitle: 'Scheduling opens shortly.',
+    unconfiguredBody:
+      'In the meantime, start the reconstruction on your own domain. The briefing begins from whatever it returns.',
   },
 
   /* --- Readout anatomy section labels (brief §13) ------------------------ */
@@ -901,6 +936,40 @@ export const copy = {
       { href: '/app/campaign-readiness', label: 'Campaign Readiness' },
       { href: '/app/narrative', label: 'Narrative Intelligence' },
       { href: '/app/actions', label: 'Action Center' },
+    ],
+  },
+
+  /* --- Blog (doc §8) ------------------------------------------------------ */
+  blog: {
+    eyebrow: 'Intelligence notes',
+    title: 'Intelligence Notes',
+    lede: 'Writing on how businesses are recognised, evaluated, recommended and chosen — and on what can be done about it.',
+    readTime: 'min read',
+    more: 'More from Intelligence Notes',
+    empty: 'The first articles are being prepared.',
+    ctaBody:
+      'Every argument on this site can be run against your own market.',
+  },
+
+  /* --- Partner ecosystem (doc §8) ---------------------------------------- */
+  ecosystem: {
+    label: 'Ecosystem',
+    partners: [
+      {
+        name: 'GINTEX',
+        href: 'https://gintex.com',
+        description: 'The group behind GeoRepute.',
+      },
+      {
+        name: 'copyup.ai',
+        href: 'https://copyup.ai',
+        description: 'Content and media execution.',
+      },
+      {
+        name: 'onlineperception.ai',
+        href: 'https://onlineperception.ai',
+        description: 'Perception measurement.',
+      },
     ],
   },
 

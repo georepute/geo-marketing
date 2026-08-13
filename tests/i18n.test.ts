@@ -189,6 +189,10 @@ describe('Every route is locale-aware', () => {
       .filter(
         (file) =>
           !file.startsWith(join('app', '[locale]')) &&
+          /* Route handlers are deliberately locale-agnostic: they serve JSON
+             to a caller that already knows its own language, and
+             next/root-params is unavailable in them regardless. */
+          !file.startsWith(join('app', 'api')) &&
           ![
             join('app', 'providers.tsx'),
             join('app', 'robots.ts'),

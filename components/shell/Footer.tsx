@@ -58,6 +58,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Company',
     links: [
+      { href: '/blog', label: 'Intelligence Notes' },
       { href: '/signin', label: 'Sign In' },
       { href: '/legal#privacy', label: 'Privacy' },
       { href: '/legal#terms', label: 'Terms of service' },
@@ -130,6 +131,35 @@ export function Footer() {
               </div>
             ))}
           </nav>
+        </div>
+
+        {/* --- Ecosystem — doc §8 asks for these three by name ---------- */}
+        <div className="mt-14 pt-8 border-t border-line">
+          <h2 className="text-label uppercase text-ink-3">
+            {copy.ecosystem.label}
+          </h2>
+          <ul className="mt-5 flex flex-wrap gap-x-10 gap-y-4">
+            {copy.ecosystem.partners.map((partner) => (
+              <li key={partner.name}>
+                <a
+                  href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex flex-col"
+                >
+                  <span className="text-body text-ink-2 group-hover:text-ink transition-colors">
+                    {partner.name}
+                    <span aria-hidden className="gr-arrow text-ink-3 ms-1.5">
+                      ↗
+                    </span>
+                  </span>
+                  <span className="text-caption text-ink-3 mt-1">
+                    {partner.description}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* --- Standing limitation notice — brief §15.4 ----------------- */}

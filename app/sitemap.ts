@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getEcosystem, getEngines, getProducts } from '@/lib/api/client'
 import { flags } from '@/lib/flags'
 import { LOCALES, DEFAULT_LOCALE, localePath } from '@/lib/i18n/config'
+import { allPostSlugs } from '@/lib/blog/source'
 
 /**
  * Public surfaces only. Product and app routes are included because they are
@@ -32,6 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/how-it-works', priority: 0.9 },
     { path: '/election-intelligence', priority: 0.9 },
     { path: '/briefing', priority: 0.8 },
+    { path: '/blog', priority: 0.7 },
     { path: '/methodology', priority: 0.7 },
     { path: '/app/mission-control', priority: 0.8 },
     { path: '/app/reconstruct', priority: 0.8 },
@@ -55,11 +57,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...products.data.premium,
   ].map((p) => ({ path: `/marketplace/${p.slug}`, priority: 0.7 }))
 
+  const postPages = allPostSlugs().map((slug) => ({
+    path: `/blog/${slug}`,
+    priority: 0.6,
+  }))
+
   const routes = [
     ...staticRoutes,
     ...enginePages,
     ...categoryPages,
     ...productPages,
+    ...postPages,
   ]
 
   return routes.flatMap((route) =>

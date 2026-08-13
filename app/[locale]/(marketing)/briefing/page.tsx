@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { Link } from '@/components/i18n/Link'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
-import { Button } from '@/components/ui/Button'
+import { BookingCalendar } from '@/components/booking/BookingCalendar'
 import { copy } from '@/lib/copy/en'
 
 export const metadata: Metadata = {
@@ -22,7 +21,16 @@ export const metadata: Metadata = {
    connected — see the BOOKING PANEL note where it belongs.
    ========================================================================= */
 
-export default function BriefingPage() {
+export default async function BriefingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ interest?: string }>
+}) {
+  /* Buy controls and the Election CTA arrive here with ?interest=<slug>. It
+     is passed into the booking notes so the session starts from what the
+     visitor was actually looking at. */
+  const { interest } = await searchParams
+
   return (
     <>
       <section className="relative isolate overflow-hidden">
@@ -97,37 +105,17 @@ export default function BriefingPage() {
             {/* ============================================================
                 BOOKING PANEL — doc §5.
 
-                The scheduling calendar belongs here: date and time selection
-                against real availability, earliest slot at least 48 hours out,
-                unavailable times hidden, double-booking prevented, and
-                confirmation sent to both the visitor and the admin.
+                Date and time against real availability, earliest slot 48
+                hours out, unavailable times never sent to the browser,
+                double-booking rejected by the calendar, and confirmation to
+                both the visitor and the host.
 
-                Not yet connected. The interim routes below are honest about
-                that rather than presenting a control that cannot complete.
+                Renders its own fallback when CAL_API_KEY is absent, so an
+                unconfigured deployment shows an honest message rather than a
+                calendar that cannot complete.
                 ========================================================== */}
             <aside className="rounded-md border border-line bg-panel p-6 lg:sticky lg:top-24">
-              <p className="text-label uppercase text-brand-300">
-                Arrange the session
-              </p>
-              <p className="text-body text-ink-2 mt-4">
-                Scheduling opens shortly. In the meantime, start the
-                reconstruction on your own domain — the briefing begins from
-                whatever it returns.
-              </p>
-
-              <Button asChild variant="primary" size="lg" className="w-full mt-6">
-                <Link href="/app/reconstruct">{copy.home.heroCtaPrimary}</Link>
-              </Button>
-              <Button
-                asChild
-                variant="secondary"
-                size="lg"
-                className="w-full mt-3"
-              >
-                <Link href="/marketplace">
-                  {copy.home.heroCtaSecondary}
-                </Link>
-              </Button>
+              <BookingCalendar interest={interest} />
 
               <p className="text-caption text-ink-3 mt-6 pt-5 border-t border-line">
                 {copy.exec.everyFigureCaption}
