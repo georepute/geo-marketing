@@ -16,9 +16,30 @@ function mergeValue(base: unknown, override: unknown): unknown {
     return base
   }
 
-  /* Arrays are replaced, never spliced. See PartialDictionary. */
+  /* ARRAYS SPLIT BY WHAT THEY HOLD.
+
+     An array of STRINGS is prose — a list of bullets, a set of verbs. A
+     translator handing back four of five means the fifth was dropped, and
+     splicing English into position five would hide that. Replaced wholesale.
+
+     An array of OBJECTS is structure: navigation groups, loop stages,
+     audience cards. Those objects carry `href` and `id` alongside their
+     labels, and none of that is translatable. Replacing wholesale would force
+     every language to restate every route, so one typo in one dictionary
+     would break navigation in that language only — the exact class of bug
+     nobody finds until a customer does. Merged element-wise by index, so a
+     translation supplies labels and inherits the wiring. */
   if (Array.isArray(base)) {
-    return Array.isArray(override) ? override : base
+    if (!Array.isArray(override)) return base
+
+    const holdsObjects = base.some(
+      (item) => typeof item === 'object' && item !== null,
+    )
+    if (!holdsObjects) return override
+
+    return base.map((item, index) =>
+      index < override.length ? mergeValue(item, override[index]) : item,
+    )
   }
 
   if (

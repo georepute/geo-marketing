@@ -37,10 +37,13 @@ type Widen<T> = T extends string
       : T
 
 /**
- * Recursively optional, with literals widened. Arrays are replaced wholesale
- * rather than merged by index — a translator handing back four of five list
- * items means the fifth was dropped deliberately or by mistake, and silently
- * splicing English into position five would hide both cases.
+ * Recursively optional, with literals widened.
+ *
+ * Arrays behave differently depending on what they hold — see `mergeValue`.
+ * An array of strings is prose and is replaced wholesale. An array of objects
+ * is structure, and is merged element-wise so a translation supplies labels
+ * without restating the `href` and `id` fields that must not vary by
+ * language.
  */
 export type PartialDictionary<T = Dictionary> = T extends readonly (infer U)[]
   ? readonly PartialDictionary<U>[]

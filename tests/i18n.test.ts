@@ -116,9 +116,53 @@ describe('Path helpers', () => {
 })
 
 describe('Dictionary merging', () => {
-  it('falls back to English for an untranslated key', async () => {
+  it('falls back to English for an untranslated key', () => {
+    /* Tested through the merge rather than through a real dictionary: a
+       dictionary is a moving target, and asserting that some particular
+       string is still untranslated makes the test fail the moment somebody
+       does their job. */
+    const merged = mergeDictionary(copy, { nav: { signIn: 'x' } })
+    expect(merged.nav.signIn).toBe('x')
+    expect(merged.category).toBe(copy.category)
+    expect(merged.exec.q1).toBe(copy.exec.q1)
+  })
+
+  it('merges arrays of objects element-wise so structure survives', async () => {
+    /* Navigation groups carry `href` alongside `label`. If a translation
+       replaced the array wholesale it would have to restate every route, and
+       one typo would break navigation in that language only — invisible to
+       anyone testing in English. */
     const he = await dictionaryFor('he')
-    expect(he.category).toBe(copy.category)
+
+    he.nav.groups.forEach((group, index) => {
+      const english = copy.nav.groups[index]!
+      expect(group.id, 'group id must not be translated').toBe(english.id)
+      group.items.forEach((item, i) => {
+        expect(item.href, `${group.id} item ${i} href`).toBe(
+          english.items[i]!.href,
+        )
+      })
+    })
+
+    he.nav.flat.forEach((link, index) => {
+      expect(link.href).toBe(copy.nav.flat[index]!.href)
+    })
+  })
+
+  it('keeps every route in the product shell untranslated', async () => {
+    const he = await dictionaryFor('he')
+    he.appNav.items.forEach((item, index) => {
+      expect(item.href).toBe(copy.appNav.items[index]!.href)
+    })
+  })
+
+  it('keeps partner URLs untranslated', async () => {
+    const he = await dictionaryFor('he')
+    he.ecosystem.partners.forEach((partner, index) => {
+      const english = copy.ecosystem.partners[index]!
+      expect(partner.href).toBe(english.href)
+      expect(partner.name, 'brand names are not translated').toBe(english.name)
+    })
   })
 
   it('keeps the exact shape of English in every locale', async () => {
