@@ -28,6 +28,20 @@ const script = `
 export function ThemeScript() {
   return (
     <script
+      /* WHY THE TYPE FLIPS.
+         React warns when a render produces a <script> tag, because a script
+         inserted by React on the client never executes — so a component that
+         relies on one is silently broken on any client render. That warning
+         is correct in general and irrelevant here: this script's whole job is
+         to run during HTML parsing, before React exists.
+
+         Marking it `text/plain` on the client makes that explicit. The tag is
+         inert exactly when it could not have run anyway, and the warning goes
+         away without suppressing a real signal. `suppressHydrationWarning`
+         covers the resulting type mismatch. This is the pattern Next
+         documents for inline scripts (guides/preventing-flash-before-
+         hydration). */
+      type={typeof window === 'undefined' ? 'text/javascript' : 'text/plain'}
       // The content is a build-time constant with no interpolation of
       // user input — the only safe use of this API.
       dangerouslySetInnerHTML={{ __html: script }}

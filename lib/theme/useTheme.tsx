@@ -37,14 +37,43 @@ function currentDomTheme(): Theme {
     : 'dark'
 }
 
+/**
+ * The theme, from its source of truth rather than from the DOM.
+ *
+ * MUST STAY IN STEP WITH THE INLINE SCRIPT in ThemeScript.tsx. The two cannot
+ * share code — one is a string that runs before any module loads — so they
+ * are duplicated deliberately and must be changed together.
+ */
+function resolveTheme(): Theme {
+  try {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY)
+    if (stored === 'light' || stored === 'dark') return stored
+  } catch {
+    /* storage unavailable — fall through to the system preference */
+  }
+  return window.matchMedia('(prefers-color-scheme: light)').matches
+    ? 'light'
+    : 'dark'
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>('dark')
   const [ready, setReady] = useState(false)
 
-  /* The pre-hydration script already set the attribute; read it rather than
-     recompute, so provider and DOM can never disagree. */
+  /* RE-APPLY, don't merely read.
+     The pre-hydration script sets the attribute during parsing, which is all
+     production needs. In development, Strict Mode remounts once and resets
+     <html> to only the attributes React manages from JSX — clearing the one
+     the script set. Reading the DOM at that point returns the default and the
+     page silently drops to dark regardless of the stored preference.
+
+     Resolving from storage and writing the attribute back is correct in both
+     environments: in production it writes the same value the script already
+     set, so it is a no-op. */
   useEffect(() => {
-    setThemeState(currentDomTheme())
+    const resolved = resolveTheme()
+    document.documentElement.setAttribute('data-theme', resolved)
+    setThemeState(resolved)
     setReady(true)
   }, [])
 
