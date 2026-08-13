@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getEcosystem, getEngines, getProducts } from '@/lib/api/client'
+import { flags } from '@/lib/flags'
 
 /**
  * Public surfaces only. Product and app routes are included because they are
@@ -17,7 +18,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '', priority: 1 },
     { path: '/engines', priority: 0.9 },
     { path: '/marketplace', priority: 0.9 },
-    { path: '/pricing', priority: 0.8 },
+    /* Pricing is withheld (doc §4). Listing a route that 404s would invite
+       crawlers to index the absence, so it leaves the sitemap with the flag. */
+    ...(flags.pricing ? [{ path: '/pricing', priority: 0.8 }] : []),
+    { path: '/briefing', priority: 0.8 },
     { path: '/methodology', priority: 0.7 },
     { path: '/app/mission-control', priority: 0.8 },
     { path: '/app/reconstruct', priority: 0.8 },

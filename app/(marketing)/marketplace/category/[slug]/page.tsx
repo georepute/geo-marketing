@@ -8,6 +8,7 @@ import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { Reveal } from '@/components/motion/Reveal'
 import { CATEGORY_ICON } from '@/lib/visual/icons'
 import { count } from '@/lib/format'
+import { flags } from '@/lib/flags'
 import { cn } from '@/lib/utils/cn'
 import { getCategory, getEcosystem } from '@/lib/api/client'
 import type { IntelligenceEngine, IntelligenceProduct } from '@/lib/api/types'
@@ -289,7 +290,15 @@ function ProductRow({ product }: { product: IntelligenceProduct }) {
           <span className="text-caption text-ink-3 truncate">
             {product.name}
           </span>
-          <Price amount={product.priceUsd} period="one-time" size="sm" />
+          {/* Doc §4: the price is withheld, so delivery time holds the
+              right-hand column and the row keeps its balance. */}
+          {flags.pricing ? (
+            <Price amount={product.priceUsd} period="one-time" size="sm" />
+          ) : (
+            <span className="text-caption text-ink-3 shrink-0">
+              {product.timeToDelivery}
+            </span>
+          )}
         </span>
       </Link>
     </li>

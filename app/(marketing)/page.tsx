@@ -21,6 +21,7 @@ import { FeatureCard } from '@/components/visual/FeatureCard'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ENGINE_IMAGE } from '@/lib/visual/imagery'
 import { copy } from '@/lib/copy/en'
+import { flags } from '@/lib/flags'
 import { count, dateFull, percentWhole } from '@/lib/format'
 import {
   getOrg,
@@ -553,10 +554,17 @@ export default async function Home() {
               <Link href="/app/reconstruct">See how AI decides about you</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="/marketplace">Buy a single answer</Link>
+              {/* Doc §4: nothing is purchasable while pricing is withheld, so
+                  the middle route describes the intelligence rather than the
+                  transaction. */}
+              {flags.pricing ? (
+                <Link href="/marketplace">Buy a single answer</Link>
+              ) : (
+                <Link href="/marketplace">See a single answer</Link>
+              )}
             </Button>
             <Button asChild variant="ghost" size="lg">
-              <Link href="/pricing">Book an executive briefing</Link>
+              <Link href="/briefing">{copy.home.heroCtaEnterprise}</Link>
             </Button>
           </div>
 

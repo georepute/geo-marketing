@@ -231,10 +231,53 @@ export const copy = {
       },
     ],
 
+    /* `flag` names an entry in lib/flags.ts. An item carrying one is only
+       rendered while that flag is on — this is how doc §4 removes Pricing
+       from the navigation without deleting the route. */
     flat: [
       { href: '/methodology', label: 'Methodology' },
-      { href: '/pricing', label: 'Pricing' },
+      { href: '/pricing', label: 'Pricing', flag: 'pricing' },
     ],
+  },
+
+  /* ==========================================================================
+     COMMERCE — doc §4 and §7.
+
+     Public pricing is withheld until the final structure exists. These are
+     the strings that stand in its place: a purchase surface without a number
+     still has to tell the reader how to proceed, and "contact us" is not an
+     answer to "what does this cost".
+     ======================================================================= */
+  commerce: {
+    briefingCta: 'Book an Intelligence Briefing',
+    briefingCtaShort: 'Book a briefing',
+    termsOnRequest: 'Commercial terms are issued on request.',
+    termsOnRequestLong:
+      'Scope, depth and commercial terms are set against the questions you need answered. Both are confirmed in the briefing.',
+  },
+
+  /* --- Briefing and booking (doc §5) ------------------------------------- */
+  briefing: {
+    eyebrow: 'Executive briefing',
+    title: 'See the decision environment your business is being judged in.',
+    sub: 'A working session against your own market, not a product walkthrough. We reconstruct one commercial decision in your category and show you what determined it.',
+    covers: 'What the session covers',
+    coversItems: [
+      'How AI engines currently describe your business, engine by engine.',
+      'One real buying decision in your category, reconstructed end to end.',
+      'Which competitor receives that decision today, and the evidence putting them there.',
+      'The gaps between the two, ranked by commercial consequence.',
+      'What would have to change, in what order, and how movement would be measured.',
+    ],
+    who: 'Who it is for',
+    whoBody:
+      'Executive teams accountable for market position, and the strategists advising them. No preparation is required.',
+    duration: '45 minutes',
+    durationLabel: 'Duration',
+    formatLabel: 'Format',
+    format: 'Video call',
+    costLabel: 'Cost',
+    cost: 'None',
   },
 
   /* --- Readout anatomy section labels (brief §13) ------------------------ */

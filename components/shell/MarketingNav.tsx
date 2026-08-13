@@ -14,6 +14,7 @@ import {
   CloseIcon,
 } from '@/components/ui/Primitives'
 import { copy } from '@/lib/copy/en'
+import { flags } from '@/lib/flags'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -34,7 +35,12 @@ import { cn } from '@/lib/utils/cn'
    ========================================================================= */
 
 const GROUPS = copy.nav.groups
-const FLAT = copy.nav.flat
+
+/* A flat item may declare the flag that gates it. Pricing is gated this way
+   (doc §4) so the route survives while the link does not. */
+const FLAT = copy.nav.flat.filter(
+  (link) => !('flag' in link) || flags[link.flag],
+)
 
 export function MarketingNav() {
   const pathname = usePathname()

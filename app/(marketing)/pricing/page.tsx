@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { Price } from '@/components/commerce/Price'
 import { BuyButton } from '@/components/commerce/BuyButton'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
@@ -7,12 +8,27 @@ import { BrandBadge, GlassCard } from '@/components/visual/Primitives'
 import { Button } from '@/components/ui/Button'
 import { catalogPrice } from '@/lib/format'
 import { getPlans, getProducts } from '@/lib/api/client'
+import { flags } from '@/lib/flags'
 import { cn } from '@/lib/utils/cn'
+
+/* ============================================================================
+   WITHHELD — doc §4 and §7.
+
+   This page is intact and unmodified below the guard. It is hidden, not
+   removed: the final GeoRepute pricing structure has not been supplied, and
+   the figures currently in this file are placeholders invented for the
+   demonstration. Publishing them would be publishing pricing.
+
+   To bring it back:  NEXT_PUBLIC_SHOW_PRICING=true, then rebuild.
+   ========================================================================= */
 
 export const metadata: Metadata = {
   title: 'Pricing and Plans',
   description:
     'Subscription plans, add-ons and one-time intelligence products. Understand, configure and purchase without a sales dependency.',
+  /* Belt and braces: if the route is ever reachable while withheld, it must
+     not enter an index. */
+  robots: flags.pricing ? undefined : { index: false, follow: false },
 }
 
 /* Brief §10.3. Placeholder pricing — the brief names no figures. */
@@ -27,6 +43,8 @@ const ADD_ONS = [
 ] as const
 
 export default async function PricingPage() {
+  if (!flags.pricing) notFound()
+
   const [plans, products] = await Promise.all([getPlans(), getProducts()])
   const cheapestProduct = Math.min(
     ...[

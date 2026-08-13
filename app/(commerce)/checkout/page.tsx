@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CheckoutFlow } from './CheckoutFlow'
 import { getPlan, getProduct } from '@/lib/api/client'
+import { flags } from '@/lib/flags'
 import type { CheckoutLine } from '@/lib/commerce/types'
 
 export const metadata: Metadata = {
@@ -14,6 +15,10 @@ export default async function CheckoutPage({
 }: {
   searchParams: Promise<{ kind?: string; slug?: string; billing?: string }>
 }) {
+  /* Checkout displays line-item prices and totals, so it is withheld with the
+     rest of pricing (doc §4). The flow itself is untouched below. */
+  if (!flags.pricing) notFound()
+
   const { kind, slug, billing } = await searchParams
   if (!kind || !slug) notFound()
 

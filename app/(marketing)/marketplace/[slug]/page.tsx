@@ -8,6 +8,7 @@ import { IntelligenceReadout } from '@/components/readout/IntelligenceReadout'
 import { RoleProvider } from '@/components/readout/RoleLens'
 import { Button } from '@/components/ui/Button'
 import { copy } from '@/lib/copy/en'
+import { flags } from '@/lib/flags'
 import { getProduct, getProducts, getReadout } from '@/lib/api/client'
 
 export async function generateStaticParams() {
@@ -102,10 +103,17 @@ export default async function ProductPage({
       value: <ConfidenceBadge confidence={p.confidence} />,
     },
     { label: 'Time to delivery', value: p.timeToDelivery },
-    {
-      label: 'Price',
-      value: <Price amount={p.priceUsd} period="one-time" size="sm" />,
-    },
+    /* Doc §4: the figure is withheld, but the field is not — a product page
+       that simply omits the commercial line reads as an oversight. */
+    flags.pricing
+      ? {
+          label: 'Price',
+          value: <Price amount={p.priceUsd} period="one-time" size="sm" />,
+        }
+      : {
+          label: 'Commercial terms',
+          value: copy.commerce.termsOnRequest,
+        },
     { label: 'Upgrade path', value: p.upgradePath },
   ]
 
@@ -140,10 +148,21 @@ export default async function ProductPage({
 
           {/* --- Purchase panel ---------------------------------------- */}
           <aside className="rounded-md border border-line bg-panel p-6 lg:sticky lg:top-24">
-            <Price amount={p.priceUsd} period="one-time" size="lg" />
-            <p className="text-caption text-ink-3 mt-2">
-              One-time purchase. Placeholder pricing.
-            </p>
+            {flags.pricing ? (
+              <>
+                <Price amount={p.priceUsd} period="one-time" size="lg" />
+                <p className="text-caption text-ink-3 mt-2">
+                  One-time purchase. Placeholder pricing.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-h3 text-ink">{p.timeToDelivery}</p>
+                <p className="text-caption text-ink-3 mt-2">
+                  {copy.commerce.termsOnRequestLong}
+                </p>
+              </>
+            )}
 
             <BuyButton
               kind="product"
@@ -232,7 +251,11 @@ export default async function ProductPage({
               size="lg"
             />
             <Button asChild variant="secondary" size="lg">
-              <Link href="/pricing">Compare with a subscription</Link>
+              {flags.pricing ? (
+                <Link href="/pricing">Compare with a subscription</Link>
+              ) : (
+                <Link href="/marketplace">See the full ecosystem</Link>
+              )}
             </Button>
           </div>
         </div>

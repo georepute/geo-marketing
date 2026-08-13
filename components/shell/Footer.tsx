@@ -3,6 +3,7 @@ import { Wordmark } from './Wordmark'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { imageCredits } from '@/lib/visual/imagery'
 import { copy } from '@/lib/copy/en'
+import { flags } from '@/lib/flags'
 
 /* ============================================================================
    Site footer.
@@ -18,6 +19,8 @@ import { copy } from '@/lib/copy/en'
 interface FooterLink {
   href: string
   label: string
+  /** Names a flag in lib/flags.ts. Omitted means always shown. */
+  flag?: keyof typeof flags
 }
 
 const COLUMNS: { title: string; links: FooterLink[] }[] = [
@@ -28,7 +31,8 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { href: '/app/reconstruct', label: 'Decision Reconstruction' },
       { href: '/app/actions', label: 'Action Center' },
       { href: '/engines', label: 'Intelligence Engines' },
-      { href: '/pricing', label: 'Pricing and Plans' },
+      { href: '/briefing', label: 'Book a Briefing' },
+      { href: '/pricing', label: 'Pricing and Plans', flag: 'pricing' },
     ],
   },
   {
@@ -110,16 +114,18 @@ export function Footer() {
                   {column.title}
                 </h2>
                 <ul className="mt-5 space-y-3">
-                  {column.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-caption text-ink-2 hover:text-ink transition-colors duration-[var(--gr-dur-fast)] ease-(--ease-standard)"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {column.links
+                    .filter((link) => !link.flag || flags[link.flag])
+                    .map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-caption text-ink-2 hover:text-ink transition-colors duration-[var(--gr-dur-fast)] ease-(--ease-standard)"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </div>
             ))}
