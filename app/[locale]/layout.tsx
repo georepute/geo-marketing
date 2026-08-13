@@ -6,6 +6,8 @@ import { Providers } from '../providers'
 import { ThemeScript } from '@/lib/theme/ThemeScript'
 import { ThemeToggle } from '@/components/shell/ThemeToggle'
 import { I18nProvider } from '@/lib/i18n/context'
+import { ContentProvider } from '@/lib/i18n/content/client'
+import { contentFor } from '@/lib/i18n/content'
 import { getI18n } from '@/lib/i18n/server'
 import { LOCALES, isLocale, localePath } from '@/lib/i18n/config'
 
@@ -106,6 +108,9 @@ export default async function RootLayout({
   if (!isLocale(segment)) notFound()
 
   const { locale, dir, intl, dict } = await getI18n()
+  /* Client Components cannot read a root parameter, so the content overlay is
+     resolved once here and seeded alongside the dictionary. */
+  const overlay = await contentFor(locale)
 
   return (
     <html
@@ -122,10 +127,12 @@ export default async function RootLayout({
           {dict.a11y.skipToContent}
         </a>
         <I18nProvider value={{ locale, dir, intl, dict }}>
-          <Providers>
-            {children}
-            <ThemeToggle />
-          </Providers>
+          <ContentProvider overlay={overlay}>
+            <Providers>
+              {children}
+              <ThemeToggle />
+            </Providers>
+          </ContentProvider>
         </I18nProvider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+import { getT } from '@/lib/i18n/content/translator'
 import { count, dateFull, daysUntil } from '@/lib/format'
 import { getDictionary } from '@/lib/i18n/server'
 import type { OrgSummary } from '@/lib/api/types'
@@ -36,6 +37,7 @@ export async function StrategicWindow({
   /** Why the estimate exists — the observations behind it. */
   evidence: { subject: string; observation: string }[]
 }) {
+  const t = await getT()
   const copy = await getDictionary()
   const start = new Date(timing.windowOpenedAt).getTime()
   const span = new Date(timing.windowClosesAt).getTime() - start
@@ -121,18 +123,18 @@ export async function StrategicWindow({
             <Marker
               label="Window opened"
               value={dateFull(timing.windowOpenedAt)}
-              note="Category language began forming."
+              note={t("Category language began forming.")}
             />
             <Marker
-              label="Advantage holds until"
+              label={t("Advantage holds until")}
               value={dateFull(timing.decisionDeadline)}
-              note="Authority built before this becomes the default answer."
+              note={t("Authority built before this becomes the default answer.")}
               tone="positive"
             />
             <Marker
               label="Window closes"
               value={dateFull(timing.windowClosesAt)}
-              note="Displacement cost rises materially."
+              note={t("Displacement cost rises materially.")}
               tone="critical"
             />
           </dl>

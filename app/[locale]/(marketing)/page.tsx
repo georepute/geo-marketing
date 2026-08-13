@@ -1,3 +1,4 @@
+import { getT } from '@/lib/i18n/content/translator'
 import type { Metadata } from 'next'
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
@@ -81,6 +82,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const copy = await getDictionary()
+  const t = await getT()
   const [
     org,
     chain,
@@ -180,14 +182,14 @@ export default async function Home() {
       <Section
         eyebrow="The shift"
         headline={copy.analyticsDisruption}
-        sub="By the time a visit, a click, a lead or a CRM record exists, the buyer has already decided which suppliers are worth contacting. That decision now happens inside AI systems, and it leaves no trace in any tool you currently own."
+        sub={t("By the time a visit, a click, a lead or a CRM record exists, the buyer has already decided which suppliers are worth contacting. That decision now happens inside AI systems, and it leaves no trace in any tool you currently own.")}
         wide
       >
         <div className="grid gap-4 md:grid-cols-3">
           <Premise
             figure={`${count(missedQuestions)} of ${count(prompts.data.length)}`}
             statement="commercial decisions complete without your business being named at all."
-            note="No lead was lost, because no lead was ever created. Conventional measurement recorded nothing."
+            note={t("No lead was lost, because no lead was ever created. Conventional measurement recorded nothing.")}
           />
           <Premise
             figure={percentWhole(supplierStage.coveragePct)}
@@ -197,7 +199,7 @@ export default async function Home() {
           <Premise
             figure={`${authorityMultiple}×`}
             statement="more independent evidence supports the competitor engines recommend instead."
-            note="Not a brand-preference gap. An evidence gap, and evidence can be commissioned."
+            note={t("Not a brand-preference gap. An evidence gap, and evidence can be commissioned.")}
           />
         </div>
       </Section>
@@ -214,28 +216,26 @@ export default async function Home() {
         <KpiGrid
           items={[
             {
-              label: 'Entity understanding',
+              label: t('Entity understanding'),
               value: `${preview.data.recognitionScore}/100`,
               reading: `AI systems understand what your business is in ${preview.data.recognitionScore} of 100 commercial evaluations. One engine holds no stable record of you at all.`,
-              why: 'A system that cannot categorise a business cannot recommend it. This sits upstream of every other measure on this page.',
-              impact:
-                'Content and advertising investment cannot move an answer while the underlying record is wrong. Spend on either is spend against a locked door.',
+              why: t('A system that cannot categorise a business cannot recommend it. This sits upstream of every other measure on this page.'),
+              impact: t('Content and advertising investment cannot move an answer while the underlying record is wrong. Spend on either is spend against a locked door.'),
               tone: 'critical',
             },
             {
               label: 'Highest-risk engine',
               value: preview.data.highestRiskEngine.name,
               reading: `${preview.data.highestRiskEngine.name} understands your business at ${preview.data.highestRiskEngine.recognitionScore} of 100 and names it in none of the tracked decisions. ${preview.data.highestRiskEngine.reason}`,
-              why: 'Recognition is not uniform across AI systems, and buyers do not all use the same one. A single weak engine removes your business from every decision made through it.',
-              impact:
-                'Every buyer who asks this engine receives a supplier shortlist your business is structurally absent from — and no measurement you own records that it happened.',
+              why: t('Recognition is not uniform across AI systems, and buyers do not all use the same one. A single weak engine removes your business from every decision made through it.'),
+              impact: t('Every buyer who asks this engine receives a supplier shortlist your business is structurally absent from — and no measurement you own records that it happened.'),
               tone: 'critical',
             },
             {
               label: 'Decision presence',
               value: percentWhole(preview.data.decisionPresencePct),
               reading: `Present in only ${percentWhole(preview.data.decisionPresencePct)} of supplier evaluations. Missing from ${percentWhole(100 - preview.data.decisionPresencePct)} of AI buying decisions.`,
-              why: 'Supplier evaluation is the moment a buyer stops choosing a solution and starts choosing a vendor. It is the stage that assigns the order.',
+              why: t('Supplier evaluation is the moment a buyer stops choosing a solution and starts choosing a vendor. It is the stage that assigns the order.'),
               impact: `Absence here is exclusion from the shortlist for the ${percentWhole(revenueAtStakePct)} of revenue that arrives through supplier evaluation.`,
               tone: 'critical',
             },
@@ -244,7 +244,7 @@ export default async function Home() {
 
         <Prescription
           statement={recognition.prescription}
-          because="Recognition is cheap to fix and blocks everything else. It is the only intervention on this page that can be completed in under thirty days."
+          because={t("Recognition is cheap to fix and blocks everything else. It is the only intervention on this page that can be completed in under thirty days.")}
           owner={recognition.ownerDeadline.owner}
           deadline={dateFull(recognition.ownerDeadline.deadline)}
           movement={`${recognition.expectedMovement.signal} ${recognition.expectedMovement.from} → ${recognition.expectedMovement.to}${recognition.expectedMovement.unit}`}
@@ -258,7 +258,7 @@ export default async function Home() {
         index={2}
         question={copy.exec.q2}
         answer={supplierCollapse.executiveTruth}
-        context="Losses are not spread evenly across the buying journey. They concentrate at one stage — and it is the stage conventional measurement is least able to see."
+        context={t("Losses are not spread evenly across the buying journey. They concentrate at one stage — and it is the stage conventional measurement is least able to see.")}
       >
         <DecisionJourneyTrack stages={stages.data} />
 
@@ -267,21 +267,19 @@ export default async function Home() {
             columns={2}
             items={[
               {
-                label: 'Where presence collapses',
+                label: t('Where presence collapses'),
                 value: supplierStage.label,
                 reading: `Coverage falls to ${percentWhole(supplierStage.coveragePct)} at supplier evaluation — the last stage before the order is assigned.`,
-                why: 'Earlier stages shape opinion. This stage selects the vendor. A business can lead the first three stages and still never be contacted.',
-                impact:
-                  'The competitor named here receives the enquiry. Your business is not compared and rejected — it is never compared at all.',
+                why: t('Earlier stages shape opinion. This stage selects the vendor. A business can lead the first three stages and still never be contacted.'),
+                impact: t('The competitor named here receives the enquiry. Your business is not compared and rejected — it is never compared at all.'),
                 tone: 'critical',
               },
               {
-                label: 'Blind-spot questions',
+                label: t('Blind-spot questions'),
                 value: `${count(blindSpots)} of ${count(gaps.data.length)}`,
                 reading: `${count(blindSpots)} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.`,
-                why: 'Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.',
-                impact:
-                  'These questions are currently reachable only by buying the click — which is why paid cost rises while organic position stays flat.',
+                why: t('Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.'),
+                impact: t('These questions are currently reachable only by buying the click — which is why paid cost rises while organic position stays flat.'),
                 tone: 'critical',
               },
             ]}
@@ -308,7 +306,7 @@ export default async function Home() {
         index={3}
         question={copy.exec.q3}
         answer={`${topCompetitor.name} can be verified through ${count(topCompetitor.authoritySources)} independent sources. Your business can be verified through ${count(self.authoritySources)}.`}
-        context="Share of recommendations is the symptom. The cause is what a system can cite when it has to justify naming one supplier ahead of another."
+        context={t("Share of recommendations is the symptom. The cause is what a system can cite when it has to justify naming one supplier ahead of another.")}
       >
         <AuthorityAdvantage
           competitor={topCompetitor}
@@ -374,7 +372,7 @@ export default async function Home() {
 
         <Prescription
           statement={authority.prescription}
-          because="Systems do not recommend what they cannot corroborate. Self-description is treated as a claim; third-party reference is treated as evidence."
+          because={t("Systems do not recommend what they cannot corroborate. Self-description is treated as a claim; third-party reference is treated as evidence.")}
           owner={authority.ownerDeadline.owner}
           deadline={dateFull(authority.ownerDeadline.deadline)}
           movement={`${authority.expectedMovement.signal} ${authority.expectedMovement.from} → ${authority.expectedMovement.to}${authority.expectedMovement.unit}`}
@@ -402,10 +400,10 @@ export default async function Home() {
         <Prescription
           label={copy.exec.interventionLabel}
           statement={timingReadout.prescription}
-          because="The window is an observation about category formation, not a sales deadline. It is re-assessed every quarter and it can move in either direction."
+          because={t("The window is an observation about category formation, not a sales deadline. It is re-assessed every quarter and it can move in either direction.")}
           owner={timingReadout.ownerDeadline.owner}
           deadline={dateFull(timingReadout.ownerDeadline.deadline)}
-          movement="Authority established before the answer set stabilises"
+          movement={t("Authority established before the answer set stabilises")}
         />
       </QuestionSection>
 
@@ -415,8 +413,8 @@ export default async function Home() {
       <QuestionSection
         index={6}
         question={copy.exec.q6}
-        answer="Six interventions, sequenced. Each names its owner, its deadline, the signal it must move and what has to land before it can move it."
-        context="Diagnosis without sequence produces activity rather than movement. Impact is verified by signal movement after execution — never by task completion."
+        answer={t("Six interventions, sequenced. Each names its owner, its deadline, the signal it must move and what has to land before it can move it.")}
+        context={t("Diagnosis without sequence produces activity rather than movement. Impact is verified by signal movement after execution — never by task completion.")}
       >
         <div className="flex flex-wrap items-baseline justify-between gap-4 mb-6">
           <p className="text-label uppercase text-brand-300">
@@ -469,7 +467,7 @@ export default async function Home() {
         <Prescription
           label={copy.exec.recoveryLabel}
           statement={decisionHealth.prescription}
-          because="Authority carries the heaviest weight in the index and the largest deficit. Every other vector is capped by it, so it is the only starting point that moves more than one measure."
+          because={t("Authority carries the heaviest weight in the index and the largest deficit. Every other vector is capped by it, so it is the only starting point that moves more than one measure.")}
           owner={decisionHealth.ownerDeadline.owner}
           deadline={dateFull(decisionHealth.ownerDeadline.deadline)}
           movement={`${decisionHealth.expectedMovement.signal} ${decisionHealth.expectedMovement.from} → ${decisionHealth.expectedMovement.to}${decisionHealth.expectedMovement.unit}`}
@@ -490,7 +488,7 @@ export default async function Home() {
       <Section
         eyebrow="Your business"
         headline={copy.home.liveEntry}
-        sub="Enter a domain and one signal is released immediately. The rest of the position requires an account or a purchase — and the locked panels state exactly what sits behind them."
+        sub={t("Enter a domain and one signal is released immediately. The rest of the position requires an account or a purchase — and the locked panels state exactly what sits behind them.")}
         wide
       >
         <DomainEntry
@@ -507,9 +505,9 @@ export default async function Home() {
           mine?"
           ============================================================== */}
       <Section
-        eyebrow="The intelligence ecosystem"
+        eyebrow={t("The intelligence ecosystem")}
         headline={`Seven questions were asked above. ${count(ecosystem.data.totalModules)} models stand behind them.`}
-        sub="Every category holds the models that answer one kind of commercial question — including a great many that businesses have never been able to measure, because nothing existed to measure them with."
+        sub={t("Every category holds the models that answer one kind of commercial question — including a great many that businesses have never been able to measure, because nothing existed to measure them with.")}
         wide
       >
         <EcosystemStrip
@@ -530,8 +528,8 @@ export default async function Home() {
           ============================================================== */}
       <Section
         eyebrow="Underneath"
-        headline="Every answer on this page is produced by an intelligence engine."
-        sub="Twelve engines run beneath the questions. They are named here for completeness — nobody buys an engine, and nothing above required you to know one existed."
+        headline={t("Every answer on this page is produced by an intelligence engine.")}
+        sub={t("Twelve engines run beneath the questions. They are named here for completeness — nobody buys an engine, and nothing above required you to know one existed.")}
         wide
       >
         <div className="grid gap-4 md:grid-cols-2">

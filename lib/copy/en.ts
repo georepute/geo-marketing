@@ -99,6 +99,11 @@ export const copy = {
     kpiWhy: 'Why it matters',
     kpiImpact: 'Business impact',
 
+    /* Labels on the prescription block that closes every section. */
+    executiveQuestion: 'Executive question',
+    ownerLabel: 'Owner',
+    deadlineLabel: 'Deadline',
+
     /* Standing explanation of the two composite measures, so a number is
        never displayed without the sentence that makes it mean something. */
     decisionHealthDefinition:

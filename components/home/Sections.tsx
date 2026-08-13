@@ -84,7 +84,7 @@ export function StatRow({
    they are inside a sequence of decisions, not a grid of features.
    ========================================================================= */
 
-export function QuestionSection({
+export async function QuestionSection({
   id,
   index,
   question,
@@ -104,6 +104,8 @@ export function QuestionSection({
   wide?: boolean
   children?: React.ReactNode
 }) {
+  const copy = await getDictionary()
+
   return (
     <section id={id} className="gr-hairline">
       <div className={cn(wide ? 'gr-rail-wide' : 'gr-rail', 'gr-section')}>
@@ -113,7 +115,7 @@ export function QuestionSection({
               {String(index).padStart(2, '0')}
             </span>
             <span aria-hidden className="h-px w-8 bg-line-strong" />
-            <span>Executive question</span>
+            <span>{copy.exec.executiveQuestion}</span>
           </p>
 
           <h2 className="text-display-2 text-ink mt-5 max-w-4xl text-balance">
@@ -281,9 +283,9 @@ export async function Prescription({
       ) : null}
 
       <dl className="grid gap-px bg-line border border-line rounded-sm overflow-hidden mt-6 sm:grid-cols-3">
-        <Field label="Owner" value={owner} />
-        <Field label="Deadline" value={deadline} />
-        <Field label="Expected movement" value={movement} numeric />
+        <Field label={copy.exec.ownerLabel} value={owner} />
+        <Field label={copy.exec.deadlineLabel} value={deadline} />
+        <Field label={copy.readout.expectedMovement} value={movement} numeric />
       </dl>
     </div>
   )

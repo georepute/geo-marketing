@@ -583,4 +583,101 @@ export const content: ContentOverlay = {
 
   'The evaluation criteria the market has settled on, and which competitor published them first.':
     'קריטריוני ההערכה שהשוק התכנס אליהם, ואיזה מתחרה פרסם אותם ראשון.',
+
+  /* ==========================================================================
+     HOME PAGE — prose written inline in the section components, routed through
+     t(). See lib/i18n/content/translator.ts.
+     ======================================================================= */
+
+  'By the time a visit, a click, a lead or a CRM record exists, the buyer has already decided which suppliers are worth contacting. That decision now happens inside AI systems, and it leaves no trace in any tool you currently own.':
+    'עד שקיימים ביקור, קליק, ליד או רשומת CRM, הקונה כבר החליט אילו ספקים שווים פנייה. ההחלטה הזו מתרחשת כיום בתוך מערכות AI, והיא אינה מותירה עקבות בשום כלי שברשותכם היום.',
+
+  'Every category holds the models that answer one kind of commercial question — including a great many that businesses have never been able to measure, because nothing existed to measure them with.':
+    'כל קטגוריה מכילה את המודלים שעונים על סוג אחד של שאלה מסחרית — ובכללם רבים מאוד שעסקים מעולם לא הצליחו למדוד, פשוט משום שלא היה במה למדוד אותם.',
+
+  'Authority carries the heaviest weight in the index and the largest deficit. Every other vector is capped by it, so it is the only starting point that moves more than one measure.':
+    'לסמכות המשקל הכבד ביותר במדד והגירעון הגדול ביותר. כל וקטור אחר מוגבל על ידה, ולכן זו נקודת ההתחלה היחידה שמזיזה יותר ממדד אחד.',
+
+  'Enter a domain and one signal is released immediately. The rest of the position requires an account or a purchase — and the locked panels state exactly what sits behind them.':
+    'הזינו דומיין ואות אחד ישוחרר מיד. שאר העמדה דורשת חשבון או רכישה — והלוחות הנעולים מציינים בדיוק מה נמצא מאחוריהם.',
+
+  'Recognition is not uniform across AI systems, and buyers do not all use the same one. A single weak engine removes your business from every decision made through it.':
+    'הזיהוי אינו אחיד בין מערכות AI, ולא כל הקונים משתמשים באותה אחת. מנוע חלש אחד מסיר את העסק שלכם מכל החלטה שנעשית דרכו.',
+
+  'Every buyer who asks this engine receives a supplier shortlist your business is structurally absent from — and no measurement you own records that it happened.':
+    'כל קונה ששואל את המנוע הזה מקבל רשימת ספקים שהעסק שלכם נעדר ממנה מבנית — ושום מדידה שברשותכם אינה מתעדת שזה קרה.',
+
+  'Twelve engines run beneath the questions. They are named here for completeness — nobody buys an engine, and nothing above required you to know one existed.':
+    'שנים־עשר מנועים פועלים מתחת לשאלות. הם מוזכרים כאן לשם השלמות — איש אינו קונה מנוע, ושום דבר למעלה לא חייב אתכם לדעת שקיים אחד.',
+
+  'Losses are not spread evenly across the buying journey. They concentrate at one stage — and it is the stage conventional measurement is least able to see.':
+    'ההפסדים אינם מתפרסים באופן שווה על פני מסע הרכישה. הם מתרכזים בשלב אחד — והוא השלב שהמדידה המקובלת מתקשה לראות יותר מכול.',
+
+  'Diagnosis without sequence produces activity rather than movement. Impact is verified by signal movement after execution — never by task completion.':
+    'אבחון ללא סדר פעולות מייצר פעילות ולא תזוזה. ההשפעה מאומתת לפי תזוזת האות לאחר הביצוע — לעולם לא לפי השלמת משימה.',
+
+  'The window is an observation about category formation, not a sales deadline. It is re-assessed every quarter and it can move in either direction.':
+    'החלון הוא תצפית על התגבשות הקטגוריה, לא מועד אחרון מכירתי. הוא נבחן מחדש בכל רבעון והוא יכול לזוז לשני הכיוונים.',
+
+  'Content and advertising investment cannot move an answer while the underlying record is wrong. Spend on either is spend against a locked door.':
+    'השקעה בתוכן ובפרסום אינה יכולה להזיז תשובה כל עוד הרשומה הבסיסית שגויה. הוצאה על כל אחד מהם היא הוצאה מול דלת נעולה.',
+
+  'Recognition is cheap to fix and blocks everything else. It is the only intervention on this page that can be completed in under thirty days.':
+    'זיהוי זול לתיקון וחוסם את כל השאר. זו ההתערבות היחידה בעמוד הזה שניתן להשלים בפחות משלושים יום.',
+
+  'Systems do not recommend what they cannot corroborate. Self-description is treated as a claim; third-party reference is treated as evidence.':
+    'מערכות אינן ממליצות על מה שאינן יכולות לאשש. תיאור עצמי נחשב לטענה; הפניה של צד שלישי נחשבת לראיה.',
+
+  'Supplier evaluation is the moment a buyer stops choosing a solution and starts choosing a vendor. It is the stage that assigns the order.':
+    'הערכת ספקים היא הרגע שבו קונה מפסיק לבחור פתרון ומתחיל לבחור ספק. זהו השלב שמקצה את ההזמנה.',
+
+  'Share of recommendations is the symptom. The cause is what a system can cite when it has to justify naming one supplier ahead of another.':
+    'נתח ההמלצות הוא הסימפטום. הסיבה היא מה שמערכת יכולה לצטט כשהיא נדרשת להצדיק הצבת ספק אחד לפני אחר.',
+
+  'Earlier stages shape opinion. This stage selects the vendor. A business can lead the first three stages and still never be contacted.':
+    'השלבים המוקדמים מעצבים דעה. השלב הזה בוחר את הספק. עסק יכול להוביל בשלושת השלבים הראשונים ועדיין לא ליצור איתו קשר לעולם.',
+
+  'Six interventions, sequenced. Each names its owner, its deadline, the signal it must move and what has to land before it can move it.':
+    'שש התערבויות, לפי סדר. כל אחת מציינת את האחראי שלה, את מועד היעד, את האות שעליה להזיז ומה חייב לנחות לפני שהיא תוכל להזיז אותו.',
+
+  'These questions are currently reachable only by buying the click — which is why paid cost rises while organic position stays flat.':
+    'לשאלות הללו ניתן להגיע כיום רק בקניית הקליק — ולכן העלות הממומנת עולה בעוד המיקום האורגני נותר במקום.',
+
+  'The competitor named here receives the enquiry. Your business is not compared and rejected — it is never compared at all.':
+    'המתחרה שמוזכר כאן מקבל את הפנייה. העסק שלכם אינו מושווה ונפסל — הוא כלל אינו מושווה.',
+
+  'A system that cannot categorise a business cannot recommend it. This sits upstream of every other measure on this page.':
+    'מערכת שאינה מסוגלת לסווג עסק אינה מסוגלת להמליץ עליו. זה נמצא במעלה הזרם של כל מדד אחר בעמוד הזה.',
+
+  'Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.':
+    'דירוג בגוגל והמלצת AI הם נכסים מסחריים נפרדים. חוזק באחד אינו עובר לאחר.',
+
+  'No lead was lost, because no lead was ever created. Conventional measurement recorded nothing.':
+    'שום ליד לא אבד, משום ששום ליד לא נוצר מעולם. המדידה המקובלת לא תיעדה דבר.',
+
+  'Not a brand-preference gap. An evidence gap, and evidence can be commissioned.':
+    'לא פער העדפת מותג. פער ראיות, וראיות אפשר להזמין.',
+
+  'Every answer on this page is produced by an intelligence engine.':
+    'כל תשובה בעמוד הזה מיוצרת על ידי מנוע מודיעין.',
+
+  'Authority built before this becomes the default answer.':
+    'סמכות שנבנית לפני כן הופכת לתשובת ברירת המחדל.',
+
+  'Authority established before the answer set stabilises':
+    'סמכות שמבוססת לפני שמרחב התשובות מתייצב',
+
+  'Displacement cost rises materially.': 'עלות ההדחה עולה משמעותית.',
+  'Category language began forming.': 'שפת הקטגוריה החלה להתגבש.',
+  'AI looks for proof it can cite': 'ה-AI מחפש הוכחה שהוא יכול לצטט',
+  'The intelligence ecosystem': 'מערכת המודיעין',
+  'Where presence collapses': 'היכן הנוכחות קורסת',
+  'What changes the answer': 'מה משנה את התשובה',
+  'Advantage holds until': 'היתרון מחזיק עד',
+  'Blind-spot questions': 'שאלות בנקודה עיוורת',
+  'Best Google position': 'המיקום הטוב ביותר בגוגל',
+  'Strongest competitor': 'המתחרה החזק ביותר',
+  'Highest-risk engine': 'המנוע בסיכון הגבוה ביותר',
+  'So AI recommends': 'ולכן ה-AI ממליץ',
+  'A buyer asks AI': 'קונה שואל AI',
 }

@@ -1,3 +1,4 @@
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import { count, percent } from '@/lib/format'
 import type { Reconstruction } from '@/lib/api/types'
@@ -41,6 +42,7 @@ export function HeroVisual({
   competitorAuthoritySources: number
   className?: string
 }) {
+  const t = useT()
   const advantage = competitorAuthoritySources / Math.max(ownAuthoritySources, 1)
 
   return (
@@ -52,7 +54,7 @@ export function HeroVisual({
     >
       {/* --- 1 · The question ---------------------------------------- */}
       <div className="p-6 border-b border-line bg-raised">
-        <Beat n={1} label="A buyer asks AI" />
+        <Beat n={1} label={t("A buyer asks AI")} />
         <p className="text-body-lg text-ink mt-3 text-balance">
           “{data.prompt.text}”
         </p>
@@ -60,7 +62,7 @@ export function HeroVisual({
 
       {/* --- 2 · What AI could verify -------------------------------- */}
       <div className="p-6 border-b border-line">
-        <Beat n={2} label="AI looks for proof it can cite" />
+        <Beat n={2} label={t("AI looks for proof it can cite")} />
 
         <div className="mt-5 grid gap-4">
           <EvidenceBar
@@ -92,7 +94,7 @@ export function HeroVisual({
           background: 'color-mix(in oklab, var(--gr-critical) 7%, transparent)',
         }}
       >
-        <Beat n={3} label="So AI recommends" />
+        <Beat n={3} label={t("So AI recommends")} />
 
         <div className="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-2">
           <p
@@ -127,7 +129,7 @@ export function HeroVisual({
           background: 'color-mix(in oklab, var(--gr-positive) 6%, transparent)',
         }}
       >
-        <Beat n={4} label="What changes the answer" tone="positive" />
+        <Beat n={4} label={t("What changes the answer")} tone="positive" />
         <p className="text-body text-ink mt-3">{data.action.action}</p>
         <p className="text-caption text-ink-2 mt-3" data-numeric="">
           {data.action.owner} · {data.action.expectedImpact}

@@ -1,5 +1,6 @@
 'use client'
 
+import { useT } from '@/lib/i18n/content/client'
 import { useState } from 'react'
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
@@ -28,6 +29,7 @@ export function DomainEntry({
   preview: DomainPreview
   lockedCount: number
 }) {
+  const t = useT()
   const [domain, setDomain] = useState(preview.domain)
   const [revealed, setRevealed] = useState(false)
 
@@ -81,7 +83,7 @@ export function DomainEntry({
             tone="critical"
           />
           <Cell
-            label="Best Google position"
+            label={t("Best Google position")}
             value={
               preview.bestGooglePosition === null
                 ? 'Not ranking'
@@ -89,23 +91,23 @@ export function DomainEntry({
             }
           />
           <Cell
-            label="Narrative ownership"
+            label={t("Narrative ownership")}
             value={percentWhole(preview.narrativeOwnershipPct)}
             score={preview.narrativeOwnershipPct}
             tone="critical"
           />
           <Cell
-            label="Highest-risk engine"
+            label={t("Highest-risk engine")}
             value={preview.highestRiskEngine.name}
             note={`${preview.highestRiskEngine.recognitionScore}/100 recognition`}
           />
           <Cell
-            label="Strongest competitor"
+            label={t("Strongest competitor")}
             value={preview.strongestCompetitor.name}
             note={`${percent(preview.strongestCompetitor.recommendationSharePct)} of recommendations`}
           />
           <Cell
-            label="Decision presence"
+            label={t("Decision presence")}
             value={percentWhole(preview.decisionPresencePct)}
             score={preview.decisionPresencePct}
             tone="critical"
