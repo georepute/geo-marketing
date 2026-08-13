@@ -42,7 +42,10 @@ export function LanguageSwitcher({
   return (
     <Popover>
       <PopoverTrigger
-        aria-label={`${dict.language.label}: ${active?.english ?? 'English'}`}
+        /* The endonym, not the English name: on a Hebrew page "Language:
+           Hebrew" is the one string a screen reader would still read in
+           English, and the endonym is what the trigger already shows. */
+        aria-label={`${dict.language.label}: ${active?.endonym ?? 'English'}`}
         className={cn(
           'inline-flex items-center gap-2 px-2.5 py-2 rounded-sm',
           'text-caption text-ink-2',

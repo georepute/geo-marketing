@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { SCREEN_SLOTS, type ScreenSlotId } from '@/lib/visual/screens'
+import { getT } from '@/lib/i18n/content/translator'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -23,7 +24,7 @@ import { cn } from '@/lib/utils/cn'
    broken-looking placeholder on a launched site is worse than an honest one.
    ========================================================================= */
 
-export function ProductScreen({
+export async function ProductScreen({
   id,
   priority,
   sizes = '(min-width: 1024px) 60vw, 100vw',
@@ -34,6 +35,7 @@ export function ProductScreen({
   sizes?: string
   className?: string
 }) {
+  const t = await getT()
   const slot = SCREEN_SLOTS[id]
 
   return (
@@ -48,7 +50,7 @@ export function ProductScreen({
         {slot.ready ? (
           <Image
             src={slot.file}
-            alt={slot.alt}
+            alt={t(slot.alt)}
             fill
             priority={priority}
             loading={priority ? undefined : 'lazy'}
@@ -61,7 +63,7 @@ export function ProductScreen({
       </div>
 
       <figcaption className="text-caption text-ink-3 mt-3 max-w-2xl">
-        {slot.caption}
+        {t(slot.caption)}
       </figcaption>
     </figure>
   )
@@ -73,13 +75,14 @@ export function ProductScreen({
    Reads as a captured application window with its contents withheld, which
    is honest about what it is: the frame is real, the picture is pending.
    ---------------------------------------------------------------------- */
-function PendingScreen({
+async function PendingScreen({
   surface,
   file,
 }: {
   surface: string
   file: string
 }) {
+  const t = await getT()
   return (
     <div className="absolute inset-0 flex flex-col">
       {/* Window chrome. Establishes "this is a product screen" at a glance. */}
@@ -115,10 +118,10 @@ function PendingScreen({
             className="text-label uppercase"
             style={{ color: 'var(--gr-accent-500)' }}
           >
-            Awaiting real screen
+            {t('Awaiting real screen')}
           </p>
 
-          <p className="text-body text-ink mt-3 text-balance">{surface}</p>
+          <p className="text-body text-ink mt-3 text-balance">{t(surface)}</p>
 
           <p
             className="text-caption text-ink-2 mt-4 break-all"
@@ -128,8 +131,7 @@ function PendingScreen({
           </p>
 
           <p className="text-caption text-ink-3 mt-4 pt-4 border-t border-line">
-            Anonymised or demonstration data only. No customer names, domains,
-            personal data or confidential figures.
+            {t('Anonymised or demonstration data only. No customer names, domains, personal data or confidential figures.')}
           </p>
         </div>
       </div>

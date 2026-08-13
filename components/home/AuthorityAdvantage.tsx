@@ -1,4 +1,6 @@
 import { cn } from '@/lib/utils/cn'
+import { getT } from '@/lib/i18n/content/translator'
+import { Rich } from '@/lib/i18n/content/rich'
 import { count, percent } from '@/lib/format'
 import type { Competitor } from '@/lib/api/types'
 
@@ -23,7 +25,7 @@ import type { Competitor } from '@/lib/api/types'
    a relationship rather than as a third statistic.
    ========================================================================= */
 
-export function AuthorityAdvantage({
+export async function AuthorityAdvantage({
   competitor,
   self,
   categoryMedian,
@@ -33,6 +35,7 @@ export function AuthorityAdvantage({
   /** Independent-source count for the median competitor in the category. */
   categoryMedian: number
 }) {
+  const t = await getT()
   const multiple = competitor.authoritySources / Math.max(self.authoritySources, 1)
 
   return (
@@ -40,7 +43,7 @@ export function AuthorityAdvantage({
       <div className="grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-stretch">
         <Side
           name={competitor.name}
-          role="Receives the decision"
+          role={t('Receives the decision')}
           sources={competitor.authoritySources}
           sharePct={competitor.recommendationSharePct}
           tone="competitor"
@@ -65,14 +68,13 @@ export function AuthorityAdvantage({
             {multiple.toFixed(0)}×
           </p>
           <p className="text-label uppercase text-ink-2 md:text-center leading-relaxed">
-            Authority
-            <br className="hidden md:inline" /> advantage
+            {t('Authority advantage')}
           </p>
         </div>
 
         <Side
           name={self.name}
-          role="Your business"
+          role={t('Your business')}
           sources={self.authoritySources}
           sharePct={self.recommendationSharePct}
           tone="self"
@@ -83,19 +85,18 @@ export function AuthorityAdvantage({
       {competitor.whyTheyWin ? (
         <div className="border-t border-line p-6 md:p-7">
           <p className="text-label uppercase text-ink-3">
-            Why the decision goes to them
+            {t('Why the decision goes to them')}
           </p>
           <p className="text-body-lg text-ink-2 mt-3 max-w-3xl">
             {competitor.whyTheyWin}
           </p>
           <p className="text-caption text-ink-3 mt-4 max-w-3xl">
-            The category median is{' '}
-            <span className="text-ink-2" data-numeric="">
-              {count(categoryMedian)}
-            </span>{' '}
-            independent sources. This is not a brand-preference gap that
-            marketing spend closes. It is an evidence gap, and evidence is
-            something a business can commission.
+            <Rich
+              text={t('The category median is <b>{n}</b> independent sources. This is not a brand-preference gap that marketing spend closes. It is an evidence gap, and evidence is something a business can commission.', {
+                n: count(categoryMedian),
+              })}
+              className="text-ink-2"
+            />
           </p>
         </div>
       ) : null}
@@ -105,7 +106,7 @@ export function AuthorityAdvantage({
 
 /* ------------------------------------------------------------------------ */
 
-function Side({
+async function Side({
   name,
   role,
   sources,
@@ -118,6 +119,7 @@ function Side({
   sharePct: number
   tone: 'competitor' | 'self'
 }) {
+  const t = await getT()
   return (
     <div className="p-6 md:p-8 flex flex-col justify-center">
       <p className="text-label uppercase text-ink-3">{role}</p>
@@ -136,15 +138,16 @@ function Side({
         {count(sources)}
       </p>
       <p className="text-body text-ink-2 mt-1">
-        {sources === 1 ? 'authority source' : 'authority sources'}
+        {sources === 1 ? t('authority source') : t('authority sources')}
       </p>
 
       <p className="text-caption text-ink-3 mt-5 pt-5 border-t border-line">
-        Named in{' '}
-        <span className="text-ink-2" data-numeric="">
-          {percent(sharePct)}
-        </span>{' '}
-        of AI buying decisions.
+        <Rich
+          text={t('Named in <b>{pct}</b> of AI buying decisions.', {
+            pct: percent(sharePct),
+          })}
+          className="text-ink-2"
+        />
       </p>
     </div>
   )

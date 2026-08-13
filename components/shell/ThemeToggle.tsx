@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@/lib/theme/useTheme'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -18,7 +19,9 @@ import { cn } from '@/lib/utils/cn'
 
 export function ThemeToggle() {
   const { theme, ready, toggle } = useTheme()
+  const t = useT()
   const isDark = theme === 'dark'
+  const label = isDark ? t('Switch to light theme') : t('Switch to dark theme')
 
   return (
     <div
@@ -31,9 +34,9 @@ export function ThemeToggle() {
       <button
         type="button"
         onClick={toggle}
-        aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+        aria-label={label}
         aria-pressed={isDark}
-        title={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+        title={label}
         className={cn(
           'group relative grid place-items-center size-11 rounded-full',
           'border border-line-strong bg-panel shadow-elev-2',

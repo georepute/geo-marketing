@@ -12,11 +12,12 @@ import type { ContentOverlay } from './index'
        competitor comparison incoherent.
      · AI engine names — ChatGPT, Claude, Gemini, Perplexity, Copilot, Grok —
        and Google. Product names.
-     · The example search queries ("industrial fastener supplier",
-       "grade 8 bolts bulk", …). These are the literal phrases a buyer types.
-       An Israeli demonstration would use Hebrew queries against a Hebrew
-       market, which is a content decision rather than a translation one —
-       flagged for the client.
+     · File paths under public/, and the locale code the compact language
+       switcher shows in place of the endonym.
+
+   The example search queries ARE translated — see the note beside them. They
+   read as prose to a visitor, and leaving them in English left the most
+   visible sentence on the page (the buyer's question in the hero) untranslated.
 
    Anything absent falls through to English by construction.
    ========================================================================= */
@@ -680,4 +681,362 @@ export const content: ContentOverlay = {
   'Highest-risk engine': 'המנוע בסיכון הגבוה ביותר',
   'So AI recommends': 'ולכן ה-AI ממליץ',
   'A buyer asks AI': 'קונה שואל AI',
+
+  /* ==========================================================================
+     HOME PAGE — the prose written inline on the section components.
+
+     Tokens in braces are substituted after lookup, so a translation may put
+     {pct} wherever Hebrew needs it. <b>…</b> marks an emphasised run and is
+     rendered as a styled span, never as markup — it can move too.
+     ======================================================================= */
+
+  /* --- The premise ------------------------------------------------------ */
+  'The shift': 'התזוזה',
+  '{n} of {total}': '{n} מתוך {total}',
+  'commercial decisions complete without your business being named at all.':
+    'החלטות מסחריות מסתיימות מבלי שהעסק שלכם נזכר בהן כלל.',
+  'presence at the stage where the supplier is actually chosen.':
+    'נוכחות בשלב שבו הספק נבחר בפועל.',
+  'That stage carries {volume} of the query volume and decides {revenue} of the revenue. Volume-ranked tooling calls it unimportant.':
+    'השלב הזה נושא {volume} מנפח השאילתות ומכריע {revenue} מההכנסה. כלים שמדרגים לפי נפח מסמנים אותו כלא חשוב.',
+  'more independent evidence supports the competitor engines recommend instead.':
+    'יותר ראיות בלתי תלויות תומכות במתחרה שהמנועים ממליצים עליו במקומכם.',
+
+  /* --- Q1 · Does AI know your business? --------------------------------- */
+  'AI systems understand what your business is in {score} of 100 commercial evaluations. One engine holds no stable record of you at all.':
+    'מערכות AI מבינות מהו העסק שלכם ב-{score} מתוך 100 הערכות מסחריות. מנוע אחד אינו מחזיק בכם רשומה יציבה כלל.',
+  '{engine} understands your business at {score} of 100 and names it in none of the tracked decisions.':
+    '{engine} מבין את העסק שלכם ברמה של {score} מתוך 100 ואינו מזכיר אותו באף אחת מההחלטות הנמדדות.',
+  'Present in only {present} of supplier evaluations. Missing from {missing} of AI buying decisions.':
+    'נוכחים ב-{present} בלבד מהערכות הספקים. נעדרים מ-{missing} מהחלטות הרכש המונחות AI.',
+  'Absence here is exclusion from the shortlist for the {revenue} of revenue that arrives through supplier evaluation.':
+    'היעדרות כאן משמעה הדרה מרשימת המועמדים עבור {revenue} מההכנסה שמגיעה דרך הערכת ספקים.',
+
+  /* --- Q2 · Where are you losing decisions? ------------------------------ */
+  'Coverage falls to {pct} at supplier evaluation — the last stage before the order is assigned.':
+    'הכיסוי צונח ל-{pct} בשלב הערכת הספקים — השלב האחרון לפני שההזמנה נמסרת.',
+  '{n} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.':
+    '{n} שאלות מסחריות אינן מחזירות המלצת AI ואף לא מיקום בעשירייה הראשונה בגוגל. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
+  'Supplier evaluation carries {volume} of the query volume and decides {revenue} of the revenue. Ranking work by volume puts it last.':
+    'הערכת ספקים נושאת {volume} מנפח השאילתות ומכריעה {revenue} מההכנסה. תיעדוף עבודה לפי נפח מציב אותה אחרונה.',
+
+  /* --- Q3 · Why is the competitor recommended? --------------------------- */
+  '{competitor} can be verified through {theirs} independent sources. Your business can be verified through {ours}.':
+    'ניתן לאמת את {competitor} דרך {theirs} מקורות בלתי תלויים. את העסק שלכם ניתן לאמת דרך {ours}.',
+  'Closing {multiple}× is a publishing and validation programme with a known cost, not a brand campaign with an unknown one.':
+    'סגירת פער של פי {multiple} היא תוכנית פרסום ואימות בעלת עלות ידועה, לא קמפיין מותג בעלות בלתי ידועה.',
+  'Receives the decision': 'מקבל את ההחלטה',
+  'Your business': 'העסק שלכם',
+  'Authority advantage': 'יתרון סמכות',
+  'Why the decision goes to them': 'מדוע ההחלטה הולכת אליהם',
+  'The category median is <b>{n}</b> independent sources. This is not a brand-preference gap that marketing spend closes. It is an evidence gap, and evidence is something a business can commission.':
+    'החציון בקטגוריה עומד על <b>{n}</b> מקורות בלתי תלויים. אין זה פער בהעדפת מותג שהוצאה שיווקית סוגרת. זהו פער ראיות, וראיות הן דבר שעסק יכול להזמין.',
+  'authority source': 'מקור סמכות',
+  'authority sources': 'מקורות סמכות',
+  'Named in <b>{pct}</b> of AI buying decisions.':
+    'נזכרים ב-<b>{pct}</b> מהחלטות הרכש המונחות AI.',
+
+  /* --- Q4 · What evidence is missing? ------------------------------------ */
+  'How the gap becomes a lost decision': 'כיצד הפער הופך להחלטה אבודה',
+  'Every node below opens the evidence behind it, with its confidence and its limits.':
+    'כל צומת למטה פותח את הראיות שמאחוריו, לצד רמת הוודאות שלו וגבולותיו.',
+
+  /* --- Q6 · What should happen next? ------------------------------------- */
+  'Ordered by commercial exposure, urgency, effort and competitive pressure.':
+    'מסודר לפי חשיפה מסחרית, דחיפות, מאמץ ולחץ תחרותי.',
+  'Open the full intervention plan': 'פתחו את תוכנית ההתערבות המלאה',
+  Priority: 'עדיפות',
+  'Verified by: {metric}': 'מאומת באמצעות: {metric}',
+  Dependencies: 'תלויות',
+  and: 'וכן',
+  'Cannot move its signal until <b>{blockers}</b> lands.':
+    'לא ניתן להזיז את האות שלה עד ש<b>{blockers}</b> יונחת.',
+  'None. Can start immediately.': 'אין. ניתן להתחיל מיד.',
+
+  /* --- Q7 · The executive position --------------------------------------- */
+  'Decision Health': 'בריאות ההחלטה',
+  'The binding constraint': 'האילוץ הכובל',
+  'Held down primarily by {vector}.': 'מרוסן בעיקר על ידי {vector}.',
+  '{vector} reads <b>{score} of 100</b> and carries the heaviest weight in the index at <b>{weight}%</b>. Lowest score, largest lever — every other measure is capped by it.':
+    '{vector} עומד על <b>{score} מתוך 100</b> ונושא את המשקל הכבד ביותר במדד, <b>{weight}%</b>. הציון הנמוך ביותר, המנוף הגדול ביותר — כל מדד אחר מוגבל על ידו.',
+  '{vector} reads <b>{score}</b>. The offer matches demand. The constraint is entirely on the evidence side, which is the side a business can change.':
+    '{vector} עומד על <b>{score}</b>. ההיצע תואם את הביקוש. האילוץ נמצא כולו בצד הראיות — הצד שעסק יכול לשנות.',
+  'What Decision Health is made of': 'ממה מורכבת בריאות ההחלטה',
+  'Weighted, published, recomputed monthly': 'משוקלל, מפורסם, מחושב מחדש מדי חודש',
+  'weight {pct}%': 'משקל {pct}%',
+  'Open the full executive position': 'פתחו את התמונה הניהולית המלאה',
+
+  /* --- Run it on your own business --------------------------------------- */
+  'Your domain': 'הדומיין שלכם',
+  'Run instant preview': 'הריצו תצוגה מקדימה מיידית',
+  'Re-run preview': 'הריצו שוב את התצוגה המקדימה',
+  'Seeded demonstration. This environment always reconstructs Northwind Supply, an industrial distributor, so every figure stays verifiable.':
+    'הדגמה מבוססת נתוני זרע. סביבה זו משחזרת תמיד את Northwind Supply, מפיץ תעשייתי, כך שכל נתון נותר ניתן לאימות.',
+  'AI recognition': 'זיהוי על ידי AI',
+  'Not ranking': 'לא מדורג',
+  '{score}/100 recognition': 'זיהוי {score}/100',
+  '{pct} of recommendations': '{pct} מההמלצות',
+  'Unlocked signal': 'אות פתוח',
+  'Behind the gate': 'מאחורי השער',
+  '<b>{n}</b> further readouts, each with evidence, exposure and a prescribed action.':
+    '<b>{n}</b> קריאות נוספות, לכל אחת ראיות, חשיפה ופעולה מומלצת.',
+  'Competitor capture, authority evidence, paid dependency, missed decisions, narrative control, trust readiness and strategic timing.':
+    'תפיסת מתחרים, ראיות סמכות, תלות בתשלום, החלטות שהוחמצו, שליטה בנרטיב, מוכנות לאמון ותזמון אסטרטגי.',
+  'Unlock full intelligence': 'פתחו את המודיעין המלא',
+  'Buy a single answer': 'רכשו תשובה אחת',
+  'See a single answer': 'צפו בתשובה אחת',
+
+  /* --- The ecosystem and the machinery ----------------------------------- */
+  'Seven questions were asked above. {n} models stand behind them.':
+    'שבע שאלות נשאלו למעלה. {n} מודלים עומדים מאחוריהן.',
+  'intelligence modules in total, each answering one business question with evidence, analysis and a recommendation.':
+    'מודולי מודיעין בסך הכול, כל אחד עונה על שאלה עסקית אחת בליווי ראיות, ניתוח והמלצה.',
+  'Explore the intelligence ecosystem': 'חקרו את מערכת המודיעין',
+  Underneath: 'מתחת לפני השטח',
+  'Four engines are built in this environment. All twelve appear on the':
+    'ארבעה מנועים בנויים בסביבה זו. כל שנים־עשר מופיעים ב',
+  'engines overview': 'סקירת המנועים',
+
+  /* --- The close ---------------------------------------------------------- */
+  'Every day the window stays open, the same position costs less to take. Every day after it closes, it costs more.':
+    'כל יום שבו החלון נותר פתוח, אותה עמדה עולה פחות. כל יום לאחר שייסגר, היא תעלה יותר.',
+  'See how AI decides about you': 'ראו כיצד ה-AI מחליט לגביכם',
+  'Every figure on this page is computed from {n} tracked commercial decisions across six AI engines.':
+    'כל נתון בעמוד זה מחושב מתוך {n} החלטות מסחריות נמדדות בשישה מנועי AI.',
+  'See the methodology': 'עיינו במתודולוגיה',
+
+  /* --- Hero · trust strip and the reconstruction ------------------------- */
+  'Six AI engines observed': 'שישה מנועי AI נצפים',
+  '24 commercial decisions tracked': '24 החלטות מסחריות נמדדות',
+  'Evidence on every claim': 'ראיות לכל טענה',
+  'Confidence and limits stated': 'רמת ודאות וגבולות מוצהרים',
+  'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
+    'מקורות בלתי תלויים שמנוע יכול לצטט כשהוא ממליץ על ספק. האתר שלכם אינו נספר — מנועים מתייחסים לתיאור עצמי כטענה, לא כראיה.',
+  'Your business was named by <b>{named} of {total}</b> engines. Not because the offer is weaker — because <b>{theirs} sources outrank {ours}</b> when a system has to stand behind an answer.':
+    'העסק שלכם הוזכר על ידי <b>{named} מתוך {total}</b> מנועים. לא משום שההיצע חלש יותר — אלא משום ש<b>{theirs} מקורות גוברים על {ours}</b> כשמערכת נדרשת לעמוד מאחורי תשובה.',
+  '{n} sources': '{n} מקורות',
+  '{name}: {n} independent sources': '{name}: {n} מקורות בלתי תלויים',
+  'A reconstruction of one AI buying decision: the question a buyer asked, the {theirs} independent sources supporting {winner} against {ours} supporting your business — a {advantage}× evidence advantage — the resulting recommendation, and the intervention that changes it.':
+    'שחזור של החלטת רכש אחת המונחית AI: השאלה שקונה שאל, {theirs} המקורות הבלתי תלויים התומכים ב-{winner} מול {ours} התומכים בעסק שלכם — יתרון ראיות של פי {advantage} — ההמלצה שנוצרה מכך, וההתערבות שמשנה אותה.',
+
+  /* --- The strategic window ---------------------------------------------- */
+  '{position} market': 'שוק {position}',
+  '{n} months open': '{n} חודשים פתוח',
+  '<b>{n}</b> days of advantage remain': 'נותרו <b>{n}</b> ימי יתרון',
+  'After <b>{date}</b>, the same position still exists — it just has to be taken from an incumbent recommendation rather than claimed from open ground.':
+    'לאחר <b>{date}</b>, אותה עמדה עדיין קיימת — אלא שיהיה צריך לקחת אותה מהמלצה מבוססת במקום לתפוס אותה בשטח פנוי.',
+  Today: 'היום',
+  'Window opened': 'החלון נפתח',
+  'Window closes': 'החלון נסגר',
+  'Why this estimate exists': 'מדוע ההערכה הזו קיימת',
+  'Market readiness reads <b>{n} of 100</b>. Buyers are educated. The answers they receive are not yet fixed.':
+    'מוכנות השוק עומדת על <b>{n} מתוך 100</b>. הקונים בשלים. התשובות שהם מקבלים טרם התקבעו.',
+
+  /* --- The decision journey ----------------------------------------------- */
+  'Stage {n}': 'שלב {n}',
+  '{volume}/mo · {share}': '{volume}/חודש · {share}',
+  '{pct} coverage': 'כיסוי {pct}',
+  'Analytics and CRM': 'אנליטיקה ו-CRM',
+  'Requires a visit, form or record to exist': 'דורש ביקור, טופס או רשומה כדי להתקיים',
+  'Requires a tracked query with search volume': 'דורש שאילתה נמדדת בעלת נפח חיפוש',
+  'Observes the decision itself, at every stage': 'צופה בהחלטה עצמה, בכל שלב',
+  Visible: 'נראה',
+  Blind: 'עיוור',
+  'Executive conclusion': 'מסקנה ניהולית',
+  'Conventional tooling begins observing at stage four — after the buyer has already decided what to buy and is choosing whom to buy it from.':
+    'כלים מקובלים מתחילים לצפות רק בשלב הרביעי — אחרי שהקונה כבר החליט מה לקנות ובוחר ממי לקנות.',
+  'The first three stages generate no visit, click, lead or CRM record. They are not measured badly; they are not measured at all.':
+    'שלושת השלבים הראשונים אינם מייצרים ביקור, קליק, ליד או רשומת CRM. הם אינם נמדדים גרוע; הם אינם נמדדים כלל.',
+
+  /* --- The Google vs AI gap matrix ---------------------------------------- */
+  'Absent from both surfaces on high-value questions. The most expensive class of gap.':
+    'נעדרים משני המשטחים בשאלות בעלות ערך גבוה. סוג הפער היקר ביותר.',
+  'Visible in Google and recommended by AI. No action required.':
+    'נראים בגוגל ומומלצים על ידי AI. לא נדרשת פעולה.',
+  'of {total}': 'מתוך {total}',
+  'Commercial question': 'שאלה מסחרית',
+  Volume: 'נפח',
+  'Google visibility': 'נראות בגוגל',
+  Classification: 'סיווג',
+  'Not in top 100': 'לא ב-100 הראשונים',
+  'Position {n}': 'מיקום {n}',
+  Recommended: 'מומלץ',
+  'Showing {shown} of {total} tracked commercial questions.':
+    'מוצגות {shown} מתוך {total} שאלות מסחריות נמדדות.',
+
+  /* --- The decision graph -------------------------------------------------- */
+  Input: 'קלט',
+  Interpretation: 'פרשנות',
+  Market: 'שוק',
+  Channel: 'ערוץ',
+  Outcome: 'תוצאה',
+  'Decision intelligence graph. Thirteen connected signals ending in a prescription.':
+    'גרף מודיעין החלטות. שלושה־עשר אותות מקושרים המסתיימים בהמלצה מרשמית.',
+  '{label}: {value}. {kind}. {evidence} Activate to open the readout.':
+    '{label}: {value}. {kind}. {evidence} הפעילו כדי לפתוח את הקריאה.',
+  'Hover or focus a node to isolate its relationships. Select any node to open the evidence behind it.':
+    'רחפו מעל צומת או מקדו אותו כדי לבודד את קשריו. בחרו בכל צומת כדי לפתוח את הראיות שמאחוריו.',
+  'Read the graph as a table': 'קראו את הגרף כטבלה',
+  Signal: 'אות',
+  Value: 'ערך',
+  'Leads to': 'מוביל אל',
+
+  /* ==========================================================================
+     SEED PROSE STILL SURFACING ON THE HOME PAGE.
+
+     GEON vector definitions, readout evidence, engine questions, the action
+     plan and the screen-slot captions. Found by rendering /he and reading
+     back every English segment, not by reading the seed modules — the page
+     is the measure.
+     ======================================================================= */
+
+  /* --- GEON vector definitions -------------------------------------------- */
+  'Whether systems understand what the business does, who it serves and when to recommend it.':
+    'האם מערכות מבינות מה העסק עושה, את מי הוא משרת ומתי להמליץ עליו.',
+  'The strength of reputation, validation and proof surrounding the business.':
+    'עוצמת המוניטין, האימות וההוכחות הסובבים את העסק.',
+  'How consistently the business appears across AI and digital environments.':
+    'עד כמה העסק מופיע באופן עקבי בסביבות AI ובסביבות דיגיטליות.',
+  'Whether the same accurate story appears across channels, markets and languages.':
+    'האם אותו סיפור מדויק מופיע בכל הערוצים, השווקים והשפות.',
+  'How closely positioning matches customer demand and buying intent.':
+    'עד כמה המיצוב תואם את ביקוש הלקוחות ואת כוונת הרכישה.',
+  'Whether the business is recognized as a credible expert or category leader.':
+    'האם העסק מוכר כמומחה אמין או כמוביל קטגוריה.',
+
+  /* --- Engine business questions ------------------------------------------ */
+  'Does AI know the business exists, and what does it think it is?':
+    'האם ה-AI יודע שהעסק קיים, ומה הוא חושב שהוא?',
+  'Do the two discovery surfaces agree, and what is the gap costing?':
+    'האם שני משטחי הגילוי מסכימים, וכמה עולה הפער?',
+  'Who receives the decision instead, and what do they have?':
+    'מי מקבל את ההחלטה במקומכם, ומה יש לו?',
+  'What must happen next, by whom and by when?':
+    'מה צריך לקרות עכשיו, על ידי מי ועד מתי?',
+  'Where do competitors receive the decision before the business receives the lead?':
+    'היכן המתחרים מקבלים את ההחלטה לפני שהעסק מקבל את הליד?',
+  'Do AI engines understand who the business is and when it should be considered?':
+    'האם מנועי AI מבינים מי העסק ומתי יש לשקול אותו?',
+  'Does the business exist consistently across traditional search and AI-mediated discovery?':
+    'האם העסק קיים באופן עקבי גם בחיפוש מסורתי וגם בגילוי מונחה AI?',
+  'Whose language does the market use to describe your category?':
+    'באיזו שפה משתמש השוק כדי לתאר את הקטגוריה שלכם?',
+  'Is the market ready, and does the route to it hold?':
+    'האם השוק בשל, והאם הדרך אליו מחזיקה?',
+
+  /* --- Readout evidence and executive truths ------------------------------ */
+  'Decision Health reads 41 of 100, held down primarily by Authority at 28.':
+    'בריאות ההחלטה עומדת על 41 מתוך 100, מרוסנת בעיקר על ידי סמכות ברמה 28.',
+  'Authority carries the heaviest index weight and the largest deficit.':
+    'סמכות נושאת את המשקל הכבד ביותר במדד ואת הגירעון הגדול ביותר.',
+  'GEON Authority 28 — the lowest of six vectors.':
+    'סמכות GEON 28 — הנמוך מבין שישה וקטורים.',
+  'Three independent sources reference Northwind; the competitor median is fourteen.':
+    'שלושה מקורות בלתי תלויים מזכירים את Northwind; החציון של המתחרים הוא ארבעה־עשר.',
+  'No published supplier-comparison material for engines to cite.':
+    'אין חומר השוואת ספקים מפורסם שמנועים יוכלו לצטט.',
+  'Category description differs between the website and two trade directories.':
+    'תיאור הקטגוריה שונה בין האתר לבין שני מדריכי מסחר.',
+  'Three of six engines misidentify the category.':
+    'שלושה מתוך שישה מנועים מזהים את הקטגוריה באופן שגוי.',
+  'No stable entity record. Answers reference the category without naming Northwind at all.':
+    'אין רשומת ישות יציבה. התשובות מתייחסות לקטגוריה מבלי להזכיר את Northwind כלל.',
+  'Kestrel Industrial leads five of seven supplier questions.':
+    'Kestrel Industrial מובילה בחמש מתוך שבע שאלות ספקים.',
+  'Engines cite a competitor’s evaluation criteria first.':
+    'המנועים מצטטים תחילה את קריטריוני ההערכה של מתחרה.',
+  'Eleven tracked keywords sit outside the top ten.':
+    'אחת־עשרה מילות מפתח נמדדות יושבות מחוץ לעשירייה הראשונה.',
+  'Blended CPC $9.03 against break-even $6.13.':
+    'עלות קליק משוקללת של $9.03 מול נקודת איזון של $6.13.',
+  '6 recommendation events across 144 answer slots.':
+    '6 אירועי המלצה מתוך 144 משבצות תשובה.',
+  'Supplier-evaluation coverage — the stage deciding 60% of revenue.':
+    'כיסוי הערכת ספקים — השלב שמכריע 60% מההכנסה.',
+  'Supplier-evaluation phrasing still varied — the category has no fixed vocabulary yet.':
+    'הניסוח בשלב הערכת הספקים עדיין משתנה — לקטגוריה אין עדיין אוצר מילים קבוע.',
+  '63 of 100 — buyers are educated, answers are not yet fixed.':
+    '63 מתוך 100 — הקונים בשלים, התשובות טרם התקבעו.',
+  'Demand × decision gap × estimated conversion × average deal value.':
+    'ביקוש × פער החלטה × המרה מוערכת × שווי עסקה ממוצע.',
+
+  /* --- The action plan ----------------------------------------------------- */
+  'Direct investment at Authority first — it carries the highest weight and the largest deficit.':
+    'הפנו את ההשקעה תחילה אל הסמכות — היא נושאת את המשקל הגבוה ביותר ואת הגירעון הגדול ביותר.',
+  'Build supplier-comparison content against the six highest-volume missed decision questions.':
+    'בנו תוכן להשוואת ספקים כנגד שש שאלות ההחלטה שהוחמצו בעלות הנפח הגבוה ביותר.',
+  'Strengthen independent authority evidence and supplier-comparison coverage.':
+    'חזקו את ראיות הסמכות הבלתי תלויות ואת כיסוי השוואת הספקים.',
+  'Resolve the Gemini entity conflation with the same-named logistics firm.':
+    'פתרו את ערבוב הישויות ב-Gemini מול חברת הלוגיסטיקה בעלת אותו שם.',
+  'Reallocate paid spend from keywords with a viable organic replacement path.':
+    'הסיטו הוצאה ממומנת ממילות מפתח שקיימת להן חלופה אורגנית בת־קיימא.',
+  'Response time cited among the first three criteria by 3 of 6 engines':
+    'זמן תגובה מצוטט בין שלושת הקריטריונים הראשונים על ידי 3 מתוך 6 מנועים',
+  'Gemini resolves the correct entity on 4 of 6 category questions':
+    'Gemini מזהה את הישות הנכונה ב-4 מתוך 6 שאלות קטגוריה',
+  'Blended CPC below break-even on reallocated set':
+    'עלות קליק משוקללת מתחת לנקודת האיזון בסט שהוסט',
+  'Category association correct on 5 of 6 engines':
+    'שיוך הקטגוריה נכון ב-5 מתוך 6 מנועים',
+  'Gemini recognition 24 → 45': 'זיהוי ב-Gemini 24 ← 45',
+
+  /* --- Chrome outside the dictionary --------------------------------------- */
+  'Switch to light theme': 'עברו לערכת נושא בהירה',
+  'Switch to dark theme': 'עברו לערכת נושא כהה',
+  'Powered by Gintex': 'מופעל על ידי Gintex',
+  'GeoRepute — home': 'GeoRepute — דף הבית',
+  Open: 'פתחו',
+
+  /* --- Effort, urgency, trend and confidence chips ------------------------- */
+  'low effort': 'מאמץ נמוך',
+  'medium effort': 'מאמץ בינוני',
+  'high effort': 'מאמץ גבוה',
+  Immediate: 'מיידי',
+  'This quarter': 'הרבעון הזה',
+  Monitor: 'למעקב',
+  Improving: 'משתפר',
+  Stable: 'יציב',
+  Deteriorating: 'מידרדר',
+  /* 'High' already has an entry above — one English string carries one
+     translation by design (see index.ts), so the chip reuses it. */
+  Medium: 'בינונית',
+  'Insufficient history': 'היסטוריה לא מספקת',
+
+  /* --- Score-meter accessible name ------------------------------------------ */
+  '{score} out of {max}': '{score} מתוך {max}',
+
+  /* --- Image credit --------------------------------------------------------- */
+  'NASA on Unsplash': 'NASA ב-Unsplash',
+
+  /* --- The demonstration's buyer queries -------------------------------------
+     Translated rather than left as literal English search strings. A Hebrew
+     reader is being shown what an AI buying decision looks like, and a buyer
+     reading a Hebrew page types Hebrew. FLAGGED FOR THE CLIENT: if the demo
+     is ever pointed at a real Israeli market, these should be replaced with
+     the phrases that market actually searches, not translations of the US
+     ones — that is a content decision, not a translation one. */
+  'Which industrial fastener suppliers are most reliable in the Midwest?':
+    'אילו ספקי מחברים תעשייתיים הם האמינים ביותר באזור המערב התיכון?',
+  'industrial fastener supplier': 'ספק מחברים תעשייתיים',
+  'fastener distributor midwest': 'מפיץ מחברים מערב תיכון',
+  'vendor managed inventory mro': 'ניהול מלאי על ידי ספק תחזוקה',
+  'hydraulic fittings supplier': 'ספק אביזרים הידראוליים',
+  'industrial supply company': 'חברת אספקה תעשייתית',
+  'bulk fasteners chicago': 'מחברים בכמויות שיקגו',
+  'grade 8 bolts bulk': 'ברגים דרגה 8 בכמות',
+  'mro distributor': 'מפיץ ציוד תחזוקה',
+
+  /* --- Product screen slots ------------------------------------------------ */
+  'Executive Mission Control — full window, all measures visible':
+    'מרכז הבקרה הניהולי — חלון מלא, כל המדדים גלויים',
+  'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.':
+    'מרכז הבקרה הניהולי. כל מדד פותח את הראיות שמאחוריו. נתוני הדגמה אנונימיים.',
+  'Action Plan — the prioritised intervention list':
+    'תוכנית הפעולה — רשימת ההתערבויות המתועדפת',
+  'Every action carries an owner, a deadline and the signal it must move. Anonymised demonstration data.':
+    'לכל פעולה יש אחראי, תאריך יעד והאות שעליה להזיז. נתוני הדגמה אנונימיים.',
+  'Awaiting real screen': 'ממתין למסך אמיתי',
+  'Anonymised or demonstration data only. No customer names, domains, personal data or confidential figures.':
+    'נתונים אנונימיים או הדגמתיים בלבד. ללא שמות לקוחות, דומיינים, מידע אישי או נתונים חסויים.',
 }

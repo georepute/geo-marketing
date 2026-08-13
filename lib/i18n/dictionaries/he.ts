@@ -92,6 +92,10 @@ export const dictionary: PartialDictionary = {
     kpiWhy: 'מדוע זה חשוב',
     kpiImpact: 'השפעה עסקית',
 
+    executiveQuestion: 'שאלה ניהולית',
+    ownerLabel: 'אחראי',
+    deadlineLabel: 'תאריך יעד',
+
     decisionHealthDefinition:
       'בריאות ההחלטה מודדת האם מערכות AI מסוגלות לזהות, לאמת ולהמליץ בבטחה על העסק שלכם ברגע שבו קונה בוחר ספק.',
     strategicWindowDefinition:
@@ -319,6 +323,62 @@ export const dictionary: PartialDictionary = {
     label: 'שפה',
     choose: 'בחרו שפה',
     current: 'השפה הנוכחית',
+  },
+
+  /* --- Footer. Arrays of objects merge element-wise, so every `href` here
+         comes from the English source and only the label is replaced. ----- */
+  footer: {
+    ariaLabel: 'תחתית',
+    limitationLead: 'מודלים כיווניים.',
+    limitationTail:
+      'נתונים מסחריים הם הערכות לצורך תיעדוף, לא דוחות כספיים מבוקרים.',
+    rights: 'GeoRepute. תשתית מודיעין החלטות.',
+    environment: 'סביבת הדגמה · נתוני זרע',
+    photography: 'צילום באמצעות',
+    columns: [
+      {
+        title: 'מוצר',
+        links: [
+          { label: 'מרכז הבקרה הניהולי' },
+          { label: 'שחזור החלטות' },
+          { label: 'מרכז הפעולות' },
+          { label: 'מנועי מודיעין' },
+          { label: 'קביעת תדריך' },
+          { label: 'תמחור ותוכניות' },
+        ],
+      },
+      {
+        title: 'מודיעין',
+        links: [
+          { label: 'שוק המודיעין' },
+          { label: 'זיהוי על ידי AI' },
+          { label: 'גוגל מול AI' },
+          { label: 'החלטת מתחרים' },
+          { label: 'מודיעין פעולה' },
+        ],
+      },
+      {
+        title: 'מתודולוגיה',
+        links: [
+          { label: 'מסגרת GEON' },
+          { label: 'מקורות ראיות' },
+          { label: 'מודל הוודאות' },
+          { label: 'המודל הפיננסי' },
+          { label: 'מגבלות' },
+        ],
+      },
+      {
+        title: 'החברה',
+        links: [
+          { label: 'רשומות מודיעין' },
+          { label: 'כניסה' },
+          { label: 'פרטיות' },
+          { label: 'תנאי שימוש' },
+          { label: 'עיבוד נתונים' },
+          { label: 'אבטחה' },
+        ],
+      },
+    ],
   },
 
   /* --- Readout anatomy -------------------------------------------------- */

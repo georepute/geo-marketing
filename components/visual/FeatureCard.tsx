@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { ImageWithScrim } from './ImageWithScrim'
 import { GlassCard, TiltCard } from './Primitives'
 import { ICON_BY_KEY } from '@/lib/visual/icons'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { ImageKey } from '@/lib/visual/imagery'
 
@@ -44,6 +45,7 @@ export function FeatureCard({
   tilt?: boolean
   className?: string
 }) {
+  const t = useT()
   const Icon = iconKey ? ICON_BY_KEY[iconKey] : undefined
 
   const card = (
@@ -111,7 +113,7 @@ export function FeatureCard({
         <div className="flex items-center justify-between gap-3 mt-6 pt-5 border-t border-line">
           {footer ?? <span />}
           <span className="inline-flex items-center gap-2 text-label uppercase text-ink-3 group-hover:text-ink transition-colors">
-            Open
+            {t('Open')}
             <ArrowRight
               aria-hidden
               className="size-3.5 transition-transform duration-[var(--gr-dur-base)] ease-(--ease-standard) group-hover:translate-x-0.5"

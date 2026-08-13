@@ -23,7 +23,7 @@ import { GoogleVsAIGapMatrix } from '@/components/viz/GoogleVsAIGapMatrix'
 import { FeatureCard } from '@/components/visual/FeatureCard'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ENGINE_IMAGE } from '@/lib/visual/imagery'
-import { getDictionary } from '@/lib/i18n/server'
+import { getDictionary, getI18n } from '@/lib/i18n/server'
 import { flags } from '@/lib/flags'
 import { count, dateFull, percentWhole } from '@/lib/format'
 import {
@@ -83,6 +83,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Home() {
   const copy = await getDictionary()
   const t = await getT()
+  const { intl } = await getI18n()
   const [
     org,
     chain,
@@ -180,25 +181,31 @@ export default async function Home() {
           THE PREMISE — why a business needs this at all.
           ============================================================== */}
       <Section
-        eyebrow="The shift"
+        eyebrow={t('The shift')}
         headline={copy.analyticsDisruption}
         sub={t("By the time a visit, a click, a lead or a CRM record exists, the buyer has already decided which suppliers are worth contacting. That decision now happens inside AI systems, and it leaves no trace in any tool you currently own.")}
         wide
       >
         <div className="grid gap-4 md:grid-cols-3">
           <Premise
-            figure={`${count(missedQuestions)} of ${count(prompts.data.length)}`}
-            statement="commercial decisions complete without your business being named at all."
+            figure={t('{n} of {total}', {
+              n: count(missedQuestions),
+              total: count(prompts.data.length),
+            })}
+            statement={t('commercial decisions complete without your business being named at all.')}
             note={t("No lead was lost, because no lead was ever created. Conventional measurement recorded nothing.")}
           />
           <Premise
             figure={percentWhole(supplierStage.coveragePct)}
-            statement="presence at the stage where the supplier is actually chosen."
-            note={`That stage carries ${percentWhole(supplierVolumeSharePct)} of the query volume and decides ${percentWhole(revenueAtStakePct)} of the revenue. Volume-ranked tooling calls it unimportant.`}
+            statement={t('presence at the stage where the supplier is actually chosen.')}
+            note={t('That stage carries {volume} of the query volume and decides {revenue} of the revenue. Volume-ranked tooling calls it unimportant.', {
+              volume: percentWhole(supplierVolumeSharePct),
+              revenue: percentWhole(revenueAtStakePct),
+            })}
           />
           <Premise
             figure={`${authorityMultiple}×`}
-            statement="more independent evidence supports the competitor engines recommend instead."
+            statement={t('more independent evidence supports the competitor engines recommend instead.')}
             note={t("Not a brand-preference gap. An evidence gap, and evidence can be commissioned.")}
           />
         </div>
@@ -218,25 +225,35 @@ export default async function Home() {
             {
               label: t('Entity understanding'),
               value: `${preview.data.recognitionScore}/100`,
-              reading: `AI systems understand what your business is in ${preview.data.recognitionScore} of 100 commercial evaluations. One engine holds no stable record of you at all.`,
+              reading: t('AI systems understand what your business is in {score} of 100 commercial evaluations. One engine holds no stable record of you at all.', {
+                score: preview.data.recognitionScore,
+              }),
               why: t('A system that cannot categorise a business cannot recommend it. This sits upstream of every other measure on this page.'),
               impact: t('Content and advertising investment cannot move an answer while the underlying record is wrong. Spend on either is spend against a locked door.'),
               tone: 'critical',
             },
             {
-              label: 'Highest-risk engine',
+              label: t('Highest-risk engine'),
               value: preview.data.highestRiskEngine.name,
-              reading: `${preview.data.highestRiskEngine.name} understands your business at ${preview.data.highestRiskEngine.recognitionScore} of 100 and names it in none of the tracked decisions. ${preview.data.highestRiskEngine.reason}`,
+              reading: `${t('{engine} understands your business at {score} of 100 and names it in none of the tracked decisions.', {
+                engine: preview.data.highestRiskEngine.name,
+                score: preview.data.highestRiskEngine.recognitionScore,
+              })} ${preview.data.highestRiskEngine.reason}`,
               why: t('Recognition is not uniform across AI systems, and buyers do not all use the same one. A single weak engine removes your business from every decision made through it.'),
               impact: t('Every buyer who asks this engine receives a supplier shortlist your business is structurally absent from — and no measurement you own records that it happened.'),
               tone: 'critical',
             },
             {
-              label: 'Decision presence',
+              label: t('Decision presence'),
               value: percentWhole(preview.data.decisionPresencePct),
-              reading: `Present in only ${percentWhole(preview.data.decisionPresencePct)} of supplier evaluations. Missing from ${percentWhole(100 - preview.data.decisionPresencePct)} of AI buying decisions.`,
+              reading: t('Present in only {present} of supplier evaluations. Missing from {missing} of AI buying decisions.', {
+                present: percentWhole(preview.data.decisionPresencePct),
+                missing: percentWhole(100 - preview.data.decisionPresencePct),
+              }),
               why: t('Supplier evaluation is the moment a buyer stops choosing a solution and starts choosing a vendor. It is the stage that assigns the order.'),
-              impact: `Absence here is exclusion from the shortlist for the ${percentWhole(revenueAtStakePct)} of revenue that arrives through supplier evaluation.`,
+              impact: t('Absence here is exclusion from the shortlist for the {revenue} of revenue that arrives through supplier evaluation.', {
+                revenue: percentWhole(revenueAtStakePct),
+              }),
               tone: 'critical',
             },
           ]}
@@ -246,7 +263,7 @@ export default async function Home() {
           statement={recognition.prescription}
           because={t("Recognition is cheap to fix and blocks everything else. It is the only intervention on this page that can be completed in under thirty days.")}
           owner={recognition.ownerDeadline.owner}
-          deadline={dateFull(recognition.ownerDeadline.deadline)}
+          deadline={dateFull(recognition.ownerDeadline.deadline, intl)}
           movement={`${recognition.expectedMovement.signal} ${recognition.expectedMovement.from} → ${recognition.expectedMovement.to}${recognition.expectedMovement.unit}`}
         />
       </QuestionSection>
@@ -269,15 +286,22 @@ export default async function Home() {
               {
                 label: t('Where presence collapses'),
                 value: supplierStage.label,
-                reading: `Coverage falls to ${percentWhole(supplierStage.coveragePct)} at supplier evaluation — the last stage before the order is assigned.`,
+                reading: t('Coverage falls to {pct} at supplier evaluation — the last stage before the order is assigned.', {
+                  pct: percentWhole(supplierStage.coveragePct),
+                }),
                 why: t('Earlier stages shape opinion. This stage selects the vendor. A business can lead the first three stages and still never be contacted.'),
                 impact: t('The competitor named here receives the enquiry. Your business is not compared and rejected — it is never compared at all.'),
                 tone: 'critical',
               },
               {
                 label: t('Blind-spot questions'),
-                value: `${count(blindSpots)} of ${count(gaps.data.length)}`,
-                reading: `${count(blindSpots)} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.`,
+                value: t('{n} of {total}', {
+                  n: count(blindSpots),
+                  total: count(gaps.data.length),
+                }),
+                reading: t('{n} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.', {
+                  n: count(blindSpots),
+                }),
                 why: t('Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.'),
                 impact: t('These questions are currently reachable only by buying the click — which is why paid cost rises while organic position stays flat.'),
                 tone: 'critical',
@@ -292,9 +316,12 @@ export default async function Home() {
 
         <Prescription
           statement={supplierCollapse.prescription}
-          because={`Supplier evaluation carries ${percentWhole(supplierVolumeSharePct)} of the query volume and decides ${percentWhole(revenueAtStakePct)} of the revenue. Ranking work by volume puts it last.`}
+          because={t('Supplier evaluation carries {volume} of the query volume and decides {revenue} of the revenue. Ranking work by volume puts it last.', {
+            volume: percentWhole(supplierVolumeSharePct),
+            revenue: percentWhole(revenueAtStakePct),
+          })}
           owner={supplierCollapse.ownerDeadline.owner}
-          deadline={dateFull(supplierCollapse.ownerDeadline.deadline)}
+          deadline={dateFull(supplierCollapse.ownerDeadline.deadline, intl)}
           movement={`${supplierCollapse.expectedMovement.signal} ${supplierCollapse.expectedMovement.from} → ${supplierCollapse.expectedMovement.to}${supplierCollapse.expectedMovement.unit}`}
         />
       </QuestionSection>
@@ -305,7 +332,11 @@ export default async function Home() {
       <QuestionSection
         index={3}
         question={copy.exec.q3}
-        answer={`${topCompetitor.name} can be verified through ${count(topCompetitor.authoritySources)} independent sources. Your business can be verified through ${count(self.authoritySources)}.`}
+        answer={t('{competitor} can be verified through {theirs} independent sources. Your business can be verified through {ours}.', {
+          competitor: topCompetitor.name,
+          theirs: count(topCompetitor.authoritySources),
+          ours: count(self.authoritySources),
+        })}
         context={t("Share of recommendations is the symptom. The cause is what a system can cite when it has to justify naming one supplier ahead of another.")}
       >
         <AuthorityAdvantage
@@ -316,9 +347,11 @@ export default async function Home() {
 
         <Prescription
           statement={competitorReadout.prescription}
-          because={`Closing ${authorityMultiple}× is a publishing and validation programme with a known cost, not a brand campaign with an unknown one.`}
+          because={t('Closing {multiple}× is a publishing and validation programme with a known cost, not a brand campaign with an unknown one.', {
+            multiple: authorityMultiple,
+          })}
           owner={competitorReadout.ownerDeadline.owner}
-          deadline={dateFull(competitorReadout.ownerDeadline.deadline)}
+          deadline={dateFull(competitorReadout.ownerDeadline.deadline, intl)}
           movement={`${competitorReadout.expectedMovement.signal} ${competitorReadout.expectedMovement.from} → ${competitorReadout.expectedMovement.to}${competitorReadout.expectedMovement.unit}`}
         />
       </QuestionSection>
@@ -354,11 +387,11 @@ export default async function Home() {
         {/* How three missing inputs become one commercial outcome. */}
         <div className="mt-6 rounded-md border border-line bg-panel p-6">
           <p className="text-label uppercase text-ink-3">
-            How the gap becomes a lost decision
+            {t('How the gap becomes a lost decision')}
           </p>
           <p className="text-body text-ink-2 mt-3 max-w-3xl">
-            {copy.home.graph} Every node below opens the evidence behind it,
-            with its confidence and its limits.
+            {copy.home.graph}{' '}
+            {t('Every node below opens the evidence behind it, with its confidence and its limits.')}
           </p>
           <div className="mt-6">
             <HomeInteractive
@@ -374,7 +407,7 @@ export default async function Home() {
           statement={authority.prescription}
           because={t("Systems do not recommend what they cannot corroborate. Self-description is treated as a claim; third-party reference is treated as evidence.")}
           owner={authority.ownerDeadline.owner}
-          deadline={dateFull(authority.ownerDeadline.deadline)}
+          deadline={dateFull(authority.ownerDeadline.deadline, intl)}
           movement={`${authority.expectedMovement.signal} ${authority.expectedMovement.from} → ${authority.expectedMovement.to}${authority.expectedMovement.unit}`}
         />
       </QuestionSection>
@@ -402,7 +435,7 @@ export default async function Home() {
           statement={timingReadout.prescription}
           because={t("The window is an observation about category formation, not a sales deadline. It is re-assessed every quarter and it can move in either direction.")}
           owner={timingReadout.ownerDeadline.owner}
-          deadline={dateFull(timingReadout.ownerDeadline.deadline)}
+          deadline={dateFull(timingReadout.ownerDeadline.deadline, intl)}
           movement={t("Authority established before the answer set stabilises")}
         />
       </QuestionSection>
@@ -421,8 +454,7 @@ export default async function Home() {
             {copy.exec.actionPlanLabel}
           </p>
           <p className="text-caption text-ink-3">
-            Ordered by commercial exposure, urgency, effort and competitive
-            pressure.
+            {t('Ordered by commercial exposure, urgency, effort and competitive pressure.')}
           </p>
         </div>
 
@@ -439,7 +471,7 @@ export default async function Home() {
 
         <div className="mt-6">
           <Button asChild variant="secondary">
-            <Link href="/app/actions">Open the full intervention plan</Link>
+            <Link href="/app/actions">{t('Open the full intervention plan')}</Link>
           </Button>
         </div>
       </QuestionSection>
@@ -469,14 +501,14 @@ export default async function Home() {
           statement={decisionHealth.prescription}
           because={t("Authority carries the heaviest weight in the index and the largest deficit. Every other vector is capped by it, so it is the only starting point that moves more than one measure.")}
           owner={decisionHealth.ownerDeadline.owner}
-          deadline={dateFull(decisionHealth.ownerDeadline.deadline)}
+          deadline={dateFull(decisionHealth.ownerDeadline.deadline, intl)}
           movement={`${decisionHealth.expectedMovement.signal} ${decisionHealth.expectedMovement.from} → ${decisionHealth.expectedMovement.to}${decisionHealth.expectedMovement.unit}`}
         />
 
         <div className="mt-6">
           <Button asChild variant="secondary">
             <Link href="/app/mission-control">
-              Open the full executive position
+              {t('Open the full executive position')}
             </Link>
           </Button>
         </div>
@@ -486,7 +518,7 @@ export default async function Home() {
           RUN IT ON YOUR OWN BUSINESS.
           ============================================================== */}
       <Section
-        eyebrow="Your business"
+        eyebrow={t('Your business')}
         headline={copy.home.liveEntry}
         sub={t("Enter a domain and one signal is released immediately. The rest of the position requires an account or a purchase — and the locked panels state exactly what sits behind them.")}
         wide
@@ -506,7 +538,9 @@ export default async function Home() {
           ============================================================== */}
       <Section
         eyebrow={t("The intelligence ecosystem")}
-        headline={`Seven questions were asked above. ${count(ecosystem.data.totalModules)} models stand behind them.`}
+        headline={t('Seven questions were asked above. {n} models stand behind them.', {
+          n: count(ecosystem.data.totalModules),
+        })}
         sub={t("Every category holds the models that answer one kind of commercial question — including a great many that businesses have never been able to measure, because nothing existed to measure them with.")}
         wide
       >
@@ -517,7 +551,7 @@ export default async function Home() {
 
         <div className="mt-6">
           <Button asChild variant="secondary">
-            <Link href="/marketplace">Explore the intelligence ecosystem</Link>
+            <Link href="/marketplace">{t('Explore the intelligence ecosystem')}</Link>
           </Button>
         </div>
       </Section>
@@ -527,7 +561,7 @@ export default async function Home() {
           underlying technology, not the navigation."
           ============================================================== */}
       <Section
-        eyebrow="Underneath"
+        eyebrow={t('Underneath')}
         headline={t("Every answer on this page is produced by an intelligence engine.")}
         sub={t("Twelve engines run beneath the questions. They are named here for completeness — nobody buys an engine, and nothing above required you to know one existed.")}
         wide
@@ -551,12 +585,12 @@ export default async function Home() {
         </div>
 
         <p className="text-caption text-ink-3 mt-5">
-          Four engines are built in this environment. All twelve appear on the{' '}
+          {t('Four engines are built in this environment. All twelve appear on the')}{' '}
           <Link
             href="/engines"
             className="text-ink-2 underline underline-offset-4 hover:text-ink"
           >
-            engines overview
+            {t('engines overview')}
           </Link>
           .
         </p>
@@ -578,22 +612,21 @@ export default async function Home() {
             {copy.finalCta}
           </h2>
           <p className="text-body-lg text-ink-2 mt-5 max-w-2xl mx-auto">
-            Every day the window stays open, the same position costs less to
-            take. Every day after it closes, it costs more.
+            {t('Every day the window stays open, the same position costs less to take. Every day after it closes, it costs more.')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mt-10">
             <Button asChild variant="primary" size="lg">
-              <Link href="/app/reconstruct">See how AI decides about you</Link>
+              <Link href="/app/reconstruct">{t('See how AI decides about you')}</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
               {/* Doc §4: nothing is purchasable while pricing is withheld, so
                   the middle route describes the intelligence rather than the
                   transaction. */}
               {flags.pricing ? (
-                <Link href="/marketplace">Buy a single answer</Link>
+                <Link href="/marketplace">{t('Buy a single answer')}</Link>
               ) : (
-                <Link href="/marketplace">See a single answer</Link>
+                <Link href="/marketplace">{t('See a single answer')}</Link>
               )}
             </Button>
             <Button asChild variant="ghost" size="lg">
@@ -602,15 +635,15 @@ export default async function Home() {
           </div>
 
           <p className="text-caption text-ink-3 mt-10 max-w-2xl mx-auto">
-            Every figure on this page is computed from{' '}
-            <span data-numeric="">{count(questions.data.length)}</span> tracked
-            commercial decisions across six AI engines.{' '}
+            {t('Every figure on this page is computed from {n} tracked commercial decisions across six AI engines.', {
+              n: count(questions.data.length),
+            })}{' '}
             {copy.exec.everyFigureCaption}{' '}
             <Link
               href="/methodology"
               className="text-ink-2 underline underline-offset-4 hover:text-ink"
             >
-              See the methodology
+              {t('See the methodology')}
             </Link>
             .
           </p>

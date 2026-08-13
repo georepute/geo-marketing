@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { GraphNode, GraphEdge } from '@/lib/seed/reconstruction'
 
@@ -64,6 +65,7 @@ export function DecisionGraph({
   onSelect: (readoutId: string) => void
   className?: string
 }) {
+  const t = useT()
   const reduced = useReducedMotion()
   const [active, setActive] = useState<string | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -122,7 +124,7 @@ export function DecisionGraph({
               style={{ background: KIND_TOKEN[kind] }}
             />
             <span className="text-label uppercase text-ink-3">
-              {KIND_LABEL[kind]}
+              {t(KIND_LABEL[kind])}
             </span>
           </span>
         ))}
@@ -134,7 +136,7 @@ export function DecisionGraph({
           width={width}
           height={height}
           role="group"
-          aria-label="Decision intelligence graph. Thirteen connected signals ending in a prescription."
+          aria-label={t('Decision intelligence graph. Thirteen connected signals ending in a prescription.')}
           className="max-w-none"
           style={{ minWidth: width }}
         >
@@ -242,7 +244,12 @@ export function DecisionGraph({
                   <g
                     role="button"
                     tabIndex={0}
-                    aria-label={`${node.label}: ${node.value}. ${KIND_LABEL[node.kind]}. ${node.evidence} Activate to open the readout.`}
+                    aria-label={t('{label}: {value}. {kind}. {evidence} Activate to open the readout.', {
+                      label: node.label,
+                      value: node.value,
+                      kind: t(KIND_LABEL[node.kind]),
+                      evidence: node.evidence,
+                    })}
                     className="cursor-pointer outline-none [&:focus-visible>rect]:stroke-[var(--gr-brand-300)] [&:focus-visible>rect]:stroke-2"
                     onMouseEnter={() => setActive(node.id)}
                     onMouseLeave={() => setActive(null)}
@@ -309,8 +316,7 @@ export function DecisionGraph({
       </div>
 
       <p className="text-caption text-ink-3 mt-3">
-        Hover or focus a node to isolate its relationships. Select any node to
-        open the evidence behind it.
+        {t('Hover or focus a node to isolate its relationships. Select any node to open the evidence behind it.')}
       </p>
 
       {/* --- Table fallback: same data, linear, for AT and narrow screens.
@@ -319,16 +325,16 @@ export function DecisionGraph({
              path to the same information. */}
       <details open className="mt-5 rounded-md border border-line bg-panel">
         <summary className="p-4 text-label uppercase text-ink-2 cursor-pointer hover:bg-inset transition-colors">
-          Read the graph as a table
+          {t('Read the graph as a table')}
         </summary>
         <div className="overflow-x-auto border-t border-line">
           <table className="w-full min-w-[36rem]">
             <thead>
               <tr className="text-label uppercase text-ink-3">
-                <th className="text-start font-normal p-4">Signal</th>
-                <th className="text-start font-normal p-4">Value</th>
-                <th className="text-start font-normal p-4">Leads to</th>
-                <th className="text-start font-normal p-4">Evidence</th>
+                <th className="text-start font-normal p-4">{t('Signal')}</th>
+                <th className="text-start font-normal p-4">{t('Value')}</th>
+                <th className="text-start font-normal p-4">{t('Leads to')}</th>
+                <th className="text-start font-normal p-4">{t('Evidence')}</th>
               </tr>
             </thead>
             <tbody>

@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils/cn'
 import { getDictionary } from '@/lib/i18n/server'
+import { getT } from '@/lib/i18n/content/translator'
+import { Rich } from '@/lib/i18n/content/rich'
 import type { OrgSummary } from '@/lib/api/types'
 
 /* ============================================================================
@@ -37,6 +39,7 @@ export async function ExecutivePosition({
   weights: Record<string, number>
 }) {
   const copy = await getDictionary()
+  const t = await getT()
   /**
    * The binding constraint is DERIVED, never asserted: it is the vector with
    * the largest weighted deficit — how many index points are currently being
@@ -55,7 +58,9 @@ export async function ExecutivePosition({
     <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] items-start">
       {/* --- The position, stated ------------------------------------- */}
       <div className="rounded-md border border-line bg-panel p-6 md:p-8">
-        <p className="text-label uppercase text-ink-3">Decision Health</p>
+        <p className="text-label uppercase text-ink-3">
+          {t('Decision Health')}
+        </p>
 
         <p className="mt-4 flex items-baseline gap-2">
           <span className="text-display-1 text-ink" data-numeric="">
@@ -74,29 +79,28 @@ export async function ExecutivePosition({
         {/* The primary message. */}
         <div className="mt-8 pt-8 border-t border-line">
           <p className="text-label uppercase" style={{ color: 'var(--gr-critical)' }}>
-            The binding constraint
+            {t('The binding constraint')}
           </p>
           <p className="text-h1 text-ink mt-3 text-balance">
-            Held down primarily by {constraint.label}.
+            {t('Held down primarily by {vector}.', { vector: constraint.label })}
           </p>
           <p className="text-body text-ink-2 mt-4">
-            {constraint.label} reads{' '}
-            <span className="text-ink" data-numeric="">
-              {constraint.score} of 100
-            </span>{' '}
-            and carries the heaviest weight in the index at{' '}
-            <span className="text-ink" data-numeric="">
-              {Math.round((weights[constraint.key] ?? 0) * 100)}%
-            </span>
-            . Lowest score, largest lever — every other measure is capped by it.
+            <Rich
+              text={t('{vector} reads <b>{score} of 100</b> and carries the heaviest weight in the index at <b>{weight}%</b>. Lowest score, largest lever — every other measure is capped by it.', {
+                vector: constraint.label,
+                score: constraint.score,
+                weight: Math.round((weights[constraint.key] ?? 0) * 100),
+              })}
+            />
           </p>
           <p className="text-caption text-ink-3 mt-4">
-            {strongest.label} reads{' '}
-            <span className="text-ink-2" data-numeric="">
-              {strongest.score}
-            </span>
-            . The offer matches demand. The constraint is entirely on the
-            evidence side, which is the side a business can change.
+            <Rich
+              text={t('{vector} reads <b>{score}</b>. The offer matches demand. The constraint is entirely on the evidence side, which is the side a business can change.', {
+                vector: strongest.label,
+                score: strongest.score,
+              })}
+              className="text-ink-2"
+            />
           </p>
         </div>
       </div>
@@ -105,10 +109,10 @@ export async function ExecutivePosition({
       <div className="rounded-md border border-line bg-panel p-6 md:p-8">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
           <p className="text-label uppercase text-ink-3">
-            What Decision Health is made of
+            {t('What Decision Health is made of')}
           </p>
           <p className="text-caption text-ink-3">
-            Weighted, published, recomputed monthly
+            {t('Weighted, published, recomputed monthly')}
           </p>
         </div>
 
@@ -131,7 +135,7 @@ export async function ExecutivePosition({
 
 /* ------------------------------------------------------------------------ */
 
-function Vector({
+async function Vector({
   label,
   score,
   weight,
@@ -144,6 +148,7 @@ function Vector({
   definition: string
   binding: boolean
 }) {
+  const t = await getT()
   return (
     <li>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -159,13 +164,16 @@ function Vector({
               className="text-label uppercase ms-3 align-middle"
               style={{ color: 'var(--gr-critical)' }}
             >
-              Binding constraint
+              {t('Binding constraint')}
             </span>
           ) : null}
         </p>
         <p className="text-data text-ink-2 shrink-0" data-numeric="">
           {score}
-          <span className="text-ink-3"> · weight {Math.round(weight * 100)}%</span>
+          <span className="text-ink-3">
+            {' '}
+            · {t('weight {pct}%', { pct: Math.round(weight * 100) })}
+          </span>
         </p>
       </div>
 

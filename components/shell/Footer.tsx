@@ -3,6 +3,7 @@ import { Wordmark } from './Wordmark'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { imageCredits } from '@/lib/visual/imagery'
 import { getDictionary } from '@/lib/i18n/server'
+import { getT } from '@/lib/i18n/content/translator'
 import { flags } from '@/lib/flags'
 
 /* ============================================================================
@@ -18,6 +19,7 @@ import { flags } from '@/lib/flags'
 
 export async function Footer() {
   const copy = await getDictionary()
+  const t = await getT()
   const year = 2026
 
   return (
@@ -142,7 +144,7 @@ export async function Footer() {
           >
             Unsplash
           </a>{' '}
-          — {imageCredits().join(', ')}.
+          — {imageCredits().map((credit) => t(credit)).join(', ')}.
         </p>
       </div>
     </footer>

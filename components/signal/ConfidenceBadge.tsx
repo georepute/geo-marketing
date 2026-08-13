@@ -2,6 +2,7 @@
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/Primitives'
 import { useDict } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { Confidence } from '@/lib/seed/types'
 
@@ -44,6 +45,7 @@ export function ConfidenceBadge({
   className?: string
 }) {
   const copy = useDict()
+  const t = useT()
   const definition = copy.confidence[confidence].definition
 
   return (
@@ -65,7 +67,7 @@ export function ConfidenceBadge({
           </span>
           {showLabel ? (
             <span className="text-label uppercase text-ink-2">
-              {SHORT[confidence]}
+              {t(SHORT[confidence])}
             </span>
           ) : null}
           <span className="sr-only">
