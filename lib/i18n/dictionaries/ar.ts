@@ -96,6 +96,10 @@ export const dictionary: PartialDictionary = {
     kpiWhy: 'لماذا يهم',
     kpiImpact: 'الأثر التجاري',
 
+    executiveQuestion: 'سؤال تنفيذي',
+    ownerLabel: 'المسؤول',
+    deadlineLabel: 'الموعد النهائي',
+
     decisionHealthDefinition:
       'تقيس صحة القرار ما إذا كانت أنظمة الذكاء الاصطناعي قادرة على التعرّف على نشاطك التجاري والتحقق منه والتوصية به بأمان في اللحظة التي يختار فيها المشتري مورّدًا.',
     strategicWindowDefinition:
@@ -323,6 +327,62 @@ export const dictionary: PartialDictionary = {
     label: 'اللغة',
     choose: 'اختر لغة',
     current: 'اللغة الحالية',
+  },
+
+  /* --- Footer. Arrays of objects merge element-wise, so every `href` here
+         comes from the English source and only the label is replaced. ----- */
+  footer: {
+    ariaLabel: 'تذييل الصفحة',
+    limitationLead: 'نمذجة اتجاهية.',
+    limitationTail:
+      'الأرقام التجارية تقديرات لأغراض تحديد الأولويات، وليست بيانات مالية مدقّقة.',
+    rights: 'GeoRepute. بنية تحتية لذكاء القرار.',
+    environment: 'بيئة عرض توضيحي · بيانات أولية',
+    photography: 'التصوير عبر',
+    columns: [
+      {
+        title: 'المنتج',
+        links: [
+          { label: 'مركز القيادة التنفيذي' },
+          { label: 'إعادة بناء القرار' },
+          { label: 'مركز الإجراءات' },
+          { label: 'محرّكات الذكاء' },
+          { label: 'احجز جلسة إحاطة' },
+          { label: 'الأسعار والباقات' },
+        ],
+      },
+      {
+        title: 'الذكاء',
+        links: [
+          { label: 'سوق الذكاء' },
+          { label: 'التعرّف عبر الذكاء الاصطناعي' },
+          { label: 'جوجل مقابل الذكاء الاصطناعي' },
+          { label: 'قرار المنافسين' },
+          { label: 'ذكاء الإجراءات' },
+        ],
+      },
+      {
+        title: 'المنهجية',
+        links: [
+          { label: 'إطار GEON' },
+          { label: 'مصادر الأدلة' },
+          { label: 'نموذج الثقة' },
+          { label: 'النموذج المالي' },
+          { label: 'حدود المنهجية' },
+        ],
+      },
+      {
+        title: 'الشركة',
+        links: [
+          { label: 'مذكرات الذكاء' },
+          { label: 'تسجيل الدخول' },
+          { label: 'الخصوصية' },
+          { label: 'شروط الخدمة' },
+          { label: 'معالجة البيانات' },
+          { label: 'الأمان' },
+        ],
+      },
+    ],
   },
 
   /* --- Readout anatomy -------------------------------------------------- */
