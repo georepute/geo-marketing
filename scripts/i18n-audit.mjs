@@ -51,6 +51,9 @@ if (!url || (againstAt !== -1 && !baseline)) {
    audit to those words appearing alone — "Search" and "Analytics" are both
    ordinary translatable words elsewhere on the site. */
 const PHRASES = [
+  /* The demonstration domain, which the app shell prints beside the locale's
+     own market name — "northwindsupply.com · ארצות הברית". */
+  'northwindsupply.com',
   'Search Console',
   'Google Analytics',
   'Google Ads',

@@ -882,6 +882,42 @@ export const content: ContentOverlay = {
   'Leads to': 'מוביל אל',
 
   /* ==========================================================================
+     THE PLATFORM PAGES — /app/*.
+
+     Mostly seed prose reaching the screen through translateContent, plus the
+     chrome each view wraps in t(). Signal names and readout titles are shared
+     with the marketing pages and live in the seed section further down.
+     ======================================================================= */
+
+  /* --- Strategic Action Center --------------------------------------------- */
+  'Strategic Action Center': 'מרכז הפעולה האסטרטגי',
+  'Prioritised interventions with owner, deadline, expected movement and how impact is verified after execution.':
+    'התערבויות מתועדפות עם אחראי, תאריך יעד, תזוזה צפויה והאופן שבו ההשפעה מאומתת לאחר הביצוע.',
+  '{n}-day': '{n} ימים',
+  'Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.':
+    'כל התערבות מציינת אחראי, תאריך יעד, את האות שעליה להזיז ואת האופן שבו התזוזה תאומת.',
+  Interventions: 'התערבויות',
+  Measured: 'נמדד',
+  'Verified after execution': 'מאומת לאחר הביצוע',
+  View: 'תצוגה',
+  'Priority queue': 'תור עדיפויות',
+  '30/60/90 roadmap': 'מפת דרכים 30/60/90',
+  'day horizon': 'אופק ימים',
+  'Ranked by urgency, then by effort — cheapest decisive move first':
+    'מדורג לפי דחיפות, ואז לפי מאמץ — המהלך המכריע הזול ביותר תחילה',
+  'Priority {n}': 'עדיפות {n}',
+  /* 'Success metric' and 'Measured change' already have entries in the seed
+     section below. */
+  'Not yet measured — verified after execution.':
+    'טרם נמדד — מאומת לאחר הביצוע.',
+  'View evidence': 'הציגו ראיות',
+  'How impact is verified': 'כיצד מאומתת ההשפעה',
+  'Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.':
+    'השלמה אינה השפעה. כל פעולה מאומתת באמצעות רצפייה חוזרת של האות שאליו כוונה, באותם מנועים ואותן שאלות, לאחר הביצוע. עד שהרצפייה החוזרת מתבצעת, השינוי הנמדד נותר ריק במקום שיונח.',
+  'Back to Mission Control': 'חזרה למרכז הבקרה',
+  'Read the methodology': 'קראו את המתודולוגיה',
+
+  /* ==========================================================================
      THE HOW-IT-WORKS PAGE.
 
      Almost all of it comes from the `loop` dictionary block. What lands here

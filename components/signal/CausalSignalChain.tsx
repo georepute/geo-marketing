@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { ChainLink } from '@/lib/api/types'
 
@@ -153,6 +154,7 @@ function ChainBody({
   showRationale: boolean
   onSelect?: (link: ChainLink) => void
 }) {
+  const t = useT()
   const isPrescription = link.kind === 'prescription'
 
   const inner = (
@@ -202,7 +204,7 @@ function ChainBody({
     >
       {inner}
       <span className="inline-flex items-center gap-2 mt-3 text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors">
-        View evidence
+        {t('View evidence')}
         <span aria-hidden className="gr-arrow">→</span>
       </span>
     </button>

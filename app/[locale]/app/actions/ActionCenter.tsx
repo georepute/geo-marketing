@@ -7,7 +7,8 @@ import { ActionCard } from '@/components/action/ActionCard'
 import { ReadoutDrawer } from '@/components/readout/ReadoutDrawer'
 import { useRoleLens } from '@/components/readout/RoleLens'
 import { Button } from '@/components/ui/Button'
-import { useDict } from '@/lib/i18n/context'
+import { useDict, useI18n } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { count, dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Action, OrgSummary, Readout } from '@/lib/api/types'
@@ -40,6 +41,8 @@ export function ActionCenter({
   readouts: Readout[]
 }) {
   const copy = useDict()
+  const t = useT()
+  const { intl } = useI18n()
   const { role, setRole } = useRoleLens('operator')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [view, setView] = useState<View>('priority')
@@ -67,24 +70,23 @@ export function ActionCenter({
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="min-w-0">
             <p className="text-label uppercase text-ink-3">
-              Strategic Action Center
+              {t('Strategic Action Center')}
             </p>
             <h1 className="text-h1 md:text-display-2 text-ink mt-3 text-balance max-w-2xl">
               {copy.action}
             </h1>
             <p className="text-body text-ink-2 mt-4 max-w-2xl">
-              Each intervention names an owner, a deadline, the signal it should
-              move and how that movement will be verified.
+              {t('Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.')}
             </p>
           </div>
 
           <dl className="flex flex-wrap gap-x-9 gap-y-4">
-            <Stat label="Interventions" value={count(actions.length)} />
-            <Stat label="Immediate" value={count(immediate)} tone="critical" />
+            <Stat label={t('Interventions')} value={count(actions.length)} />
+            <Stat label={t('Immediate')} value={count(immediate)} tone="critical" />
             <Stat
-              label="Measured"
-              value={`${measured} of ${actions.length}`}
-              note="Verified after execution"
+              label={t('Measured')}
+              value={t('{n} of {total}', { n: measured, total: actions.length })}
+              note={t('Verified after execution')}
             />
           </dl>
         </div>
@@ -92,13 +94,13 @@ export function ActionCenter({
         {/* --- View switch -------------------------------------------- */}
         <div
           role="radiogroup"
-          aria-label="View"
+          aria-label={t('View')}
           className="inline-flex rounded-sm border border-line bg-inset p-1 mt-8"
         >
           {(
             [
-              ['priority', 'Priority queue'],
-              ['roadmap', '30/60/90 roadmap'],
+              ['priority', t('Priority queue')],
+              ['roadmap', t('30/60/90 roadmap')],
             ] as const
           ).map(([id, label]) => (
             <button
@@ -125,7 +127,7 @@ export function ActionCenter({
       {view === 'priority' ? (
         <section className="gr-rail-wide gr-section-tight gr-hairline">
           <p className="text-label uppercase text-ink-3 mb-6">
-            Ranked by urgency, then by effort — cheapest decisive move first
+            {t('Ranked by urgency, then by effort — cheapest decisive move first')}
           </p>
           <div className="grid gap-4">
             {prioritised.map((action, i) => (
@@ -154,7 +156,7 @@ export function ActionCenter({
                       {horizon}
                     </span>
                     <span className="text-label uppercase text-ink-3">
-                      day horizon
+                      {t('day horizon')}
                     </span>
                     <span
                       className="text-label uppercase text-ink-3 ms-auto"
@@ -187,7 +189,7 @@ export function ActionCenter({
                             {action.expectedImpact}
                           </p>
                           <p className="text-caption text-ink-3 mt-2">
-                            {action.owner} · {dateFull(action.deadline)}
+                            {action.owner} · {dateFull(action.deadline, intl)}
                           </p>
                         </button>
                       ))
@@ -204,20 +206,17 @@ export function ActionCenter({
       <section className="gr-rail-wide gr-section-tight">
         <div className="rounded-md border border-line bg-panel p-6 max-w-3xl">
           <p className="text-label uppercase text-ink-3">
-            How impact is verified
+            {t('How impact is verified')}
           </p>
           <p className="text-body text-ink-2 mt-3">
-            Completion is not impact. Each action is verified by re-observing
-            the signal it targets, across the same engines and questions, after
-            execution. Until that re-observation happens, measured change stays
-            empty rather than assumed.
+            {t('Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.')}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild variant="secondary">
-              <Link href="/app/mission-control">Back to Mission Control</Link>
+              <Link href="/app/mission-control">{t('Back to Mission Control')}</Link>
             </Button>
             <Button asChild variant="ghost">
-              <Link href="/methodology">Read the methodology</Link>
+              <Link href="/methodology">{t('Read the methodology')}</Link>
             </Button>
           </div>
         </div>

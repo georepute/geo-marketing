@@ -4,7 +4,7 @@ import { Link } from '@/components/i18n/Link'
 import { usePathname } from 'next/navigation'
 import { Wordmark } from './Wordmark'
 import { RoleLensControl, type Role } from '@/components/readout/RoleLens'
-import { useDict } from '@/lib/i18n/context'
+import { useDict, useI18n } from '@/lib/i18n/context'
 import { stripLocale } from '@/lib/i18n/config'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
@@ -147,6 +147,7 @@ export function AppShell({
  */
 function ObservationStatus({ asOf }: { asOf: string }) {
   const dict = useDict()
+  const { intl } = useI18n()
   return (
     <span className="hidden sm:flex items-center gap-2 whitespace-nowrap">
       <span
@@ -159,7 +160,7 @@ function ObservationStatus({ asOf }: { asOf: string }) {
       />
       <span className="text-label uppercase text-ink-3">
         {dict.appNav.observed}{' '}
-        <span className="text-ink-2">{dateFull(asOf)}</span>
+        <span className="text-ink-2">{dateFull(asOf, intl)}</span>
       </span>
     </span>
   )

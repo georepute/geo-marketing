@@ -16,6 +16,7 @@ import type {
   OrgSummary,
 } from '@/lib/api/types'
 import type { Narrative, Polarity } from '@/lib/seed/narrative'
+import { useT } from '@/lib/i18n/content/client'
 
 /* ============================================================================
    PUBLIC NARRATIVE INTELLIGENCE.
@@ -60,6 +61,7 @@ export function NarrativeView({
   intel: NarrativeIntelligence
   election: ElectionIntelligence
 }) {
+  const t = useT()
   const { role, setRole } = useRoleLens('executive')
   const [electionMode, setElectionMode] = useState(false)
 
@@ -90,35 +92,35 @@ export function NarrativeView({
         {/* --- Position ---------------------------------------------- */}
         <dl className="grid gap-px bg-line border border-line rounded-md overflow-hidden mt-8 sm:grid-cols-2 xl:grid-cols-3">
           <Headline
-            label="Narrative health"
+            label={t('Narrative health')}
             value={`${intel.healthScore}/100`}
-            note="A weighted read of how much active conversation helps against how much hurts."
+            note={t('A weighted read of how much active conversation helps against how much hurts.')}
             tone={intel.healthScore < 50 ? 'critical' : 'neutral'}
           />
           <Headline
-            label="Narrative stability"
+            label={t('Narrative stability')}
             value={intel.stability.label}
             note={intel.stability.meaning}
           />
           <Headline
-            label="Narrative momentum"
+            label={t('Narrative momentum')}
             value={intel.momentum.label}
             note={intel.momentum.meaning}
             tone={intel.momentum.label === 'Deteriorating' ? 'critical' : 'neutral'}
           />
           <Headline
-            label="Narrative risk"
+            label={t('Narrative risk')}
             value={intel.risk.label}
             note={intel.risk.meaning}
             tone="critical"
           />
           <Headline
-            label="Overall public sentiment"
+            label={t('Overall public sentiment')}
             value={intel.sentiment.label}
             note={intel.sentiment.meaning}
           />
           <Headline
-            label="Executive recommendation"
+            label={t('Executive recommendation')}
             value={intel.verdictLabel}
             note={intel.verdict.statement}
             tone="accent"
@@ -141,8 +143,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight">
         <SectionHead
           eyebrow="Health"
-          title="How much of the conversation works for us"
-          note="Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth."
+          title={t('How much of the conversation works for us')}
+          note={t('Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.')}
         />
 
         <dl className="grid gap-px bg-line border border-line rounded-md overflow-hidden sm:grid-cols-2 xl:grid-cols-5">
@@ -165,8 +167,8 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="AI narrative"
-          title="What each engine currently says this business is"
+          eyebrow={t('AI narrative')}
+          title={t('What each engine currently says this business is')}
           note={intel.divergence.summary}
         />
 
@@ -211,8 +213,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Landscape"
-          title="Every active narrative in this category"
-          note="Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed."
+          title={t('Every active narrative in this category')}
+          note={t('Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.')}
         />
 
         <ul className="grid gap-3">
@@ -230,8 +232,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Ownership"
-          title="Who owns the story"
-          note="Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender."
+          title={t('Who owns the story')}
+          note={t('Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.')}
         />
 
         {/* Owning a narrative and benefiting from it are different things. On
@@ -325,8 +327,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Competitors"
-          title="The story each competitor is telling"
-          note="Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank."
+          title={t('The story each competitor is telling')}
+          note={t('Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.')}
         />
 
         <ul className="grid gap-4 xl:grid-cols-2">
@@ -346,7 +348,7 @@ export function NarrativeView({
               <dl className="grid gap-4 mt-5 pt-5 border-t border-line sm:grid-cols-2">
                 <Facet label="Strength" body={c.strength} />
                 <Facet label="Weakness" body={c.weakness} />
-                <Facet label="Overlap with us" body={c.overlap} />
+                <Facet label={t('Overlap with us')} body={c.overlap} />
                 <Facet
                   label="Opportunity"
                   body={c.opportunity}
@@ -364,7 +366,7 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Media"
-          title="What publications are actually writing about"
+          title={t('What publications are actually writing about')}
           note={intel.mediaMomentum.summary}
         />
 
@@ -395,18 +397,18 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Questions"
-          title="What the market actually wants to know"
-          note="The real question corpus, partitioned by what a buyer is trying to decide when they ask it."
+          title={t('What the market actually wants to know')}
+          note={t('The real question corpus, partitioned by what a buyer is trying to decide when they ask it.')}
         />
 
         <div className="grid gap-4 xl:grid-cols-2">
           <QuestionColumn
-            title="Public questions"
+            title={t('Public questions')}
             groups={intel.publicQuestions}
             misconceptions={intel.misconceptions}
           />
           <QuestionColumn
-            title="AI buying questions"
+            title={t('AI buying questions')}
             groups={intel.buyingQuestions}
           />
         </div>
@@ -418,8 +420,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Opportunity"
-          title="Stories nobody owns"
-          note="Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category."
+          title={t('Stories nobody owns')}
+          note={t('Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.')}
         />
 
         <ul className="grid gap-3">
@@ -457,8 +459,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Risk"
-          title="Threats before they become the default"
-          note="An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists."
+          title={t('Threats before they become the default')}
+          note={t('An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.')}
         />
 
         <ul className="grid gap-3">
@@ -514,8 +516,8 @@ export function NarrativeView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Intervention"
-          title="Narrative action plan"
-          note="Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified."
+          title={t('Narrative action plan')}
+          note={t('Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.')}
         />
 
         <ol className="grid gap-3">
@@ -601,15 +603,13 @@ export function NarrativeView({
 
           <div className="flex flex-wrap gap-3 mt-9">
             <Button asChild variant="primary" size="lg">
-              <Link href="/app/actions">Open narrative action plan</Link>
+              <Link href="/app/actions">{t('Open narrative action plan')}</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="/app/campaign-readiness">
-                Check readiness before campaigning
-              </Link>
+              <Link href="/app/campaign-readiness">{t('Check readiness before campaigning')}</Link>
             </Button>
             <Button asChild variant="ghost" size="lg">
-              <Link href="/app/mission-control">Monitor narrative changes</Link>
+              <Link href="/app/mission-control">{t('Monitor narrative changes')}</Link>
             </Button>
           </div>
         </div>
@@ -721,6 +721,7 @@ function Headline({
 }
 
 function NarrativeRow({ narrative: n }: { narrative: Narrative }) {
+  const t = useT()
   const ownerLabel =
     n.owner === 'unclaimed'
       ? 'Unclaimed'
@@ -747,7 +748,7 @@ function NarrativeRow({ narrative: n }: { narrative: Narrative }) {
               style={{ background: POLARITY_TOKEN[n.polarity] }}
             />
             <span className="text-label uppercase text-ink-3">
-              {POLARITY_LABEL[n.polarity]} · {n.momentum}
+              {t(POLARITY_LABEL[n.polarity])} · {n.momentum}
             </span>
           </div>
           <p className="text-body-lg text-ink mt-3">“{n.statement}”</p>

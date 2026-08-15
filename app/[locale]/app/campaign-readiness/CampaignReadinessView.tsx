@@ -16,6 +16,7 @@ import { useRoleLens } from '@/components/readout/RoleLens'
 import { count, dateFull, percentWhole } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Action, CampaignReadiness, OrgSummary } from '@/lib/api/types'
+import { useT } from '@/lib/i18n/content/client'
 
 /* ============================================================================
    CAMPAIGN READINESS INTELLIGENCE.
@@ -44,6 +45,7 @@ export function CampaignReadinessView({
   asOf: string
   readiness: CampaignReadiness
 }) {
+  const t = useT()
   const { role, setRole } = useRoleLens('executive')
   const {
     campaign,
@@ -183,17 +185,17 @@ export function CampaignReadinessView({
           {/* Summary row */}
           <dl className="grid gap-px bg-line border-t border-line sm:grid-cols-2 xl:grid-cols-4">
             <Summary
-              label="Primary constraint"
+              label={t('Primary constraint')}
               value={constraint.label}
               note={`${constraint.score} of 100 · ${Math.round(constraint.weight * 100)}% of the index`}
             />
             <Summary
-              label="Strategic window"
+              label={t('Strategic window')}
               value={`${timing.windowMonths} months`}
               note={`Advantage holds until ${dateFull(timing.decisionDeadline)}.`}
             />
             <Summary
-              label="Decision journey gaps"
+              label={t('Decision journey gaps')}
               value={`${missingStages.length} of ${journey.length}`}
               note={
                 missingStages.length > 0
@@ -202,9 +204,9 @@ export function CampaignReadinessView({
               }
             />
             <Summary
-              label="Assessment confidence"
+              label={t('Assessment confidence')}
               value={confidence === 'high' ? 'High' : 'Medium'}
-              note="Six of seven dimensions rest on directly observed data."
+              note={t('Six of seven dimensions rest on directly observed data.')}
             />
           </dl>
 
@@ -224,8 +226,8 @@ export function CampaignReadinessView({
       <section className="gr-rail-wide gr-section-tight">
         <SectionHead
           eyebrow="Assessment"
-          title="Seven readiness dimensions, weighted into one index"
-          note="Every score is computed from observed data rather than assigned. The weights are published and sum to one."
+          title={t('Seven readiness dimensions, weighted into one index')}
+          note={t('Every score is computed from observed data rather than assigned. The weights are published and sum to one.')}
         />
 
         {/* At-a-glance strip, so the shape of the problem is visible before
@@ -267,8 +269,8 @@ export function CampaignReadinessView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Coverage"
-          title="Where the campaign would reach buyers, and where it would not"
-          note="A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present."
+          title={t('Where the campaign would reach buyers, and where it would not')}
+          note={t('A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.')}
         />
 
         <ol className="grid gap-px bg-line border border-line rounded-md overflow-hidden md:grid-cols-5">
@@ -329,9 +331,9 @@ export function CampaignReadinessView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Commercial risk"
-          title="What launching today would cost"
-          note="Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage."
+          eyebrow={t('Commercial risk')}
+          title={t('What launching today would cost')}
+          note={t("Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage.")}
         />
 
         <dl className="grid gap-px bg-line border border-line rounded-md overflow-hidden sm:grid-cols-2 xl:grid-cols-4">
@@ -366,11 +368,11 @@ export function CampaignReadinessView({
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
           eyebrow="Intervention"
-          title="Required before launch"
-          note="Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that."
+          title={t('Required before launch')}
+          note={t('Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.')}
           action={
             <Button asChild variant="secondary" size="sm">
-              <Link href="/app/actions">Open Action Center</Link>
+              <Link href="/app/actions">{t('Open Action Center')}</Link>
             </Button>
           }
         />
@@ -418,18 +420,18 @@ export function CampaignReadinessView({
             {/* The primary route follows the verdict, not the sales interest. */}
             {cleared ? (
               <Button asChild variant="primary" size="lg">
-                <Link href="/app/actions">Launch campaign</Link>
+                <Link href="/app/actions">{t('Launch campaign')}</Link>
               </Button>
             ) : (
               <Button asChild variant="primary" size="lg">
-                <Link href="/app/actions">Fix readiness first</Link>
+                <Link href="/app/actions">{t('Fix readiness first')}</Link>
               </Button>
             )}
             <Button asChild variant="secondary" size="lg">
-              <Link href="/app/actions">Open Executive Action Plan</Link>
+              <Link href="/app/actions">{t('Open Executive Action Plan')}</Link>
             </Button>
             <Button asChild variant="ghost" size="lg">
-              <Link href="/app/mission-control">Review the full position</Link>
+              <Link href="/app/mission-control">{t('Review the full position')}</Link>
             </Button>
           </div>
 

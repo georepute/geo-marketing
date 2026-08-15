@@ -12,6 +12,7 @@ import { useRoleLens } from '@/components/readout/RoleLens'
 import { ScoreMeter } from '@/components/signal/Indicators'
 import { Button } from '@/components/ui/Button'
 import { useDict } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type {
   Action,
@@ -52,6 +53,7 @@ export function MissionControl({
   actions: Action[]
 }) {
   const copy = useDict()
+  const t = useT()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [activeLink, setActiveLink] = useState<string | null>(null)
@@ -189,7 +191,7 @@ export function MissionControl({
           note="Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified."
           action={
             <Button asChild variant="secondary" size="sm">
-              <Link href="/app/actions">Open Action Center</Link>
+              <Link href="/app/actions">{t('Open Action Center')}</Link>
             </Button>
           }
         />
@@ -207,10 +209,10 @@ export function MissionControl({
 
         <div className="mt-5 flex flex-wrap gap-3">
           <Button asChild variant="primary">
-            <Link href="/app/reconstruct">Reconstruct the decision</Link>
+            <Link href="/app/reconstruct">{t('Reconstruct the decision')}</Link>
           </Button>
           <Button asChild variant="secondary">
-            <Link href="/engines">Explore intelligence engines</Link>
+            <Link href="/engines">{t('Explore intelligence engines')}</Link>
           </Button>
         </div>
       </section>

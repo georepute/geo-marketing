@@ -24,6 +24,7 @@ import type {
   Reconstruction,
 } from '@/lib/api/types'
 import type { EngineStatus } from '@/lib/seed/reconstruction'
+import { useT } from '@/lib/i18n/content/client'
 
 /* ============================================================================
    DECISION RECONSTRUCTION — brief §3.1. Hero experience 2.
@@ -68,6 +69,7 @@ export function Reconstruct({
   readouts: Readout[]
   fetchReconstruction: (promptId: string) => Promise<Reconstruction | null>
 }) {
+  const t = useT()
   const copy = useDict()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
@@ -193,7 +195,7 @@ export function Reconstruct({
 
         <div className={cn(running && 'hidden')}>
         {/* --- 1 ------------------------------------------------------- */}
-        <Stage n={1} title="What each AI engine understood about the business">
+        <Stage n={1} title={t('What each AI engine understood about the business')}>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {data.engines.map((engine) => (
               <div
@@ -211,7 +213,7 @@ export function Reconstruct({
                     className="text-label uppercase"
                     style={{ color: STATUS_TOKEN[engine.status] }}
                   >
-                    {STATUS_LABEL[engine.status]}
+                    {t(STATUS_LABEL[engine.status])}
                   </span>
                 </div>
                 <p className="text-caption text-ink-2 mt-3">
@@ -236,7 +238,7 @@ export function Reconstruct({
         {/* --- 2 ------------------------------------------------------- */}
         <Stage
           n={2}
-          title="Whether the brand was recognised, mentioned, cited, recommended or ignored"
+          title={t('Whether the brand was recognised, mentioned, cited, recommended or ignored')}
         >
           <div className="rounded-md border border-line bg-panel p-6">
             <p className="text-display-2 text-ink" data-numeric="">
@@ -253,7 +255,7 @@ export function Reconstruct({
         </Stage>
 
         {/* --- 3 ------------------------------------------------------- */}
-        <Stage n={3} title="Which competitor was selected instead">
+        <Stage n={3} title={t('Which competitor was selected instead')}>
           <div className="rounded-md border border-line bg-panel p-6">
             <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
               <span className="text-h2 text-ink">{data.winner.name}</span>
@@ -280,7 +282,7 @@ export function Reconstruct({
         {/* --- 4 ------------------------------------------------------- */}
         <Stage
           n={4}
-          title="Which sources, trust signals and narratives influenced the answer"
+          title={t('Which sources, trust signals and narratives influenced the answer')}
         >
           <div className="rounded-md border border-line bg-panel overflow-hidden">
             <table className="w-full">
@@ -330,7 +332,7 @@ export function Reconstruct({
         {/* --- 5 ------------------------------------------------------- */}
         <Stage
           n={5}
-          title="What Google demand, organic position and paid click cost indicate"
+          title={t('What Google demand, organic position and paid click cost indicate')}
         >
           {data.search ? (
             <div className="rounded-md border border-line bg-panel p-6">
@@ -341,7 +343,7 @@ export function Reconstruct({
 
               <dl className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 mt-6">
                 <Metric
-                  label="Google position"
+                  label={t('Google position')}
                   value={
                     data.search.position === null
                       ? 'Not in top 100'
@@ -349,12 +351,12 @@ export function Reconstruct({
                   }
                 />
                 <Metric
-                  label="Monthly volume"
+                  label={t('Monthly volume')}
                   value={count(data.search.monthlyVolume)}
                 />
-                <Metric label="Paid CPC" value={observedCost(data.search.cpc)} />
+                <Metric label={t('Paid CPC')} value={observedCost(data.search.cpc)} />
                 <Metric
-                  label="AI presence"
+                  label={t('AI presence')}
                   value={data.search.aiPresence ? 'Present' : 'Absent'}
                   tone={data.search.aiPresence ? 'positive' : 'critical'}
                 />
@@ -391,7 +393,7 @@ export function Reconstruct({
         {/* --- 6 ------------------------------------------------------- */}
         <Stage
           n={6}
-          title="Where the question sits in the customer decision journey"
+          title={t('Where the question sits in the customer decision journey')}
         >
           <div className="rounded-md border border-line bg-panel p-6">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
@@ -405,16 +407,16 @@ export function Reconstruct({
 
             <dl className="grid gap-5 sm:grid-cols-3 mt-6">
               <Metric
-                label="Coverage at this stage"
+                label={t('Coverage at this stage')}
                 value={percentWhole(data.journey.stageCoveragePct)}
                 tone="critical"
               />
               <Metric
-                label="Share of query volume"
+                label={t('Share of query volume')}
                 value={percent(data.journey.stageVolumeSharePct)}
               />
               <Metric
-                label="Share of revenue decided"
+                label={t('Share of revenue decided')}
                 value={
                   data.journey.revenueSharePct
                     ? percentWhole(data.journey.revenueSharePct)
@@ -444,21 +446,21 @@ export function Reconstruct({
         {/* --- 7 ------------------------------------------------------- */}
         <Stage
           n={7}
-          title="What timing, market maturity and competitive density indicate"
+          title={t('What timing, market maturity and competitive density indicate')}
         >
           <div className="rounded-md border border-line bg-panel p-6">
             <dl className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <Metric label="Market position" value={data.timing.positionLabel} />
+              <Metric label={t('Market position')} value={data.timing.positionLabel} />
               <Metric
-                label="Window remaining"
+                label={t('Window remaining')}
                 value={`${data.timing.windowMonths} months`}
               />
               <Metric
-                label="Market readiness"
+                label={t('Market readiness')}
                 value={`${data.timing.marketReadiness}/100`}
               />
               <Metric
-                label="Decision deadline"
+                label={t('Decision deadline')}
                 value={dateFull(data.timing.decisionDeadline)}
               />
             </dl>
@@ -478,7 +480,7 @@ export function Reconstruct({
         </Stage>
 
         {/* --- 8 ------------------------------------------------------- */}
-        <Stage n={8} title="What the directional commercial exposure may be">
+        <Stage n={8} title={t('What the directional commercial exposure may be')}>
           <div className="rounded-md border border-line bg-panel p-6">
             <ExposureRange exposure={data.exposure} size="lg" />
             <p className="text-caption text-ink-2 mt-5 max-w-prose">
@@ -490,7 +492,7 @@ export function Reconstruct({
         </Stage>
 
         {/* --- 9 ------------------------------------------------------- */}
-        <Stage n={9} title="Which connected signals explain the outcome">
+        <Stage n={9} title={t('Which connected signals explain the outcome')}>
           <div className="grid gap-3 sm:grid-cols-2">
             {data.connected.map((signal) => (
               <button
@@ -530,7 +532,7 @@ export function Reconstruct({
         {/* --- 10 ------------------------------------------------------ */}
         <Stage
           n={10}
-          title="What action is prescribed and how improvement will be measured"
+          title={t('What action is prescribed and how improvement will be measured')}
           last
         >
           <ActionCard
@@ -548,10 +550,10 @@ export function Reconstruct({
 
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild variant="primary">
-              <Link href="/app/mission-control">Open Mission Control</Link>
+              <Link href="/app/mission-control">{t('Open Mission Control')}</Link>
             </Button>
             <Button asChild variant="secondary">
-              <Link href="/marketplace">Buy this as an intelligence product</Link>
+              <Link href="/marketplace">{t('Buy this as an intelligence product')}</Link>
             </Button>
           </div>
         </Stage>
