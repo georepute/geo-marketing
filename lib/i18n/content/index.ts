@@ -32,19 +32,41 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from '../config'
 
 export type ContentOverlay = Readonly<Record<string, string>>
 
-const OVERLAYS: Record<Exclude<Locale, 'en'>, () => Promise<{ content: ContentOverlay }>> = {
-  he: () => import('./he'),
-  ar: () => import('./ar'),
-  ru: () => import('./ru'),
-  fr: () => import('./fr'),
-  es: () => import('./es'),
-  pt: () => import('./pt'),
+/* STATIC IMPORTS, DELIBERATELY.
+ *
+ * These were lazy — `he: () => import('./he')` — which is the obvious shape
+ * for a per-locale resource. It cost three separate false readings: `next
+ * dev` does not reliably invalidate a dynamically imported module, so an
+ * overlay edited mid-session keeps serving its previous contents. The page
+ * then shows English for the keys you just added while every older key
+ * translates perfectly, which reads exactly like a bug in the lookup.
+ *
+ * Loading all six up front costs a few hundred kilobytes of strings in the
+ * SERVER process only — this module is never in the client graph, because
+ * the client provider takes the resolved overlay as a prop and imports only
+ * the *type* from here. That is a price worth paying to make what the page
+ * shows always match what the file says.
+ */
+import { content as he } from './he'
+import { content as ar } from './ar'
+import { content as ru } from './ru'
+import { content as fr } from './fr'
+import { content as es } from './es'
+import { content as pt } from './pt'
+
+const OVERLAYS: Record<Exclude<Locale, 'en'>, ContentOverlay> = {
+  he,
+  ar,
+  ru,
+  fr,
+  es,
+  pt,
 }
 
+/** Async purely to keep the call sites unchanged; nothing here awaits. */
 export async function contentFor(locale: string): Promise<ContentOverlay> {
   if (!isLocale(locale) || locale === DEFAULT_LOCALE) return {}
-  const { content } = await OVERLAYS[locale]()
-  return content
+  return OVERLAYS[locale]
 }
 
 /**
