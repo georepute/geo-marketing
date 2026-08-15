@@ -43,26 +43,34 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**Hebrew and Arabic home pages: complete.** Measured by rendering the page and
-reading back every English segment. Both sit at 1, and the one remaining is the
-ISO code the compact language switcher shows instead of the endonym on narrow
-screens — a chip, not prose.
+**All six home pages are complete** — he, ar, ru, fr, es, pt.
 
-Arabic took a fraction of Hebrew's effort, and the reason is worth carrying:
-**no component changed.** Every string that needed wrapping was wrapped for
-Hebrew, so the second locale was a translation job rather than an engineering
-one. Expect ru / fr / es / pt to behave the same way.
+| Locale | Measure | Remaining |
+| --- | --- | --- |
+| he · ar · ru | script mode | 1 each (the ISO code chip) |
+| fr | diff mode | 16 cognates |
+| es · pt | diff mode | 1 each (`Visible`, `Volume`) |
+
+**Read §3 on the two audit modes before trusting any of those numbers.** The
+Latin-script locales cannot be measured the same way as the others, and the
+default mode says a perfectly translated French page is 100% English.
+
+Only the first locale cost real engineering. **No component changed for any
+locale after Hebrew** — every string that needed wrapping was wrapped once, so
+the rest were translation jobs.
 
 **Everything else is untranslated.** To be precise about what that means:
 
 - The **UI dictionaries** (`lib/i18n/dictionaries/*.ts`) are machine-translated
   into all six languages at ~98% coverage. Every one is marked
   `reviewed: false`. **None has been read by a native speaker.**
-- The **content overlay** (`lib/i18n/content/*.ts`) — seed prose and inline
-  component prose — exists for Hebrew (575 entries) and Arabic (581).
-  `ru.ts`, `fr.ts`, `es.ts`, `pt.ts` are empty stubs.
-- Hebrew and Arabic are done **for the home page only**. Other routes will show
-  English wherever they use prose the home page did not.
+- The **content overlays** (`lib/i18n/content/*.ts`) — seed prose and inline
+  component prose — now exist for all six, ~580 entries each.
+- All six are done **for the home page only**. Other routes will show English
+  wherever they use prose the home page did not.
+- `pt` is **European Portuguese**. pt-BR would be a new locale entry, not an
+  edit to `pt.ts`; the vocabularies diverge too often for one file to serve
+  both honestly.
 
 Two commands give the current gap in any locale:
 
@@ -148,7 +156,29 @@ names** — pass `intl` as you translate each one.
 
 ## 3. Verification that actually works
 
-Three separate false readings cost hours in this session. Do not repeat them.
+Four separate false readings cost hours across these sessions. Do not repeat
+them.
+
+**The audit has two modes, and picking the wrong one invalidates the result.**
+
+```bash
+# Non-Latin script — he, ar, ru. Finds runs of Latin letters.
+node scripts/i18n-audit.mjs http://localhost:3000/he
+
+# Latin script — fr, es, pt. Compares against the English render and reports
+# only the segments that are byte-identical.
+node scripts/i18n-audit.mjs http://localhost:3000/fr \
+  --against http://localhost:3000/en
+```
+
+Script mode on a French page reports every sentence as English, because French
+*is* Latin script. It scored a finished French home page at 508 segments —
+the same as English. Diff mode has the opposite blind spot: it cannot tell a
+correct identical translation (`Visible`, `Volume`, `Action`) from an absent
+one, so its residue always needs reading by eye rather than trusting the count.
+
+Neither mode is the truth on its own. **Spot-check actual prose** in the target
+language before declaring a locale done.
 
 **`pkill` does not exist in this shell.** It fails silently, the old server
 survives, and every subsequent measurement reads a stale build. Kill by port:
@@ -176,16 +206,20 @@ on a non-200 or a page under 20 KB. Trust the exit code.
 # 1. kill anything on the port (above), then start ONE server
 npx next dev -p 3000
 
-# 2. what does the page still show in English?
+# 2. what does the page still show in English? (mode per §3 above)
 node scripts/i18n-audit.mjs http://localhost:3000/he
+node scripts/i18n-audit.mjs http://localhost:3000/fr --against http://localhost:3000/en
 
 # 3. what does the code ask for that the overlay lacks?
 node scripts/i18n-keys.mjs he
 
-# 4. write translations, restart the server, re-audit
+# 4. what does a finished locale cover that this one does not?
+node scripts/i18n-port.mjs he fr
+
+# 5. write translations, restart the server, re-audit
 ```
 
-Step 2 is the measure of done. Step 3 only tells you what to write.
+Step 2 is the measure of done. Steps 3 and 4 only tell you what to write.
 
 **Restart the server after editing a `lib/i18n/content/*.ts` file.** Those are
 loaded through a dynamic `import()`; HMR does not reliably invalidate them, and
@@ -199,25 +233,30 @@ npm run typecheck && npm run lint && npm test && npm run build
 
 Currently: typecheck ✓ · lint ✓ · **222 tests** ✓ · build ✓ (**298 pages**).
 
+Two notes on running that gate. `next build` and a running `next dev` both own
+`.next`, so a build started while a dev server is up gets clobbered and
+`next start` then dies on a missing `prerender-manifest.json` — stop the dev
+server first. And `vitest` alongside a dev server can OOM with
+`ERR_IPC_CHANNEL_CLOSED`; that is memory pressure, not a failing test. Re-run
+it on its own before believing it.
+
 ---
 
 ## 4. What to do next
 
 In order. Each is a session's work or less.
 
-1. **ru / fr / es / pt home pages.** LTR, so purely translation volume. For
-   each: add the `footer` block and the three `exec` labels to
-   `lib/i18n/dictionaries/<locale>.ts` — both were missing in Hebrew *and*
-   Arabic, so assume they are missing in all four — then
-   `node scripts/i18n-port.mjs he <locale>`, translate, and audit.
-2. **The other routes, per locale.** `/how-it-works`, `/methodology`,
+1. **The other routes, per locale.** `/how-it-works`, `/methodology`,
    `/marketplace`, `/engines/*`, `/election-intelligence`, `/briefing`,
    `/blog`, `/legal`.
    Expect the same three categories: unwrapped inline prose, seed prose, and
    dictionary blocks that were never written.
-3. **Native review of all six dictionaries and both overlays.** Flip
+2. **Native review of all six dictionaries and all six overlays.** Flip
    `reviewed: false` only when a human has actually read one. This is a launch
-   blocker, not a detail — Hebrew and Arabic are machine-produced.
+   blocker, not a detail — every one of them is machine-produced. Some carry
+   real judgement calls worth a second opinion: Arabic renders "authority" as
+   حُجّية (evidentiary weight) rather than سُلطة (power), and Portuguese is
+   European rather than Brazilian.
 
 ---
 
