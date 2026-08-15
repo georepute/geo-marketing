@@ -882,6 +882,112 @@ export const content: ContentOverlay = {
   'Leads to': 'מוביל אל',
 
   /* ==========================================================================
+     THE METHODOLOGY PAGE.
+
+     Note the evidence sources, model rules and limitations reach t() through
+     a variable rather than a literal, so scripts/i18n-keys.mjs cannot see
+     them. They are listed here by hand; the page audit is what catches a
+     miss.
+     ======================================================================= */
+
+  /* --- Hero ---------------------------------------------------------------- */
+  'The stronger the claim, the stronger the evidence path must be.':
+    'ככל שהטענה חזקה יותר, כך נתיב הראיות חייב להיות חזק יותר.',
+  'Every conclusion in this system can be traced to a date, a source, an engine, a prompt or a connected dataset. This page states how, and where the boundaries are.':
+    'כל מסקנה במערכת הזו ניתנת להתחקות אל תאריך, מקור, מנוע, שאילתה או מאגר נתונים מחובר. העמוד הזה מסביר כיצד, והיכן עוברים הגבולות.',
+  'Methodology version {version} · observed {date}':
+    'גרסת מתודולוגיה {version} · נצפה {date}',
+
+  /* --- GEON ---------------------------------------------------------------- */
+  'The GEON framework': 'מסגרת GEON',
+  'Six vectors, one published weighting': 'שישה וקטורים, שקלול אחד מפורסם',
+  'The Decision Health Index is a weighted function of these six vectors — not a score assigned by judgement. The weighting is published below so the index can be recomputed independently.':
+    'מדד בריאות ההחלטה הוא פונקציה משוקללת של ששת הוקטורים הללו — לא ציון שניתן על סמך שיקול דעת. השקלול מפורסם למטה כדי שניתן יהיה לחשב את המדד מחדש באופן עצמאי.',
+  'Decision Health Index weighting': 'שקלול מדד בריאות ההחלטה',
+  'Yields <b>{score} of 100</b> for the seeded organisation. Authority carries the heaviest weight and the lowest score, which is why it is the binding constraint.':
+    'מניב <b>{score} מתוך 100</b> עבור הארגון המודגם. הסמכות נושאת את המשקל הכבד ביותר ואת הציון הנמוך ביותר, ולכן היא האילוץ הכובל.',
+  'GEON assessment. {readings}. Lowest vector is {lowest}.':
+    'הערכת GEON. {readings}. הוקטור הנמוך ביותר הוא {lowest}.',
+  '{label} {score} of 100': '{label} {score} מתוך 100',
+
+  /* --- Evidence sources ---------------------------------------------------- */
+  'Where the observations come from': 'מהיכן מגיעות התצפיות',
+  'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
+    'סביבה זו עוקבת אחר <b>{questions}</b> שאלות החלטה בשישה מנועי AI, ואחר <b>{keywords}</b> מילות מפתח מסחריות בגוגל.',
+  'Public AI responses': 'תשובות AI פומביות',
+  'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
+    'תשובות שנצפו בשישה מנועים מול מערך שאלות קבוע, מתועדות עם המנוע, התאריך והתשובה המלאה.',
+  'Third-party search and market data': 'נתוני חיפוש ושוק מצד שלישי',
+  'Keyword volume, organic position, competition and cost per click.':
+    'נפח מילות מפתח, מיקום אורגני, תחרות ועלות לקליק.',
+  'Connected first-party analytics': 'אנליטיקה מחוברת מצד ראשון',
+  'Search Console and Analytics, where the customer connects them. Improves confidence; never required.':
+    'Search Console ו-Analytics, כאשר הלקוח מחבר אותם. משפר את רמת הוודאות; לעולם אינו נדרש.',
+  'Public competitor information': 'מידע פומבי על מתחרים',
+  'Published positions, citations and the sources engines reach for when recommending a competitor.':
+    'עמדות מפורסמות, ציטוטים והמקורות שאליהם פונים המנועים כשהם ממליצים על מתחרה.',
+  'Public content, reputation and trust signals':
+    'תוכן פומבי, מוניטין ואותות אמון',
+  'Independent validation, review corpora and cross-source consistency.':
+    'אימות בלתי תלוי, מאגרי ביקורות ועקביות בין מקורות.',
+  'Customer-configured business assumptions': 'הנחות עסקיות שהוגדרו על ידי הלקוח',
+  'Average deal value, conversion rates and revenue split by decision stage. Always labelled as customer-provided.':
+    'שווי עסקה ממוצע, שיעורי המרה ופילוח הכנסות לפי שלב ההחלטה. תמיד מסומן כנתון שסופק על ידי הלקוח.',
+  'Historical GeoRepute scans and action outcomes':
+    'סריקות GeoRepute היסטוריות ותוצאות פעולות',
+  'Prior observations and whether an executed action moved the signal it targeted.':
+    'תצפיות קודמות והאם פעולה שבוצעה הזיזה את האות שאליו כוונה.',
+
+  /* --- Confidence ---------------------------------------------------------- */
+  'Every conclusion carries its own confidence':
+    'לכל מסקנה רמת ודאות משלה',
+  'Confidence is attached to the individual conclusion, not to the product. Two findings in the same readout can carry different confidence, and they frequently do.':
+    'רמת הוודאות מוצמדת למסקנה הבודדת, לא למוצר. שני ממצאים באותה קריאה יכולים לשאת רמות ודאות שונות, וכך קורה לעיתים קרובות.',
+
+  /* --- Financial model ----------------------------------------------------- */
+  'Financial model': 'המודל הפיננסי',
+  'Directional, ranged, and never described as confirmed':
+    'כיווני, בטווחים, ולעולם אינו מתואר כמאומת',
+  'The model': 'המודל',
+  'All values are shown as ranges, never as point estimates.':
+    'כל הערכים מוצגים כטווחים, לעולם לא כהערכות נקודתיות.',
+  'No value is described as confirmed lost revenue.':
+    'אף ערך אינו מתואר כהכנסה אבודה מאומתת.',
+  'Every model exposes its assumptions and data boundaries.':
+    'כל מודל חושף את הנחותיו ואת גבולות הנתונים שלו.',
+  'Connected first-party conversion data improves confidence.':
+    'נתוני המרה מחוברים מצד ראשון משפרים את רמת הוודאות.',
+  'Prediction is withheld when history is insufficient.':
+    'התחזית נמנעת כאשר ההיסטוריה אינה מספקת.',
+  'Every exported brief carries methodology and limitation language.':
+    'כל תדריך מיוצא נושא ניסוח מתודולוגיה ומגבלות.',
+  'Search economics, derived': 'כלכלת החיפוש, נגזרת',
+  'Blended CPC': 'עלות לקליק משוקללת',
+  /* 'Break-even CPC' and 'Above break-even' already have entries in the seed
+     section below. */
+  'Break-even is average order value × gross margin × site conversion. Paid dependency is classified from the ratio of blended CPC to break-even — it is derived, never asserted.':
+    'נקודת האיזון היא שווי הזמנה ממוצע × רווח גולמי × המרה באתר. התלות בתשלום מסווגת לפי היחס בין העלות המשוקללת לקליק לנקודת האיזון — היא נגזרת, ולעולם אינה נטענת.',
+
+  /* --- Limitations --------------------------------------------------------- */
+  Limitations: 'מגבלות',
+  'What this system cannot tell you': 'מה המערכת הזו אינה יכולה לומר לכם',
+  'AI engine answers vary between runs and between users. Observations are point-in-time samples, not guarantees of what any individual buyer sees.':
+    'תשובות מנועי AI משתנות בין הרצות ובין משתמשים. התצפיות הן דגימות בנקודת זמן, לא ערובה למה שקונה מסוים רואה.',
+  'Commercial exposure is a directional model built on customer-configured assumptions. It is useful for prioritisation and is not an audited financial statement.':
+    'החשיפה המסחרית היא מודל כיווני הבנוי על הנחות שהגדיר הלקוח. הוא שימושי לתיעדוף ואינו דוח כספי מבוקר.',
+  'Attribution between an executed action and a signal movement is correlational. The system records both and reports the relationship; it does not claim causation.':
+    'הייחוס בין פעולה שבוצעה לבין תזוזת אות הוא מתאמי. המערכת מתעדת את שניהם ומדווחת על הקשר; היא אינה טוענת לסיבתיות.',
+  'Competitor authority counts reflect sources engines cite publicly. A competitor may hold private advantages this system cannot observe.':
+    'מניין מקורות הסמכות של מתחרים משקף מקורות שהמנועים מצטטים בפומבי. ייתכן שלמתחרה יתרונות פרטיים שהמערכת אינה יכולה לצפות בהם.',
+  'Where history is insufficient, predictive conclusions are withheld rather than estimated.':
+    'כאשר ההיסטוריה אינה מספקת, מסקנות חיזוי נמנעות במקום שיוערכו.',
+  'This demonstration environment': 'סביבת ההדגמה הזו',
+  'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
+    'Northwind Supply היא ארגון בדיוני. הנתונים שלה מבוססי זרע, עקביים פנימית ונגזרים ממערך יחיד של עובדות עוגן — <b>{presence}</b> נוכחות בהמלצות, <b>{coverage}</b> כיסוי בהערכת ספקים, <b>{share}</b> נתח מתחרים. כל מספר אחר באתר הזה מחושב מהם, וחבילת בדיקות מכשילה את הבנייה אם מסך כלשהו סותר אותם.',
+  'Open Mission Control': 'פתחו את מרכז הבקרה',
+  'See the engines': 'צפו במנועים',
+
+  /* ==========================================================================
      SEED PROSE STILL SURFACING ON THE HOME PAGE.
 
      GEON vector definitions, readout evidence, engine questions, the action

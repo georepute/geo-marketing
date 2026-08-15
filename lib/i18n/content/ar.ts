@@ -320,6 +320,111 @@ export const content: ContentOverlay = {
   Evidence: 'الأدلة',
 
   /* ==========================================================================
+     THE METHODOLOGY PAGE.
+
+     The evidence sources, model rules and limitations reach t() through a
+     variable rather than a literal, so scripts/i18n-keys.mjs cannot see them.
+     They are listed here by hand; the page audit is what catches a miss.
+     ======================================================================= */
+
+  /* --- Hero ---------------------------------------------------------------- */
+  'The stronger the claim, the stronger the evidence path must be.':
+    'كلما قويت الدعوى، وجب أن يقوى مسار الأدلة.',
+  'Every conclusion in this system can be traced to a date, a source, an engine, a prompt or a connected dataset. This page states how, and where the boundaries are.':
+    'كل استنتاج في هذا النظام يمكن تتبّعه إلى تاريخ أو مصدر أو محرّك أو استفسار أو مجموعة بيانات موصولة. تشرح هذه الصفحة كيف، وأين تقع الحدود.',
+  'Methodology version {version} · observed {date}':
+    'إصدار المنهجية {version} · رُصد في {date}',
+
+  /* --- GEON ---------------------------------------------------------------- */
+  'The GEON framework': 'إطار GEON',
+  'Six vectors, one published weighting': 'ستة متجهات، ترجيح واحد منشور',
+  'The Decision Health Index is a weighted function of these six vectors — not a score assigned by judgement. The weighting is published below so the index can be recomputed independently.':
+    'مؤشر صحة القرار دالة مرجّحة لهذه المتجهات الستة — لا درجة تُمنح بالتقدير. والترجيح منشور أدناه حتى يمكن إعادة حساب المؤشر باستقلالية.',
+  'Decision Health Index weighting': 'ترجيح مؤشر صحة القرار',
+  'Yields <b>{score} of 100</b> for the seeded organisation. Authority carries the heaviest weight and the lowest score, which is why it is the binding constraint.':
+    'يعطي <b>{score} من 100</b> للمنظمة الموضّحة. وتحمل الحُجّية الوزن الأثقل والدرجة الأدنى، ولهذا فهي القيد الحاكم.',
+  'GEON assessment. {readings}. Lowest vector is {lowest}.':
+    'تقييم GEON. {readings}. المتجه الأدنى هو {lowest}.',
+  '{label} {score} of 100': '{label} {score} من 100',
+
+  /* --- Evidence sources ---------------------------------------------------- */
+  'Where the observations come from': 'من أين تأتي الملاحظات',
+  'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
+    'ترصد هذه البيئة <b>{questions}</b> سؤال قرار عبر ستة محرّكات ذكاء اصطناعي، و<b>{keywords}</b> كلمة مفتاحية تجارية في جوجل.',
+  'Public AI responses': 'استجابات الذكاء الاصطناعي العلنية',
+  'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
+    'إجابات مرصودة من ستة محرّكات مقابل مجموعة أسئلة ثابتة، مسجّلة مع المحرّك والتاريخ والاستجابة الكاملة.',
+  'Third-party search and market data': 'بيانات بحث وسوق من أطراف ثالثة',
+  'Keyword volume, organic position, competition and cost per click.':
+    'حجم الكلمات المفتاحية، والترتيب العضوي، والمنافسة، وتكلفة النقرة.',
+  'Connected first-party analytics': 'تحليلات موصولة من الطرف الأول',
+  'Search Console and Analytics, where the customer connects them. Improves confidence; never required.':
+    'Search Console وAnalytics، حين يصلهما العميل. يرفعان مستوى الثقة؛ وليسا مطلوبين أبدًا.',
+  'Public competitor information': 'معلومات علنية عن المنافسين',
+  'Published positions, citations and the sources engines reach for when recommending a competitor.':
+    'المواقع المنشورة والاستشهادات والمصادر التي تلجأ إليها المحرّكات عند التوصية بمنافس.',
+  'Public content, reputation and trust signals':
+    'المحتوى العلني وإشارات السمعة والثقة',
+  'Independent validation, review corpora and cross-source consistency.':
+    'توثيق مستقل، ومجموعات مراجعات، واتساق بين المصادر.',
+  'Customer-configured business assumptions': 'افتراضات عمل يضبطها العميل',
+  'Average deal value, conversion rates and revenue split by decision stage. Always labelled as customer-provided.':
+    'متوسط قيمة الصفقة، ومعدلات التحويل، وتوزيع الإيرادات حسب مرحلة القرار. تُوسم دائمًا بأنها مقدَّمة من العميل.',
+  'Historical GeoRepute scans and action outcomes':
+    'عمليات فحص GeoRepute السابقة ونتائج الإجراءات',
+  'Prior observations and whether an executed action moved the signal it targeted.':
+    'ملاحظات سابقة وما إذا كان إجراء منفَّذ قد حرّك الإشارة التي استهدفها.',
+
+  /* --- Confidence ---------------------------------------------------------- */
+  'Every conclusion carries its own confidence':
+    'كل استنتاج يحمل درجة الثقة الخاصة به',
+  'Confidence is attached to the individual conclusion, not to the product. Two findings in the same readout can carry different confidence, and they frequently do.':
+    'ترتبط درجة الثقة بالاستنتاج المفرد لا بالمنتج. ويمكن لنتيجتين في القراءة نفسها أن تحملا درجتي ثقة مختلفتين، وهو ما يحدث كثيرًا.',
+
+  /* --- Financial model ----------------------------------------------------- */
+  'Financial model': 'النموذج المالي',
+  'Directional, ranged, and never described as confirmed':
+    'اتجاهي، ضمن نطاقات، ولا يوصف أبدًا بأنه مؤكد',
+  'The model': 'النموذج',
+  'All values are shown as ranges, never as point estimates.':
+    'تُعرض كل القيم كنطاقات، لا كتقديرات نقطية أبدًا.',
+  'No value is described as confirmed lost revenue.':
+    'لا توصف أي قيمة بأنها إيرادات مفقودة مؤكدة.',
+  'Every model exposes its assumptions and data boundaries.':
+    'كل نموذج يكشف افتراضاته وحدود بياناته.',
+  'Connected first-party conversion data improves confidence.':
+    'بيانات التحويل الموصولة من الطرف الأول ترفع مستوى الثقة.',
+  'Prediction is withheld when history is insufficient.':
+    'يُحجب التنبؤ عندما يكون السجل غير كافٍ.',
+  'Every exported brief carries methodology and limitation language.':
+    'كل تقرير مُصدَّر يحمل صياغة المنهجية والقيود.',
+  'Search economics, derived': 'اقتصاديات البحث، مشتقة',
+  'Blended CPC': 'تكلفة النقرة المدمجة',
+  /* 'Break-even CPC' and 'Above break-even' already have entries in the seed
+     section below. */
+  'Break-even is average order value × gross margin × site conversion. Paid dependency is classified from the ratio of blended CPC to break-even — it is derived, never asserted.':
+    'نقطة التعادل هي متوسط قيمة الطلب × هامش الربح الإجمالي × تحويل الموقع. ويُصنَّف الاعتماد على الإعلانات المدفوعة من نسبة تكلفة النقرة المدمجة إلى نقطة التعادل — وهو مشتق، لا يُدّعى أبدًا.',
+
+  /* --- Limitations --------------------------------------------------------- */
+  Limitations: 'حدود المنهجية',
+  'What this system cannot tell you': 'ما لا يستطيع هذا النظام إخباركم به',
+  'AI engine answers vary between runs and between users. Observations are point-in-time samples, not guarantees of what any individual buyer sees.':
+    'تتباين إجابات محرّكات الذكاء الاصطناعي بين تشغيل وآخر وبين مستخدم وآخر. والملاحظات عيّنات في لحظة زمنية، لا ضمانات لما يراه أي مشترٍ بعينه.',
+  'Commercial exposure is a directional model built on customer-configured assumptions. It is useful for prioritisation and is not an audited financial statement.':
+    'التعرّض التجاري نموذج اتجاهي مبني على افتراضات يضبطها العميل. وهو مفيد لتحديد الأولويات وليس بيانًا ماليًا مدقّقًا.',
+  'Attribution between an executed action and a signal movement is correlational. The system records both and reports the relationship; it does not claim causation.':
+    'العزو بين إجراء منفَّذ وحركة إشارة هو ارتباطي. يسجّل النظام كليهما ويبلّغ عن العلاقة؛ ولا يدّعي السببية.',
+  'Competitor authority counts reflect sources engines cite publicly. A competitor may hold private advantages this system cannot observe.':
+    'تعكس أعداد مصادر حُجّية المنافسين المصادر التي تستشهد بها المحرّكات علنًا. وقد يملك منافس مزايا خاصة لا يستطيع هذا النظام رصدها.',
+  'Where history is insufficient, predictive conclusions are withheld rather than estimated.':
+    'حيث يكون السجل غير كافٍ، تُحجب الاستنتاجات التنبؤية بدلًا من تقديرها.',
+  'This demonstration environment': 'بيئة العرض التوضيحي هذه',
+  'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
+    'Northwind Supply منظمة خيالية. أرقامها مبنية على بيانات أولية، ومتسقة داخليًا، ومشتقة من مجموعة واحدة من الحقائق المرجعية — <b>{presence}</b> حضور في التوصيات، و<b>{coverage}</b> تغطية في تقييم المورّدين، و<b>{share}</b> حصة للمنافس. وكل رقم آخر في هذا الموقع محسوب منها، وحزمة اختبارات تُفشل عملية البناء إذا خالفها أي مسار عرض.',
+  'Open Mission Control': 'افتح مركز القيادة',
+  'See the engines': 'اطّلع على المحرّكات',
+
+  /* ==========================================================================
      SEED PROSE SURFACING ON THE HOME PAGE.
      ======================================================================= */
 

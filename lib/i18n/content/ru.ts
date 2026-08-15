@@ -375,6 +375,112 @@ export const content: ContentOverlay = {
   'mro distributor': 'дистрибьютор расходных материалов',
 
   /* ==========================================================================
+     THE METHODOLOGY PAGE.
+
+     The evidence sources, model rules and limitations reach t() through a
+     variable rather than a literal, so scripts/i18n-keys.mjs cannot see them.
+     They are listed here by hand; the page audit is what catches a miss.
+     ======================================================================= */
+
+  /* --- Hero ---------------------------------------------------------------- */
+  'The stronger the claim, the stronger the evidence path must be.':
+    'Чем сильнее утверждение, тем прочнее должен быть путь доказательств.',
+  'Every conclusion in this system can be traced to a date, a source, an engine, a prompt or a connected dataset. This page states how, and where the boundaries are.':
+    'Любой вывод в этой системе прослеживается до даты, источника, движка, запроса или подключённого набора данных. На этой странице изложено, как именно, и где проходят границы.',
+  'Methodology version {version} · observed {date}':
+    'Версия методологии {version} · наблюдение от {date}',
+
+  /* --- GEON ---------------------------------------------------------------- */
+  'The GEON framework': 'Фреймворк GEON',
+  'Six vectors, one published weighting': 'Шесть векторов, одно опубликованное взвешивание',
+  'The Decision Health Index is a weighted function of these six vectors — not a score assigned by judgement. The weighting is published below so the index can be recomputed independently.':
+    'Индекс здоровья решений — взвешенная функция этих шести векторов, а не оценка, выставленная экспертно. Веса опубликованы ниже, чтобы индекс можно было пересчитать независимо.',
+  'Decision Health Index weighting': 'Взвешивание индекса здоровья решений',
+  'Yields <b>{score} of 100</b> for the seeded organisation. Authority carries the heaviest weight and the lowest score, which is why it is the binding constraint.':
+    'Даёт <b>{score} из 100</b> для демонстрационной организации. Авторитетность несёт наибольший вес и наименьшую оценку — поэтому именно она является связывающим ограничением.',
+  'GEON assessment. {readings}. Lowest vector is {lowest}.':
+    'Оценка GEON. {readings}. Самый низкий вектор — {lowest}.',
+  '{label} {score} of 100': '{label} {score} из 100',
+
+  /* --- Evidence sources ---------------------------------------------------- */
+  'Where the observations come from': 'Откуда берутся наблюдения',
+  'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
+    'Эта среда отслеживает <b>{questions}</b> решенческих вопросов в шести движках ИИ и <b>{keywords}</b> коммерческих ключевых слов в Google.',
+  'Public AI responses': 'Публичные ответы ИИ',
+  'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
+    'Ответы, зафиксированные в шести движках по неизменному набору вопросов, с записью движка, даты и полного текста ответа.',
+  'Third-party search and market data': 'Сторонние поисковые и рыночные данные',
+  'Keyword volume, organic position, competition and cost per click.':
+    'Частотность ключевых слов, органическая позиция, конкуренция и цена клика.',
+  'Connected first-party analytics': 'Подключённая собственная аналитика',
+  'Search Console and Analytics, where the customer connects them. Improves confidence; never required.':
+    'Search Console и Analytics, если клиент их подключает. Повышают уверенность; никогда не обязательны.',
+  'Public competitor information': 'Публичная информация о конкурентах',
+  'Published positions, citations and the sources engines reach for when recommending a competitor.':
+    'Опубликованные позиции, цитирования и источники, к которым обращаются движки, рекомендуя конкурента.',
+  'Public content, reputation and trust signals':
+    'Публичный контент, репутация и сигналы доверия',
+  'Independent validation, review corpora and cross-source consistency.':
+    'Независимое подтверждение, корпуса отзывов и согласованность между источниками.',
+  'Customer-configured business assumptions':
+    'Бизнес-допущения, заданные клиентом',
+  'Average deal value, conversion rates and revenue split by decision stage. Always labelled as customer-provided.':
+    'Средняя стоимость сделки, коэффициенты конверсии и распределение выручки по этапам решения. Всегда помечается как предоставленное клиентом.',
+  'Historical GeoRepute scans and action outcomes':
+    'Прошлые сканирования GeoRepute и результаты действий',
+  'Prior observations and whether an executed action moved the signal it targeted.':
+    'Предыдущие наблюдения и то, сдвинуло ли выполненное действие сигнал, на который было нацелено.',
+
+  /* --- Confidence ---------------------------------------------------------- */
+  'Every conclusion carries its own confidence':
+    'У каждого вывода своя уверенность',
+  'Confidence is attached to the individual conclusion, not to the product. Two findings in the same readout can carry different confidence, and they frequently do.':
+    'Уверенность привязана к отдельному выводу, а не к продукту. Два вывода в одном отчёте могут иметь разную уверенность — и часто имеют.',
+
+  /* --- Financial model ----------------------------------------------------- */
+  'Financial model': 'Финансовая модель',
+  'Directional, ranged, and never described as confirmed':
+    'Направленная, в диапазонах и никогда не описываемая как подтверждённая',
+  'The model': 'Модель',
+  'All values are shown as ranges, never as point estimates.':
+    'Все значения показаны диапазонами, никогда — точечными оценками.',
+  'No value is described as confirmed lost revenue.':
+    'Ни одно значение не описывается как подтверждённая упущенная выручка.',
+  'Every model exposes its assumptions and data boundaries.':
+    'Каждая модель раскрывает свои допущения и границы данных.',
+  'Connected first-party conversion data improves confidence.':
+    'Подключённые собственные данные о конверсии повышают уверенность.',
+  'Prediction is withheld when history is insufficient.':
+    'При недостатке истории прогноз не выдаётся.',
+  'Every exported brief carries methodology and limitation language.':
+    'Каждая выгруженная справка содержит формулировки методологии и ограничений.',
+  'Search economics, derived': 'Экономика поиска, расчётная',
+  'Blended CPC': 'Смешанная цена клика',
+  /* 'Break-even CPC' and 'Above break-even' already have entries in the seed
+     section below. */
+  'Break-even is average order value × gross margin × site conversion. Paid dependency is classified from the ratio of blended CPC to break-even — it is derived, never asserted.':
+    'Точка безубыточности — это средний чек × валовая маржа × конверсия сайта. Зависимость от платного трафика классифицируется по отношению смешанной цены клика к точке безубыточности: она выводится расчётом, а не утверждается.',
+
+  /* --- Limitations --------------------------------------------------------- */
+  Limitations: 'Ограничения',
+  'What this system cannot tell you': 'Чего эта система вам сказать не может',
+  'AI engine answers vary between runs and between users. Observations are point-in-time samples, not guarantees of what any individual buyer sees.':
+    'Ответы движков ИИ различаются от запуска к запуску и от пользователя к пользователю. Наблюдения — это выборки на момент времени, а не гарантия того, что увидит конкретный покупатель.',
+  'Commercial exposure is a directional model built on customer-configured assumptions. It is useful for prioritisation and is not an audited financial statement.':
+    'Коммерческий риск — направленная модель, построенная на заданных клиентом допущениях. Она полезна для расстановки приоритетов и не является аудированной финансовой отчётностью.',
+  'Attribution between an executed action and a signal movement is correlational. The system records both and reports the relationship; it does not claim causation.':
+    'Связь между выполненным действием и сдвигом сигнала носит корреляционный характер. Система фиксирует и то и другое и сообщает о зависимости; она не утверждает причинности.',
+  'Competitor authority counts reflect sources engines cite publicly. A competitor may hold private advantages this system cannot observe.':
+    'Подсчёт источников авторитетности конкурентов отражает то, что движки цитируют публично. У конкурента могут быть закрытые преимущества, которые система не видит.',
+  'Where history is insufficient, predictive conclusions are withheld rather than estimated.':
+    'При недостатке истории прогнозные выводы не выдаются, а не оцениваются приблизительно.',
+  'This demonstration environment': 'Эта демонстрационная среда',
+  'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
+    'Northwind Supply — вымышленная организация. Её показатели заданы тестовыми данными, внутренне согласованы и выведены из единого набора опорных фактов: <b>{presence}</b> присутствия в рекомендациях, <b>{coverage}</b> охвата на этапе оценки поставщиков, <b>{share}</b> доли конкурента. Каждое другое число на этом сайте рассчитано из них, и набор тестов ломает сборку, если какой-либо экран им противоречит.',
+  'Open Mission Control': 'Открыть центр управления',
+  'See the engines': 'Посмотреть движки',
+
+  /* ==========================================================================
      THE SEED DATA — signal names, readout prose and marketplace copy.
      ======================================================================= */
 

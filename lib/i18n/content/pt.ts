@@ -382,6 +382,113 @@ export const content: ContentOverlay = {
   'mro distributor': 'distribuidor de consumíveis de manutenção',
 
   /* ==========================================================================
+     THE METHODOLOGY PAGE.
+
+     The evidence sources, model rules and limitations reach t() through a
+     variable rather than a literal, so scripts/i18n-keys.mjs cannot see them.
+     They are listed here by hand; the page audit is what catches a miss.
+     ======================================================================= */
+
+  /* --- Hero ---------------------------------------------------------------- */
+  'The stronger the claim, the stronger the evidence path must be.':
+    'Quanto mais forte a afirmação, mais sólido tem de ser o percurso das provas.',
+  'Every conclusion in this system can be traced to a date, a source, an engine, a prompt or a connected dataset. This page states how, and where the boundaries are.':
+    'Todas as conclusões deste sistema podem ser rastreadas até uma data, uma fonte, um motor, uma pesquisa ou um conjunto de dados ligado. Esta página explica como, e onde estão os limites.',
+  'Methodology version {version} · observed {date}':
+    'Metodologia versão {version} · observado a {date}',
+
+  /* --- GEON ---------------------------------------------------------------- */
+  'The GEON framework': 'O framework GEON',
+  'Six vectors, one published weighting': 'Seis vetores, uma ponderação publicada',
+  'The Decision Health Index is a weighted function of these six vectors — not a score assigned by judgement. The weighting is published below so the index can be recomputed independently.':
+    'O índice de saúde da decisão é uma função ponderada destes seis vetores — não uma pontuação atribuída por juízo. A ponderação é publicada abaixo para que o índice possa ser recalculado de forma independente.',
+  'Decision Health Index weighting': 'Ponderação do índice de saúde da decisão',
+  'Yields <b>{score} of 100</b> for the seeded organisation. Authority carries the heaviest weight and the lowest score, which is why it is the binding constraint.':
+    'Dá <b>{score} de 100</b> para a organização de demonstração. A autoridade tem o peso mais elevado e a pontuação mais baixa, razão pela qual é a restrição determinante.',
+  'GEON assessment. {readings}. Lowest vector is {lowest}.':
+    'Avaliação GEON. {readings}. O vetor mais baixo é {lowest}.',
+  '{label} {score} of 100': '{label} {score} de 100',
+
+  /* --- Evidence sources ---------------------------------------------------- */
+  'Where the observations come from': 'De onde vêm as observações',
+  'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
+    'Este ambiente observa <b>{questions}</b> perguntas de decisão em seis motores de IA e <b>{keywords}</b> palavras-chave comerciais no Google.',
+  'Public AI responses': 'Respostas públicas de IA',
+  'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
+    'Respostas observadas em seis motores face a um conjunto fixo de perguntas, registadas com o motor, a data e a resposta integral.',
+  'Third-party search and market data':
+    'Dados de pesquisa e de mercado de terceiros',
+  'Keyword volume, organic position, competition and cost per click.':
+    'Volume de palavras-chave, posição orgânica, concorrência e custo por clique.',
+  'Connected first-party analytics': 'Analítica própria ligada',
+  'Search Console and Analytics, where the customer connects them. Improves confidence; never required.':
+    'Search Console e Analytics, quando o cliente os liga. Aumentam a confiança; nunca são obrigatórios.',
+  'Public competitor information': 'Informação pública sobre concorrentes',
+  'Published positions, citations and the sources engines reach for when recommending a competitor.':
+    'Posições publicadas, citações e fontes a que os motores recorrem quando recomendam um concorrente.',
+  'Public content, reputation and trust signals':
+    'Conteúdo público, reputação e sinais de confiança',
+  'Independent validation, review corpora and cross-source consistency.':
+    'Validação independente, corpora de avaliações e consistência entre fontes.',
+  'Customer-configured business assumptions':
+    'Pressupostos de negócio configurados pelo cliente',
+  'Average deal value, conversion rates and revenue split by decision stage. Always labelled as customer-provided.':
+    'Valor médio do negócio, taxas de conversão e repartição da receita por fase de decisão. Sempre assinalados como fornecidos pelo cliente.',
+  'Historical GeoRepute scans and action outcomes':
+    'Análises anteriores da GeoRepute e resultados das ações',
+  'Prior observations and whether an executed action moved the signal it targeted.':
+    'Observações anteriores e se uma ação executada moveu o sinal que visava.',
+
+  /* --- Confidence ---------------------------------------------------------- */
+  'Every conclusion carries its own confidence':
+    'Cada conclusão tem a sua própria confiança',
+  'Confidence is attached to the individual conclusion, not to the product. Two findings in the same readout can carry different confidence, and they frequently do.':
+    'A confiança está associada à conclusão individual, não ao produto. Duas constatações da mesma análise podem ter níveis de confiança diferentes, e frequentemente têm.',
+
+  /* --- Financial model ----------------------------------------------------- */
+  'Financial model': 'Modelo financeiro',
+  'Directional, ranged, and never described as confirmed':
+    'Direcional, em intervalos, e nunca descrito como confirmado',
+  'The model': 'O modelo',
+  'All values are shown as ranges, never as point estimates.':
+    'Todos os valores são apresentados como intervalos, nunca como estimativas pontuais.',
+  'No value is described as confirmed lost revenue.':
+    'Nenhum valor é descrito como receita perdida confirmada.',
+  'Every model exposes its assumptions and data boundaries.':
+    'Cada modelo expõe os seus pressupostos e os limites dos seus dados.',
+  'Connected first-party conversion data improves confidence.':
+    'Dados de conversão próprios ligados aumentam a confiança.',
+  'Prediction is withheld when history is insufficient.':
+    'A previsão é retida quando o histórico é insuficiente.',
+  'Every exported brief carries methodology and limitation language.':
+    'Todos os relatórios exportados incluem o texto de metodologia e limitações.',
+  'Search economics, derived': 'Economia da pesquisa, derivada',
+  'Blended CPC': 'CPC combinado',
+  /* 'Break-even CPC' and 'Above break-even' already have entries in the seed
+     section below. */
+  'Break-even is average order value × gross margin × site conversion. Paid dependency is classified from the ratio of blended CPC to break-even — it is derived, never asserted.':
+    'O ponto de equilíbrio é o valor médio da encomenda × margem bruta × conversão do site. A dependência do pago é classificada a partir da relação entre o CPC combinado e esse ponto: é derivada, nunca afirmada.',
+
+  /* --- Limitations --------------------------------------------------------- */
+  Limitations: 'Limitações',
+  'What this system cannot tell you': 'O que este sistema não lhe consegue dizer',
+  'AI engine answers vary between runs and between users. Observations are point-in-time samples, not guarantees of what any individual buyer sees.':
+    'As respostas dos motores de IA variam entre execuções e entre utilizadores. As observações são amostras num dado momento, não garantias do que um comprador concreto vê.',
+  'Commercial exposure is a directional model built on customer-configured assumptions. It is useful for prioritisation and is not an audited financial statement.':
+    'A exposição comercial é um modelo direcional construído sobre pressupostos configurados pelo cliente. Serve para priorizar e não é uma demonstração financeira auditada.',
+  'Attribution between an executed action and a signal movement is correlational. The system records both and reports the relationship; it does not claim causation.':
+    'A atribuição entre uma ação executada e o movimento de um sinal é correlacional. O sistema regista ambos e reporta a relação; não reivindica causalidade.',
+  'Competitor authority counts reflect sources engines cite publicly. A competitor may hold private advantages this system cannot observe.':
+    'A contagem de fontes de autoridade dos concorrentes reflete o que os motores citam publicamente. Um concorrente pode deter vantagens privadas que este sistema não consegue observar.',
+  'Where history is insufficient, predictive conclusions are withheld rather than estimated.':
+    'Quando o histórico é insuficiente, as conclusões preditivas são retidas em vez de estimadas.',
+  'This demonstration environment': 'Este ambiente de demonstração',
+  'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
+    'A Northwind Supply é uma organização fictícia. Os seus números partem de dados iniciais, são internamente consistentes e derivam de um único conjunto de factos de referência — <b>{presence}</b> de presença em recomendações, <b>{coverage}</b> de cobertura na avaliação de fornecedores e <b>{share}</b> de quota do concorrente. Todos os outros números deste site são calculados a partir deles, e um conjunto de testes faz falhar a compilação se algum ecrã os contrariar.',
+  'Open Mission Control': 'Abrir o centro de comando',
+  'See the engines': 'Ver os motores',
+
+  /* ==========================================================================
      THE SEED DATA — signal names, readout prose and marketplace copy.
      ======================================================================= */
 

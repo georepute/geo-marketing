@@ -44,9 +44,27 @@ if (!url || (againstAt !== -1 && !baseline)) {
 /* Proper nouns, product names and the demonstration companies. These stay in
    Latin script in every locale by design — translating a competitor's name
    would make the comparison incoherent. Extend this list rather than
-   translating something that should not be translated. */
+   translating something that should not be translated.
+
+   Multi-word product names are stripped as PHRASES first, before the
+   word-level pass. Adding their halves to NOUNS instead would blind the
+   audit to those words appearing alone — "Search" and "Analytics" are both
+   ordinary translatable words elsewhere on the site. */
+const PHRASES = [
+  'Search Console',
+  'Google Analytics',
+  'Google Ads',
+  'Northwind Supply',
+  'Kestrel Industrial',
+  'Meridian Supply Co',
+  'Atlas Trade Group',
+  'Halvorsen Industrial',
+]
+
+const STRIP_PHRASES = new RegExp(PHRASES.join('|'), 'g')
+
 const NOUNS =
-  'GeoRepute|GINTEX|Gintex|Google|ChatGPT|Claude|Gemini|Perplexity|Copilot|Grok|GEON|NASA|Unsplash|copyup\\.ai|onlineperception\\.ai|Northwind|Kestrel|Meridian|Atlas|Halvorsen|Industrial|Supply|Trade|Group|Co|Inc|CRM|MRO|SEO|CPC|AI|Ads|Intl'
+  'GeoRepute|GINTEX|Gintex|Google|ChatGPT|Claude|Gemini|Perplexity|Copilot|Grok|GEON|NASA|Unsplash|copyup\\.ai|onlineperception\\.ai|Northwind|Kestrel|Meridian|Atlas|Halvorsen|Industrial|Supply|Trade|Group|Co|Inc|Analytics|CRM|MRO|SEO|CPC|AI|Ads|Intl'
 
 const ONLY_NOUN = new RegExp(`^(?:${NOUNS}|Northwind Supply|Google Ads)$`)
 const STRIP_NOUNS = new RegExp(`\\b(?:${NOUNS})\\b`, 'g')
@@ -113,6 +131,7 @@ function segmentsOf(html) {
     /* What survives removing allowed nouns, digits and punctuation is the part
        that carries actual words. */
     const stripped = s
+      .replace(STRIP_PHRASES, '')
       .replace(STRIP_NOUNS, '')
       .replace(/[\d\s%$–—→←·.,:/()|-]+/g, '')
     if (!/[A-Za-z]{2,}/.test(stripped)) continue
