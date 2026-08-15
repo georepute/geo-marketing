@@ -43,13 +43,13 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**The home page and /methodology are complete in all six** — he, ar, ru, fr,
-es, pt.
+**Three pages are complete in all six** — he, ar, ru, fr, es, pt.
 
 | Page | he · ar · ru (script) | fr | es | pt |
 | --- | --- | --- | --- | --- |
 | home | 1 each | 16 | 1 | 1 |
 | /methodology | 1 each | 1 | 0 | 0 |
+| /how-it-works | 1 each | 4 | 0 | 1 |
 
 The `1` on he/ar/ru is the ISO code chip in the compact language switcher. The
 Latin-script residue is cognates — `Visible`, `Volume`, `Intelligence`,
@@ -70,11 +70,15 @@ the rest were translation jobs.
   `reviewed: false`. **None has been read by a native speaker.**
 - The **content overlays** (`lib/i18n/content/*.ts`) — seed prose and inline
   component prose — now exist for all six, ~580 entries each.
-- All six cover **the home page and /methodology**. Other routes will show
-  English wherever they use prose those two did not.
+- All six cover **home, /methodology and /how-it-works**. Other routes will
+  show English wherever they use prose those three did not.
 - **`i18n-keys.mjs` only sees literal `t('…')` calls.** The methodology page
   passes three arrays through `t(variable)`; the script reported 0 missing
   while 25 strings were still English. Treat it as a worklist, never as proof.
+- **A page that renders `<ProductScreen>` needs overlay entries for each slot
+  it uses.** `surface` and `caption` both go through `t()`, and
+  `lib/visual/screens.ts` holds 30 slots — how-it-works alone pulled in
+  fifteen. `scripts/i18n-keys.mjs` cannot see these either.
 - `pt` is **European Portuguese**. pt-BR would be a new locale entry, not an
   edit to `pt.ts`; the vocabularies diverge too often for one file to serve
   both honestly.
@@ -258,11 +262,11 @@ it on its own before believing it.
 
 In order. Each is a session's work or less.
 
-1. **The other routes, per locale.** `/how-it-works`, `/methodology`,
-   `/marketplace`, `/engines/*`, `/election-intelligence`, `/briefing`,
-   `/blog`, `/legal`.
-   Expect the same three categories: unwrapped inline prose, seed prose, and
-   dictionary blocks that were never written.
+1. **The remaining routes, per locale.** `/marketplace`, `/engines/*`,
+   `/election-intelligence`, `/briefing`, `/blog`, `/legal`.
+   Expect four categories, all of which have bitten already: unwrapped inline
+   prose, seed prose, dictionary blocks that were never written, and
+   `ProductScreen` slot captions.
 2. **Native review of all six dictionaries and all six overlays.** Flip
    `reviewed: false` only when a human has actually read one. This is a launch
    blocker, not a detail — every one of them is machine-produced. Some carry
