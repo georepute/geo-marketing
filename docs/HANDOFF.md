@@ -1,6 +1,7 @@
 # Handoff — launch preparation
 
-**Branch:** `feat/launch-prep` · **Last commit:** `abd9231` · **Written:** 13 Aug 2026
+**Branch:** `feat/launch-prep` · **Written:** 13 Aug 2026 · Nothing pushed;
+this branch exists only locally and has no upstream.
 
 Read this first, then `AGENTS.md`, then the requirements PDF if you have it.
 The PDF ("GeoRepute Website — Final Updates Before Launch") is the source of
@@ -42,10 +43,15 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**Hebrew home page: complete.** Measured by rendering `/he` and reading back
-every English segment — 329 → 1. The one remaining is `he`, the ISO code the
-compact language switcher shows instead of the endonym on narrow screens.
-That is a chip, not prose.
+**Hebrew and Arabic home pages: complete.** Measured by rendering the page and
+reading back every English segment. Both sit at 1, and the one remaining is the
+ISO code the compact language switcher shows instead of the endonym on narrow
+screens — a chip, not prose.
+
+Arabic took a fraction of Hebrew's effort, and the reason is worth carrying:
+**no component changed.** Every string that needed wrapping was wrapped for
+Hebrew, so the second locale was a translation job rather than an engineering
+one. Expect ru / fr / es / pt to behave the same way.
 
 **Everything else is untranslated.** To be precise about what that means:
 
@@ -53,12 +59,21 @@ That is a chip, not prose.
   into all six languages at ~98% coverage. Every one is marked
   `reviewed: false`. **None has been read by a native speaker.**
 - The **content overlay** (`lib/i18n/content/*.ts`) — seed prose and inline
-  component prose — exists only for Hebrew. `ar.ts`, `ru.ts`, `fr.ts`,
-  `es.ts`, `pt.ts` are stubs.
-- Hebrew is done **for the home page only**. Other routes will show English
-  wherever they use prose the home page did not.
+  component prose — exists for Hebrew (575 entries) and Arabic (581).
+  `ru.ts`, `fr.ts`, `es.ts`, `pt.ts` are empty stubs.
+- Hebrew and Arabic are done **for the home page only**. Other routes will show
+  English wherever they use prose the home page did not.
 
-Run `node scripts/i18n-keys.mjs ar` for the current gap in any locale.
+Two commands give the current gap in any locale:
+
+```bash
+node scripts/i18n-keys.mjs ru      # t() keys the components ask for
+node scripts/i18n-port.mjs he ru   # seed prose a finished locale already covers
+```
+
+`i18n-port.mjs` is the fast route for a new locale: port `he.ts`'s key set
+across, then let the audit find whatever is left. That is how Arabic went from
+an empty stub to zero in one pass.
 
 ### Three layers, and which one a string belongs to
 
@@ -190,18 +205,19 @@ Currently: typecheck ✓ · lint ✓ · **222 tests** ✓ · build ✓ (**298 pa
 
 In order. Each is a session's work or less.
 
-1. **Arabic home page.** Same loop as Hebrew, plus RTL. `lib/i18n/content/ar.ts`
-   currently has none of the 168 `t()` keys. Hebrew already proved the RTL
-   mechanics (logical properties, `unicode-bidi: isolate` on numeric runs,
-   `scale: -1 1` for mirrored arrows), so this should be faster.
-2. **ru / fr / es / pt home pages.** LTR, so purely translation volume.
-3. **The other routes, per locale.** `/how-it-works`, `/methodology`,
+1. **ru / fr / es / pt home pages.** LTR, so purely translation volume. For
+   each: add the `footer` block and the three `exec` labels to
+   `lib/i18n/dictionaries/<locale>.ts` — both were missing in Hebrew *and*
+   Arabic, so assume they are missing in all four — then
+   `node scripts/i18n-port.mjs he <locale>`, translate, and audit.
+2. **The other routes, per locale.** `/how-it-works`, `/methodology`,
    `/marketplace`, `/engines/*`, `/election-intelligence`, `/briefing`,
    `/blog`, `/legal`.
    Expect the same three categories: unwrapped inline prose, seed prose, and
    dictionary blocks that were never written.
-4. **Native review of all six dictionaries.** Flip `reviewed: false` only when
-   a human has actually read one. This is a launch blocker.
+3. **Native review of all six dictionaries and both overlays.** Flip
+   `reviewed: false` only when a human has actually read one. This is a launch
+   blocker, not a detail — Hebrew and Arabic are machine-produced.
 
 ---
 
@@ -238,6 +254,7 @@ lib/format/index.ts           Intl only. dateFull/dateBrief take an optional tag
 
 scripts/i18n-audit.mjs        Render a page, list remaining English
 scripts/i18n-keys.mjs         List t() keys a locale overlay is missing
+scripts/i18n-port.mjs         Keys one overlay has that another lacks
 scripts/screens.mjs           Screenshot slot report
 
 docs/PRE-LAUNCH.md            Launch checklist
