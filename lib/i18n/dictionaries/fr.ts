@@ -102,6 +102,10 @@ export const dictionary: PartialDictionary = {
     kpiWhy: 'Pourquoi c’est important',
     kpiImpact: 'Impact commercial',
 
+    executiveQuestion: 'Question de direction',
+    ownerLabel: 'Responsable',
+    deadlineLabel: 'Échéance',
+
     decisionHealthDefinition:
       'La santé décisionnelle mesure si les systèmes d’IA peuvent reconnaître, vérifier et recommander votre entreprise en toute sûreté au moment où un acheteur choisit un fournisseur.',
     strategicWindowDefinition:
@@ -335,6 +339,62 @@ export const dictionary: PartialDictionary = {
     label: 'Langue',
     choose: 'Choisissez une langue',
     current: 'Langue actuelle',
+  },
+
+  /* --- Footer. Arrays of objects merge element-wise, so every `href` here
+         comes from the English source and only the label is replaced. ----- */
+  footer: {
+    ariaLabel: 'Pied de page',
+    limitationLead: 'Modélisation directionnelle.',
+    limitationTail:
+      'Les chiffres commerciaux sont des estimations destinées à la priorisation, et non des états financiers audités.',
+    rights: 'GeoRepute. Infrastructure d’intelligence décisionnelle.',
+    environment: 'Environnement de démonstration · Données de départ',
+    photography: 'Photographies via',
+    columns: [
+      {
+        title: 'Produit',
+        links: [
+          { label: 'Centre de commandement exécutif' },
+          { label: 'Reconstruction de décision' },
+          { label: 'Centre d’actions' },
+          { label: 'Moteurs d’intelligence' },
+          { label: 'Réserver un briefing' },
+          { label: 'Tarifs et formules' },
+        ],
+      },
+      {
+        title: 'Intelligence',
+        links: [
+          { label: 'Place de marché de l’intelligence' },
+          { label: 'Reconnaissance par l’IA' },
+          { label: 'Google face à l’IA' },
+          { label: 'Décision concurrentielle' },
+          { label: 'Intelligence d’action' },
+        ],
+      },
+      {
+        title: 'Méthodologie',
+        links: [
+          { label: 'Le cadre GEON' },
+          { label: 'Sources de preuves' },
+          { label: 'Modèle de confiance' },
+          { label: 'Modèle financier' },
+          { label: 'Limites' },
+        ],
+      },
+      {
+        title: 'Entreprise',
+        links: [
+          { label: 'Notes d’intelligence' },
+          { label: 'Connexion' },
+          { label: 'Confidentialité' },
+          { label: 'Conditions d’utilisation' },
+          { label: 'Traitement des données' },
+          { label: 'Sécurité' },
+        ],
+      },
+    ],
   },
 
   /* --- Readout anatomy -------------------------------------------------- */

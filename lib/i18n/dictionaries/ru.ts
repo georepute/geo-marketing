@@ -98,6 +98,10 @@ export const dictionary: PartialDictionary = {
     kpiWhy: 'Почему это важно',
     kpiImpact: 'Влияние на бизнес',
 
+    executiveQuestion: 'Вопрос руководства',
+    ownerLabel: 'Ответственный',
+    deadlineLabel: 'Срок',
+
     decisionHealthDefinition:
       'Здоровье решений измеряет, способны ли ИИ-системы распознать, проверить и уверенно рекомендовать ваш бизнес в момент, когда покупатель выбирает поставщика.',
     strategicWindowDefinition:
@@ -329,6 +333,62 @@ export const dictionary: PartialDictionary = {
     label: 'Язык',
     choose: 'Выберите язык',
     current: 'Текущий язык',
+  },
+
+  /* --- Footer. Arrays of objects merge element-wise, so every `href` here
+         comes from the English source and only the label is replaced. ----- */
+  footer: {
+    ariaLabel: 'Нижний колонтитул',
+    limitationLead: 'Направленное моделирование.',
+    limitationTail:
+      'Коммерческие показатели — это оценки для расстановки приоритетов, а не аудированная финансовая отчётность.',
+    rights: 'GeoRepute. Инфраструктура интеллекта решений.',
+    environment: 'Демонстрационная среда · Тестовые данные',
+    photography: 'Фотографии через',
+    columns: [
+      {
+        title: 'Продукт',
+        links: [
+          { label: 'Центр управления для руководства' },
+          { label: 'Реконструкция решения' },
+          { label: 'Центр действий' },
+          { label: 'Аналитические движки' },
+          { label: 'Записаться на брифинг' },
+          { label: 'Цены и тарифы' },
+        ],
+      },
+      {
+        title: 'Интеллект',
+        links: [
+          { label: 'Маркетплейс интеллекта' },
+          { label: 'Распознавание в ИИ' },
+          { label: 'Google против ИИ' },
+          { label: 'Решение в пользу конкурента' },
+          { label: 'Интеллект действий' },
+        ],
+      },
+      {
+        title: 'Методология',
+        links: [
+          { label: 'Фреймворк GEON' },
+          { label: 'Источники доказательств' },
+          { label: 'Модель уверенности' },
+          { label: 'Финансовая модель' },
+          { label: 'Ограничения' },
+        ],
+      },
+      {
+        title: 'Компания',
+        links: [
+          { label: 'Аналитические заметки' },
+          { label: 'Вход' },
+          { label: 'Конфиденциальность' },
+          { label: 'Условия использования' },
+          { label: 'Обработка данных' },
+          { label: 'Безопасность' },
+        ],
+      },
+    ],
   },
 
   /* --- Readout anatomy -------------------------------------------------- */

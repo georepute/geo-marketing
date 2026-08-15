@@ -100,6 +100,10 @@ export const dictionary: PartialDictionary = {
     kpiWhy: 'Porque importa',
     kpiImpact: 'Impacto comercial',
 
+    executiveQuestion: 'Pergunta executiva',
+    ownerLabel: 'Responsável',
+    deadlineLabel: 'Prazo',
+
     decisionHealthDefinition:
       'A saúde de decisão mede se os sistemas de IA conseguem reconhecer, verificar e recomendar com segurança a sua empresa no momento em que um comprador escolhe um fornecedor.',
     strategicWindowDefinition:
@@ -331,6 +335,62 @@ export const dictionary: PartialDictionary = {
     label: 'Idioma',
     choose: 'Escolha um idioma',
     current: 'Idioma atual',
+  },
+
+  /* --- Footer. Arrays of objects merge element-wise, so every `href` here
+         comes from the English source and only the label is replaced. ----- */
+  footer: {
+    ariaLabel: 'Rodapé',
+    limitationLead: 'Modelagem direcional.',
+    limitationTail:
+      'Os números comerciais são estimativas para priorização, não demonstrações financeiras auditadas.',
+    rights: 'GeoRepute. Infraestrutura de inteligência de decisão.',
+    environment: 'Ambiente de demonstração · Dados iniciais',
+    photography: 'Fotografias via',
+    columns: [
+      {
+        title: 'Produto',
+        links: [
+          { label: 'Centro de comando executivo' },
+          { label: 'Reconstrução da decisão' },
+          { label: 'Central de ações' },
+          { label: 'Motores de inteligência' },
+          { label: 'Agendar uma sessão' },
+          { label: 'Preços e planos' },
+        ],
+      },
+      {
+        title: 'Inteligência',
+        links: [
+          { label: 'Mercado de inteligência' },
+          { label: 'Reconhecimento por IA' },
+          { label: 'Google versus IA' },
+          { label: 'Decisão da concorrência' },
+          { label: 'Inteligência de ação' },
+        ],
+      },
+      {
+        title: 'Metodologia',
+        links: [
+          { label: 'O framework GEON' },
+          { label: 'Fontes de evidência' },
+          { label: 'Modelo de confiança' },
+          { label: 'Modelo financeiro' },
+          { label: 'Limitações' },
+        ],
+      },
+      {
+        title: 'Empresa',
+        links: [
+          { label: 'Notas de inteligência' },
+          { label: 'Entrar' },
+          { label: 'Privacidade' },
+          { label: 'Termos de serviço' },
+          { label: 'Tratamento de dados' },
+          { label: 'Segurança' },
+        ],
+      },
+    ],
   },
 
   /* --- Readout anatomy -------------------------------------------------- */
