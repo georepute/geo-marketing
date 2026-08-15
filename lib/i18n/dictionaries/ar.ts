@@ -669,6 +669,15 @@ export const dictionary: PartialDictionary = {
     movementCaption:
       'تحرك توضيحي عبر دورة واحدة. بيانات عرض — وليست نتيجة عميل.',
     movementColumns: ['الإشارة', 'قبل', 'بعد', 'الهدف'],
+    /* Only the signal name translates; before/after/target are figures and
+       come through from the English source by element-wise merge. */
+    movement: [
+      { signal: 'التعرّف عبر الذكاء الاصطناعي' },
+      { signal: 'الحُجّية' },
+      { signal: 'الحضور في القرار' },
+      { signal: 'حصة التوصيات' },
+      { signal: 'ملكية السردية' },
+    ],
 
     whyLabel: 'لماذا يغيّر هذا النموذج',
     whyTraditionalLabel: 'النموذج التقليدي مجزّأ',

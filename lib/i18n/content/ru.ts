@@ -375,6 +375,74 @@ export const content: ContentOverlay = {
   'mro distributor': 'дистрибьютор расходных материалов',
 
   /* ==========================================================================
+     THE HOW-IT-WORKS PAGE.
+
+     Almost all of it comes from the `loop` dictionary block. What lands here
+     is the one inline label and the screenshot slots the four stages render —
+     ProductScreen puts both `surface` and `caption` through t().
+     ======================================================================= */
+
+  'From the platform': 'Из платформы',
+
+  /* --- PLAN · the diagnosis surfaces --------------------------------------- */
+  'Deep Diagnosis — the full scan result across connected signals':
+    'Глубокая диагностика — полный результат сканирования по связанным сигналам',
+  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
+    'Глубокая диагностика по движкам ИИ, поиску, конкурентам, рынку и цифровому присутствию. Анонимизированные демонстрационные данные.',
+  'Competitive Intelligence — the comparison matrix':
+    'Конкурентный интеллект — матрица сравнения',
+  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
+    'Кто получает решение вместо вас и какие доказательства ставят его туда. Анонимизированные демонстрационные данные.',
+  'AI Intelligence — per-engine recognition and recommendation':
+    'Интеллект ИИ — распознавание и рекомендация по каждому движку',
+  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
+    'Что понимает каждый движок ИИ и когда он рекомендует. Анонимизированные демонстрационные данные.',
+  'Google vs AI Visibility — the gap matrix':
+    'Видимость: Google против ИИ — матрица разрывов',
+  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
+    'Две поверхности обнаружения, измеряемые раздельно. Анонимизированные демонстрационные данные.',
+  'Market Intelligence — category and demand view':
+    'Рыночный интеллект — вид по категории и спросу',
+  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
+    'Что меняется на рынке и с чем из этого можно работать. Анонимизированные демонстрационные данные.',
+  'Narrative Intelligence — narrative ownership and movement':
+    'Интеллект нарратива — владение нарративом и его движение',
+  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
+    'Какая версия категории циркулирует и чьим языком она изложена. Анонимизированные демонстрационные данные.',
+  'Trust & Authority — independent-source verification view':
+    'Доверие и авторитетность — вид проверки по независимым источникам',
+  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
+    'На что система может сослаться, когда ей нужно обосновать рекомендацию. Анонимизированные демонстрационные данные.',
+
+  /* --- DO · the execution surfaces ----------------------------------------- */
+  'Strategy — objectives translated into targeted signals':
+    'Стратегия — цели, переведённые в целевые сигналы',
+  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
+    'На входе цели, на выходе приоритизированная стратегия. Каждая цель привязана к сигналу, который должен сдвинуться. Анонимизированные демонстрационные данные.',
+  'Content & media generation — output bound to identified gaps':
+    'Создание контента и медиа — выпуск, привязанный к выявленным разрывам',
+  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
+    'Каждый материал прослеживается до разрыва, ради закрытия которого он создан. Анонимизированные демонстрационные данные.',
+  'Execution calendar — sequenced distribution':
+    'Календарь исполнения — распределение по последовательности',
+  'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
+    'Последовательность и сроки, выведенные из стратегии, а не из графика публикаций. Анонимизированные демонстрационные данные.',
+  'Distribution — connected digital assets and publishing state':
+    'Дистрибуция — подключённые цифровые активы и статус публикации',
+  'Where each asset was published, across connected properties. Anonymised demonstration data.':
+    'Где опубликован каждый материал, по всем подключённым площадкам. Анонимизированные демонстрационные данные.',
+
+  /* --- CHECK and ACT ------------------------------------------------------- */
+  'Measurement — the before → action → after comparison table':
+    'Измерение — таблица сравнения «до → действие → после»',
+  'Not what was published. What changed. Anonymised demonstration data.':
+    'Не что опубликовано. Что изменилось. Анонимизированные демонстрационные данные.',
+  'Learning — measured outcome feeding the next recommendation':
+    'Обучение — измеренный результат, питающий следующую рекомендацию',
+  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
+    'Предыдущая рекомендация, что она сдвинула, и скорректированная рекомендация, которая из этого следует. Анонимизированные демонстрационные данные.',
+
+  /* ==========================================================================
      THE METHODOLOGY PAGE.
 
      The evidence sources, model rules and limitations reach t() through a

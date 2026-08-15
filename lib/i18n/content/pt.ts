@@ -382,6 +382,74 @@ export const content: ContentOverlay = {
   'mro distributor': 'distribuidor de consumíveis de manutenção',
 
   /* ==========================================================================
+     THE HOW-IT-WORKS PAGE.
+
+     Almost all of it comes from the `loop` dictionary block. What lands here
+     is the one inline label and the screenshot slots the four stages render —
+     ProductScreen puts both `surface` and `caption` through t().
+     ======================================================================= */
+
+  'From the platform': 'A partir da plataforma',
+
+  /* --- PLAN · the diagnosis surfaces --------------------------------------- */
+  'Deep Diagnosis — the full scan result across connected signals':
+    'Diagnóstico profundo — o resultado completo da análise nos sinais ligados',
+  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
+    'Diagnóstico profundo em motores de IA, pesquisa, concorrentes, mercado e presença digital. Dados de demonstração anonimizados.',
+  'Competitive Intelligence — the comparison matrix':
+    'Inteligência competitiva — a matriz de comparação',
+  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
+    'Quem recebe a decisão em seu lugar e as provas que o colocam aí. Dados de demonstração anonimizados.',
+  'AI Intelligence — per-engine recognition and recommendation':
+    'Inteligência de IA — reconhecimento e recomendação por motor',
+  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
+    'O que cada motor de IA compreende e quando recomenda. Dados de demonstração anonimizados.',
+  'Google vs AI Visibility — the gap matrix':
+    'Visibilidade Google versus IA — a matriz de lacunas',
+  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
+    'Duas superfícies de descoberta, medidas em separado. Dados de demonstração anonimizados.',
+  'Market Intelligence — category and demand view':
+    'Inteligência de mercado — vista de categoria e procura',
+  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
+    'O que está a mudar no mercado e que parte disso é acionável. Dados de demonstração anonimizados.',
+  'Narrative Intelligence — narrative ownership and movement':
+    'Inteligência da narrativa — domínio da narrativa e o seu movimento',
+  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
+    'Que versão da categoria circula e na linguagem de quem está formulada. Dados de demonstração anonimizados.',
+  'Trust & Authority — independent-source verification view':
+    'Confiança e autoridade — vista de verificação por fontes independentes',
+  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
+    'O que um sistema pode citar quando tem de justificar uma recomendação. Dados de demonstração anonimizados.',
+
+  /* --- DO · the execution surfaces ----------------------------------------- */
+  'Strategy — objectives translated into targeted signals':
+    'Estratégia — objetivos traduzidos em sinais direcionados',
+  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
+    'Entram objetivos, sai uma estratégia priorizada. Cada objetivo está ligado a um sinal que se espera mover. Dados de demonstração anonimizados.',
+  'Content & media generation — output bound to identified gaps':
+    'Produção de conteúdo e media — produção ligada às lacunas identificadas',
+  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
+    'Cada peça é rastreada até à lacuna que foi criada para fechar. Dados de demonstração anonimizados.',
+  'Execution calendar — sequenced distribution':
+    'Calendário de execução — distribuição sequenciada',
+  'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
+    'Sequência e calendário, derivados da estratégia e não de uma cadência de publicação. Dados de demonstração anonimizados.',
+  'Distribution — connected digital assets and publishing state':
+    'Distribuição — ativos digitais ligados e estado de publicação',
+  'Where each asset was published, across connected properties. Anonymised demonstration data.':
+    'Onde cada peça foi publicada, em todas as propriedades ligadas. Dados de demonstração anonimizados.',
+
+  /* --- CHECK and ACT ------------------------------------------------------- */
+  'Measurement — the before → action → after comparison table':
+    'Medição — a tabela comparativa antes → ação → depois',
+  'Not what was published. What changed. Anonymised demonstration data.':
+    'Não o que foi publicado. O que mudou. Dados de demonstração anonimizados.',
+  'Learning — measured outcome feeding the next recommendation':
+    'Aprendizagem — resultado medido que alimenta a recomendação seguinte',
+  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
+    'A recomendação anterior, o que moveu, e a recomendação corrigida que daí resulta. Dados de demonstração anonimizados.',
+
+  /* ==========================================================================
      THE METHODOLOGY PAGE.
 
      The evidence sources, model rules and limitations reach t() through a

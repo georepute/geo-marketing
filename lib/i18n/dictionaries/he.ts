@@ -665,6 +665,15 @@ export const dictionary: PartialDictionary = {
     movementCaption:
       'תזוזה להמחשה על פני מחזור אחד. נתוני הדגמה — לא תוצאה של לקוח.',
     movementColumns: ['אות', 'לפני', 'אחרי', 'יעד'],
+    /* Only the signal name translates; before/after/target are figures and
+       come through from the English source by element-wise merge. */
+    movement: [
+      { signal: 'זיהוי על ידי AI' },
+      { signal: 'סמכות' },
+      { signal: 'נוכחות בהחלטה' },
+      { signal: 'נתח ההמלצות' },
+      { signal: 'בעלות על הנרטיב' },
+    ],
 
     whyLabel: 'מדוע זה משנה את המודל',
     whyTraditionalLabel: 'המודל המסורתי מפוצל',

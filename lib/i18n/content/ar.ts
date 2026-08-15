@@ -320,6 +320,74 @@ export const content: ContentOverlay = {
   Evidence: 'الأدلة',
 
   /* ==========================================================================
+     THE HOW-IT-WORKS PAGE.
+
+     Almost all of it comes from the `loop` dictionary block. What lands here
+     is the one inline label and the screenshot slots the four stages render —
+     ProductScreen puts both `surface` and `caption` through t().
+     ======================================================================= */
+
+  'From the platform': 'من داخل المنصة',
+
+  /* --- PLAN · the diagnosis surfaces --------------------------------------- */
+  'Deep Diagnosis — the full scan result across connected signals':
+    'التشخيص العميق — نتيجة الفحص الكاملة عبر الإشارات المترابطة',
+  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
+    'تشخيص عميق عبر محرّكات الذكاء الاصطناعي والبحث والمنافسين والسوق والحضور الرقمي. بيانات توضيحية مجهّلة.',
+  'Competitive Intelligence — the comparison matrix':
+    'الذكاء التنافسي — مصفوفة المقارنة',
+  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
+    'من يتلقى القرار بدلًا منكم، والأدلة التي وضعته هناك. بيانات توضيحية مجهّلة.',
+  'AI Intelligence — per-engine recognition and recommendation':
+    'ذكاء الذكاء الاصطناعي — التعرّف والتوصية لكل محرّك',
+  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
+    'ما يفهمه كل محرّك ذكاء اصطناعي، ومتى يوصي. بيانات توضيحية مجهّلة.',
+  'Google vs AI Visibility — the gap matrix':
+    'الظهور في جوجل مقابل الذكاء الاصطناعي — مصفوفة الفجوات',
+  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
+    'سطحا اكتشاف، يُقاسان بشكل منفصل. بيانات توضيحية مجهّلة.',
+  'Market Intelligence — category and demand view':
+    'ذكاء السوق — عرض الفئة والطلب',
+  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
+    'ما الذي يتغيّر في السوق، وأي جزء منه قابل للمعالجة. بيانات توضيحية مجهّلة.',
+  'Narrative Intelligence — narrative ownership and movement':
+    'ذكاء السردية — ملكية السردية وحركتها',
+  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
+    'أي رواية عن الفئة هي المتداولة، وبلغة مَن تُصاغ. بيانات توضيحية مجهّلة.',
+  'Trust & Authority — independent-source verification view':
+    'الثقة والحُجّية — عرض التحقق من مصادر مستقلة',
+  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
+    'ما يستطيع النظام الاستشهاد به حين يُطلب منه تبرير توصية. بيانات توضيحية مجهّلة.',
+
+  /* --- DO · the execution surfaces ----------------------------------------- */
+  'Strategy — objectives translated into targeted signals':
+    'الاستراتيجية — أهداف تُترجَم إلى إشارات مستهدفة',
+  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
+    'أهداف تدخل، واستراتيجية مرتّبة بالأولوية تخرج. كل هدف مرتبط بإشارة يُتوقع أن تتحرك. بيانات توضيحية مجهّلة.',
+  'Content & media generation — output bound to identified gaps':
+    'إنتاج المحتوى والوسائط — مخرجات مرتبطة بفجوات محددة',
+  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
+    'كل أصل يمكن تتبّعه إلى الفجوة التي أُنشئ لسدّها. بيانات توضيحية مجهّلة.',
+  'Execution calendar — sequenced distribution':
+    'تقويم التنفيذ — توزيع مرتّب زمنيًا',
+  'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
+    'التسلسل والتوقيت، مشتقان من الاستراتيجية لا من وتيرة نشر. بيانات توضيحية مجهّلة.',
+  'Distribution — connected digital assets and publishing state':
+    'التوزيع — الأصول الرقمية الموصولة وحالة النشر',
+  'Where each asset was published, across connected properties. Anonymised demonstration data.':
+    'أين نُشر كل أصل، عبر المنصات الموصولة. بيانات توضيحية مجهّلة.',
+
+  /* --- CHECK and ACT ------------------------------------------------------- */
+  'Measurement — the before → action → after comparison table':
+    'القياس — جدول المقارنة قبل ← الإجراء ← بعد',
+  'Not what was published. What changed. Anonymised demonstration data.':
+    'ليس ما نُشر. بل ما تغيّر. بيانات توضيحية مجهّلة.',
+  'Learning — measured outcome feeding the next recommendation':
+    'التعلّم — نتيجة مقيسة تغذّي التوصية التالية',
+  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
+    'التوصية السابقة، وما حرّكته، والتوصية المصحّحة التي تليها. بيانات توضيحية مجهّلة.',
+
+  /* ==========================================================================
      THE METHODOLOGY PAGE.
 
      The evidence sources, model rules and limitations reach t() through a

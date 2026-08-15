@@ -882,6 +882,74 @@ export const content: ContentOverlay = {
   'Leads to': 'מוביל אל',
 
   /* ==========================================================================
+     THE HOW-IT-WORKS PAGE.
+
+     Almost all of it comes from the `loop` dictionary block. What lands here
+     is the one inline label and the screenshot slots the four stages render —
+     ProductScreen puts both `surface` and `caption` through t().
+     ======================================================================= */
+
+  'From the platform': 'מתוך הפלטפורמה',
+
+  /* --- PLAN · the diagnosis surfaces --------------------------------------- */
+  'Deep Diagnosis — the full scan result across connected signals':
+    'אבחון עומק — תוצאת הסריקה המלאה על פני אותות מקושרים',
+  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
+    'אבחון עומק על פני מנועי AI, חיפוש, מתחרים, שוק ונוכחות דיגיטלית. נתוני הדגמה אנונימיים.',
+  'Competitive Intelligence — the comparison matrix':
+    'מודיעין תחרותי — מטריצת ההשוואה',
+  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
+    'מי מקבל את ההחלטה במקומכם, והראיות שמציבות אותו שם. נתוני הדגמה אנונימיים.',
+  'AI Intelligence — per-engine recognition and recommendation':
+    'מודיעין AI — זיהוי והמלצה לכל מנוע',
+  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
+    'מה כל מנוע AI מבין, ומתי הוא ממליץ. נתוני הדגמה אנונימיים.',
+  'Google vs AI Visibility — the gap matrix':
+    'נראות בגוגל מול AI — מטריצת הפערים',
+  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
+    'שני משטחי גילוי, נמדדים בנפרד. נתוני הדגמה אנונימיים.',
+  'Market Intelligence — category and demand view':
+    'מודיעין שוק — תצוגת קטגוריה וביקוש',
+  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
+    'מה משתנה בשוק, ואיזה חלק מכך בר-טיפול. נתוני הדגמה אנונימיים.',
+  'Narrative Intelligence — narrative ownership and movement':
+    'מודיעין נרטיב — בעלות על הנרטיב ותנועתו',
+  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
+    'איזו גרסה של הקטגוריה מסתובבת, ובלשונו של מי היא מנוסחת. נתוני הדגמה אנונימיים.',
+  'Trust & Authority — independent-source verification view':
+    'אמון וסמכות — תצוגת אימות ממקורות בלתי תלויים',
+  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
+    'על מה מערכת יכולה להסתמך כשהיא נדרשת להצדיק המלצה. נתוני הדגמה אנונימיים.',
+
+  /* --- DO · the execution surfaces ----------------------------------------- */
+  'Strategy — objectives translated into targeted signals':
+    'אסטרטגיה — יעדים שמתורגמים לאותות ממוקדים',
+  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
+    'יעדים נכנסים, אסטרטגיה מתועדפת יוצאת. כל יעד קשור לאות שצפוי לזוז. נתוני הדגמה אנונימיים.',
+  'Content & media generation — output bound to identified gaps':
+    'הפקת תוכן ומדיה — תפוקה הקשורה לפערים שזוהו',
+  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
+    'כל נכס ניתן להתחקות אל הפער שנועד לסגור. נתוני הדגמה אנונימיים.',
+  'Execution calendar — sequenced distribution':
+    'לוח ביצוע — הפצה מסודרת בזמן',
+  'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
+    'רצף ותזמון, נגזרים מהאסטרטגיה ולא מקצב פרסום. נתוני הדגמה אנונימיים.',
+  'Distribution — connected digital assets and publishing state':
+    'הפצה — נכסים דיגיטליים מחוברים ומצב הפרסום',
+  'Where each asset was published, across connected properties. Anonymised demonstration data.':
+    'היכן פורסם כל נכס, על פני הנכסים המחוברים. נתוני הדגמה אנונימיים.',
+
+  /* --- CHECK and ACT ------------------------------------------------------- */
+  'Measurement — the before → action → after comparison table':
+    'מדידה — טבלת ההשוואה לפני ← פעולה ← אחרי',
+  'Not what was published. What changed. Anonymised demonstration data.':
+    'לא מה פורסם. מה השתנה. נתוני הדגמה אנונימיים.',
+  'Learning — measured outcome feeding the next recommendation':
+    'למידה — תוצאה נמדדת שמזינה את ההמלצה הבאה',
+  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
+    'ההמלצה הקודמת, מה היא הזיזה, וההמלצה המתוקנת שנובעת מכך. נתוני הדגמה אנונימיים.',
+
+  /* ==========================================================================
      THE METHODOLOGY PAGE.
 
      Note the evidence sources, model rules and limitations reach t() through

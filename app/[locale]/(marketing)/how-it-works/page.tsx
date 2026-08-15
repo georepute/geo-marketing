@@ -6,6 +6,7 @@ import { LoopDiagram } from '@/components/loop/LoopDiagram'
 import { ProductScreen, ProductScreenGrid } from '@/components/product/ProductScreen'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { getDictionary } from '@/lib/i18n/server'
+import { getT } from '@/lib/i18n/content/translator'
 import type { ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
 
@@ -44,6 +45,7 @@ const STAGE_SCREENS: Record<string, readonly ScreenSlotId[]> = {
 
 export default async function HowItWorksPage() {
   const dict = await getDictionary()
+  const t = await getT()
   const loop = dict.loop
 
   return (
@@ -222,7 +224,7 @@ export default async function HowItWorksPage() {
             {/* --- The screens this stage produces --------------------- */}
             <div className="mt-12">
               <p className="text-label uppercase text-ink-3 mb-5">
-                From the platform
+                {t('From the platform')}
               </p>
               {stage.id === 'check' || stage.id === 'act' ? (
                 <ProductScreen

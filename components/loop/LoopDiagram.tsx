@@ -45,6 +45,13 @@ export function LoopDiagram({ className }: { className?: string }) {
   const reduced = useReducedMotion()
   const steps = dict.loop.steps
 
+  /* The centre caption is split out of `loop.cycle` rather than hardcoded, so
+     it can never disagree with the stage names beside it. Arrows differ by
+     direction: LTR dictionaries write → and RTL ones write ←. */
+  const phases = dict.loop.cycle.split(/\s*[→←]\s*/).filter(Boolean)
+  const centreTop = phases.slice(0, 3).join(' · ')
+  const centreBottom = phases.slice(3).join(' · ')
+
   return (
     <div className={cn('relative', className)}>
       <svg
@@ -139,7 +146,7 @@ export function LoopDiagram({ className }: { className?: string }) {
           letterSpacing="1.6"
           fontFamily="var(--font-mono)"
         >
-          PLAN · DO · CHECK
+          {centreTop}
         </text>
         <text
           x={CENTER}
@@ -150,7 +157,7 @@ export function LoopDiagram({ className }: { className?: string }) {
           letterSpacing="1.6"
           fontFamily="var(--font-mono)"
         >
-          ACT · REPEAT
+          {centreBottom}
         </text>
       </svg>
 

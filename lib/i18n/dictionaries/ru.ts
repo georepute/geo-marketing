@@ -687,6 +687,15 @@ export const dictionary: PartialDictionary = {
     movementCaption:
       'Иллюстративное движение за один цикл. Демонстрационные данные — не результат клиента.',
     movementColumns: ['Сигнал', 'До', 'После', 'Цель'],
+    /* Only the signal name translates; before/after/target are figures and
+       come through from the English source by element-wise merge. */
+    movement: [
+      { signal: 'Распознавание ИИ' },
+      { signal: 'Авторитетность' },
+      { signal: 'Присутствие в решении' },
+      { signal: 'Доля рекомендаций' },
+      { signal: 'Владение нарративом' },
+    ],
 
     whyLabel: 'Почему это меняет модель',
     whyTraditionalLabel: 'Традиционная модель фрагментирована',
