@@ -43,13 +43,17 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**All six home pages are complete** — he, ar, ru, fr, es, pt.
+**The home page and /methodology are complete in all six** — he, ar, ru, fr,
+es, pt.
 
-| Locale | Measure | Remaining |
-| --- | --- | --- |
-| he · ar · ru | script mode | 1 each (the ISO code chip) |
-| fr | diff mode | 16 cognates |
-| es · pt | diff mode | 1 each (`Visible`, `Volume`) |
+| Page | he · ar · ru (script) | fr | es | pt |
+| --- | --- | --- | --- | --- |
+| home | 1 each | 16 | 1 | 1 |
+| /methodology | 1 each | 1 | 0 | 0 |
+
+The `1` on he/ar/ru is the ISO code chip in the compact language switcher. The
+Latin-script residue is cognates — `Visible`, `Volume`, `Intelligence`,
+`Action` — words genuinely identical in those languages.
 
 **Read §3 on the two audit modes before trusting any of those numbers.** The
 Latin-script locales cannot be measured the same way as the others, and the
@@ -66,8 +70,11 @@ the rest were translation jobs.
   `reviewed: false`. **None has been read by a native speaker.**
 - The **content overlays** (`lib/i18n/content/*.ts`) — seed prose and inline
   component prose — now exist for all six, ~580 entries each.
-- All six are done **for the home page only**. Other routes will show English
-  wherever they use prose the home page did not.
+- All six cover **the home page and /methodology**. Other routes will show
+  English wherever they use prose those two did not.
+- **`i18n-keys.mjs` only sees literal `t('…')` calls.** The methodology page
+  passes three arrays through `t(variable)`; the script reported 0 missing
+  while 25 strings were still English. Treat it as a worklist, never as proof.
 - `pt` is **European Portuguese**. pt-BR would be a new locale entry, not an
   edit to `pt.ts`; the vocabularies diverge too often for one file to serve
   both honestly.
@@ -221,9 +228,14 @@ node scripts/i18n-port.mjs he fr
 
 Step 2 is the measure of done. Steps 3 and 4 only tell you what to write.
 
-**Restart the server after editing a `lib/i18n/content/*.ts` file.** Those are
-loaded through a dynamic `import()`; HMR does not reliably invalidate them, and
-you will otherwise see your own edits fail to appear.
+**The overlays are imported statically, and must stay that way.** They were
+lazy (`he: () => import('./he')`), and `next dev` does not reliably invalidate
+a dynamically imported module — an overlay edited mid-session kept serving its
+previous contents. The failure was partial and therefore convincing: older keys
+resolved while newly added ones fell through to English, so a page rendered
+half-translated and looked like a broken lookup rather than a stale module. It
+produced three false readings before it was found. Reverting
+`lib/i18n/content/index.ts` to lazy imports brings all of that back.
 
 ### Full gate before any commit
 
