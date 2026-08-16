@@ -1108,4 +1108,1170 @@ export const content: ContentOverlay = {
   'Demand Gen Manager': 'Менеджер по генерации спроса',
   'Customer-configured': 'Настраивается клиентом',
   'Derived from §13.1 chain': 'Выведено из цепочки §13.1',
+  /* A product name. Recorded rather than translated, so its absence from the
+     rest of this file reads as a decision and not an oversight. */
+  'Google Ads': 'Google Ads',
+
+  /* ==========================================================================
+     ELECTION INTELLIGENCE
+     The race, the candidates and the county are invented. Unlike he and ar,
+     which keep them Latin, Russian transliterates personal and place names as
+     a matter of course — leaving a Latin run inside Cyrillic prose would read
+     as a quotation, not as a name.
+     ====================================================================== */
+  'Demonstration subject': 'Объект демонстрации',
+  'Entirely fictional. No real person, party or race.':
+    'Полностью вымышленный. Ни реального человека, ни партии, ни гонки.',
+  Race: 'Гонка',
+  'County Commission': 'Совет округа',
+  'Riverbend County — District 4': 'Округ Ривербенд — участок 4',
+  Candidate: 'Кандидат',
+  Opponent: 'Оппонент',
+  'A. Marchetti': 'А. Маркетти',
+  'D. Okonkwo': 'Д. Оконкво',
+  'Election War Room — the live operational view':
+    'Штаб избирательной кампании — оперативная картина в реальном времени',
+  'The Election War Room. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'Штаб избирательной кампании. Вымышленная гонка, демонстрационные данные — ни реального кандидата, ни партии, ни кампании.',
+  'Candidate / party dashboard — the standing position':
+    'Панель кандидата и партии — текущее положение',
+  'Candidate and party position. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'Положение кандидата и партии. Вымышленная гонка, демонстрационные данные — ни реального кандидата, ни партии, ни кампании.',
+  'Election narrative intelligence — positive vs negative narratives':
+    'Интеллект предвыборных нарративов — положительные против отрицательных',
+  'Which narratives are strengthening the position and which are damaging it. Fictional race, demonstration data.':
+    'Какие нарративы укрепляют позицию, а какие вредят ей. Вымышленная гонка, демонстрационные данные.',
+  'Positive vs negative narratives — the polarity split':
+    'Положительные против отрицательных — разделение полярности',
+  'Positive against negative, by reach and by direction of travel. Fictional race, demonstration data.':
+    'Положительные против отрицательных, по охвату и по направлению движения. Вымышленная гонка, демонстрационные данные.',
+  'Audience / segment movement — who is moving toward and away':
+    'Движение аудиторий и сегментов — кто приближается, а кто отдаляется',
+  'Which audiences are moving closer and which are moving away. Fictional race, demonstration data.':
+    'Какие аудитории приближаются, а какие отдаляются. Вымышленная гонка, демонстрационные данные.',
+  'Opponent intelligence — competing narratives and ownership':
+    'Интеллект оппонента — конкурирующие нарративы и владение ими',
+  'What the opposing account is, and which issues it owns. Fictional race, demonstration data.':
+    'В чём состоит версия противоположной стороны и какими темами она владеет. Вымышленная гонка, демонстрационные данные.',
+  'Influencers and sources shaping the narrative':
+    'Лидеры мнений и источники, формирующие нарратив',
+  'Who is strengthening the position and who is damaging it. Fictional race, demonstration data.':
+    'Кто укрепляет позицию, а кто вредит ей. Вымышленная гонка, демонстрационные данные.',
+  'AI + Google election intelligence — per-engine narrative leads':
+    'Предвыборный интеллект ИИ и Google — ведущий нарратив по каждому движку',
+  'What each AI engine and Google surface leads with. Fictional race, demonstration data.':
+    'С чего начинает каждый движок ИИ и каждая поверхность Google. Вымышленная гонка, демонстрационные данные.',
+  'Multilingual intelligence — narrative gaps between languages':
+    'Многоязычный интеллект — расхождения нарратива между языками',
+  'Where the account of a candidate differs by language. Fictional race, demonstration data.':
+    'Где версия о кандидате различается в зависимости от языка. Вымышленная гонка, демонстрационные данные.',
+  'Risks and opportunities — emerging threats and open positions':
+    'Риски и возможности — возникающие угрозы и свободные позиции',
+  'Emerging threats and unclaimed positions, ranked. Fictional race, demonstration data.':
+    'Возникающие угрозы и незанятые позиции, по убыванию значимости. Вымышленная гонка, демонстрационные данные.',
+  'Recommended actions — the campaign action plan':
+    'Рекомендуемые действия — план работы кампании',
+  'What to do now, who owns it, and how the movement will be measured. Fictional race, demonstration data.':
+    'Что делать сейчас, кто за это отвечает и как будет измерено движение. Вымышленная гонка, демонстрационные данные.',
+  'Trend over time — narrative movement across the cycle':
+    'Динамика во времени — движение нарратива на протяжении цикла',
+  'How the position has moved across the cycle. Fictional race, demonstration data.':
+    'Как позиция менялась на протяжении цикла. Вымышленная гонка, демонстрационные данные.',
+
+  /* ==========================================================================
+     INTELLIGENCE ENGINES
+     ====================================================================== */
+  'Intelligence engines': 'Движки интеллекта',
+  'Each engine answers a board-level business question, produces a connected intelligence readout and routes the user into action. Not a feature list — a set of questions the business needs answered.':
+    'Каждый движок отвечает на бизнес-вопрос уровня совета директоров, выдаёт связную интеллект-сводку и выводит пользователя к действию. Это не перечень функций, а набор вопросов, на которые бизнесу нужны ответы.',
+  'Built in this environment · 4 of 12': 'Построено в этой среде · 4 из 12',
+  'Four engines, built to full depth': 'Четыре движка, проработанные на полную глубину',
+  'Each carries a real seeded outcome, its evidence, its commercial consequence and the action it prescribes. They chain into one another — together they form the causal argument rather than four samples of it.':
+    'Каждый несёт реальный заложенный результат, его доказательства, коммерческое следствие и предписываемое действие. Они сцепляются друг с другом — вместе они образуют причинную аргументацию, а не четыре её образца.',
+  'The full operating system': 'Полная операционная система',
+  'Eight further engines available in the platform':
+    'Ещё восемь движков доступны в платформе',
+  'These are part of the operating system but are not built in this demonstration environment. Their business questions are listed so the shape of the full system is visible.':
+    'Они входят в операционную систему, но не построены в этой демонстрационной среде. Их бизнес-вопросы перечислены, чтобы был виден контур всей системы.',
+  'Available in platform': 'Доступно в платформе',
+  'Is the business present when customers ask AI whom to choose?':
+    'Присутствует ли бизнес, когда клиенты спрашивают ИИ, кого выбрать?',
+  'Which gap is commercially meaningful enough to fix first?':
+    'Какой разрыв коммерчески значим настолько, чтобы закрыть его первым?',
+  'When does paid search become structurally inefficient?':
+    'Когда платный поиск становится структурно неэффективным?',
+  'Is the business visible but still unsafe to recommend?':
+    'Виден ли бизнес, но рекомендовать его по-прежнему небезопасно?',
+  'When the market explains the category, whose language does it use?':
+    'Когда рынок объясняет категорию, чьим языком он пользуется?',
+  'Is the market ready, and how long is the window open?':
+    'Готов ли рынок и как долго открыто окно?',
+  'How does the business change across countries, languages and markets?':
+    'Как бизнес меняется от страны к стране, от языка к языку, от рынка к рынку?',
+  'Does the route to market strengthen the brand or transfer power to intermediaries?':
+    'Укрепляет ли канал выхода на рынок бренд или передаёт власть посредникам?',
+  'See plans': 'Посмотреть тарифы',
+
+  /* ==========================================================================
+     MARKETPLACE
+     ====================================================================== */
+  'Seven categories of decision intelligence, each holding the models that answer one kind of commercial question. Most of them measure things a business has never been able to see — not because the questions are exotic, but because nothing existed to answer them.':
+    'Семь категорий интеллекта решений, в каждой — модели, отвечающие на один тип коммерческого вопроса. Большинство из них измеряет то, что бизнес никогда не мог увидеть, — не потому что вопросы экзотические, а потому что не существовало ничего, что на них отвечало бы.',
+  'Intelligence categories': 'Категории интеллекта',
+  'Intelligence modules': 'Модули интеллекта',
+  'Engines beneath them': 'Движки под ними',
+  'of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    'из этих модулей работают в этой среде вживую на реально реконструированном бизнесе. Остальные доступны в платформе.',
+  'Start with the question you actually have.':
+    'Начните с того вопроса, который у вас действительно есть.',
+  'Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.':
+    'Каждая категория раскрывается в модули под ней. Каждый модуль отвечает на один бизнес-вопрос и возвращает доказательства, анализ и рекомендацию — но никогда просто цифру.',
+  'What you are buying': 'Что вы покупаете',
+  'The document is the output. The intelligence is the product.':
+    'Документ — это результат. Продукт — это интеллект.',
+  'How the models work': 'Как работают модели',
+  'Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion.':
+    'За каждым утверждением стоит наблюдение — какой движок, какой вопрос, какая дата. Вывод, который нельзя проверить, — это мнение.',
+  'What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied.':
+    'Что доказательства означают коммерчески, что их вызывает и насколько уверенной модель может быть честно. Ограничения указываются прямо, а не подразумеваются.',
+  'What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved.':
+    'Что делать, кто за это отвечает, к какому сроку и какой сигнал должен в результате сдвинуться. Затем это сверяется с тем, что сдвинулось на самом деле.',
+  'Whatever the business question, there is already intelligence built for it.':
+    'Каким бы ни был бизнес-вопрос, интеллект под него уже построен.',
+  'See a module run live': 'Посмотреть модуль в работе',
+  'Monitor continuously instead': 'Либо вести непрерывный мониторинг',
+  '7 live in demo': '7 работают в демо',
+  '4 live in demo': '4 работают в демо',
+  Analysis: 'Анализ',
+  Recommendation: 'Рекомендация',
+  modules: 'модулей',
+  Explore: 'Изучить',
+  '+ 1 more': '+ ещё 1',
+  '+ 2 more': '+ ещё 2',
+  '+ 4 more': '+ ещё 4',
+  '+ 6 more': '+ ещё 6',
+  '+ {n} more': '+ ещё {n}',
+  '{n} live in demo': '{n} работают в демо',
+  '<b>{n}</b> of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    '<b>{n}</b> из этих модулей работают в этой среде вживую на реально реконструированном бизнесе. Остальные доступны в платформе.',
+  'Built in this environment · {n} of {total}': 'Построено в этой среде · {n} из {total}',
+
+  /* ==========================================================================
+     LEGAL
+     `localStorage` stays Latin — it is the storage API by name, and the page
+     has to name it precisely.
+     ====================================================================== */
+  Legal: 'Правовая информация',
+  'Legal and data handling': 'Правовая информация и обращение с данными',
+  'Legal and data handling | GeoRepute':
+    'Правовая информация и обращение с данными | GeoRepute',
+  'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.':
+    'Конфиденциальность, условия, обработка данных и состояние безопасности демонстрационной среды GeoRepute.',
+  'What this environment does and does not do with data.':
+    'Что эта среда делает с данными и чего не делает.',
+  'This is a demonstration build. Rather than reproduce boilerplate that would not apply to it, each section below states the actual position.':
+    'Это демонстрационная сборка. Вместо того чтобы воспроизводить шаблонные формулировки, которые к ней неприменимы, каждый раздел ниже излагает фактическое положение дел.',
+  Privacy: 'Конфиденциальность',
+  'This environment collects nothing. There is no analytics script, no tag manager, no session recording and no third-party tracker on any page.':
+    'Эта среда не собирает ничего. Ни на одной странице нет скрипта аналитики, менеджера тегов, записи сессий или стороннего трекера.',
+  'The only data stored about you is your theme preference and any demonstration purchases, both held in your browser’s localStorage and readable only by this site. Nothing is transmitted anywhere. Clearing site data removes all of it, and the purchase-confirmation screen offers a reset control.':
+    'Единственные хранимые о вас данные — выбранная тема и демонстрационные покупки; и то и другое находится в localStorage вашего браузера и читается только этим сайтом. Никуда ничего не передаётся. Очистка данных сайта удаляет всё это, а на экране подтверждения покупки есть кнопка сброса.',
+  'Terms of service': 'Условия использования',
+  'No commercial terms apply. Nothing on this site constitutes an offer, and no contract can be formed through it.':
+    'Никакие коммерческие условия не применяются. Ничто на этом сайте не является офертой, и через него нельзя заключить договор.',
+  'Pricing shown throughout is placeholder and clearly marked as such on the pricing page. The checkout collects no payment details and processes no charge.':
+    'Указанные цены являются условными и явно помечены как таковые на странице тарифов. Оформление заказа не собирает платёжных данных и не проводит списаний.',
+  'Data processing': 'Обработка данных',
+  'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
+    'Northwind Supply — вымышленная организация. Каждая приписанная ей цифра заложена заранее, внутренне непротиворечива и выведена из опубликованного набора опорных фактов. Данные реальных компаний нигде в этой среде не встречаются.',
+  'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.':
+    'Названия конкурентов, домены и количество цитирований вымышлены. Любое сходство с действующим бизнесом случайно и непреднамеренно.',
+  'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.':
+    'Движки ИИ упоминаются под их публичными продуктовыми названиями ради точности описания. Ни аффилированность, ни одобрение, ни партнёрство не заявляются и не подразумеваются.',
+  Security: 'Безопасность',
+  'There is no authentication, no user account and no server-side session. The sign-in screen requests no password because none is checked — inviting a real credential into a demonstration would be a hazard, not a convenience.':
+    'Здесь нет ни аутентификации, ни учётной записи, ни серверной сессии. Экран входа не запрашивает пароль, потому что никакой пароль не проверяется: приглашать настоящие учётные данные в демонстрацию было бы опасностью, а не удобством.',
+  'No external network requests are made at runtime. Fonts are self-hosted, all visuals are generated in CSS or SVG, and the content security posture assumes no third-party origin is trusted.':
+    'Во время работы не выполняется никаких внешних сетевых запросов. Шрифты размещены локально, вся графика создаётся средствами CSS или SVG, а политика безопасности контента исходит из того, что ни один сторонний источник не является доверенным.',
+  'Before this platform is operated commercially, these sections must be replaced with reviewed policies covering the real data flows, retention periods, sub-processors and jurisdictions involved.':
+    'Прежде чем эта платформа будет использоваться коммерчески, эти разделы должны быть заменены выверенными политиками, охватывающими реальные потоки данных, сроки хранения, субобработчиков и применимые юрисдикции.',
+  'Return home': 'Вернуться на главную',
+
+  /* ==========================================================================
+     SIGN IN
+     ====================================================================== */
+  'Sign In': 'Вход',
+  'Sign In | GeoRepute': 'Вход | GeoRepute',
+  Home: 'Главная',
+  'Enter the demonstration workspace': 'Войти в демонстрационное рабочее пространство',
+  'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
+    'В этой среде нет аутентификации. Каждый посетитель видит одну и ту же заложенную организацию, Northwind Supply, чтобы любую цифру можно было проверить по опубликованной методологии.',
+  Workspace: 'Рабочее пространство',
+  'northwindsupply.com · US Midwest': 'northwindsupply.com · Средний Запад США',
+  'Continue to Mission Control': 'Перейти в центр управления',
+  'No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.':
+    'Пароль не запрашивается, потому что он не проверяется. Настоящая аутентификация встраивается за тем же маршрутом, не меняя места этого экрана в потоке.',
+
+  /* ==========================================================================
+     PUBLIC NARRATIVE INTELLIGENCE
+
+     Trade-publication mastheads (Industrial Distribution, Modern Supply
+     Chain, Fastener Technology, Plant Engineering) stay Latin. They are
+     invented proper nouns, like the competitor names.
+
+     Nothing here may be keyed on a bare lowercase enum value — 'emerging',
+     'growing', 'steady', 'declining' are discriminants in the seed graph and
+     translating them rewrites the data. The component maps them to
+     capitalised labels; translate those.
+     ====================================================================== */
+  'Public narrative intelligence': 'Интеллект публичного нарратива',
+  'Public Narrative Intelligence | GeoRepute': 'Интеллект публичного нарратива | GeoRepute',
+  'Public Narrative Intelligence': 'Интеллект публичного нарратива',
+  'What story is the market telling about us?': 'Какую историю рынок рассказывает о нас?',
+  'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
+    'Не как часто упоминается бизнес. А какие версии о нём активны, кто владеет каждой из них и какие из них решают, выберут его или нет.',
+  'Election mode': 'Предвыборный режим',
+  'Political intelligence': 'Политический интеллект',
+  Health: 'Состояние',
+  'Narrative health': 'Состояние нарратива',
+  'Overall public sentiment': 'Общая тональность в публичном поле',
+  'A weighted read of how much active conversation helps against how much hurts.':
+    'Взвешенная оценка того, какая доля активного разговора помогает, а какая вредит.',
+  'Narrative momentum': 'Импульс нарратива',
+  'Narrative stability': 'Устойчивость нарратива',
+  'Narrative balance': 'Баланс нарративов',
+  'Positive narrative strength': 'Сила положительного нарратива',
+  'Negative narrative strength': 'Сила отрицательного нарратива',
+  'Neutral narrative': 'Нейтральный нарратив',
+  'The balance between stories that help and stories that hurt, weighted by how much of the conversation each reaches.':
+    'Баланс между историями, которые помогают, и историями, которые вредят, взвешенный по доле разговора, до которой доходит каждая.',
+  '20% of active category conversation carries a story that favours this business — and both of those narratives are currently unclaimed by anyone.':
+    '20% активного разговора в категории несут историю, играющую в пользу этого бизнеса, — и обоими этими нарративами сейчас никто не владеет.',
+  '74% carries a story that works against it, most of it a competitor’s evaluation framing rather than criticism of the business itself.':
+    '74% несут историю, работающую против него, и по большей части это оценочная рамка конкурента, а не критика самого бизнеса.',
+  '6% is category-level conversation attached to no supplier. Neutral is not safe — it is unowned ground with no defender.':
+    '6% — это разговор на уровне категории, не привязанный ни к одному поставщику. Нейтральное не значит безопасное: это ничья территория, у которой нет защитника.',
+  'Sentiment is not hostility. Nothing here is criticism of the business — the adverse weight comes almost entirely from stories written by competitors in which this business does not appear.':
+    'Тональность — это не враждебность. Здесь нет критики бизнеса: отрицательный вес почти целиком складывается из историй, написанных конкурентами, в которых этот бизнес вообще не фигурирует.',
+  '3 adverse narratives are gaining ground against 1 favourable one. Direction matters more than the current balance, because it is what the position will be in two quarters.':
+    '3 неблагоприятных нарратива набирают силу против 1 благоприятного. Направление важнее текущего баланса, потому что именно оно и есть позиция через два квартала.',
+  '4 of 8 active narratives are still forming or growing. The account of this category is not yet fixed, which is what makes intervention cheap now and expensive later.':
+    '4 из 8 активных нарративов ещё формируются или растут. Версия об этой категории пока не закрепилась — именно поэтому вмешательство сейчас дёшево, а позже дорого.',
+  Landscape: 'Ландшафт',
+  'Every active narrative in this category': 'Все активные нарративы в этой категории',
+  'Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.':
+    'Отсортировано по охвату. Важна колонка владельца: благоприятная история, которой никто не владеет, — это актив, ждущий, чтобы его заняли.',
+  'Who owns the story': 'Кто владеет историей',
+  'Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.':
+    'Доля активного разговора, взвешенная по охвату. Незанятое — не нейтральная территория, а территория без защитника.',
+  Business: 'Бизнес',
+  Competitors: 'Конкуренты',
+  Shared: 'Общее',
+  Unclaimed: 'Не занято',
+  'Business: 4%': 'Бизнес: 4%',
+  'Competitors: 56%': 'Конкуренты: 56%',
+  'Shared: 20%': 'Общее: 20%',
+  'Unclaimed: 20%': 'Не занято: 20%',
+  'Category language owned': 'Доля языка категории во владении',
+  'The share of the vocabulary engines use to define this category that belongs to this business. Whoever holds this sets the criteria every comparison is scored against.':
+    'Доля словаря, которым движки определяют эту категорию, принадлежащая этому бизнесу. Тот, кто им владеет, задаёт критерии, по которым оценивается каждое сравнение.',
+  'The split above measures this specific narrative inventory. This figure measures the category’s language as a whole, and is the same one Mission Control publishes.':
+    'Разбивка выше измеряет именно этот набор нарративов. Эта же цифра измеряет язык категории в целом и совпадает с той, которую публикует центр управления.',
+  'The business holds': 'Бизнесу принадлежит',
+  'The business holds <b>{pct}%</b>, and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    'Бизнесу принадлежит <b>{pct}%</b>, и каждый процент из них — это ошибка с розничным магазином инструментов, а не то, что бизнес выбрал сказать. Владение считает истории, привязанные к имени; оно не спрашивает, помогают ли они.',
+  'Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.':
+    'Взвешено по охвату, а не подсчитано, поэтому история, доходящая до трети категории, не равна той, что доходит до двадцатой её части.',
+  Reach: 'Охват',
+  'Owned by': 'Владелец',
+  Influence: 'Влияние',
+  Competition: 'Конкуренция',
+  Opportunity: 'Возможность',
+  Strength: 'Сила',
+  Weakness: 'Слабость',
+  Risk: 'Риск',
+  Media: 'СМИ',
+  Questions: 'Вопросы',
+  'If ignored': 'Если проигнорировать',
+  'Overlap with us': 'Пересечение с нами',
+  Unsettled: 'Не закрепилось',
+  '— absent': '— отсутствует',
+  '{level} severity': 'Серьёзность: {level}',
+  '+ {n} more tracked': '+ ещё {n} отслеживается',
+  '31 % share': 'доля 31 %',
+  '18 % share': 'доля 18 %',
+  '11 % share': 'доля 11 %',
+  '7 % share': 'доля 7 %',
+  '{pct}% share': 'доля {pct}%',
+  Growing: 'Растёт',
+  Steady: 'Стабилен',
+  Declining: 'Слабеет',
+  Contested: 'Оспаривается',
+  Neutral: 'Нейтральный',
+  Favourable: 'Благоприятный',
+  Adverse: 'Неблагоприятный',
+  'Favourable · emerging': 'Благоприятный · зарождается',
+  'Favourable · steady': 'Благоприятный · стабилен',
+  'Adverse · emerging': 'Неблагоприятный · зарождается',
+  'Adverse · growing': 'Неблагоприятный · растёт',
+  'Adverse · steady': 'Неблагоприятный · стабилен',
+  'Adverse · declining': 'Неблагоприятный · слабеет',
+  'Neutral · steady': 'Нейтральный · стабилен',
+
+  /* --- Competitor narratives ------------------------------------------------------- */
+  'The story each competitor is telling': 'Какую историю рассказывает каждый конкурент',
+  'Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.':
+    'В любую позицию встроена слабость. Нарратив, достаточно сильный, чтобы доминировать, обычно достаточно узок, чтобы его обойти с фланга.',
+  'The safe national choice with published comparisons.':
+    'Безопасный общенациональный выбор с опубликованными сравнениями.',
+  'The technical authority on specification.': 'Технический авторитет по спецификациям.',
+  'The educator that reaches buyers first.':
+    'Просветитель, который добирается до покупателей первым.',
+  'The procurement-checklist incumbent.':
+    'Тот, кто уже прописан в закупочных чек-листах.',
+  'Owns the evaluation criteria itself. Engines cite its comparison library when explaining how to choose a supplier at all.':
+    'Владеет самими критериями оценки. Движки ссылаются на его библиотеку сравнений, когда вообще объясняют, как выбирать поставщика.',
+  'Its case rests on breadth and fill rate. It has no response prepared on response time or regional service depth.':
+    'Его аргументация держится на широте ассортимента и уровне выполнения заказов. У него нет готового ответа по времени отклика и глубине регионального сервиса.',
+  'Competes directly on supplier-evaluation questions, where it is named first in four of seven.':
+    'Прямо конкурирует в вопросах оценки поставщиков, где его называют первым в четырёх из семи.',
+  'Its vocabulary can be adopted and extended rather than fought. Speaking its language while adding availability outflanks it.':
+    'Его словарь можно перенять и расширить, а не воевать с ним. Говорить на его языке, добавив доступность, — значит обойти его с фланга.',
+  'Specification depth does not answer availability. It is largely absent from questions about delivery and continuity.':
+    'Глубина спецификаций не отвечает на вопрос о доступности. В вопросах о поставке и непрерывности он почти не представлен.',
+  'Owns solution-evaluation questions upstream of where this business competes.':
+    'Владеет вопросами оценки решений на этапе выше того, где конкурирует этот бизнес.',
+  'Its own framing concedes that speed is a separate axis. A published response-time standard splits the criterion it defined.':
+    'Его собственная рамка признаёт, что скорость — отдельная ось. Опубликованный стандарт времени отклика расщепляет критерий, который он же и задал.',
+  'Enters the decision at research, before evaluation criteria exist, and shapes them by arriving early.':
+    'Входит в решение на стадии изучения, до того как появляются критерии оценки, и формирует их тем, что приходит раньше.',
+  'Almost no presence earlier in the journey. Its position is administrative rather than argued.':
+    'Почти не присутствует на более ранних этапах пути. Его позиция административная, а не аргументированная.',
+  'Owns early-stage questions this business is also absent from, but does not convert them.':
+    'Владеет вопросами ранней стадии, где этот бизнес тоже отсутствует, но не конвертирует их.',
+  'Thin at the point of purchase. Rarely named when a buyer asks whom to actually choose.':
+    'Слаб в точке покупки. Его редко называют, когда покупатель спрашивает, кого выбрать на самом деле.',
+  'Research-stage presence is uncontested at the point where education becomes a shortlist.':
+    'Присутствие на стадии изучения никем не оспаривается ровно там, где просвещение превращается в короткий список.',
+  'Named on procurement documentation that engines cite at the moment of purchase.':
+    'Назван в закупочной документации, на которую движки ссылаются в момент покупки.',
+  'Competes only at purchase decision, where this business also has no coverage.':
+    'Конкурирует только на решении о покупке, где у этого бизнеса тоже нет покрытия.',
+  'A checklist position is winnable through documentation rather than through reputation.':
+    'Позицию в чек-листе можно выиграть документацией, а не репутацией.',
+
+  /* --- Media narratives ------------------------------------------------------------ */
+  'What publications are actually writing about': 'О чём издания пишут на самом деле',
+  'The business appears in none of four active category stories. Two of them — provenance and tariff continuity — have no supplier voice at all.':
+    'Бизнес не фигурирует ни в одной из четырёх активных историй категории. В двух из них — о происхождении товара и о непрерывности поставок при пошлинах — голоса поставщика нет вообще.',
+  'The business appears in none of the four active category stories. Media narrative is currently being written entirely by others.':
+    'Бизнес не фигурирует ни в одной из четырёх активных историй категории. Медийный нарратив сейчас целиком пишут другие.',
+  'MRO supplier consolidation across Midwest manufacturing':
+    'Консолидация поставщиков MRO на производствах Среднего Запада',
+  'Counterfeit fasteners in industrial supply chains':
+    'Контрафактный крепёж в промышленных цепочках поставок',
+  'Verification and provenance in fastener sourcing':
+    'Проверка и происхождение при закупке крепежа',
+  'Fastener supply continuity after tariff changes':
+    'Непрерывность поставок крепежа после изменения пошлин',
+  'Supply continuity under tariff volatility':
+    'Непрерывность поставок при волатильности пошлин',
+  'Vendor-managed inventory adoption in mid-market plants':
+    'Внедрение управляемых поставщиком запасов на предприятиях среднего сегмента',
+  'Vendor-managed inventory for mid-market plants':
+    'Управляемые поставщиком запасы для предприятий среднего сегмента',
+  'The most active category story. This business is not quoted in any of the eleven pieces published this quarter.':
+    'Самая активная история категории. Этот бизнес не процитирован ни в одном из одиннадцати материалов, вышедших в этом квартале.',
+  'A category-level trust story. Suppliers who comment become the trusted ones; those who stay silent are grouped with the problem.':
+    'История о доверии на уровне категории. Поставщики, которые комментируют, становятся теми, кому доверяют; тех, кто молчит, относят к самой проблеме.',
+  'An emerging story where regional inventory depth is the natural expert angle, and no regional distributor has been quoted yet.':
+    'Зарождающаяся история, где глубина региональных запасов — естественная экспертная позиция, и ни один региональный дистрибьютор ещё не процитирован.',
+  'A service already operated but never publicly associated with the business. One competitor is quoted in three of four pieces on it.':
+    'Услуга, которая уже оказывается, но публично никогда не связывалась с бизнесом. Один конкурент процитирован в трёх материалах из четырёх по этой теме.',
+  'A competitor is quoted in three of four pieces. The topic maps directly onto a service this business already operates.':
+    'Конкурент процитирован в трёх материалах из четырёх. Тема напрямую соответствует услуге, которую этот бизнес уже оказывает.',
+  'Regional inventory depth is the natural expert position on a story publications are actively looking for sources on.':
+    'Глубина региональных запасов — естественная экспертная позиция в истории, по которой издания активно ищут источники.',
+  'An active media story with no supplier voice attached. Commenting converts a category-level trust concern into a reason to choose a specific supplier.':
+    'Активная медийная история, к которой не привязан голос ни одного поставщика. Комментарий превращает вопрос доверия на уровне категории в причину выбрать конкретного поставщика.',
+  'No quote, contribution or citation in the four topics publications are currently covering.':
+    'Ни цитаты, ни комментария, ни ссылки в четырёх темах, которые издания освещают сейчас.',
+  'Silence is read as absence of expertise. The category continues to be explained by the suppliers willing to explain it.':
+    'Молчание читается как отсутствие экспертизы. Категорию продолжают объяснять те поставщики, которые готовы её объяснять.',
+
+  /* --- Question landscape ---------------------------------------------------------- */
+  'What the market actually wants to know': 'Что рынок хочет знать на самом деле',
+  'The real question corpus, partitioned by what a buyer is trying to decide when they ask it.':
+    'Реальный корпус вопросов, разбитый по тому, что покупатель пытается решить, когда его задаёт.',
+  'Most common questions': 'Самые частые вопросы',
+  'Public questions': 'Публичные вопросы',
+  'AI buying questions': 'Закупочные вопросы к ИИ',
+  'Recommendation questions': 'Вопросы о рекомендации',
+  'Comparison questions': 'Вопросы сравнения',
+  'Purchase questions': 'Вопросы покупки',
+  'Concerns and objections': 'Сомнения и возражения',
+  'A buyer asking directly whom to choose. The highest-value question class in the category, and the one that assigns the order.':
+    'Покупатель прямо спрашивает, кого выбрать. Самый ценный класс вопросов в категории — тот, который и распределяет заказ.',
+  'A buyer weighing approaches rather than vendors. Whoever frames the comparison sets the criteria the vendor choice will use.':
+    'Покупатель взвешивает подходы, а не поставщиков. Тот, кто задаёт рамку сравнения, задаёт и критерии, по которым будет выбран поставщик.',
+  'What buyers ask before they have a supplier in mind. Presence here shapes the criteria everything later is judged against.':
+    'Что покупатели спрашивают до того, как у них появляется поставщик на примете. Присутствие здесь формирует критерии, по которым оценивается всё последующее.',
+  'A buyer who has already chosen. Presence here converts; it does not win anything that was not already won upstream.':
+    'Покупатель, который уже выбрал. Присутствие здесь конвертирует, но не выигрывает ничего, что не было выиграно раньше.',
+  'The risks buyers raise before committing. Answering these publicly is how a supplier becomes the safe choice rather than the cheap one.':
+    'Риски, которые покупатели поднимают перед тем, как взять обязательства. Публичные ответы на них — то, как поставщик становится безопасным выбором, а не дешёвым.',
+
+  /* --- Opportunities and risks ----------------------------------------------------- */
+  'Stories nobody owns': 'Истории, которыми никто не владеет',
+  'Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.':
+    'Отранжировано по влиянию относительно конкуренции. Лучшие из них — с высоким влиянием и без соперников, а это самое редкое сочетание в любой категории.',
+  'The single narrative that most favours this business, and nobody owns it. Same-day regional delivery is a genuine capability that no public source currently attaches to this name.':
+    'Единственный нарратив, наиболее выгодный этому бизнесу, — и им никто не владеет. Региональная доставка в день заказа — реальная возможность, которую сейчас ни один публичный источник не связывает с этим именем.',
+  'No competitor has claimed it, engines have no vocabulary for it, and it is the capability this business actually leads on. The single highest-return narrative available.':
+    'Ни один конкурент его не занял, у движков нет для него словаря, и это именно та возможность, в которой этот бизнес действительно лидирует. Самый доходный из доступных нарративов.',
+  'Directly counters the consolidation narrative that currently favours national distributors, and reframes regional scale as risk management rather than as a limitation.':
+    'Напрямую противостоит нарративу консолидации, который сейчас выгоден общенациональным дистрибьюторам, и переосмысляет региональный масштаб как управление рисками, а не как ограничение.',
+  'Directly contradicts the consolidation narrative and favours a strong secondary supplier. Neither this business nor any competitor has claimed it.':
+    'Прямо противоречит нарративу консолидации и выгоден сильному второму поставщику. Его не занял ни этот бизнес, ни кто-либо из конкурентов.',
+  'Consolidation reaches 14% of conversation and favours national distributors. The counter-narrative reaches 11% and is owned by nobody.':
+    'Консолидация доходит до 14% разговора и выгодна общенациональным дистрибьюторам. Контрнарратив доходит до 11%, и им никто не владеет.',
+  'Threats before they become the default': 'Угрозы до того, как они станут нормой',
+  'An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.':
+    'Зарождающийся нарратив можно оспорить. Закрепившийся приходится вытеснять. Разница в стоимости между этими двумя вариантами — и есть причина существования этого раздела.',
+  '3 risks are rated high severity, of which the entity conflation and the emerging regional-limitation narrative are both still cheap to correct.':
+    '3 риска оценены как высокие; из них смешение сущностей и зарождающийся нарратив о региональной ограниченности пока дёшево исправить.',
+  'The most dangerous emerging narrative on this list. It is not yet dominant and it is factually contestable, which means it is still cheap to answer.':
+    'Самый опасный из зарождающихся нарративов в этом списке. Он ещё не доминирует и фактически оспорим, а значит, ответить на него пока дёшево.',
+  'Becomes the default objection to a regional supplier. Contestable now with published evidence; expensive to reverse once engines treat it as settled.':
+    'Становится стандартным возражением против регионального поставщика. Сейчас оспорим опубликованными доказательствами; развернуть его дорого, как только движки сочтут вопрос закрытым.',
+  'A factual error, carried by one engine, that removes the business from every supplier-evaluation answer it appears in. Declining, but not yet corrected.':
+    'Фактическая ошибка, которую несёт один движок и которая исключает бизнес из каждого ответа об оценке поставщиков, где она встречается. Слабеет, но пока не исправлена.',
+  'A single wrong category record continues to exclude the business from the question class that assigns orders.':
+    'Одна неверная запись о категории продолжает исключать бизнес из того класса вопросов, который распределяет заказы.',
+  'Every future comparison is scored on axes chosen to favour a competitor, whatever the campaign says.':
+    'Любое будущее сравнение оценивается по осям, выбранным в пользу конкурента, что бы ни говорила кампания.',
+  'Every impression delivered to a Gemini user reinforces an incorrect record. Campaign spend actively strengthens the wrong association.':
+    'Каждый показ пользователю Gemini закрепляет неверную запись. Расходы кампании активно усиливают ошибочную ассоциацию.',
+  'Emerging in two engines and sourced from a competitor comparison page. Still contestable; not yet treated as settled.':
+    'Зарождается в двух движках, источник — сравнительная страница конкурента. Пока оспорим; вопрос ещё не считается закрытым.',
+  'Appearing in Gemini and Copilot answers on multi-site sourcing questions, sourced from a competitor comparison page.':
+    'Появляется в ответах Gemini и Copilot на вопросы о снабжении нескольких площадок; источник — сравнительная страница конкурента.',
+  'ChatGPT categorises the business as retail rather than MRO distribution, removing it from supplier-evaluation answers.':
+    'ChatGPT относит бизнес к рознице, а не к дистрибуции MRO, тем самым исключая его из ответов об оценке поставщиков.',
+  'Fill rate and catalogue breadth are cited first by three of six engines when explaining how to choose a distributor.':
+    'Уровень выполнения заказов и широту каталога первыми называют три движка из шести, объясняя, как выбирать дистрибьютора.',
+  'Favours whichever supplier is already largest. A regional specialist is read as the thing being consolidated away rather than the one consolidating.':
+    'Выгодно тому поставщику, который и так крупнее всех. Региональный специалист читается как то, что поглощают при консолидации, а не как тот, кто консолидирует.',
+  'Its specification guidance became the category’s default vocabulary because it published first, not because it is more correct.':
+    'Его руководство по спецификациям стало стандартным словарём категории потому, что было опубликовано первым, а не потому, что оно вернее.',
+  'Published first by a competitor, so it became the vocabulary engines learned. It positions this business as a reseller by omission rather than by argument.':
+    'Опубликовано конкурентом первым, поэтому именно этот словарь выучили движки. Он ставит этот бизнес в положение перепродавца умолчанием, а не аргументом.',
+  'Neutral on its face, but it removes price as a differentiator and pushes the decision onto evidence — which is the axis this business currently loses on.':
+    'Внешне нейтрально, но убирает цену как отличие и переносит решение на доказательства — а это та ось, на которой этот бизнес сейчас проигрывает.',
+  'Contain an emerging high-severity adverse narrative':
+    'Локализовать зарождающийся неблагоприятный нарратив высокой серьёзности',
+  'Respond Immediately': 'Ответить немедленно',
+
+  /* --- Misconceptions and engine reads --------------------------------------------- */
+  'What each engine currently says this business is':
+    'Чем каждый движок сейчас считает этот бизнес',
+  'Claims machines currently repeat that are wrong. Each one removes the business from answers it should appear in.':
+    'Утверждения, которые машины сейчас повторяют и которые неверны. Каждое исключает бизнес из ответов, где он должен присутствовать.',
+  'Misconceptions repeated as fact': 'Заблуждения, повторяемые как факт',
+  'Gemini resolves a same-named logistics firm; ChatGPT categorises the business as retail. Both remove it from supplier-evaluation answers entirely.':
+    'Gemini подставляет одноимённую логистическую фирму; ChatGPT относит бизнес к рознице. И то и другое полностью исключает его из ответов об оценке поставщиков.',
+  'Gemini resolves the wrong entity on category questions and recognises the business at 24 of 100.':
+    'На вопросах о категории Gemini подставляет не ту сущность и распознаёт бизнес на 24 из 100.',
+  'Accurate. No divergence from the intended account.':
+    'Точно. Расхождений с намеченной версией нет.',
+  '4 of 6 diverge': '4 из 6 расходятся',
+  'Machines are repeating 1 factual error about this business that removes it from supplier answers entirely. Argument about positioning is wasted while the underlying record is wrong. Once corrected, 20% of category conversation is unclaimed and the strongest of it favours this business.':
+    'Машины повторяют 1 фактическую ошибку об этом бизнесе, которая полностью исключает его из ответов о поставщиках. Спор о позиционировании бесполезен, пока сама запись неверна. После исправления окажется, что 20% разговора в категории никем не заняты и самая сильная его часть выгодна этому бизнесу.',
+  ', and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    ', и каждый процент из них — это ошибка с розничным магазином инструментов, а не то, что бизнес выбрал сказать. Владение считает истории, привязанные к имени; оно не спрашивает, помогают ли они.',
+  'Fill rate and catalogue breadth are how you choose a distributor.':
+    'Дистрибьютора выбирают по уровню выполнения заказов и широте каталога.',
+  'Consolidating MRO suppliers reduces cost and administrative load.':
+    'Консолидация поставщиков MRO снижает затраты и административную нагрузку.',
+  'Midwest fastener pricing is broadly comparable across suppliers.':
+    'Цены на крепёж на Среднем Западе у разных поставщиков в целом сопоставимы.',
+  'Specification depth separates serious suppliers from resellers.':
+    'Глубина спецификаций отделяет серьёзных поставщиков от перепродавцов.',
+  'Evaluation criteria are increasingly stated in a competitor’s terms.':
+    'Критерии оценки всё чаще формулируются в терминах конкурента.',
+  'The business is conflated with a same-named logistics firm.':
+    'Бизнес смешивают с одноимённой логистической фирмой.',
+  'Single-source supplier dependency is an operational risk.':
+    'Зависимость от единственного поставщика — операционный риск.',
+  'Regional suppliers cannot support multi-plant operations.':
+    'Региональные поставщики не способны обслуживать операции на нескольких заводах.',
+  'Regional distributors deliver faster than national ones.':
+    'Региональные дистрибьюторы доставляют быстрее общенациональных.',
+  'The business is absent from every active category story.':
+    'Бизнес отсутствует во всех активных историях категории.',
+  'The business is described as a hardware retailer.':
+    'Бизнес описывают как розничный магазин инструментов.',
+  'Northwind Supply is a hardware retailer.':
+    'Northwind Supply — розничный магазин инструментов.',
+  'Observed in {sources}.': 'Замечено в источниках: {sources}.',
+  'How much of the conversation works for us': 'Какая доля разговора работает на нас',
+  'Quoted in 3 pieces across 2 publications engines cite':
+    'Процитирован в 3 материалах в 2 изданиях, на которые ссылаются движки',
+  'Multi-site capability referenced in 2 of 6 engines on multi-plant sourcing questions':
+    'Способность работать с несколькими площадками упомянута в 2 движках из 6 в вопросах о снабжении нескольких заводов',
+  'Response time cited among the first three selection criteria by 3 of 6 engines':
+    'Время отклика названо среди первых трёх критериев выбора у 3 движков из 6',
+  'Secondary-supplier framing cited by 2 of 6 engines on consolidation questions':
+    'Рамка второго поставщика упомянута 2 движками из 6 в вопросах о консолидации',
+  'The dominant evaluation framing, and it is a competitor’s. Buyers arrive already scoring suppliers on the two criteria where a national distributor wins by default.':
+    'Доминирующая оценочная рамка — и она принадлежит конкуренту. Покупатели приходят, уже оценивая поставщиков по двум критериям, где общенациональный дистрибьютор выигрывает по умолчанию.',
+  "4 of 6 engines carry a materially different account of this business. A buyer's understanding depends on which assistant they happen to open.":
+    '4 движка из 6 несут существенно разную версию об этом бизнесе. Понимание покупателя зависит от того, какого ассистента он случайно откроет.',
+
+  /* --- Source names. Capitalised to match the seed exactly. ------------------------- */
+  'Trade forums': 'Отраслевые форумы',
+  'Buyer discussion': 'Обсуждения покупателей',
+  'Procurement publications': 'Закупочные издания',
+  'Specification guides': 'Руководства по спецификациям',
+  'Risk guidance': 'Рекомендации по рискам',
+  'Aggregator pages': 'Страницы агрегаторов',
+  'Trade publications': 'Отраслевые издания',
+  /* Mastheads. Invented trade publications, and proper nouns like the
+     competitor names — they stay Latin in every locale. Listed so the
+     decision is recorded rather than looking like an omission. */
+  'Industrial Distribution · Modern Supply Chain':
+    'Industrial Distribution · Modern Supply Chain',
+  'Fastener Technology · Industrial Distribution':
+    'Fastener Technology · Industrial Distribution',
+  'Fastener Technology · Plant Engineering': 'Fastener Technology · Plant Engineering',
+  'Modern Supply Chain · Plant Engineering': 'Modern Supply Chain · Plant Engineering',
+
+  /* --- Narrative action plan ------------------------------------------------------- */
+  'Narrative action plan': 'План действий по нарративу',
+  'Open narrative action plan': 'Открыть план действий по нарративу',
+  'Monitor narrative changes': 'Отслеживать изменения нарратива',
+  'Check readiness before campaigning': 'Проверить готовность до запуска кампании',
+  'Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.':
+    'У каждого есть цель, стоящие за ней доказательства, ожидаемое движение, уровень уверенности, ответственный, срок, оценка трудозатрат и способ проверки успеха.',
+  'Correct the record first, then claim the narrative nobody owns.':
+    'Сначала исправьте запись, затем займите нарратив, которым никто не владеет.',
+  'Correct the entity conflation and the hardware-retailer categorisation.':
+    'Исправить смешение сущностей и отнесение к розничным магазинам инструментов.',
+  'Claim response time as a published supplier selection criterion.':
+    'Закрепить время отклика как опубликованный критерий выбора поставщика.',
+  'Answer the regional-limitation narrative with published multi-site evidence.':
+    'Ответить на нарратив о региональной ограниченности опубликованными доказательствами работы с несколькими площадками.',
+  'Claim the secondary-supplier argument against the consolidation narrative.':
+    'Занять аргумент второго поставщика против нарратива консолидации.',
+  'Enter the two active media stories with a named expert voice.':
+    'Войти в две активные медийные истории с голосом названного эксперта.',
+  'Reframe regional scale from limitation to risk management':
+    'Переосмыслить региональный масштаб из ограничения в управление рисками',
+  'The narrative is unowned, high influence and uncontested. Same-day regional delivery is a real capability that appears in no category description.':
+    'Нарратив никем не занят, обладает высоким влиянием и не оспаривается. Региональная доставка в день заказа — реальная возможность, не фигурирующая ни в одном описании категории.',
+  'Response time as a supplier selection criterion':
+    'Время отклика как критерий выбора поставщика',
+  'The strategic case for a strong secondary supplier':
+    'Стратегическая аргументация в пользу сильного второго поставщика',
+  'Independent authority sources 3 → 8': 'Независимые авторитетные источники 3 → 8',
+  'Average recognition 38 → 55 of 100': 'Среднее распознавание 38 → 55 из 100',
+
+  /* ==========================================================================
+     CAMPAIGN READINESS INTELLIGENCE
+     ====================================================================== */
+  'Campaign readiness intelligence': 'Интеллект готовности к кампании',
+  'Campaign Readiness Intelligence | GeoRepute': 'Интеллект готовности к кампании | GeoRepute',
+  'Campaign Readiness Intelligence': 'Интеллект готовности к кампании',
+  'Should we launch this campaign today?': 'Запускать ли эту кампанию сегодня?',
+  'This assessment evaluates the business, not the campaign. Creative, targeting and budget can all be correct while the business remains structurally unable to convert the attention they buy.':
+    'Эта оценка оценивает бизнес, а не кампанию. Креатив, таргетинг и бюджет могут быть верны все сразу, а бизнес при этом структурно не способен конвертировать купленное ими внимание.',
+  Campaign: 'Кампания',
+  'Q4 Midwest demand generation': 'Генерация спроса на Среднем Западе, 4-й квартал',
+  'Intended launch': 'Планируемый запуск',
+  Duration: 'Длительность',
+  '6 months': '6 месяцев',
+  '7 months': '7 месяцев',
+  '{n} months': '{n} мес.',
+  Channels: 'Каналы',
+  'Paid search · Paid social · Trade media · Content syndication':
+    'Платный поиск · Платные соцсети · Отраслевые СМИ · Синдикация контента',
+  'Paid search': 'Платный поиск',
+  'Paid social': 'Платные соцсети',
+  'Trade media': 'Отраслевые СМИ',
+  'Content syndication': 'Синдикация контента',
+  'Estimated budget at risk': 'Оценка бюджета под риском',
+  'Executive decision': 'Решение руководства',
+  'Executive recommendation': 'Рекомендация руководству',
+  'Delay Campaign': 'Отложить кампанию',
+  'Delay the campaign. Fix authority first.':
+    'Отложите кампанию. Сначала займитесь авторитетностью.',
+  'Delay Campaign — readiness reads 32 of 100, held there by authority readiness at 11, which carries 20% of the index.':
+    'Отложить кампанию — готовность 32 из 100, и удерживает её там готовность по авторитетности на уровне 11, которая весит 20% индекса.',
+  'Campaign readiness score': 'Оценка готовности к кампании',
+  'Primary constraint': 'Основное ограничение',
+  'Authority readiness is the binding constraint at 11 of 100 and carries 20% of the index.':
+    'Готовность по авторитетности — связывающее ограничение: 11 из 100 при весе 20% индекса.',
+  'Strategic window': 'Стратегическое окно',
+  'Advantage holds until {date}.': 'Преимущество сохраняется до {date}.',
+  'Decision journey gaps': 'Разрывы на пути принятия решения',
+  'Presence at every stage.': 'Присутствие на каждом этапе.',
+  '2 stages uncovered': '2 этапа без покрытия',
+  'Assessment confidence': 'Уверенность в оценке',
+  'Six of seven dimensions rest on directly observed data.':
+    'Шесть измерений из семи опираются на непосредственно наблюдаемые данные.',
+  Assessment: 'Оценка',
+  'Seven readiness dimensions, weighted into one index':
+    'Семь измерений готовности, сведённых в один индекс',
+  'Every score is computed from observed data rather than assigned. The weights are published and sum to one.':
+    'Каждый балл вычисляется из наблюдаемых данных, а не назначается. Веса опубликованы и в сумме дают единицу.',
+  'Ready at 70 and above. At risk from 45 . Blocking below 45 .':
+    'Готово при 70 и выше. Под риском начиная с 45. Блокирует ниже 45.',
+  'Ready at {ready} and above. At risk from {risk}. Blocking below {risk}.':
+    'Готово при {ready} и выше. Под риском начиная с {risk}. Блокирует ниже {risk}.',
+  Ready: 'Готово',
+  'At risk': 'Под риском',
+  Blocking: 'Блокирует',
+  '{score} of 100 — {status}. Ready at {gate}.': '{score} из 100 — {status}. Готово при {gate}.',
+  '{n}% of the readiness index': '{n}% индекса готовности',
+  '{score} of 100 · {weight}% of the index': '{score} из 100 · {weight}% индекса',
+  or: 'или',
+  None: 'Нет',
+  '2 of 5': '2 из 5',
+  '2 of 6': '2 из 6',
+  'Launching remains available and is sometimes correct — a product deadline or a competitive move can outweigh a readiness score. This assessment states the cost of that choice so it is made deliberately rather than by default.':
+    'Запуск остаётся возможным и иногда оправдан: срок выхода продукта или ход конкурента могут перевесить балл готовности. Эта оценка называет цену такого выбора, чтобы он делался осознанно, а не по умолчанию.',
+  'Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.':
+    'У каждого есть приоритет, ответственный, срок, оценка трудозатрат, зависимости, ожидаемое движение и то, насколько модель в нём уверена.',
+  '{n} tracked questions': 'отслеживаемых вопросов: {n}',
+
+  /* --- The seven readiness dimensions ---------------------------------------------- */
+  'AI readiness': 'Готовность к ИИ',
+  'Do AI engines understand and recommend this business?':
+    'Понимают ли движки ИИ этот бизнес и рекомендуют ли его?',
+  'Across six engines, the business is understood at 38 of 100. Advertising cannot correct a record it does not touch.':
+    'По шести движкам бизнес понят на 38 из 100. Реклама не может исправить запись, которой она не касается.',
+  'Authority readiness': 'Готовность по авторитетности',
+  'Is there enough evidence for AI to recommend this business?':
+    'Достаточно ли доказательств, чтобы ИИ рекомендовал этот бизнес?',
+  '3 independent sources can verify this business. The category median is 14.':
+    'Подтвердить этот бизнес могут 3 независимых источника. Медиана по категории — 14.',
+  'Google readiness': 'Готовность в Google',
+  'Can buyers find this business through traditional search?':
+    'Могут ли покупатели найти этот бизнес через традиционный поиск?',
+  '9 of 20 commercial questions place in the top ten. The rest are reachable only by paying for the click.':
+    '9 из 20 коммерческих вопросов попадают в первую десятку. До остальных можно добраться только оплатив клик.',
+  'Narrative readiness': 'Готовность нарратива',
+  'Does the market understand what this business stands for?':
+    'Понимает ли рынок, за что стоит этот бизнес?',
+  'The business owns 12% of the language engines use to define this category. The campaign would be fought on terms a competitor wrote.':
+    'Бизнесу принадлежит 12% языка, которым движки определяют эту категорию. Кампания велась бы на условиях, написанных конкурентом.',
+  Reputation: 'Репутация',
+  'Is this business safe to recommend to a buyer?':
+    'Безопасно ли рекомендовать этот бизнес покупателю?',
+  'Reputation reads 44 of 100 while market fit reads 72. The offer is right; the proof around it is not.':
+    'Репутация — 44 из 100 при соответствии рынку 72. Предложение верное; доказательства вокруг него — нет.',
+  'Conversion readiness': 'Готовность к конверсии',
+  'Can the destination convert the intent this campaign buys?':
+    'Способна ли посадочная сторона конвертировать намерение, которое покупает эта кампания?',
+  'A single quote form serves every stage. There is no path for a buyer who is still comparing suppliers and not yet requesting a price.':
+    'Одна форма запроса цены обслуживает все этапы. Нет маршрута для покупателя, который ещё сравнивает поставщиков и пока не запрашивает цену.',
+  'Competitor readiness': 'Готовность конкурентов',
+  'Kestrel Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
+    'Kestrel Industrial одновременно удерживает позиции в первой тройке органической выдачи и присутствие в ИИ по четырём самым частотным коммерческим вопросам.',
+
+  /* --- Dimension detail signals ---------------------------------------------------- */
+  'Category understanding': 'Понимание категории',
+  '2 of 6 correct': '2 из 6 верны',
+  'An engine that files the business in the wrong category cannot surface it when a buyer describes this need, regardless of spend.':
+    'Движок, отнёсший бизнес не к той категории, не покажет его, когда покупатель опишет эту потребность, сколько бы денег ни было потрачено.',
+  'AI recommendation coverage': 'Покрытие рекомендациями ИИ',
+  '6 recommendation events across 144 answer slots. A buyer who asks an assistant for suppliers almost never hears this name.':
+    '6 случаев рекомендации на 144 позиции в ответах. Покупатель, спрашивающий ассистента о поставщиках, почти никогда не слышит это имя.',
+  'Engine consistency': 'Согласованность движков',
+  '37-point spread': 'разброс в 37 пунктов',
+  'Recognition ranges from 21 to 58. The campaign would reach buyers whose assistants disagree about what this business is.':
+    'Распознавание колеблется от 21 до 58. Кампания дошла бы до покупателей, чьи ассистенты расходятся во мнении о том, что это за бизнес.',
+  'Silent engines': 'Молчащие движки',
+  '2 engines recommend the business in none of the tracked decisions. Spend that drives buyers toward those engines returns nothing.':
+    '2 движка не рекомендуют бизнес ни в одном из отслеживаемых решений. Расходы, ведущие покупателей к этим движкам, не возвращают ничего.',
+  'Independent authority sources': 'Независимые авторитетные источники',
+  '3 sources': '3 источника',
+  'Independent corroboration is what lets a system name a supplier first rather than hedge across several.':
+    'Именно независимое подтверждение позволяет системе назвать поставщика первым, а не осторожно перечислять нескольких.',
+  'Third-party validation': 'Подтверждение третьей стороной',
+  '1 of 5 present': '1 из 5 присутствует',
+  'Certifications, named customers, verified outcomes and specification references are absent from the public record.':
+    'Сертификаты, названные клиенты, подтверждённые результаты и ссылки на спецификации в публичных источниках отсутствуют.',
+  'Industry references': 'Отраслевые упоминания',
+  '0 of 3 publications': '0 из 3 изданий',
+  'The three trade publications engines cite most for this category carry no coverage of the business at all.':
+    'Три отраслевых издания, на которые движки ссылаются чаще всего в этой категории, не пишут о бизнесе вообще.',
+  'Competitor authority': 'Авторитетность конкурента',
+  '7× behind': 'отставание в 7 раз',
+  'Kestrel Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
+    'Kestrel Industrial подтверждается в 7 раз легче. Это преимущество накапливается, пока не запущена встречная программа.',
+  'Commercial keyword coverage': 'Покрытие коммерческих запросов',
+  '9 of 20': '9 из 20',
+  'Weighted by search volume rather than by keyword count, so a strong position on a question nobody asks does not flatter the figure.':
+    'Взвешено по объёму поиска, а не по числу запросов, поэтому сильная позиция по вопросу, который никто не задаёт, не приукрашивает цифру.',
+  'Technical SEO status': 'Состояние технического SEO',
+  'No blocking faults': 'Блокирующих дефектов нет',
+  'Crawlability, indexation and canonicalisation carry no faults that would prevent a campaign landing page from ranking. This is not the constraint.':
+    'В сканировании, индексации и канонизации нет дефектов, которые помешали бы посадочной странице кампании ранжироваться. Ограничение не здесь.',
+  'Organic opportunity': 'Органическая возможность',
+  '6 questions': '6 вопросов',
+  '6 questions already rank but never reach an AI answer. These are the cheapest positions available and need publishing, not budget.':
+    '6 вопросов уже ранжируются, но никогда не попадают в ответ ИИ. Это самые дешёвые из доступных позиций, и им нужна публикация, а не бюджет.',
+  'Category clarity': 'Ясность категории',
+  Fragmented: 'Фрагментировано',
+  'The same business is described differently across its own site, two directories and six engines. A campaign amplifies whichever version a buyer meets.':
+    'Один и тот же бизнес описан по-разному на его собственном сайте, в двух каталогах и в шести движках. Кампания усиливает ту версию, на которую покупатель наткнётся.',
+  'Public narrative': 'Публичный нарратив',
+  'Machines describe this category using a competitor’s specification framing, so buyers arrive already evaluating against someone else’s criteria.':
+    'Машины описывают эту категорию в рамке спецификаций конкурента, поэтому покупатели приходят, уже оценивая по чужим критериям.',
+  'Messaging alignment': 'Согласованность сообщений',
+  Misaligned: 'Рассогласовано',
+  'The campaign leads with same-day regional delivery. No public source currently associates that capability with this business.':
+    'Кампания начинает с региональной доставки в день заказа. Сейчас ни один публичный источник не связывает эту возможность с этим бизнесом.',
+  'Trust signals': 'Сигналы доверия',
+  'Every claim traces back to the company’s own website. Systems treat self-description as a claim rather than as evidence.':
+    'Каждое утверждение восходит к собственному сайту компании. Системы считают самоописание утверждением, а не доказательством.',
+  Reviews: 'Отзывы',
+  'Adequate volume': 'Достаточный объём',
+  'Review volume is sufficient and sentiment is positive, but sits on platforms engines do not treat as authoritative for this category.':
+    'Объём отзывов достаточен, тональность положительная, но они лежат на площадках, которые движки не считают авторитетными для этой категории.',
+  'Brand credibility': 'Достоверность бренда',
+  'Expert citations': 'Цитирование экспертов',
+  'No named expert, engineer or specifier is publicly associated with the business. Machines have nobody to attribute expertise to.':
+    'Ни один названный эксперт, инженер или составитель спецификаций публично не связан с бизнесом. Машинам некому приписать экспертизу.',
+  'External validation': 'Внешнее подтверждение',
+  'Customer outcomes, third-party validation, certifications and named references are absent. Only review-platform badges appear.':
+    'Результаты клиентов, подтверждение третьей стороной, сертификаты и названные рекомендации отсутствуют. Есть только значки площадок отзывов.',
+  'Landing page quality': 'Качество посадочных страниц',
+  '3 of 7 pages': '3 из 7 страниц',
+  'Three of the seven pages this campaign would drive to state what the business sells above the fold. The rest open with company history.':
+    'Три из семи страниц, куда вела бы эта кампания, сообщают, что продаёт бизнес, в первом экране. Остальные начинаются с истории компании.',
+  'Decision support': 'Поддержка решения',
+  'No comparison table, specification guidance or selection criteria exists on any destination page. A buyer arriving mid-evaluation has nothing to evaluate with.':
+    'Ни на одной целевой странице нет ни таблицы сравнения, ни руководства по спецификациям, ни критериев выбора. Покупателю, пришедшему в разгар оценки, нечем оценивать.',
+  'Trust elements': 'Элементы доверия',
+  'Quote form only': 'Только форма запроса цены',
+  'Commercial messaging': 'Коммерческие сообщения',
+  'Same-day regional delivery — the strongest differentiator — appears on one page and in no page title.':
+    'Региональная доставка в день заказа — самое сильное отличие — встречается на одной странице и ни в одном заголовке страницы.',
+  'Market leaders': 'Лидеры рынка',
+  '4 ahead': '4 впереди',
+  '4 of 4 tracked competitors currently receive more recommendations than this business.':
+    'Все 4 отслеживаемых конкурента сейчас получают больше рекомендаций, чем этот бизнес.',
+  'Competitor visibility': 'Видимость конкурентов',
+  '4 in top three': '4 в первой тройке',
+  'Authority gap': 'Разрыв в авторитетности',
+  '21 sources': '21 источник',
+  'Kestrel Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
+    'У Kestrel Industrial 21 источник против 3. Разрыв в доказательствах закрывается не рекламой, а публикациями и подтверждениями.',
+  'Competitive gap': 'Конкурентный разрыв',
+  '12% owned': '12% во владении',
+  'Existing search strength': 'Имеющаяся сила в поиске',
+  'Existing strength sits on questions asked after a vendor has been chosen, not on the questions that choose one.':
+    'Имеющаяся сила лежит на вопросах, которые задают после выбора поставщика, а не на тех, которые его выбирают.',
+  'The leader is strongest at exactly the stage this campaign is intended to influence, which is where displacement is most expensive.':
+    'Лидер сильнее всего ровно на том этапе, на который нацелена эта кампания, — а именно там вытеснение обходится дороже всего.',
+  '4 engines hold a wrong or missing record — one conflates the business with a same-named logistics firm.':
+    'У 4 движков запись неверна или отсутствует — один смешивает бизнес с одноимённой логистической фирмой.',
+  'The category description differs between the website and two trade directories, which reads to a machine as an unreliable record.':
+    'Описание категории на сайте и в двух отраслевых каталогах различается, что машина читает как ненадёжную запись.',
+  'No single consistent story exists in the public record for a campaign to reinforce, so each impression starts the explanation over.':
+    'В публичном поле нет единой непротиворечивой истории, которую кампания могла бы усиливать, поэтому каждый показ начинает объяснение заново.',
+  'Kestrel Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
+    'Kestrel Industrial получает 31% рекомендаций против 4,2%. Запуск сейчас — это реклама внутри решения, которое контролируют они.',
+
+  /* --- Journey coverage ------------------------------------------------------------ */
+  Coverage: 'Покрытие',
+  'Where the campaign would reach buyers, and where it would not':
+    'Где кампания дошла бы до покупателей, а где нет',
+  'Stage 1': 'Этап 1',
+  'Stage 2': 'Этап 2',
+  'Stage 3': 'Этап 3',
+  'Stage 4': 'Этап 4',
+  'Stage 5': 'Этап 5',
+  'Invisible to every conventional measurement tool.':
+    'Невидимо для любого привычного инструмента измерения.',
+  'Visible to {tools}.': 'Видно инструментам: {tools}.',
+  'No presence at {stages}.': 'Отсутствие на этапах: {stages}.',
+  'A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.':
+    'Кампания создаёт спрос на всём пути. Конвертирует она только на тех этапах, где бизнес действительно присутствует.',
+
+  /* --- Commercial risk ------------------------------------------------------------- */
+  'Commercial risk': 'Коммерческий риск',
+  'Commercial risk level': 'Уровень коммерческого риска',
+  'What launching today would cost': 'Во что обошёлся бы запуск сегодня',
+  'Missed decision exposure': 'Потери на упущенных решениях',
+  '19 of 24': '19 из 24',
+  'Commercial decisions that already complete without this business appearing. A campaign increases how many of these happen, not how many are won.':
+    'Коммерческие решения, которые уже завершаются без появления этого бизнеса. Кампания увеличивает их количество, а не долю выигранных.',
+  'Revenue dependent on this stage': 'Выручка, зависящая от этого этапа',
+  '38% of demand': '38% спроса',
+  'The share of revenue arriving through supplier evaluation — the stage where presence is currently lowest and the campaign has least leverage.':
+    'Доля выручки, приходящая через оценку поставщиков, — этап, где присутствие сейчас минимально, а у кампании меньше всего рычага.',
+  'Expected ROI risk': 'Риск по ожидаемой окупаемости',
+  'Return depends on buyers completing a journey the business is absent from at these stages. Spend reaches them; the recommendation does not.':
+    'Отдача зависит от того, пройдут ли покупатели путь, на этих этапах которого бизнес отсутствует. Расходы до них доходят; рекомендация — нет.',
+  "Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage.":
+    'Риск здесь — это не вероятность того, что кампания сработает хуже ожидаемого. Это механизм, которым расходы превращаются в преимущество конкурента.',
+  'Every click is paid for twice: once to acquire it, and again to reacquire the buyer who arrived, found nothing to evaluate with, and left to compare elsewhere.':
+    'За каждый клик платят дважды: один раз чтобы его получить, и второй — чтобы вернуть покупателя, который пришёл, не нашёл, чем оценивать, и ушёл сравнивать в другом месте.',
+  'Paid acquisition buys attention that trust has to convert. Without it the campaign raises awareness for the category and the best-verified supplier in it wins.':
+    'Платное привлечение покупает внимание, которое конвертировать должно доверие. Без него кампания повышает известность категории, а выигрывает в ней поставщик с лучшими подтверждениями.',
+  'The campaign generates consideration the business cannot survive. Buyers who check will find nothing independent, and the check happens after the click is paid for.':
+    'Кампания порождает стадию рассмотрения, которую бизнес не переживёт. Покупатели, которые проверят, не найдут ничего независимого, а проверка происходит уже после того, как клик оплачен.',
+  'Campaign attention drives buyers to verify the business through an assistant that cannot describe it correctly. The spend creates the demand and a competitor collects it.':
+    'Внимание кампании гонит покупателей проверять бизнес через ассистента, который не может описать его верно. Расходы создают спрос, а собирает его конкурент.',
+  'Campaign messaging contradicts what the market already believes. Spend is consumed correcting the record instead of creating demand.':
+    'Сообщения кампании противоречат тому, во что рынок уже верит. Расходы уходят на исправление записи вместо создания спроса.',
+  'Paid search carries the entire commercial keyword set alone, at a blended cost already above break-even, for as long as the campaign runs.':
+    'Платный поиск в одиночку тянет весь набор коммерческих запросов по смешанной цене, уже превышающей точку безубыточности, всё время работы кампании.',
+  'The campaign raises category demand that the best-evidenced supplier absorbs. Competitor share can rise as a direct result of this spend.':
+    'Кампания повышает спрос в категории, который поглощает поставщик с лучшими доказательствами. Доля конкурента может вырасти как прямое следствие этих расходов.',
+  'Both surfaces': 'Обе поверхности',
+  Partial: 'Частично',
+
+  /* --- Interventions and the decision ---------------------------------------------- */
+  Intervention: 'Вмешательство',
+  'Required before launch': 'Требуется до запуска',
+  'Blocked until priority {n} lands.': 'Заблокировано до выполнения приоритета {n}.',
+  'If you launch anyway': 'Если всё же запускать',
+  'Launch campaign': 'Запустить кампанию',
+  'Fix readiness first': 'Сначала исправить готовность',
+  'Open Executive Action Plan': 'Открыть план действий для руководства',
+  'Review the full position': 'Изучить позицию целиком',
+  'Website and conversion readiness': 'Готовность сайта и конверсии',
+  'What position are we launching into?': 'В какую позицию мы запускаемся?',
+  'AI narrative': 'Нарратив в ИИ',
+  'Narrative consistency': 'Непротиворечивость нарратива',
+  "Engines describe the category using a competitor's framing. Northwind owns 12% of that language.":
+    'Движки описывают категорию в рамке конкурента. Northwind владеет 12% этого языка.',
+
+  /* ==========================================================================
+     DECISION RECONSTRUCTION
+
+     Display labels only. 'brand', 'competitor', 'supporting', 'downstream',
+     'high', 'medium', 'low' are enum discriminants in the seed graph — an
+     entry keyed on any of them rewrites the data itself and breaks every
+     lookup. The component maps them to the capitalised labels below.
+     ====================================================================== */
+  'Decision Reconstruction': 'Реконструкция решения',
+  'Decision Reconstruction | GeoRepute': 'Реконструкция решения | GeoRepute',
+  'Signature experience': 'Ключевой сценарий',
+  'Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.':
+    'Введите домен и выберите коммерческий вопрос. Система реконструирует, что поняла каждая поверхность, кому досталось решение и почему.',
+  'Seeded environment — this demonstration always reconstructs {org}.':
+    'Заложенная среда — эта демонстрация всегда реконструирует {org}.',
+  Domain: 'Домен',
+  'Understood as: {what}': 'Понят как: {what}',
+  Brand: 'Бренд',
+  Competitor: 'Конкурент',
+  Low: 'Низкий',
+  Supporting: 'Поддерживающий',
+  Downstream: 'Последующий',
+  '{n} tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
+    'Отслеживаемых вопросов решения: {n}. Вопросы оценки поставщиков идут первыми — именно там выбирают поставщика.',
+  'An MRO and fastener distributor serving manufacturers':
+    'Дистрибьютор MRO и крепежа, обслуживающий производителей',
+  'Midwest industrial fastener and MRO distributor':
+    'Дистрибьютор промышленного крепежа и MRO на Среднем Западе',
+  'A regional industrial supplier in the US Midwest':
+    'Региональный промышленный поставщик на Среднем Западе США',
+  'Industrial supply company, category association incomplete':
+    'Компания промышленного снабжения, привязка к категории неполная',
+  'Unclear — associates the name with unrelated businesses':
+    'Неясно — связывает имя с посторонними компаниями',
+  'Not recognized as a distinct business entity':
+    'Не распознаётся как самостоятельное юридическое лицо',
+  '{n} independent sources support this brand. Northwind has 3.':
+    'Этот бренд поддерживают {n} независимых источников. У Northwind их 3.',
+  '{name} controls': '{name} контролирует',
+  'across the whole set. Competitive density is shifting at {velocity}.':
+    'по всему набору. Конкурентная плотность меняется темпом {velocity}.',
+  'This is the exposure attributable to this single question. The full-book figure across all {n} tracked decisions is materially larger and appears in Mission Control.':
+    'Это потери, относимые к одному этому вопросу. Совокупная цифра по всем отслеживаемым решениям ({n}) существенно больше и приводится в центре управления.',
+  'stage {n} of {total}': 'этап {n} из {total}',
+  Present: 'Присутствует',
+  'Observable by {tools} — but only after the decision has already narrowed.':
+    'Наблюдаемо инструментами {tools} — но только после того, как решение уже сузилось.',
+  'No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.':
+    'Ни один привычный инструмент не наблюдает этот этап. Здесь нечего записывать: ни визита, ни клика, ни лида, ни события в CRM — потому слабость и остаётся невидимой, пока не сдвинется выручка.',
+  'Reconstruction confidence across all ten surfaces.':
+    'Уверенность реконструкции по всем десяти поверхностям.',
+  'What each AI engine understood about the business':
+    'Что каждый движок ИИ понял о бизнесе',
+  'Whether the brand was recognised, mentioned, cited, recommended or ignored':
+    'Был ли бренд распознан, упомянут, процитирован, рекомендован или проигнорирован',
+  'Which competitor was selected instead': 'Какой конкурент был выбран вместо него',
+  'Which sources, trust signals and narratives influenced the answer':
+    'Какие источники, сигналы доверия и нарративы повлияли на ответ',
+  'What Google demand, organic position and paid click cost indicate':
+    'О чём говорят спрос в Google, органическая позиция и стоимость платного клика',
+  'Where the question sits in the customer decision journey':
+    'Где находится вопрос на пути принятия решения клиентом',
+  'What timing, market maturity and competitive density indicate':
+    'О чём говорят тайминг, зрелость рынка и конкурентная плотность',
+  'What the directional commercial exposure may be':
+    'Каковы могут быть ориентировочные коммерческие потери',
+  'Which connected signals explain the outcome':
+    'Какие связанные сигналы объясняют исход',
+  'What action is prescribed and how improvement will be measured':
+    'Какое действие предписано и как будет измерено улучшение',
+  'Decision intelligence graph': 'Граф интеллекта решения',
+  'Mentioned only': 'Только упомянут',
+  'Wrong entity': 'Не та сущность',
+  'Named Northwind in its answer, citing company website.':
+    'Назвал Northwind в своём ответе, сославшись на сайт компании.',
+  'Recognises the business but did not consider it relevant to this question.':
+    'Распознаёт бизнес, но не счёл его релевантным этому вопросу.',
+  'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
+    'Описывает Northwind как розничный магазин инструментов, а не как дистрибьютора MRO, что исключает её из ответов об оценке поставщиков.',
+  'Knows the company exists but not which product categories it carries, so it is omitted from specification-led questions.':
+    'Знает, что компания существует, но не знает, какие товарные категории она возит, поэтому она выпадает из вопросов, ведомых спецификациями.',
+  'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.':
+    'Смешивает Northwind Supply с одноимённой логистической фирмой, из-за чего привязка к категории проваливается полностью.',
+  '1 of 6 engines named Northwind, and none placed it first.':
+    'Northwind назвал 1 движок из 6, и ни один не поставил её первой.',
+  '4 of 6 resolve the wrong entity': '4 из 6 подставляют не ту сущность',
+  'engines recommended the business on this question':
+    'движков рекомендовали бизнес по этому вопросу',
+  'of all recommendations across the tracked decision set':
+    'от всех рекомендаций по отслеживаемому набору решений',
+  'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
+    'На Kestrel Industrial ссылается 21 независимый источник; на Northwind — 3.',
+  '3 sources vs 14 median': '3 источника против медианы 14',
+  'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
+    'Собственные страницы Northwind — единственный источник её утверждений, доступный движкам, а самоцитирование весит немного.',
+  'A published comparison library gives engines material they can quote directly.':
+    'Опубликованная библиотека сравнений даёт движкам материал, который можно цитировать напрямую.',
+  'Category evaluation criteria': 'Критерии оценки категории',
+  'Supplier-comparison content': 'Материалы сравнения поставщиков',
+  'Company website': 'Сайт компании',
+  Source: 'Источник',
+  Favours: 'В пользу',
+  'Why it matters': 'Почему это важно',
+  'Monthly volume': 'Объём в месяц',
+  'Paid CPC': 'Платная цена клика',
+  'AI presence': 'Присутствие в ИИ',
+  'Closest tracked keyword': 'Ближайший отслеживаемый запрос',
+  'Above break-even CPC': 'Выше безубыточной цены клика',
+  'Coverage at this stage': 'Покрытие на этом этапе',
+  'Share of query volume': 'Доля объёма запросов',
+  'Share of revenue decided': 'Доля решаемой выручки',
+  'of questions at this stage against': 'вопросов на этом этапе против',
+  'Market position': 'Положение на рынке',
+  'Window remaining': 'Остаток окна',
+  'Buy this as an intelligence product': 'Купить это как интеллект-продукт',
+
+  /* --- The 24 tracked buyer questions. Translated on the same reasoning as the
+         home page's search queries — a buyer in this market asks in Russian. - */
+  'Which fastener supplier should we choose for a new plant?':
+    'Какого поставщика крепежа выбрать для нового завода?',
+  'Who are the top industrial supply companies for fasteners?':
+    'Какие компании промышленного снабжения лучшие по крепежу?',
+  'Best MRO distributors for manufacturing plants':
+    'Лучшие дистрибьюторы MRO для производственных предприятий',
+  'Top rated industrial supply vendors near Chicago':
+    'Поставщики промышленного снабжения с лучшими оценками рядом с Чикаго',
+  'Which MRO supplier has the best fill rate?':
+    'У какого поставщика MRO самый высокий уровень выполнения заказов?',
+  'Recommended industrial distributors for hydraulic components':
+    'Рекомендуемые промышленные дистрибьюторы гидравлических компонентов',
+  'Compare industrial distributor service levels':
+    'Сравнить уровни сервиса промышленных дистрибьюторов',
+  'Is a national or regional MRO distributor better?':
+    'Что лучше: общенациональный или региональный дистрибьютор MRO?',
+  'Should we consolidate MRO suppliers or keep multiple vendors?':
+    'Консолидировать поставщиков MRO или сохранить несколько?',
+  'What should an MRO supply agreement include?':
+    'Что должен включать договор на поставку MRO?',
+  'Risks of single-source supplier dependency for MRO':
+    'Риски зависимости от единственного поставщика MRO',
+  'Vendor-managed inventory vs consignment for MRO supplies':
+    'Управляемые поставщиком запасы против консигнации для расходников MRO',
+  'What is vendor-managed inventory for MRO supplies?':
+    'Что такое управляемые поставщиком запасы для расходников MRO?',
+  'How do I reduce MRO inventory carrying costs?':
+    'Как снизить затраты на хранение запасов MRO?',
+  'Best practices for industrial fastener sourcing':
+    'Лучшие практики закупки промышленного крепежа',
+  'What is the difference between grade 5 and grade 8 fasteners?':
+    'Чем отличается крепёж класса 5 от класса 8?',
+  'What causes premature bolt failure in high-vibration equipment?':
+    'Почему болты преждевременно разрушаются в оборудовании с высокой вибрацией?',
+  'How often should hydraulic fittings be replaced?':
+    'Как часто нужно менять гидравлические фитинги?',
+  'How to avoid counterfeit fasteners in the supply chain':
+    'Как избежать контрафактного крепежа в цепочке поставок',
+  'What are the most common industrial supply delivery failures?':
+    'Какие сбои поставок чаще всего случаются в промышленном снабжении?',
+  'Industrial fastener supplier with same-day shipping':
+    'Поставщик промышленного крепежа с отгрузкой в день заказа',
+  'Get a quote for bulk grade 8 fasteners':
+    'Запросить цену на крепёж класса 8 оптом',
+  'Set up an MRO supply account': 'Открыть счёт на поставку MRO',
+
+  /* ==========================================================================
+     EXECUTIVE MISSION CONTROL
+     ====================================================================== */
+  'Executive Mission Control': 'Центр управления для руководства',
+  'Executive Mission Control | GeoRepute': 'Центр управления для руководства | GeoRepute',
+  'Not more data. A decision position.': 'Не больше данных. А позиция для решения.',
+  'Ten measures, each with evidence behind it':
+    'Десять показателей, за каждым — доказательства',
+  'Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.':
+    'Каждая цифра вычислена из наблюдаемых данных. Выберите любую плитку, чтобы открыть полную сводку, её доказательства и предписанное действие.',
+  Position: 'Позиция',
+  Explanation: 'Объяснение',
+  Execution: 'Исполнение',
+  'AI Recognition Position': 'Позиция распознавания в ИИ',
+  'Average entity understanding across six engines. Three misidentify the category.':
+    'Среднее понимание сущности по шести движкам. Три ошибаются с категорией.',
+  'Google vs AI Gap': 'Разрыв между Google и ИИ',
+  'Keywords absent from AI answers and outside the Google top ten. The decision happens on neither surface.':
+    'Запросы, отсутствующие в ответах ИИ и не входящие в первую десятку Google. Решение не происходит ни на одной из поверхностей.',
+  'Decision Presence': 'Присутствие в решении',
+  'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
+    'Покрытие оценки поставщиков. 19 из 24 решений завершаются без бренда.',
+  'Competitive Capture': 'Конкурентный перехват',
+  'Kestrel Industrial receives the recommendation. Northwind receives 4.2%.':
+    'Рекомендацию получает Kestrel Industrial. Northwind получает 4,2%.',
+  'Narrative Ownership': 'Владение нарративом',
+  'Share of the language engines use to define the category. The criteria cited first are a competitor’s.':
+    'Доля языка, которым движки определяют категорию. Критерии, называемые первыми, принадлежат конкуренту.',
+  'Trust Readiness': 'Готовность по доверию',
+  'The recommendation goes to the supplier engines can support with evidence.':
+    'Рекомендация достаётся тому поставщику, которого движки могут подкрепить доказательствами.',
+  'Paid Dependency': 'Зависимость от платного',
+  'Blended CPC runs above break-even. Paid is renting the positions authority would hold.':
+    'Смешанная цена клика выше точки безубыточности. Платное арендует позиции, которые удерживала бы авторитетность.',
+  'Weighted across six GEON vectors. Authority at 28 is the binding constraint.':
+    'Взвешено по шести векторам GEON. Авторитетность на уровне 28 — связывающее ограничение.',
+  'ChatGPT supplier recommendation presence':
+    'Присутствие в рекомендациях поставщиков в ChatGPT',
+  'The most-used engine puts Northwind forward in one of twenty-four decision questions.':
+    'Самый используемый движок выдвигает Northwind в одном из двадцати четырёх вопросов решения.',
+  '3 independent sources against a category median of 14.':
+    '3 независимых источника против медианы по категории 14.',
+  'Authority is the binding constraint, so it is where intervention begins.':
+    'Связывающее ограничение — авторитетность, поэтому вмешательство начинается с неё.',
+  'Paid search is bought to cover the questions authority no longer wins.':
+    'Платный поиск покупают, чтобы закрыть вопросы, которые авторитетность больше не выигрывает.',
+  'Emerging market at 63/100 readiness. Query maturity accelerating.':
+    'Формирующийся рынок с готовностью 63/100. Зрелость запросов ускоряется.',
+  'The window remains open but is narrowing. Displacement cost rises once engines settle on a stable answer set.':
+    'Окно ещё открыто, но сужается. Стоимость вытеснения растёт, как только движки закрепляются на устойчивом наборе ответов.',
+  'Decision deadline': 'Срок принятия решения',
+  'Timing window': 'Временное окно',
+  months: 'мес.',
+  'Causal signal chain': 'Причинная цепочка сигналов',
+  'The measures above are not independent. This is the chain that connects them, ending in the intervention it implies.':
+    'Показатели выше не независимы. Это цепочка, которая их связывает и заканчивается вытекающим из неё вмешательством.',
+  'One decision. Many signals. One explanation.':
+    'Одно решение. Много сигналов. Одно объяснение.',
+  'Open evidence': 'Открыть доказательства',
+  'Open Action Center': 'Открыть центр действий',
+  'Reconstruct the decision': 'Реконструировать решение',
+  'Explore intelligence engines': 'Изучить движки интеллекта',
+
+  /* --- Executive intelligence feed ------------------------------------------------- */
+  'Executive intelligence feed': 'Интеллект-лента для руководства',
+  '{n} events': 'событий: {n}',
+  'Competitor surge': 'Рывок конкурента',
+  'Kestrel Industrial gained the first recommendation on two more supplier questions':
+    'Kestrel Industrial получила первую рекомендацию ещё по двум вопросам о поставщиках',
+  'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
+    'Kestrel теперь возглавляет четыре ответа об оценке поставщиков из семи вместо двух. Обе новые победы ссылаются на отраслевое издание, добавленное в июне.',
+  'Citation lost': 'Потеряно цитирование',
+  'Perplexity stopped citing the Northwind capability page':
+    'Perplexity перестал ссылаться на страницу возможностей Northwind',
+  'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.':
+    'В июне на страницу ссылались по трём вопросам, в июле — ни по одному. Теперь Perplexity сводит те же вопросы к источникам конкурентов.',
+  '3 → 0 citations': '3 → 0 цитирований',
+  '25 searches/mo': '25 запросов/мес.',
+  '+1 question': '+1 вопрос',
+  '+2 questions': '+2 вопроса',
+  '+8% QoQ': '+8% кв/кв',
+  '+8% CPC': '+8% цена клика',
+  'per month': 'в месяц',
+  '$3,200 – $6,200 per month': '3 200–6 200 $ в месяц',
+  'per quarter': 'в квартал',
+  'per year': 'в год',
+  'Narrative risk': 'Риск нарратива',
+  'Engines adopted a competitor’s evaluation criteria':
+    'Движки переняли критерии оценки конкурента',
+  'Fill rate and catalogue breadth are now cited first when engines explain how to choose a distributor. Regional response time is not referenced.':
+    'Уровень выполнения заказов и широту каталога теперь называют первыми, когда движки объясняют, как выбирать дистрибьютора. Региональное время отклика не упоминается.',
+  'Trust signal decayed': 'Сигнал доверия ослаб',
+  'Category description diverged across two trade directories':
+    'Описание категории разошлось в двух отраслевых каталогах',
+  'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
+    'Два каталога теперь описывают Northwind иначе, чем её собственный сайт. Именно несогласованность и есть механизм путаницы с сущностью в ChatGPT и Copilot.',
+  'Search cost spike': 'Скачок стоимости поиска',
+  'Blended CPC moved further above break-even':
+    'Смешанная цена клика ушла ещё выше точки безубыточности',
+  '“industrial supply company” rose to $11.00 with no organic position in the top 100. Paid is covering a question authority does not reach.':
+    '«компания промышленного снабжения» выросла до 11,00 $ при отсутствии органической позиции в первой сотне. Платное закрывает вопрос, до которого не дотягивается авторитетность.',
+  'New decision question': 'Новый вопрос решения',
+  'A new supplier-evaluation question entered the tracked set':
+    'В отслеживаемый набор вошёл новый вопрос об оценке поставщиков',
+  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.':
+    '«У какого поставщика MRO самый высокий уровень выполнения заказов?» появился с измеримым объёмом. Northwind отсутствует во всех движках, отвечающих на него.',
+  'Recommendation gained': 'Получена рекомендация',
+  'Claude began recommending Northwind for regional distributor questions':
+    'Claude начал рекомендовать Northwind по вопросам о региональных дистрибьюторах',
+  'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.':
+    'Первая рекомендация по запросу «Поставщики промышленного снабжения с лучшими оценками рядом с Чикаго». Отличием, на которое ссылается ответ, стала региональная привязка.',
+  'Regional opportunity': 'Региональная возможность',
+  'Midwest regional questions show weaker competitive density':
+    'Региональные вопросы по Среднему Западу показывают меньшую конкурентную плотность',
+  'Questions naming a Midwest location carry lower competitor control than national equivalents — the cheapest available entry point.':
+    'Вопросы с упоминанием места на Среднем Западе меньше контролируются конкурентами, чем их общенациональные аналоги, — самая дешёвая из доступных точек входа.',
+  'Competitive density rose 8% quarter over quarter':
+    'Конкурентная плотность выросла на 8% квартал к кварталу',
+
+  /* ==========================================================================
+     STRATEGIC ACTION CENTER
+     ====================================================================== */
+  'Strategic Action Center': 'Центр стратегических действий',
+  'Prioritised interventions with owner, deadline, expected movement and how impact is verified after execution.':
+    'Приоритизированные вмешательства с ответственным, сроком, ожидаемым движением и способом проверки эффекта после выполнения.',
+  '{n}-day': '{n} дн.',
+  'Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.':
+    'Каждое вмешательство называет ответственного, срок, сигнал, который оно должно сдвинуть, и то, как это движение будет проверено.',
+  Interventions: 'Вмешательства',
+  Measured: 'Измерено',
+  'Verified after execution': 'Проверяется после выполнения',
+  View: 'Открыть',
+  'Priority queue': 'Очередь приоритетов',
+  '30/60/90 roadmap': 'Дорожная карта 30/60/90',
+  'day horizon': 'дневной горизонт',
+  'Ranked by urgency, then by effort — cheapest decisive move first':
+    'Отранжировано по срочности, затем по трудозатратам — самый дешёвый решающий шаг первым',
+  'Priority {n}': 'Приоритет {n}',
+  'Not yet measured — verified after execution.':
+    'Пока не измерено — проверяется после выполнения.',
+  'View evidence': 'Смотреть доказательства',
+  'How impact is verified': 'Как проверяется эффект',
+  'Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.':
+    'Выполнение — это не эффект. Каждое действие проверяется повторным наблюдением того сигнала, на который оно нацелено, по тем же движкам и вопросам, после выполнения. Пока такого повторного наблюдения нет, измеренное изменение остаётся пустым, а не предполагаемым.',
+  'Back to Mission Control': 'Назад в центр управления',
+  'Read the methodology': 'Прочитать методологию',
+
+  /* Page descriptions. These render into <meta name="description"> rather than
+     into the page, so the render audit cannot see them — it reads visible
+     prose and a short list of perceivable attributes. Four of them sat in
+     English through every clean audit this site has passed. */
+  'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.':
+    'Состояние решения, потери выручки, конкурентный перехват, контроль нарратива и стратегический тайминг — в одной позиции для решения.',
+  'Should we launch this campaign today? A pre-campaign assessment of the business rather than the campaign — AI, authority, trust, narrative, competitive position and destination readiness, weighted into one decision.':
+    'Запускать ли эту кампанию сегодня? Предкампанийная оценка бизнеса, а не кампании: ИИ, авторитетность, доверие, нарратив, конкурентная позиция и готовность посадочной стороны, сведённые в одно решение.',
+  'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
+    'Какую историю рынок рассказывает о нас и как она влияет на решения? Активные нарративы, кто владеет каждым из них, куда они движутся и что должно измениться.',
+  'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
+    'Введите домен и выберите коммерческий вопрос. Реконструируйте, что понял каждый движок ИИ, кому досталось решение, почему и что должно измениться.',
 }
