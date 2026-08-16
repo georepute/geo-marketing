@@ -6,7 +6,7 @@ import { ProductScreen, ProductScreenGrid } from '@/components/product/ProductSc
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { getDictionary } from '@/lib/i18n/server'
 import { getElectionIntelligence } from '@/lib/api/client'
-import type { ScreenSlotId } from '@/lib/visual/screens'
+import { readyScreens, type ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
 import { getT } from '@/lib/i18n/content/translator'
 
@@ -191,31 +191,38 @@ export default async function ElectionIntelligencePage() {
       {/* ================================================================
           THE SCREENS — doc §3, "Real Product Screens", all twelve.
           ============================================================== */}
-      <section className="gr-hairline">
-        <div className="gr-rail-wide gr-section">
-          <Reveal>
-            <p className="text-label uppercase text-brand-300">
-              {e.screensLabel}
-            </p>
-            <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
-              {e.screensSub}
-            </p>
-          </Reveal>
+      {/* The whole section is screens and nothing else, so it stays out of
+          the page until at least one export exists. No campaign screens have
+          been supplied yet; the commercial exports cannot stand in for them,
+          because doc §3 requires a fictional race here rather than a real
+          business. Drop one file into public/screens and this returns. */}
+      {readyScreens(SCREENS).length > 0 && (
+        <section className="gr-hairline">
+          <div className="gr-rail-wide gr-section">
+            <Reveal>
+              <p className="text-label uppercase text-brand-300">
+                {e.screensLabel}
+              </p>
+              <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
+                {e.screensSub}
+              </p>
+            </Reveal>
 
-          {/* The war room leads at full width — it is the surface the whole
-              section is named for. */}
-          <div className="mt-10">
-            <ProductScreen
-              id="election-war-room"
-              sizes="(min-width: 1024px) 80vw, 100vw"
-            />
-          </div>
+            {/* The war room leads at full width — it is the surface the whole
+                section is named for. */}
+            <div className="mt-10">
+              <ProductScreen
+                id="election-war-room"
+                sizes="(min-width: 1024px) 80vw, 100vw"
+              />
+            </div>
 
-          <div className="mt-8">
-            <ProductScreenGrid ids={SCREENS.slice(1)} columns={2} />
+            <div className="mt-8">
+              <ProductScreenGrid ids={SCREENS.slice(1)} columns={2} />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ================================================================
           LIVE IN THIS ENVIRONMENT

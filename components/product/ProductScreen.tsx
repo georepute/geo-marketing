@@ -1,5 +1,9 @@
 import Image from 'next/image'
-import { SCREEN_SLOTS, type ScreenSlotId } from '@/lib/visual/screens'
+import {
+  SCREEN_SLOTS,
+  readyScreens,
+  type ScreenSlotId,
+} from '@/lib/visual/screens'
 import { getT } from '@/lib/i18n/content/translator'
 import { cn } from '@/lib/utils/cn'
 
@@ -19,9 +23,19 @@ import { cn } from '@/lib/utils/cn'
    one-word change in lib/visual/screens.ts — the layout around it does not
    move, because the space was always reserved.
 
-   The pending state is deliberately designed rather than left as a grey box.
-   These frames are visible to visitors until the real exports arrive, and a
-   broken-looking placeholder on a launched site is worse than an honest one.
+   AN UNFILLED SLOT RENDERS NOTHING FOR A VISITOR.
+
+   The pending frame was right while the site was being built — it made the
+   gap visible and said where the file goes. It is wrong on a launched site,
+   where a row of "awaiting real screen" boxes reads as a broken page rather
+   than an honest one. So the placeholder now renders in development only,
+   and production simply omits the figure.
+
+   This is a deliberate dev/production divergence, which this codebase
+   otherwise avoids. `npm run screens` is the authority on what is still
+   outstanding — it reads the register, not the page, so it tells the truth
+   in either environment. A section that exists only to hold screens must
+   call readyScreens() before rendering its own heading.
    ========================================================================= */
 
 export async function ProductScreen({
@@ -37,6 +51,8 @@ export async function ProductScreen({
 }) {
   const t = await getT()
   const slot = SCREEN_SLOTS[id]
+
+  if (!slot.ready && process.env.NODE_ENV !== 'development') return null
 
   return (
     <figure className={cn('group', className)}>
@@ -152,6 +168,13 @@ export function ProductScreenGrid({
   columns?: 2 | 3
   className?: string
 }) {
+  /* Drop the unfilled ones before laying out, so the grid closes up rather
+     than leaving holes in it. In development they are kept, to stay honest
+     about what the page is still waiting for. */
+  const shown =
+    process.env.NODE_ENV === 'development' ? ids : readyScreens(ids)
+  if (shown.length === 0) return null
+
   return (
     <div
       className={cn(
@@ -160,7 +183,7 @@ export function ProductScreenGrid({
         className,
       )}
     >
-      {ids.map((id) => (
+      {shown.map((id) => (
         <ProductScreen
           key={id}
           id={id}

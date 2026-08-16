@@ -27,6 +27,19 @@
    `npm run screens` prints the outstanding slots as a checklist.
    ========================================================================= */
 
+/**
+ * The subset of `ids` that has a real file behind it.
+ *
+ * A section that exists only to show screens must ask this before it renders
+ * its own heading — otherwise a page that has no exports yet shows a title
+ * over nothing. Filling a slot brings the section back with no further edit.
+ */
+export function readyScreens(
+  ids: readonly ScreenSlotId[],
+): readonly ScreenSlotId[] {
+  return ids.filter((id) => SCREEN_SLOTS[id].ready)
+}
+
 export interface ScreenSlot {
   /** Path under `public/`, written as a root-relative URL. */
   file: string
