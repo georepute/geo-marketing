@@ -15,7 +15,8 @@ import {
   RelationshipTag,
 } from '@/components/signal/Indicators'
 import { defaultOpen, useRole } from './RoleLens'
-import { useDict } from '@/lib/i18n/context'
+import { useDict, useI18n } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Readout } from '@/lib/seed/types'
@@ -81,6 +82,10 @@ function FullReadout({
   className?: string
 }) {
   const copy = useDict()
+  /* Dates render through Intl, so they need the locale tag or every month
+     name comes out English on an otherwise translated page. */
+  const { intl } = useI18n()
+  const t = useT()
   const role = useRole()
   const open = defaultOpen(role)
 
@@ -134,7 +139,7 @@ function FullReadout({
           <p className="text-caption text-ink-3 mt-3">
             Decision deadline{' '}
             <span className="text-ink-2" data-numeric="">
-              {dateFull(r.timing.decisionDeadline)}
+              {dateFull(r.timing.decisionDeadline, intl)}
             </span>
           </p>
         </div>
@@ -194,7 +199,7 @@ function FullReadout({
                     className="py-3 text-caption text-ink-3 whitespace-nowrap"
                     data-numeric=""
                   >
-                    {dateFull(e.observedAt)}
+                    {dateFull(e.observedAt, intl)}
                   </td>
                 </tr>
               ))}
@@ -283,7 +288,7 @@ function FullReadout({
           <Field label={copy.readout.ownerDeadline}>
             <span className="text-body text-ink">{r.ownerDeadline.owner}</span>
             <span className="block text-caption text-ink-3 mt-1" data-numeric="">
-              by {dateFull(r.ownerDeadline.deadline)}
+              {t('by {date}', { date: dateFull(r.ownerDeadline.deadline, intl) })}
             </span>
           </Field>
 

@@ -10,6 +10,8 @@ import { CATEGORY_ICON } from '@/lib/visual/icons'
 import { count } from '@/lib/format'
 import { flags } from '@/lib/flags'
 import { cn } from '@/lib/utils/cn'
+import { getT } from '@/lib/i18n/content/translator'
+import { Rich } from '@/lib/i18n/content/rich'
 import { getCategory, getEcosystem } from '@/lib/api/client'
 import type { IntelligenceEngine, IntelligenceProduct } from '@/lib/api/types'
 
@@ -61,6 +63,7 @@ export default async function CategoryPage({
     getEcosystem(),
   ])
   if (!category.data) notFound()
+  const t = await getT()
 
   const c = category.data
   const Icon = CATEGORY_ICON[c.slug]
@@ -91,37 +94,38 @@ export default async function CategoryPage({
             className="inline-flex items-center gap-2 text-caption text-ink-2 hover:text-ink transition-colors"
           >
             <ArrowLeft aria-hidden className="size-3.5" />
-            All intelligence categories
+            {t('All intelligence categories')}
           </Link>
 
           <p className="flex items-center gap-3 text-label uppercase text-brand-300 mt-8">
             {Icon ? <Icon aria-hidden className="size-4" /> : null}
-            {c.name}
+            {t(c.name)}
           </p>
 
           <h1 className="text-display-1 text-ink mt-5 max-w-4xl text-balance">
-            {c.question}
+            {t(c.question)}
           </h1>
 
           <p className="text-body-lg text-ink-2 mt-6 max-w-2xl">
-            {c.explanation}
+            {t(c.explanation)}
           </p>
 
+          {/* One sentence, not three fragments — the emphasised counts move
+              freely inside it and <Rich> supplies the data-numeric spans that
+              keep Latin digits reading correctly inside RTL prose. */}
           <p className="text-caption text-ink-3 mt-8">
-            <span className="text-ink" data-numeric="">
-              {count(c.modules.length)}
-            </span>{' '}
-            intelligence modules in this category
-            {liveCount > 0 ? (
-              <>
-                {' · '}
-                <span className="text-ink" data-numeric="">
-                  {count(liveCount)}
-                </span>{' '}
-                running live in this environment
-              </>
-            ) : null}
-            .
+            <Rich
+              text={
+                liveCount > 0
+                  ? t(
+                      '<b>{n}</b> intelligence modules in this category · <b>{live}</b> running live in this environment.',
+                      { n: count(c.modules.length), live: count(liveCount) },
+                    )
+                  : t('<b>{n}</b> intelligence modules in this category.', {
+                      n: count(c.modules.length),
+                    })
+              }
+            />
           </p>
         </div>
       </section>
@@ -133,11 +137,10 @@ export default async function CategoryPage({
         <div className="gr-rail-wide gr-section">
           <Reveal>
             <h2 className="text-display-2 text-ink max-w-3xl text-balance">
-              Every module answers one question.
+              {t('Every module answers one question.')}
             </h2>
             <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
-              Each returns the evidence behind its answer, what that answer
-              means commercially, and what should change as a result.
+              {t('Each returns the evidence behind its answer, what that answer means commercially, and what should change as a result.')}
             </p>
           </Reveal>
 
@@ -159,22 +162,20 @@ export default async function CategoryPage({
           <div className="gr-rail-wide gr-section">
             <Reveal>
               <p className="text-label uppercase text-brand-300">
-                Buy this intelligence
+                {t('Buy this intelligence')}
               </p>
               <h2 className="text-display-2 text-ink mt-4 max-w-3xl text-balance">
-                Take one question, or take the whole category.
+                {t('Take one question, or take the whole category.')}
               </h2>
               <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
-                Each purchase states what it examines, what it needs from you,
-                how confident it can be and what it costs. No sales call is
-                required to find any of that out.
+                {t('Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.')}
               </p>
             </Reveal>
 
             <Reveal delay={80} className="mt-10">
               <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {c.products.map((product) => (
-                  <ProductRow key={product.slug} product={product} />
+                  <ProductRow key={product.slug} product={product} t={t} />
                 ))}
               </ul>
             </Reveal>
@@ -188,22 +189,21 @@ export default async function CategoryPage({
       <section className="gr-hairline">
         <div className="gr-rail-wide gr-section">
           <Reveal>
-            <p className="text-label uppercase text-brand-300">Underneath</p>
+            <p className="text-label uppercase text-brand-300">{t('Underneath')}</p>
             <h2 className="text-display-2 text-ink mt-4 max-w-3xl text-balance">
               {c.engines.length === 1
-                ? 'One engine produces this category.'
-                : `${c.engines.length} engines produce this category.`}
+                ? t('One engine produces this category.')
+                : t('{n} engines produce this category.', { n: c.engines.length })}
             </h2>
             <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
-              Engines are the machinery, not the offer. Nothing above required
-              you to know one existed.
+              {t('Engines are the machinery, not the offer. Nothing above required you to know one existed.')}
             </p>
           </Reveal>
 
           <Reveal delay={80} className="mt-10">
             <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {c.engines.map((engine) => (
-                <EngineRow key={engine.slug} engine={engine} />
+                <EngineRow key={engine.slug} engine={engine} t={t} />
               ))}
             </ul>
           </Reveal>
@@ -216,7 +216,7 @@ export default async function CategoryPage({
       <section className="gr-hairline">
         <div className="gr-rail-wide gr-section">
           <p className="text-label uppercase text-brand-300">
-            Other intelligence categories
+            {t('Other intelligence categories')}
           </p>
 
           <ul className="grid gap-px bg-line border border-line rounded-md overflow-hidden mt-8 md:grid-cols-2 xl:grid-cols-3">
@@ -240,13 +240,13 @@ export default async function CategoryPage({
                     ) : null}
                     <span className="min-w-0 flex-1">
                       <span className="block text-caption text-ink truncate">
-                        {other.name}
+                        {t(other.name)}
                       </span>
                       <span
                         className="block text-caption text-ink-3"
                         data-numeric=""
                       >
-                        {count(other.moduleCount)} modules
+                        {t('{n} modules', { n: count(other.moduleCount) })}
                       </span>
                     </span>
                     <ArrowRight
@@ -269,7 +269,15 @@ export default async function CategoryPage({
 
 /* ------------------------------------------------------------------------ */
 
-function ProductRow({ product }: { product: IntelligenceProduct }) {
+function ProductRow({
+  product,
+  t,
+}: {
+  product: IntelligenceProduct
+  /* Sync component: it cannot await getT() itself, so the page hands its
+     translator down rather than each row opening its own. */
+  t: (key: string) => string
+}) {
   return (
     <li>
       <Link
@@ -280,15 +288,15 @@ function ProductRow({ product }: { product: IntelligenceProduct }) {
           'hover:border-brand-400/60 hover:bg-raised',
         )}
       >
-        <p className="text-label uppercase text-ink-3">{product.depth}</p>
+        <p className="text-label uppercase text-ink-3">{t(product.depth)}</p>
         <p className="text-body text-ink mt-3 text-balance">
-          {product.businessQuestion}
+          {t(product.businessQuestion)}
         </p>
-        <p className="text-caption text-ink-2 mt-3 grow">{product.scope}</p>
+        <p className="text-caption text-ink-2 mt-3 grow">{t(product.scope)}</p>
 
         <span className="flex items-center justify-between gap-4 mt-5 pt-4 border-t border-line">
           <span className="text-caption text-ink-3 truncate">
-            {product.name}
+            {t(product.name)}
           </span>
           {/* Doc §4: the price is withheld, so delivery time holds the
               right-hand column and the row keeps its balance. */}
@@ -296,7 +304,7 @@ function ProductRow({ product }: { product: IntelligenceProduct }) {
             <Price amount={product.priceUsd} period="one-time" size="sm" />
           ) : (
             <span className="text-caption text-ink-3 shrink-0">
-              {product.timeToDelivery}
+              {t(product.timeToDelivery)}
             </span>
           )}
         </span>
@@ -305,25 +313,33 @@ function ProductRow({ product }: { product: IntelligenceProduct }) {
   )
 }
 
-function EngineRow({ engine }: { engine: IntelligenceEngine }) {
+function EngineRow({
+  engine,
+  t,
+}: {
+  engine: IntelligenceEngine
+  t: (key: string) => string
+}) {
   const inner = (
     <>
       <div className="flex items-start justify-between gap-4">
-        <p className="text-caption text-ink">{engine.name}</p>
+        <p className="text-caption text-ink">{t(engine.name)}</p>
         {engine.built ? (
           <span
             className="text-label uppercase shrink-0"
             style={{ color: 'var(--gr-positive)' }}
           >
-            Built
+            {t('Built')}
           </span>
         ) : (
           <span className="text-label uppercase text-ink-3 shrink-0">
-            In platform
+            {t('In platform')}
           </span>
         )}
       </div>
-      <p className="text-caption text-ink-2 mt-3">{engine.businessQuestion}</p>
+      <p className="text-caption text-ink-2 mt-3">
+        {t(engine.businessQuestion)}
+      </p>
     </>
   )
 

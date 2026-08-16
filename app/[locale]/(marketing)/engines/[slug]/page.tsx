@@ -11,6 +11,7 @@ import { ENGINE_ICON } from '@/lib/visual/icons'
 import { IntelligenceReadout } from '@/components/readout/IntelligenceReadout'
 import { RoleProvider } from '@/components/readout/RoleLens'
 import { EngineVisual } from './EngineVisual'
+import { getT } from '@/lib/i18n/content/translator'
 import {
   getEngine,
   getEngines,
@@ -63,6 +64,7 @@ export default async function EnginePage({
       getEngines(),
     ])
 
+  const t = await getT()
   const built = allEngines.data.filter((e) => e.built)
   const index = built.findIndex((e) => e.slug === slug)
   const next = built[(index + 1) % built.length]!
@@ -85,13 +87,13 @@ export default async function EnginePage({
         />
 
         <div className="gr-rail-wide relative pt-16 pb-14 lg:pt-20 lg:pb-16">
-          <nav aria-label="Breadcrumb" className="mb-8">
+          <nav aria-label={t('Breadcrumb')} className="mb-8">
             <Link
               href="/engines"
               className="inline-flex items-center gap-2 text-caption text-ink-3 hover:text-ink-2 transition-colors"
             >
               <ArrowLeft aria-hidden className="size-3.5" />
-              Intelligence Engines
+              {t('Intelligence Engines')}
             </Link>
           </nav>
 
@@ -106,10 +108,10 @@ export default async function EnginePage({
             ) : null}
             <div className="min-w-0">
               <p className="text-label uppercase text-brand-300">
-                {engine.data.name}
+                {t(engine.data.name)}
               </p>
               <h1 className="text-display-2 text-ink mt-3 max-w-4xl text-balance">
-                {engine.data.businessQuestion}
+                {t(engine.data.businessQuestion)}
               </h1>
             </div>
           </div>
@@ -120,7 +122,7 @@ export default async function EnginePage({
                 key={capability}
                 className="text-label uppercase text-ink-3 rounded-xs border border-line bg-inset/80 backdrop-blur-sm px-2 py-1"
               >
-                {capability}
+                {t(capability)}
               </span>
             ))}
           </div>
@@ -131,10 +133,10 @@ export default async function EnginePage({
       <section className="gr-hairline">
         <div className="gr-rail-wide gr-section">
           <p className="text-label uppercase text-ink-3">
-            Intelligence readout
+            {t('Intelligence readout')}
           </p>
           <h2 className="text-h1 text-ink mt-3 mb-8 text-balance">
-            {engine.data.screens[0]}
+            {t(engine.data.screens[0]!)}
           </h2>
 
           <EngineVisual
@@ -153,10 +155,10 @@ export default async function EnginePage({
         <section className="gr-hairline">
           <div className="gr-rail-wide gr-section">
             <p className="text-label uppercase text-ink-3">
-              What this engine concluded
+              {t('What this engine concluded')}
             </p>
             <h2 className="text-h1 text-ink mt-3 mb-8">
-              Signal, evidence, consequence, action
+              {t('Signal, evidence, consequence, action')}
             </h2>
 
             <RoleProvider role="analyst">
@@ -171,9 +173,9 @@ export default async function EnginePage({
       {/* --- Recommended screens --------------------------------------- */}
       <section className="gr-hairline">
         <div className="gr-rail-wide gr-section">
-          <p className="text-label uppercase text-ink-3">In the platform</p>
+          <p className="text-label uppercase text-ink-3">{t('In the platform')}</p>
           <h2 className="text-h1 text-ink mt-3 mb-8">
-            Screens this engine provides
+            {t('Screens this engine provides')}
           </h2>
 
           {/* Doc §2: show the real screen, not only its name. */}
@@ -192,18 +194,18 @@ export default async function EnginePage({
                 key={screen}
                 className="rounded-md border border-line bg-panel p-5"
               >
-                <p className="text-body text-ink">{screen}</p>
+                <p className="text-body text-ink">{t(screen)}</p>
               </li>
             ))}
           </ul>
 
           <div className="mt-10 flex flex-wrap gap-3">
             <Button asChild variant="primary">
-              <Link href="/app/mission-control">Open Mission Control</Link>
+              <Link href="/app/mission-control">{t('Open Mission Control')}</Link>
             </Button>
             <Button asChild variant="secondary">
               <Link href={`/engines/${next.slug}`}>
-                Next: {next.name}{' '}
+                {t('Next: {name}', { name: t(next.name) })}{' '}
                 <span aria-hidden className="gr-arrow">
                   →
                 </span>
