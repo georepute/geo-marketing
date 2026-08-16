@@ -882,6 +882,74 @@ export const content: ContentOverlay = {
   'Leads to': 'מוביל אל',
 
   /* ==========================================================================
+     ELECTION INTELLIGENCE.
+
+     Doc §3: anonymised or demonstration data only, never a real political
+     client. The race, the candidates and the county are invented, and every
+     caption says so — that disclaimer must survive translation, so it is part
+     of each string rather than appended by the component.
+     ======================================================================= */
+  'Demonstration subject': 'נושא ההדגמה',
+  'Entirely fictional. No real person, party or race.':
+    'בדיוני לחלוטין. אין אדם, מפלגה או מרוץ אמיתיים.',
+  Race: 'מרוץ',
+  'County Commission': 'מועצת המחוז',
+  'Riverbend County — District 4': 'מחוז Riverbend — אזור 4',
+  Candidate: 'מועמד',
+  Opponent: 'יריב',
+  'A. Marchetti': 'א. מרקטי',
+  'D. Okonkwo': 'ד. אוקונקוו',
+
+  'Election War Room — the live operational view':
+    'חדר מלחמת הבחירות — התצוגה המבצעית החיה',
+  'The Election War Room. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'חדר מלחמת הבחירות. מרוץ בדיוני, נתוני הדגמה — אין מועמד, מפלגה או קמפיין אמיתיים.',
+  'Candidate / party dashboard — the standing position':
+    'לוח מחוונים למועמד/מפלגה — העמדה הנוכחית',
+  'Candidate and party position. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'עמדת המועמד והמפלגה. מרוץ בדיוני, נתוני הדגמה — אין מועמד, מפלגה או קמפיין אמיתיים.',
+  'Election narrative intelligence — positive vs negative narratives':
+    'מודיעין נרטיב בחירות — נרטיבים חיוביים מול שליליים',
+  'Which narratives are strengthening the position and which are damaging it. Fictional race, demonstration data.':
+    'אילו נרטיבים מחזקים את העמדה ואילו פוגעים בה. מרוץ בדיוני, נתוני הדגמה.',
+  'Positive vs negative narratives — the polarity split':
+    'נרטיבים חיוביים מול שליליים — פילוח הקוטביות',
+  'Positive against negative, by reach and by direction of travel. Fictional race, demonstration data.':
+    'חיובי מול שלילי, לפי טווח הגעה ולפי כיוון התנועה. מרוץ בדיוני, נתוני הדגמה.',
+  'Audience / segment movement — who is moving toward and away':
+    'תנועת קהלים/פלחים — מי מתקרב ומי מתרחק',
+  'Which audiences are moving closer and which are moving away. Fictional race, demonstration data.':
+    'אילו קהלים מתקרבים ואילו מתרחקים. מרוץ בדיוני, נתוני הדגמה.',
+  'Opponent intelligence — competing narratives and ownership':
+    'מודיעין יריבים — נרטיבים מתחרים ובעלות עליהם',
+  'What the opposing account is, and which issues it owns. Fictional race, demonstration data.':
+    'מהי הגרסה של הצד שכנגד, ועל אילו נושאים היא שולטת. מרוץ בדיוני, נתוני הדגמה.',
+  'Influencers and sources shaping the narrative':
+    'משפיענים ומקורות שמעצבים את הנרטיב',
+  'Who is strengthening the position and who is damaging it. Fictional race, demonstration data.':
+    'מי מחזק את העמדה ומי פוגע בה. מרוץ בדיוני, נתוני הדגמה.',
+  'AI + Google election intelligence — per-engine narrative leads':
+    'מודיעין בחירות ב-AI ובגוגל — הנרטיב המוביל בכל מנוע',
+  'What each AI engine and Google surface leads with. Fictional race, demonstration data.':
+    'במה כל מנוע AI וגוגל פותחים. מרוץ בדיוני, נתוני הדגמה.',
+  'Multilingual intelligence — narrative gaps between languages':
+    'מודיעין רב-לשוני — פערי נרטיב בין שפות',
+  'Where the account of a candidate differs by language. Fictional race, demonstration data.':
+    'היכן הגרסה על מועמד שונה בין שפות. מרוץ בדיוני, נתוני הדגמה.',
+  'Risks and opportunities — emerging threats and open positions':
+    'סיכונים והזדמנויות — איומים מתהווים ועמדות פנויות',
+  'Emerging threats and unclaimed positions, ranked. Fictional race, demonstration data.':
+    'איומים מתהווים ועמדות שטרם נתפסו, מדורגים. מרוץ בדיוני, נתוני הדגמה.',
+  'Recommended actions — the campaign action plan':
+    'פעולות מומלצות — תוכנית הפעולה של הקמפיין',
+  'What to do now, who owns it, and how the movement will be measured. Fictional race, demonstration data.':
+    'מה לעשות עכשיו, מי אחראי, וכיצד תימדד התזוזה. מרוץ בדיוני, נתוני הדגמה.',
+  'Trend over time — narrative movement across the cycle':
+    'מגמה לאורך זמן — תנועת הנרטיב לאורך המחזור',
+  'How the position has moved across the cycle. Fictional race, demonstration data.':
+    'כיצד זזה העמדה לאורך המחזור. מרוץ בדיוני, נתוני הדגמה.',
+
+  /* ==========================================================================
      THE ENGINES OVERVIEW.
      ======================================================================= */
   'Intelligence engines': 'מנועי מודיעין',
@@ -1023,6 +1091,201 @@ export const content: ContentOverlay = {
      chrome each view wraps in t(). Signal names and readout titles are shared
      with the marketing pages and live in the seed section further down.
      ======================================================================= */
+
+  /* --- Decision Reconstruction ---------------------------------------------- */
+  'Decision Reconstruction': 'שחזור ההחלטה',
+  'Decision Reconstruction | GeoRepute': 'שחזור ההחלטה | GeoRepute',
+  'Signature experience': 'החוויה המובהקת',
+  'Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.':
+    'הזינו דומיין ובחרו שאלה מסחרית. המערכת משחזרת מה כל משטח הבין, מי קיבל את ההחלטה ומדוע.',
+  'Seeded environment — this demonstration always reconstructs {org}.':
+    'סביבה מבוססת נתוני זרע — הדגמה זו משחזרת תמיד את {org}.',
+  'Understood as: {what}': 'הובן כ: {what}',
+  Brand: 'המותג',
+  Competitor: 'המתחרה',
+  Low: 'נמוכה',
+  '{n} months': '{n} חודשים',
+  Supporting: 'תומך',
+  Downstream: 'במורד הזרם',
+  '{n} tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
+    '{n} שאלות החלטה נמדדות. שאלות הערכת ספקים מופיעות ראשונות — שם נבחר הספק.',
+  /* The engine understandings, as the seed stores them. */
+  'An MRO and fastener distributor serving manufacturers':
+    'מפיץ ציוד תחזוקה ומחברים המשרת יצרנים',
+  'Midwest industrial fastener and MRO distributor':
+    'מפיץ מחברים תעשייתיים וציוד תחזוקה במערב התיכון',
+  'A regional industrial supplier in the US Midwest':
+    'ספק תעשייתי אזורי במערב התיכון של ארה"ב',
+  'Industrial supply company, category association incomplete':
+    'חברת אספקה תעשייתית, שיוך הקטגוריה אינו שלם',
+  'Unclear — associates the name with unrelated businesses':
+    'לא ברור — משייך את השם לעסקים שאינם קשורים',
+  'Not recognized as a distinct business entity':
+    'אינו מזוהה כישות עסקית נפרדת',
+  "Engines describe the category using a competitor's framing. Northwind owns 12% of that language.":
+    'המנועים מתארים את הקטגוריה במסגור של מתחרה. Northwind מחזיקה ב-12% מהשפה הזו.',
+  '{n} independent sources support this brand. Northwind has 3.':
+    '{n} מקורות בלתי תלויים תומכים במותג הזה. ל-Northwind יש 3.',
+  '{name} controls': '{name} שולטת ב',
+  'across the whole set. Competitive density is shifting at {velocity}.':
+    'על פני כל המערך. הצפיפות התחרותית משתנה בקצב {velocity}.',
+  'This is the exposure attributable to this single question. The full-book figure across all {n} tracked decisions is materially larger and appears in Mission Control.':
+    'זו החשיפה המיוחסת לשאלה הבודדת הזו. הנתון המלא על פני כל {n} ההחלטות הנמדדות גדול משמעותית ומופיע במרכז הבקרה.',
+  'stage {n} of {total}': 'שלב {n} מתוך {total}',
+  Present: 'נוכח',
+  'Observable by {tools} — but only after the decision has already narrowed.':
+    'ניתן לצפייה על ידי {tools} — אך רק לאחר שההחלטה כבר הצטמצמה.',
+  'No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.':
+    'שום כלי מקובל אינו צופה בשלב הזה. אין ביקור, קליק, ליד או אירוע CRM לתעד — ולכן החולשה נותרת בלתי נראית עד שההכנסה זזה.',
+  Domain: 'דומיין',
+  '24 tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
+    '24 שאלות החלטה נמדדות. שאלות הערכת ספקים מופיעות ראשונות — שם נבחר הספק.',
+  'Reconstruction confidence across all ten surfaces.':
+    'רמת הוודאות של השחזור על פני עשרת המשטחים.',
+
+  /* Stage headings */
+  'What each AI engine understood about the business':
+    'מה כל מנוע AI הבין על העסק',
+  'Whether the brand was recognised, mentioned, cited, recommended or ignored':
+    'האם המותג זוהה, הוזכר, צוטט, הומלץ או התעלמו ממנו',
+  'Which competitor was selected instead': 'איזה מתחרה נבחר במקומו',
+  'Which sources, trust signals and narratives influenced the answer':
+    'אילו מקורות, אותות אמון ונרטיבים השפיעו על התשובה',
+  'What Google demand, organic position and paid click cost indicate':
+    'על מה מצביעים הביקוש בגוגל, המיקום האורגני ועלות הקליק הממומן',
+  'Where the question sits in the customer decision journey':
+    'היכן ממוקמת השאלה במסע ההחלטה של הלקוח',
+  'What timing, market maturity and competitive density indicate':
+    'על מה מצביעים התזמון, בשלות השוק והצפיפות התחרותית',
+  'What the directional commercial exposure may be':
+    'מהי החשיפה המסחרית הכיוונית המשוערת',
+  'Which connected signals explain the outcome':
+    'אילו אותות מקושרים מסבירים את התוצאה',
+  'What action is prescribed and how improvement will be measured':
+    'איזו פעולה נקבעת וכיצד יימדד השיפור',
+  'Decision intelligence graph': 'גרף מודיעין ההחלטות',
+
+  /* Engine status and understanding */
+  'Mentioned only': 'הוזכר בלבד',
+  'Wrong entity': 'ישות שגויה',
+  'Understood as: An MRO and fastener distributor serving manufacturers':
+    'הובן כ: מפיץ ציוד תחזוקה ומחברים המשרת יצרנים',
+  'Understood as: Midwest industrial fastener and MRO distributor':
+    'הובן כ: מפיץ מחברים תעשייתיים וציוד תחזוקה במערב התיכון',
+  'Understood as: A regional industrial supplier in the US Midwest':
+    'הובן כ: ספק תעשייתי אזורי במערב התיכון של ארה"ב',
+  'Understood as: Industrial supply company, category association incomplete':
+    'הובן כ: חברת אספקה תעשייתית, שיוך הקטגוריה אינו שלם',
+  'Understood as: Unclear — associates the name with unrelated businesses':
+    'הובן כ: לא ברור — משייך את השם לעסקים שאינם קשורים',
+  'Understood as: Not recognized as a distinct business entity':
+    'הובן כ: אינו מזוהה כישות עסקית נפרדת',
+  'Named Northwind in its answer, citing company website.':
+    'הזכיר את Northwind בתשובתו, בהסתמך על אתר החברה.',
+  'Recognises the business but did not consider it relevant to this question.':
+    'מזהה את העסק אך לא ראה בו רלוונטי לשאלה זו.',
+  'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
+    'מתאר את Northwind כקמעונאית כלי עבודה ולא כמפיצת ציוד תחזוקה, מה שמוציא אותה מתשובות להערכת ספקים.',
+  'Knows the company exists but not which product categories it carries, so it is omitted from specification-led questions.':
+    'יודע שהחברה קיימת אך לא אילו קטגוריות מוצרים היא מחזיקה, ולכן היא מושמטת משאלות המונחות מפרט.',
+  'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.':
+    'מערבב בין Northwind Supply לחברת לוגיסטיקה בעלת אותו שם, ולכן שיוך הקטגוריה נכשל לחלוטין.',
+  '1 of 6 engines named Northwind, and none placed it first.':
+    'מנוע אחד מתוך 6 הזכיר את Northwind, ואף אחד לא מיקם אותה ראשונה.',
+  '4 of 6 resolve the wrong entity': '4 מתוך 6 מזהים את הישות השגויה',
+  'engines recommended the business on this question':
+    'מנועים המליצו על העסק בשאלה זו',
+  'of all recommendations across the tracked decision set':
+    'מכלל ההמלצות במערך ההחלטות הנמדד',
+
+  /* Competitor, sources and search */
+  'Kestrel Industrial controls': 'Kestrel Industrial שולטת ב',
+  '21 independent sources support this brand. Northwind has 3.':
+    '21 מקורות בלתי תלויים תומכים במותג הזה. ל-Northwind יש 3.',
+  'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
+    'Kestrel Industrial מצוטטת על ידי 21 מקורות בלתי תלויים; Northwind על ידי 3.',
+  '3 sources vs 14 median': '3 מקורות מול חציון של 14',
+  'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
+    'העמודים של Northwind עצמה הם המקור היחיד שהמנועים יכולים להגיע אליו עבור טענותיה — ציטוט עצמי נושא משקל מועט.',
+  'A published comparison library gives engines material they can quote directly.':
+    'ספריית השוואה מפורסמת נותנת למנועים חומר שהם יכולים לצטט ישירות.',
+  'Engines describe the category using a competitor&#x27;s framing. Northwind owns 12% of that language.':
+    'המנועים מתארים את הקטגוריה במסגור של מתחרה. Northwind מחזיקה ב-12% מהשפה הזו.',
+  'Category evaluation criteria': 'קריטריוני הערכה בקטגוריה',
+  'Supplier-comparison content': 'תוכן להשוואת ספקים',
+  'Company website': 'אתר החברה',
+  Source: 'מקור',
+  Influence: 'השפעה',
+  Favours: 'מעדיף',
+  'Why it matters': 'מדוע זה חשוב',
+
+  'Monthly volume': 'נפח חודשי',
+  'Paid CPC': 'עלות קליק ממומן',
+  'AI presence': 'נוכחות ב-AI',
+  'Closest tracked keyword': 'מילת המפתח הנמדדת הקרובה ביותר',
+  'Above break-even CPC': 'מעל עלות הקליק בנקודת האיזון',
+  'Coverage at this stage': 'כיסוי בשלב זה',
+  'Share of query volume': 'נתח מנפח השאילתות',
+  'Share of revenue decided': 'נתח ההכנסה שנקבע',
+  'of questions at this stage against': 'מהשאלות בשלב זה מול',
+  'stage 4 of 5': 'שלב 4 מתוך 5',
+  'Observable by פלטפורמות SEO — but only after the decision has already narrowed.':
+    'ניתן לצפייה על ידי פלטפורמות SEO — אך רק לאחר שההחלטה כבר הצטמצמה.',
+  'Market position': 'עמדה בשוק',
+  'Window remaining': 'החלון שנותר',
+  'across the whole set. Competitive density is shifting at מתון — 8% מרבעון לרבעון .':
+    'על פני כל המערך. הצפיפות התחרותית משתנה בקצב מתון — 8% מרבעון לרבעון.',
+  'This is the exposure attributable to this single question. The full-book figure across all 24 tracked decisions is materially larger and appears in Mission Control.':
+    'זו החשיפה המיוחסת לשאלה הבודדת הזו. הנתון המלא על פני כל 24 ההחלטות הנמדדות גדול משמעותית ומופיע במרכז הבקרה.',
+  'Buy this as an intelligence product': 'רכשו זאת כמוצר מודיעין',
+
+  /* The 24 tracked buyer questions. Translated on the same reasoning as the
+     home page's search queries — see the note beside those. */
+  'Which fastener supplier should we choose for a new plant?':
+    'באיזה ספק מחברים כדאי לבחור עבור מפעל חדש?',
+  'Who are the top industrial supply companies for fasteners?':
+    'מי הן חברות האספקה התעשייתית המובילות למחברים?',
+  'Best MRO distributors for manufacturing plants':
+    'מפיצי ציוד התחזוקה הטובים ביותר למפעלי ייצור',
+  'Top rated industrial supply vendors near Chicago':
+    'ספקי אספקה תעשייתית המדורגים גבוה ליד שיקגו',
+  'Which MRO supplier has the best fill rate?':
+    'לאיזה ספק ציוד תחזוקה יש שיעור האספקה הטוב ביותר?',
+  'Recommended industrial distributors for hydraulic components':
+    'מפיצים תעשייתיים מומלצים לרכיבים הידראוליים',
+  'Compare industrial distributor service levels':
+    'השוו רמות שירות של מפיצים תעשייתיים',
+  'Is a national or regional MRO distributor better?':
+    'האם מפיץ ציוד תחזוקה ארצי או אזורי עדיף?',
+  'Should we consolidate MRO suppliers or keep multiple vendors?':
+    'האם לרכז ספקי ציוד תחזוקה או לשמור על מספר ספקים?',
+  'What should an MRO supply agreement include?':
+    'מה צריך לכלול הסכם אספקת ציוד תחזוקה?',
+  'Risks of single-source supplier dependency for MRO':
+    'סיכוני תלות בספק יחיד לציוד תחזוקה',
+  'Vendor-managed inventory vs consignment for MRO supplies':
+    'ניהול מלאי על ידי הספק מול קונסיגנציה לציוד תחזוקה',
+  'What is vendor-managed inventory for MRO supplies?':
+    'מהו ניהול מלאי על ידי הספק לציוד תחזוקה?',
+  'How do I reduce MRO inventory carrying costs?':
+    'כיצד מפחיתים את עלויות החזקת מלאי ציוד התחזוקה?',
+  'Best practices for industrial fastener sourcing':
+    'שיטות עבודה מומלצות לרכש מחברים תעשייתיים',
+  'What is the difference between grade 5 and grade 8 fasteners?':
+    'מה ההבדל בין מחברים דרגה 5 לדרגה 8?',
+  'What causes premature bolt failure in high-vibration equipment?':
+    'מה גורם לכשל מוקדם של ברגים בציוד בעל רטט גבוה?',
+  'How often should hydraulic fittings be replaced?':
+    'באיזו תדירות יש להחליף אביזרים הידראוליים?',
+  'How to avoid counterfeit fasteners in the supply chain':
+    'כיצד להימנע ממחברים מזויפים בשרשרת האספקה',
+  'What are the most common industrial supply delivery failures?':
+    'מהם כשלי האספקה הנפוצים ביותר באספקה תעשייתית?',
+  'Industrial fastener supplier with same-day shipping':
+    'ספק מחברים תעשייתיים עם משלוח באותו יום',
+  'Get a quote for bulk grade 8 fasteners':
+    'קבלו הצעת מחיר למחברים דרגה 8 בכמות',
+  'Set up an MRO supply account': 'פתחו חשבון אספקת ציוד תחזוקה',
 
   /* --- Executive Mission Control -------------------------------------------
      Tile labels carry title case here and sentence case elsewhere in the seed

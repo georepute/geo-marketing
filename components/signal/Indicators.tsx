@@ -147,11 +147,12 @@ export function RelationshipTag({
 }: {
   relationship: 'supporting' | 'downstream'
 }) {
+  const t = useT()
   const isSupporting = relationship === 'supporting'
   return (
     <span className="inline-flex items-center gap-1 text-label uppercase text-ink-3">
       <span aria-hidden>{isSupporting ? '↑' : '↓'}</span>
-      {isSupporting ? 'Supporting' : 'Downstream'}
+      {isSupporting ? t('Supporting') : t('Downstream')}
     </span>
   )
 }

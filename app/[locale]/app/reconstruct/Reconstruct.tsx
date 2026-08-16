@@ -25,6 +25,7 @@ import type {
 } from '@/lib/api/types'
 import type { EngineStatus } from '@/lib/seed/reconstruction'
 import { useT } from '@/lib/i18n/content/client'
+import { useI18n } from '@/lib/i18n/context'
 
 /* ============================================================================
    DECISION RECONSTRUCTION — brief §3.1. Hero experience 2.
@@ -43,6 +44,22 @@ const STATUS_TOKEN: Record<EngineStatus, string> = {
   mentioned: 'var(--gr-warning)',
   ignored: 'var(--gr-critical)',
   confused: 'var(--gr-critical)',
+}
+
+/* Display labels, never the raw enum. The content overlay walks every string
+   in the seed graph, so an entry for a bare value like 'high' would rewrite
+   the enum itself and break every lookup keyed on it — which is exactly what
+   happened once. Capitalised labels cannot collide with the lowercase values. */
+const INFLUENCE_LABEL: Record<string, string> = {
+  high: 'High',
+  medium: 'Medium',
+  low: 'Low',
+}
+
+const FAVOURS_LABEL: Record<string, string> = {
+  brand: 'Brand',
+  competitor: 'Competitor',
+  neutral: 'Neutral',
 }
 
 const STATUS_LABEL: Record<EngineStatus, string> = {
@@ -70,6 +87,7 @@ export function Reconstruct({
   fetchReconstruction: (promptId: string) => Promise<Reconstruction | null>
 }) {
   const t = useT()
+  const { intl } = useI18n()
   const copy = useDict()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
@@ -103,14 +121,12 @@ export function Reconstruct({
           ENTRY — domain + commercial question
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight pb-0">
-        <p className="text-label uppercase text-ink-3">Signature experience</p>
+        <p className="text-label uppercase text-ink-3">{t('Signature experience')}</p>
         <h1 className="text-display-2 text-ink mt-3 text-balance">
           {copy.signatureExperience}
         </h1>
         <p className="text-body-lg text-ink-2 mt-4 max-w-2xl">
-          Enter a domain and choose a commercial question. The system
-          reconstructs what each surface understood, who received the decision
-          and why.
+          {t('Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.')}
         </p>
 
         <div className="mt-7 grid gap-4 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
@@ -119,7 +135,7 @@ export function Reconstruct({
               htmlFor="gr-recon-domain"
               className="text-label uppercase text-ink-3"
             >
-              Domain
+              {t('Domain')}
             </label>
             <input
               id="gr-recon-domain"
@@ -134,8 +150,7 @@ export function Reconstruct({
               )}
             />
             <span className="block text-caption text-ink-3 mt-2">
-              Seeded environment — this demonstration always reconstructs{' '}
-              {org.name}.
+              {t('Seeded environment — this demonstration always reconstructs {org}.', { org: org.name })}
             </span>
           </div>
 
@@ -144,7 +159,7 @@ export function Reconstruct({
               htmlFor="gr-recon-question"
               className="text-label uppercase text-ink-3"
             >
-              Commercial question
+              {t('Commercial question')}
             </label>
             <select
               id="gr-recon-question"
@@ -162,9 +177,7 @@ export function Reconstruct({
               ))}
             </select>
             <span className="block text-caption text-ink-3 mt-2">
-              {count(questions.length)} tracked decision questions.
-              Supplier-evaluation questions appear first — that is where the
-              vendor is chosen.
+              {t('{n} tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.', { n: count(questions.length) })}
             </span>
           </div>
         </div>
@@ -217,7 +230,7 @@ export function Reconstruct({
                   </span>
                 </div>
                 <p className="text-caption text-ink-2 mt-3">
-                  Understood as: {engine.understoodAs}
+                  {t('Understood as: {what}', { what: engine.understoodAs })}
                 </p>
                 <p className="text-caption text-ink-3 mt-2">{engine.note}</p>
                 <div className="mt-4 flex items-center gap-3">
@@ -246,7 +259,7 @@ export function Reconstruct({
               <span className="text-ink-3"> / {data.outcome.totalEngines}</span>
             </p>
             <p className="text-caption text-ink-3 mt-2">
-              engines recommended the business on this question
+              {t('engines recommended the business on this question')}
             </p>
             <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
               {data.outcome.verdict}
@@ -263,7 +276,7 @@ export function Reconstruct({
                 {percent(data.winner.recommendationSharePct)}
               </span>
               <span className="text-caption text-ink-3">
-                of all recommendations across the tracked decision set
+                {t('of all recommendations across the tracked decision set')}
               </span>
             </div>
             <blockquote
@@ -273,8 +286,7 @@ export function Reconstruct({
               {data.winner.why}
             </blockquote>
             <p className="text-caption text-ink-3 mt-4" data-numeric="">
-              {data.winner.authoritySources} independent sources support this
-              brand. Northwind has 3.
+              {t('{n} independent sources support this brand. Northwind has 3.', { n: data.winner.authoritySources })}
             </p>
           </div>
         </Stage>
@@ -288,10 +300,10 @@ export function Reconstruct({
             <table className="w-full">
               <thead>
                 <tr className="text-label uppercase text-ink-3">
-                  <th className="text-start font-normal p-4">Source</th>
-                  <th className="text-start font-normal p-4">Influence</th>
-                  <th className="text-start font-normal p-4">Favours</th>
-                  <th className="text-start font-normal p-4">Why it matters</th>
+                  <th className="text-start font-normal p-4">{t('Source')}</th>
+                  <th className="text-start font-normal p-4">{t('Influence')}</th>
+                  <th className="text-start font-normal p-4">{t('Favours')}</th>
+                  <th className="text-start font-normal p-4">{t('Why it matters')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -302,7 +314,7 @@ export function Reconstruct({
                   >
                     <td className="p-4 text-caption text-ink">{source.name}</td>
                     <td className="p-4 text-caption text-ink-2 capitalize">
-                      {source.influence}
+                      {t(INFLUENCE_LABEL[source.influence] ?? source.influence)}
                     </td>
                     <td className="p-4">
                       <span
@@ -316,7 +328,7 @@ export function Reconstruct({
                                 : 'var(--gr-neutral)',
                         }}
                       >
-                        {source.favours}
+                        {t(FAVOURS_LABEL[source.favours] ?? source.favours)}
                       </span>
                     </td>
                     <td className="p-4 text-caption text-ink-2">
@@ -336,7 +348,7 @@ export function Reconstruct({
         >
           {data.search ? (
             <div className="rounded-md border border-line bg-panel p-6">
-              <p className="text-caption text-ink-3">Closest tracked keyword</p>
+              <p className="text-caption text-ink-3">{t('Closest tracked keyword')}</p>
               <p className="text-body-lg text-ink font-mono mt-2">
                 {data.search.keyword}
               </p>
@@ -346,7 +358,7 @@ export function Reconstruct({
                   label={t('Google position')}
                   value={
                     data.search.position === null
-                      ? 'Not in top 100'
+                      ? t('Not in top 100')
                       : `#${data.search.position}`
                   }
                 />
@@ -357,7 +369,7 @@ export function Reconstruct({
                 <Metric label={t('Paid CPC')} value={observedCost(data.search.cpc)} />
                 <Metric
                   label={t('AI presence')}
-                  value={data.search.aiPresence ? 'Present' : 'Absent'}
+                  value={data.search.aiPresence ? t('Present') : t('Absent')}
                   tone={data.search.aiPresence ? 'positive' : 'critical'}
                 />
               </dl>
@@ -372,7 +384,7 @@ export function Reconstruct({
                 }}
               >
                 <p className="text-label uppercase text-ink-3">
-                  Gap classification
+                  {t('Gap classification')}
                 </p>
                 <p className="text-body text-ink mt-2">
                   {data.search.gapLabel}
@@ -401,7 +413,7 @@ export function Reconstruct({
                 {data.journey.stageLabel}
               </span>
               <span className="text-caption text-ink-3" data-numeric="">
-                stage {data.journey.order} of {data.journey.totalStages}
+                {t('stage {n} of {total}', { n: data.journey.order, total: data.journey.totalStages })}
               </span>
             </div>
 
@@ -428,16 +440,9 @@ export function Reconstruct({
 
             <p className="text-caption text-ink-2 mt-6 max-w-prose">
               {data.journey.observableBy.length === 0 ? (
-                <>
-                  No conventional tool observes this stage. There is no visit,
-                  click, lead or CRM event to record — which is why the weakness
-                  is invisible until revenue moves.
-                </>
+                t('No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.')
               ) : (
-                <>
-                  Observable by {data.journey.observableBy.join(', ')} — but
-                  only after the decision has already narrowed.
-                </>
+                t('Observable by {tools} — but only after the decision has already narrowed.', { tools: data.journey.observableBy.map((x) => t(x)).join(', ') })
               )}
             </p>
           </div>
@@ -453,7 +458,7 @@ export function Reconstruct({
               <Metric label={t('Market position')} value={data.timing.positionLabel} />
               <Metric
                 label={t('Window remaining')}
-                value={`${data.timing.windowMonths} months`}
+                value={t('{n} months', { n: data.timing.windowMonths })}
               />
               <Metric
                 label={t('Market readiness')}
@@ -461,20 +466,19 @@ export function Reconstruct({
               />
               <Metric
                 label={t('Decision deadline')}
-                value={dateFull(data.timing.decisionDeadline)}
+                value={dateFull(data.timing.decisionDeadline, intl)}
               />
             </dl>
             <p className="text-caption text-ink-2 mt-6 max-w-prose">
-              {data.winner.name} controls{' '}
+              {t('{name} controls', { name: data.winner.name })}{' '}
               <span className="text-ink" data-numeric="">
                 {percent(data.timing.competitorControlPct)}
               </span>{' '}
-              of questions at this stage against{' '}
+              {t('of questions at this stage against')}{' '}
               <span className="text-ink" data-numeric="">
                 {percent(data.timing.overallControlPct)}
               </span>{' '}
-              across the whole set. Competitive density is shifting at{' '}
-              {data.timing.shiftVelocity.toLowerCase()}.
+              {t('across the whole set. Competitive density is shifting at {velocity}.', { velocity: data.timing.shiftVelocity.toLowerCase() })}
             </p>
           </div>
         </Stage>
@@ -484,9 +488,7 @@ export function Reconstruct({
           <div className="rounded-md border border-line bg-panel p-6">
             <ExposureRange exposure={data.exposure} size="lg" />
             <p className="text-caption text-ink-2 mt-5 max-w-prose">
-              This is the exposure attributable to this single question. The
-              full-book figure across all {count(questions.length)} tracked
-              decisions is materially larger and appears in Mission Control.
+              {t('This is the exposure attributable to this single question. The full-book figure across all {n} tracked decisions is materially larger and appears in Mission Control.', { n: count(questions.length) })}
             </p>
           </div>
         </Stage>
@@ -516,7 +518,7 @@ export function Reconstruct({
 
           <div className="mt-6 rounded-md border border-line bg-panel p-6">
             <p className="text-label uppercase text-ink-3 mb-2">
-              Decision intelligence graph
+              {t('Decision intelligence graph')}
             </p>
             <p className="text-body text-ink-2 mb-5 max-w-2xl">
               {copy.home.graph}
@@ -544,7 +546,7 @@ export function Reconstruct({
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <ConfidenceBadge confidence={data.confidence} />
             <span className="text-caption text-ink-3">
-              Reconstruction confidence across all ten surfaces.
+              {t('Reconstruction confidence across all ten surfaces.')}
             </span>
           </div>
 

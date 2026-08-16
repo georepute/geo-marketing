@@ -8,6 +8,7 @@ import { getDictionary } from '@/lib/i18n/server'
 import { getElectionIntelligence } from '@/lib/api/client'
 import type { ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
+import { getT } from '@/lib/i18n/content/translator'
 
 export async function generateMetadata(): Promise<Metadata> {
   const copy = await getDictionary()
@@ -44,6 +45,7 @@ const SCREENS: readonly ScreenSlotId[] = [
 ]
 
 export default async function ElectionIntelligencePage() {
+  const t = await getT()
   const dict = await getDictionary()
   const e = dict.election
   const election = await getElectionIntelligence()
@@ -243,26 +245,26 @@ export default async function ElectionIntelligencePage() {
                     use rather than in a footnote someone can miss. */}
                 <div className="rounded-md border border-line bg-inset p-5">
                   <p className="text-label uppercase text-ink-3">
-                    Demonstration subject
+                    {t('Demonstration subject')}
                   </p>
                   <p className="text-body text-ink mt-3">{subject.name}</p>
                   <dl className="mt-4 pt-4 border-t border-line space-y-3">
                     <div className="flex justify-between gap-3">
-                      <dt className="text-caption text-ink-3">Race</dt>
+                      <dt className="text-caption text-ink-3">{t('Race')}</dt>
                       <dd className="text-caption text-ink-2 text-end">
-                        {subject.race}
+                        {t(subject.race)}
                       </dd>
                     </div>
                     <div className="flex justify-between gap-3">
-                      <dt className="text-caption text-ink-3">Candidate</dt>
+                      <dt className="text-caption text-ink-3">{t('Candidate')}</dt>
                       <dd className="text-caption text-ink-2 text-end">
-                        {subject.candidate}
+                        {t(subject.candidate)}
                       </dd>
                     </div>
                     <div className="flex justify-between gap-3">
-                      <dt className="text-caption text-ink-3">Opponent</dt>
+                      <dt className="text-caption text-ink-3">{t('Opponent')}</dt>
                       <dd className="text-caption text-ink-2 text-end">
-                        {subject.opponent}
+                        {t(subject.opponent)}
                       </dd>
                     </div>
                   </dl>
@@ -270,7 +272,7 @@ export default async function ElectionIntelligencePage() {
                     className="text-caption mt-4 pt-4 border-t border-line"
                     style={{ color: 'var(--gr-warning)' }}
                   >
-                    Entirely fictional. No real person, party or race.
+                    {t('Entirely fictional. No real person, party or race.')}
                   </p>
                 </div>
               </div>
