@@ -179,6 +179,20 @@ locale missing every double-quoted key** — a source string containing an
 apostrophe is written with double quotes rather than escaped. If you extend
 this script, the failure mode to fear is the silent under-count, not the crash.
 
+**Run it in both directions, and mind that its counts go to stderr.**
+`i18n-port.mjs he ru` answers "what does `ru` lack that `he` has", and nothing
+more. Every locale reported `missing: 0` for months while the five ported ones
+each carried six or seven keys `he` did not have — all of them dead, all
+copied off a rendered page. `he 1664 keys / ar 1671 keys` in the header was
+the only visible symptom, and `2>$null` hides even that. Compare the counts,
+then run the reverse before believing parity:
+
+```bash
+node scripts/i18n-port.mjs he ru && node scripts/i18n-port.mjs ru he
+```
+
+All six key sets are now identical in both directions.
+
 ### Three layers, and which one a string belongs to
 
 Getting this wrong is the single biggest time sink in this codebase.
@@ -602,6 +616,17 @@ string.
   most recent shape: the audit printed `3 of 20`, but the seed stores
   `expectedMovement.unit` as `' of 20'` **with its leading space** and the
   component prints the figure beside it. Read the call site.
+- **A dead key hides beside its live twin.** `actions.ts` stores
+  `'Average recognition score 38 → 55'` and a readout separately composes
+  `'Average recognition score 38 → 55/100'` from
+  `{ signal, from, to, unit }`. Both sat in five overlays, two lines apart,
+  and the real one made the fabricated one look plausible. Same for
+  `'Supplier-evaluation coverage 7% → 19%'` (live) against
+  `'… 7 → 19%'` (dead). Thirty-one such keys were removed in August 2026.
+- **Strip comments before testing whether a string is reachable.** A
+  documentation comment in `GoogleVsAIGapMatrix.tsx` quotes the requirements
+  doc verbatim, which made a dead lowercase key look live. This is the same
+  trap the guard tests hit three times; use their `code()` helper.
 - **The seed stores the bare value; the component adds the ornament.**
   Statements are stored unquoted and wrapped in curly quotes at render;
   source names are capitalised in the seed and lowercased at render; feed

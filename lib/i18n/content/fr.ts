@@ -651,15 +651,12 @@ export const content: ContentOverlay = {
   'Decision Health Index': 'Indice de santé décisionnelle',
   'Decision Health Index at 41 of 100':
     'Indice de santé décisionnelle à 41 sur 100',
-  'Decision Health Index 41 → 56/100':
-    'Indice de santé décisionnelle 41 → 56/100',
   Composite: 'Composite',
   'Composite model': 'Modèle composite',
   'Index weighting': 'Pondération de l’indice',
   'GEON vectors': 'Vecteurs GEON',
   'GEON Authority': 'Autorité GEON',
   'GEON Trust': 'Confiance GEON',
-  'GEON Authority 28 → 45/100': 'Autorité GEON 28 → 45/100',
   '38 of 100 average': '38 sur 100 en moyenne',
   '44 of 100': '44 sur 100',
   '28 of 100': '28 sur 100',
@@ -685,8 +682,6 @@ export const content: ContentOverlay = {
   'Average recognition score': 'Score de reconnaissance moyen',
   'Average recognition score 38 → 55':
     'Score de reconnaissance moyen 38 → 55',
-  'Average recognition score 38 → 55/100':
-    'Score de reconnaissance moyen 38 → 55/100',
   'Correctly categorised by all six engines.':
     'Correctement catégorisée par les six moteurs.',
   'All six engines': 'Les six moteurs',
@@ -718,8 +713,6 @@ export const content: ContentOverlay = {
     'Publiez une description d’entité canonique unique et propagez un langage de catégorie identique vers les annuaires professionnels et les données structurées.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
     'Publiez une description d’entité canonique et propagez un langage de catégorie identique vers les annuaires professionnels et les données structurées.',
-  'Publish a canonical entity description and propagate identical…':
-    'Publiez une description d’entité canonique et propagez un langage identique…',
   'Re-observe entity understanding per engine. Success is category association correct on five of six engines.':
     'Réobservez la compréhension de l’entité moteur par moteur. Le succès correspond à une association de catégorie correcte sur cinq moteurs sur six.',
   'Resolve category description inconsistency across all public sources, then pursue verifiable third-party validation.':
@@ -731,7 +724,6 @@ export const content: ContentOverlay = {
   'Decision volume': 'Volume de décisions',
   'AI recommendation presence': 'Présence dans les recommandations de l’IA',
   'Recommendation share': 'Part de recommandations',
-  'Recommendation share 4.2 → 11%': 'Part de recommandations 4,2 → 11 %',
   'Recommendation analysis': 'Analyse des recommandations',
   'Recommendation Map': 'Carte des recommandations',
   'Competitor recommendation share': 'Part de recommandations du concurrent',
@@ -753,8 +745,6 @@ export const content: ContentOverlay = {
   'Supplier-evaluation coverage': 'Couverture de l’évaluation des fournisseurs',
   'Supplier-evaluation coverage 7% → 19%':
     'Couverture de l’évaluation des fournisseurs 7 % → 19 %',
-  'Supplier-evaluation coverage 7 → 19%':
-    'Couverture de l’évaluation des fournisseurs 7 → 19 %',
   '7% → 19% target': 'objectif 7 % → 19 %',
   'Share of decisions rather than share of traffic — measured where the choice is actually made rather than where it is later recorded.':
     'Part des décisions plutôt que part du trafic — mesurée là où le choix se fait réellement, et non là où il est enregistré ensuite.',

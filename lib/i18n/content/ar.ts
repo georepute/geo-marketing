@@ -659,14 +659,12 @@ export const content: ContentOverlay = {
   'Methodology GEON-2.4': 'منهجية GEON-2.4',
   'Decision Health Index': 'مؤشر صحة القرار',
   'Decision Health Index at 41 of 100': 'مؤشر صحة القرار عند 41 من 100',
-  'Decision Health Index 41 → 56/100': 'مؤشر صحة القرار 41 ← 56/100',
   Composite: 'مؤشر مركّب',
   'Composite model': 'نموذج مركّب',
   'Index weighting': 'ترجيح المؤشر',
   'GEON vectors': 'متجهات GEON',
   'GEON Authority': 'حُجّية GEON',
   'GEON Trust': 'ثقة GEON',
-  'GEON Authority 28 → 45/100': 'حُجّية GEON 28 ← 45/100',
   '38 of 100 average': '38 من 100 في المتوسط',
   '44 of 100': '44 من 100',
   '28 of 100': '28 من 100',
@@ -691,7 +689,6 @@ export const content: ContentOverlay = {
   'Outdated knowledge': 'معرفة قديمة',
   'Average recognition score': 'متوسط درجة التعرّف',
   'Average recognition score 38 → 55': 'متوسط درجة التعرّف 38 ← 55',
-  'Average recognition score 38 → 55/100': 'متوسط درجة التعرّف 38 ← 55/100',
   'Correctly categorised by all six engines.': 'مصنّف بشكل صحيح لدى المحرّكات الستة جميعها.',
   'All six engines': 'المحرّكات الستة جميعها',
   'Incomplete on 3 engines': 'غير مكتمل لدى 3 محرّكات',
@@ -722,8 +719,6 @@ export const content: ContentOverlay = {
     'انشروا وصفًا مرجعيًا واحدًا للكيان وعمّموا لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
     'انشروا وصفًا مرجعيًا للكيان وعمّموا لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
-  'Publish a canonical entity description and propagate identical…':
-    'انشروا وصفًا مرجعيًا للكيان وعمّموا لغة الفئة نفسها…',
   'Re-observe entity understanding per engine. Success is category association correct on five of six engines.':
     'أعيدوا رصد فهم الكيان لكل محرّك. والنجاح هو ارتباط الفئة الصحيح لدى خمسة من ستة محرّكات.',
   'Resolve category description inconsistency across all public sources, then pursue verifiable third-party validation.':
@@ -735,7 +730,6 @@ export const content: ContentOverlay = {
   'Decision volume': 'حجم القرارات',
   'AI recommendation presence': 'حضور توصية الذكاء الاصطناعي',
   'Recommendation share': 'حصة التوصيات',
-  'Recommendation share 4.2 → 11%': 'حصة التوصيات 4.2 ← 11%',
   'Recommendation analysis': 'تحليل التوصيات',
   'Recommendation Map': 'خريطة التوصيات',
   'Competitor recommendation share': 'حصة توصيات المنافس',
@@ -753,7 +747,6 @@ export const content: ContentOverlay = {
   'Supplier-evaluation first mention': 'أول ذكر في تقييم المورّدين',
   'Supplier-evaluation coverage': 'تغطية تقييم المورّدين',
   'Supplier-evaluation coverage 7% → 19%': 'تغطية تقييم المورّدين 7% ← 19%',
-  'Supplier-evaluation coverage 7 → 19%': 'تغطية تقييم المورّدين 7 ← 19%',
   '7% → 19% target': 'المستهدف 7% ← 19%',
   'Share of decisions rather than share of traffic — measured where the choice is actually made rather than where it is later recorded.':
     'حصة من القرارات لا حصة من الزيارات — تُقاس حيث يُتخذ الاختيار فعلًا لا حيث يُسجَّل لاحقًا.',
@@ -951,7 +944,6 @@ export const content: ContentOverlay = {
   'Paid dependency': 'الاعتماد على الإعلانات المدفوعة',
   'AI vs Paid': 'الذكاء الاصطناعي مقابل الإعلانات المدفوعة',
   'Recoverable Search Opportunity': 'فرصة بحث قابلة للاسترجاع',
-  'recoverable search opportunity': 'فرصة بحث قابلة للاسترجاع',
   'Recoverable search opportunity': 'فرصة بحث قابلة للاسترجاع',
   'Organic replacement potential': 'إمكانية الاستبدال العضوي',
   'Paid acquisition is not buying growth here; it is renting the positions that authority would otherwise hold. The cost is structural and rises as competitive density increases.':

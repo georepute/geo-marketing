@@ -651,15 +651,12 @@ export const content: ContentOverlay = {
   'Decision Health Index': 'Índice de salud de la decisión',
   'Decision Health Index at 41 of 100':
     'Índice de salud de la decisión en 41 de 100',
-  'Decision Health Index 41 → 56/100':
-    'Índice de salud de la decisión 41 → 56/100',
   Composite: 'Compuesto',
   'Composite model': 'Modelo compuesto',
   'Index weighting': 'Ponderación del índice',
   'GEON vectors': 'Vectores GEON',
   'GEON Authority': 'Autoridad GEON',
   'GEON Trust': 'Confianza GEON',
-  'GEON Authority 28 → 45/100': 'Autoridad GEON 28 → 45/100',
   '38 of 100 average': '38 de 100 de media',
   '44 of 100': '44 de 100',
   '28 of 100': '28 de 100',
@@ -685,8 +682,6 @@ export const content: ContentOverlay = {
   'Average recognition score': 'Puntuación media de reconocimiento',
   'Average recognition score 38 → 55':
     'Puntuación media de reconocimiento 38 → 55',
-  'Average recognition score 38 → 55/100':
-    'Puntuación media de reconocimiento 38 → 55/100',
   'Correctly categorised by all six engines.':
     'Categorizada correctamente por los seis motores.',
   'All six engines': 'Los seis motores',
@@ -718,8 +713,6 @@ export const content: ContentOverlay = {
     'Publique una única descripción canónica de la entidad y propague un lenguaje de categoría idéntico a los directorios sectoriales y a los datos estructurados.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
     'Publique una descripción canónica de la entidad y propague un lenguaje de categoría idéntico a los directorios sectoriales y a los datos estructurados.',
-  'Publish a canonical entity description and propagate identical…':
-    'Publique una descripción canónica de la entidad y propague un lenguaje idéntico…',
   'Re-observe entity understanding per engine. Success is category association correct on five of six engines.':
     'Reobserve la comprensión de la entidad motor por motor. El éxito es una asociación de categoría correcta en cinco de seis motores.',
   'Resolve category description inconsistency across all public sources, then pursue verifiable third-party validation.':
@@ -731,7 +724,6 @@ export const content: ContentOverlay = {
   'Decision volume': 'Volumen de decisiones',
   'AI recommendation presence': 'Presencia en las recomendaciones de la IA',
   'Recommendation share': 'Cuota de recomendaciones',
-  'Recommendation share 4.2 → 11%': 'Cuota de recomendaciones 4,2 → 11 %',
   'Recommendation analysis': 'Análisis de recomendaciones',
   'Recommendation Map': 'Mapa de recomendaciones',
   'Competitor recommendation share': 'Cuota de recomendaciones del competidor',
@@ -753,8 +745,6 @@ export const content: ContentOverlay = {
   'Supplier-evaluation coverage': 'Cobertura en la evaluación de proveedores',
   'Supplier-evaluation coverage 7% → 19%':
     'Cobertura en la evaluación de proveedores 7 % → 19 %',
-  'Supplier-evaluation coverage 7 → 19%':
-    'Cobertura en la evaluación de proveedores 7 → 19 %',
   '7% → 19% target': 'objetivo 7 % → 19 %',
   'Share of decisions rather than share of traffic — measured where the choice is actually made rather than where it is later recorded.':
     'Cuota de decisiones en lugar de cuota de tráfico: medida donde realmente se toma la elección, no donde se registra después.',

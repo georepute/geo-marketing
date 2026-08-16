@@ -647,14 +647,12 @@ export const content: ContentOverlay = {
   'Methodology GEON-2.4': 'Методология GEON-2.4',
   'Decision Health Index': 'Индекс здоровья решений',
   'Decision Health Index at 41 of 100': 'Индекс здоровья решений — 41 из 100',
-  'Decision Health Index 41 → 56/100': 'Индекс здоровья решений 41 → 56/100',
   Composite: 'Составной показатель',
   'Composite model': 'Составная модель',
   'Index weighting': 'Взвешивание индекса',
   'GEON vectors': 'Векторы GEON',
   'GEON Authority': 'Авторитетность GEON',
   'GEON Trust': 'Доверие GEON',
-  'GEON Authority 28 → 45/100': 'Авторитетность GEON 28 → 45/100',
   '38 of 100 average': 'в среднем 38 из 100',
   '44 of 100': '44 из 100',
   '28 of 100': '28 из 100',
@@ -679,8 +677,6 @@ export const content: ContentOverlay = {
   'Outdated knowledge': 'Устаревшие знания',
   'Average recognition score': 'Средняя оценка распознавания',
   'Average recognition score 38 → 55': 'Средняя оценка распознавания 38 → 55',
-  'Average recognition score 38 → 55/100':
-    'Средняя оценка распознавания 38 → 55/100',
   'Correctly categorised by all six engines.':
     'Корректно отнесено к категории всеми шестью движками.',
   'All six engines': 'Все шесть движков',
@@ -712,8 +708,6 @@ export const content: ContentOverlay = {
     'Опубликуйте единое каноническое описание сущности и распространите идентичный язык категории на отраслевые каталоги и структурированные данные.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
     'Опубликуйте каноническое описание сущности и распространите идентичный язык категории на отраслевые каталоги и структурированные данные.',
-  'Publish a canonical entity description and propagate identical…':
-    'Опубликуйте каноническое описание сущности и распространите идентичный…',
   'Re-observe entity understanding per engine. Success is category association correct on five of six engines.':
     'Заново измеряйте понимание сущности по каждому движку. Успех — корректное отнесение к категории в пяти движках из шести.',
   'Resolve category description inconsistency across all public sources, then pursue verifiable third-party validation.':
@@ -725,7 +719,6 @@ export const content: ContentOverlay = {
   'Decision volume': 'Объём решений',
   'AI recommendation presence': 'Присутствие в рекомендациях ИИ',
   'Recommendation share': 'Доля рекомендаций',
-  'Recommendation share 4.2 → 11%': 'Доля рекомендаций 4,2 → 11%',
   'Recommendation analysis': 'Анализ рекомендаций',
   'Recommendation Map': 'Карта рекомендаций',
   'Competitor recommendation share': 'Доля рекомендаций конкурента',
@@ -746,8 +739,6 @@ export const content: ContentOverlay = {
   'Supplier-evaluation coverage': 'Охват на этапе оценки поставщиков',
   'Supplier-evaluation coverage 7% → 19%':
     'Охват на этапе оценки поставщиков 7% → 19%',
-  'Supplier-evaluation coverage 7 → 19%':
-    'Охват на этапе оценки поставщиков 7 → 19%',
   '7% → 19% target': 'цель 7% → 19%',
   'Share of decisions rather than share of traffic — measured where the choice is actually made rather than where it is later recorded.':
     'Доля решений, а не доля трафика — измеряется там, где выбор действительно делается, а не там, где он позже фиксируется.',
