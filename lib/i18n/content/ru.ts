@@ -321,8 +321,6 @@ export const content: ContentOverlay = {
     'Только анонимизированные или демонстрационные данные. Без имён клиентов, доменов, персональных данных и конфиденциальных цифр.',
   'Executive Mission Control — full window, all measures visible':
     'Центр управления для руководства — полное окно, все показатели видны',
-  'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.':
-    'Центр управления для руководства. Каждый показатель раскрывает стоящие за ним доказательства. Анонимизированные демонстрационные данные.',
   'Action Plan — the prioritised intervention list':
     'План действий — приоритизированный список вмешательств',
   'Every action carries an owner, a deadline and the signal it must move. Anonymised demonstration data.':
@@ -387,24 +385,14 @@ export const content: ContentOverlay = {
   /* --- PLAN · the diagnosis surfaces --------------------------------------- */
   'Deep Diagnosis — the full scan result across connected signals':
     'Глубокая диагностика — полный результат сканирования по связанным сигналам',
-  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
-    'Глубокая диагностика по движкам ИИ, поиску, конкурентам, рынку и цифровому присутствию. Анонимизированные демонстрационные данные.',
   'Competitive Intelligence — the comparison matrix':
     'Конкурентный интеллект — матрица сравнения',
-  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
-    'Кто получает решение вместо вас и какие доказательства ставят его туда. Анонимизированные демонстрационные данные.',
   'AI Intelligence — per-engine recognition and recommendation':
     'Интеллект ИИ — распознавание и рекомендация по каждому движку',
-  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
-    'Что понимает каждый движок ИИ и когда он рекомендует. Анонимизированные демонстрационные данные.',
   'Google vs AI Visibility — the gap matrix':
     'Видимость: Google против ИИ — матрица разрывов',
-  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
-    'Две поверхности обнаружения, измеряемые раздельно. Анонимизированные демонстрационные данные.',
   'Market Intelligence — category and demand view':
     'Рыночный интеллект — вид по категории и спросу',
-  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
-    'Что меняется на рынке и с чем из этого можно работать. Анонимизированные демонстрационные данные.',
   'Narrative Intelligence — narrative ownership and movement':
     'Нарративный интеллект — владение нарративом и его движение',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
@@ -417,8 +405,6 @@ export const content: ContentOverlay = {
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'Стратегия — цели, переведённые в целевые сигналы',
-  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
-    'На входе цели, на выходе приоритизированная стратегия. Каждая цель привязана к сигналу, который должен сдвинуться. Анонимизированные демонстрационные данные.',
   'Content & media generation — output bound to identified gaps':
     'Создание контента и медиа — выпуск, привязанный к выявленным разрывам',
   'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
@@ -435,8 +421,6 @@ export const content: ContentOverlay = {
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'Измерение — таблица сравнения «до → действие → после»',
-  'Not what was published. What changed. Anonymised demonstration data.':
-    'Не что опубликовано. Что изменилось. Анонимизированные демонстрационные данные.',
   'Learning — measured outcome feeding the next recommendation':
     'Обучение — измеренный результат, питающий следующую рекомендацию',
   'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
@@ -2778,4 +2762,41 @@ export const content: ContentOverlay = {
   'plant maintenance supplies': 'расходные материалы для обслуживания завода',
   'same day fastener shipping': 'отгрузка крепежа в день заказа',
   'stainless steel fasteners supplier': 'поставщик крепежа из нержавеющей стали',
+
+  /* --- Product screen captions and alt text — lib/visual/screens.ts.
+     These render through t(slot.caption) and t(slot.alt), which is a
+     VARIABLE, so scripts/i18n-keys.mjs cannot see them. Change a caption
+     in screens.ts and you must change the key here by hand. -------- */
+  'The early-warning view: where AI representation is heading if nothing changes, and the date after which each correction stops being cheap. Real interface, demonstration run.':
+    'Представление раннего предупреждения: куда движется представленность в ИИ, если ничего не изменится, и дата, после которой каждое исправление перестаёт быть дешёвым. Реальный интерфейс, демонстрационный прогон.',
+  'An early-warning screen listing four dated risks to AI representation, each with the point after which recovery becomes a rebuild rather than a repair, above live signal readings and a closing action window.':
+    'Экран раннего предупреждения с четырьмя датированными рисками для представленности в ИИ; у каждого указана точка, после которой восстановление становится перестройкой, а не починкой, над живыми показаниями сигналов и закрывающимся окном действия.',
+  'Every prompt that shapes the buyer decision, with the monthly volume behind it and the revenue at stake on each. Real interface, demonstration run.':
+    'Каждый запрос, формирующий решение покупателя, с месячным объёмом за ним и выручкой, поставленной на кон в каждом. Реальный интерфейс, демонстрационный прогон.',
+  'A table of buyer decision moments, each row carrying its monthly search volume, the engine leading the answer, the brand visibility on it, the buyer intent it signals and a directional revenue range.':
+    'Таблица моментов покупательского решения: в каждой строке месячный объём поиска, движок, ведущий ответ, видимость бренда в нём, сигнализируемое намерение покупателя и ориентировочный диапазон выручки.',
+  'Where the commercial demand a business already intercepts actually originates. Real interface, demonstration run.':
+    'Откуда на самом деле исходит коммерческий спрос, который бизнес уже перехватывает. Реальный интерфейс, демонстрационный прогон.',
+  'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.':
+    'Вращаемый глобус с географическим следом видимости в поисковых системах; страны с измеренным коммерческим спросом выделены и перечислены под ним.',
+  'Each engine profiled across mention rate, sentiment and query share, beside the volume that weights them. Real interface, demonstration run.':
+    'Каждый движок в разрезе частоты упоминаний, тональности и доли запросов — рядом с объёмом, который их взвешивает. Реальный интерфейс, демонстрационный прогон.',
+  'A radar chart profiling each AI engine across mention rate, sentiment and query share, beside a bar chart of the analysis query volume run on each engine.':
+    'Лепестковая диаграмма профилирует каждый ИИ-движок по частоте упоминаний, тональности и доле запросов; рядом — столбчатая диаграмма объёма аналитических запросов на каждом движке.',
+  'Recommendation share engine by engine, beside the topics led, the topics lagged and the topics no brand has claimed. Real interface, demonstration run.':
+    'Доля рекомендаций движок за движком — рядом с темами, где есть лидерство, где есть отставание и которые не занял никто. Реальный интерфейс, демонстрационный прогон.',
+  'A per-engine recommendation share table covering ChatGPT, Claude, Gemini, Perplexity and Copilot with brand and competitor top-three counts, beside lists of topics led, topics lagged and topics unclaimed by anyone.':
+    'Таблица доли рекомендаций по движкам — ChatGPT, Claude, Gemini, Perplexity и Copilot — с числом попаданий бренда и конкурентов в тройку, рядом со списками тем с лидерством, с отставанием и никем не занятых.',
+  'The two discovery surfaces set side by side: what Google indexes against what the AI engines cite back. Real interface, demonstration run.':
+    'Две поверхности обнаружения рядом: что индексирует Google против того, что цитируют в ответ ИИ-движки. Реальный интерфейс, демонстрационный прогон.',
+  'A section contrasting search-engine visibility — indexable pages, organic impressions, ranking signals — against AI-mediated discovery, being what ChatGPT, Gemini, Perplexity and Copilot cite back.':
+    'Раздел, противопоставляющий видимость в поиске — индексируемые страницы, органические показы, сигналы ранжирования — обнаружению через ИИ, то есть тому, что цитируют ChatGPT, Gemini, Perplexity и Copilot.',
+  'What the market already pays for the positions a business does not hold organically, and where budget should go first. Real interface, demonstration run.':
+    'Сколько рынок уже платит за позиции, которых у бизнеса нет в органике, и куда бюджет должен пойти в первую очередь. Реальный интерфейс, демонстрационный прогон.',
+  'A cost-per-click intelligence table pricing each commercial term against its monthly volume, with the annual cost of absence and the paid spend currently compensating for it stated above it.':
+    'Таблица интеллекта цены за клик, оценивающая каждый коммерческий запрос против его месячного объёма; сверху — годовая стоимость отсутствия и платные расходы, которые её сейчас компенсируют.',
+  'Exposure stated as a range with its confidence and its inputs, never as a single confirmed figure. Real interface, demonstration run.':
+    'Экспозиция показана диапазоном с уровнем уверенности и исходными данными — никогда одним подтверждённым числом. Реальный интерфейс, демонстрационный прогон.',
+  'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
+    'Модель коммерческой экспозиции: месячная выручка под риском, дневная стоимость и прогнозируемая величина восстановления — диапазонами; ниже напечатаны входные данные по конверсии, стоимости сделки и бенчмаркам, с отметкой средней уверенности.',
 }

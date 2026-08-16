@@ -2066,24 +2066,14 @@ export const content: ContentOverlay = {
   /* --- PLAN · the diagnosis surfaces --------------------------------------- */
   'Deep Diagnosis — the full scan result across connected signals':
     'אבחון עומק — תוצאת הסריקה המלאה על פני אותות מקושרים',
-  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
-    'אבחון עומק על פני מנועי AI, חיפוש, מתחרים, שוק ונוכחות דיגיטלית. נתוני הדגמה אנונימיים.',
   'Competitive Intelligence — the comparison matrix':
     'מודיעין תחרותי — מטריצת ההשוואה',
-  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
-    'מי מקבל את ההחלטה במקומכם, והראיות שמציבות אותו שם. נתוני הדגמה אנונימיים.',
   'AI Intelligence — per-engine recognition and recommendation':
     'מודיעין AI — זיהוי והמלצה לכל מנוע',
-  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
-    'מה כל מנוע AI מבין, ומתי הוא ממליץ. נתוני הדגמה אנונימיים.',
   'Google vs AI Visibility — the gap matrix':
     'נראות ב-Google מול AI — מטריצת הפערים',
-  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
-    'שני משטחי גילוי, נמדדים בנפרד. נתוני הדגמה אנונימיים.',
   'Market Intelligence — category and demand view':
     'מודיעין שוק — תצוגת קטגוריה וביקוש',
-  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
-    'מה משתנה בשוק, ואיזה חלק מכך בר-טיפול. נתוני הדגמה אנונימיים.',
   'Narrative Intelligence — narrative ownership and movement':
     'מודיעין נרטיבים — בעלות על הנרטיב ותנועתו',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
@@ -2096,8 +2086,6 @@ export const content: ContentOverlay = {
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'אסטרטגיה — יעדים שמתורגמים לאותות ממוקדים',
-  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
-    'יעדים נכנסים, אסטרטגיה מתועדפת יוצאת. כל יעד קשור לאות שצפוי לזוז. נתוני הדגמה אנונימיים.',
   'Content & media generation — output bound to identified gaps':
     'הפקת תוכן ומדיה — תפוקה הקשורה לפערים שזוהו',
   'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
@@ -2114,8 +2102,6 @@ export const content: ContentOverlay = {
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'מדידה — טבלת ההשוואה לפני ← פעולה ← אחרי',
-  'Not what was published. What changed. Anonymised demonstration data.':
-    'לא מה פורסם. מה השתנה. נתוני הדגמה אנונימיים.',
   'Learning — measured outcome feeding the next recommendation':
     'למידה — תוצאה נמדדת שמזינה את ההמלצה הבאה',
   'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
@@ -2376,8 +2362,6 @@ export const content: ContentOverlay = {
   /* --- Product screen slots ------------------------------------------------ */
   'Executive Mission Control — full window, all measures visible':
     'מרכז הבקרה הניהולי — חלון מלא, כל המדדים גלויים',
-  'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.':
-    'מרכז הבקרה הניהולי. כל מדד פותח את הראיות שמאחוריו. נתוני הדגמה אנונימיים.',
   'Action Plan — the prioritised intervention list':
     'תוכנית הפעולה — רשימת ההתערבויות המתועדפת',
   'Every action carries an owner, a deadline and the signal it must move. Anonymised demonstration data.':
@@ -2899,4 +2883,41 @@ export const content: ContentOverlay = {
   'plant maintenance supplies': 'ציוד תחזוקה למפעל',
   'same day fastener shipping': 'משלוח מחברים באותו יום',
   'stainless steel fasteners supplier': 'ספק מחברי נירוסטה',
+
+  /* --- Product screen captions and alt text — lib/visual/screens.ts.
+     These render through t(slot.caption) and t(slot.alt), which is a
+     VARIABLE, so scripts/i18n-keys.mjs cannot see them. Change a caption
+     in screens.ts and you must change the key here by hand. -------- */
+  'The early-warning view: where AI representation is heading if nothing changes, and the date after which each correction stops being cheap. Real interface, demonstration run.':
+    'תצוגת ההתרעה המוקדמת: לאן מועד ייצוג ה-AI אם דבר לא ישתנה, והתאריך שאחריו כל תיקון מפסיק להיות זול. ממשק אמיתי, הרצת הדגמה.',
+  'An early-warning screen listing four dated risks to AI representation, each with the point after which recovery becomes a rebuild rather than a repair, above live signal readings and a closing action window.':
+    'מסך התרעה מוקדמת המפרט ארבעה סיכונים מתוארכים לייצוג ב-AI, לכל אחד הנקודה שאחריה ההתאוששות הופכת לבנייה מחדש ולא לתיקון, מעל קריאות אותות חיות וחלון פעולה שנסגר.',
+  'Every prompt that shapes the buyer decision, with the monthly volume behind it and the revenue at stake on each. Real interface, demonstration run.':
+    'כל שאלה שמעצבת את החלטת הקונה, עם הנפח החודשי שמאחוריה וההכנסה שעל כף המאזניים בכל אחת. ממשק אמיתי, הרצת הדגמה.',
+  'A table of buyer decision moments, each row carrying its monthly search volume, the engine leading the answer, the brand visibility on it, the buyer intent it signals and a directional revenue range.':
+    'טבלה של רגעי החלטה של קונים, בכל שורה נפח החיפוש החודשי שלה, המנוע שמוביל את התשובה, נראות המותג בה, כוונת הקונה שהיא מסמנת וטווח הכנסה מכוון.',
+  'Where the commercial demand a business already intercepts actually originates. Real interface, demonstration run.':
+    'היכן באמת מקורו של הביקוש המסחרי שהעסק כבר מיירט. ממשק אמיתי, הרצת הדגמה.',
+  'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.':
+    'גלובוס שניתן לסובב המציג את הטביעה הגאוגרפית של הנראות במנועי החיפוש, כשהמדינות הנושאות ביקוש מסחרי נמדד מודגשות ונספרות מתחתיו.',
+  'Each engine profiled across mention rate, sentiment and query share, beside the volume that weights them. Real interface, demonstration run.':
+    'כל מנוע ממופה לפי שיעור האזכור, הסנטימנט ונתח השאילתות, לצד הנפח שמשקלל אותם. ממשק אמיתי, הרצת הדגמה.',
+  'A radar chart profiling each AI engine across mention rate, sentiment and query share, beside a bar chart of the analysis query volume run on each engine.':
+    'תרשים מכ״ם הממפה כל מנוע AI לפי שיעור האזכור, הסנטימנט ונתח השאילתות, לצד תרשים עמודות של נפח שאילתות הניתוח שהורצו בכל מנוע.',
+  'Recommendation share engine by engine, beside the topics led, the topics lagged and the topics no brand has claimed. Real interface, demonstration run.':
+    'נתח ההמלצות מנוע אחר מנוע, לצד הנושאים שבהם מובילים, אלה שבהם מפגרים ואלה שאף מותג לא תפס. ממשק אמיתי, הרצת הדגמה.',
+  'A per-engine recommendation share table covering ChatGPT, Claude, Gemini, Perplexity and Copilot with brand and competitor top-three counts, beside lists of topics led, topics lagged and topics unclaimed by anyone.':
+    'טבלת נתח המלצות לכל מנוע — ChatGPT, Claude, Gemini, Perplexity ו-Copilot — עם ספירת השלישייה הראשונה של המותג ושל המתחרים, לצד רשימות של נושאים מובילים, נושאים מפגרים ונושאים שאיש לא תפס.',
+  'The two discovery surfaces set side by side: what Google indexes against what the AI engines cite back. Real interface, demonstration run.':
+    'שני משטחי הגילוי זה לצד זה: מה ש-Google מאנדקס מול מה שמנועי ה-AI מצטטים בחזרה. ממשק אמיתי, הרצת הדגמה.',
+  'A section contrasting search-engine visibility — indexable pages, organic impressions, ranking signals — against AI-mediated discovery, being what ChatGPT, Gemini, Perplexity and Copilot cite back.':
+    'מקטע המנגיד את הנראות במנועי החיפוש — עמודים הניתנים לאינדוקס, חשיפות אורגניות, אותות דירוג — מול הגילוי המתווך על ידי AI, כלומר מה ש-ChatGPT, Gemini, Perplexity ו-Copilot מצטטים בחזרה.',
+  'What the market already pays for the positions a business does not hold organically, and where budget should go first. Real interface, demonstration run.':
+    'מה שהשוק כבר משלם עבור המיקומים שהעסק אינו מחזיק בהם אורגנית, ולאן התקציב צריך ללכת ראשון. ממשק אמיתי, הרצת הדגמה.',
+  'A cost-per-click intelligence table pricing each commercial term against its monthly volume, with the annual cost of absence and the paid spend currently compensating for it stated above it.':
+    'טבלת מודיעין עלות-לקליק המתמחרת כל מונח מסחרי מול הנפח החודשי שלו, כשעלות ההיעדרות השנתית וההוצאה הממומנת שמפצה עליה כרגע מוצגות מעליה.',
+  'Exposure stated as a range with its confidence and its inputs, never as a single confirmed figure. Real interface, demonstration run.':
+    'החשיפה מוצגת כטווח עם רמת הוודאות והנתונים שהוזנו, לעולם לא כמספר בודד ומאושר. ממשק אמיתי, הרצת הדגמה.',
+  'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
+    'מודל חשיפה מסחרית המציג הכנסה חודשית בסיכון, עלות יומית וערך התאוששות צפוי כטווחים, כשנתוני ההמרה, שווי העסקה ומדדי הייחוס מודפסים מתחת וסימון של ודאות בינונית.',
 }

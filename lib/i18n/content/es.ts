@@ -323,8 +323,6 @@ export const content: ContentOverlay = {
     'Solo datos anonimizados o de demostración. Sin nombres de clientes, dominios, datos personales ni cifras confidenciales.',
   'Executive Mission Control — full window, all measures visible':
     'Centro de mando ejecutivo — ventana completa, todas las medidas visibles',
-  'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.':
-    'Centro de mando ejecutivo. Cada medida abre la evidencia que la sustenta. Datos de demostración anonimizados.',
   'Action Plan — the prioritised intervention list':
     'Plan de acción — la lista priorizada de intervenciones',
   'Every action carries an owner, a deadline and the signal it must move. Anonymised demonstration data.':
@@ -389,24 +387,14 @@ export const content: ContentOverlay = {
   /* --- PLAN · the diagnosis surfaces --------------------------------------- */
   'Deep Diagnosis — the full scan result across connected signals':
     'Diagnóstico profundo — el resultado completo del análisis en las señales conectadas',
-  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
-    'Diagnóstico profundo en motores de IA, búsqueda, competidores, mercado y presencia digital. Datos de demostración anonimizados.',
   'Competitive Intelligence — the comparison matrix':
     'Inteligencia competitiva — la matriz de comparación',
-  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
-    'Quién recibe la decisión en su lugar y la evidencia que lo sitúa ahí. Datos de demostración anonimizados.',
   'AI Intelligence — per-engine recognition and recommendation':
     'Inteligencia de IA — reconocimiento y recomendación por motor',
-  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
-    'Qué entiende cada motor de IA y cuándo recomienda. Datos de demostración anonimizados.',
   'Google vs AI Visibility — the gap matrix':
     'Visibilidad Google frente a la IA — la matriz de brechas',
-  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
-    'Dos superficies de descubrimiento, medidas por separado. Datos de demostración anonimizados.',
   'Market Intelligence — category and demand view':
     'Inteligencia de mercado — vista de categoría y demanda',
-  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
-    'Qué está cambiando en el mercado y qué parte es abordable. Datos de demostración anonimizados.',
   'Narrative Intelligence — narrative ownership and movement':
     'Inteligencia narrativa — dominio del relato y su evolución',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
@@ -419,8 +407,6 @@ export const content: ContentOverlay = {
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'Estrategia — objetivos traducidos en señales concretas',
-  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
-    'Entran objetivos, sale una estrategia priorizada. Cada objetivo va ligado a una señal que se espera mover. Datos de demostración anonimizados.',
   'Content & media generation — output bound to identified gaps':
     'Generación de contenido y medios — producción ligada a las brechas detectadas',
   'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
@@ -437,8 +423,6 @@ export const content: ContentOverlay = {
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'Medición — la tabla comparativa antes → acción → después',
-  'Not what was published. What changed. Anonymised demonstration data.':
-    'No lo que se publicó. Lo que cambió. Datos de demostración anonimizados.',
   'Learning — measured outcome feeding the next recommendation':
     'Aprendizaje — resultado medido que alimenta la siguiente recomendación',
   'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
@@ -2801,4 +2785,41 @@ export const content: ContentOverlay = {
   'same day fastener shipping': 'envío de fijaciones el mismo día',
   'stainless steel fasteners supplier':
     'proveedor de fijaciones de acero inoxidable',
+
+  /* --- Product screen captions and alt text — lib/visual/screens.ts.
+     These render through t(slot.caption) and t(slot.alt), which is a
+     VARIABLE, so scripts/i18n-keys.mjs cannot see them. Change a caption
+     in screens.ts and you must change the key here by hand. -------- */
+  'The early-warning view: where AI representation is heading if nothing changes, and the date after which each correction stops being cheap. Real interface, demonstration run.':
+    'La vista de alerta temprana: hacia dónde va la representación en la IA si nada cambia, y la fecha a partir de la cual cada corrección deja de ser barata. Interfaz real, ejecución de demostración.',
+  'An early-warning screen listing four dated risks to AI representation, each with the point after which recovery becomes a rebuild rather than a repair, above live signal readings and a closing action window.':
+    'Una pantalla de alerta temprana que enumera cuatro riesgos fechados para la representación en la IA, cada uno con el punto tras el cual la recuperación pasa a ser una reconstrucción y no una reparación, sobre lecturas de señales en directo y una ventana de acción que se cierra.',
+  'Every prompt that shapes the buyer decision, with the monthly volume behind it and the revenue at stake on each. Real interface, demonstration run.':
+    'Cada consulta que configura la decisión del comprador, con el volumen mensual que la respalda y los ingresos en juego en cada una. Interfaz real, ejecución de demostración.',
+  'A table of buyer decision moments, each row carrying its monthly search volume, the engine leading the answer, the brand visibility on it, the buyer intent it signals and a directional revenue range.':
+    'Una tabla de momentos de decisión del comprador; cada fila lleva su volumen de búsqueda mensual, el motor que lidera la respuesta, la visibilidad de la marca en él, la intención de compra que señala y un rango de ingresos orientativo.',
+  'Where the commercial demand a business already intercepts actually originates. Real interface, demonstration run.':
+    'De dónde procede realmente la demanda comercial que una empresa ya intercepta. Interfaz real, ejecución de demostración.',
+  'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.':
+    'Un globo giratorio que muestra la huella geográfica de la visibilidad en los motores de búsqueda, con los países que concentran demanda comercial medida resaltados y contabilizados debajo.',
+  'Each engine profiled across mention rate, sentiment and query share, beside the volume that weights them. Real interface, demonstration run.':
+    'Cada motor perfilado por tasa de mención, sentimiento y cuota de consultas, junto al volumen que los pondera. Interfaz real, ejecución de demostración.',
+  'A radar chart profiling each AI engine across mention rate, sentiment and query share, beside a bar chart of the analysis query volume run on each engine.':
+    'Un gráfico radar que perfila cada motor de IA por tasa de mención, sentimiento y cuota de consultas, junto a un gráfico de barras del volumen de consultas de análisis ejecutadas en cada motor.',
+  'Recommendation share engine by engine, beside the topics led, the topics lagged and the topics no brand has claimed. Real interface, demonstration run.':
+    'La cuota de recomendación motor por motor, junto a los temas liderados, los rezagados y aquellos que ninguna marca ha reclamado. Interfaz real, ejecución de demostración.',
+  'A per-engine recommendation share table covering ChatGPT, Claude, Gemini, Perplexity and Copilot with brand and competitor top-three counts, beside lists of topics led, topics lagged and topics unclaimed by anyone.':
+    'Una tabla de cuota de recomendación por motor que cubre ChatGPT, Claude, Gemini, Perplexity y Copilot con los recuentos de top-3 de la marca y de los competidores, junto a listas de temas liderados, rezagados y no reclamados por nadie.',
+  'The two discovery surfaces set side by side: what Google indexes against what the AI engines cite back. Real interface, demonstration run.':
+    'Las dos superficies de descubrimiento una al lado de la otra: lo que Google indexa frente a lo que los motores de IA citan de vuelta. Interfaz real, ejecución de demostración.',
+  'A section contrasting search-engine visibility — indexable pages, organic impressions, ranking signals — against AI-mediated discovery, being what ChatGPT, Gemini, Perplexity and Copilot cite back.':
+    'Una sección que contrapone la visibilidad en los motores de búsqueda —páginas indexables, impresiones orgánicas, señales de posicionamiento— al descubrimiento mediado por IA, es decir, lo que ChatGPT, Gemini, Perplexity y Copilot citan de vuelta.',
+  'What the market already pays for the positions a business does not hold organically, and where budget should go first. Real interface, demonstration run.':
+    'Lo que el mercado ya paga por las posiciones que una empresa no ocupa de forma orgánica, y adónde debe ir el presupuesto primero. Interfaz real, ejecución de demostración.',
+  'A cost-per-click intelligence table pricing each commercial term against its monthly volume, with the annual cost of absence and the paid spend currently compensating for it stated above it.':
+    'Una tabla de inteligencia de coste por clic que valora cada término comercial frente a su volumen mensual, con el coste anual de la ausencia y el gasto de pago que actualmente la compensa indicados encima.',
+  'Exposure stated as a range with its confidence and its inputs, never as a single confirmed figure. Real interface, demonstration run.':
+    'La exposición se presenta como un rango con su nivel de confianza y sus supuestos, nunca como una cifra única confirmada. Interfaz real, ejecución de demostración.',
+  'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
+    'Un modelo de exposición comercial que presenta los ingresos mensuales en riesgo, el coste diario y el valor de recuperación previsto como rangos, con los supuestos de conversión, valor de operación y referencia impresos debajo y un marcador de confianza media.',
 }

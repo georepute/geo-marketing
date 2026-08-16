@@ -332,24 +332,14 @@ export const content: ContentOverlay = {
   /* --- PLAN · the diagnosis surfaces --------------------------------------- */
   'Deep Diagnosis — the full scan result across connected signals':
     'التشخيص العميق — نتيجة الفحص الكاملة عبر الإشارات المترابطة',
-  'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.':
-    'تشخيص عميق عبر محرّكات الذكاء الاصطناعي والبحث والمنافسين والسوق والحضور الرقمي. بيانات توضيحية مجهّلة.',
   'Competitive Intelligence — the comparison matrix':
     'الذكاء التنافسي — مصفوفة المقارنة',
-  'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.':
-    'من يتلقى القرار بدلًا منكم، والأدلة التي وضعته هناك. بيانات توضيحية مجهّلة.',
   'AI Intelligence — per-engine recognition and recommendation':
     'ذكاء الذكاء الاصطناعي — التعرّف والتوصية لكل محرّك',
-  'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
-    'ما يفهمه كل محرّك ذكاء اصطناعي، ومتى يوصي. بيانات توضيحية مجهّلة.',
   'Google vs AI Visibility — the gap matrix':
     'الظهور في Google مقابل الذكاء الاصطناعي — مصفوفة الفجوات',
-  'Two discovery surfaces, measured separately. Anonymised demonstration data.':
-    'سطحا اكتشاف، يُقاسان بشكل منفصل. بيانات توضيحية مجهّلة.',
   'Market Intelligence — category and demand view':
     'ذكاء السوق — عرض الفئة والطلب',
-  'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
-    'ما الذي يتغيّر في السوق، وأي جزء منه قابل للمعالجة. بيانات توضيحية مجهّلة.',
   'Narrative Intelligence — narrative ownership and movement':
     'ذكاء السرديات — ملكية السردية وحركتها',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
@@ -362,8 +352,6 @@ export const content: ContentOverlay = {
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'الاستراتيجية — أهداف تُترجَم إلى إشارات مستهدفة',
-  'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.':
-    'أهداف تدخل، واستراتيجية مرتّبة بالأولوية تخرج. كل هدف مرتبط بإشارة يُتوقع أن تتحرك. بيانات توضيحية مجهّلة.',
   'Content & media generation — output bound to identified gaps':
     'إنتاج المحتوى والوسائط — مخرجات مرتبطة بفجوات محددة',
   'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
@@ -380,8 +368,6 @@ export const content: ContentOverlay = {
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'القياس — جدول المقارنة قبل ← الإجراء ← بعد',
-  'Not what was published. What changed. Anonymised demonstration data.':
-    'ليس ما نُشر. بل ما تغيّر. بيانات توضيحية مجهّلة.',
   'Learning — measured outcome feeding the next recommendation':
     'التعلّم — نتيجة مقيسة تغذّي التوصية التالية',
   'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
@@ -618,8 +604,6 @@ export const content: ContentOverlay = {
     'بيانات مجهّلة أو توضيحية فقط. بلا أسماء عملاء أو نطاقات أو بيانات شخصية أو أرقام سرّية.',
   'Executive Mission Control — full window, all measures visible':
     'مركز القيادة التنفيذي — نافذة كاملة، جميع المقاييس ظاهرة',
-  'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.':
-    'مركز القيادة التنفيذي. كل مقياس يفتح الأدلة التي تقف خلفه. بيانات توضيحية مجهّلة.',
   'Action Plan — the prioritised intervention list':
     'خطة العمل — قائمة التدخلات مرتّبة حسب الأولوية',
   'Every action carries an owner, a deadline and the signal it must move. Anonymised demonstration data.':
@@ -2769,4 +2753,41 @@ export const content: ContentOverlay = {
   'plant maintenance supplies': 'مستلزمات صيانة المصانع',
   'same day fastener shipping': 'شحن مثبّتات في اليوم نفسه',
   'stainless steel fasteners supplier': 'مورّد مثبّتات من الفولاذ المقاوم للصدأ',
+
+  /* --- Product screen captions and alt text — lib/visual/screens.ts.
+     These render through t(slot.caption) and t(slot.alt), which is a
+     VARIABLE, so scripts/i18n-keys.mjs cannot see them. Change a caption
+     in screens.ts and you must change the key here by hand. -------- */
+  'The early-warning view: where AI representation is heading if nothing changes, and the date after which each correction stops being cheap. Real interface, demonstration run.':
+    'عرض الإنذار المبكر: إلى أين يتجه التمثيل في الذكاء الاصطناعي إن لم يتغير شيء، والتاريخ الذي يتوقف بعده كل تصحيح عن كونه رخيصًا. واجهة حقيقية، تشغيل توضيحي.',
+  'An early-warning screen listing four dated risks to AI representation, each with the point after which recovery becomes a rebuild rather than a repair, above live signal readings and a closing action window.':
+    'شاشة إنذار مبكر تسرد أربعة مخاطر مؤرخة على التمثيل في الذكاء الاصطناعي، لكل منها النقطة التي يصبح بعدها التعافي إعادة بناء لا إصلاحًا، فوق قراءات إشارات حية ونافذة إجراء تقترب من الإغلاق.',
+  'Every prompt that shapes the buyer decision, with the monthly volume behind it and the revenue at stake on each. Real interface, demonstration run.':
+    'كل سؤال يشكّل قرار المشتري، مع الحجم الشهري الذي يقف خلفه والإيراد المعرَّض للخطر في كل منها. واجهة حقيقية، تشغيل توضيحي.',
+  'A table of buyer decision moments, each row carrying its monthly search volume, the engine leading the answer, the brand visibility on it, the buyer intent it signals and a directional revenue range.':
+    'جدول للحظات قرار المشتري، يحمل كل صف فيه حجم البحث الشهري، والمحرك المتصدّر للإجابة، وظهور العلامة التجارية، ونية المشتري التي يشير إليها، ونطاق إيراد استرشادي.',
+  'Where the commercial demand a business already intercepts actually originates. Real interface, demonstration run.':
+    'من أين ينشأ فعليًا الطلب التجاري الذي يعترضه النشاط التجاري بالفعل. واجهة حقيقية، تشغيل توضيحي.',
+  'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.':
+    'كرة أرضية قابلة للتدوير تعرض البصمة الجغرافية للظهور في محركات البحث، مع إبراز الدول التي تحمل طلبًا تجاريًا مقيسًا وعدّها أسفلها.',
+  'Each engine profiled across mention rate, sentiment and query share, beside the volume that weights them. Real interface, demonstration run.':
+    'كل محرك موصوف عبر معدل الذكر والانطباع وحصة الاستعلامات، إلى جانب الحجم الذي يرجّحها. واجهة حقيقية، تشغيل توضيحي.',
+  'A radar chart profiling each AI engine across mention rate, sentiment and query share, beside a bar chart of the analysis query volume run on each engine.':
+    'مخطط راداري يصف كل محرك ذكاء اصطناعي عبر معدل الذكر والانطباع وحصة الاستعلامات، إلى جانب مخطط أعمدة لحجم استعلامات التحليل المنفَّذة على كل محرك.',
+  'Recommendation share engine by engine, beside the topics led, the topics lagged and the topics no brand has claimed. Real interface, demonstration run.':
+    'حصة التوصية محركًا بمحرك، إلى جانب الموضوعات المتصدَّرة والمتأخرة وتلك التي لم تطالب بها أي علامة تجارية. واجهة حقيقية، تشغيل توضيحي.',
+  'A per-engine recommendation share table covering ChatGPT, Claude, Gemini, Perplexity and Copilot with brand and competitor top-three counts, beside lists of topics led, topics lagged and topics unclaimed by anyone.':
+    'جدول حصة التوصية لكل محرك يشمل ChatGPT وClaude وGemini وPerplexity وCopilot مع عدد المراكز الثلاثة الأولى للعلامة التجارية وللمنافسين، إلى جانب قوائم بالموضوعات المتصدَّرة والمتأخرة وغير المطالَب بها من أحد.',
+  'The two discovery surfaces set side by side: what Google indexes against what the AI engines cite back. Real interface, demonstration run.':
+    'سطحا الاكتشاف جنبًا إلى جنب: ما يفهرسه Google مقابل ما تستشهد به محركات الذكاء الاصطناعي. واجهة حقيقية، تشغيل توضيحي.',
+  'A section contrasting search-engine visibility — indexable pages, organic impressions, ranking signals — against AI-mediated discovery, being what ChatGPT, Gemini, Perplexity and Copilot cite back.':
+    'قسم يقابل بين الظهور في محركات البحث — صفحات قابلة للفهرسة، وظهور عضوي، وإشارات ترتيب — وبين الاكتشاف بوساطة الذكاء الاصطناعي، أي ما تستشهد به ChatGPT وGemini وPerplexity وCopilot.',
+  'What the market already pays for the positions a business does not hold organically, and where budget should go first. Real interface, demonstration run.':
+    'ما يدفعه السوق بالفعل مقابل المواقع التي لا يملكها النشاط التجاري عضويًا، وإلى أين ينبغي أن تذهب الميزانية أولًا. واجهة حقيقية، تشغيل توضيحي.',
+  'A cost-per-click intelligence table pricing each commercial term against its monthly volume, with the annual cost of absence and the paid spend currently compensating for it stated above it.':
+    'جدول ذكاء تكلفة النقرة يسعّر كل مصطلح تجاري مقابل حجمه الشهري، مع بيان التكلفة السنوية للغياب والإنفاق المدفوع الذي يعوّضها حاليًا أعلاه.',
+  'Exposure stated as a range with its confidence and its inputs, never as a single confirmed figure. Real interface, demonstration run.':
+    'التعرّض معروض كنطاق مع مستوى الثقة والمدخلات، لا كرقم واحد مؤكد أبدًا. واجهة حقيقية، تشغيل توضيحي.',
+  'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
+    'نموذج تعرّض تجاري يعرض الإيراد الشهري المعرَّض للخطر والتكلفة اليومية وقيمة التعافي المتوقعة كنطاقات، مع طباعة مدخلات التحويل وقيمة الصفقة والمعايير المرجعية أسفله وعلامة ثقة متوسطة.',
 }

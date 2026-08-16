@@ -61,12 +61,12 @@ export const SCREEN_SLOTS = {
      ------------------------------------------------------------------- */
   'mission-control': {
     file: '/screens/mission-control.png',
-    aspect: WIDE,
+    aspect: 1263 / 856,
     surface: 'Executive Mission Control — full window, all measures visible',
     caption:
-      'Executive Mission Control. Every measure opens the evidence behind it. Anonymised demonstration data.',
-    alt: 'The GeoRepute Executive Mission Control screen, showing composite decision-health measures arranged as tiles, each with its current value, trend and confidence level.',
-    ready: false,
+      'The early-warning view: where AI representation is heading if nothing changes, and the date after which each correction stops being cheap. Real interface, demonstration run.',
+    alt: 'An early-warning screen listing four dated risks to AI representation, each with the point after which recovery becomes a rebuild rather than a repair, above live signal readings and a closing action window.',
+    ready: true,
   },
   'executive-position': {
     file: '/screens/executive-position.png',
@@ -83,12 +83,12 @@ export const SCREEN_SLOTS = {
      ------------------------------------------------------------------- */
   'deep-diagnosis': {
     file: '/screens/deep-diagnosis.png',
-    aspect: WIDE,
+    aspect: 1600 / 732,
     surface: 'Deep Diagnosis — the full scan result across connected signals',
     caption:
-      'Deep Diagnosis across AI engines, search, competitors, market and digital presence. Anonymised demonstration data.',
-    alt: 'A diagnosis screen connecting signals from AI engines, search, competitors, market and digital presence into a single reconstructed picture of how a business is understood.',
-    ready: false,
+      'Every prompt that shapes the buyer decision, with the monthly volume behind it and the revenue at stake on each. Real interface, demonstration run.',
+    alt: 'A table of buyer decision moments, each row carrying its monthly search volume, the engine leading the answer, the brand visibility on it, the buyer intent it signals and a directional revenue range.',
+    ready: true,
   },
   'decision-reconstruction': {
     file: '/screens/decision-reconstruction.png',
@@ -101,12 +101,12 @@ export const SCREEN_SLOTS = {
   },
   'market-intelligence': {
     file: '/screens/market-intelligence.png',
-    aspect: PANEL,
+    aspect: 1265 / 657,
     surface: 'Market Intelligence — category and demand view',
     caption:
-      'What is changing in the market, and which of it is addressable. Anonymised demonstration data.',
-    alt: 'A market intelligence panel showing category movement, emerging demand areas and where the market is forming new language.',
-    ready: false,
+      'Where the commercial demand a business already intercepts actually originates. Real interface, demonstration run.',
+    alt: 'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.',
+    ready: true,
   },
   'trust-authority': {
     file: '/screens/trust-authority.png',
@@ -123,30 +123,30 @@ export const SCREEN_SLOTS = {
      ------------------------------------------------------------------- */
   'competitor-intelligence': {
     file: '/screens/competitor-intelligence.png',
-    aspect: WIDE,
+    aspect: 1259 / 680,
     surface: 'Competitive Intelligence — the comparison matrix',
     caption:
-      'Who receives the decision instead, and the evidence that puts them there. Anonymised demonstration data.',
-    alt: 'A competitive intelligence matrix comparing recommendation share, authority sources and decision presence across a set of competing suppliers.',
-    ready: false,
+      'Each engine profiled across mention rate, sentiment and query share, beside the volume that weights them. Real interface, demonstration run.',
+    alt: 'A radar chart profiling each AI engine across mention rate, sentiment and query share, beside a bar chart of the analysis query volume run on each engine.',
+    ready: true,
   },
   'ai-intelligence': {
     file: '/screens/ai-intelligence.png',
-    aspect: PANEL,
+    aspect: 1589 / 659,
     surface: 'AI Intelligence — per-engine recognition and recommendation',
     caption:
-      'What each AI engine understands, and when it recommends. Anonymised demonstration data.',
-    alt: 'An AI intelligence panel showing, engine by engine, how well a business is recognised and how often it is named when a buyer asks which supplier to choose.',
-    ready: false,
+      'Recommendation share engine by engine, beside the topics led, the topics lagged and the topics no brand has claimed. Real interface, demonstration run.',
+    alt: 'A per-engine recommendation share table covering ChatGPT, Claude, Gemini, Perplexity and Copilot with brand and competitor top-three counts, beside lists of topics led, topics lagged and topics unclaimed by anyone.',
+    ready: true,
   },
   'google-vs-ai': {
     file: '/screens/google-vs-ai.png',
-    aspect: PANEL,
+    aspect: 593 / 467,
     surface: 'Google vs AI Visibility — the gap matrix',
     caption:
-      'Two discovery surfaces, measured separately. Anonymised demonstration data.',
-    alt: 'A matrix comparing position in Google search against presence in AI recommendations for the same set of commercial questions, highlighting questions absent from both.',
-    ready: false,
+      'The two discovery surfaces set side by side: what Google indexes against what the AI engines cite back. Real interface, demonstration run.',
+    alt: 'A section contrasting search-engine visibility — indexable pages, organic impressions, ranking signals — against AI-mediated discovery, being what ChatGPT, Gemini, Perplexity and Copilot cite back.',
+    ready: true,
   },
   'search-intelligence': {
     file: '/screens/search-intelligence.png',
@@ -172,12 +172,12 @@ export const SCREEN_SLOTS = {
      ------------------------------------------------------------------- */
   strategy: {
     file: '/screens/strategy.png',
-    aspect: PANEL,
+    aspect: 1592 / 743,
     surface: 'Strategy — objectives translated into targeted signals',
     caption:
-      'Objectives in, prioritised strategy out. Each objective bound to a signal expected to move. Anonymised demonstration data.',
-    alt: 'A strategy screen mapping defined business objectives to the specific decision signals that must move for each objective to be met.',
-    ready: false,
+      'What the market already pays for the positions a business does not hold organically, and where budget should go first. Real interface, demonstration run.',
+    alt: 'A cost-per-click intelligence table pricing each commercial term against its monthly volume, with the annual cost of absence and the paid spend currently compensating for it stated above it.',
+    ready: true,
   },
   'action-plan': {
     file: '/screens/action-plan.png',
@@ -217,12 +217,12 @@ export const SCREEN_SLOTS = {
   },
   'before-after': {
     file: '/screens/before-after.png',
-    aspect: WIDE,
+    aspect: 835 / 562,
     surface: 'Measurement — the before → action → after comparison table',
     caption:
-      'Not what was published. What changed. Anonymised demonstration data.',
-    alt: 'A measurement table comparing each targeted signal before an action and after it, against the target value, with the direction of movement marked.',
-    ready: false,
+      'Exposure stated as a range with its confidence and its inputs, never as a single confirmed figure. Real interface, demonstration run.',
+    alt: 'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.',
+    ready: true,
   },
   learning: {
     file: '/screens/learning.png',
