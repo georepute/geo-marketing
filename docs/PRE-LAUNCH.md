@@ -17,9 +17,16 @@ is ready, not a record of completed work.
       correctly-proportioned frame; filling one is a file drop plus flipping
       `ready: true` in [`lib/visual/screens.ts`](../lib/visual/screens.ts).
       **Blocking for §1 and §2.**
-- [ ] **Supply human translations.** Six of seven languages are scaffolds that
-      fall through to English — see `lib/i18n/dictionaries/`. The site is
-      shippable without them; it is not *multilingual* without them.
+- [x] ~~**Supply human translations.**~~ Done. All seven languages are fully
+      translated across all 42 routes — 531 `t()` keys and 1,664 overlay
+      entries per locale, key sets identical in both directions, and
+      `node scripts/i18n-review.mjs` clean.
+- [ ] **Get the six translations read by a native speaker.** Every file is
+      machine-produced and carries `reviewed: false`. The mechanical half is
+      done and repeatable; the register judgement is not. Arabic needs it most
+      — its second-person address was rewritten across 100+ strings. See
+      [`lib/i18n/GLOSSARY.md`](../lib/i18n/GLOSSARY.md), which lists what is
+      already settled so a reviewer does not re-litigate it.
       **Blocking for §8.**
 
 ---
@@ -31,10 +38,11 @@ is ready, not a record of completed work.
 - [ ] `http://` redirects to `https://`
 - [ ] `www` and apex resolve to one canonical host, the other redirecting
 - [ ] **Update the hardcoded production URL** — `https://georepute.ai` appears
-      in [`app/sitemap.ts`](../app/sitemap.ts), [`app/robots.ts`](../app/robots.ts)
-      and the `metadataBase` in [`app/[locale]/layout.tsx`](../app/[locale]/layout.tsx).
-      If the real domain differs, all three must change or every canonical,
-      hreflang and OG URL will point at the wrong host.
+      in exactly two places: `const base` in [`app/sitemap.ts`](../app/sitemap.ts)
+      and `metadataBase` in [`app/[locale]/layout.tsx`](../app/[locale]/layout.tsx).
+      If the real domain differs, both must change or every canonical, hreflang
+      and OG URL will point at the wrong host. (`app/robots.ts` carries no URL —
+      it returns relative rules only.)
 
 **Host requirement:** the site needs a Node or serverless runtime — it cannot
 be a static file export. Two things need a server: `proxy.ts` (language
@@ -118,8 +126,9 @@ the build if a price can leak.
 - [ ] `hreflang` present with all seven languages plus `x-default`
 - [ ] Canonical URL correct per locale
 - [ ] `sitemap.xml` loads and lists every route in every language
-- [ ] `robots.txt` correct for production — **check it does not still
-      disallow everything from the demo environment**
+- [x] ~~`robots.txt` correct for production~~ — [`app/robots.ts`](../app/robots.ts)
+      already allows `/` and disallows only `/kitchen-sink`, `/debug`,
+      `/checkout` and `/signin`. Re-check only if those routes change.
 - [ ] **Open Graph image** — none exists. Links shared to LinkedIn, WhatsApp
       or Slack will render without a preview image. Either add
       `app/[locale]/opengraph-image.tsx` or accept text-only cards.
@@ -163,11 +172,12 @@ the build if a price can leak.
 ## Commands
 
 ```bash
-npm run typecheck     # types
-npm run lint          # lint
-npm run test          # 219 tests, including the pricing/i18n/booking guards
-npm run build         # production build
-npm run screens       # outstanding screenshot slots
+npm run typecheck              # types
+npm run lint                   # lint
+npm run test                   # 222 tests, incl. pricing/i18n/booking guards
+npm run build                  # production build
+npm run screens                # outstanding screenshot slots
+node scripts/i18n-review.mjs   # glossary compliance, exits 1 on any finding
 ```
 
-All four must pass before deploying.
+All of these must pass before deploying.
