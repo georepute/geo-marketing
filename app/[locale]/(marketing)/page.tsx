@@ -17,6 +17,7 @@ import { ExecutiveActionPlan } from '@/components/home/ExecutiveActionPlan'
 import { EcosystemStrip } from '@/components/home/EcosystemStrip'
 import { ClosedLoopBand } from '@/components/home/ClosedLoopBand'
 import { ProductScreen } from '@/components/product/ProductScreen'
+import { readyScreens } from '@/lib/visual/screens'
 import { HomeInteractive } from './HomeClient'
 import { DecisionJourneyTrack } from '@/components/viz/DecisionJourneyTrack'
 import { GoogleVsAIGapMatrix } from '@/components/viz/GoogleVsAIGapMatrix'
@@ -460,14 +461,19 @@ export default async function Home() {
 
         <ExecutiveActionPlan actions={actions.data} />
 
-        {/* Doc §2: the Action Plan as it actually appears in the platform. */}
-        <div className="mt-8">
-          <ProductScreen
-            id="action-plan"
-            sizes="(min-width: 1024px) 45vw, 100vw"
-            className="max-w-lg"
-          />
-        </div>
+        {/* Doc §2: the Action Plan as it actually appears in the platform.
+            Guarded so the wrapper's margin does not leave a gap while the
+            export is outstanding — this frame sits directly under copy calling
+            it the action plan, so nothing else may stand in for it. */}
+        {readyScreens(['action-plan']).length > 0 ? (
+          <div className="mt-8">
+            <ProductScreen
+              id="action-plan"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="max-w-lg"
+            />
+          </div>
+        ) : null}
 
         <div className="mt-6">
           <Button asChild variant="secondary">

@@ -7,7 +7,7 @@ import { ProductScreen, ProductScreenGrid } from '@/components/product/ProductSc
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { getDictionary } from '@/lib/i18n/server'
 import { getT } from '@/lib/i18n/content/translator'
-import type { ScreenSlotId } from '@/lib/visual/screens'
+import { readyScreens, type ScreenSlotId } from '@/lib/visual/screens'
 import { cn } from '@/lib/utils/cn'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -223,24 +223,28 @@ export default async function HowItWorksPage() {
               </Reveal>
             </div>
 
-            {/* --- The screens this stage produces --------------------- */}
-            <div className="mt-12">
-              <p className="text-label uppercase text-ink-3 mb-5">
-                {t('From the platform')}
-              </p>
-              {stage.id === 'check' || stage.id === 'act' ? (
-                <ProductScreen
-                  id={STAGE_SCREENS[stage.id]![0]!}
-                  priority={index === 0}
-                  sizes="(min-width: 1024px) 70vw, 100vw"
-                />
-              ) : (
-                <ProductScreenGrid
-                  ids={STAGE_SCREENS[stage.id] ?? []}
-                  columns={stage.id === 'plan' ? 3 : 2}
-                />
-              )}
-            </div>
+            {/* --- The screens this stage produces ---------------------
+                The "From the platform" label goes with them, so a stage whose
+                exports have not arrived shows neither. */}
+            {readyScreens(STAGE_SCREENS[stage.id] ?? []).length > 0 ? (
+              <div className="mt-12">
+                <p className="text-label uppercase text-ink-3 mb-5">
+                  {t('From the platform')}
+                </p>
+                {stage.id === 'check' || stage.id === 'act' ? (
+                  <ProductScreen
+                    id={STAGE_SCREENS[stage.id]![0]!}
+                    priority={index === 0}
+                    sizes="(min-width: 1024px) 70vw, 100vw"
+                  />
+                ) : (
+                  <ProductScreenGrid
+                    ids={STAGE_SCREENS[stage.id] ?? []}
+                    columns={stage.id === 'plan' ? 3 : 2}
+                  />
+                )}
+              </div>
+            ) : null}
 
             {/* --- CHECK carries the before/after table ---------------- */}
             {stage.id === 'check' ? (
