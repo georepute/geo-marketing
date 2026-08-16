@@ -1,3 +1,6 @@
+'use client'
+
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { ReadinessDimension, ReadinessStatus } from '@/lib/seed/campaign'
 
@@ -30,6 +33,7 @@ export function StatusChip({
   status: ReadinessStatus
   className?: string
 }) {
+  const t = useT()
   const meta = STATUS_META[status]
   return (
     <span
@@ -49,7 +53,7 @@ export function StatusChip({
       >
         {meta.glyph}
       </span>
-      <span className="text-label uppercase text-ink-2">{meta.label}</span>
+      <span className="text-label uppercase text-ink-2">{t(meta.label)}</span>
     </span>
   )
 }
@@ -72,11 +76,12 @@ export function ReadinessBar({
   thresholds: { ready: number; risk: number }
   className?: string
 }) {
+  const t = useT()
   return (
     <div
       className={cn('relative h-2 rounded-xs bg-inset overflow-hidden', className)}
       role="img"
-      aria-label={`${score} of 100 — ${STATUS_META[status].label}. Ready at ${thresholds.ready}.`}
+      aria-label={t('{score} of 100 — {status}. Ready at {gate}.', { score, status: t(STATUS_META[status].label), gate: thresholds.ready })}
     >
       <div
         className="absolute inset-y-0 start-0 rounded-xs"
@@ -109,6 +114,7 @@ export function DimensionPanel({
   thresholds: { ready: number; risk: number }
   isConstraint: boolean
 }) {
+  const t = useT()
   return (
     <section
       className="rounded-md border bg-panel overflow-hidden"
@@ -129,7 +135,7 @@ export function DimensionPanel({
                   className="text-label uppercase"
                   style={{ color: 'var(--gr-critical)' }}
                 >
-                  Primary constraint
+                  {t('Primary constraint')}
                 </span>
               ) : null}
             </div>
@@ -152,7 +158,7 @@ export function DimensionPanel({
           className="mt-4"
         />
         <p className="text-label uppercase text-ink-3 mt-2" data-numeric="">
-          {Math.round(dimension.weight * 100)}% of the readiness index
+          {t('{n}% of the readiness index', { n: Math.round(dimension.weight * 100) })}
         </p>
       </div>
 
@@ -174,7 +180,7 @@ export function DimensionPanel({
             <p className="text-body text-ink mt-3" data-numeric="">
               {m.value}
             </p>
-            <p className="sr-only">{STATUS_META[m.status].label}</p>
+            <p className="sr-only">{t(STATUS_META[m.status].label)}</p>
             <p className="text-caption text-ink-2 mt-3">{m.meaning}</p>
           </li>
         ))}
@@ -190,7 +196,7 @@ export function DimensionPanel({
               : undefined,
         }}
       >
-        <p className="text-label uppercase text-ink-3">If you launch anyway</p>
+        <p className="text-label uppercase text-ink-3">{t('If you launch anyway')}</p>
         <p className="text-caption text-ink-2 mt-2 max-w-3xl">
           {dimension.ifIgnored}
         </p>

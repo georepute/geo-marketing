@@ -1092,6 +1092,279 @@ export const content: ContentOverlay = {
      with the marketing pages and live in the seed section further down.
      ======================================================================= */
 
+  /* --- Campaign Readiness ---------------------------------------------------- */
+  'Campaign readiness intelligence': 'מודיעין מוכנות קמפיין',
+  'Campaign Readiness Intelligence | GeoRepute': 'מודיעין מוכנות קמפיין | GeoRepute',
+  'Should we launch this campaign today?': 'האם להשיק את הקמפיין הזה היום?',
+  'This assessment evaluates the business, not the campaign. Creative, targeting and budget can all be correct while the business remains structurally unable to convert the attention they buy.':
+    'הערכה זו בוחנת את העסק, לא את הקמפיין. הקריאייטיב, הפילוח והתקציב יכולים כולם להיות נכונים בעוד העסק נותר בלתי מסוגל מבנית להמיר את תשומת הלב שהם קונים.',
+  Campaign: 'קמפיין',
+  'Q4 Midwest demand generation': 'יצירת ביקוש ברבעון הרביעי במערב התיכון',
+  'Intended launch': 'מועד ההשקה המתוכנן',
+  Duration: 'משך',
+  '6 months': '6 חודשים',
+  Channels: 'ערוצים',
+  'Paid search · Paid social · Trade media · Content syndication':
+    'חיפוש ממומן · מדיה חברתית ממומנת · מדיה מקצועית · הפצת תוכן',
+  'Estimated budget at risk': 'תקציב מוערך בסיכון',
+
+  'Executive decision': 'החלטה ניהולית',
+  'Executive recommendation': 'המלצה ניהולית',
+  'Delay Campaign': 'עכבו את הקמפיין',
+  'Delay the campaign. Fix authority first.': 'עכבו את הקמפיין. תקנו קודם את הסמכות.',
+  'Delay Campaign — readiness reads 32 of 100, held there by authority readiness at 11, which carries 20% of the index.':
+    'עכבו את הקמפיין — המוכנות עומדת על 32 מתוך 100, מוחזקת שם על ידי מוכנות הסמכות ברמה 11, שנושאת 20% מהמדד.',
+  'Campaign readiness score': 'ציון מוכנות הקמפיין',
+  'Primary constraint': 'האילוץ העיקרי',
+  'Authority readiness is the binding constraint at 11 of 100 and carries 20% of the index.':
+    'מוכנות הסמכות היא האילוץ הכובל ברמה 11 מתוך 100 ונושאת 20% מהמדד.',
+  'Strategic window': 'החלון האסטרטגי',
+  'Advantage holds until {date}.': 'היתרון מחזיק עד {date}.',
+  'Decision journey gaps': 'פערים במסע ההחלטה',
+  'Presence at every stage.': 'נוכחות בכל שלב.',
+  '2 stages uncovered': '2 שלבים ללא כיסוי',
+  'Assessment confidence': 'רמת הוודאות של ההערכה',
+  'Six of seven dimensions rest on directly observed data.':
+    'שישה מתוך שבעה ממדים נשענים על נתונים שנצפו ישירות.',
+
+  Assessment: 'הערכה',
+  'Seven readiness dimensions, weighted into one index':
+    'שבעה ממדי מוכנות, משוקללים למדד אחד',
+  'Every score is computed from observed data rather than assigned. The weights are published and sum to one.':
+    'כל ציון מחושב מנתונים שנצפו ולא נקבע בשיקול דעת. המשקלים מפורסמים וסכומם אחד.',
+  'Ready at 70 and above. At risk from 45 . Blocking below 45 .':
+    'מוכן מ-70 ומעלה. בסיכון מ-45. חוסם מתחת ל-45.',
+  Ready: 'מוכן',
+  'At risk': 'בסיכון',
+  Blocking: 'חוסם',
+  '{score} of 100 — {status}. Ready at {gate}.':
+    '{score} מתוך 100 — {status}. מוכן ב-{gate}.',
+  '{n}% of the readiness index': '{n}% ממדד המוכנות',
+  '{score} of 100 · {weight}% of the index': '{score} מתוך 100 · {weight}% מהמדד',
+  'Ready at {ready} and above. At risk from {risk}. Blocking below {risk}.':
+    'מוכן מ-{ready} ומעלה. בסיכון מ-{risk}. חוסם מתחת ל-{risk}.',
+  or: 'או',
+  None: 'אין',
+  '2 of 5': '2 מתוך 5',
+  '2 of 6': '2 מתוך 6',
+  '7 months': '7 חודשים',
+  'Campaign Readiness Intelligence': 'מודיעין מוכנות קמפיין',
+  'Launching remains available and is sometimes correct — a product deadline or a competitive move can outweigh a readiness score. This assessment states the cost of that choice so it is made deliberately rather than by default.':
+    'ההשקה נותרת אפשרית ולעיתים היא הנכונה — מועד יעד של מוצר או מהלך תחרותי יכולים לגבור על ציון מוכנות. הערכה זו מציינת את מחיר הבחירה כדי שתתקבל במודע ולא כברירת מחדל.',
+  'Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.':
+    'לכל אחת עדיפות, אחראי, תאריך יעד, הערכת מאמץ, התלויות שלה, התזוזה שעליה לחולל ומידת הביטחון של המודל בכך.',
+  '{n} tracked questions': '{n} שאלות במעקב',
+  'Paid search': 'חיפוש ממומן',
+  'Paid social': 'מדיה חברתית ממומנת',
+  'Trade media': 'מדיה מקצועית',
+  'Content syndication': 'הפצת תוכן',
+
+  /* The seven dimensions */
+  'AI readiness': 'מוכנות AI',
+  'Do AI engines understand and recommend this business?':
+    'האם מנועי AI מבינים את העסק הזה וממליצים עליו?',
+  'Across six engines, the business is understood at 38 of 100. Advertising cannot correct a record it does not touch.':
+    'בשישה מנועים, העסק מובן ברמה של 38 מתוך 100. פרסום אינו יכול לתקן רשומה שהוא אינו נוגע בה.',
+  'Authority readiness': 'מוכנות הסמכות',
+  'Is there enough evidence for AI to recommend this business?':
+    'האם יש די ראיות כדי שה-AI ימליץ על העסק הזה?',
+  '3 independent sources can verify this business. The category median is 14.':
+    '3 מקורות בלתי תלויים יכולים לאמת את העסק הזה. חציון הקטגוריה הוא 14.',
+  'Google readiness': 'מוכנות גוגל',
+  'Can buyers find this business through traditional search?':
+    'האם קונים יכולים למצוא את העסק הזה דרך חיפוש מסורתי?',
+  '9 of 20 commercial questions place in the top ten. The rest are reachable only by paying for the click.':
+    '9 מתוך 20 שאלות מסחריות ממוקמות בעשירייה הראשונה. אל השאר ניתן להגיע רק בתשלום על הקליק.',
+  'Narrative readiness': 'מוכנות הנרטיב',
+  'Does the market understand what this business stands for?':
+    'האם השוק מבין על מה העסק הזה עומד?',
+  'The business owns 12% of the language engines use to define this category. The campaign would be fought on terms a competitor wrote.':
+    'העסק מחזיק ב-12% מהשפה שבה המנועים מגדירים את הקטגוריה. הקמפיין יתנהל בתנאים שמתחרה כתב.',
+  Reputation: 'מוניטין',
+  'Is this business safe to recommend to a buyer?':
+    'האם בטוח להמליץ על העסק הזה לקונה?',
+  'Reputation reads 44 of 100 while market fit reads 72. The offer is right; the proof around it is not.':
+    'המוניטין עומד על 44 מתוך 100 בעוד שהתאמת השוק עומדת על 72. ההיצע נכון; ההוכחות סביבו אינן.',
+  'Conversion readiness': 'מוכנות ההמרה',
+  'Can the destination convert the intent this campaign buys?':
+    'האם היעד יכול להמיר את הכוונה שהקמפיין הזה קונה?',
+  'A single quote form serves every stage. There is no path for a buyer who is still comparing suppliers and not yet requesting a price.':
+    'טופס הצעת מחיר יחיד משרת כל שלב. אין מסלול לקונה שעדיין משווה ספקים ואינו מבקש מחיר.',
+  'Competitor readiness': 'מוכנות מול מתחרים',
+  'Kestrel Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
+    'Kestrel Industrial מחזיקה בו-זמנית במיקומים אורגניים בשלישייה הראשונה ובנוכחות ב-AI בארבע השאלות המסחריות בעלות הנפח הגבוה ביותר.',
+
+  /* Dimension evidence rows */
+  'Category understanding': 'הבנת הקטגוריה',
+  '2 of 6 correct': '2 מתוך 6 נכונים',
+  'An engine that files the business in the wrong category cannot surface it when a buyer describes this need, regardless of spend.':
+    'מנוע שמתייק את העסק בקטגוריה שגויה אינו יכול להעלות אותו כשקונה מתאר את הצורך הזה, ללא קשר להוצאה.',
+  'AI recommendation coverage': 'כיסוי המלצות AI',
+  '6 recommendation events across 144 answer slots. A buyer who asks an assistant for suppliers almost never hears this name.':
+    '6 אירועי המלצה מתוך 144 משבצות תשובה. קונה ששואל עוזר AI על ספקים כמעט לעולם אינו שומע את השם הזה.',
+  'Engine consistency': 'עקביות בין המנועים',
+  '37-point spread': 'פער של 37 נקודות',
+  'Recognition ranges from 21 to 58. The campaign would reach buyers whose assistants disagree about what this business is.':
+    'הזיהוי נע בין 21 ל-58. הקמפיין יגיע לקונים שהעוזרים שלהם חלוקים בשאלה מהו העסק הזה.',
+  'Silent engines': 'מנועים שותקים',
+  '2 engines recommend the business in none of the tracked decisions. Spend that drives buyers toward those engines returns nothing.':
+    '2 מנועים אינם ממליצים על העסק באף אחת מההחלטות הנמדדות. הוצאה שמניעה קונים אל המנועים הללו אינה מחזירה דבר.',
+  'Independent authority sources': 'מקורות סמכות בלתי תלויים',
+  '3 sources': '3 מקורות',
+  'Independent corroboration is what lets a system name a supplier first rather than hedge across several.':
+    'אישוש בלתי תלוי הוא מה שמאפשר למערכת לנקוב בשם ספק ראשון במקום לפזר בין כמה.',
+  'Third-party validation': 'אימות מצד שלישי',
+  '1 of 5 present': '1 מתוך 5 קיים',
+  'Certifications, named customers, verified outcomes and specification references are absent from the public record.':
+    'תעודות, לקוחות בשמם, תוצאות מאומתות והפניות למפרטים נעדרים מהרשומה הציבורית.',
+  'Industry references': 'הפניות מהתעשייה',
+  '0 of 3 publications': '0 מתוך 3 פרסומים',
+  'The three trade publications engines cite most for this category carry no coverage of the business at all.':
+    'שלושת הפרסומים המקצועיים שהמנועים מצטטים הכי הרבה בקטגוריה זו אינם מסקרים את העסק כלל.',
+  'Competitor authority': 'סמכות המתחרים',
+  '7× behind': 'פי 7 מאחור',
+  'Kestrel Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
+    'ניתן לאשש את Kestrel Industrial בקלות פי 7. היתרון הזה מצטבר כל עוד לא פועלת תוכנית נגד.',
+  'Commercial keyword coverage': 'כיסוי מילות מפתח מסחריות',
+  '9 of 20': '9 מתוך 20',
+  'Weighted by search volume rather than by keyword count, so a strong position on a question nobody asks does not flatter the figure.':
+    'משוקלל לפי נפח חיפוש ולא לפי מספר מילות מפתח, כך שמיקום חזק בשאלה שאיש אינו שואל אינו מייפה את הנתון.',
+  'Technical SEO status': 'מצב ה-SEO הטכני',
+  'No blocking faults': 'אין תקלות חוסמות',
+  'Crawlability, indexation and canonicalisation carry no faults that would prevent a campaign landing page from ranking. This is not the constraint.':
+    'סריקות, אינדוקס וקנוניזציה אינם נושאים תקלות שימנעו מדף נחיתה של קמפיין להתברג בדירוג. זה אינו האילוץ.',
+  'Organic opportunity': 'הזדמנות אורגנית',
+  '6 questions': '6 שאלות',
+  '6 questions already rank but never reach an AI answer. These are the cheapest positions available and need publishing, not budget.':
+    '6 שאלות כבר מדורגות אך לעולם אינן מגיעות לתשובת AI. אלה המיקומים הזולים ביותר הזמינים והם זקוקים לפרסום, לא לתקציב.',
+  'Category clarity': 'בהירות הקטגוריה',
+  Fragmented: 'מפוצל',
+  'The same business is described differently across its own site, two directories and six engines. A campaign amplifies whichever version a buyer meets.':
+    'אותו עסק מתואר אחרת באתר שלו, בשני מדריכים ובשישה מנועים. קמפיין מגביר את הגרסה שבה הקונה נתקל.',
+  'Public narrative': 'הנרטיב הציבורי',
+  Contested: 'שנוי במחלוקת',
+  'Machines describe this category using a competitor’s specification framing, so buyers arrive already evaluating against someone else’s criteria.':
+    'מכונות מתארות את הקטגוריה הזו במסגור המפרט של מתחרה, כך שקונים מגיעים כשהם כבר מעריכים מול הקריטריונים של מישהו אחר.',
+  'Messaging alignment': 'יישור המסרים',
+  Misaligned: 'לא מיושר',
+  'The campaign leads with same-day regional delivery. No public source currently associates that capability with this business.':
+    'הקמפיין פותח באספקה אזורית באותו יום. שום מקור ציבורי אינו מקשר כיום את היכולת הזו לעסק הזה.',
+  'Trust signals': 'אותות אמון',
+  'Every claim traces back to the company’s own website. Systems treat self-description as a claim rather than as evidence.':
+    'כל טענה מובילה חזרה לאתר של החברה עצמה. מערכות מתייחסות לתיאור עצמי כטענה ולא כראיה.',
+  Reviews: 'ביקורות',
+  'Adequate volume': 'נפח מספק',
+  'Review volume is sufficient and sentiment is positive, but sits on platforms engines do not treat as authoritative for this category.':
+    'נפח הביקורות מספק והסנטימנט חיובי, אך הן יושבות בפלטפורמות שהמנועים אינם רואים בהן סמכותיות לקטגוריה הזו.',
+  'Brand credibility': 'אמינות המותג',
+  'Expert citations': 'ציטוטי מומחים',
+  'No named expert, engineer or specifier is publicly associated with the business. Machines have nobody to attribute expertise to.':
+    'שום מומחה, מהנדס או מגדיר מפרט בשמו אינו מקושר בפומבי לעסק. למכונות אין למי לייחס מומחיות.',
+  'External validation': 'אימות חיצוני',
+  'Customer outcomes, third-party validation, certifications and named references are absent. Only review-platform badges appear.':
+    'תוצאות לקוחות, אימות מצד שלישי, תעודות והפניות בשמן נעדרים. מופיעים רק תגי פלטפורמות ביקורת.',
+  'Landing page quality': 'איכות דף הנחיתה',
+  '3 of 7 pages': '3 מתוך 7 עמודים',
+  'Three of the seven pages this campaign would drive to state what the business sells above the fold. The rest open with company history.':
+    'שלושה מתוך שבעת העמודים שהקמפיין יוביל אליהם מציינים מה העסק מוכר בחלק העליון. השאר פותחים בהיסטוריית החברה.',
+  'Decision support': 'תמיכה בהחלטה',
+  'No comparison table, specification guidance or selection criteria exists on any destination page. A buyer arriving mid-evaluation has nothing to evaluate with.':
+    'אין טבלת השוואה, הנחיית מפרט או קריטריוני בחירה באף עמוד יעד. קונה שמגיע באמצע ההערכה אין לו במה להעריך.',
+  'Trust elements': 'רכיבי אמון',
+  'Quote form only': 'טופס הצעת מחיר בלבד',
+  'Commercial messaging': 'מסרים מסחריים',
+  'Same-day regional delivery — the strongest differentiator — appears on one page and in no page title.':
+    'אספקה אזורית באותו יום — הבידול החזק ביותר — מופיעה בעמוד אחד ובאף כותרת עמוד.',
+  'Market leaders': 'מובילי שוק',
+  '4 ahead': '4 מקדימים',
+  '4 of 4 tracked competitors currently receive more recommendations than this business.':
+    '4 מתוך 4 המתחרים הנמדדים מקבלים כיום יותר המלצות מהעסק הזה.',
+  'Competitor visibility': 'נראות המתחרים',
+  '4 in top three': '4 בשלישייה הראשונה',
+  'Authority gap': 'פער סמכות',
+  '21 sources': '21 מקורות',
+  'Kestrel Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
+    'ל-Kestrel Industrial יש 21 מקורות מול 3. פרסום אינו סוגר פער ראיות; פרסום תוכן ואימות כן.',
+  'Competitive gap': 'פער תחרותי',
+  '12% owned': '12% בבעלות',
+  'Existing search strength': 'עוצמת החיפוש הקיימת',
+  'Existing strength sits on questions asked after a vendor has been chosen, not on the questions that choose one.':
+    'העוצמה הקיימת נמצאת בשאלות שנשאלות אחרי שנבחר ספק, לא בשאלות שבוחרות אחד.',
+  'The leader is strongest at exactly the stage this campaign is intended to influence, which is where displacement is most expensive.':
+    'המוביל חזק ביותר בדיוק בשלב שהקמפיין הזה נועד להשפיע עליו, ושם ההדחה יקרה ביותר.',
+  '4 engines hold a wrong or missing record — one conflates the business with a same-named logistics firm.':
+    '4 מנועים מחזיקים ברשומה שגויה או חסרה — אחד מערבב את העסק עם חברת לוגיסטיקה בעלת אותו שם.',
+  'The category description differs between the website and two trade directories, which reads to a machine as an unreliable record.':
+    'תיאור הקטגוריה שונה בין האתר לשני מדריכי מסחר, ומכונה קוראת זאת כרשומה בלתי אמינה.',
+  'No single consistent story exists in the public record for a campaign to reinforce, so each impression starts the explanation over.':
+    'לא קיים סיפור אחיד ברשומה הציבורית שקמפיין יוכל לחזק, ולכן כל חשיפה מתחילה את ההסבר מחדש.',
+  'Kestrel Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
+    'Kestrel Industrial מקבלת 31% מההמלצות מול 4.2%. השקה עכשיו משמעה פרסום לתוך החלטה שהיא שולטת בה.',
+
+  /* Coverage */
+  Coverage: 'כיסוי',
+  'Where the campaign would reach buyers, and where it would not':
+    'היכן הקמפיין יגיע לקונים, והיכן לא',
+  'Stage 1': 'שלב 1',
+  'Stage 2': 'שלב 2',
+  'Stage 3': 'שלב 3',
+  'Stage 4': 'שלב 4',
+  'Stage 5': 'שלב 5',
+  'Invisible to every conventional measurement tool.':
+    'בלתי נראה לכל כלי מדידה מקובל.',
+  'Visible to {tools}.': 'נראה ל{tools}.',
+  'No presence at {stages}.': 'אין נוכחות ב{stages}.',
+  'A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.':
+    'קמפיין יוצר ביקוש לאורך כל המסע. הוא ממיר רק בשלבים שבהם העסק אכן נוכח.',
+
+  /* Commercial risk */
+  'Commercial risk': 'סיכון מסחרי',
+  'Commercial risk level': 'רמת הסיכון המסחרי',
+  'What launching today would cost': 'מה תעלה השקה היום',
+  "Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage.":
+    'הסיכון כאן אינו הסיכוי שהקמפיין יניב פחות מהצפוי. זהו המנגנון שבו הוצאה מומרת ליתרון של מתחרה.',
+  'Missed decision exposure': 'חשיפה להחלטות שהוחמצו',
+  '19 of 24': '19 מתוך 24',
+  'Commercial decisions that already complete without this business appearing. A campaign increases how many of these happen, not how many are won.':
+    'החלטות מסחריות שכבר מסתיימות בלי שהעסק הזה מופיע. קמפיין מגדיל את מספרן, לא את מספר אלה שנזכות.',
+  'Revenue dependent on this stage': 'הכנסה התלויה בשלב הזה',
+  '38% of demand': '38% מהביקוש',
+  'The share of revenue arriving through supplier evaluation — the stage where presence is currently lowest and the campaign has least leverage.':
+    'נתח ההכנסה שמגיע דרך הערכת ספקים — השלב שבו הנוכחות נמוכה ביותר ולקמפיין יש בו את המינוף הקטן ביותר.',
+  'Expected ROI risk': 'סיכון לתשואה הצפויה',
+  'Return depends on buyers completing a journey the business is absent from at these stages. Spend reaches them; the recommendation does not.':
+    'התשואה תלויה בכך שקונים ישלימו מסע שהעסק נעדר ממנו בשלבים הללו. ההוצאה מגיעה אליהם; ההמלצה לא.',
+  'Every click is paid for twice: once to acquire it, and again to reacquire the buyer who arrived, found nothing to evaluate with, and left to compare elsewhere.':
+    'כל קליק משולם פעמיים: פעם כדי לרכוש אותו, ושוב כדי לרכוש מחדש את הקונה שהגיע, לא מצא במה להעריך, ועזב להשוות במקום אחר.',
+  'Paid acquisition buys attention that trust has to convert. Without it the campaign raises awareness for the category and the best-verified supplier in it wins.':
+    'רכישה ממומנת קונה תשומת לב שהאמון צריך להמיר. בלעדיו הקמפיין מעלה מודעות לקטגוריה, והספק המאומת ביותר בה זוכה.',
+  'The campaign generates consideration the business cannot survive. Buyers who check will find nothing independent, and the check happens after the click is paid for.':
+    'הקמפיין מייצר שקילה שהעסק אינו שורד. קונים שיבדקו לא ימצאו דבר בלתי תלוי, והבדיקה מתרחשת אחרי שהקליק כבר שולם.',
+  'Campaign attention drives buyers to verify the business through an assistant that cannot describe it correctly. The spend creates the demand and a competitor collects it.':
+    'תשומת הלב מהקמפיין מניעה קונים לאמת את העסק דרך עוזר שאינו יכול לתאר אותו נכון. ההוצאה יוצרת את הביקוש ומתחרה אוסף אותו.',
+  'Campaign messaging contradicts what the market already believes. Spend is consumed correcting the record instead of creating demand.':
+    'מסרי הקמפיין סותרים את מה שהשוק כבר מאמין בו. ההוצאה נצרכת בתיקון הרשומה במקום ביצירת ביקוש.',
+  'Paid search carries the entire commercial keyword set alone, at a blended cost already above break-even, for as long as the campaign runs.':
+    'החיפוש הממומן נושא לבדו את כל מערך מילות המפתח המסחריות, בעלות משוקללת שכבר מעל נקודת האיזון, כל עוד הקמפיין פועל.',
+  'The campaign raises category demand that the best-evidenced supplier absorbs. Competitor share can rise as a direct result of this spend.':
+    'הקמפיין מעלה ביקוש בקטגוריה שהספק בעל הראיות הטובות ביותר סופג. נתח המתחרה עשוי לעלות כתוצאה ישירה מההוצאה הזו.',
+  'Both surfaces': 'שני המשטחים',
+  Partial: 'חלקי',
+
+  /* Interventions */
+  Intervention: 'התערבות',
+  'Required before launch': 'נדרש לפני ההשקה',
+  'Blocked until priority {n} lands.': 'חסום עד שעדיפות {n} תונחת.',
+  'If you launch anyway': 'אם תשיקו בכל זאת',
+  'Launch campaign': 'השיקו את הקמפיין',
+  'Fix readiness first': 'תקנו קודם את המוכנות',
+  'Open Executive Action Plan': 'פתחו את תוכנית הפעולה הניהולית',
+  'Review the full position': 'סקרו את התמונה המלאה',
+  'Website and conversion readiness': 'מוכנות האתר וההמרה',
+  'What position are we launching into?': 'לאיזו עמדה אנחנו משיקים?',
+  'AI narrative': 'נרטיב ה-AI',
+  'Narrative consistency': 'עקביות הנרטיב',
+
   /* --- Decision Reconstruction ---------------------------------------------- */
   'Decision Reconstruction': 'שחזור ההחלטה',
   'Decision Reconstruction | GeoRepute': 'שחזור ההחלטה | GeoRepute',
@@ -1209,8 +1482,6 @@ export const content: ContentOverlay = {
     'העמודים של Northwind עצמה הם המקור היחיד שהמנועים יכולים להגיע אליו עבור טענותיה — ציטוט עצמי נושא משקל מועט.',
   'A published comparison library gives engines material they can quote directly.':
     'ספריית השוואה מפורסמת נותנת למנועים חומר שהם יכולים לצטט ישירות.',
-  'Engines describe the category using a competitor&#x27;s framing. Northwind owns 12% of that language.':
-    'המנועים מתארים את הקטגוריה במסגור של מתחרה. Northwind מחזיקה ב-12% מהשפה הזו.',
   'Category evaluation criteria': 'קריטריוני הערכה בקטגוריה',
   'Supplier-comparison content': 'תוכן להשוואת ספקים',
   'Company website': 'אתר החברה',
@@ -1340,7 +1611,6 @@ export const content: ContentOverlay = {
     'החלון עדיין פתוח אך מצטמצם. עלות ההדחה עולה ברגע שהמנועים מתייצבים על מערך תשובות קבוע.',
   'Decision deadline': 'מועד ההכרעה',
   'Timing window': 'חלון התזמון',
-  '7 months': '7 חודשים',
   months: 'חודשים',
 
   /* Causal chain and drawer chrome */

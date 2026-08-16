@@ -17,6 +17,7 @@ import { count, dateFull, percentWhole } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Action, CampaignReadiness, OrgSummary } from '@/lib/api/types'
 import { useT } from '@/lib/i18n/content/client'
+import { useI18n } from '@/lib/i18n/context'
 
 /* ============================================================================
    CAMPAIGN READINESS INTELLIGENCE.
@@ -46,6 +47,7 @@ export function CampaignReadinessView({
   readiness: CampaignReadiness
 }) {
   const t = useT()
+  const { intl } = useI18n()
   const { role, setRole } = useRoleLens('executive')
   const {
     campaign,
@@ -80,39 +82,37 @@ export function CampaignReadinessView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight pb-0">
         <p className="text-label uppercase text-ink-3">
-          Campaign readiness intelligence
+          {t('Campaign readiness intelligence')}
         </p>
         <h1 className="text-h1 md:text-display-2 text-ink mt-3 text-balance max-w-3xl">
-          Should we launch this campaign today?
+          {t('Should we launch this campaign today?')}
         </h1>
         <p className="text-body text-ink-2 mt-4 max-w-3xl">
-          This assessment evaluates the business, not the campaign. Creative,
-          targeting and budget can all be correct while the business remains
-          structurally unable to convert the attention they buy.
+          {t('This assessment evaluates the business, not the campaign. Creative, targeting and budget can all be correct while the business remains structurally unable to convert the attention they buy.')}
         </p>
 
         {/* --- Campaign under assessment ---------------------------- */}
         <div className="mt-8 rounded-md border border-line bg-panel p-5 flex flex-wrap items-center gap-x-8 gap-y-3">
           <div className="min-w-0">
-            <p className="text-label uppercase text-ink-3">Campaign</p>
-            <p className="text-body text-ink mt-1.5">{campaign.name}</p>
+            <p className="text-label uppercase text-ink-3">{t('Campaign')}</p>
+            <p className="text-body text-ink mt-1.5">{t(campaign.name)}</p>
           </div>
           <div>
-            <p className="text-label uppercase text-ink-3">Intended launch</p>
+            <p className="text-label uppercase text-ink-3">{t('Intended launch')}</p>
             <p className="text-body text-ink mt-1.5" data-numeric="">
-              {dateFull(campaign.intendedLaunch)}
+              {dateFull(campaign.intendedLaunch, intl)}
             </p>
           </div>
           <div>
-            <p className="text-label uppercase text-ink-3">Duration</p>
+            <p className="text-label uppercase text-ink-3">{t('Duration')}</p>
             <p className="text-body text-ink mt-1.5" data-numeric="">
-              {campaign.campaignMonths} months
+              {t('{n} months', { n: campaign.campaignMonths })}
             </p>
           </div>
           <div className="min-w-0">
-            <p className="text-label uppercase text-ink-3">Channels</p>
+            <p className="text-label uppercase text-ink-3">{t('Channels')}</p>
             <p className="text-body text-ink mt-1.5">
-              {campaign.channels.join(' · ')}
+              {campaign.channels.map((c) => t(c)).join(' · ')}
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export function CampaignReadinessView({
             {/* Score */}
             <div>
               <p className="text-label uppercase text-ink-3">
-                Campaign readiness score
+                {t('Campaign readiness score')}
               </p>
               <p className="mt-3 flex items-baseline gap-2">
                 <span
@@ -154,8 +154,7 @@ export function CampaignReadinessView({
                 className="mt-4"
               />
               <p className="text-caption text-ink-3 mt-3" data-numeric="">
-                Ready at {thresholds.ready} and above. At risk from{' '}
-                {thresholds.risk}. Blocking below {thresholds.risk}.
+                {t('Ready at {ready} and above. At risk from {risk}. Blocking below {risk}.', { ready: thresholds.ready, risk: thresholds.risk })}
               </p>
             </div>
 
@@ -163,7 +162,7 @@ export function CampaignReadinessView({
             <div>
               <div className="flex flex-wrap items-center gap-3">
                 <p className="text-label uppercase text-ink-3">
-                  Executive recommendation
+                  {t('Executive recommendation')}
                 </p>
                 <ConfidenceBadge confidence={confidence} />
               </div>
@@ -187,25 +186,25 @@ export function CampaignReadinessView({
             <Summary
               label={t('Primary constraint')}
               value={constraint.label}
-              note={`${constraint.score} of 100 · ${Math.round(constraint.weight * 100)}% of the index`}
+              note={t('{score} of 100 · {weight}% of the index', { score: constraint.score, weight: Math.round(constraint.weight * 100) })}
             />
             <Summary
               label={t('Strategic window')}
-              value={`${timing.windowMonths} months`}
-              note={`Advantage holds until ${dateFull(timing.decisionDeadline)}.`}
+              value={t('{n} months', { n: timing.windowMonths })}
+              note={t('Advantage holds until {date}.', { date: dateFull(timing.decisionDeadline, intl) })}
             />
             <Summary
               label={t('Decision journey gaps')}
-              value={`${missingStages.length} of ${journey.length}`}
+              value={t('{n} of {total}', { n: missingStages.length, total: journey.length })}
               note={
                 missingStages.length > 0
-                  ? `No presence at ${missingStages.map((s) => s.label).join(' or ')}.`
-                  : 'Presence at every stage.'
+                  ? t('No presence at {stages}.', { stages: missingStages.map((s) => t(s.label)).join(` ${t('or')} `) })
+                  : t('Presence at every stage.')
               }
             />
             <Summary
               label={t('Assessment confidence')}
-              value={confidence === 'high' ? 'High' : 'Medium'}
+              value={confidence === 'high' ? t('High') : t('Medium')}
               note={t('Six of seven dimensions rest on directly observed data.')}
             />
           </dl>
@@ -213,7 +212,7 @@ export function CampaignReadinessView({
           {/* Budget at risk — a claim, so it carries its full disclosure. */}
           <div className="p-6 md:p-8 border-t border-line">
             <p className="text-label uppercase text-ink-3 mb-4">
-              Estimated budget at risk
+              {t('Estimated budget at risk')}
             </p>
             <ExposureRange exposure={budgetAtRisk} size="lg" />
           </div>
@@ -225,7 +224,7 @@ export function CampaignReadinessView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight">
         <SectionHead
-          eyebrow="Assessment"
+          eyebrow={t('Assessment')}
           title={t('Seven readiness dimensions, weighted into one index')}
           note={t('Every score is computed from observed data rather than assigned. The weights are published and sum to one.')}
         />
@@ -268,7 +267,7 @@ export function CampaignReadinessView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Coverage"
+          eyebrow={t('Coverage')}
           title={t('Where the campaign would reach buyers, and where it would not')}
           note={t('A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.')}
         />
@@ -289,19 +288,19 @@ export function CampaignReadinessView({
             >
               <div className="flex items-baseline justify-between gap-2">
                 <p className="text-label uppercase text-ink-3" data-numeric="">
-                  Stage {stage.order}
+                  {t('Stage {n}', { n: stage.order })}
                 </p>
                 {stage.missing ? (
                   <span
                     className="text-label uppercase shrink-0"
                     style={{ color: 'var(--gr-critical)' }}
                   >
-                    Absent
+                    {t('Absent')}
                   </span>
                 ) : null}
               </div>
 
-              <p className="text-body text-ink mt-2">{stage.label}</p>
+              <p className="text-body text-ink mt-2">{t(stage.label)}</p>
               <p
                 className="text-data-lg mt-3"
                 data-numeric=""
@@ -314,12 +313,12 @@ export function CampaignReadinessView({
                 {percentWhole(stage.coveragePct)}
               </p>
               <p className="text-caption text-ink-3 mt-2" data-numeric="">
-                {count(stage.promptCount)} tracked questions
+                {t('{n} tracked questions', { n: count(stage.promptCount) })}
               </p>
               <p className="text-caption text-ink-3 mt-3 pt-3 border-t border-line">
                 {stage.observableBy.length === 0
-                  ? 'Invisible to every conventional measurement tool.'
-                  : `Visible to ${stage.observableBy.join(', ').toLowerCase()}.`}
+                  ? t('Invisible to every conventional measurement tool.')
+                  : t('Visible to {tools}.', { tools: stage.observableBy.map((x) => t(x)).join(', ') })}
               </p>
             </li>
           ))}
@@ -367,7 +366,7 @@ export function CampaignReadinessView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Intervention"
+          eyebrow={t('Intervention')}
           title={t('Required before launch')}
           note={t('Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.')}
           action={
@@ -404,7 +403,7 @@ export function CampaignReadinessView({
         >
           <div className="flex flex-wrap items-center gap-3">
             <p className="text-label uppercase text-ink-3">
-              Executive decision
+              {t('Executive decision')}
             </p>
             <StatusChip status={overallStatus} />
           </div>
@@ -437,10 +436,7 @@ export function CampaignReadinessView({
 
           {!cleared ? (
             <p className="text-caption text-ink-3 mt-8 max-w-2xl">
-              Launching remains available and is sometimes correct — a product
-              deadline or a competitive move can outweigh a readiness score.
-              This assessment states the cost of that choice so it is made
-              deliberately rather than by default.
+              {t('Launching remains available and is sometimes correct — a product deadline or a competitive move can outweigh a readiness score. This assessment states the cost of that choice so it is made deliberately rather than by default.')}
             </p>
           ) : null}
         </div>
@@ -505,13 +501,15 @@ function PreLaunchAction({
   priority: number
   blockedBy: Action[]
 }) {
+  const t = useT()
+  const { intl } = useI18n()
   const blocked = blockedBy.length > 0
 
   return (
     <li className="rounded-md border border-line bg-panel overflow-hidden">
       <div className="p-5 flex flex-wrap items-start gap-x-6 gap-y-4">
         <div className="shrink-0">
-          <p className="text-label uppercase text-ink-3">Priority</p>
+          <p className="text-label uppercase text-ink-3">{t('Priority')}</p>
           <p
             className={cn(
               'grid place-items-center size-9 rounded-xs mt-2 text-body',
@@ -536,7 +534,7 @@ function PreLaunchAction({
         </div>
 
         <div className="shrink-0 basis-56">
-          <p className="text-label uppercase text-ink-3">Expected impact</p>
+          <p className="text-label uppercase text-ink-3">{t('Expected impact')}</p>
           <p
             className="text-body mt-2"
             style={{ color: 'var(--gr-positive)' }}
@@ -545,16 +543,16 @@ function PreLaunchAction({
             {action.expectedImpact}
           </p>
           <p className="text-caption text-ink-3 mt-3">
-            Verified by: {action.successMetric}
+            {t('Verified by: {metric}', { metric: action.successMetric })}
           </p>
         </div>
 
         <div className="shrink-0 basis-44">
-          <p className="text-label uppercase text-ink-3">Owner</p>
+          <p className="text-label uppercase text-ink-3">{t('Owner')}</p>
           <p className="text-caption text-ink mt-2">{action.owner}</p>
-          <p className="text-label uppercase text-ink-3 mt-4">Deadline</p>
+          <p className="text-label uppercase text-ink-3 mt-4">{t('Deadline')}</p>
           <p className="text-caption text-ink mt-2" data-numeric="">
-            {dateFull(action.deadline)}
+            {dateFull(action.deadline, intl)}
           </p>
         </div>
       </div>
@@ -571,14 +569,13 @@ function PreLaunchAction({
         }
       >
         <p className="text-caption text-ink-3">
-          <span className="text-label uppercase me-3">Dependencies</span>
+          <span className="text-label uppercase me-3">{t('Dependencies')}</span>
           {blocked ? (
             <span className="text-ink-2">
-              Blocked until priority{' '}
-              {blockedBy.map((d) => d.id.replace('a', '')).join(' and ')} lands.
+              {t('Blocked until priority {n} lands.', { n: blockedBy.map((d) => d.id.replace('a', '')).join(` ${t('and')} `) })}
             </span>
           ) : (
-            <span className="text-ink-2">None. Can start immediately.</span>
+            <span className="text-ink-2">{t('None. Can start immediately.')}</span>
           )}
         </p>
       </div>
