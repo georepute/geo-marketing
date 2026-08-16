@@ -395,36 +395,26 @@ export const content: ContentOverlay = {
     'Рыночный интеллект — вид по категории и спросу',
   'Narrative Intelligence — narrative ownership and movement':
     'Нарративный интеллект — владение нарративом и его движение',
-  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
-    'Какая версия категории циркулирует и чьим языком она изложена. Анонимизированные демонстрационные данные.',
   'Trust & Authority — independent-source verification view':
     'Доверие и авторитетность — вид проверки по независимым источникам',
-  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
-    'На что система может сослаться, когда ей нужно обосновать рекомендацию. Анонимизированные демонстрационные данные.',
 
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'Стратегия — цели, переведённые в целевые сигналы',
   'Content & media generation — output bound to identified gaps':
     'Создание контента и медиа — выпуск, привязанный к выявленным разрывам',
-  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
-    'Каждый материал прослеживается до разрыва, ради закрытия которого он создан. Анонимизированные демонстрационные данные.',
   'Execution calendar — sequenced distribution':
     'Календарь исполнения — распределение по последовательности',
   'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
     'Последовательность и сроки, выведенные из стратегии, а не из графика публикаций. Анонимизированные демонстрационные данные.',
   'Distribution — connected digital assets and publishing state':
     'Дистрибуция — подключённые цифровые активы и статус публикации',
-  'Where each asset was published, across connected properties. Anonymised demonstration data.':
-    'Где опубликован каждый материал, по всем подключённым площадкам. Анонимизированные демонстрационные данные.',
 
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'Измерение — таблица сравнения «до → действие → после»',
   'Learning — measured outcome feeding the next recommendation':
     'Обучение — измеренный результат, питающий следующую рекомендацию',
-  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
-    'Предыдущая рекомендация, что она сдвинула, и скорректированная рекомендация, которая из этого следует. Анонимизированные демонстрационные данные.',
 
   /* ==========================================================================
      THE METHODOLOGY PAGE.
@@ -2418,10 +2408,6 @@ export const content: ContentOverlay = {
     'Реконструкция решения — завершённая реконструкция',
   'Mission Control → the composite Decision Health position panel':
     'Центр управления → сводная панель позиции «Состояние решения»',
-  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
-    'Один коммерческий вопрос, реконструированный от того, что понял каждый движок, до того, что должно измениться. Обезличенные демонстрационные данные.',
-  'One decision position rather than ten measures. Anonymised demonstration data.':
-    'Одна позиция для решения вместо десяти показателей. Обезличенные демонстрационные данные.',
 
   /* --- Module business questions ---------------------------------------------------
      The category page leads with the question, not the module name. */
@@ -2799,4 +2785,32 @@ export const content: ContentOverlay = {
     'Экспозиция показана диапазоном с уровнем уверенности и исходными данными — никогда одним подтверждённым числом. Реальный интерфейс, демонстрационный прогон.',
   'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
     'Модель коммерческой экспозиции: месячная выручка под риском, дневная стоимость и прогнозируемая величина восстановления — диапазонами; ниже напечатаны входные данные по конверсии, стоимости сделки и бенчмаркам, с отметкой средней уверенности.',
+  'Forecasts drawn from accumulated GEON, narrative and competitor history — and the refusal to project before there is enough of it. Real interface, demonstration run.':
+    'Прогнозы, построенные на накопленной истории GEON, нарратива и конкурентов, — и отказ прогнозировать, пока её недостаточно. Реальный интерфейс, демонстрационный прогон.',
+  'A predictive intelligence panel listing GEON pace, narrative target, competitor risk, annual recoverable value and the cost of ignoring the AI gap, each stating that more observed history is needed before a projection is offered.':
+    'Панель прогнозного интеллекта с темпом GEON, нарративной целью, риском конкурентов, годовой возвратной величиной и ценой игнорирования разрыва в ИИ; по каждому пункту указано, что для прогноза нужна более длинная наблюдаемая история.',
+  'The gap report as it is delivered: one stated verdict, the engines observed, and the index the following pages take apart. Real interface, demonstration run.':
+    'Отчёт о разрыве в том виде, в каком его выдают: один сформулированный вердикт, наблюдавшиеся движки и индекс, который разбирают следующие страницы. Реальный интерфейс, демонстрационный прогон.',
+  'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.':
+    'Обложка отчёта о разрыве видимости с одним сформулированным вердиктом, наблюдавшимися ИИ-движками, датой прогона и индексом репутации в ИИ, ожидающим страниц, которые его разбирают.',
+  'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.':
+    'Качество нарратива против доли внимания — верхний левый квадрант это объём без доверия. Реальный интерфейс, демонстрационный прогон.',
+  'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.':
+    'Диаграмма рассеяния размещает каждый бренд категории по качеству нарратива на одной оси и доле внимания на другой, так что высокая доля при слабом нарративе заметно отделяется от заслуженного положения.',
+  'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.':
+    'Совокупное доминирование — доля, умноженная на нарратив и на маршрутизацию по умолчанию, — площадью на бренд. Реальный интерфейс, демонстрационный прогон.',
+  'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.':
+    'Древовидная карта задаёт размер каждого бренда категории по совокупному доминированию внимания, рассчитанному из доли внимания, качества нарратива и того, как часто движки маршрутизируют к нему по умолчанию.',
+  'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.':
+    'Где упоминания действительно приземляются движок за движком и какой адресуемый объём стоит за теми, где их нет. Реальный интерфейс, демонстрационный прогон.',
+  'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.':
+    'Столбчатая диаграмма по каждому ИИ-движку сравнивает запросы, где бренд упомянут, с теми, где нет; неупомянутая масса держит большую долю на каждом движке.',
+  'The whole mention rate resolved to one score, beside how the analysed volume splits across engines. Real interface, demonstration run.':
+    'Вся частота упоминаний сведена к одному баллу — рядом с тем, как проанализированный объём распределяется по движкам. Реальный интерфейс, демонстрационный прогон.',
+  'A composite presence score shown as a single gauge with its rating beneath, beside a doughnut chart splitting analysed query volume across the AI engines that show activity.':
+    'Составной балл присутствия в виде одного индикатора с оценкой под ним, рядом с кольцевой диаграммой, делящей проанализированный объём запросов между активными ИИ-движками.',
+  'One run reconstructed: what is happening, why it is happening and what it is costing, with the analyst reading underneath. Real interface, demonstration run.':
+    'Один прогон, реконструированный: что происходит, почему происходит и во что обходится, с прочтением аналитика внизу. Реальный интерфейс, демонстрационный прогон.',
+  'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
+    'Резюме для руководства, сводящее прогон коммерческих запросов к тому, что происходит, почему и во что обходится, над заметкой аналитика, трактующей результат как разрыв представленности, а не качества.',
 }

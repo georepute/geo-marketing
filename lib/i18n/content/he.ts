@@ -2076,36 +2076,26 @@ export const content: ContentOverlay = {
     'מודיעין שוק — תצוגת קטגוריה וביקוש',
   'Narrative Intelligence — narrative ownership and movement':
     'מודיעין נרטיבים — בעלות על הנרטיב ותנועתו',
-  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
-    'איזו גרסה של הקטגוריה מסתובבת, ובלשונו של מי היא מנוסחת. נתוני הדגמה אנונימיים.',
   'Trust & Authority — independent-source verification view':
     'אמון וסמכות — תצוגת אימות ממקורות בלתי תלויים',
-  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
-    'על מה מערכת יכולה להסתמך כשהיא נדרשת להצדיק המלצה. נתוני הדגמה אנונימיים.',
 
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'אסטרטגיה — יעדים שמתורגמים לאותות ממוקדים',
   'Content & media generation — output bound to identified gaps':
     'הפקת תוכן ומדיה — תפוקה הקשורה לפערים שזוהו',
-  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
-    'כל נכס ניתן להתחקות אל הפער שנועד לסגור. נתוני הדגמה אנונימיים.',
   'Execution calendar — sequenced distribution':
     'לוח ביצוע — הפצה מסודרת בזמן',
   'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
     'רצף ותזמון, נגזרים מהאסטרטגיה ולא מקצב פרסום. נתוני הדגמה אנונימיים.',
   'Distribution — connected digital assets and publishing state':
     'הפצה — נכסים דיגיטליים מחוברים ומצב הפרסום',
-  'Where each asset was published, across connected properties. Anonymised demonstration data.':
-    'היכן פורסם כל נכס, על פני הנכסים המחוברים. נתוני הדגמה אנונימיים.',
 
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'מדידה — טבלת ההשוואה לפני ← פעולה ← אחרי',
   'Learning — measured outcome feeding the next recommendation':
     'למידה — תוצאה נמדדת שמזינה את ההמלצה הבאה',
-  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
-    'ההמלצה הקודמת, מה היא הזיזה, וההמלצה המתוקנת שנובעת מכך. נתוני הדגמה אנונימיים.',
 
   /* ==========================================================================
      THE METHODOLOGY PAGE.
@@ -2537,10 +2527,6 @@ export const content: ContentOverlay = {
   'Decision Reconstruction — a completed reconstruction': 'שחזור החלטה — שחזור שהושלם',
   'Mission Control → the composite Decision Health position panel':
     'מרכז הבקרה ← לוח העמדה המשולב של בריאות ההחלטה',
-  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
-    'שאלה מסחרית אחת, משוחזרת ממה שכל מנוע הבין ועד למה שחייב להשתנות. נתוני הדגמה אנונימיים.',
-  'One decision position rather than ten measures. Anonymised demonstration data.':
-    'עמדת החלטה אחת במקום עשרה מדדים. נתוני הדגמה אנונימיים.',
 
   /* --- Module business questions ----------------------------------------------------
      One per module. These are the questions the marketplace is organised
@@ -2920,4 +2906,32 @@ export const content: ContentOverlay = {
     'החשיפה מוצגת כטווח עם רמת הוודאות והנתונים שהוזנו, לעולם לא כמספר בודד ומאושר. ממשק אמיתי, הרצת הדגמה.',
   'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
     'מודל חשיפה מסחרית המציג הכנסה חודשית בסיכון, עלות יומית וערך התאוששות צפוי כטווחים, כשנתוני ההמרה, שווי העסקה ומדדי הייחוס מודפסים מתחת וסימון של ודאות בינונית.',
+  'Forecasts drawn from accumulated GEON, narrative and competitor history — and the refusal to project before there is enough of it. Real interface, demonstration run.':
+    'תחזיות הנשענות על היסטוריית GEON, נרטיב ומתחרים שנצברה — ועל הסירוב להשליך קדימה לפני שיש די ממנה. ממשק אמיתי, הרצת הדגמה.',
+  'A predictive intelligence panel listing GEON pace, narrative target, competitor risk, annual recoverable value and the cost of ignoring the AI gap, each stating that more observed history is needed before a projection is offered.':
+    'פאנל מודיעין חיזוי המפרט קצב GEON, יעד נרטיב, סיכון מתחרים, ערך שנתי בר-השבה ועלות ההתעלמות מפער ה-AI, כשכל אחד מציין שנדרשת היסטוריה נצפית נוספת לפני שתוצע תחזית.',
+  'The gap report as it is delivered: one stated verdict, the engines observed, and the index the following pages take apart. Real interface, demonstration run.':
+    'דוח הפערים כפי שהוא נמסר: פסק דין אחד מנוסח, המנועים שנצפו, והמדד שהעמודים הבאים מפרקים. ממשק אמיתי, הרצת הדגמה.',
+  'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.':
+    'שער של דוח מודיעין פערי נראות הנושא פסק דין אחד מנוסח, את מנועי ה-AI שנצפו, את תאריך ההרצה ומדד מוניטין מבוסס-AI הממתין לעמודים שיפרקו אותו.',
+  'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.':
+    'איכות הנרטיב מול נתח תשומת הלב — הרביע השמאלי-עליון הוא נפח בלי אמון. ממשק אמיתי, הרצת הדגמה.',
+  'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.':
+    'תרשים פיזור הממקם כל מותג בקטגוריה לפי איכות הנרטיב בציר אחד ונתח תשומת הלב בציר השני, כך שנתח גבוה בשילוב נרטיב חלש נבדל בבירור ממעמד שנרכש.',
+  'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.':
+    'דומיננטיות משולבת — נתח מוכפל בנרטיב ובניתוב ברירת המחדל — בגודל שטח לכל מותג. ממשק אמיתי, הרצת הדגמה.',
+  'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.':
+    'מפת עץ המגדילה כל מותג בקטגוריה לפי דומיננטיות תשומת לב משולבת, המחושבת מנתח תשומת הלב, מאיכות הנרטיב ומתדירות הניתוב אליו על ידי המנועים כברירת מחדל.',
+  'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.':
+    'היכן האזכורים באמת נוחתים מנוע אחר מנוע, והנפח בר-הפנייה שעומד מאחורי אלה שלא. ממשק אמיתי, הרצת הדגמה.',
+  'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.':
+    'תרשים עמודות לכל מנוע AI המשווה בין השאילתות שהזכירו את המותג לאלה שלא, כשהמסה שלא הזכירה מחזיקה בנתח הגדול יותר בכל מנוע.',
+  'The whole mention rate resolved to one score, beside how the analysed volume splits across engines. Real interface, demonstration run.':
+    'כל שיעור האזכור מתמצה בציון אחד, לצד אופן חלוקת הנפח שנותח בין המנועים. ממשק אמיתי, הרצת הדגמה.',
+  'A composite presence score shown as a single gauge with its rating beneath, beside a doughnut chart splitting analysed query volume across the AI engines that show activity.':
+    'ציון נוכחות מורכב המוצג כמד יחיד עם הדירוג שמתחתיו, לצד תרשים טבעת המחלק את נפח השאילתות שנותח בין מנועי ה-AI שמפגינים פעילות.',
+  'One run reconstructed: what is happening, why it is happening and what it is costing, with the analyst reading underneath. Real interface, demonstration run.':
+    'הרצה אחת משוחזרת: מה קורה, מדוע זה קורה ומה זה עולה, עם קריאת האנליסט מתחת. ממשק אמיתי, הרצת הדגמה.',
+  'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
+    'תקציר מנהלים המתמצת הרצה של שאילתות מסחריות למה קורה, מדוע זה קורה ומה זה עולה, מעל הערת אנליסט הממסגרת את התוצאה כפער ייצוג ולא כפער איכות.',
 }

@@ -31,6 +31,8 @@ const STAGE_SCREENS: Record<string, readonly ScreenSlotId[]> = {
   plan: [
     'deep-diagnosis',
     'mission-control',
+    'executive-position',
+    'decision-reconstruction',
     'competitor-intelligence',
     'ai-intelligence',
     'google-vs-ai',

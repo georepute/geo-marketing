@@ -342,36 +342,26 @@ export const content: ContentOverlay = {
     'ذكاء السوق — عرض الفئة والطلب',
   'Narrative Intelligence — narrative ownership and movement':
     'ذكاء السرديات — ملكية السردية وحركتها',
-  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
-    'أي رواية عن الفئة هي المتداولة، وبلغة مَن تُصاغ. بيانات توضيحية مجهّلة.',
   'Trust & Authority — independent-source verification view':
     'الثقة والحُجّية — عرض التحقق من مصادر مستقلة',
-  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
-    'ما يستطيع النظام الاستشهاد به حين يُطلب منه تبرير توصية. بيانات توضيحية مجهّلة.',
 
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'الاستراتيجية — أهداف تُترجَم إلى إشارات مستهدفة',
   'Content & media generation — output bound to identified gaps':
     'إنتاج المحتوى والوسائط — مخرجات مرتبطة بفجوات محددة',
-  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
-    'كل أصل يمكن تتبّعه إلى الفجوة التي أُنشئ لسدّها. بيانات توضيحية مجهّلة.',
   'Execution calendar — sequenced distribution':
     'تقويم التنفيذ — توزيع مرتّب زمنيًا',
   'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
     'التسلسل والتوقيت، مشتقان من الاستراتيجية لا من وتيرة نشر. بيانات توضيحية مجهّلة.',
   'Distribution — connected digital assets and publishing state':
     'التوزيع — الأصول الرقمية الموصولة وحالة النشر',
-  'Where each asset was published, across connected properties. Anonymised demonstration data.':
-    'أين نُشر كل أصل، عبر المنصات الموصولة. بيانات توضيحية مجهّلة.',
 
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'القياس — جدول المقارنة قبل ← الإجراء ← بعد',
   'Learning — measured outcome feeding the next recommendation':
     'التعلّم — نتيجة مقيسة تغذّي التوصية التالية',
-  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
-    'التوصية السابقة، وما حرّكته، والتوصية المصحّحة التي تليها. بيانات توضيحية مجهّلة.',
 
   /* ==========================================================================
      THE METHODOLOGY PAGE.
@@ -2413,10 +2403,6 @@ export const content: ContentOverlay = {
     'إعادة بناء القرار — إعادة بناء مكتملة',
   'Mission Control → the composite Decision Health position panel':
     'مركز القيادة ← لوحة الموقف المركّبة لصحة القرار',
-  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
-    'سؤال تجاري واحد، مُعاد بناؤه من ما فهمه كل محرك وصولاً إلى ما يجب أن يتغيّر. بيانات عرض توضيحي مجهّلة.',
-  'One decision position rather than ten measures. Anonymised demonstration data.':
-    'موقف قرار واحد بدلاً من عشرة مقاييس. بيانات عرض توضيحي مجهّلة.',
 
   /* --- Module business questions ---------------------------------------------------
      The category page leads with the question, not the module name, so these
@@ -2790,4 +2776,32 @@ export const content: ContentOverlay = {
     'التعرّض معروض كنطاق مع مستوى الثقة والمدخلات، لا كرقم واحد مؤكد أبدًا. واجهة حقيقية، تشغيل توضيحي.',
   'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
     'نموذج تعرّض تجاري يعرض الإيراد الشهري المعرَّض للخطر والتكلفة اليومية وقيمة التعافي المتوقعة كنطاقات، مع طباعة مدخلات التحويل وقيمة الصفقة والمعايير المرجعية أسفله وعلامة ثقة متوسطة.',
+  'Forecasts drawn from accumulated GEON, narrative and competitor history — and the refusal to project before there is enough of it. Real interface, demonstration run.':
+    'تنبؤات مستمدة من تاريخ GEON والسردية والمنافسين المتراكم — ومن رفض الإسقاط قبل توفّر ما يكفي منه. واجهة حقيقية، تشغيل توضيحي.',
+  'A predictive intelligence panel listing GEON pace, narrative target, competitor risk, annual recoverable value and the cost of ignoring the AI gap, each stating that more observed history is needed before a projection is offered.':
+    'لوحة ذكاء تنبؤي تسرد وتيرة GEON وهدف السردية ومخاطر المنافسين والقيمة السنوية القابلة للاسترداد وتكلفة تجاهل فجوة الذكاء الاصطناعي، ويذكر كل منها أن ثمة حاجة إلى تاريخ مرصود أكبر قبل تقديم أي إسقاط.',
+  'The gap report as it is delivered: one stated verdict, the engines observed, and the index the following pages take apart. Real interface, demonstration run.':
+    'تقرير الفجوة كما يُسلَّم: حكم واحد معلن، والمحركات المرصودة، والمؤشر الذي تفككه الصفحات التالية. واجهة حقيقية، تشغيل توضيحي.',
+  'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.':
+    'غلاف تقرير ذكاء فجوة الظهور يحمل حكمًا واحدًا معلنًا، ومحركات الذكاء الاصطناعي المرصودة، وتاريخ التشغيل، ومؤشر سمعة قائم على الذكاء الاصطناعي بانتظار الصفحات التي تفككه.',
+  'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.':
+    'جودة السردية مقابل حصة الانتباه — الربع الأعلى إلى اليسار هو حجم بلا ثقة. واجهة حقيقية، تشغيل توضيحي.',
+  'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.':
+    'مخطط انتشار يضع كل علامة تجارية في الفئة وفق جودة السردية على محور وحصة الانتباه على الآخر، بحيث تنفصل بوضوح الحصة العالية المقترنة بسردية ضعيفة عن المكانة المكتسبة.',
+  'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.':
+    'الهيمنة المركّبة — الحصة مضروبة في السردية وفي التوجيه الافتراضي — بمساحة لكل علامة تجارية. واجهة حقيقية، تشغيل توضيحي.',
+  'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.':
+    'خريطة شجرية تحدد حجم كل علامة تجارية في الفئة وفق هيمنة الانتباه المركّبة، المحسوبة من حصة الانتباه وجودة السردية ومدى تكرار توجيه المحركات إليها افتراضيًا.',
+  'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.':
+    'أين تحطّ الإشارات فعليًا محركًا بمحرك، والحجم القابل للاستهداف الكامن خلف تلك التي لا تحطّ. واجهة حقيقية، تشغيل توضيحي.',
+  'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.':
+    'مخطط أعمدة لكل محرك ذكاء اصطناعي يقارن الاستعلامات التي ذكرت العلامة التجارية بتلك التي لم تذكرها، مع استحواذ الكتلة غير الذاكرة على الحصة الأكبر في كل محرك.',
+  'The whole mention rate resolved to one score, beside how the analysed volume splits across engines. Real interface, demonstration run.':
+    'معدل الذكر كله مختزَل في درجة واحدة، إلى جانب كيفية توزّع الحجم المحلَّل بين المحركات. واجهة حقيقية، تشغيل توضيحي.',
+  'A composite presence score shown as a single gauge with its rating beneath, beside a doughnut chart splitting analysed query volume across the AI engines that show activity.':
+    'درجة حضور مركّبة معروضة كمؤشر واحد مع تقييمها أسفله، إلى جانب مخطط حلقي يقسّم حجم الاستعلامات المحلَّلة بين محركات الذكاء الاصطناعي التي تُظهر نشاطًا.',
+  'One run reconstructed: what is happening, why it is happening and what it is costing, with the analyst reading underneath. Real interface, demonstration run.':
+    'تشغيل واحد معاد بناؤه: ماذا يحدث، ولماذا يحدث، وكم يكلّف، مع قراءة المحلل أسفله. واجهة حقيقية، تشغيل توضيحي.',
+  'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
+    'ملخص تنفيذي يختزل تشغيلًا لاستعلامات تجارية إلى ماذا يحدث ولماذا يحدث وكم يكلّف، فوق ملاحظة محلل تؤطّر النتيجة بوصفها فجوة تمثيل لا فجوة جودة.',
 }

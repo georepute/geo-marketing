@@ -397,36 +397,26 @@ export const content: ContentOverlay = {
     'Inteligencia de mercado — vista de categoría y demanda',
   'Narrative Intelligence — narrative ownership and movement':
     'Inteligencia narrativa — dominio del relato y su evolución',
-  'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
-    'Qué versión de la categoría circula y con el lenguaje de quién está formulada. Datos de demostración anonimizados.',
   'Trust & Authority — independent-source verification view':
     'Confianza y autoridad — vista de verificación por fuentes independientes',
-  'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.':
-    'Qué puede citar un sistema cuando debe justificar una recomendación. Datos de demostración anonimizados.',
 
   /* --- DO · the execution surfaces ----------------------------------------- */
   'Strategy — objectives translated into targeted signals':
     'Estrategia — objetivos traducidos en señales concretas',
   'Content & media generation — output bound to identified gaps':
     'Generación de contenido y medios — producción ligada a las brechas detectadas',
-  'Each asset traced back to the gap it was created to close. Anonymised demonstration data.':
-    'Cada pieza se rastrea hasta la brecha que se creó para cerrar. Datos de demostración anonimizados.',
   'Execution calendar — sequenced distribution':
     'Calendario de ejecución — distribución secuenciada',
   'Sequence and timing, derived from the strategy rather than from a posting cadence. Anonymised demonstration data.':
     'Secuencia y ritmo, derivados de la estrategia y no de una cadencia de publicación. Datos de demostración anonimizados.',
   'Distribution — connected digital assets and publishing state':
     'Distribución — activos digitales conectados y estado de publicación',
-  'Where each asset was published, across connected properties. Anonymised demonstration data.':
-    'Dónde se publicó cada pieza, en todas las propiedades conectadas. Datos de demostración anonimizados.',
 
   /* --- CHECK and ACT ------------------------------------------------------- */
   'Measurement — the before → action → after comparison table':
     'Medición — la tabla comparativa antes → acción → después',
   'Learning — measured outcome feeding the next recommendation':
     'Aprendizaje — resultado medido que alimenta la siguiente recomendación',
-  'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.':
-    'La recomendación anterior, qué movió y la recomendación corregida que se deriva. Datos de demostración anonimizados.',
 
   /* ==========================================================================
      THE METHODOLOGY PAGE.
@@ -2437,10 +2427,6 @@ export const content: ContentOverlay = {
     'Reconstrucción de la decisión: una reconstrucción completada',
   'Mission Control → the composite Decision Health position panel':
     'Centro de mando → el panel de posición compuesto de Salud de la decisión',
-  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
-    'Una pregunta comercial, reconstruida desde lo que entendió cada motor hasta lo que debe cambiar. Datos de demostración anonimizados.',
-  'One decision position rather than ten measures. Anonymised demonstration data.':
-    'Una posición de decisión en lugar de diez medidas. Datos de demostración anonimizados.',
 
   /* --- Module business questions ---------------------------------------------------
      The category page leads with the question, not the module name. */
@@ -2822,4 +2808,32 @@ export const content: ContentOverlay = {
     'La exposición se presenta como un rango con su nivel de confianza y sus supuestos, nunca como una cifra única confirmada. Interfaz real, ejecución de demostración.',
   'A commercial exposure model showing monthly revenue at risk, daily cost and projected recovery value as ranges, with the conversion, deal-value and benchmark inputs printed beneath and a medium-confidence marker.':
     'Un modelo de exposición comercial que presenta los ingresos mensuales en riesgo, el coste diario y el valor de recuperación previsto como rangos, con los supuestos de conversión, valor de operación y referencia impresos debajo y un marcador de confianza media.',
+  'Forecasts drawn from accumulated GEON, narrative and competitor history — and the refusal to project before there is enough of it. Real interface, demonstration run.':
+    'Previsiones extraídas del historial acumulado de GEON, narrativa y competidores — y la negativa a proyectar antes de que haya suficiente. Interfaz real, ejecución de demostración.',
+  'A predictive intelligence panel listing GEON pace, narrative target, competitor risk, annual recoverable value and the cost of ignoring the AI gap, each stating that more observed history is needed before a projection is offered.':
+    'Un panel de inteligencia predictiva que enumera el ritmo GEON, el objetivo narrativo, el riesgo competitivo, el valor anual recuperable y el coste de ignorar la brecha de IA, cada uno indicando que hace falta más historial observado antes de ofrecer una proyección.',
+  'The gap report as it is delivered: one stated verdict, the engines observed, and the index the following pages take apart. Real interface, demonstration run.':
+    'El informe de brecha tal como se entrega: un veredicto enunciado, los motores observados y el índice que desglosan las páginas siguientes. Interfaz real, ejecución de demostración.',
+  'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.':
+    'La portada de un informe de brecha de visibilidad que lleva un único veredicto enunciado, los motores de IA observados, la fecha de la ejecución y un índice de reputación centrado en IA a la espera de las páginas que lo desglosan.',
+  'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.':
+    'La calidad narrativa frente a la cuota de atención — el cuadrante superior izquierdo es volumen sin confianza. Interfaz real, ejecución de demostración.',
+  'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.':
+    'Un diagrama de dispersión que sitúa cada marca de una categoría por calidad narrativa en un eje y cuota de atención en el otro, de modo que una cuota alta unida a una narrativa débil se separa visiblemente de una posición ganada.',
+  'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.':
+    'El dominio combinado — la cuota multiplicada por la narrativa y por el enrutamiento por defecto — dimensionado como área por marca. Interfaz real, ejecución de demostración.',
+  'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.':
+    'Un treemap que dimensiona cada marca de una categoría por dominio de atención combinado, calculado a partir de la cuota de atención, la calidad narrativa y la frecuencia con que los motores la enrutan por defecto.',
+  'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.':
+    'Dónde aterrizan realmente las menciones motor por motor, y el volumen abordable que hay detrás de las que no. Interfaz real, ejecución de demostración.',
+  'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.':
+    'Un gráfico de barras por motor de IA que compara las consultas que mencionaron la marca con las que no, con la masa no mencionada llevándose la mayor parte en todos los motores.',
+  'The whole mention rate resolved to one score, beside how the analysed volume splits across engines. Real interface, demonstration run.':
+    'Toda la tasa de mención resuelta en una sola puntuación, junto al reparto del volumen analizado entre los motores. Interfaz real, ejecución de demostración.',
+  'A composite presence score shown as a single gauge with its rating beneath, beside a doughnut chart splitting analysed query volume across the AI engines that show activity.':
+    'Una puntuación de presencia compuesta mostrada como un único indicador con su valoración debajo, junto a un gráfico de anillo que reparte el volumen de consultas analizado entre los motores de IA con actividad.',
+  'One run reconstructed: what is happening, why it is happening and what it is costing, with the analyst reading underneath. Real interface, demonstration run.':
+    'Una ejecución reconstruida: qué está pasando, por qué está pasando y cuánto cuesta, con la lectura del analista debajo. Interfaz real, ejecución de demostración.',
+  'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
+    'Un resumen ejecutivo que reduce una ejecución de consultas comerciales a qué está pasando, por qué y cuánto cuesta, sobre una nota de analista que enmarca el resultado como una brecha de representación y no de calidad.',
 }

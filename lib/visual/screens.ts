@@ -70,12 +70,12 @@ export const SCREEN_SLOTS = {
   },
   'executive-position': {
     file: '/screens/executive-position.png',
-    aspect: PANEL,
+    aspect: 1257 / 664,
     surface: 'Mission Control → the composite Decision Health position panel',
     caption:
-      'One decision position rather than ten measures. Anonymised demonstration data.',
-    alt: 'A panel resolving ten separate intelligence measures into a single weighted decision-health position, with the contribution of each vector shown alongside.',
-    ready: false,
+      'The whole mention rate resolved to one score, beside how the analysed volume splits across engines. Real interface, demonstration run.',
+    alt: 'A composite presence score shown as a single gauge with its rating beneath, beside a doughnut chart splitting analysed query volume across the AI engines that show activity.',
+    ready: true,
   },
 
   /* ---------------------------------------------------------------------
@@ -92,12 +92,12 @@ export const SCREEN_SLOTS = {
   },
   'decision-reconstruction': {
     file: '/screens/decision-reconstruction.png',
-    aspect: WIDE,
+    aspect: 1143 / 610,
     surface: 'Decision Reconstruction — a completed reconstruction',
     caption:
-      'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.',
-    alt: 'A decision reconstruction showing how a single buying decision resolved, tracing each contributing signal from initial recognition through to the supplier that received the decision.',
-    ready: false,
+      'One run reconstructed: what is happening, why it is happening and what it is costing, with the analyst reading underneath. Real interface, demonstration run.',
+    alt: 'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.',
+    ready: true,
   },
   'market-intelligence': {
     file: '/screens/market-intelligence.png',
@@ -110,12 +110,12 @@ export const SCREEN_SLOTS = {
   },
   'trust-authority': {
     file: '/screens/trust-authority.png',
-    aspect: PANEL,
+    aspect: 561 / 693,
     surface: 'Trust & Authority — independent-source verification view',
     caption:
-      'What a system can cite when it has to justify a recommendation. Anonymised demonstration data.',
-    alt: 'A trust and authority panel counting the independent sources that corroborate a business against those corroborating its competitors.',
-    ready: false,
+      'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.',
+    alt: 'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.',
+    ready: true,
   },
 
   /* ---------------------------------------------------------------------
@@ -159,12 +159,12 @@ export const SCREEN_SLOTS = {
   },
   'narrative-intelligence': {
     file: '/screens/narrative-intelligence.png',
-    aspect: WIDE,
+    aspect: 559 / 713,
     surface: 'Narrative Intelligence — narrative ownership and movement',
     caption:
-      'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.',
-    alt: 'A narrative intelligence screen listing the narratives circulating about a business and its category, each with its polarity, reach and direction of movement.',
-    ready: false,
+      'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.',
+    alt: 'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.',
+    ready: true,
   },
 
   /* ---------------------------------------------------------------------
@@ -190,12 +190,12 @@ export const SCREEN_SLOTS = {
   },
   'content-media': {
     file: '/screens/content-media.png',
-    aspect: PANEL,
+    aspect: 1132 / 781,
     surface: 'Content & media generation — output bound to identified gaps',
     caption:
-      'Each asset traced back to the gap it was created to close. Anonymised demonstration data.',
-    alt: 'A generation screen showing produced content and media assets, each linked to the specific information gap and audience it was created to address.',
-    ready: false,
+      'The gap report as it is delivered: one stated verdict, the engines observed, and the index the following pages take apart. Real interface, demonstration run.',
+    alt: 'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.',
+    ready: true,
   },
   calendar: {
     file: '/screens/calendar.png',
@@ -208,12 +208,12 @@ export const SCREEN_SLOTS = {
   },
   distribution: {
     file: '/screens/distribution.png',
-    aspect: PANEL,
+    aspect: 1254 / 661,
     surface: 'Distribution — connected digital assets and publishing state',
     caption:
-      'Where each asset was published, across connected properties. Anonymised demonstration data.',
-    alt: 'A distribution screen listing connected digital properties and channels with the publication state of each asset across them.',
-    ready: false,
+      'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.',
+    alt: 'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.',
+    ready: true,
   },
   'before-after': {
     file: '/screens/before-after.png',
@@ -226,12 +226,12 @@ export const SCREEN_SLOTS = {
   },
   learning: {
     file: '/screens/learning.png',
-    aspect: PANEL,
+    aspect: 795 / 412,
     surface: 'Learning — measured outcome feeding the next recommendation',
     caption:
-      'The previous recommendation, what it moved, and the corrected recommendation that follows. Anonymised demonstration data.',
-    alt: 'A learning screen placing a previous recommendation beside its measured outcome and the corrected recommendation the system derived from that result.',
-    ready: false,
+      'Forecasts drawn from accumulated GEON, narrative and competitor history — and the refusal to project before there is enough of it. Real interface, demonstration run.',
+    alt: 'A predictive intelligence panel listing GEON pace, narrative target, competitor risk, annual recoverable value and the cost of ignoring the AI gap, each stating that more observed history is needed before a projection is offered.',
+    ready: true,
   },
 
   /* ---------------------------------------------------------------------
