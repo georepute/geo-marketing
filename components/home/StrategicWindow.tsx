@@ -1,5 +1,7 @@
+import { getT } from '@/lib/i18n/content/translator'
+import { Rich } from '@/lib/i18n/content/rich'
 import { count, dateFull, daysUntil } from '@/lib/format'
-import { copy } from '@/lib/copy/en'
+import { getDictionary, getI18n } from '@/lib/i18n/server'
 import type { OrgSummary } from '@/lib/api/types'
 
 /* ============================================================================
@@ -25,7 +27,7 @@ function position(iso: string, start: number, span: number): number {
   return Math.min(Math.max(at, 0), 100)
 }
 
-export function StrategicWindow({
+export async function StrategicWindow({
   timing,
   asOf,
   evidence,
@@ -36,6 +38,9 @@ export function StrategicWindow({
   /** Why the estimate exists — the observations behind it. */
   evidence: { subject: string; observation: string }[]
 }) {
+  const t = await getT()
+  const { intl } = await getI18n()
+  const copy = await getDictionary()
   const start = new Date(timing.windowOpenedAt).getTime()
   const span = new Date(timing.windowClosesAt).getTime() - start
 
@@ -49,24 +54,28 @@ export function StrategicWindow({
       <div className="rounded-md border border-line bg-panel p-6 md:p-8">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
           <p className="text-label uppercase text-ink-3">
-            {copy.exec.windowLabel} — {timing.positionLabel} market
+            {copy.exec.windowLabel} —{' '}
+            {t('{position} market', { position: timing.positionLabel })}
           </p>
           <p className="text-caption text-ink-2" data-numeric="">
-            {timing.windowMonths} months open
+            {t('{n} months open', { n: timing.windowMonths })}
           </p>
         </div>
 
         <p className="text-display-2 text-ink mt-4">
-          <span data-numeric="">{count(daysOfAdvantage)}</span> days of
-          advantage remain
+          <Rich
+            text={t('<b>{n}</b> days of advantage remain', {
+              n: count(daysOfAdvantage),
+            })}
+            className="text-ink"
+          />
         </p>
         <p className="text-body text-ink-2 mt-3 max-w-prose">
-          After{' '}
-          <span className="text-ink" data-numeric="">
-            {dateFull(timing.decisionDeadline)}
-          </span>
-          , the same position still exists — it just has to be taken from an
-          incumbent recommendation rather than claimed from open ground.
+          <Rich
+            text={t('After <b>{date}</b>, the same position still exists — it just has to be taken from an incumbent recommendation rather than claimed from open ground.', {
+              date: dateFull(timing.decisionDeadline, intl),
+            })}
+          />
         </p>
 
         {/* --- Timeline ---------------------------------------------- */}
@@ -112,26 +121,26 @@ export function StrategicWindow({
               className="absolute top-3.5 text-label uppercase text-ink -translate-x-1/2 whitespace-nowrap"
               style={{ insetInlineStart: `${now}%` }}
             >
-              Today
+              {t('Today')}
             </span>
           </div>
 
           <dl className="grid gap-px bg-line border border-line rounded-sm overflow-hidden mt-6 sm:grid-cols-3">
             <Marker
-              label="Window opened"
-              value={dateFull(timing.windowOpenedAt)}
-              note="Category language began forming."
+              label={t('Window opened')}
+              value={dateFull(timing.windowOpenedAt, intl)}
+              note={t("Category language began forming.")}
             />
             <Marker
-              label="Advantage holds until"
-              value={dateFull(timing.decisionDeadline)}
-              note="Authority built before this becomes the default answer."
+              label={t("Advantage holds until")}
+              value={dateFull(timing.decisionDeadline, intl)}
+              note={t("Authority built before this becomes the default answer.")}
               tone="positive"
             />
             <Marker
-              label="Window closes"
-              value={dateFull(timing.windowClosesAt)}
-              note="Displacement cost rises materially."
+              label={t('Window closes')}
+              value={dateFull(timing.windowClosesAt, intl)}
+              note={t("Displacement cost rises materially.")}
               tone="critical"
             />
           </dl>
@@ -141,7 +150,7 @@ export function StrategicWindow({
       {/* --- Why the estimate exists ---------------------------------- */}
       <div className="rounded-md border border-line bg-panel p-6 md:p-8">
         <p className="text-label uppercase text-ink-3">
-          Why this estimate exists
+          {t('Why this estimate exists')}
         </p>
         <p className="text-body text-ink-2 mt-4">
           {copy.exec.strategicWindowDefinition}
@@ -157,11 +166,12 @@ export function StrategicWindow({
         </ul>
 
         <p className="text-caption text-ink-3 mt-6 pt-6 border-t border-line">
-          Market readiness reads{' '}
-          <span className="text-ink-2" data-numeric="">
-            {timing.marketReadiness} of 100
-          </span>
-          . Buyers are educated. The answers they receive are not yet fixed.
+          <Rich
+            text={t('Market readiness reads <b>{n} of 100</b>. Buyers are educated. The answers they receive are not yet fixed.', {
+              n: timing.marketReadiness,
+            })}
+            className="text-ink-2"
+          />
         </p>
       </div>
     </div>

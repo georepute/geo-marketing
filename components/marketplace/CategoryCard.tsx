@@ -1,7 +1,8 @@
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { ArrowRight } from 'lucide-react'
 import { CATEGORY_ICON } from '@/lib/visual/icons'
 import { count } from '@/lib/format'
+import { getT } from '@/lib/i18n/content/translator'
 import { cn } from '@/lib/utils/cn'
 import type { CategorySummary } from '@/lib/api/types'
 
@@ -25,7 +26,8 @@ import type { CategorySummary } from '@/lib/api/types'
    question sentence would blunt it, and three of them would be a wall.
    ========================================================================= */
 
-export function CategoryCard({ category }: { category: CategorySummary }) {
+export async function CategoryCard({ category }: { category: CategorySummary }) {
+  const t = await getT()
   const Icon = CATEGORY_ICON[category.slug]
   const remaining = category.moduleCount - category.preview.length
 
@@ -59,7 +61,7 @@ export function CategoryCard({ category }: { category: CategorySummary }) {
               {count(category.moduleCount)}
             </p>
             <p className="text-label uppercase text-ink-3 mt-1.5">
-              {category.moduleCount === 1 ? 'module' : 'modules'}
+              {category.moduleCount === 1 ? t('module') : t('modules')}
             </p>
           </div>
         </div>
@@ -84,14 +86,14 @@ export function CategoryCard({ category }: { category: CategorySummary }) {
           ))}
           {remaining > 0 ? (
             <li className="text-caption text-ink-3 ps-4" data-numeric="">
-              + {count(remaining)} more
+              {t('+ {n} more', { n: count(remaining) })}
             </li>
           ) : null}
         </ul>
 
         {/* --- Explore ------------------------------------------------- */}
         <p className="flex items-center gap-2 mt-6 pt-5 border-t border-line text-caption text-ink group-hover:text-brand-300 transition-colors">
-          Explore
+          {t('Explore')}
           <ArrowRight
             aria-hidden
             className={cn(
@@ -101,7 +103,7 @@ export function CategoryCard({ category }: { category: CategorySummary }) {
           />
           {category.liveModuleCount > 0 ? (
             <span className="ms-auto text-label uppercase text-ink-3" data-numeric="">
-              {count(category.liveModuleCount)} live in demo
+              {t('{n} live in demo', { n: count(category.liveModuleCount) })}
             </span>
           ) : null}
         </p>

@@ -1,5 +1,8 @@
 import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
 import { EffortMeter, UrgencyChip } from '@/components/signal/Indicators'
+import { getT } from '@/lib/i18n/content/translator'
+import { getI18n } from '@/lib/i18n/server'
+import { Rich } from '@/lib/i18n/content/rich'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Action } from '@/lib/api/types'
@@ -42,7 +45,7 @@ export function ExecutiveActionPlan({ actions }: { actions: Action[] }) {
 
 /* ------------------------------------------------------------------------ */
 
-function Row({
+async function Row({
   priority,
   action,
   blockedBy,
@@ -51,6 +54,8 @@ function Row({
   action: Action
   blockedBy: Action[]
 }) {
+  const t = await getT()
+  const { intl } = await getI18n()
   const blocked = blockedBy.length > 0
 
   return (
@@ -58,7 +63,7 @@ function Row({
       <div className="p-5 md:p-6 flex flex-wrap items-start gap-x-6 gap-y-4">
         {/* Priority */}
         <div className="shrink-0">
-          <p className="text-label uppercase text-ink-3">Priority</p>
+          <p className="text-label uppercase text-ink-3">{t('Priority')}</p>
           <p
             className={cn(
               'grid place-items-center size-9 rounded-xs mt-2 text-body',
@@ -88,7 +93,9 @@ function Row({
 
         {/* Expected impact — the reason the action is worth its effort */}
         <div className="shrink-0 basis-56">
-          <p className="text-label uppercase text-ink-3">Expected impact</p>
+          <p className="text-label uppercase text-ink-3">
+            {t('Expected impact')}
+          </p>
           <p
             className="text-body mt-2"
             style={{ color: 'var(--gr-positive)' }}
@@ -97,17 +104,19 @@ function Row({
             {action.expectedImpact}
           </p>
           <p className="text-caption text-ink-3 mt-3">
-            Verified by: {action.successMetric}
+            {t('Verified by: {metric}', { metric: action.successMetric })}
           </p>
         </div>
 
         {/* Owner and deadline */}
         <div className="shrink-0 basis-44">
-          <p className="text-label uppercase text-ink-3">Owner</p>
+          <p className="text-label uppercase text-ink-3">{t('Owner')}</p>
           <p className="text-caption text-ink mt-2">{action.owner}</p>
-          <p className="text-label uppercase text-ink-3 mt-4">Deadline</p>
+          <p className="text-label uppercase text-ink-3 mt-4">
+            {t('Deadline')}
+          </p>
           <p className="text-caption text-ink mt-2" data-numeric="">
-            {dateFull(action.deadline)}
+            {dateFull(action.deadline, intl)}
           </p>
         </div>
       </div>
@@ -125,21 +134,24 @@ function Row({
         }
       >
         <p className="text-caption text-ink-3">
-          <span className="text-label uppercase me-3">Dependencies</span>
+          <span className="text-label uppercase me-3">
+            {t('Dependencies')}
+          </span>
           {blocked ? (
-            <>
-              Cannot move its signal until{' '}
-              {blockedBy.map((dep, i) => (
-                <span key={dep.id}>
-                  {i > 0 ? ' and ' : ''}
-                  <span className="text-ink-2">{shortLabel(dep)}</span>
-                </span>
-              ))}{' '}
-              lands.
-            </>
+            /* One sentence, one string: the blocking actions are joined into a
+               list first so a translator can move the whole clause, which in
+               Hebrew does not sit where English puts it. */
+            <Rich
+              text={t('Cannot move its signal until <b>{blockers}</b> lands.', {
+                blockers: blockedBy
+                  .map(shortLabel)
+                  .join(` ${t('and')} `),
+              })}
+              className="text-ink-2"
+            />
           ) : (
             <span className="text-ink-2">
-              None. Can start immediately.
+              {t('None. Can start immediately.')}
             </span>
           )}
         </p>

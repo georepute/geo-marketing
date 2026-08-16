@@ -10,3 +10,9 @@ next-env.d.ts
 
 .DS_Store
 Thumbs.db
+segments.json
+
+# Raw screenshot drop-off. Source exports only — three of these carry real
+# customer domains, client names and an account email, so the folder must not
+# enter git history. Anonymised, renamed copies live in public/screens/.
+Marketing-imgs/

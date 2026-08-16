@@ -87,14 +87,43 @@ export function percentWhole(value: number): string {
   return `${integer.format(Math.round(value))}%`
 }
 
-/** `Nov 30, 2026` */
-export function dateFull(iso: string): string {
-  return dateLong.format(new Date(iso))
+/* Month names are the one formatted value that reads as untranslated English
+   on a localized page, so both date helpers take an optional BCP-47 tag.
+   Formatters are cached per tag: constructing an Intl.DateTimeFormat is the
+   expensive part, and a page renders dozens of dates.
+
+   Omitting the tag keeps `en-US`, so a call site that has not yet been given
+   the active locale changes nothing. */
+const DATE_LONG = new Map<string, Intl.DateTimeFormat>([[LOCALE, dateLong]])
+const DATE_SHORT = new Map<string, Intl.DateTimeFormat>([[LOCALE, dateShort]])
+
+function formatter(
+  cache: Map<string, Intl.DateTimeFormat>,
+  intl: string,
+  options: Intl.DateTimeFormatOptions,
+): Intl.DateTimeFormat {
+  const hit = cache.get(intl)
+  if (hit) return hit
+  const made = new Intl.DateTimeFormat(intl, options)
+  cache.set(intl, made)
+  return made
+}
+
+/** `Nov 30, 2026`, in `intl`'s calendar and month names. */
+export function dateFull(iso: string, intl: string = LOCALE): string {
+  return formatter(DATE_LONG, intl, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(new Date(iso))
 }
 
 /** `Nov 30` */
-export function dateBrief(iso: string): string {
-  return dateShort.format(new Date(iso))
+export function dateBrief(iso: string, intl: string = LOCALE): string {
+  return formatter(DATE_SHORT, intl, {
+    month: 'short',
+    day: 'numeric',
+  }).format(new Date(iso))
 }
 
 /**

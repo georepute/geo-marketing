@@ -1,7 +1,9 @@
 'use client'
 
+import { useT } from '@/lib/i18n/content/client'
+import { Rich } from '@/lib/i18n/content/rich'
 import { useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
 import { ScoreMeter } from '@/components/signal/Indicators'
@@ -28,6 +30,7 @@ export function DomainEntry({
   preview: DomainPreview
   lockedCount: number
 }) {
+  const t = useT()
   const [domain, setDomain] = useState(preview.domain)
   const [revealed, setRevealed] = useState(false)
 
@@ -42,7 +45,7 @@ export function DomainEntry({
         className="rounded-md border border-line bg-panel p-6"
       >
         <label htmlFor="gr-domain" className="text-label uppercase text-ink-3">
-          Your domain
+          {t('Your domain')}
         </label>
         <input
           id="gr-domain"
@@ -58,11 +61,10 @@ export function DomainEntry({
           )}
         />
         <Button type="submit" variant="primary" size="lg" className="w-full mt-4">
-          {revealed ? 'Re-run preview' : 'Run instant preview'}
+          {revealed ? t('Re-run preview') : t('Run instant preview')}
         </Button>
         <p className="text-caption text-ink-3 mt-4">
-          Seeded demonstration. This environment always reconstructs Northwind
-          Supply, an industrial distributor, so every figure stays verifiable.
+          {t('Seeded demonstration. This environment always reconstructs Northwind Supply, an industrial distributor, so every figure stays verifiable.')}
         </p>
       </form>
 
@@ -75,37 +77,41 @@ export function DomainEntry({
       >
         <div className="grid gap-px bg-line border border-line rounded-md overflow-hidden sm:grid-cols-2 lg:grid-cols-3">
           <Cell
-            label="AI recognition"
+            label={t('AI recognition')}
             value={`${preview.recognitionScore}/100`}
             score={preview.recognitionScore}
             tone="critical"
           />
           <Cell
-            label="Best Google position"
+            label={t("Best Google position")}
             value={
               preview.bestGooglePosition === null
-                ? 'Not ranking'
+                ? t('Not ranking')
                 : `#${preview.bestGooglePosition}`
             }
           />
           <Cell
-            label="Narrative ownership"
+            label={t("Narrative ownership")}
             value={percentWhole(preview.narrativeOwnershipPct)}
             score={preview.narrativeOwnershipPct}
             tone="critical"
           />
           <Cell
-            label="Highest-risk engine"
+            label={t("Highest-risk engine")}
             value={preview.highestRiskEngine.name}
-            note={`${preview.highestRiskEngine.recognitionScore}/100 recognition`}
+            note={t('{score}/100 recognition', {
+              score: preview.highestRiskEngine.recognitionScore,
+            })}
           />
           <Cell
-            label="Strongest competitor"
+            label={t("Strongest competitor")}
             value={preview.strongestCompetitor.name}
-            note={`${percent(preview.strongestCompetitor.recommendationSharePct)} of recommendations`}
+            note={t('{pct} of recommendations', {
+              pct: percent(preview.strongestCompetitor.recommendationSharePct),
+            })}
           />
           <Cell
-            label="Decision presence"
+            label={t("Decision presence")}
             value={percentWhole(preview.decisionPresencePct)}
             score={preview.decisionPresencePct}
             tone="critical"
@@ -124,7 +130,7 @@ export function DomainEntry({
         >
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-label uppercase text-ink-3">
-              Unlocked signal
+              {t('Unlocked signal')}
             </span>
             <ConfidenceBadge confidence={preview.unlockedSignal.confidence} />
           </div>
@@ -146,24 +152,27 @@ export function DomainEntry({
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="min-w-0">
               <p className="text-label uppercase text-ink-3">
-                Behind the gate
+                {t('Behind the gate')}
               </p>
               <p className="text-body text-ink mt-2">
-                <span data-numeric="">{count(lockedCount)}</span> further
-                readouts, each with evidence, exposure and a prescribed action.
+                <Rich
+                  text={t('<b>{n}</b> further readouts, each with evidence, exposure and a prescribed action.', {
+                    n: count(lockedCount),
+                  })}
+                />
               </p>
               <p className="text-caption text-ink-3 mt-2 max-w-lg">
-                Competitor capture, authority evidence, paid dependency, missed
-                decisions, narrative control, trust readiness and strategic
-                timing.
+                {t('Competitor capture, authority evidence, paid dependency, missed decisions, narrative control, trust readiness and strategic timing.')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Button asChild variant="primary">
-                <Link href="/app/mission-control">Unlock full intelligence</Link>
+                <Link href="/app/mission-control">
+                  {t('Unlock full intelligence')}
+                </Link>
               </Button>
               <Button asChild variant="secondary">
-                <Link href="/marketplace">Buy a single answer</Link>
+                <Link href="/marketplace">{t('Buy a single answer')}</Link>
               </Button>
             </div>
           </div>

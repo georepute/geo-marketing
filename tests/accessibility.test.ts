@@ -156,7 +156,7 @@ describe('The reduced-motion contract is honoured', () => {
     for (const component of [
       join('components', 'motion', 'Reveal.tsx'),
       join('components', 'ui', 'Skeleton.tsx'),
-      join('app', '(marketing)', 'template.tsx'),
+      join('app', '[locale]', '(marketing)', 'template.tsx'),
     ]) {
       const source = readFileSync(join(ROOT, component), 'utf8')
       expect(source, component).toContain('useReducedMotion')
@@ -174,7 +174,7 @@ describe('The reduced-motion contract is honoured', () => {
 
     // The route template returns children unwrapped.
     const template = readFileSync(
-      join(ROOT, 'app', '(marketing)', 'template.tsx'),
+      join(ROOT, 'app', '[locale]', '(marketing)', 'template.tsx'),
       'utf8',
     )
     expect(template).toMatch(/if \(reduced\) return/)
@@ -273,7 +273,7 @@ describe('Status is never carried by colour alone', () => {
 
 describe('Every page has one main landmark and a skip link', () => {
   it('the root layout provides a skip link targeting #main', () => {
-    const layout = readFileSync(join(ROOT, 'app', 'layout.tsx'), 'utf8')
+    const layout = readFileSync(join(ROOT, 'app', '[locale]', 'layout.tsx'), 'utf8')
     expect(layout).toContain('href="#main"')
     expect(layout).toContain('gr-skip')
   })
@@ -281,12 +281,12 @@ describe('Every page has one main landmark and a skip link', () => {
   it('every layout or standalone page renders id="main"', () => {
     /* Route groups each own a shell; standalone routes render their own. */
     const shells = [
-      join('app', '(marketing)', 'layout.tsx'),
+      join('app', '[locale]', '(marketing)', 'layout.tsx'),
       join('components', 'shell', 'AppShell.tsx'),
-      join('app', '(commerce)', 'checkout', 'CheckoutFlow.tsx'),
-      join('app', '(commerce)', 'checkout', 'success', 'Success.tsx'),
-      join('app', 'signin', 'page.tsx'),
-      join('app', 'not-found.tsx'),
+      join('app', '[locale]', '(commerce)', 'checkout', 'CheckoutFlow.tsx'),
+      join('app', '[locale]', '(commerce)', 'checkout', 'success', 'Success.tsx'),
+      join('app', '[locale]', 'signin', 'page.tsx'),
+      join('app', '[locale]', 'not-found.tsx'),
     ]
     for (const shell of shells) {
       const source = readFileSync(join(ROOT, shell), 'utf8')

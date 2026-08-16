@@ -15,7 +15,8 @@ import {
   RelationshipTag,
 } from '@/components/signal/Indicators'
 import { defaultOpen, useRole } from './RoleLens'
-import { copy } from '@/lib/copy/en'
+import { useDict, useI18n } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type { Readout } from '@/lib/seed/types'
@@ -50,6 +51,8 @@ export function IntelligenceReadout({
   onOpenSignal?: (id: string) => void
   className?: string
 }) {
+  /* No dictionary here — this is a dispatcher. Both branches read it
+     themselves. */
   if (variant === 'compact') {
     return <CompactReadout readout={readout} className={className} />
   }
@@ -78,6 +81,11 @@ function FullReadout({
   onOpenSignal?: (id: string) => void
   className?: string
 }) {
+  const copy = useDict()
+  /* Dates render through Intl, so they need the locale tag or every month
+     name comes out English on an otherwise translated page. */
+  const { intl } = useI18n()
+  const t = useT()
   const role = useRole()
   const open = defaultOpen(role)
 
@@ -124,14 +132,14 @@ function FullReadout({
 
         <div className="bg-panel p-5">
           <SectionLabel>{copy.readout.timing}</SectionLabel>
-          <p className="text-body text-ink mt-3">{r.timing.window}</p>
+          <p className="text-body text-ink mt-3">{t(r.timing.window)}</p>
           <div className="mt-3">
             <UrgencyChip urgency={r.timing.urgency} />
           </div>
           <p className="text-caption text-ink-3 mt-3">
-            Decision deadline{' '}
+            {t('Decision deadline')}{' '}
             <span className="text-ink-2" data-numeric="">
-              {dateFull(r.timing.decisionDeadline)}
+              {dateFull(r.timing.decisionDeadline, intl)}
             </span>
           </p>
         </div>
@@ -149,7 +157,7 @@ function FullReadout({
 
       {/* --- 5. Competitor Context — the "why", given room -------------- */}
       <section className="mt-7">
-        <SectionLabel>Why the competitor wins</SectionLabel>
+        <SectionLabel>{t('Why the competitor wins')}</SectionLabel>
         <blockquote
           className="mt-3 border-s-2 ps-4 text-body text-ink-2 max-w-prose"
           style={{ borderColor: 'var(--gr-brand-500)' }}
@@ -169,29 +177,29 @@ function FullReadout({
           <table className="w-full min-w-[34rem] border-collapse">
             <thead>
               <tr className="text-label uppercase text-ink-3">
-                <th className="text-start font-normal pb-3 pe-4">Observed</th>
-                <th className="text-start font-normal pb-3 pe-4">Source</th>
-                <th className="text-start font-normal pb-3 pe-4">Finding</th>
-                <th className="text-start font-normal pb-3">Date</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Observed')}</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Source')}</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Finding')}</th>
+                <th className="text-start font-normal pb-3">{t('Date')}</th>
               </tr>
             </thead>
             <tbody>
               {r.evidence.map((e, i) => (
                 <tr key={i} className="border-t border-line align-top">
                   <td className="py-3 pe-4 text-caption text-ink font-mono max-w-[18rem]">
-                    {e.subject}
+                    {t(e.subject)}
                   </td>
                   <td className="py-3 pe-4 text-caption text-ink-2 whitespace-nowrap">
-                    {e.source}
+                    {t(e.source)}
                   </td>
                   <td className="py-3 pe-4 text-caption text-ink-2">
-                    {e.observation}
+                    {t(e.observation)}
                   </td>
                   <td
                     className="py-3 text-caption text-ink-3 whitespace-nowrap"
                     data-numeric=""
                   >
-                    {dateFull(e.observedAt)}
+                    {dateFull(e.observedAt, intl)}
                   </td>
                 </tr>
               ))}
@@ -265,22 +273,22 @@ function FullReadout({
           <Field label={copy.readout.expectedMovement}>
             <span className="text-data text-ink" data-numeric="">
               {r.expectedMovement.from}
-              {r.expectedMovement.unit}
+              {t(r.expectedMovement.unit)}
               <span className="text-ink-3 px-2">→</span>
               <span style={{ color: 'var(--gr-positive)' }}>
                 {r.expectedMovement.to}
-                {r.expectedMovement.unit}
+                {t(r.expectedMovement.unit)}
               </span>
             </span>
             <span className="block text-caption text-ink-3 mt-1">
-              {r.expectedMovement.signal}
+              {t(r.expectedMovement.signal)}
             </span>
           </Field>
 
           <Field label={copy.readout.ownerDeadline}>
             <span className="text-body text-ink">{r.ownerDeadline.owner}</span>
             <span className="block text-caption text-ink-3 mt-1" data-numeric="">
-              by {dateFull(r.ownerDeadline.deadline)}
+              {t('by {date}', { date: dateFull(r.ownerDeadline.deadline, intl) })}
             </span>
           </Field>
 
@@ -328,6 +336,8 @@ function CompactReadout({
   readout: Readout
   className?: string
 }) {
+  const copy = useDict()
+
   return (
     <article
       className={cn(

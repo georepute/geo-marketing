@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils/cn'
+import { useT } from '@/lib/i18n/content/client'
 import { count, percent, percentWhole } from '@/lib/format'
 import type { StageCoverage } from '@/lib/api/types'
 
@@ -21,11 +22,13 @@ const TOOL_ROWS = [
     name: 'Analytics and CRM',
     note: 'Requires a visit, form or record to exist',
     seesFrom: 5,
+    isUs: false,
   },
   {
     name: 'SEO platforms',
     note: 'Requires a tracked query with search volume',
     seesFrom: 4,
+    isUs: false,
   },
   {
     name: 'GeoRepute',
@@ -33,7 +36,7 @@ const TOOL_ROWS = [
     seesFrom: 1,
     isUs: true,
   },
-]
+] as const
 
 export function DecisionJourneyTrack({
   stages,
@@ -42,6 +45,7 @@ export function DecisionJourneyTrack({
   stages: StageCoverage[]
   className?: string
 }) {
+  const t = useT()
   const ordered = [...stages].sort((a, b) => a.order - b.order)
   const totalVolume = ordered.reduce((s, x) => s + x.monthlyVolume, 0)
 
@@ -60,7 +64,7 @@ export function DecisionJourneyTrack({
               return (
                 <div key={stage.id} className="min-w-0">
                   <p className="text-label uppercase text-ink-3">
-                    Stage {stage.order}
+                    {t('Stage {n}', { n: stage.order })}
                   </p>
                   <p className="text-caption text-ink mt-1 leading-tight">
                     {stage.label}
@@ -69,8 +73,12 @@ export function DecisionJourneyTrack({
                     className="text-caption text-ink-3 mt-2"
                     data-numeric=""
                   >
-                    {count(stage.monthlyVolume)}/mo ·{' '}
-                    {percent((stage.monthlyVolume / totalVolume) * 100)}
+                    {t('{volume}/mo · {share}', {
+                      volume: count(stage.monthlyVolume),
+                      share: percent(
+                        (stage.monthlyVolume / totalVolume) * 100,
+                      ),
+                    })}
                   </p>
                   <p
                     className="text-caption mt-1"
@@ -81,7 +89,9 @@ export function DecisionJourneyTrack({
                         : 'var(--gr-text-tertiary)',
                     }}
                   >
-                    {percentWhole(stage.coveragePct)} coverage
+                    {t('{pct} coverage', {
+                      pct: percentWhole(stage.coveragePct),
+                    })}
                   </p>
                 </div>
               )
@@ -107,10 +117,10 @@ export function DecisionJourneyTrack({
                         : 'var(--gr-text-secondary)',
                     }}
                   >
-                    {tool.name}
+                    {t(tool.name)}
                   </p>
                   <p className="text-label uppercase text-ink-3 mt-1 leading-tight">
-                    {tool.note}
+                    {t(tool.note)}
                   </p>
                 </div>
 
@@ -154,7 +164,7 @@ export function DecisionJourneyTrack({
                               : 'var(--gr-text-tertiary)',
                           }}
                         >
-                          {visible ? 'Visible' : 'Blind'}
+                          {visible ? t('Visible') : t('Blind')}
                         </span>
                       </span>
                     </div>
@@ -174,14 +184,14 @@ export function DecisionJourneyTrack({
           background: 'color-mix(in oklab, var(--gr-critical) 6%, transparent)',
         }}
       >
-        <p className="text-label uppercase text-ink-3">Executive conclusion</p>
+        <p className="text-label uppercase text-ink-3">
+          {t('Executive conclusion')}
+        </p>
         <p className="text-body-lg text-ink mt-2 max-w-3xl text-balance">
-          Conventional tooling begins observing at stage four — after the buyer
-          has already decided what to buy and is choosing whom to buy it from.
+          {t('Conventional tooling begins observing at stage four — after the buyer has already decided what to buy and is choosing whom to buy it from.')}
         </p>
         <p className="text-caption text-ink-2 mt-3 max-w-3xl">
-          The first three stages generate no visit, click, lead or CRM record.
-          They are not measured badly; they are not measured at all.
+          {t('The first three stages generate no visit, click, lead or CRM record. They are not measured badly; they are not measured at all.')}
         </p>
       </div>
     </div>

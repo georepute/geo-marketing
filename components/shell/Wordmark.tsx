@@ -1,4 +1,11 @@
-import Link from 'next/link'
+'use client'
+
+/* A Client Component because MarketingNav is one and renders it. That rules
+   out getT(), which reaches for next/root-params — the client translator
+   reads the same overlay from context instead. */
+
+import { Link } from '@/components/i18n/Link'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -44,6 +51,7 @@ export function Wordmark({
   showGintex?: boolean
   className?: string
 }) {
+  const t = useT()
   return (
     <Link
       href={href}
@@ -51,14 +59,14 @@ export function Wordmark({
         'inline-flex items-center gap-3 group rounded-sm',
         className,
       )}
-      aria-label="GeoRepute — home"
+      aria-label={t('GeoRepute — home')}
     >
       <Mark />
       <span className="flex flex-col leading-none">
         <span className="text-wordmark text-ink">GeoRepute</span>
         {showGintex ? (
           <span className="text-wordmark-sub uppercase text-ink-3 mt-1">
-            Powered by Gintex
+            {t('Powered by Gintex')}
           </span>
         ) : null}
       </span>

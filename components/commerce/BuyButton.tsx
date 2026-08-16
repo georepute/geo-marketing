@@ -1,14 +1,22 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
 import { useEntitlements } from './EntitlementProvider'
+import { useDict } from '@/lib/i18n/context'
+import { flags } from '@/lib/flags'
 import type { PurchaseKind } from '@/lib/commerce/types'
 
 /* ============================================================================
    Buy control. Reflects entitlement state rather than always offering to sell
    — a customer who already owns something should be sent to it, not asked to
    buy it again.
+
+   WHILE PRICING IS WITHHELD (doc §4) this becomes the briefing route instead.
+   Every buy control on the site passes through here, so that one substitution
+   is what keeps "purchase" from appearing anywhere a price cannot. The
+   entitlement branch still runs first: someone who already owns a product is
+   sent to it, flag or no flag.
    ========================================================================= */
 
 export function BuyButton({
@@ -28,6 +36,7 @@ export function BuyButton({
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }) {
+  const copy = useDict()
   const { has, ready } = useEntitlements()
   const owned = ready && has(kind, slug)
 
@@ -35,6 +44,16 @@ export function BuyButton({
     return (
       <Button asChild variant="secondary" size={size} className={className}>
         <Link href="/app/mission-control">Open — already purchased</Link>
+      </Button>
+    )
+  }
+
+  if (!flags.pricing) {
+    return (
+      <Button asChild variant={variant} size={size} className={className}>
+        <Link href={`/briefing?interest=${encodeURIComponent(slug)}`}>
+          {copy.commerce.briefingCta}
+        </Link>
       </Button>
     )
   }

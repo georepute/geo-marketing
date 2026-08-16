@@ -1,3 +1,6 @@
+'use client'
+
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { Trend, Urgency, Effort } from '@/lib/seed/types'
 
@@ -13,6 +16,7 @@ const TREND_META: Record<Trend, { glyph: string; label: string; token: string }>
 }
 
 export function TrendChip({ trend, className }: { trend: Trend; className?: string }) {
+  const t = useT()
   const m = TREND_META[trend]
   return (
     <span
@@ -24,7 +28,7 @@ export function TrendChip({ trend, className }: { trend: Trend; className?: stri
       <span aria-hidden className="text-[0.65em] leading-none" style={{ color: m.token }}>
         {m.glyph}
       </span>
-      <span className="text-label uppercase text-ink-2">{m.label}</span>
+      <span className="text-label uppercase text-ink-2">{t(m.label)}</span>
     </span>
   )
 }
@@ -44,6 +48,7 @@ export function UrgencyChip({
   urgency: Urgency
   className?: string
 }) {
+  const t = useT()
   const m = URGENCY_META[urgency]
   return (
     <span
@@ -57,7 +62,7 @@ export function UrgencyChip({
       }}
     >
       <span aria-hidden className="size-1.5 rounded-full" style={{ background: m.token }} />
-      <span className="text-label uppercase text-ink-2">{m.label}</span>
+      <span className="text-label uppercase text-ink-2">{t(m.label)}</span>
     </span>
   )
 }
@@ -66,7 +71,16 @@ export function UrgencyChip({
 
 const EFFORT_FILLED: Record<Effort, number> = { low: 1, medium: 2, high: 3 }
 
+/* The whole phrase, not `${effort} effort`: Hebrew puts the adjective after
+   the noun, so the two halves cannot be assembled in English order. */
+const EFFORT_LABEL: Record<Effort, string> = {
+  low: 'low effort',
+  medium: 'medium effort',
+  high: 'high effort',
+}
+
 export function EffortMeter({ effort, className }: { effort: Effort; className?: string }) {
+  const t = useT()
   const filled = EFFORT_FILLED[effort]
   return (
     <span className={cn('inline-flex items-center gap-2', className)}>
@@ -82,7 +96,9 @@ export function EffortMeter({ effort, className }: { effort: Effort; className?:
           />
         ))}
       </span>
-      <span className="text-label uppercase text-ink-2 capitalize">{effort} effort</span>
+      <span className="text-label uppercase text-ink-2 capitalize">
+        {t(EFFORT_LABEL[effort])}
+      </span>
     </span>
   )
 }
@@ -101,6 +117,7 @@ export function ScoreMeter({
   tone?: 'brand' | 'critical' | 'positive'
   className?: string
 }) {
+  const t = useT()
   const pct = Math.max(0, Math.min(100, (score / max) * 100))
   const token = {
     brand: 'var(--gr-brand-400)',
@@ -112,7 +129,7 @@ export function ScoreMeter({
     <span
       className={cn('block h-1 w-full rounded-[1px] bg-inset overflow-hidden', className)}
       role="img"
-      aria-label={`${score} out of ${max}`}
+      aria-label={t('{score} out of {max}', { score, max })}
     >
       <span
         className="block h-full rounded-[1px] transition-[width] duration-[var(--gr-dur-reveal)] ease-(--ease-enter)"
@@ -130,11 +147,12 @@ export function RelationshipTag({
 }: {
   relationship: 'supporting' | 'downstream'
 }) {
+  const t = useT()
   const isSupporting = relationship === 'supporting'
   return (
     <span className="inline-flex items-center gap-1 text-label uppercase text-ink-3">
       <span aria-hidden>{isSupporting ? '↑' : '↓'}</span>
-      {isSupporting ? 'Supporting' : 'Downstream'}
+      {isSupporting ? t('Supporting') : t('Downstream')}
     </span>
   )
 }

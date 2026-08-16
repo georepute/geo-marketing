@@ -1,5 +1,6 @@
 'use client'
 
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 
 /* ============================================================================
@@ -24,6 +25,7 @@ export function GeonHexagon({
   vectors: { key: string; label: string; score: number }[]
   className?: string
 }) {
+  const t = useT()
   const count = vectors.length
   const angle = (i: number) => (Math.PI * 2 * i) / count - Math.PI / 2
 
@@ -47,9 +49,14 @@ export function GeonHexagon({
         width={SIZE}
         height={SIZE}
         role="img"
-        aria-label={`GEON assessment. ${vectors
-          .map((v) => `${v.label} ${v.score} of 100`)
-          .join('. ')}. Lowest vector is ${lowest.label}.`}
+        aria-label={t('GEON assessment. {readings}. Lowest vector is {lowest}.', {
+          readings: vectors
+            .map((v) =>
+              t('{label} {score} of 100', { label: v.label, score: v.score }),
+            )
+            .join('. '),
+          lowest: lowest.label,
+        })}
         className="shrink-0"
       >
         {/* Rings */}

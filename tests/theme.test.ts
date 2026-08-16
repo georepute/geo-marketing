@@ -105,7 +105,7 @@ describe('No component hardcodes a colour', () => {
       const source = readFileSync(file, 'utf8')
       // The layout's themeColor meta is a browser-chrome hint, not a token,
       // and must be a literal per the metadata API.
-      if (file.endsWith(join('app', 'layout.tsx'))) continue
+      if (file.endsWith(join('app', '[locale]', 'layout.tsx'))) continue
       const hits = source.match(/#[0-9a-fA-F]{6}\b/g)
       if (hits) offenders.push(`${file.slice(ROOT.length + 1)} — ${hits[0]}`)
     }
@@ -136,7 +136,7 @@ describe('No component hardcodes a colour', () => {
 })
 
 describe('The no-flash script is wired correctly', () => {
-  const layout = readFileSync(join(ROOT, 'app', 'layout.tsx'), 'utf8')
+  const layout = readFileSync(join(ROOT, 'app', '[locale]', 'layout.tsx'), 'utf8')
   const script = readFileSync(
     join(ROOT, 'lib', 'theme', 'ThemeScript.tsx'),
     'utf8',

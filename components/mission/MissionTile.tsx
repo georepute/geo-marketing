@@ -4,6 +4,7 @@ import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
 import { ExposureRange } from '@/components/signal/ExposureRange'
 import { TrendChip, ScoreMeter } from '@/components/signal/Indicators'
 import { TILE_ICON } from '@/lib/visual/icons'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { MissionTile as Tile } from '@/lib/api/types'
 
@@ -38,6 +39,7 @@ export function MissionTile({
   onSelect: (readoutId: string) => void
   className?: string
 }) {
+  const t = useT()
   const lead = tile.emphasis === 'lead'
   const token = TONE_TOKEN[tile.tone]
   const Icon = TILE_ICON[tile.id]
@@ -115,7 +117,7 @@ export function MissionTile({
       <div className="mt-auto pt-4 flex items-center justify-between gap-3">
         <TrendChip trend={tile.trend} />
         <span className="text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors inline-flex items-center gap-2">
-          Evidence <span aria-hidden>→</span>
+          {t('Evidence')} <span aria-hidden className="gr-arrow">→</span>
         </span>
       </div>
     </button>

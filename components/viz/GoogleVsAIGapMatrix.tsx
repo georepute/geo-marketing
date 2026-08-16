@@ -1,6 +1,8 @@
 'use client'
 
 import { cn } from '@/lib/utils/cn'
+import { useT } from '@/lib/i18n/content/client'
+import type { Translate } from '@/lib/i18n/content/format'
 import { count } from '@/lib/format'
 import type { GapRow } from '@/lib/api/types'
 
@@ -23,14 +25,15 @@ const GAP_TOKEN: Record<string, string> = {
   'compound-blind-spot': 'var(--gr-critical)',
 }
 
-function googleState(position: number | null): {
-  label: string
-  strong: boolean
-} {
-  if (position === null) return { label: 'Not in top 100', strong: false }
-  if (position <= 3) return { label: `Position ${position}`, strong: true }
-  if (position <= 10) return { label: `Position ${position}`, strong: false }
-  return { label: `Position ${position}`, strong: false }
+function googleState(
+  position: number | null,
+  t: Translate,
+): { label: string; strong: boolean } {
+  if (position === null) return { label: t('Not in top 100'), strong: false }
+  return {
+    label: t('Position {n}', { n: position }),
+    strong: position <= 3,
+  }
 }
 
 export function GoogleVsAIGapMatrix({
@@ -42,6 +45,7 @@ export function GoogleVsAIGapMatrix({
   limit?: number
   className?: string
 }) {
+  const t = useT()
   const shown = limit ? rows.slice(0, limit) : rows
   const compound = rows.filter((r) => r.gap === 'compound-blind-spot').length
   const recoverable = rows.filter((r) => r.gap === 'recoverable-search').length
@@ -54,22 +58,22 @@ export function GoogleVsAIGapMatrix({
         <Summary
           value={`${compound}`}
           total={rows.length}
-          label="Compound blind spots"
-          note="Absent from both surfaces on high-value questions. The most expensive class of gap."
+          label={t('Compound blind spots')}
+          note={t('Absent from both surfaces on high-value questions. The most expensive class of gap.')}
           tone="critical"
         />
         <Summary
           value={`${recoverable}`}
           total={rows.length}
-          label="Recoverable search"
-          note="Ranking in Google but absent from AI answers. Existing authority is not reaching the AI surface."
+          label={t('Recoverable search')}
+          note={t('Ranking in Google but absent from AI answers. Existing authority is not reaching the AI surface.')}
           tone="warning"
         />
         <Summary
           value={`${aligned}`}
           total={rows.length}
-          label="Aligned"
-          note="Visible in Google and recommended by AI. No action required."
+          label={t('Aligned')}
+          note={t('Visible in Google and recommended by AI. No action required.')}
           tone="positive"
         />
       </div>
@@ -79,16 +83,24 @@ export function GoogleVsAIGapMatrix({
         <table className="w-full min-w-[44rem]">
           <thead>
             <tr className="text-label uppercase text-ink-3">
-              <th className="text-start font-normal p-4">Commercial question</th>
-              <th className="text-start font-normal p-4">Volume</th>
-              <th className="text-start font-normal p-4">Google visibility</th>
-              <th className="text-start font-normal p-4">AI recommendation</th>
-              <th className="text-start font-normal p-4">Classification</th>
+              <th className="text-start font-normal p-4">
+                {t('Commercial question')}
+              </th>
+              <th className="text-start font-normal p-4">{t('Volume')}</th>
+              <th className="text-start font-normal p-4">
+                {t('Google visibility')}
+              </th>
+              <th className="text-start font-normal p-4">
+                {t('AI recommendation')}
+              </th>
+              <th className="text-start font-normal p-4">
+                {t('Classification')}
+              </th>
             </tr>
           </thead>
           <tbody>
             {shown.map((row) => {
-              const google = googleState(row.position)
+              const google = googleState(row.position, t)
               const token = GAP_TOKEN[row.gap] ?? 'var(--gr-neutral)'
               return (
                 <tr key={row.keyword} className="border-t border-line">
@@ -107,7 +119,7 @@ export function GoogleVsAIGapMatrix({
                   </td>
                   <td className="p-4">
                     <Cell
-                      label={row.aiPresence ? 'Recommended' : 'Absent'}
+                      label={row.aiPresence ? t('Recommended') : t('Absent')}
                       strong={row.aiPresence}
                     />
                   </td>
@@ -138,7 +150,10 @@ export function GoogleVsAIGapMatrix({
 
       {limit && rows.length > limit ? (
         <p className="text-caption text-ink-3 mt-3" data-numeric="">
-          Showing {limit} of {rows.length} tracked commercial questions.
+          {t('Showing {shown} of {total} tracked commercial questions.', {
+            shown: limit,
+            total: rows.length,
+          })}
         </p>
       ) : null}
     </div>
@@ -190,6 +205,7 @@ function Summary({
   note: string
   tone: 'critical' | 'warning' | 'positive'
 }) {
+  const t = useT()
   const token = {
     critical: 'var(--gr-critical)',
     warning: 'var(--gr-warning)',
@@ -203,7 +219,10 @@ function Summary({
         <span className="text-data-lg" style={{ color: token }}>
           {value}
         </span>
-        <span className="text-body text-ink-3"> of {total}</span>
+        <span className="text-body text-ink-3">
+          {' '}
+          {t('of {total}', { total })}
+        </span>
       </p>
       <p className="text-caption text-ink-2 mt-3">{note}</p>
     </div>

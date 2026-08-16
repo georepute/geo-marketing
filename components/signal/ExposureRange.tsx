@@ -7,7 +7,8 @@ import {
 } from '@/components/ui/Primitives'
 import { ConfidenceBadge } from './ConfidenceBadge'
 import { money, periodLabel } from '@/lib/format'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { ExposureRange as Exposure } from '@/lib/seed/types'
 
@@ -37,6 +38,8 @@ export function ExposureRange({
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }) {
+  const copy = useDict()
+  const t = useT()
   const valueClass = {
     sm: 'text-data',
     md: 'text-data-lg',
@@ -55,7 +58,7 @@ export function ExposureRange({
           {money(exposure.high)}
         </span>
         <span className="text-caption text-ink-2">
-          {periodLabel(exposure.period)}
+          {t(periodLabel(exposure.period))}
         </span>
       </div>
 
@@ -75,6 +78,7 @@ export function ExposureRange({
 /* ----------------------------------------------------------------------- */
 
 export function AssumptionsDisclosure({ exposure }: { exposure: Exposure }) {
+  const copy = useDict()
   return (
     <Popover>
       <PopoverTrigger asChild>

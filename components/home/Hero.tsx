@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
 import {
   ArrowRight,
   BadgeCheck,
@@ -13,7 +13,8 @@ import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ParticleField } from '@/components/visual/ParticleField'
 import { HeroVisual } from './HeroVisual'
 import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
-import { copy } from '@/lib/copy/en'
+import { useDict } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { Reconstruction } from '@/lib/api/types'
 
@@ -38,7 +39,7 @@ const TRUST = [
   { icon: Boxes, label: '24 commercial decisions tracked' },
   { icon: LineChart, label: 'Evidence on every claim' },
   { icon: ShieldCheck, label: 'Confidence and limits stated' },
-]
+] as const
 
 export function Hero({
   reconstruction,
@@ -49,6 +50,8 @@ export function Hero({
   ownAuthoritySources: number
   competitorAuthoritySources: number
 }) {
+  const copy = useDict()
+  const t = useT()
   const reduced = useReducedMotion()
 
   const beat = (index: number) =>
@@ -171,7 +174,7 @@ export function Hero({
                     className="size-3.5 text-brand-300 shrink-0"
                     aria-hidden
                   />
-                  <span className="text-caption text-ink-2">{label}</span>
+                  <span className="text-caption text-ink-2">{t(label)}</span>
                 </li>
               ))}
             </ul>

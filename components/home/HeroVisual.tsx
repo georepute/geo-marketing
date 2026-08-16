@@ -1,3 +1,5 @@
+import { useT } from '@/lib/i18n/content/client'
+import { Rich } from '@/lib/i18n/content/rich'
 import { cn } from '@/lib/utils/cn'
 import { count, percent } from '@/lib/format'
 import type { Reconstruction } from '@/lib/api/types'
@@ -41,6 +43,7 @@ export function HeroVisual({
   competitorAuthoritySources: number
   className?: string
 }) {
+  const t = useT()
   const advantage = competitorAuthoritySources / Math.max(ownAuthoritySources, 1)
 
   return (
@@ -52,7 +55,7 @@ export function HeroVisual({
     >
       {/* --- 1 · The question ---------------------------------------- */}
       <div className="p-6 border-b border-line bg-raised">
-        <Beat n={1} label="A buyer asks AI" />
+        <Beat n={1} label={t("A buyer asks AI")} />
         <p className="text-body-lg text-ink mt-3 text-balance">
           “{data.prompt.text}”
         </p>
@@ -60,7 +63,7 @@ export function HeroVisual({
 
       {/* --- 2 · What AI could verify -------------------------------- */}
       <div className="p-6 border-b border-line">
-        <Beat n={2} label="AI looks for proof it can cite" />
+        <Beat n={2} label={t("AI looks for proof it can cite")} />
 
         <div className="mt-5 grid gap-4">
           <EvidenceBar
@@ -70,7 +73,7 @@ export function HeroVisual({
             tone="competitor"
           />
           <EvidenceBar
-            name="Your business"
+            name={t('Your business')}
             sources={ownAuthoritySources}
             max={competitorAuthoritySources}
             tone="self"
@@ -78,9 +81,7 @@ export function HeroVisual({
         </div>
 
         <p className="text-caption text-ink-2 mt-4">
-          Independent sources an engine can cite when it recommends a supplier.
-          Your own website does not count — engines treat self-description as a
-          claim, not as evidence.
+          {t('Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.')}
         </p>
       </div>
 
@@ -92,7 +93,7 @@ export function HeroVisual({
           background: 'color-mix(in oklab, var(--gr-critical) 7%, transparent)',
         }}
       >
-        <Beat n={3} label="So AI recommends" />
+        <Beat n={3} label={t("So AI recommends")} />
 
         <div className="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-2">
           <p
@@ -102,21 +103,24 @@ export function HeroVisual({
             {data.winner.name}
           </p>
           <p className="text-caption text-ink-2" data-numeric="">
-            {percent(data.winner.recommendationSharePct)} of recommendations
+            {t('{pct} of recommendations', {
+              pct: percent(data.winner.recommendationSharePct),
+            })}
           </p>
         </div>
 
         <p className="text-body text-ink-2 mt-4 max-w-prose">
-          Your business was named by{' '}
-          <span className="text-ink" data-numeric="">
-            {data.outcome.recommendedBy} of {data.outcome.totalEngines}
-          </span>{' '}
-          engines. Not because the offer is weaker — because{' '}
-          <span className="text-ink">
-            {count(competitorAuthoritySources)} sources outrank{' '}
-            {count(ownAuthoritySources)}
-          </span>{' '}
-          when a system has to stand behind an answer.
+          <Rich
+            text={t(
+              'Your business was named by <b>{named} of {total}</b> engines. Not because the offer is weaker — because <b>{theirs} sources outrank {ours}</b> when a system has to stand behind an answer.',
+              {
+                named: data.outcome.recommendedBy,
+                total: data.outcome.totalEngines,
+                theirs: count(competitorAuthoritySources),
+                ours: count(ownAuthoritySources),
+              },
+            )}
+          />
         </p>
       </div>
 
@@ -127,7 +131,7 @@ export function HeroVisual({
           background: 'color-mix(in oklab, var(--gr-positive) 6%, transparent)',
         }}
       >
-        <Beat n={4} label="What changes the answer" tone="positive" />
+        <Beat n={4} label={t("What changes the answer")} tone="positive" />
         <p className="text-body text-ink mt-3">{data.action.action}</p>
         <p className="text-caption text-ink-2 mt-3" data-numeric="">
           {data.action.owner} · {data.action.expectedImpact}
@@ -135,11 +139,12 @@ export function HeroVisual({
       </div>
 
       <figcaption className="sr-only">
-        A reconstruction of one AI buying decision: the question a buyer asked,
-        the {competitorAuthoritySources} independent sources supporting{' '}
-        {data.winner.name} against {ownAuthoritySources} supporting your
-        business — a {advantage.toFixed(0)}× evidence advantage — the resulting
-        recommendation, and the intervention that changes it.
+        {t('A reconstruction of one AI buying decision: the question a buyer asked, the {theirs} independent sources supporting {winner} against {ours} supporting your business — a {advantage}× evidence advantage — the resulting recommendation, and the intervention that changes it.', {
+          theirs: competitorAuthoritySources,
+          winner: data.winner.name,
+          ours: ownAuthoritySources,
+          advantage: advantage.toFixed(0),
+        })}
       </figcaption>
     </figure>
   )
@@ -196,6 +201,7 @@ function EvidenceBar({
   max: number
   tone: 'self' | 'competitor'
 }) {
+  const t = useT()
   const token =
     tone === 'competitor' ? 'var(--gr-critical)' : 'var(--gr-text-tertiary)'
   /* Floored at 4% so a genuinely tiny count still renders as a visible mark
@@ -207,13 +213,13 @@ function EvidenceBar({
       <div className="flex items-baseline justify-between gap-4">
         <span className="text-caption text-ink-2 truncate">{name}</span>
         <span className="text-data text-ink shrink-0" data-numeric="">
-          {count(sources)} sources
+          {t('{n} sources', { n: count(sources) })}
         </span>
       </div>
       <div
         className="mt-2 h-2 rounded-xs bg-inset overflow-hidden"
         role="img"
-        aria-label={`${name}: ${sources} independent sources`}
+        aria-label={t('{name}: {n} independent sources', { name, n: sources })}
       >
         <div
           className="h-full rounded-xs"

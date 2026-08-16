@@ -2,6 +2,8 @@
 
 import { ConfidenceBadge } from '@/components/signal/ConfidenceBadge'
 import { dateBrief } from '@/lib/format'
+import { useI18n } from '@/lib/i18n/context'
+import { useT } from '@/lib/i18n/content/client'
 import { cn } from '@/lib/utils/cn'
 import type { FeedEvent } from '@/lib/api/types'
 
@@ -41,6 +43,8 @@ export function IntelligenceFeed({
   onSelect: (readoutId: string) => void
   className?: string
 }) {
+  const { intl } = useI18n()
+  const t = useT()
   return (
     <ul className={cn('divide-y divide-[var(--gr-line-subtle)]', className)}>
       {events.map((event) => (
@@ -60,7 +64,7 @@ export function IntelligenceFeed({
                 style={{ background: TONE_TOKEN[event.tone] }}
               />
               <span className="text-label uppercase text-ink-3">
-                {LABELS[event.kind]}
+                {t(LABELS[event.kind])}
               </span>
               {event.delta ? (
                 <span
@@ -80,7 +84,7 @@ export function IntelligenceFeed({
                 className="text-label uppercase text-ink-3 ms-auto whitespace-nowrap"
                 data-numeric=""
               >
-                {dateBrief(event.observedAt)}
+                {dateBrief(event.observedAt, intl)}
               </span>
             </div>
 
@@ -92,7 +96,7 @@ export function IntelligenceFeed({
             <div className="mt-3 flex items-center gap-3">
               <ConfidenceBadge confidence={event.confidence} />
               <span className="text-label uppercase text-ink-3 group-hover:text-ink-2 transition-colors">
-                Open evidence →
+                {t('Open evidence')} <span aria-hidden className="gr-arrow">→</span>
               </span>
             </div>
           </button>

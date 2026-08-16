@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { Link } from '@/components/i18n/Link'
+import { getT } from '@/lib/i18n/content/translator'
 import { ArrowRight } from 'lucide-react'
 import { CATEGORY_ICON } from '@/lib/visual/icons'
 import { count } from '@/lib/format'
@@ -22,13 +23,14 @@ import type { CategorySummary } from '@/lib/api/types'
    sit behind it. The count is the message. The row is the door.
    ========================================================================= */
 
-export function EcosystemStrip({
+export async function EcosystemStrip({
   categories,
   totalModules,
 }: {
   categories: CategorySummary[]
   totalModules: number
 }) {
+  const t = await getT()
   return (
     <div>
       <ul className="grid gap-px bg-line border border-line rounded-md overflow-hidden md:grid-cols-2">
@@ -87,8 +89,7 @@ export function EcosystemStrip({
             {count(totalModules)}
           </p>
           <p className="text-caption text-ink-2 mt-2">
-            intelligence modules in total, each answering one business question
-            with evidence, analysis and a recommendation.
+            {t('intelligence modules in total, each answering one business question with evidence, analysis and a recommendation.')}
           </p>
         </li>
       </ul>
