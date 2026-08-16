@@ -408,7 +408,7 @@ export const content: ContentOverlay = {
   'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
     'Ce qui change sur le marché, et la part sur laquelle on peut agir. Données de démonstration anonymisées.',
   'Narrative Intelligence — narrative ownership and movement':
-    'Intelligence du récit — maîtrise du récit et évolution',
+    'Intelligence narrative — maîtrise du récit et évolution',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
     'Quelle version de la catégorie circule, et dans le langage de qui elle est formulée. Données de démonstration anonymisées.',
   'Trust & Authority — independent-source verification view':
@@ -859,7 +859,7 @@ export const content: ContentOverlay = {
   /* --- Competitive ---------------------------------------------------------- */
   'Competitive Intelligence': 'Intelligence concurrentielle',
   'Competitor Decision Intelligence':
-    'Intelligence des décisions concurrentielles',
+    'Intelligence décisionnelle concurrentielle',
   'Executive Intelligence': 'Intelligence pour la direction',
   'Competitive density': 'Densité concurrentielle',
   Replaceability: 'Remplaçabilité',
@@ -975,7 +975,7 @@ export const content: ContentOverlay = {
     'Comparez chaque mois le CPC mixte au seuil de rentabilité et suivez le remplacement organique sur les mots-clés réaffectés.',
 
   /* --- Narrative -------------------------------------------------------------- */
-  'Narrative Intelligence': 'Intelligence du récit',
+  'Narrative Intelligence': 'Intelligence narrative',
   'Narrative ownership 12% → 24%': 'Maîtrise du récit 12 % → 24 %',
   'Narrative control': 'Contrôle du récit',
   'Narrative War Room': 'Cellule de crise du récit',
@@ -1338,9 +1338,9 @@ export const content: ContentOverlay = {
      translating them rewrites the data. The component maps them to
      capitalised labels; translate those.
      ====================================================================== */
-  'Public narrative intelligence': 'Intelligence du récit public',
-  'Public Narrative Intelligence | GeoRepute': 'Intelligence du récit public | GeoRepute',
-  'Public Narrative Intelligence': 'Intelligence du récit public',
+  'Public narrative intelligence': 'Intelligence narrative publique',
+  'Public Narrative Intelligence | GeoRepute': 'Intelligence narrative publique | GeoRepute',
+  'Public Narrative Intelligence': 'Intelligence narrative publique',
   'What story is the market telling about us?':
     'Quelle histoire le marché raconte-t-il à notre sujet ?',
   'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':

@@ -13,7 +13,7 @@ import type { DictionaryMeta, PartialDictionary } from '../types'
 export const meta: DictionaryMeta = {
   reviewed: false,
   notes:
-    'Complete first-pass translation, neutral international Spanish. Requires native review against lib/i18n/GLOSSARY.md before launch.',
+    'Complete first-pass translation, neutral international Spanish. scripts/i18n-review.mjs passes; every ? and ! carries its opening ¿ / ¡. This pass restored Inteligencia narrativa and Inteligencia de decisión de la competencia, which had drifted to Inteligencia del relato / de decisiones de la competencia in the overlay. STILL NEEDS a native speaker for register and for anything that reads as region-specific rather than neutral.',
 }
 
 export const dictionary: PartialDictionary = {
@@ -292,7 +292,7 @@ export const dictionary: PartialDictionary = {
     label: 'Ecosistema',
     partners: [
       { description: 'El grupo detrás de GeoRepute.' },
-      { description: 'Creación de contenido y medios.' },
+      { description: 'Ejecución de contenido y medios.' },
       { description: 'Medición de la percepción.' },
     ],
   },

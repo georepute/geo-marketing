@@ -18,7 +18,7 @@ import type { DictionaryMeta, PartialDictionary } from '../types'
 export const meta: DictionaryMeta = {
   reviewed: false,
   notes:
-    'Complete first-pass translation, European Portuguese (pt-PT). Requires native review against lib/i18n/GLOSSARY.md before launch. If Brazil is a target, add pt-BR as a separate locale rather than blending the two.',
+    'Complete first-pass translation, European Portuguese (pt-PT). scripts/i18n-review.mjs passes. This pass restored Inteligência narrativa and Inteligência de decisão da concorrência, which had drifted in the overlay. An earlier pass found three Cyrillic characters inside a Portuguese word (факto for facto) — the script now checks for that. STILL NEEDS a native speaker for register. If Brazil is a target, add pt-BR as a separate locale rather than blending the two.',
 }
 
 export const dictionary: PartialDictionary = {
@@ -297,7 +297,7 @@ export const dictionary: PartialDictionary = {
     label: 'Ecossistema',
     partners: [
       { description: 'O grupo por trás da GeoRepute.' },
-      { description: 'Criação de conteúdo e media.' },
+      { description: 'Execução de conteúdo e media.' },
       { description: 'Medição da perceção.' },
     ],
   },

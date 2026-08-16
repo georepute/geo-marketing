@@ -157,8 +157,8 @@ export const content: ContentOverlay = {
   'Absent. 35 searches per month.': 'נעדר. 35 חיפושים בחודש.',
 
   /* --- Google vs AI, search economics ----------------------------------- */
-  'Google vs AI Visibility Intelligence': 'מודיעין נראות גוגל מול AI',
-  'Google position': 'מיקום בגוגל',
+  'Google vs AI Visibility Intelligence': 'מודיעין נראות Google מול AI',
+  'Google position': 'מיקום ב-Google',
   'Channel asymmetry': 'אי-סימטריה בין ערוצים',
   'Gap Matrix': 'מטריצת פערים',
   'Gap classification': 'סיווג פערים',
@@ -322,7 +322,7 @@ export const content: ContentOverlay = {
     'לא מי מדורג מעליכם — אלא על מי ממליצים כשקונה שואל מכונה במי לבחור. התוצר המועיל אינו נתח ההמלצות; אלא הראיה הספציפית שהמתחרה מספק ואתם לא, כי זה החלק שאפשר לגשת ולסגור.',
 
   'Google rank and AI recommendation are separate commercial assets. Northwind ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.':
-    'דירוג בגוגל והמלצת AI הם נכסים מסחריים נפרדים. Northwind מדורגת ראשונה עבור פתיחת חשבון — שאלה שנשאלת רק אחרי שהספק כבר נבחר — ונעדרת מכל שאלה שמכריעה מי אותו ספק.',
+    'דירוג ב-Google והמלצת AI הם נכסים מסחריים נפרדים. Northwind מדורגת ראשונה עבור פתיחת חשבון — שאלה שנשאלת רק אחרי שהספק כבר נבחר — ונעדרת מכל שאלה שמכריעה מי אותו ספק.',
 
   'Traditional search and AI-mediated discovery are separate commercial assets that fail independently. This category measures each, classifies every gap between them, and prices what closing the gap is currently costing in paid media.':
     'חיפוש מסורתי וגילוי מתווך-AI הם נכסים מסחריים נפרדים שנכשלים באופן בלתי תלוי. הקטגוריה הזו מודדת כל אחד מהם, מסווגת כל פער ביניהם, ומתמחרת כמה סגירת הפער עולה כיום במדיה ממומנת.',
@@ -385,7 +385,7 @@ export const content: ContentOverlay = {
     'אלה אינם לידים אבודים, משום שמעולם לא נוצר ליד. ההחלטה הושלמה בתוך המנוע, והאנליטיקה המקובלת לא תיעדה דבר.',
 
   'Eleven of twenty tracked commercial keywords sit outside the Google top ten and receive no AI recommendation — the decision happens on neither surface.':
-    'אחת-עשרה מתוך עשרים מילות מפתח מסחריות במעקב נמצאות מחוץ לעשירייה הראשונה בגוגל ואינן מקבלות המלצת AI — ההחלטה אינה מתרחשת באף אחד מהמשטחים.',
+    'אחת-עשרה מתוך עשרים מילות מפתח מסחריות במעקב נמצאות מחוץ לעשירייה הראשונה ב-Google ואינן מקבלות המלצת AI — ההחלטה אינה מתרחשת באף אחד מהמשטחים.',
 
   'Northwind appears in 7% of supplier-evaluation answers — the stage that decides 60% of revenue and that Kestrel controls in five of seven questions.':
     'Northwind מופיעה ב-7% מתשובות הערכת הספקים — השלב שמכריע 60% מההכנסות ושבו Kestrel שולטת בחמש מתוך שבע שאלות.',
@@ -559,7 +559,7 @@ export const content: ContentOverlay = {
     'מחזיקה בשלושת המקומות האורגניים הראשונים ובנוכחות AI בארבע השאלות המסחריות בעלות הנפח הגבוה ביותר.',
 
   'Ranking in Google but absent from AI answers. Existing authority is not reaching the AI surface.':
-    'מדורגת בגוגל אך נעדרת מתשובות AI. הסמכות הקיימת אינה מגיעה אל משטח ה-AI.',
+    'מדורגת ב-Google אך נעדרת מתשובות AI. הסמכות הקיימת אינה מגיעה אל משטח ה-AI.',
 
   'Kestrel has published material addressing each question directly; engines reach for what exists.':
     'Kestrel פרסמה חומר שעונה על כל שאלה ישירות; מנועים נשענים על מה שקיים.',
@@ -574,7 +574,7 @@ export const content: ContentOverlay = {
     'נעדר משני המשטחים בשאלה מסחרית בעלת ערך גבוה. מחלקת הפער היקרה ביותר.',
 
   'Absent from AI answers and outside the Google top ten. The decision happens without the brand.':
-    'נעדר מתשובות AI ומחוץ לעשירייה הראשונה בגוגל. ההחלטה מתרחשת בלי המותג.',
+    'נעדר מתשובות AI ומחוץ לעשירייה הראשונה ב-Google. ההחלטה מתרחשת בלי המותג.',
 
   'Commit authority investment before the decision deadline, while displacement cost remains low.':
     'התחייבו להשקעה בסמכות לפני מועד ההחלטה, בעוד עלות ההדחה עדיין נמוכה.',
@@ -651,7 +651,7 @@ export const content: ContentOverlay = {
     'מערכת שאינה מסוגלת לסווג עסק אינה מסוגלת להמליץ עליו. זה נמצא במעלה הזרם של כל מדד אחר בעמוד הזה.',
 
   'Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.':
-    'דירוג בגוגל והמלצת AI הם נכסים מסחריים נפרדים. חוזק באחד אינו עובר לאחר.',
+    'דירוג ב-Google והמלצת AI הם נכסים מסחריים נפרדים. חוזק באחד אינו עובר לאחר.',
 
   'No lead was lost, because no lead was ever created. Conventional measurement recorded nothing.':
     'שום ליד לא אבד, משום ששום ליד לא נוצר מעולם. המדידה המקובלת לא תיעדה דבר.',
@@ -676,7 +676,7 @@ export const content: ContentOverlay = {
   'What changes the answer': 'מה משנה את התשובה',
   'Advantage holds until': 'היתרון מחזיק עד',
   'Blind-spot questions': 'שאלות בנקודה עיוורת',
-  'Best Google position': 'המיקום הטוב ביותר בגוגל',
+  'Best Google position': 'המיקום הטוב ביותר ב-Google',
   'Strongest competitor': 'המתחרה החזק ביותר',
   'Highest-risk engine': 'המנוע בסיכון הגבוה ביותר',
   'So AI recommends': 'ולכן ה-AI ממליץ',
@@ -716,7 +716,7 @@ export const content: ContentOverlay = {
   'Coverage falls to {pct} at supplier evaluation — the last stage before the order is assigned.':
     'הכיסוי צונח ל-{pct} בשלב הערכת הספקים — השלב האחרון לפני שההזמנה נמסרת.',
   '{n} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.':
-    '{n} שאלות מסחריות אינן מחזירות המלצת AI ואף לא מיקום בעשירייה הראשונה בגוגל. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
+    '{n} שאלות מסחריות אינן מחזירות המלצת AI ואף לא מיקום בעשירייה הראשונה ב-Google. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
   'Supplier evaluation carries {volume} of the query volume and decides {revenue} of the revenue. Ranking work by volume puts it last.':
     'הערכת ספקים נושאת {volume} מנפח השאילתות ומכריעה {revenue} מההכנסה. תיעדוף עבודה לפי נפח מציב אותה אחרונה.',
 
@@ -852,11 +852,11 @@ export const content: ContentOverlay = {
   'Absent from both surfaces on high-value questions. The most expensive class of gap.':
     'נעדרים משני המשטחים בשאלות בעלות ערך גבוה. סוג הפער היקר ביותר.',
   'Visible in Google and recommended by AI. No action required.':
-    'נראים בגוגל ומומלצים על ידי AI. לא נדרשת פעולה.',
+    'נראים ב-Google ומומלצים על ידי AI. לא נדרשת פעולה.',
   'of {total}': 'מתוך {total}',
   'Commercial question': 'שאלה מסחרית',
   Volume: 'נפח',
-  'Google visibility': 'נראות בגוגל',
+  'Google visibility': 'נראות ב-Google',
   Classification: 'סיווג',
   'Not in top 100': 'לא ב-100 הראשונים',
   'Position {n}': 'מיקום {n}',
@@ -909,7 +909,7 @@ export const content: ContentOverlay = {
   'Candidate and party position. Fictional race, demonstration data — no real candidate, party or campaign.':
     'עמדת המועמד והמפלגה. מרוץ בדיוני, נתוני הדגמה — אין מועמד, מפלגה או קמפיין אמיתיים.',
   'Election narrative intelligence — positive vs negative narratives':
-    'מודיעין נרטיב בחירות — נרטיבים חיוביים מול שליליים',
+    'מודיעין נרטיבים בחירות — נרטיבים חיוביים מול שליליים',
   'Which narratives are strengthening the position and which are damaging it. Fictional race, demonstration data.':
     'אילו נרטיבים מחזקים את העמדה ואילו פוגעים בה. מרוץ בדיוני, נתוני הדגמה.',
   'Positive vs negative narratives — the polarity split':
@@ -929,9 +929,9 @@ export const content: ContentOverlay = {
   'Who is strengthening the position and who is damaging it. Fictional race, demonstration data.':
     'מי מחזק את העמדה ומי פוגע בה. מרוץ בדיוני, נתוני הדגמה.',
   'AI + Google election intelligence — per-engine narrative leads':
-    'מודיעין בחירות ב-AI ובגוגל — הנרטיב המוביל בכל מנוע',
+    'מודיעין בחירות ב-AI וב-Google — הנרטיב המוביל בכל מנוע',
   'What each AI engine and Google surface leads with. Fictional race, demonstration data.':
-    'במה כל מנוע AI וגוגל פותחים. מרוץ בדיוני, נתוני הדגמה.',
+    'במה כל מנוע AI ו-Google פותחים. מרוץ בדיוני, נתוני הדגמה.',
   'Multilingual intelligence — narrative gaps between languages':
     'מודיעין רב-לשוני — פערי נרטיב בין שפות',
   'Where the account of a candidate differs by language. Fictional race, demonstration data.':
@@ -1093,8 +1093,8 @@ export const content: ContentOverlay = {
      ======================================================================= */
 
   /* --- Public Narrative Intelligence ----------------------------------------- */
-  'Public narrative intelligence': 'מודיעין הנרטיב הציבורי',
-  'Public Narrative Intelligence | GeoRepute': 'מודיעין הנרטיב הציבורי | GeoRepute',
+  'Public narrative intelligence': 'מודיעין נרטיבים ציבוריים',
+  'Public Narrative Intelligence | GeoRepute': 'מודיעין נרטיבים ציבוריים | GeoRepute',
   'What story is the market telling about us?': 'איזה סיפור השוק מספר עלינו?',
   'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
     'לא כמה פעמים העסק מוזכר. אילו גרסאות עליו פעילות, מי הבעלים של כל אחת, ואילו מהן מכריעות אם ייבחר.',
@@ -1394,7 +1394,7 @@ export const content: ContentOverlay = {
     '"Northwind Supply היא קמעונאית כלי עבודה."',
   'Observed in {sources}.': 'נצפה ב-{sources}.',
   'How much of the conversation works for us': 'כמה מהשיח פועל לטובתנו',
-  'Public Narrative Intelligence': 'מודיעין הנרטיב הציבורי',
+  'Public Narrative Intelligence': 'מודיעין נרטיבים ציבוריים',
   'Quoted in 3 pieces across 2 publications engines cite':
     'ציטוט ב-3 כתבות בשני פרסומים שהמנועים מצטטים',
   'Multi-site capability referenced in 2 of 6 engines on multi-plant sourcing questions':
@@ -1525,7 +1525,7 @@ export const content: ContentOverlay = {
     'האם יש די ראיות כדי שה-AI ימליץ על העסק הזה?',
   '3 independent sources can verify this business. The category median is 14.':
     '3 מקורות בלתי תלויים יכולים לאמת את העסק הזה. חציון הקטגוריה הוא 14.',
-  'Google readiness': 'מוכנות גוגל',
+  'Google readiness': 'מוכנות Google',
   'Can buyers find this business through traditional search?':
     'האם קונים יכולים למצוא את העסק הזה דרך חיפוש מסורתי?',
   '9 of 20 commercial questions place in the top ten. The rest are reachable only by paying for the click.':
@@ -1777,7 +1777,7 @@ export const content: ContentOverlay = {
   'Which sources, trust signals and narratives influenced the answer':
     'אילו מקורות, אותות אמון ונרטיבים השפיעו על התשובה',
   'What Google demand, organic position and paid click cost indicate':
-    'על מה מצביעים הביקוש בגוגל, המיקום האורגני ועלות הקליק הממומן',
+    'על מה מצביעים הביקוש ב-Google, המיקום האורגני ועלות הקליק הממומן',
   'Where the question sits in the customer decision journey':
     'היכן ממוקמת השאלה במסע ההחלטה של הלקוח',
   'What timing, market maturity and competitive density indicate':
@@ -1846,11 +1846,11 @@ export const content: ContentOverlay = {
   'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.':
     'בריאות ההחלטה, חשיפת ההכנסה, לכידה תחרותית, שליטה בנרטיב ותזמון אסטרטגי — בעמדת החלטה אחת.',
   'Should we launch this campaign today? A pre-campaign assessment of the business rather than the campaign — AI, authority, trust, narrative, competitive position and destination readiness, weighted into one decision.':
-    'האם להשיק את הקמפיין הזה היום? הערכה טרום-קמפיין של העסק ולא של הקמפיין — בינה מלאכותית, סמכות, אמון, נרטיב, עמדה תחרותית ומוכנות היעד, משוקללים להחלטה אחת.',
+    'האם להשיק את הקמפיין הזה היום? הערכה טרום-קמפיין של העסק ולא של הקמפיין — AI, סמכות, אמון, נרטיב, עמדה תחרותית ומוכנות היעד, משוקללים להחלטה אחת.',
   'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
     'איזה סיפור השוק מספר עלינו, וכיצד הוא משפיע על החלטות? הנרטיבים הפעילים, מי מחזיק בכל אחד מהם, לאן הם מתקדמים ומה צריך להשתנות.',
   'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
-    'הזינו דומיין ובחרו שאלה מסחרית. שחזרו מה כל מנוע בינה מלאכותית הבין, מי קיבל את ההחלטה, מדוע, ומה חייב להשתנות.',
+    'הזינו דומיין ובחרו שאלה מסחרית. שחזרו מה כל מנוע AI הבין, מי קיבל את ההחלטה, מדוע, ומה חייב להשתנות.',
 
   /* The 24 tracked buyer questions. Translated on the same reasoning as the
      home page's search queries — see the note beside those. */
@@ -1918,9 +1918,9 @@ export const content: ContentOverlay = {
   'AI Recognition Position': 'עמדת הזיהוי על ידי AI',
   'Average entity understanding across six engines. Three misidentify the category.':
     'הבנת הישות הממוצעת בשישה מנועים. שלושה מזהים את הקטגוריה באופן שגוי.',
-  'Google vs AI Gap': 'הפער בין גוגל ל-AI',
+  'Google vs AI Gap': 'הפער בין Google ל-AI',
   'Keywords absent from AI answers and outside the Google top ten. The decision happens on neither surface.':
-    'מילות מפתח שנעדרות מתשובות AI ונמצאות מחוץ לעשירייה הראשונה בגוגל. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
+    'מילות מפתח שנעדרות מתשובות AI ונמצאות מחוץ לעשירייה הראשונה ב-Google. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
   'Decision Presence': 'נוכחות בהחלטה',
   'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
     'כיסוי בהערכת ספקים. 19 מתוך 24 החלטות מסתיימות ללא המותג.',
@@ -2077,7 +2077,7 @@ export const content: ContentOverlay = {
   'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
     'מה כל מנוע AI מבין, ומתי הוא ממליץ. נתוני הדגמה אנונימיים.',
   'Google vs AI Visibility — the gap matrix':
-    'נראות בגוגל מול AI — מטריצת הפערים',
+    'נראות ב-Google מול AI — מטריצת הפערים',
   'Two discovery surfaces, measured separately. Anonymised demonstration data.':
     'שני משטחי גילוי, נמדדים בנפרד. נתוני הדגמה אנונימיים.',
   'Market Intelligence — category and demand view':
@@ -2085,7 +2085,7 @@ export const content: ContentOverlay = {
   'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
     'מה משתנה בשוק, ואיזה חלק מכך בר-טיפול. נתוני הדגמה אנונימיים.',
   'Narrative Intelligence — narrative ownership and movement':
-    'מודיעין נרטיב — בעלות על הנרטיב ותנועתו',
+    'מודיעין נרטיבים — בעלות על הנרטיב ותנועתו',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
     'איזו גרסה של הקטגוריה מסתובבת, ובלשונו של מי היא מנוסחת. נתוני הדגמה אנונימיים.',
   'Trust & Authority — independent-source verification view':
@@ -2153,7 +2153,7 @@ export const content: ContentOverlay = {
   /* --- Evidence sources ---------------------------------------------------- */
   'Where the observations come from': 'מהיכן מגיעות התצפיות',
   'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
-    'סביבה זו עוקבת אחר <b>{questions}</b> שאלות החלטה בשישה מנועי AI, ואחר <b>{keywords}</b> מילות מפתח מסחריות בגוגל.',
+    'סביבה זו עוקבת אחר <b>{questions}</b> שאלות החלטה בשישה מנועי AI, ואחר <b>{keywords}</b> מילות מפתח מסחריות ב-Google.',
   'Public AI responses': 'תשובות AI פומביות',
   'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
     'תשובות שנצפו בשישה מנועים מול מערך שאלות קבוע, מתועדות עם המנוע, התאריך והתשובה המלאה.',
@@ -2712,7 +2712,7 @@ export const content: ContentOverlay = {
   'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
     'נתון נתח שוק עבור שוק שאיש אינו מודד כרגע — המלצות שניתנו, לא קליקים שהתקבלו.',
   'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':
-    'עסק שמדורג בגוגל עדיין יכול להיעדר מכל תשובת AI שמכריעה מיהו הספק. ההפך שכיח באותה מידה. כל משטח הוא נכס מסחרי נפרד, וא-סימטריה בין ערוצים אינה נראית לא לכלי SEO ולא לכלי אנליטיקה.',
+    'עסק שמדורג ב-Google עדיין יכול להיעדר מכל תשובת AI שמכריעה מיהו הספק. ההפך שכיח באותה מידה. כל משטח הוא נכס מסחרי נפרד, וא-סימטריה בין ערוצים אינה נראית לא לכלי SEO ולא לכלי אנליטיקה.',
   'Businesses that dominate one surface and disappear on the other — a divergence that stays invisible while each channel is reported separately.':
     'עסקים ששולטים במשטח אחד ונעלמים באחר — פער שנשאר בלתי נראה כל עוד כל ערוץ מדווח בנפרד.',
   'The most expensive class of gap — absent from both surfaces on a question that carries real volume and real intent.':

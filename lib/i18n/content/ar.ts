@@ -47,7 +47,7 @@ export const content: ContentOverlay = {
   'By the time a visit, a click, a lead or a CRM record exists, the buyer has already decided which suppliers are worth contacting. That decision now happens inside AI systems, and it leaves no trace in any tool you currently own.':
     'بحلول اللحظة التي تظهر فيها زيارة أو نقرة أو عميل محتمل أو سجل في نظام إدارة العلاقات، يكون المشتري قد قرر بالفعل أي المورّدين يستحق التواصل معه. هذا القرار يجري الآن داخل أنظمة الذكاء الاصطناعي، ولا يترك أي أثر في أي أداة تملكها اليوم.',
   'commercial decisions complete without your business being named at all.':
-    'قرارات تجارية تكتمل دون أن يُذكر نشاطك التجاري إطلاقًا.',
+    'قرارات تجارية تكتمل دون أن يُذكر نشاطكم التجاري إطلاقًا.',
   'No lead was lost, because no lead was ever created. Conventional measurement recorded nothing.':
     'لم يُفقد أي عميل محتمل، لأنه لم يُنشأ أصلًا. القياس التقليدي لم يسجّل شيئًا.',
   'presence at the stage where the supplier is actually chosen.':
@@ -55,25 +55,25 @@ export const content: ContentOverlay = {
   'That stage carries {volume} of the query volume and decides {revenue} of the revenue. Volume-ranked tooling calls it unimportant.':
     'تحمل هذه المرحلة {volume} من حجم الاستعلامات وتحسم {revenue} من الإيرادات. والأدوات التي ترتّب حسب الحجم تعدّها غير مهمة.',
   'more independent evidence supports the competitor engines recommend instead.':
-    'أضعاف من الأدلة المستقلة تدعم المنافس الذي توصي به المحرّكات بدلًا منك.',
+    'أضعاف من الأدلة المستقلة تدعم المنافس الذي توصي به المحرّكات بدلًا منكم.',
   'Not a brand-preference gap. An evidence gap, and evidence can be commissioned.':
     'ليست فجوة في تفضيل العلامة التجارية، بل فجوة في الأدلة — والأدلة يمكن التكليف بإنتاجها.',
 
   /* --- Q1 · Does AI know your business? --------------------------------- */
   'Entity understanding': 'فهم الكيان',
   'AI systems understand what your business is in {score} of 100 commercial evaluations. One engine holds no stable record of you at all.':
-    'تفهم أنظمة الذكاء الاصطناعي ماهية نشاطك التجاري في {score} من كل 100 تقييم تجاري. وأحد المحرّكات لا يحتفظ بسجل ثابت عنك على الإطلاق.',
+    'تفهم أنظمة الذكاء الاصطناعي ماهية نشاطكم التجاري في {score} من كل 100 تقييم تجاري. وأحد المحرّكات لا يحتفظ بسجل ثابت عنكم على الإطلاق.',
   'A system that cannot categorise a business cannot recommend it. This sits upstream of every other measure on this page.':
     'النظام الذي لا يستطيع تصنيف نشاط تجاري لا يستطيع التوصية به. وهذا يسبق كل مقياس آخر في هذه الصفحة.',
   'Content and advertising investment cannot move an answer while the underlying record is wrong. Spend on either is spend against a locked door.':
     'لا يمكن للاستثمار في المحتوى أو الإعلانات أن يغيّر إجابة بينما السجل الأساسي خاطئ. الإنفاق على أي منهما إنفاق أمام باب موصد.',
   'Highest-risk engine': 'المحرّك الأعلى خطورة',
   '{engine} understands your business at {score} of 100 and names it in none of the tracked decisions.':
-    'يفهم {engine} نشاطك التجاري بمستوى {score} من 100 ولا يذكره في أي من القرارات المرصودة.',
+    'يفهم {engine} نشاطكم التجاري بمستوى {score} من 100 ولا يذكره في أي من القرارات المرصودة.',
   'Recognition is not uniform across AI systems, and buyers do not all use the same one. A single weak engine removes your business from every decision made through it.':
-    'التعرّف ليس متماثلًا بين أنظمة الذكاء الاصطناعي، والمشترون لا يستخدمون النظام نفسه. محرّك ضعيف واحد يُخرج نشاطك من كل قرار يمر عبره.',
+    'التعرّف ليس متماثلًا بين أنظمة الذكاء الاصطناعي، والمشترون لا يستخدمون النظام نفسه. محرّك ضعيف واحد يُخرج نشاطكم من كل قرار يمر عبره.',
   'Every buyer who asks this engine receives a supplier shortlist your business is structurally absent from — and no measurement you own records that it happened.':
-    'كل مشترٍ يسأل هذا المحرّك يتلقى قائمة مورّدين مختصرة يغيب عنها نشاطك بنيويًا — ولا يسجّل أي قياس تملكه أن ذلك حدث.',
+    'كل مشترٍ يسأل هذا المحرّك يتلقى قائمة مورّدين مختصرة يغيب عنها نشاطكم بنيويًا — ولا يسجّل أي قياس تملكه أن ذلك حدث.',
   'Decision presence': 'الحضور في القرار',
   'Present in only {present} of supplier evaluations. Missing from {missing} of AI buying decisions.':
     'حاضر في {present} فقط من تقييمات المورّدين. وغائب عن {missing} من قرارات الشراء المدفوعة بالذكاء الاصطناعي.',
@@ -93,12 +93,12 @@ export const content: ContentOverlay = {
   'Earlier stages shape opinion. This stage selects the vendor. A business can lead the first three stages and still never be contacted.':
     'المراحل الأولى تشكّل الرأي. هذه المرحلة تختار المورّد. يمكن لنشاط تجاري أن يتصدّر المراحل الثلاث الأولى ثم لا يُتواصل معه أبدًا.',
   'The competitor named here receives the enquiry. Your business is not compared and rejected — it is never compared at all.':
-    'المنافس الذي يُذكر هنا يتلقى الاستفسار. نشاطك التجاري لا يُقارن ثم يُرفض — بل لا يُقارن أصلًا.',
+    'المنافس الذي يُذكر هنا يتلقى الاستفسار. نشاطكم التجاري لا يُقارن ثم يُرفض — بل لا يُقارن أصلًا.',
   'Blind-spot questions': 'أسئلة النقاط العمياء',
   '{n} commercial questions return no AI recommendation and no Google position in the top ten. The decision happens on neither surface.':
-    '{n} سؤالًا تجاريًا لا تُعيد أي توصية من الذكاء الاصطناعي ولا أي ترتيب في العشرة الأوائل على جوجل. القرار لا يحدث على أي من السطحين.',
+    '{n} سؤالًا تجاريًا لا تُعيد أي توصية من الذكاء الاصطناعي ولا أي ترتيب في العشرة الأوائل على Google. القرار لا يحدث على أي من السطحين.',
   'Google rank and AI recommendation are separate commercial assets. Strength in one does not carry into the other.':
-    'الترتيب في جوجل وتوصية الذكاء الاصطناعي أصلان تجاريان منفصلان. القوة في أحدهما لا تنتقل إلى الآخر.',
+    'الترتيب في Google وتوصية الذكاء الاصطناعي أصلان تجاريان منفصلان. القوة في أحدهما لا تنتقل إلى الآخر.',
   'These questions are currently reachable only by buying the click — which is why paid cost rises while organic position stays flat.':
     'لا يمكن الوصول إلى هذه الأسئلة حاليًا إلا بشراء النقرة — ولهذا ترتفع التكلفة المدفوعة بينما يبقى الترتيب العضوي ثابتًا.',
   'Supplier evaluation carries {volume} of the query volume and decides {revenue} of the revenue. Ranking work by volume puts it last.':
@@ -106,11 +106,11 @@ export const content: ContentOverlay = {
 
   /* --- Q3 · Why is the competitor recommended? --------------------------- */
   '{competitor} can be verified through {theirs} independent sources. Your business can be verified through {ours}.':
-    'يمكن التحقق من {competitor} عبر {theirs} مصدرًا مستقلًا. أما نشاطك التجاري فيمكن التحقق منه عبر {ours}.',
+    'يمكن التحقق من {competitor} عبر {theirs} مصدرًا مستقلًا. أما نشاطكم التجاري فيمكن التحقق منه عبر {ours}.',
   'Share of recommendations is the symptom. The cause is what a system can cite when it has to justify naming one supplier ahead of another.':
     'حصة التوصيات هي العَرَض. أما السبب فهو ما يستطيع النظام الاستشهاد به حين يُطلب منه تبرير تقديم مورّد على آخر.',
   'Receives the decision': 'يتلقى القرار',
-  'Your business': 'نشاطك التجاري',
+  'Your business': 'نشاطكم التجاري',
   'Authority advantage': 'أفضلية الحُجّية',
   'Why the decision goes to them': 'لماذا يذهب القرار إليهم',
   'The category median is <b>{n}</b> independent sources. This is not a brand-preference gap that marketing spend closes. It is an evidence gap, and evidence is something a business can commission.':
@@ -142,7 +142,7 @@ export const content: ContentOverlay = {
     'التشخيص بلا تسلسل يُنتج نشاطًا لا حركة. ويُتحقق من الأثر بحركة الإشارة بعد التنفيذ — لا باكتمال المهمة أبدًا.',
   'Ordered by commercial exposure, urgency, effort and competitive pressure.':
     'مرتّبة حسب التعرّض التجاري والإلحاح والجهد والضغط التنافسي.',
-  'Open the full intervention plan': 'افتح خطة التدخل الكاملة',
+  'Open the full intervention plan': 'افتحوا خطة التدخل الكاملة',
   Priority: 'الأولوية',
   'Expected impact': 'الأثر المتوقع',
   'Verified by: {metric}': 'يُتحقق منه عبر: {metric}',
@@ -168,18 +168,18 @@ export const content: ContentOverlay = {
   'weight {pct}%': 'الوزن {pct}%',
   'Authority carries the heaviest weight in the index and the largest deficit. Every other vector is capped by it, so it is the only starting point that moves more than one measure.':
     'تحمل الحُجّية الوزن الأثقل في المؤشر وأكبر عجز. وكل متجه آخر مقيّد بها، ولذلك فهي نقطة البداية الوحيدة التي تحرّك أكثر من مقياس واحد.',
-  'Open the full executive position': 'افتح الموقع التنفيذي الكامل',
+  'Open the full executive position': 'افتحوا الموقع التنفيذي الكامل',
 
   /* --- Run it on your own business --------------------------------------- */
   'Enter a domain and one signal is released immediately. The rest of the position requires an account or a purchase — and the locked panels state exactly what sits behind them.':
-    'أدخل نطاقًا وتُفتح إشارة واحدة فورًا. أما بقية الموقع فتتطلب حسابًا أو عملية شراء — واللوحات المقفلة تذكر بدقة ما يقف خلفها.',
-  'Your domain': 'نطاقك',
+    'أدخلوا نطاقًا وتُفتح إشارة واحدة فورًا. أما بقية الموقع فتتطلب حسابًا أو عملية شراء — واللوحات المقفلة تذكر بدقة ما يقف خلفها.',
+  'Your domain': 'نطاقكم',
   'Run instant preview': 'شغّل المعاينة الفورية',
-  'Re-run preview': 'أعد تشغيل المعاينة',
+  'Re-run preview': 'أعيدوا تشغيل المعاينة',
   'Seeded demonstration. This environment always reconstructs Northwind Supply, an industrial distributor, so every figure stays verifiable.':
     'عرض توضيحي ببيانات أولية. تعيد هذه البيئة دائمًا بناء حالة Northwind Supply، وهو موزّع صناعي، بحيث يبقى كل رقم قابلًا للتحقق.',
   'AI recognition': 'التعرّف عبر الذكاء الاصطناعي',
-  'Best Google position': 'أفضل ترتيب على جوجل',
+  'Best Google position': 'أفضل ترتيب على Google',
   'Not ranking': 'غير مرتّب',
   'Narrative ownership': 'ملكية السردية',
   'Strongest competitor': 'أقوى منافس',
@@ -191,9 +191,9 @@ export const content: ContentOverlay = {
     '<b>{n}</b> قراءة إضافية، لكل منها أدلتها وتعرّضها وإجراؤها الموصوف.',
   'Competitor capture, authority evidence, paid dependency, missed decisions, narrative control, trust readiness and strategic timing.':
     'استحواذ المنافسين، وأدلة الحُجّية، والاعتماد على الإعلانات المدفوعة، والقرارات الفائتة، والتحكم في السردية، وجاهزية الثقة، والتوقيت الاستراتيجي.',
-  'Unlock full intelligence': 'افتح الذكاء الكامل',
+  'Unlock full intelligence': 'افتحوا الذكاء الكامل',
   'Buy a single answer': 'اشترِ إجابة واحدة',
-  'See a single answer': 'اطّلع على إجابة واحدة',
+  'See a single answer': 'اطّلعوا على إجابة واحدة',
 
   /* --- The ecosystem and the machinery ----------------------------------- */
   'The intelligence ecosystem': 'منظومة الذكاء',
@@ -216,10 +216,10 @@ export const content: ContentOverlay = {
   /* --- The close ---------------------------------------------------------- */
   'Every day the window stays open, the same position costs less to take. Every day after it closes, it costs more.':
     'كل يوم تبقى فيه النافذة مفتوحة، يكلّف احتلال الموقع نفسه أقل. وكل يوم بعد إغلاقها، يكلّف أكثر.',
-  'See how AI decides about you': 'اطّلع على كيفية اتخاذ الذكاء الاصطناعي قراره بشأنك',
+  'See how AI decides about you': 'اطّلعوا على كيفية اتخاذ الذكاء الاصطناعي قراره بشأنكم',
   'Every figure on this page is computed from {n} tracked commercial decisions across six AI engines.':
     'كل رقم في هذه الصفحة محسوب من {n} قرارًا تجاريًا مرصودًا عبر ستة محرّكات ذكاء اصطناعي.',
-  'See the methodology': 'اطّلع على المنهجية',
+  'See the methodology': 'اطّلعوا على المنهجية',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
   'Six AI engines observed': 'ستة محرّكات ذكاء اصطناعي مرصودة',
@@ -229,15 +229,15 @@ export const content: ContentOverlay = {
   'A buyer asks AI': 'مشترٍ يسأل الذكاء الاصطناعي',
   'AI looks for proof it can cite': 'الذكاء الاصطناعي يبحث عن دليل يمكنه الاستشهاد به',
   'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
-    'مصادر مستقلة يستطيع المحرّك الاستشهاد بها حين يوصي بمورّد. موقعك الإلكتروني لا يُحتسب — فالمحرّكات تعامل الوصف الذاتي كادّعاء لا كدليل.',
+    'مصادر مستقلة يستطيع المحرّك الاستشهاد بها حين يوصي بمورّد. موقعكم الإلكتروني لا يُحتسب — فالمحرّكات تعامل الوصف الذاتي كادّعاء لا كدليل.',
   'So AI recommends': 'ولذلك يوصي الذكاء الاصطناعي بـ',
   'Your business was named by <b>{named} of {total}</b> engines. Not because the offer is weaker — because <b>{theirs} sources outrank {ours}</b> when a system has to stand behind an answer.':
-    'ذُكر نشاطك التجاري من قِبل <b>{named} من {total}</b> محرّكات. ليس لأن العرض أضعف — بل لأن <b>{theirs} مصدرًا تتفوق على {ours}</b> حين يضطر نظام إلى الوقوف خلف إجابة.',
+    'ذُكر نشاطكم التجاري من قِبل <b>{named} من {total}</b> محرّكات. ليس لأن العرض أضعف — بل لأن <b>{theirs} مصدرًا تتفوق على {ours}</b> حين يضطر نظام إلى الوقوف خلف إجابة.',
   'What changes the answer': 'ما الذي يغيّر الإجابة',
   '{n} sources': '{n} مصادر',
   '{name}: {n} independent sources': '{name}: {n} مصدرًا مستقلًا',
   'A reconstruction of one AI buying decision: the question a buyer asked, the {theirs} independent sources supporting {winner} against {ours} supporting your business — a {advantage}× evidence advantage — the resulting recommendation, and the intervention that changes it.':
-    'إعادة بناء لقرار شراء واحد مدفوع بالذكاء الاصطناعي: السؤال الذي طرحه المشتري، و{theirs} مصدرًا مستقلًا تدعم {winner} مقابل {ours} تدعم نشاطك التجاري — أفضلية أدلة بمقدار {advantage} أضعاف — والتوصية الناتجة عن ذلك، والتدخل الذي يغيّرها.',
+    'إعادة بناء لقرار شراء واحد مدفوع بالذكاء الاصطناعي: السؤال الذي طرحه المشتري، و{theirs} مصدرًا مستقلًا تدعم {winner} مقابل {ours} تدعم نشاطكم التجاري — أفضلية أدلة بمقدار {advantage} أضعاف — والتوصية الناتجة عن ذلك، والتدخل الذي يغيّرها.',
 
   /* --- The strategic window ---------------------------------------------- */
   '{position} market': 'سوق {position}',
@@ -283,14 +283,14 @@ export const content: ContentOverlay = {
     'غائب عن السطحين معًا في الأسئلة عالية القيمة. وهو أغلى أصناف الفجوات.',
   'Recoverable search': 'بحث قابل للاسترجاع',
   'Ranking in Google but absent from AI answers. Existing authority is not reaching the AI surface.':
-    'مرتّب على جوجل لكنه غائب عن إجابات الذكاء الاصطناعي. الحُجّية القائمة لا تصل إلى سطح الذكاء الاصطناعي.',
+    'مرتّب على Google لكنه غائب عن إجابات الذكاء الاصطناعي. الحُجّية القائمة لا تصل إلى سطح الذكاء الاصطناعي.',
   Aligned: 'متوافق',
   'Visible in Google and recommended by AI. No action required.':
-    'مرئي على جوجل وموصى به من الذكاء الاصطناعي. لا يتطلب أي إجراء.',
+    'مرئي على Google وموصى به من الذكاء الاصطناعي. لا يتطلب أي إجراء.',
   'of {total}': 'من {total}',
   'Commercial question': 'سؤال تجاري',
   Volume: 'الحجم',
-  'Google visibility': 'الظهور على جوجل',
+  'Google visibility': 'الظهور على Google',
   'AI recommendation': 'توصية الذكاء الاصطناعي',
   Classification: 'التصنيف',
   'Not in top 100': 'ليس ضمن المئة الأولى',
@@ -312,8 +312,8 @@ export const content: ContentOverlay = {
   '{label}: {value}. {kind}. {evidence} Activate to open the readout.':
     '{label}: {value}. {kind}. {evidence} فعّل لفتح القراءة.',
   'Hover or focus a node to isolate its relationships. Select any node to open the evidence behind it.':
-    'مرّر المؤشر فوق عقدة أو ركّز عليها لعزل علاقاتها. اختر أي عقدة لفتح الأدلة التي تقف خلفها.',
-  'Read the graph as a table': 'اقرأ الرسم البياني كجدول',
+    'مرّروا المؤشر فوق عقدة أو ركّزوا عليها لعزل علاقاتها. اختاروا أي عقدة لفتح الأدلة التي تقف خلفها.',
+  'Read the graph as a table': 'اقرأوا الرسم البياني كجدول',
   Signal: 'إشارة',
   Value: 'القيمة',
   'Leads to': 'يؤدي إلى',
@@ -343,7 +343,7 @@ export const content: ContentOverlay = {
   'What each AI engine understands, and when it recommends. Anonymised demonstration data.':
     'ما يفهمه كل محرّك ذكاء اصطناعي، ومتى يوصي. بيانات توضيحية مجهّلة.',
   'Google vs AI Visibility — the gap matrix':
-    'الظهور في جوجل مقابل الذكاء الاصطناعي — مصفوفة الفجوات',
+    'الظهور في Google مقابل الذكاء الاصطناعي — مصفوفة الفجوات',
   'Two discovery surfaces, measured separately. Anonymised demonstration data.':
     'سطحا اكتشاف، يُقاسان بشكل منفصل. بيانات توضيحية مجهّلة.',
   'Market Intelligence — category and demand view':
@@ -351,7 +351,7 @@ export const content: ContentOverlay = {
   'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
     'ما الذي يتغيّر في السوق، وأي جزء منه قابل للمعالجة. بيانات توضيحية مجهّلة.',
   'Narrative Intelligence — narrative ownership and movement':
-    'ذكاء السردية — ملكية السردية وحركتها',
+    'ذكاء السرديات — ملكية السردية وحركتها',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
     'أي رواية عن الفئة هي المتداولة، وبلغة مَن تُصاغ. بيانات توضيحية مجهّلة.',
   'Trust & Authority — independent-source verification view':
@@ -418,7 +418,7 @@ export const content: ContentOverlay = {
   /* --- Evidence sources ---------------------------------------------------- */
   'Where the observations come from': 'من أين تأتي الملاحظات',
   'This environment observes <b>{questions}</b> decision questions across six AI engines, and <b>{keywords}</b> commercial keywords in Google.':
-    'ترصد هذه البيئة <b>{questions}</b> سؤال قرار عبر ستة محرّكات ذكاء اصطناعي، و<b>{keywords}</b> كلمة مفتاحية تجارية في جوجل.',
+    'ترصد هذه البيئة <b>{questions}</b> سؤال قرار عبر ستة محرّكات ذكاء اصطناعي، و<b>{keywords}</b> كلمة مفتاحية تجارية في Google.',
   'Public AI responses': 'استجابات الذكاء الاصطناعي العلنية',
   'Answers observed from six engines against a fixed question set, recorded with engine, date and full response.':
     'إجابات مرصودة من ستة محرّكات مقابل مجموعة أسئلة ثابتة، مسجّلة مع المحرّك والتاريخ والاستجابة الكاملة.',
@@ -489,8 +489,8 @@ export const content: ContentOverlay = {
   'This demonstration environment': 'بيئة العرض التوضيحي هذه',
   'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
     'Northwind Supply منظمة خيالية. أرقامها مبنية على بيانات أولية، ومتسقة داخليًا، ومشتقة من مجموعة واحدة من الحقائق المرجعية — <b>{presence}</b> حضور في التوصيات، و<b>{coverage}</b> تغطية في تقييم المورّدين، و<b>{share}</b> حصة للمنافس. وكل رقم آخر في هذا الموقع محسوب منها، وحزمة اختبارات تُفشل عملية البناء إذا خالفها أي مسار عرض.',
-  'Open Mission Control': 'افتح مركز القيادة',
-  'See the engines': 'اطّلع على المحرّكات',
+  'Open Mission Control': 'افتحوا مركز القيادة',
+  'See the engines': 'اطّلعوا على المحرّكات',
 
   /* ==========================================================================
      SEED PROSE SURFACING ON THE HOME PAGE.
@@ -516,7 +516,7 @@ export const content: ContentOverlay = {
   'Do the two discovery surfaces agree, and what is the gap costing?':
     'هل يتفق سطحا الاكتشاف، وكم تكلّف الفجوة بينهما؟',
   'Who receives the decision instead, and what do they have?':
-    'من يتلقى القرار بدلًا منك، وماذا لديه؟',
+    'من يتلقى القرار بدلًا منكم، وماذا لديه؟',
   'What must happen next, by whom and by when?':
     'ما الذي يجب أن يحدث تاليًا، وعلى يد من، وبحلول متى؟',
   'Where do competitors receive the decision before the business receives the lead?':
@@ -526,7 +526,7 @@ export const content: ContentOverlay = {
   'Does the business exist consistently across traditional search and AI-mediated discovery?':
     'هل يوجد النشاط التجاري باتساق عبر البحث التقليدي والاكتشاف بوساطة الذكاء الاصطناعي؟',
   'Whose language does the market use to describe your category?':
-    'بلغة مَن يصف السوق فئتك؟',
+    'بلغة مَن يصف السوق فئتكم؟',
   'Is the market ready, and does the route to it hold?':
     'هل السوق جاهز، وهل يصمد الطريق إليه؟',
 
@@ -570,13 +570,13 @@ export const content: ContentOverlay = {
   'Direct investment at Authority first — it carries the highest weight and the largest deficit.':
     'وجّه الاستثمار إلى الحُجّية أولًا — فهي تحمل أعلى وزن وأكبر عجز.',
   'Build supplier-comparison content against the six highest-volume missed decision questions.':
-    'ابنِ محتوى لمقارنة المورّدين يستهدف أسئلة القرار الستة الفائتة الأعلى حجمًا.',
+    'ابنوا محتوى لمقارنة المورّدين يستهدف أسئلة القرار الستة الفائتة الأعلى حجمًا.',
   'Strengthen independent authority evidence and supplier-comparison coverage.':
     'عزّز أدلة الحُجّية المستقلة وتغطية مقارنة المورّدين.',
   'Resolve the Gemini entity conflation with the same-named logistics firm.':
     'عالج خلط Gemini بين الكيان وشركة الخدمات اللوجستية التي تحمل الاسم نفسه.',
   'Reallocate paid spend from keywords with a viable organic replacement path.':
-    'أعد توزيع الإنفاق المدفوع بعيدًا عن الكلمات المفتاحية التي لها مسار بديل عضوي قابل للتطبيق.',
+    'أعيدوا توزيع الإنفاق المدفوع بعيدًا عن الكلمات المفتاحية التي لها مسار بديل عضوي قابل للتطبيق.',
   'Response time cited among the first three criteria by 3 of 6 engines':
     'زمن الاستجابة مذكور ضمن المعايير الثلاثة الأولى لدى 3 من 6 محرّكات',
   'Gemini resolves the correct entity on 4 of 6 category questions':
@@ -592,7 +592,7 @@ export const content: ContentOverlay = {
   'Switch to dark theme': 'التبديل إلى المظهر الداكن',
   'Powered by Gintex': 'مدعوم من Gintex',
   'GeoRepute — home': 'GeoRepute — الصفحة الرئيسية',
-  Open: 'افتح',
+  Open: 'افتحوا',
 
   /* --- Effort, urgency, trend and confidence chips ------------------------- */
   'low effort': 'جهد منخفض',
@@ -673,7 +673,7 @@ export const content: ContentOverlay = {
   'The index is a weighted function of the six GEON vectors, not a score assigned by judgement. Market Fit at 72 confirms the offer matches demand; the constraint is entirely on the evidence side.':
     'المؤشر دالة مرجّحة لمتجهات GEON الستة، وليس درجة تُمنح بالتقدير. ملاءمة السوق عند 72 تؤكد أن العرض يطابق الطلب؛ والقيد يقع بالكامل في جانب الأدلة.',
   'Recompute the index from re-observed GEON vectors monthly. The weighting is published and versioned.':
-    'أعد حساب المؤشر من متجهات GEON المعاد رصدها شهريًا. والترجيح منشور وموثّق بالإصدارات.',
+    'أعيدوا حساب المؤشر من متجهات GEON المعاد رصدها شهريًا. والترجيح منشور وموثّق بالإصدارات.',
 
   /* --- Recognition --------------------------------------------------------- */
   'Recognition by engine': 'التعرّف حسب المحرّك',
@@ -719,13 +719,13 @@ export const content: ContentOverlay = {
   'Gemini recognises Northwind at 24 of 100 and recommends it in zero questions. The cause is a disambiguation failure, not a content gap.':
     'يتعرّف Gemini على Northwind بمستوى 24 من 100 ولا يوصي بها في أي سؤال. والسبب فشل في إزالة الالتباس، لا فجوة في المحتوى.',
   'Publish a single canonical entity description and propagate identical category language to trade directories and structured data.':
-    'انشر وصفًا مرجعيًا واحدًا للكيان وعمّم لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
+    'انشروا وصفًا مرجعيًا واحدًا للكيان وعمّموا لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
-    'انشر وصفًا مرجعيًا للكيان وعمّم لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
+    'انشروا وصفًا مرجعيًا للكيان وعمّموا لغة الفئة نفسها على الأدلة التجارية والبيانات المهيكلة.',
   'Publish a canonical entity description and propagate identical…':
-    'انشر وصفًا مرجعيًا للكيان وعمّم لغة الفئة نفسها…',
+    'انشروا وصفًا مرجعيًا للكيان وعمّموا لغة الفئة نفسها…',
   'Re-observe entity understanding per engine. Success is category association correct on five of six engines.':
-    'أعد رصد فهم الكيان لكل محرّك. والنجاح هو ارتباط الفئة الصحيح لدى خمسة من ستة محرّكات.',
+    'أعيدوا رصد فهم الكيان لكل محرّك. والنجاح هو ارتباط الفئة الصحيح لدى خمسة من ستة محرّكات.',
   'Resolve category description inconsistency across all public sources, then pursue verifiable third-party validation.':
     'عالج عدم اتساق وصف الفئة عبر جميع المصادر العامة، ثم اسعَ إلى توثيق قابل للتحقق من طرف ثالث.',
 
@@ -776,9 +776,9 @@ export const content: ContentOverlay = {
   'Prioritise the six highest-volume missed questions and publish material that answers each one directly and citably.':
     'أعطِ الأولوية للأسئلة الستة الفائتة الأعلى حجمًا وانشر مواد تجيب على كل منها مباشرةً وبصورة قابلة للاستشهاد.',
   'Re-run all 24 questions monthly across all six engines; record presence per engine per question.':
-    'أعد تشغيل الأسئلة الأربعة والعشرين شهريًا عبر المحرّكات الستة جميعها؛ وسجّل الحضور لكل محرّك ولكل سؤال.',
+    'أعيدوا تشغيل الأسئلة الأربعة والعشرين شهريًا عبر المحرّكات الستة جميعها؛ وسجّلوا الحضور لكل محرّك ولكل سؤال.',
   'Re-run the supplier-evaluation prompt set monthly. Coverage is verified by recommendation slots won across all six engines, not by traffic.':
-    'أعد تشغيل مجموعة استفسارات تقييم المورّدين شهريًا. وتُتحقق التغطية بخانات التوصية المكتسبة عبر المحرّكات الستة، لا بالزيارات.',
+    'أعيدوا تشغيل مجموعة استفسارات تقييم المورّدين شهريًا. وتُتحقق التغطية بخانات التوصية المكتسبة عبر المحرّكات الستة، لا بالزيارات.',
   'Recommendation share re-measured across the same 24 questions monthly, with engine and date recorded per observation.':
     'يُعاد قياس حصة التوصيات عبر الأسئلة الأربعة والعشرين نفسها شهريًا، مع تسجيل المحرّك والتاريخ لكل رصدة.',
 
@@ -824,13 +824,13 @@ export const content: ContentOverlay = {
   'Engines cannot corroborate a recommendation from three sources when the category median is fourteen.':
     'لا تستطيع المحرّكات تأكيد توصية استنادًا إلى ثلاثة مصادر بينما وسيط الفئة أربعة عشر.',
   'Publish an independent, verifiable supplier-comparison resource and secure third-party validation in at least two trade publications.':
-    'انشر مرجعًا مستقلًا وقابلًا للتحقق لمقارنة المورّدين، واحصل على توثيق من طرف ثالث في منشورتين تجاريتين على الأقل.',
+    'انشروا مرجعًا مستقلًا وقابلًا للتحقق لمقارنة المورّدين، واحصلوا على توثيق من طرف ثالث في منشورتين تجاريتين على الأقل.',
   'Secure independent validation: trade-publication contribution, verifiable customer outcomes and third-party specification references.':
-    'احصل على توثيق مستقل: مساهمة في منشورات تجارية، ونتائج عملاء قابلة للتحقق، ومراجع مواصفات من أطراف ثالثة.',
+    'احصلوا على توثيق مستقل: مساهمة في منشورات تجارية، ونتائج عملاء قابلة للتحقق، ومراجع مواصفات من أطراف ثالثة.',
   'Independent source count re-observed monthly, with each new source recorded by publication and date.':
     'يُعاد رصد عدد المصادر المستقلة شهريًا، مع تسجيل كل مصدر جديد بالمنشورة والتاريخ.',
   'Build supplier-comparison content against the eleven compound and strategic blind-spot questions, structured so it is both rankable and citable.':
-    'ابنِ محتوى لمقارنة المورّدين يستهدف الأسئلة الإحدى عشرة ذات النقاط العمياء المركّبة والاستراتيجية، ومهيكلًا بحيث يكون قابلًا للترتيب وللاستشهاد معًا.',
+    'ابنوا محتوى لمقارنة المورّدين يستهدف الأسئلة الإحدى عشرة ذات النقاط العمياء المركّبة والاستراتيجية، ومهيكلًا بحيث يكون قابلًا للترتيب وللاستشهاد معًا.',
 
   /* --- Trust ---------------------------------------------------------------- */
   Trust: 'الثقة',
@@ -852,7 +852,7 @@ export const content: ContentOverlay = {
 
   /* --- Competitive ---------------------------------------------------------- */
   'Competitive Intelligence': 'الذكاء التنافسي',
-  'Competitor Decision Intelligence': 'ذكاء قرار المنافسين',
+  'Competitor Decision Intelligence': 'ذكاء القرار لدى المنافسين',
   'Executive Intelligence': 'الذكاء التنفيذي',
   'Competitive density': 'الكثافة التنافسية',
   Replaceability: 'قابلية الاستبدال',
@@ -870,7 +870,7 @@ export const content: ContentOverlay = {
   'Absent. Meridian named first.': 'غائبة. ذُكرت Meridian أولًا.',
   'Absent. 35 searches per month.': 'غائبة. 35 عملية بحث شهريًا.',
   'Not who ranks above you — who gets recommended when a buyer asks a machine whom to choose. The useful output is never the share figure; it is the specific evidence a competitor supplies that you do not, because that is the part you can go and close.':
-    'ليس من يتفوق عليك في الترتيب — بل من يُوصى به حين يسأل مشترٍ آلةً عمّن يختار. والمخرَج المفيد ليس رقم الحصة أبدًا، بل الدليل المحدد الذي يوفّره منافس ولا توفّره أنت، لأن هذا هو الجزء الذي يمكنك الذهاب وسدّه.',
+    'ليس من يتفوق عليكم في الترتيب — بل من يُوصى به حين يسأل مشترٍ آلةً عمّن يختار. والمخرَج المفيد ليس رقم الحصة أبدًا، بل الدليل المحدد الذي يوفّره منافس ولا توفّره أنتم، لأن هذا هو الجزء الذي يمكنكم الذهاب وسدّه.',
   'Some rivals win early by shaping the criteria; others win late at vendor selection. The counter-move is completely different for each.':
     'بعض المنافسين يفوزون مبكرًا بتشكيل المعايير، وآخرون يفوزون متأخرًا عند اختيار المورّد. والحركة المضادة مختلفة تمامًا في كل حالة.',
   'Where a position rests on a single source or a single page, and would not survive one competitor publishing a better one.':
@@ -900,13 +900,13 @@ export const content: ContentOverlay = {
   'The evaluation criteria the market has settled on, and which competitor published them first.':
     'معايير التقييم التي استقر عليها السوق، وأي منافس نشرها أولًا.',
   'Publish an evaluation framework that makes regional response time a first-class selection criterion.':
-    'انشر إطار تقييم يجعل زمن الاستجابة الإقليمي معيار اختيار من الدرجة الأولى.',
+    'انشروا إطار تقييم يجعل زمن الاستجابة الإقليمي معيار اختيار من الدرجة الأولى.',
   'Publish a defensible evaluation framework that makes regional response time a first-class selection criterion.':
-    'انشر إطار تقييم قابلًا للدفاع عنه يجعل زمن الاستجابة الإقليمي معيار اختيار من الدرجة الأولى.',
+    'انشروا إطار تقييم قابلًا للدفاع عنه يجعل زمن الاستجابة الإقليمي معيار اختيار من الدرجة الأولى.',
 
   /* --- Google vs AI --------------------------------------------------------- */
-  'Google vs AI Visibility Intelligence': 'ذكاء الظهور: جوجل مقابل الذكاء الاصطناعي',
-  'Google position': 'الترتيب على جوجل',
+  'Google vs AI Visibility Intelligence': 'ذكاء الظهور: Google مقابل الذكاء الاصطناعي',
+  'Google position': 'الترتيب على Google',
   'Channel asymmetry': 'عدم تماثل القنوات',
   'Gap Matrix': 'مصفوفة الفجوات',
   'Gap classification': 'تصنيف الفجوة',
@@ -917,17 +917,17 @@ export const content: ContentOverlay = {
   'Traditional search and AI-mediated discovery are separate commercial assets that fail independently. This category measures each, classifies every gap between them, and prices what closing the gap is currently costing in paid media.':
     'البحث التقليدي والاكتشاف بوساطة الذكاء الاصطناعي أصلان تجاريان منفصلان يتعطلان باستقلال. تقيس هذه الفئة كلًا منهما، وتصنّف كل فجوة بينهما، وتسعّر ما يكلّفه سدّ الفجوة حاليًا في الإعلانات المدفوعة.',
   'Google rank and AI recommendation are separate commercial assets. Northwind ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.':
-    'الترتيب على جوجل وتوصية الذكاء الاصطناعي أصلان تجاريان منفصلان. تتصدر Northwind الترتيب في إعداد الحساب — وهو سؤال لا يُطرح إلا بعد اختيار المورّد — وتغيب عن كل سؤال يحسم هوية ذلك المورّد.',
+    'الترتيب على Google وتوصية الذكاء الاصطناعي أصلان تجاريان منفصلان. تتصدر Northwind الترتيب في إعداد الحساب — وهو سؤال لا يُطرح إلا بعد اختيار المورّد — وتغيب عن كل سؤال يحسم هوية ذلك المورّد.',
   'The same question asked of both surfaces, so the two results can finally be compared line by line instead of by anecdote.':
     'السؤال نفسه يُطرح على السطحين، بحيث يمكن أخيرًا مقارنة النتيجتين سطرًا بسطر بدلًا من المقارنة بالحكايات.',
   'Every gap sorted into a named class with a different remedy and a different cost. Not all absence is the same problem.':
     'كل فجوة مصنّفة ضمن فئة مسمّاة لها علاج مختلف وتكلفة مختلفة. فليس كل غياب هو المشكلة نفسها.',
   'Eleven of twenty tracked commercial keywords sit outside the Google top ten and receive no AI recommendation — the decision happens on neither surface.':
-    'إحدى عشرة من عشرين كلمة مفتاحية تجارية مرصودة تقع خارج العشرة الأوائل على جوجل ولا تتلقى أي توصية من الذكاء الاصطناعي — والقرار لا يحدث على أي من السطحين.',
+    'إحدى عشرة من عشرين كلمة مفتاحية تجارية مرصودة تقع خارج العشرة الأوائل على Google ولا تتلقى أي توصية من الذكاء الاصطناعي — والقرار لا يحدث على أي من السطحين.',
   'Absent from both surfaces on a high-value commercial question. The most expensive class of gap.':
     'غائب عن السطحين معًا في سؤال تجاري عالي القيمة. وهو أغلى أصناف الفجوات.',
   'Absent from AI answers and outside the Google top ten. The decision happens without the brand.':
-    'غائب عن إجابات الذكاء الاصطناعي وخارج العشرة الأوائل على جوجل. والقرار يحدث دون العلامة التجارية.',
+    'غائب عن إجابات الذكاء الاصطناعي وخارج العشرة الأوائل على Google. والقرار يحدث دون العلامة التجارية.',
   'Track gap classification per keyword monthly. Success is six keywords moving out of blind-spot classification.':
     'تتبّع تصنيف الفجوة لكل كلمة مفتاحية شهريًا. والنجاح هو خروج ست كلمات مفتاحية من تصنيف النقطة العمياء.',
 
@@ -961,12 +961,12 @@ export const content: ContentOverlay = {
   'Blended CPC runs above the break-even cost per click, and paid spend is covering questions where the brand has no organic or AI presence.':
     'تعمل تكلفة النقرة المدمجة فوق تكلفة النقرة عند التعادل، والإنفاق المدفوع يغطي أسئلة لا حضور للعلامة التجارية فيها عضويًا ولا في الذكاء الاصطناعي.',
   'Reallocate spend from keywords with a viable organic replacement path, and hold paid only where break-even still clears.':
-    'أعد توزيع الإنفاق بعيدًا عن الكلمات المفتاحية التي لها مسار بديل عضوي قابل للتطبيق، وأبقِ الإعلانات المدفوعة حيث تتحقق نقطة التعادل فقط.',
+    'أعيدوا توزيع الإنفاق بعيدًا عن الكلمات المفتاحية التي لها مسار بديل عضوي قابل للتطبيق، وأبقوا الإعلانات المدفوعة حيث تتحقق نقطة التعادل فقط.',
   'Compare blended CPC against break-even monthly, and track organic replacement on reallocated keywords.':
-    'قارن تكلفة النقرة المدمجة بنقطة التعادل شهريًا، وتتبّع الاستبدال العضوي في الكلمات المفتاحية المعاد توزيعها.',
+    'قارنوا تكلفة النقرة المدمجة بنقطة التعادل شهريًا، وتتبّعوا الاستبدال العضوي في الكلمات المفتاحية المعاد توزيعها.',
 
   /* --- Narrative -------------------------------------------------------------- */
-  'Narrative Intelligence': 'ذكاء السردية',
+  'Narrative Intelligence': 'ذكاء السرديات',
   'Narrative ownership 12% → 24%': 'ملكية السردية 12% ← 24%',
   'Narrative control': 'التحكم في السردية',
   'Narrative War Room': 'غرفة عمليات السردية',
@@ -979,7 +979,7 @@ export const content: ContentOverlay = {
   'Price justification': 'تبرير السعر',
   'Strategic silence': 'الصمت الاستراتيجي',
   'Whoever defines a category sets the criteria buyers evaluate against. This category measures how much of that definition you own, where it is fragile, and which of your genuine advantages the market has no vocabulary for.':
-    'من يعرّف الفئة يضع المعايير التي يقيس المشترون عليها. تقيس هذه الفئة كم تملك من ذلك التعريف، وأين يكون هشًا، وأي مزاياك الحقيقية لا يملك السوق مفردات لوصفها.',
+    'من يعرّف الفئة يضع المعايير التي يقيس المشترون عليها. تقيس هذه الفئة كم تملك من ذلك التعريف، وأين يكون هشًا، وأي مزاياكم الحقيقية لا يملك السوق مفردات لوصفها.',
   'Whoever defines the category sets the criteria buyers evaluate against. Competing on someone else’s definition means competing on terms chosen to favour them.':
     'من يعرّف الفئة يضع المعايير التي يقيس المشترون عليها. والتنافس على تعريف شخص آخر يعني التنافس بشروط اختيرت لصالحه.',
   'Engines describe the category in a competitor’s language. Northwind’s strongest differentiator is absent from every category description.':
@@ -1014,7 +1014,7 @@ export const content: ContentOverlay = {
   'The market is emerging with roughly seven months of open window; competitive density is rising 8% per quarter.':
     'السوق ناشئ مع نافذة مفتوحة تبلغ نحو سبعة أشهر؛ والكثافة التنافسية ترتفع 8% كل ربع.',
   'Commit authority investment before the decision deadline, while displacement cost remains low.':
-    'التزم باستثمار الحُجّية قبل الموعد النهائي للقرار، بينما تبقى تكلفة الإزاحة منخفضة.',
+    'التزموا باستثمار الحُجّية قبل الموعد النهائي للقرار، بينما تبقى تكلفة الإزاحة منخفضة.',
 
   /* --- Exposure and opportunity ------------------------------------------------ */
   'Directional commercial exposure': 'تعرّض تجاري اتجاهي',
@@ -1207,7 +1207,7 @@ export const content: ContentOverlay = {
     'كيف يتغيّر النشاط التجاري عبر الدول واللغات والأسواق؟',
   'Does the route to market strengthen the brand or transfer power to intermediaries?':
     'هل يقوّي مسار الوصول إلى السوق العلامة التجارية أم ينقل القوة إلى الوسطاء؟',
-  'See plans': 'اطّلع على الخطط',
+  'See plans': 'اطّلعوا على الخطط',
 
   /* ==========================================================================
      MARKETPLACE
@@ -1219,7 +1219,7 @@ export const content: ContentOverlay = {
   'Engines beneath them': 'المحركات تحتها',
   'of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
     'من هذه الوحدات تعمل مباشرةً في هذه البيئة على نشاط تجاري مُعاد بناؤه فعليًا. والبقية متاحة في المنصة.',
-  'Start with the question you actually have.': 'ابدأ من السؤال الذي لديك فعلاً.',
+  'Start with the question you actually have.': 'ابدأوا من السؤال الذي لديكم فعلاً.',
   'Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.':
     'كل فئة تنفتح على الوحدات التي تحتها. وكل وحدة تجيب عن سؤال تجاري واحد وتعيد دليلاً وتحليلاً وتوصية — لا رقمًا مجرّدًا أبدًا.',
   'What you are buying': 'ما الذي تشتريه',
@@ -1234,7 +1234,7 @@ export const content: ContentOverlay = {
     'ما الذي يجب فعله، ومن يملكه، وبحلول متى، وأي إشارة ينبغي أن تتحرك نتيجةً لذلك. ويُتحقَّق منه لاحقًا مقابل ما تحرّك فعلاً.',
   'Whatever the business question, there is already intelligence built for it.':
     'مهما كان السؤال التجاري، هناك ذكاء مبني له بالفعل.',
-  'See a module run live': 'شاهد وحدة تعمل مباشرةً',
+  'See a module run live': 'شاهدوا وحدة تعمل مباشرةً',
   'Monitor continuously instead': 'أو راقب بشكل مستمر بدلاً من ذلك',
   '7 live in demo': '7 تعمل في العرض التوضيحي',
   '4 live in demo': '4 تعمل في العرض التوضيحي',
@@ -1271,7 +1271,7 @@ export const content: ContentOverlay = {
   'This environment collects nothing. There is no analytics script, no tag manager, no session recording and no third-party tracker on any page.':
     'هذه البيئة لا تجمع أي شيء. لا يوجد سكربت تحليلات ولا مدير وسوم ولا تسجيل جلسات ولا أي أداة تتبّع من طرف ثالث في أي صفحة.',
   'The only data stored about you is your theme preference and any demonstration purchases, both held in your browser’s localStorage and readable only by this site. Nothing is transmitted anywhere. Clearing site data removes all of it, and the purchase-confirmation screen offers a reset control.':
-    'البيانات الوحيدة المخزَّنة عنك هي تفضيل السمة وأي عمليات شراء توضيحية، وكلاهما محفوظ في localStorage بمتصفحك ولا يمكن قراءته إلا من هذا الموقع. ولا يُرسَل أي شيء إلى أي جهة. ومسح بيانات الموقع يزيلها بالكامل، كما توفّر شاشة تأكيد الشراء زر إعادة تعيين.',
+    'البيانات الوحيدة المخزَّنة عنكم هي تفضيل السمة وأي عمليات شراء توضيحية، وكلاهما محفوظ في localStorage بمتصفحكم ولا يمكن قراءته إلا من هذا الموقع. ولا يُرسَل أي شيء إلى أي جهة. ومسح بيانات الموقع يزيلها بالكامل، كما توفّر شاشة تأكيد الشراء زر إعادة تعيين.',
   'Terms of service': 'شروط الخدمة',
   'No commercial terms apply. Nothing on this site constitutes an offer, and no contract can be formed through it.':
     'لا تنطبق أي شروط تجارية. ولا يشكّل أي شيء في هذا الموقع عرضًا، ولا يمكن إبرام أي عقد من خلاله.',
@@ -1299,7 +1299,7 @@ export const content: ContentOverlay = {
   'Sign In': 'تسجيل الدخول',
   'Sign In | GeoRepute': 'تسجيل الدخول | GeoRepute',
   Home: 'الرئيسية',
-  'Enter the demonstration workspace': 'ادخل إلى مساحة العمل التوضيحية',
+  'Enter the demonstration workspace': 'ادخلوا إلى مساحة العمل التوضيحية',
   'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
     'لا توجد مصادقة في هذه البيئة. فكل زائر يرى المؤسسة المزروعة نفسها، Northwind Supply، بحيث يبقى كل رقم قابلاً للتحقق مقابل المنهجية المنشورة.',
   Workspace: 'مساحة العمل',
@@ -1320,9 +1320,9 @@ export const content: ContentOverlay = {
      translating them rewrites the data. The component maps them to
      capitalised labels; translate those.
      ====================================================================== */
-  'Public narrative intelligence': 'ذكاء السردية العامة',
-  'Public Narrative Intelligence | GeoRepute': 'ذكاء السردية العامة | GeoRepute',
-  'Public Narrative Intelligence': 'ذكاء السردية العامة',
+  'Public narrative intelligence': 'ذكاء السرديات العامة',
+  'Public Narrative Intelligence | GeoRepute': 'ذكاء السرديات العامة | GeoRepute',
+  'Public Narrative Intelligence': 'ذكاء السرديات العامة',
   'What story is the market telling about us?': 'ما القصة التي يرويها السوق عنّا؟',
   'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
     'ليس كم مرة يُذكر النشاط التجاري. بل أي الروايات عنه نشطة، ومن يملك كلاً منها، وأيها يحسم ما إذا كان سيُختار.',
@@ -1646,7 +1646,7 @@ export const content: ContentOverlay = {
 
   /* --- Narrative action plan ------------------------------------------------------- */
   'Narrative action plan': 'خطة عمل السردية',
-  'Open narrative action plan': 'افتح خطة عمل السردية',
+  'Open narrative action plan': 'افتحوا خطة عمل السردية',
   'Monitor narrative changes': 'راقب تغيّرات السردية',
   'Check readiness before campaigning': 'تحقّق من الجاهزية قبل إطلاق الحملة',
   'Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.':
@@ -1939,8 +1939,8 @@ export const content: ContentOverlay = {
   'If you launch anyway': 'إذا أطلقت رغم ذلك',
   'Launch campaign': 'إطلاق الحملة',
   'Fix readiness first': 'عالِج الجاهزية أولاً',
-  'Open Executive Action Plan': 'افتح خطة العمل التنفيذية',
-  'Review the full position': 'راجع الموقف الكامل',
+  'Open Executive Action Plan': 'افتحوا خطة العمل التنفيذية',
+  'Review the full position': 'راجعوا الموقف الكامل',
   'Website and conversion readiness': 'جاهزية الموقع والتحويل',
   'What position are we launching into?': 'إلى أي موقع نُطلق؟',
   'AI narrative': 'سردية الذكاء الاصطناعي',
@@ -1958,7 +1958,7 @@ export const content: ContentOverlay = {
   'Decision Reconstruction | GeoRepute': 'إعادة بناء القرار | GeoRepute',
   'Signature experience': 'التجربة المميّزة',
   'Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.':
-    'أدخل نطاقًا واختر سؤالاً تجاريًا. يعيد النظام بناء ما فهمته كل واجهة، ومن حصل على القرار، ولماذا.',
+    'أدخلوا نطاقًا واختاروا سؤالاً تجاريًا. يعيد النظام بناء ما فهمته كل واجهة، ومن حصل على القرار، ولماذا.',
   'Seeded environment — this demonstration always reconstructs {org}.':
     'بيئة مزروعة — هذا العرض التوضيحي يعيد بناء {org} دائمًا.',
   Domain: 'النطاق',
@@ -2074,7 +2074,7 @@ export const content: ContentOverlay = {
   'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
     'ما القصة التي يرويها السوق عنّا، وكيف تؤثر في القرارات؟ السرديات النشطة، ومن يملك كلاً منها، وإلى أين تتجه، وما الذي ينبغي أن يتغيّر.',
   'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
-    'أدخل نطاقًا واختر سؤالاً تجاريًا. أعد بناء ما فهمه كل محرك ذكاء اصطناعي، ومن حصل على القرار، ولماذا، وما الذي يجب أن يتغيّر.',
+    'أدخلوا نطاقًا واختاروا سؤالاً تجاريًا. أعيدوا بناء ما فهمه كل محرك ذكاء اصطناعي، ومن حصل على القرار، ولماذا، وما الذي يجب أن يتغيّر.',
 
   /* --- The 24 tracked buyer questions. Translated on the same reasoning as the
          home page's search queries — a buyer in this market asks in Arabic. -- */
@@ -2132,7 +2132,7 @@ export const content: ContentOverlay = {
   'Not more data. A decision position.': 'ليست بيانات إضافية. بل موقف قرار.',
   'Ten measures, each with evidence behind it': 'عشرة مقاييس، لكل منها دليل وراءه',
   'Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.':
-    'كل رقم محسوب من بيانات مرصودة. اختر أي بطاقة لفتح القراءة الكاملة ودليلها والإجراء الموصوف لها.',
+    'كل رقم محسوب من بيانات مرصودة. اختاروا أي بطاقة لفتح القراءة الكاملة ودليلها والإجراء الموصوف لها.',
   Position: 'الموقع',
   Explanation: 'التفسير',
   Execution: 'التنفيذ',
@@ -2180,9 +2180,9 @@ export const content: ContentOverlay = {
     'المقاييس أعلاه ليست مستقلة. وهذه هي السلسلة التي تربطها، وتنتهي بالتدخّل الذي تستلزمه.',
   'One decision. Many signals. One explanation.':
     'قرار واحد. إشارات كثيرة. تفسير واحد.',
-  'Open evidence': 'افتح الأدلة',
-  'Open Action Center': 'افتح مركز الإجراءات',
-  'Reconstruct the decision': 'أعد بناء القرار',
+  'Open evidence': 'افتحوا الأدلة',
+  'Open Action Center': 'افتحوا مركز الإجراءات',
+  'Reconstruct the decision': 'أعيدوا بناء القرار',
   'Explore intelligence engines': 'استكشف محركات الذكاء',
 
   /* --- Executive intelligence feed ------------------------------------------------- */
@@ -2267,7 +2267,7 @@ export const content: ContentOverlay = {
   'Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.':
     'الإنجاز ليس أثرًا. فكل إجراء يُتحقَّق منه بإعادة رصد الإشارة التي يستهدفها، عبر المحركات والأسئلة نفسها، بعد التنفيذ. وإلى أن تتم إعادة الرصد تلك، يبقى التغيّر المقاس فارغًا بدل أن يُفترَض.',
   'Back to Mission Control': 'العودة إلى مركز القيادة',
-  'Read the methodology': 'اقرأ المنهجية',
+  'Read the methodology': 'اقرأوا المنهجية',
 
   /* ==========================================================================
      MARKETPLACE AND ENGINE DETAIL PAGES
@@ -2295,8 +2295,8 @@ export const content: ContentOverlay = {
   'One-time purchase. Placeholder pricing.': 'شراء لمرة واحدة. تسعير مبدئي.',
   'Buy this intelligence product': 'اشترِ منتج الذكاء هذا',
   'Buy {name}': 'اشترِ {name}',
-  'Compare with a subscription': 'قارن مع اشتراك',
-  'See the full ecosystem': 'اطّلع على المنظومة الكاملة',
+  'Compare with a subscription': 'قارنوا مع اشتراك',
+  'See the full ecosystem': 'اطّلعوا على المنظومة الكاملة',
   'by {date}': 'بحلول {date}',
 
   /* --- The eleven product fields --------------------------------------------------- */
@@ -2340,7 +2340,7 @@ export const content: ContentOverlay = {
   'Take one question, or take the whole category.':
     'خذ سؤالاً واحدًا، أو خذ الفئة بأكملها.',
   'Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.':
-    'كل عملية شراء تبيّن ما تفحصه، وما تحتاجه منك، ومستوى الثقة الذي تستطيع بلوغه، وكم تكلّف. ولا تلزم مكالمة مبيعات لمعرفة أي من ذلك.',
+    'كل عملية شراء تبيّن ما تفحصه، وما تحتاجه منكم، ومستوى الثقة الذي تستطيع بلوغه، وكم تكلّف. ولا تلزم مكالمة مبيعات لمعرفة أي من ذلك.',
   'One engine produces this category.': 'محرك واحد يُنتج هذه الفئة.',
   '{n} engines produce this category.': '{n} محركات تُنتج هذه الفئة.',
   'Engines are the machinery, not the offer. Nothing above required you to know one existed.':
@@ -2591,7 +2591,7 @@ export const content: ContentOverlay = {
   'Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.':
     'فهم الكيان والحضور في التوصيات مقياسان منفصلان. فقد يحيل المحرك إلى النشاط التجاري بشكل صحيح ومع ذلك لا يقدّمه أبدًا — فالتعرّف شرط لازم للتوصية لا كافٍ.',
   'Coverage measured against real buying questions rather than keywords — the difference between being findable and being present.':
-    'تغطية تُقاس مقابل أسئلة شراء حقيقية لا مقابل كلمات مفتاحية — الفرق بين أن تكون قابلاً للعثور عليك وأن تكون حاضرًا.',
+    'تغطية تُقاس مقابل أسئلة شراء حقيقية لا مقابل كلمات مفتاحية — الفرق بين أن تكون قابلاً للعثور عليكم وأن تكون حاضرًا.',
   'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
     'رقم حصة سوقية لسوق لا يقيسه أحد حاليًا — توصيات صدرت، لا نقرات وردت.',
   'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':

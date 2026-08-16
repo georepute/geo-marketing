@@ -126,6 +126,31 @@ everywhere, in every locale, since the table was written.
 - Every dictionary and overlay is marked `reviewed: false`. **None has been
   read by a native speaker.** This is the one remaining launch blocker in the
   translation workstream and no amount of auditing substitutes for it.
+
+  What *has* been done is the mechanical half. `node scripts/i18n-review.mjs`
+  encodes `lib/i18n/GLOSSARY.md` as an executable spec — token and `<b>`
+  integrity, edge whitespace, foreign-script contamination, the
+  do-not-translate list, the core-term table, Spanish `¿`/`¡`, Arabic `،`/`؟`,
+  and Arabic address — and reports nothing. Run it before sending a file to a
+  translator so their attention goes on register rather than on hunting a
+  dropped `{token}`. Each dictionary's `meta.notes` records what that pass
+  changed in that specific file.
+
+  That pass found four things worth knowing about, because each was invisible
+  to the route audits that had already declared the site done:
+
+  1. **`Google` was transliterated in about half of he and ar**, and the two
+     languages disagreed about which half. Now Latin everywhere, per the
+     glossary's do-not-translate list.
+  2. **Both core terms had drifted in every overlay** while all six
+     dictionaries held them correctly — so the nav label and the engine card
+     rendered the same concept two different ways on the same page.
+  3. **`Content and media execution` had become *creation* in all six.** The
+     banned-vocabulary list names the noun; the verb is what carried the
+     positioning.
+  4. **Arabic addressed the reader in the singular throughout** — 72 forms
+     against 1 plural — where Hebrew was already plural and the glossary asks
+     for plural. Now consistent.
 - **`i18n-keys.mjs` only sees literal `t('…')` calls.** The methodology page
   passes three arrays through `t(variable)`; the script reported 0 missing
   while 25 strings were still English. Treat it as a worklist, never as proof.
@@ -334,9 +359,17 @@ produced three false readings before it was found. Reverting
 
 ```bash
 npm run typecheck && npm run lint && npm test && npm run build
+node scripts/i18n-review.mjs      # exits 1 on any finding
 ```
 
-Currently: typecheck ✓ · lint ✓ · **222 tests** ✓ · build ✓ (**298 pages**).
+Currently: typecheck ✓ · lint ✓ · **222 tests** ✓ · build ✓ (**298 pages**) ·
+i18n-review **0 findings**.
+
+**There is no Prettier in this project** and adding one is not a formatting
+preference, it is a 3,400-line diff. The repo is single-quoted and
+semicolon-free; `npx prettier --write` on the six dictionaries rewrote every
+string in them to double quotes with semicolons and buried a 101-line content
+change inside it. `eslint` is the only formatter here.
 
 Two notes on running that gate. `next build` and a running `next dev` both own
 `.next`, so a build started while a dev server is up gets clobbered and
@@ -351,8 +384,9 @@ it on its own before believing it.
 
 In order. Each is a session's work or less.
 
-Translation is **done** — all fifteen routes in all six locales. What follows
-needs a person, not more of the same work.
+Translation is **done** — all 42 routes in all six locales, and the mechanical
+review in `scripts/i18n-review.mjs` is clean. What follows needs a person, not
+more of the same work.
 
 1. **Native review of all six dictionaries and all six overlays.** Flip
    `reviewed: false` only when a human has actually read one. This is a launch
@@ -361,6 +395,16 @@ needs a person, not more of the same work.
    حُجّية (evidentiary weight) rather than سُلطة (power), and Portuguese is
    European rather than Brazilian. The reviewer should also be told which
    proper nouns are deliberately untranslated (§7) so they do not "fix" them.
+
+   Give them `lib/i18n/GLOSSARY.md` and the file's own `meta.notes`, and tell
+   them what is *already* settled so they do not spend the pass re-deciding it:
+   the number conventions differ per locale on purpose, French's
+   English-identical strings are correct French, Hebrew keeps `AI` and the
+   maqaf rules are right, and two Arabic strings are singular because they are
+   buyer questions rather than instructions. **Arabic deserves the closest
+   read** — its second-person address was rewritten across 100+ strings in this
+   pass, and agreement after a pronoun swap is precisely what a reader catches
+   and a script does not.
 2. **The `/legal` page becomes false the moment `CAL_API_KEY` is set.** It
    currently states "Nothing is transmitted anywhere" in all six languages.
    Booking a briefing will transmit a name, an email and a time to an external
@@ -408,6 +452,7 @@ lib/format/index.ts           Intl only. dateFull/dateBrief take an optional tag
 scripts/i18n-audit.mjs        Render a page, list remaining English
 scripts/i18n-keys.mjs         List t() keys a locale overlay is missing
 scripts/i18n-port.mjs         Keys one overlay has that another lacks
+scripts/i18n-review.mjs       GLOSSARY.md as an executable check
 scripts/screens.mjs           Screenshot slot report
 
 docs/PRE-LAUNCH.md            Launch checklist
@@ -455,6 +500,29 @@ in English. *If the demo is ever pointed at a real Israeli or Arabic-speaking
 market, these should be the phrases that market actually searches, not
 translations of the US ones.* That is a content decision, not a translation
 one. Noted in `he.ts`.
+
+**`Google` stays in Latin script in all six locales, including he and ar.**
+Both were split roughly half and half between `גוגל`/`جوجل` and Latin, and
+disagreed with each other about which strings got which — Hebrew wrote
+`Google vs AI Gap Scan` in Latin but `Google vs AI Gap` in Hebrew script;
+Arabic did the reverse. Latin everywhere resolves it, and three things argue
+for that direction over the transliteration: the glossary's do-not-translate
+list already said so, `ru`/`fr`/`es`/`pt` already complied, and the evidence
+table stacks `Google + Perplexity` and `Google + ChatGPT` in a single column
+where a transliterated Google reads as a different product. Both files already
+prefix Latin terms (`ה-AI`, `ל-AI`, `وGoogle`), so nothing foreign was
+introduced. *A native reviewer who prefers `גוגל` can flip it with one script
+now that it is consistent.* Hebrew keeps `AI` in Latin on the same reasoning.
+
+**Arabic addresses the reader in the plural, everywhere — not just on CTAs.**
+The glossary said "for CTAs", and the file honoured it nowhere: 72 singular
+forms against 1 plural. Fixing only the buttons made it read *worse* — plural
+on the button, singular `نشاطك` in the paragraph above it — so the rule was
+widened to the whole file and the glossary updated to match. Two strings stay
+singular deliberately: `افتح حساب توريد للصيانة والتشغيل` and `احصل على عرض
+سعر لمثبّتات الدرجة 8 بالجملة` are tracked buyer questions, text a buyer types
+rather than an instruction to the reader. `scripts/i18n-review.mjs` carries the
+same two exceptions.
 
 **One English string carries one translation.** The overlay is keyed by source
 text, so the same English cannot have two different translations in two
@@ -549,6 +617,23 @@ string.
   outside `ContentProvider` renders English *silently*. When a string is
   demonstrably wrapped and still comes out English, suspect the provider
   boundary before you suspect the key.
+- **A term can be right in the dictionary and wrong in the overlay.** Both
+  core glossary terms had drifted in all six overlays while all six
+  dictionaries held them correctly, so the nav label and the engine card
+  rendered the same concept two different ways *on the same page*. Neither
+  file is wrong on its own; only the pair is. Check a term in both layers.
+- **Never word-substitute Arabic.** Half the verbs in this content are
+  homographs of something else: `تعرّف` is the noun *recognition* in
+  `تعرّف {score}/100`; `يُقارن` is a passive that contains `قارن`; and `أكّد`,
+  `حلّل`, `اطّلع`, `قارن` are each also a 3rd-person past tense. A regex
+  boundary of `[ء-ي]` is not enough either — Arabic diacritics sit between the
+  letters, so `(?<![ء-ي])` happily matches inside `يُقارن`. Replace whole
+  strings you have read. The one blanket substitution attempted in this pass
+  (`أنت` → `أنتم`) broke agreement in two places within seconds.
+- **JavaScript `\b` is ASCII-only.** A word-boundary regex over Arabic or
+  Hebrew matches nothing at all and reports a clean sweep. The first Arabic
+  address scan returned `0 singular, 0 plural` on a file that was entirely
+  singular. Use explicit script ranges as boundaries.
 - **A sync component cannot call `getT()`.** The two row components in
   `marketplace/category/[slug]` take the page's translator as a prop instead.
   Making them `async` would also work; passing it down keeps one translator

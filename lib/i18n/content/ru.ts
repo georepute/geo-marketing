@@ -406,7 +406,7 @@ export const content: ContentOverlay = {
   'What is changing in the market, and which of it is addressable. Anonymised demonstration data.':
     'Что меняется на рынке и с чем из этого можно работать. Анонимизированные демонстрационные данные.',
   'Narrative Intelligence — narrative ownership and movement':
-    'Интеллект нарратива — владение нарративом и его движение',
+    'Нарративный интеллект — владение нарративом и его движение',
   'Which account of the category is circulating, and whose language it uses. Anonymised demonstration data.':
     'Какая версия категории циркулирует и чьим языком она изложена. Анонимизированные демонстрационные данные.',
   'Trust & Authority — independent-source verification view':
@@ -850,7 +850,7 @@ export const content: ContentOverlay = {
 
   /* --- Competitive ---------------------------------------------------------- */
   'Competitive Intelligence': 'Конкурентный интеллект',
-  'Competitor Decision Intelligence': 'Интеллект конкурентных решений',
+  'Competitor Decision Intelligence': 'Интеллект решений конкурентов',
   'Executive Intelligence': 'Интеллект для руководства',
   'Competitive density': 'Конкурентная плотность',
   Replaceability: 'Заменимость',
@@ -967,7 +967,7 @@ export const content: ContentOverlay = {
     'Ежемесячно сравнивайте смешанную цену клика с точкой безубыточности и отслеживайте органическое замещение по перераспределённым ключевым словам.',
 
   /* --- Narrative -------------------------------------------------------------- */
-  'Narrative Intelligence': 'Интеллект нарратива',
+  'Narrative Intelligence': 'Нарративный интеллект',
   'Narrative ownership 12% → 24%': 'Владение нарративом 12% → 24%',
   'Narrative control': 'Контроль нарратива',
   'Narrative War Room': 'Штаб нарратива',
@@ -1324,9 +1324,9 @@ export const content: ContentOverlay = {
      translating them rewrites the data. The component maps them to
      capitalised labels; translate those.
      ====================================================================== */
-  'Public narrative intelligence': 'Интеллект публичного нарратива',
-  'Public Narrative Intelligence | GeoRepute': 'Интеллект публичного нарратива | GeoRepute',
-  'Public Narrative Intelligence': 'Интеллект публичного нарратива',
+  'Public narrative intelligence': 'Нарративный интеллект публичной сферы',
+  'Public Narrative Intelligence | GeoRepute': 'Нарративный интеллект публичной сферы | GeoRepute',
+  'Public Narrative Intelligence': 'Нарративный интеллект публичной сферы',
   'What story is the market telling about us?': 'Какую историю рынок рассказывает о нас?',
   'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
     'Не как часто упоминается бизнес. А какие версии о нём активны, кто владеет каждой из них и какие из них решают, выберут его или нет.',

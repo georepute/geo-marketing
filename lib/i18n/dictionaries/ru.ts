@@ -15,7 +15,7 @@ import type { DictionaryMeta, PartialDictionary } from '../types'
 export const meta: DictionaryMeta = {
   reviewed: false,
   notes:
-    'Complete first-pass translation, formal register. Requires native review against lib/i18n/GLOSSARY.md before launch — core terms and evidence language first, style second.',
+    'Complete first-pass translation, formal register (вы). scripts/i18n-review.mjs passes. This pass restored the core terms Нарративный интеллект and Интеллект решений конкурентов, which had drifted to a descriptive paraphrase in the overlay while the dictionary held them correctly — so nav and engine card disagreed on the same page. STILL NEEDS a native speaker for register and for anglicisms where a Russian term exists.',
 }
 
 export const dictionary: PartialDictionary = {
@@ -296,7 +296,7 @@ export const dictionary: PartialDictionary = {
     label: 'Экосистема',
     partners: [
       { description: 'Группа, стоящая за GeoRepute.' },
-      { description: 'Создание контента и медиа.' },
+      { description: 'Реализация контента и медиа.' },
       { description: 'Измерение восприятия.' },
     ],
   },

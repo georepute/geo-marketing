@@ -14,7 +14,7 @@ import type { DictionaryMeta, PartialDictionary } from '../types'
 export const meta: DictionaryMeta = {
   reviewed: false,
   notes:
-    'Complete first-pass translation, vouvoiement. Requires native review against lib/i18n/GLOSSARY.md before launch.',
+    'Complete first-pass translation, vouvoiement. scripts/i18n-review.mjs passes; typographic apostrophes and spacing before ? ; : are consistent throughout. This pass restored Intelligence narrative and Intelligence décisionnelle concurrentielle, which had drifted to Intelligence du récit / des décisions concurrentielles in the overlay. STILL NEEDS a native speaker for register. Note that many strings are byte-identical to English (Position, Format, Articles, Citations) and are correct French — do not treat them as untranslated.',
 }
 
 export const dictionary: PartialDictionary = {
@@ -301,7 +301,7 @@ export const dictionary: PartialDictionary = {
     label: 'Écosystème',
     partners: [
       { description: 'Le groupe derrière GeoRepute.' },
-      { description: 'Création de contenu et de médias.' },
+      { description: 'Exécution de contenu et de médias.' },
       { description: 'Mesure de la perception.' },
     ],
   },

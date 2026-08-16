@@ -15,7 +15,7 @@ import type { DictionaryMeta, PartialDictionary } from '../types'
 export const meta: DictionaryMeta = {
   reviewed: false,
   notes:
-    'Complete first-pass translation. Requires native review against lib/i18n/GLOSSARY.md before launch — check the core terms table and the evidence language first, style second.',
+    'Complete first-pass translation. scripts/i18n-review.mjs passes: tokens, markup, script purity, core terms and protected nouns all clean. This pass normalised Google to Latin (was split גוגל/Google) and corrected two strings that had drifted to בינה מלאכותית where the file otherwise uses AI 223 times. Plural address throughout, already correct. STILL NEEDS a native speaker for register — whether this reads as institutional intelligence writing or as translated English marketing. Read the §19 commercial copy at the top first.',
 }
 
 export const dictionary: PartialDictionary = {
@@ -28,7 +28,7 @@ export const dictionary: PartialDictionary = {
   analyticsDisruption: 'האנליטיקה שלכם מתחילה מאוחר מדי.',
   aiRecognition: 'האם מנועי AI מבינים מה העסק שלכם?',
   aiPresence: 'האם אתם נוכחים כשלקוחות שואלים AI במי לבחור?',
-  googleVsAi: 'עסק יכול להתקיים ב-AI ולהיעלם בגוגל.',
+  googleVsAi: 'עסק יכול להתקיים ב-AI ולהיעלם ב-Google.',
   competitors: 'ראו היכן המתחרים מקבלים את ההחלטה לפני שאתם מקבלים את הליד.',
   narrative: 'כשהשוק מסביר את הקטגוריה שלכם, באיזו שפה הוא משתמש?',
   searchEconomics: 'דעו מתי חיפוש ממומן נעשה יקר מכדי להצדיק אותו.',
@@ -51,11 +51,11 @@ export const dictionary: PartialDictionary = {
     liveEntry: 'ראו מה השוק מבין על העסק שלכם.',
     liveEntrySub: 'הזינו דומיין וקבלו תצוגה מיידית ומבוקרת.',
     googleVsAiFull:
-      'עסק יכול להתקיים ב-AI ולהיעלם בגוגל. או לשלוט בגוגל ולהיעלם כשקונים שואלים AI.',
+      'עסק יכול להתקיים ב-AI ולהיעלם ב-Google. או לשלוט ב-Google ולהיעלם כשקונים שואלים AI.',
     googleVsAiSub: 'שני משטחי גילוי, כשני נכסים מסחריים נפרדים.',
     graph: 'החלטה אחת. אותות רבים. הסבר אחד.',
     graphSub:
-      'כיצד AI, גוגל, רכישה ממומנת, מתחרים, נרטיב, אמון, גאוגרפיה ותוכן מתחברים.',
+      'כיצד AI, Google, רכישה ממומנת, מתחרים, נרטיב, אמון, גאוגרפיה ותוכן מתחברים.',
     engines: 'שנים־עשר מנועי מודיעין. מערכת הפעלה אחת.',
     enginesSub: 'כל מנוע מוצג דרך השאלה העסקית שהוא עונה עליה.',
     marketplaceSub: 'ניתן לרכוש אבחון ממוקד ללא התחייבות לפלטפורמה המלאה.',
@@ -164,7 +164,7 @@ export const dictionary: PartialDictionary = {
             description: 'האם מנועי AI מבינים מי העסק?',
           },
           {
-            label: 'נראות גוגל מול AI',
+            label: 'נראות Google מול AI',
             description: 'האם הוא מתקיים באופן עקבי בשני משטחי הגילוי?',
           },
           {
@@ -286,7 +286,7 @@ export const dictionary: PartialDictionary = {
     label: 'המערכת',
     partners: [
       { description: 'הקבוצה שמאחורי GeoRepute.' },
-      { description: 'יצירת תוכן ומדיה.' },
+      { description: 'ביצוע תוכן ומדיה.' },
       { description: 'מדידת תפיסה.' },
     ],
   },
@@ -352,7 +352,7 @@ export const dictionary: PartialDictionary = {
         links: [
           { label: 'שוק המודיעין' },
           { label: 'זיהוי על ידי AI' },
-          { label: 'גוגל מול AI' },
+          { label: 'Google מול AI' },
           { label: 'החלטת מתחרים' },
           { label: 'מודיעין פעולה' },
         ],
@@ -450,7 +450,7 @@ export const dictionary: PartialDictionary = {
     fragmentedLabel: 'המודל המנותק',
     fragmentedLede: 'רוב העסקים פועלים דרך מערכות מנותקות.',
     fragmentedItems: [
-      'פלטפורמה אחת מודדת את גוגל.',
+      'פלטפורמה אחת מודדת את Google.',
       'אחרת מנטרת AI.',
       'אחרת מנתחת מתחרים.',
       'מישהו בונה את האסטרטגיה.',
@@ -463,7 +463,7 @@ export const dictionary: PartialDictionary = {
 
     connectedLede: 'GeoRepute מחברת את מחזור ההחלטה כולו.',
     connectedBody:
-      'היא מתחילה במודיעין עומק על העסק, השוק, המתחרים, הלקוחות, גוגל, מנועי AI והסביבה הדיגיטלית הרחבה. היא הופכת את המודיעין הזה לאסטרטגיה הבנויה סביב יעדים עסקיים מוגדרים. לאחר מכן היא יוצרת ומפיצה את התוכן והמדיה הנדרשים לביצוע אותה אסטרטגיה. ואז היא מודדת האם הפעולות הללו אכן שינו את האותות שהן נועדו לשנות. ומה שהמערכת לומדת הופך למודיעין של המחזור הבא.',
+      'היא מתחילה במודיעין עומק על העסק, השוק, המתחרים, הלקוחות, Google, מנועי AI והסביבה הדיגיטלית הרחבה. היא הופכת את המודיעין הזה לאסטרטגיה הבנויה סביב יעדים עסקיים מוגדרים. לאחר מכן היא יוצרת ומפיצה את התוכן והמדיה הנדרשים לביצוע אותה אסטרטגיה. ואז היא מודדת האם הפעולות הללו אכן שינו את האותות שהן נועדו לשנות. ומה שהמערכת לומדת הופך למודיעין של המחזור הבא.',
 
     cycle: 'תכנון ← ביצוע ← בדיקה ← פעולה ← חזרה',
     cycleSub: 'מעגל אחד רציף ממודיעין לביצוע.',
@@ -476,7 +476,7 @@ export const dictionary: PartialDictionary = {
         signalsLabel: 'המערכת מנתחת אותות מתוך',
         signals: [
           'מנועי AI',
-          'גוגל',
+          'Google',
           'חיפוש',
           'מתחרים',
           'שוק',
@@ -499,7 +499,7 @@ export const dictionary: PartialDictionary = {
           'כיצד העסק מובן ומיוצג',
           'מה מנועי AI יודעים עליו',
           'מתי ה-AI ממליץ עליו — ומתי לא',
-          'מה גוגל מציגה ברגעים קריטיים',
+          'מה Google מציגה ברגעים קריטיים',
           'במה נתקלים לקוחות לפני שהם מגיעים לאתר',
           'אילו שאלות משפיעות על החלטת הרכישה',
           'היכן העסק נכנס למערך השיקולים',
@@ -586,7 +586,7 @@ export const dictionary: PartialDictionary = {
           'האם הסמכות התחזקה?',
           'האם האמון השתפר?',
           'האם הנרטיב זז?',
-          'האם הנראות בגוגל השתנתה?',
+          'האם הנראות ב-Google השתנתה?',
           'האם לקוחות החלו להיתקל במידע החסר?',
           'האם הפער התחרותי הצטמצם?',
           'האם אותו מתחרה עדיין מקבל את ההחלטה?',
@@ -715,7 +715,7 @@ export const dictionary: PartialDictionary = {
       'שווקים זזים.',
       'מתחרים זזים.',
       'שאלות לקוחות משתנות.',
-      'גוגל משתנה.',
+      'Google משתנה.',
       'מערכות AI משתנות.',
       'נרטיבים משתנים.',
       'המידע סביב העסק משתנה.',
@@ -828,7 +828,7 @@ export const dictionary: PartialDictionary = {
         name: 'נראות בחיפוש וב-AI',
         question: 'מה מוצא בוחר כשהוא מחפש את המועמד הזה?',
         items: [
-          'נראות בגוגל',
+          'נראות ב-Google',
           'נראות והמלצות במנועי AI',
           'במה כל מנוע פותח',
           'היכן הגרסאות סותרות זו את זו',
@@ -885,6 +885,6 @@ export const dictionary: PartialDictionary = {
 
   meta: {
     description:
-      'GeoRepute משחזרת כיצד עסקים מזוהים, נבחנים, מומלצים, זוכים לאמון ונבחרים במנועי AI, בגוגל, בערוצים דיגיטליים ובתפיסת השוק.',
+      'GeoRepute משחזרת כיצד עסקים מזוהים, נבחנים, מומלצים, זוכים לאמון ונבחרים במנועי AI, ב-Google, בערוצים דיגיטליים ובתפיסת השוק.',
   },
 }
