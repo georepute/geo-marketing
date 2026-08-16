@@ -3,6 +3,7 @@
 import { ScoreMeter } from '@/components/signal/Indicators'
 import { percent } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
+import { useT } from '@/lib/i18n/content/client'
 import type { EngineMatrixRow } from '@/lib/api/types'
 
 /* ============================================================================
@@ -35,21 +36,26 @@ export function AIRecognitionMatrix({
   rows: EngineMatrixRow[]
   className?: string
 }) {
+  const t = useT()
   return (
     <div className={cn('min-w-0', className)}>
       <div className="rounded-md border border-line bg-panel overflow-x-auto">
         <table className="w-full min-w-[46rem]">
           <thead>
             <tr className="text-label uppercase text-ink-3">
-              <th className="text-start font-normal p-4">Engine</th>
+              <th className="text-start font-normal p-4">{t('Engine')}</th>
               <th className="text-start font-normal p-4 w-[13rem]">
-                Entity understanding
+                {t('Entity understanding')}
               </th>
-              <th className="text-start font-normal p-4">Category resolved</th>
               <th className="text-start font-normal p-4">
-                Recommendation presence
+                {t('Category resolved')}
               </th>
-              <th className="text-start font-normal p-4">What it believes</th>
+              <th className="text-start font-normal p-4">
+                {t('Recommendation presence')}
+              </th>
+              <th className="text-start font-normal p-4">
+                {t('What it believes')}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -59,7 +65,7 @@ export function AIRecognitionMatrix({
               return (
                 <tr key={row.id} className="border-t border-line align-top">
                   <td className="p-4">
-                    <span className="text-body text-ink">{row.name}</span>
+                    <span className="text-body text-ink">{t(row.name)}</span>
                   </td>
 
                   <td className="p-4">
@@ -86,7 +92,7 @@ export function AIRecognitionMatrix({
                         style={{ background: status.token }}
                       />
                       <span className="text-caption text-ink-2">
-                        {status.label}
+                        {t(status.label)}
                       </span>
                     </span>
                   </td>
@@ -105,19 +111,19 @@ export function AIRecognitionMatrix({
                     </span>
                     {silent ? (
                       <span className="block text-label uppercase text-ink-3 mt-1">
-                        Never recommends
+                        {t('Never recommends')}
                       </span>
                     ) : null}
                   </td>
 
                   <td className="p-4">
-                    <p className="text-caption text-ink-2">{row.understoodAs}</p>
+                    <p className="text-caption text-ink-2">{t(row.understoodAs)}</p>
                     {row.confusion ? (
                       <p
                         className="text-caption mt-2"
                         style={{ color: 'var(--gr-critical)' }}
                       >
-                        {row.confusion}
+                        {t(row.confusion)}
                       </p>
                     ) : null}
                   </td>
@@ -129,9 +135,7 @@ export function AIRecognitionMatrix({
       </div>
 
       <p className="text-caption text-ink-3 mt-3 max-w-3xl">
-        Entity understanding and recommendation presence are separate measures.
-        An engine can resolve the business correctly and still never put it
-        forward — recognition is necessary for a recommendation, not sufficient.
+        {t('Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.')}
       </p>
     </div>
   )

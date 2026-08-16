@@ -1,7 +1,10 @@
+'use client'
+
 import { Link } from '@/components/i18n/Link'
 import { ArrowRight } from 'lucide-react'
 import { ENGINE_ICON } from '@/lib/visual/icons'
 import { cn } from '@/lib/utils/cn'
+import { useT } from '@/lib/i18n/content/client'
 import type { IntelligenceModule } from '@/lib/api/types'
 
 /* ============================================================================
@@ -27,15 +30,16 @@ import type { IntelligenceModule } from '@/lib/api/types'
    ========================================================================= */
 
 export function ModuleCard({ module: mod }: { module: IntelligenceModule }) {
+  const t = useT()
   const Icon = ENGINE_ICON[mod.engineSlug]
 
   const body = (
     <>
       {/* --- The question ------------------------------------------- */}
-      <p className="text-body text-ink text-balance">{mod.question}</p>
+      <p className="text-body text-ink text-balance">{t(mod.question)}</p>
 
       {/* --- What it surfaces --------------------------------------- */}
-      <p className="text-caption text-ink-2 mt-4 grow">{mod.reveals}</p>
+      <p className="text-caption text-ink-2 mt-4 grow">{t(mod.reveals)}</p>
 
       {/* --- Provenance and availability ---------------------------- */}
       <span className="flex items-center gap-3 mt-5 pt-4 border-t border-line">
@@ -43,7 +47,7 @@ export function ModuleCard({ module: mod }: { module: IntelligenceModule }) {
           <Icon aria-hidden className="size-3.5 text-ink-3 shrink-0" />
         ) : null}
         <span className="text-caption text-ink-3 truncate min-w-0 flex-1">
-          {mod.name}
+          {t(mod.name)}
         </span>
 
         {mod.live ? (
@@ -53,7 +57,7 @@ export function ModuleCard({ module: mod }: { module: IntelligenceModule }) {
               className="size-1.5 rounded-full"
               style={{ background: 'var(--gr-positive)' }}
             />
-            <span className="text-label uppercase text-ink-2">Live</span>
+            <span className="text-label uppercase text-ink-2">{t('Live')}</span>
             <ArrowRight
               aria-hidden
               className={cn(
@@ -64,7 +68,7 @@ export function ModuleCard({ module: mod }: { module: IntelligenceModule }) {
           </span>
         ) : (
           <span className="text-label uppercase text-ink-3 shrink-0">
-            In platform
+            {t('In platform')}
           </span>
         )}
       </span>

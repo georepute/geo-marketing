@@ -2385,4 +2385,518 @@ export const content: ContentOverlay = {
   'Awaiting real screen': 'ממתין למסך אמיתי',
   'Anonymised or demonstration data only. No customer names, domains, personal data or confidential figures.':
     'נתונים אנונימיים או הדגמתיים בלבד. ללא שמות לקוחות, דומיינים, מידע אישי או נתונים חסויים.',
+
+  /* ==========================================================================
+     MARKETPLACE AND ENGINE DETAIL PAGES
+
+     Nineteen routes: /marketplace/[slug] ×8, /marketplace/category/[slug] ×7
+     and /engines/[slug] ×4. They were never audited until the route list was
+     enumerated properly, and were fully English in all six locales.
+
+     Composite strings the audit prints — "Entry · Snapshot", "Next: …",
+     "Advanced tier · Advanced" — are NOT keys. The component joins two
+     translated halves, so each half is keyed separately. Same for the
+     <Rich> count sentence, which the audit sees as fragments around its
+     emphasised spans.
+     ====================================================================== */
+
+  /* --- Product page chrome --------------------------------------------------------- */
+  Breadcrumb: 'פירורי לחם',
+  'Intelligence Marketplace': 'שוק המודיעין',
+  'Intelligence Engines': 'מנועי המודיעין',
+  'Product detail': 'פרטי המוצר',
+  'Everything needed to decide, without a sales call':
+    'כל מה שצריך כדי להחליט, בלי שיחת מכירה',
+  'What you receive': 'מה מקבלים',
+  'A real readout from this product, on seeded data':
+    'קריאה אמיתית מהמוצר הזה, על נתונים מזורעים',
+  'Every intelligence product returns the same twelve-section anatomy: executive truth, business meaning, evidence, connected signals, competitor context, commercial exposure, timing, trend, prescription, expected movement, owner and measurement.':
+    'כל מוצר מודיעין מחזיר את אותו מבנה בן שנים עשר חלקים: האמת הניהולית, המשמעות העסקית, הראיות, האותות המקושרים, ההקשר התחרותי, החשיפה המסחרית, התזמון, המגמה, ההמלצה, התנועה הצפויה, האחראי והמדידה.',
+  'One-time purchase. Placeholder pricing.': 'רכישה חד-פעמית. תמחור זמני.',
+  'Buy this intelligence product': 'רכשו את מוצר המודיעין הזה',
+  'Buy {name}': 'רכשו {name}',
+  'Compare with a subscription': 'השוו מול מנוי',
+  'See the full ecosystem': 'ראו את המערכת המלאה',
+  'by {date}': 'עד {date}',
+
+  /* --- The eleven product fields --------------------------------------------------- */
+  'Business question': 'השאלה העסקית',
+  'Decision consequence': 'השלכת ההחלטה',
+  'What it detects': 'מה זה מאתר',
+  'Required inputs': 'קלטים נדרשים',
+  Scope: 'היקף',
+  'Intelligence depth': 'עומק המודיעין',
+  Delivery: 'אספקה',
+  'Time to delivery': 'זמן עד לאספקה',
+  'Commercial terms': 'תנאים מסחריים',
+  'Upgrade path': 'מסלול שדרוג',
+  Depth: 'עומק',
+  Date: 'תאריך',
+  Finding: 'ממצא',
+  Engine: 'מנוע',
+  Observed: 'נצפה',
+  Live: 'פעיל',
+  You: 'אתם',
+
+  /* Tier display labels. The component maps the lowercase discriminants
+     (entry / advanced / premium) onto these before translating — see the
+     TIER_LABEL note in marketplace/[slug]/page.tsx. */
+  Entry: 'בסיסי',
+  'Advanced tier': 'מתקדם',
+  Premium: 'פרימיום',
+  /* Depth values. Already capitalised in the seed, so no collision. */
+  Snapshot: 'תמונת מצב',
+  Advanced: 'מתקדם',
+  Strategic: 'אסטרטגי',
+  Executive: 'ניהולי',
+
+  /* --- Category page --------------------------------------------------------------- */
+  'All intelligence categories': 'כל קטגוריות המודיעין',
+  'Other intelligence categories': 'קטגוריות מודיעין אחרות',
+  'Every module answers one question.': 'כל מודול עונה על שאלה אחת.',
+  'Each returns the evidence behind its answer, what that answer means commercially, and what should change as a result.':
+    'כל אחד מחזיר את הראיות שמאחורי תשובתו, את משמעותה המסחרית ואת מה שצריך להשתנות בעקבותיה.',
+  'Buy this intelligence': 'רכשו את המודיעין הזה',
+  'Take one question, or take the whole category.':
+    'קחו שאלה אחת, או קחו את הקטגוריה כולה.',
+  'Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.':
+    'כל רכישה מציינת מה היא בוחנת, מה היא צריכה מכם, באיזו רמת ודאות היא יכולה לפעול וכמה היא עולה. אין צורך בשיחת מכירה כדי לגלות דבר מכל אלה.',
+  'One engine produces this category.': 'מנוע אחד מייצר את הקטגוריה הזו.',
+  '{n} engines produce this category.': '{n} מנועים מייצרים את הקטגוריה הזו.',
+  'Engines are the machinery, not the offer. Nothing above required you to know one existed.':
+    'המנועים הם המכונה, לא ההצעה. שום דבר למעלה לא דרש מכם לדעת שקיים מנוע כזה.',
+  '{n} modules': '{n} מודולים',
+  '<b>{n}</b> intelligence modules in this category.':
+    '<b>{n}</b> מודולי מודיעין בקטגוריה הזו.',
+  '<b>{n}</b> intelligence modules in this category · <b>{live}</b> running live in this environment.':
+    '<b>{n}</b> מודולי מודיעין בקטגוריה הזו · <b>{live}</b> פועלים בסביבה הזו.',
+  Built: 'נבנה',
+  'In platform': 'במוצר',
+  'In the platform': 'במוצר',
+
+  /* --- Engine detail page ---------------------------------------------------------- */
+  'Intelligence readout': 'קריאת מודיעין',
+  'What this engine concluded': 'למה המנוע הזה הגיע',
+  'Signal, evidence, consequence, action': 'אות, ראיה, השלכה, פעולה',
+  'Screens this engine provides': 'המסכים שהמנוע הזה מספק',
+  'Next: {name}': 'הבא: {name}',
+
+  /* --- Delivery, scope and inputs -------------------------------------------------- */
+  'After scan completion — typically under 20 minutes':
+    'עם סיום הסריקה — בדרך כלל פחות מ-20 דקות',
+  'After scan completion — typically under 30 minutes':
+    'עם סיום הסריקה — בדרך כלל פחות מ-30 דקות',
+  'After scan completion — typically under 60 minutes':
+    'עם סיום הסריקה — בדרך כלל פחות מ-60 דקות',
+  'Expert-reviewed — within 3 business days': 'בבדיקת מומחה — תוך 3 ימי עסקים',
+  'Optional: Search Console': 'רשות: Search Console',
+  'Optional: Search Console and Analytics': 'רשות: Search Console ו-Google Analytics',
+  'Up to 4 competitors': 'עד 4 מתחרים',
+  'Google + 6 engines': 'Google + 6 מנועים',
+  '6 AI engines · entity and category association · 1 market':
+    '6 מנועי AI · שיוך ישות וקטגוריה · שוק אחד',
+  '6 AI engines · 20 commercial questions · 4 competitors · 1 market':
+    '6 מנועי AI · 20 שאלות מסחריות · 4 מתחרים · שוק אחד',
+  '6 AI engines · 24 decision questions · 4 competitors':
+    '6 מנועי AI · 24 שאלות החלטה · 4 מתחרים',
+  '6 AI engines · 24 decision questions · 5 decision stages':
+    '6 מנועי AI · 24 שאלות החלטה · 5 שלבי החלטה',
+  '6 AI engines · 24 questions · 20 keywords · 4 competitors · full GEON assessment':
+    '6 מנועי AI · 24 שאלות · 20 מילות מפתח · 4 מתחרים · הערכת GEON מלאה',
+  '6 AI engines · 24 questions · 4 competitors · citation analysis':
+    '6 מנועי AI · 24 שאלות · 4 מתחרים · ניתוח ציטוטים',
+  '6 AI engines · 24 questions · 5 stages · 4 competitors':
+    '6 מנועי AI · 24 שאלות · 5 שלבים · 4 מתחרים',
+  'Public trust and reputation sources · 1 market':
+    'מקורות אמון ומוניטין ציבוריים · שוק אחד',
+  'Continuous monitoring, additional markets, or the full platform with history and alerts.':
+    'ניטור מתמשך, שווקים נוספים, או המוצר המלא עם היסטוריה והתראות.',
+  'Continuous monitoring, quarterly executive regeneration, or enterprise implementation.':
+    'ניטור מתמשך, הפקה ניהולית רבעונית מחדש, או הטמעה ארגונית.',
+  'Continuous prompt monitoring and visibility trends.':
+    'ניטור מתמשך של שאילתות ומגמות נראות.',
+  'Continuous competitor monitoring and momentum tracking.':
+    'ניטור מתמשך של מתחרים ומעקב אחר תאוצה.',
+  'Continuous monitoring with stage-level alerting.':
+    'ניטור מתמשך עם התראות ברמת השלב.',
+  'Competitive War Room with continuous monitoring.':
+    'חדר מלחמה תחרותי עם ניטור מתמשך.',
+  'Recognition history and decay monitoring.': 'היסטוריית זיהוי וניטור שחיקה.',
+  'Reputation momentum and trust decay monitoring.':
+    'תאוצת מוניטין וניטור שחיקת אמון.',
+  'Interactive workspace': 'סביבת עבודה אינטראקטיבית',
+  'Downloadable intelligence brief': 'תדריך מודיעין להורדה',
+  'Expert interpretation': 'פרשנות מומחה',
+  'Evidence pack': 'חבילת ראיות',
+  'Action plan': 'תוכנית פעולה',
+
+  /* --- Product names ----------------------------------------------------------------
+     These are product names, but they are descriptive rather than branded —
+     "AI Recognition Scan" tells a buyer what it does. Left in English they
+     would be the only untranslated line on an otherwise Hebrew page. */
+  'AI Recognition Scan': 'סריקת זיהוי AI',
+  'AI Recognition Scan | GeoRepute': 'סריקת זיהוי AI | GeoRepute',
+  'AI Search Presence Scan': 'סריקת נוכחות בחיפוש AI',
+  'AI Search Presence Scan | GeoRepute': 'סריקת נוכחות בחיפוש AI | GeoRepute',
+  'Google vs AI Gap Scan': 'סריקת הפער בין Google ל-AI',
+  'Google vs AI Gap Scan | GeoRepute': 'סריקת הפער בין Google ל-AI | GeoRepute',
+  'Competitor Recommendation Scan': 'סריקת המלצות מתחרים',
+  'Competitor Recommendation Scan | GeoRepute': 'סריקת המלצות מתחרים | GeoRepute',
+  'Trust Signals Scan': 'סריקת אותות אמון',
+  'Trust Signals Scan | GeoRepute': 'סריקת אותות אמון | GeoRepute',
+  'Decision Journey Diagnostic': 'אבחון מסע ההחלטה',
+  'Decision Journey Diagnostic | GeoRepute': 'אבחון מסע ההחלטה | GeoRepute',
+  'Competitive Position Assessment': 'הערכת עמדה תחרותית',
+  'Competitive Position Assessment | GeoRepute': 'הערכת עמדה תחרותית | GeoRepute',
+  'Executive Intelligence Brief': 'תדריך מודיעין ניהולי',
+  'Executive Intelligence Brief | GeoRepute': 'תדריך מודיעין ניהולי | GeoRepute',
+  'Decision Reconstruction — a completed reconstruction': 'שחזור החלטה — שחזור שהושלם',
+  'Mission Control → the composite Decision Health position panel':
+    'מרכז הבקרה ← לוח העמדה המשולב של בריאות ההחלטה',
+  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
+    'שאלה מסחרית אחת, משוחזרת ממה שכל מנוע הבין ועד למה שחייב להשתנות. נתוני הדגמה אנונימיים.',
+  'One decision position rather than ten measures. Anonymised demonstration data.':
+    'עמדת החלטה אחת במקום עשרה מדדים. נתוני הדגמה אנונימיים.',
+
+  /* --- Module business questions ----------------------------------------------------
+     One per module. These are the questions the marketplace is organised
+     around, so they carry more weight per word than anything else on the
+     page — the category page leads with the question, not the module name. */
+  'Does AI understand what the business actually does?':
+    'האם ה-AI מבין מה העסק באמת עושה?',
+  'Do AI engines understand who the business is and what it offers?':
+    'האם מנועי AI מבינים מיהו העסק ומה הוא מציע?',
+  'Which AI systems know the business exists, and which do not?':
+    'אילו מערכות AI יודעות שהעסק קיים, ואילו לא?',
+  'Is AI confusing the business with someone else?':
+    'האם ה-AI מבלבל בין העסק לבין מישהו אחר?',
+  'Is AI describing a version of the business that no longer exists?':
+    'האם ה-AI מתאר גרסה של העסק שכבר אינה קיימת?',
+  'Is the business becoming less recognised over time?':
+    'האם העסק הופך לפחות מזוהה עם הזמן?',
+  'Is the business visible when customers ask for recommendations?':
+    'האם העסק נראה כשלקוחות מבקשים המלצות?',
+  'When a buyer describes a need, is the business in the set AI considers?':
+    'כשקונה מתאר צורך, האם העסק נמצא בקבוצה שה-AI שוקל?',
+  'Across the questions buyers actually ask, how often does the business appear at all?':
+    'על פני השאלות שקונים באמת שואלים, באיזו תדירות העסק מופיע בכלל?',
+  'Of all the recommendations made in this category, what share names the business?':
+    'מכלל ההמלצות הניתנות בקטגוריה הזו, איזה נתח נוקב בשם העסק?',
+  'On those same questions, does AI put the business forward at all?':
+    'על אותן שאלות עצמן, האם ה-AI מציע את העסק בכלל?',
+  'Do the two discovery surfaces tell the same story about us?':
+    'האם שני משטחי הגילוי מספרים עלינו את אותו הסיפור?',
+  'Is the business aligned across traditional search and AI discovery?':
+    'האם העסק מיושר בין חיפוש מסורתי לגילוי באמצעות AI?',
+  'Which commercial questions are invisible on both surfaces at once?':
+    'אילו שאלות מסחריות אינן נראות בשני המשטחים בעת ובעונה אחת?',
+  'Where does the business rank on the questions that carry commercial intent?':
+    'היכן העסק מדורג בשאלות שנושאות כוונה מסחרית?',
+  'Where does existing authority already rank but fail to reach AI?':
+    'היכן סמכות קיימת כבר מדורגת אך אינה מגיעה ל-AI?',
+  'What kind of gap is this, and does it deserve investment?':
+    'איזה סוג של פער זה, והאם הוא ראוי להשקעה?',
+  'What is the business actually paying per commercial click?':
+    'כמה העסק באמת משלם על קליק מסחרי?',
+  'Above what price does a click stop making money?':
+    'מעל איזה מחיר קליק מפסיק להיות רווחי?',
+  'How much of current demand would disappear if paid search stopped tomorrow?':
+    'איזה חלק מהביקוש הנוכחי ייעלם אם החיפוש הממומן ייפסק מחר?',
+  'Which paid positions could be replaced by owned authority?':
+    'אילו עמדות ממומנות אפשר להחליף בסמכות בבעלות העסק?',
+  'Is the cost of the same position rising, and how fast?':
+    'האם עלות אותה עמדה עולה, ובאיזה קצב?',
+  'Who is being recommended instead of the business, and how often?':
+    'למי ממליצים במקום העסק, ובאיזו תדירות?',
+  'Who is recommended instead, where and why?': 'למי ממליצים במקום, היכן ומדוע?',
+  'Why do competitors capture the decision?': 'מדוע מתחרים לוכדים את ההחלטה?',
+  'What specifically makes a competitor recommendable?':
+    'מה בדיוק הופך מתחרה לראוי להמלצה?',
+  'How much more evidence supports them than supports us?':
+    'בכמה יותר ראיות תומכות בהם מאשר בנו?',
+  'Which specific questions does each competitor own?':
+    'אילו שאלות ספציפיות כל מתחרה מחזיק?',
+  'At which stage does each competitor take control?':
+    'באיזה שלב כל מתחרה משתלט?',
+  'Where is the leading competitor actually weak?':
+    'היכן המתחרה המוביל באמת חלש?',
+  'How easily could a competitor take the narrative from us?':
+    'באיזו קלות מתחרה יכול לקחת מאיתנו את הנרטיב?',
+  'Do the sources that mention the business carry any weight?':
+    'האם המקורות שמזכירים את העסק נושאים משקל כלשהו?',
+  'How much of what the business claims can anyone else confirm?':
+    'איזה חלק ממה שהעסק טוען מישהו אחר יכול לאשר?',
+  'When AI cites a source to justify an answer, is any of it yours?':
+    'כשה-AI מצטט מקור כדי להצדיק תשובה, האם משהו מזה שלכם?',
+  'Which sources are shaping what AI believes about the business?':
+    'אילו מקורות מעצבים את מה שה-AI מאמין לגבי העסק?',
+  'Which trust signals strengthen or weaken recommendation readiness?':
+    'אילו אותות אמון מחזקים או מחלישים את המוכנות להמלצה?',
+  'Is the evidence supporting the business ageing?':
+    'האם הראיות התומכות בעסק מתיישנות?',
+  'Where does the business disappear during the buyer decision process?':
+    'היכן העסק נעלם במהלך תהליך ההחלטה של הקונה?',
+  'At which point in the buying journey does presence collapse?':
+    'באיזו נקודה במסע הרכישה הנוכחות קורסת?',
+  'Which specific buying questions complete without the business ever being named?':
+    'אילו שאלות רכישה ספציפיות מסתיימות מבלי שהעסק נוקב בשמו כלל?',
+  'How many buying decisions are actually in play?':
+    'כמה החלטות רכישה באמת על הפרק?',
+  'What is one of those decisions worth to the business?':
+    'כמה שווה אחת מההחלטות האלה לעסק?',
+  'What is the gap worth, and how confident can we be?':
+    'כמה שווה הפער, ובאיזו רמת ודאות אפשר לומר זאת?',
+  'What has to be true for this estimate to hold?':
+    'מה צריך להיות נכון כדי שההערכה הזו תחזיק?',
+  'Which of those blind spots are also high value?':
+    'אילו מהנקודות העיוורות האלה הן גם בעלות ערך גבוה?',
+  'Which of our genuine advantages does the market never mention?':
+    'אילו מהיתרונות האמיתיים שלנו השוק לעולם אינו מזכיר?',
+  'How much of the language used to describe this category belongs to the business?':
+    'איזה חלק מהשפה שמתארת את הקטגוריה הזו שייך לעסק?',
+  'Whose framing do machines use when they explain the category?':
+    'במסגור של מי מכונות משתמשות כשהן מסבירות את הקטגוריה?',
+  'Which criteria do machines cite first when explaining a choice?':
+    'אילו קריטריונים מכונות מצטטות ראשונים כשהן מסבירות בחירה?',
+  'Does the market think the business is expensive?':
+    'האם השוק חושב שהעסק יקר?',
+  'Is this market forming, forming fast, or already settled?':
+    'האם השוק הזה נוצר, נוצר במהירות, או כבר התייצב?',
+  'Do buyers know enough yet to be worth persuading?':
+    'האם הקונים יודעים כבר מספיק כדי שיהיה כדאי לשכנע אותם?',
+  'Which markets are ready to be entered now?': 'לאילו שווקים כדאי להיכנס עכשיו?',
+  'How quickly is the position moving, and in which direction?':
+    'באיזו מהירות העמדה זזה, ולאיזה כיוון?',
+  'Where in the world is the business strong, and where is it absent?':
+    'היכן בעולם העסק חזק, והיכן הוא נעדר?',
+  'Does the business mean the same thing in every market?':
+    'האם העסק אומר את אותו הדבר בכל שוק?',
+  'Does the business mean something different in each country?':
+    'האם העסק אומר משהו אחר בכל מדינה?',
+  'Does the business tell the same story everywhere it appears?':
+    'האם העסק מספר את אותו הסיפור בכל מקום שבו הוא מופיע?',
+  'Do partners describe the business the way it describes itself?':
+    'האם שותפים מתארים את העסק כפי שהוא מתאר את עצמו?',
+  'How much of the market position rests on intermediaries?':
+    'איזה חלק מהעמדה בשוק נשען על מתווכים?',
+  'How easily could the business be swapped out of the channel?':
+    'באיזו קלות אפשר להחליף את העסק בתוך הערוץ?',
+  'Can the channel explain why the business costs more?':
+    'האם הערוץ יכול להסביר מדוע העסק עולה יותר?',
+  'What is the complete management position on risk, opportunity, timing and action?':
+    'מהי עמדת ההנהלה המלאה בנוגע לסיכון, הזדמנות, תזמון ופעולה?',
+  'What should the business do, in what order?':
+    'מה על העסק לעשות, ובאיזה סדר?',
+  'Which intervention returns most, and what is currently blocked?':
+    'איזו התערבות מניבה הכי הרבה, ומה חסום כרגע?',
+  'What lands this month, this quarter, and this year?':
+    'מה נוחת החודש, ברבעון הזה ובשנה הזו?',
+  'How long before an intervention shows up in the numbers?':
+    'כמה זמן עובר עד שהתערבות מופיעה במספרים?',
+  'Did the work move the signal it was supposed to move?':
+    'האם העבודה הזיזה את האות שהיא הייתה אמורה להזיז?',
+
+  /* --- What each module detects, and why it matters commercially ------------------- */
+  'An engine that cannot categorise a business cannot recommend it. Entity confusion sits upstream of every visibility metric — content investment cannot move an answer while the underlying record is wrong.':
+    'מנוע שאינו מסוגל לסווג עסק אינו יכול להמליץ עליו. בלבול ישויות יושב במעלה הזרם של כל מדד נראות — השקעה בתוכן אינה יכולה להזיז תשובה כל עוד הרשומה הבסיסית שגויה.',
+  'Name collisions, merged records and mistaken identities — a single unresolved conflation can remove a business from every answer in its category.':
+    'התנגשויות שמות, רשומות שמוזגו וזהויות שגויות — ערבוב יחיד שלא נפתר יכול להוציא עסק מכל תשובה בקטגוריה שלו.',
+  'Discontinued lines, closed locations, former ownership and superseded positioning still being repeated to buyers as current fact.':
+    'קווי מוצר שהופסקו, סניפים שנסגרו, בעלות קודמת ומיצוב שהוחלף — כולם עדיין נמסרים לקונים כעובדה עדכנית.',
+  'Recognition erodes when competitors keep publishing and you stop. Decay is measurable for months before it shows up as absence.':
+    'הזיהוי נשחק כשמתחרים ממשיכים לפרסם ואתם מפסיקים. השחיקה ניתנת למדידה חודשים לפני שהיא מתבטאת בהיעדרות.',
+  'Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.':
+    'הבנת הישות והנוכחות בהמלצות הם שני מדדים נפרדים. מנוע יכול לזהות את העסק נכון ועדיין לא להציע אותו לעולם — הזיהוי הכרחי להמלצה, אך אינו מספיק.',
+  'Coverage measured against real buying questions rather than keywords — the difference between being findable and being present.':
+    'כיסוי הנמדד מול שאלות רכישה אמיתיות ולא מול מילות מפתח — ההבדל בין להיות ניתן למציאה לבין להיות נוכח.',
+  'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
+    'נתון נתח שוק עבור שוק שאיש אינו מודד כרגע — המלצות שניתנו, לא קליקים שהתקבלו.',
+  'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':
+    'עסק שמדורג בגוגל עדיין יכול להיעדר מכל תשובת AI שמכריעה מיהו הספק. ההפך שכיח באותה מידה. כל משטח הוא נכס מסחרי נפרד, וא-סימטריה בין ערוצים אינה נראית לא לכלי SEO ולא לכלי אנליטיקה.',
+  'Businesses that dominate one surface and disappear on the other — a divergence that stays invisible while each channel is reported separately.':
+    'עסקים ששולטים במשטח אחד ונעלמים באחר — פער שנשאר בלתי נראה כל עוד כל ערוץ מדווח בנפרד.',
+  'The most expensive class of gap — absent from both surfaces on a question that carries real volume and real intent.':
+    'סוג הפער היקר ביותר — היעדרות משני המשטחים בשאלה שנושאת נפח אמיתי וכוונה אמיתית.',
+  'The cheapest wins available: questions where you have already done the work and only the machine-readable form of it is missing.':
+    'הניצחונות הזולים ביותר הזמינים: שאלות שבהן כבר עשיתם את העבודה וחסרה רק הצורה שלה שקריאה למכונה.',
+  'Cost per click weighted by the questions that decide purchases, rather than averaged across an account that includes cheap, irrelevant traffic.':
+    'עלות לקליק משוקללת לפי השאלות שמכריעות רכישות, במקום ממוצע על פני חשבון שכולל תנועה זולה ולא רלוונטית.',
+  'A computed ceiling from deal value, margin and conversion — the number most advertising accounts are managed without ever calculating.':
+    'תקרה מחושבת מתוך שווי העסקה, המרווח וההמרה — המספר שרוב חשבונות הפרסום מנוהלים מבלי שחושב מעולם.',
+  'A costed switch list — which spend can be retired, what has to be published first, and how long the replacement takes to hold.':
+    'רשימת החלפה מתומחרת — איזו הוצאה אפשר לבטל, מה צריך לפרסם קודם, וכמה זמן לוקח לתחליף להחזיק.',
+  'Competitive density expressed as a price trend, so the structural cost of staying still becomes visible before the budget review.':
+    'צפיפות תחרותית המבוטאת כמגמת מחיר, כך שהעלות המבנית של עמידה במקום נעשית גלויה עוד לפני דיון התקציב.',
+  'Whether paid is buying growth or renting positions that authority would otherwise hold for free.':
+    'האם הממומן קונה צמיחה או שוכר עמדות שסמכות הייתה מחזיקה בהן בחינם.',
+  'Knowing a competitor wins is not actionable. Knowing which evidence engines cite when they recommend that competitor is. This separates brand preference from an evidence gap you can close.':
+    'לדעת שמתחרה מנצח אינו מידע בר-פעולה. לדעת באילו ראיות המנועים מצטטים כשהם ממליצים על אותו מתחרה — כן. זה מפריד בין העדפת מותג לבין פער ראיות שאפשר לסגור.',
+  'The individual assets a machine reaches for when it justifies choosing them — publications, comparisons, specifications, verified outcomes.':
+    'הנכסים הבודדים שמכונה נאחזת בהם כשהיא מצדיקה את בחירתם — פרסומים, השוואות, מפרטים ותוצאות מאומתות.',
+  'Structured comparison of the evidence each competitor supplies to engines, and what it would take to match it. Converts a share gap into a specific, costed evidence programme.':
+    'השוואה מובנית של הראיות שכל מתחרה מספק למנועים, ומה יידרש כדי להשתוות. ממירה פער נתח לתוכנית ראיות ספציפית ומתומחרת.',
+  'The questions a dominant rival does not answer, does not cover, or answers badly — the cheapest available places to take share.':
+    'השאלות שיריב דומיננטי אינו עונה עליהן, אינו מכסה, או עונה עליהן רע — המקומות הזולים ביותר לקחת בהם נתח.',
+  'The share of visibility owned by partners rather than by the business, which is the share that leaves if the relationship ends.':
+    'נתח הנראות שמוחזק בידי שותפים ולא בידי העסק — והוא הנתח שהולך אם הקשר מסתיים.',
+  'Visibility creates attention; trust creates selection. A business can be found and still be filtered out when an engine has to stand behind naming it first.':
+    'נראות יוצרת תשומת לב; אמון יוצר בחירה. עסק יכול להימצא ועדיין להיפלט כשמנוע צריך לעמוד מאחורי הצבתו במקום הראשון.',
+  'A countable ratio of independent sources, which turns an abstract brand gap into a publishing programme with a known scope and cost.':
+    'יחס בר-ספירה של מקורות בלתי תלויים, שהופך פער מותג מופשט לתוכנית פרסום עם היקף ועלות ידועים.',
+  'Being mentioned and being cited are different commercial positions. Only one of them survives into the next answer the system gives.':
+    'להיות מוזכר ולהיות מצוטט הן שתי עמדות מסחריות שונות. רק אחת מהן שורדת אל תוך התשובה הבאה שהמערכת נותנת.',
+  'The small set of pages that disproportionately determine every answer given — frequently including a directory nobody at the company knows exists.':
+    'קבוצת העמודים הקטנה שקובעת באופן לא פרופורציונלי כל תשובה שניתנת — ולא פעם כוללת מדריך שאיש בחברה אינו יודע שהוא קיים.',
+  'Proof has a shelf life. Case studies, coverage and reviews lose weight with age, and the decline is measurable before selection stops.':
+    'להוכחה יש תוקף. מקרי בוחן, סיקור וביקורות מאבדים משקל עם הזמן, והירידה ניתנת למדידה עוד לפני שהבחירה נפסקת.',
+  'Most businesses lose the decision at one specific stage, not evenly across the journey. Locating that stage tells you where intervention returns most, and where further investment returns nothing.':
+    'רוב העסקים מפסידים את ההחלטה בשלב אחד ספציפי, לא באופן אחיד לאורך המסע. איתור השלב הזה מלמד היכן ההתערבות מניבה הכי הרבה, והיכן השקעה נוספת אינה מניבה דבר.',
+  'Losses concentrate at one stage rather than spreading evenly. Locating that stage tells you where intervention returns, and where it returns nothing.':
+    'ההפסדים מתרכזים בשלב אחד במקום להתפרס באופן אחיד. איתור השלב הזה מלמד היכן ההתערבות מניבה, והיכן היא אינה מניבה דבר.',
+  'The exact questions where a decision was made and the business was not in the room. These are not lost leads; no lead was ever created.':
+    'השאלות המדויקות שבהן התקבלה החלטה והעסק לא היה בחדר. אלה אינם לידים שאבדו; ליד מעולם לא נוצר.',
+  'Questions where the decision happens entirely without you, and where no channel measurement can show it, because nothing ever reached a channel.':
+    'שאלות שבהן ההחלטה מתרחשת לחלוטין בלעדיכם, ושום מדידת ערוץ אינה יכולה להראות זאת, כי דבר מעולם לא הגיע לערוץ.',
+  'Presence averaged across all questions hides the collapse that matters. What decides revenue is presence at the supplier-evaluation stage, and that figure is usually far lower than the headline.':
+    'נוכחות ממוצעת על פני כל השאלות מסתירה את הקריסה שחשובה. מה שמכריע את ההכנסה הוא הנוכחות בשלב הערכת הספקים, והנתון הזה בדרך כלל נמוך בהרבה מהכותרת.',
+  'The size of the decision market itself, counted in decisions rather than in searches, sessions or impressions.':
+    'גודלו של שוק ההחלטות עצמו, נמדד בהחלטות ולא בחיפושים, סשנים או חשיפות.',
+  'Value per decision by stage and question type, so a high-volume gap is not automatically ranked above a low-volume, high-value one.':
+    'ערך להחלטה לפי שלב וסוג שאלה, כך שפער בעל נפח גבוה לא ידורג אוטומטית מעל פער בעל נפח נמוך וערך גבוה.',
+  'A directional range with its confidence stated — never a single confident figure, and never described as confirmed lost revenue.':
+    'טווח כיווני עם רמת הוודאות שלו מוצהרת — לעולם לא נתון בודד ובטוח, ולעולם לא מתואר כהכנסה שאבדה בוודאות.',
+  'Every assumption behind an exposure figure, stated and editable — because a number whose assumptions are hidden cannot be argued with or trusted.':
+    'כל הנחה שמאחורי נתון חשיפה, מוצהרת וניתנת לעריכה — כי מספר שהנחותיו מוסתרות אי אפשר להתווכח איתו ואי אפשר לבטוח בו.',
+  'Real differentiators that never appear in any category description — strengths the market currently has no vocabulary to express.':
+    'בידולים אמיתיים שאינם מופיעים באף תיאור של הקטגוריה — חוזקות שלשוק אין כרגע אוצר מילים לבטא אותן.',
+  'Whether buyers are evaluating against criteria a competitor published, which quietly decides the outcome before anyone is compared.':
+    'האם הקונים מעריכים לפי קריטריונים שמתחרה פרסם, מה שמכריע בשקט את התוצאה עוד לפני שמישהו הושווה.',
+  'Where the business sits on a price spectrum in the eyes of machines describing it — an assumption that shapes shortlists before any quote is sent.':
+    'היכן העסק ממוקם על סקאלת המחירים בעיני המכונות שמתארות אותו — הנחה שמעצבת רשימות קצרות עוד לפני שנשלחה הצעת מחיר.',
+  'Demand maturity and competitive density per market, so expansion is sequenced by readiness rather than by proximity or preference.':
+    'בשלות הביקוש והצפיפות התחרותית לכל שוק, כך שההתרחבות מתועדפת לפי מוכנות ולא לפי קרבה או העדפה.',
+  'Rate of change rather than a snapshot, so a strong position that is deteriorating is not mistaken for a safe one.':
+    'קצב השינוי ולא תמונת מצב, כדי שעמדה חזקה שנשחקת לא תיחשב בטעות לעמדה בטוחה.',
+  'Position measured market by market, which routinely contradicts the single global figure a company believes it has.':
+    'עמדה הנמדדת שוק אחר שוק, מה שסותר באופן שגרתי את הנתון הגלובלי היחיד שחברה מאמינה שיש לה.',
+  'How category, positioning and reputation change across borders, including markets where the business is understood as a different kind of company entirely.':
+    'כיצד הקטגוריה, המיצוב והמוניטין משתנים מעבר לגבולות, לרבות שווקים שבהם העסק נתפס כחברה מסוג אחר לגמרי.',
+  'Where positioning drifts by geography or language, so a business is a category leader in one market and an unknown in the next.':
+    'היכן המיצוב נסחף לפי גאוגרפיה או שפה, כך שעסק הוא מוביל קטגוריה בשוק אחד ואלמוני בשוק הבא.',
+  'Where a channel partner’s description of your product is what machines have learned — and where that description is wrong.':
+    'היכן התיאור של שותף ערוץ למוצר שלכם הוא מה שהמכונות למדו — והיכן התיאור הזה שגוי.',
+  'Whether the brand is specified by name or treated as an interchangeable supplier — usually the more expensive answer of the two.':
+    'האם המותג מצוין בשמו או נתפס כספק בר-החלפה — בדרך כלל התשובה היקרה מבין השתיים.',
+  'Whether the reasons for a premium survive the trip through distribution, or arrive at the buyer as an unexplained higher number.':
+    'האם הסיבות לפרמיה שורדות את המסע דרך ההפצה, או מגיעות לקונה כמספר גבוה יותר ללא הסבר.',
+  'A board-ready position rather than a dashboard. States what is happening, what it means commercially, what the directional exposure is, how long the window stays open, and what must change — with owners and deadlines.':
+    'עמדה מוכנה לדירקטוריון ולא לוח מחוונים. מציינת מה קורה, מה זה אומר מסחרית, מהי החשיפה הכיוונית, כמה זמן החלון נשאר פתוח ומה חייב להשתנות — עם אחראים ומועדים.',
+  'Ranked by exposure, confidence, urgency, effort and competitor pressure.':
+    'מדורג לפי חשיפה, ודאות, דחיפות, מאמץ ולחץ תחרותי.',
+  'The lag between doing the work and seeing the movement, which is what stops a working programme from being cancelled a month too early.':
+    'הפער בין ביצוע העבודה לבין הופעת התנועה — וזה מה שמונע ביטול של תוכנית עובדת חודש מוקדם מדי.',
+  'Measured change against the predicted change, including the interventions that did not work — which is the only way the model earns trust.':
+    'השינוי שנמדד מול השינוי שנחזה, כולל ההתערבויות שלא עבדו — וזו הדרך היחידה שבה המודל זוכה לאמון.',
+  'Corroborated claims reduce the risk an engine takes in naming a supplier first.':
+    'טענות מאוששות מקטינות את הסיכון שמנוע לוקח כשהוא נוקב בשם ספק ראשון.',
+
+  /* --- Readout labels and competitor findings -------------------------------------- */
+  'Category description': 'תיאור הקטגוריה',
+  'Category resolved': 'הקטגוריה זוהתה',
+  'Confusion and conflation': 'בלבול וערבוב',
+  'Recommendation presence': 'נוכחות בהמלצות',
+  'Recommendation share and momentum': 'נתח ההמלצות והתאוצה',
+  'Recommendation share by stage': 'נתח ההמלצות לפי שלב',
+  'Recommendation share across 24 decision questions':
+    'נתח ההמלצות על פני 24 שאלות החלטה',
+  'Mentions and citations': 'אזכורים וציטוטים',
+  'Social proof quality': 'איכות ההוכחה החברתית',
+  'Source advantage analysis': 'ניתוח יתרון המקורות',
+  'Authority driver comparison': 'השוואת מנועי הסמכות',
+  'Competitor vulnerability': 'פגיעות המתחרה',
+  'Competitor control per stage': 'שליטת המתחרים לפי שלב',
+  'Competitive threat': 'איום תחרותי',
+  'Default vendor threat': 'איום ספק ברירת המחדל',
+  'Why the competitor wins': 'מדוע המתחרה מנצח',
+  'Why they win': 'מדוע הם מנצחים',
+  'Winning questions': 'שאלות מנצחות',
+  'Missed decision questions': 'שאלות החלטה שהוחמצו',
+  'Gap classification per commercial question': 'סיווג הפער לכל שאלה מסחרית',
+  'Question-to-stage mapping': 'מיפוי שאלה לשלב',
+  'Stage-by-stage coverage': 'כיסוי שלב אחר שלב',
+  'The stage where presence collapses': 'השלב שבו הנוכחות קורסת',
+  'Strongest stage': 'השלב החזק ביותר',
+  'Decision-journey position': 'עמדה במסע ההחלטה',
+  'Revenue concentration by stage': 'ריכוז ההכנסה לפי שלב',
+  'Revenue split by decision stage': 'פילוח ההכנסה לפי שלב החלטה',
+  'Directional revenue exposure': 'חשיפת הכנסה כיוונית',
+  'Paid dependency exposure': 'חשיפה לתלות בממומן',
+  'Strategic blind spots': 'נקודות עיוורון אסטרטגיות',
+  'Strategic timing window': 'חלון תזמון אסטרטגי',
+  'Market and language': 'שוק ושפה',
+  'What it believes': 'במה הוא מאמין',
+  'Not resolved': 'לא זוהה',
+  Resolved: 'זוהה',
+  'Never recommends': 'לעולם אינו ממליץ',
+  Unattributed: 'לא מיוחס',
+  'Independent authority evidence — the constraint holding every downstream signal.':
+    'ראיות סמכות בלתי תלויות — האילוץ שמחזיק כל אות במורד הזרם.',
+  'Classified as a hardware retailer, not an MRO distributor.':
+    'מסווג כקמעונאי חומרה, לא כמפיץ ציוד תחזוקה.',
+  'Conflated with a same-named logistics firm.':
+    'מעורבב עם חברת לוגיסטיקה בעלת שם זהה.',
+  'No stable entity record. Category answered without naming any Midwest distributor.':
+    'אין רשומת ישות יציבה. הקטגוריה נענתה מבלי לנקוב בשם אף מפיץ במערב התיכון.',
+  'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.':
+    'אף מנוע AI אינו נוקב בשם Northwind בתשע עשרה מתוך עשרים וארבע שאלות ההחלטה הנמדדות.',
+  'Named in seventeen of the nineteen questions where Northwind is absent.':
+    'מוזכר בשבע עשרה מתוך תשע עשרה השאלות שבהן Northwind נעדרת.',
+  'Kestrel named first in four of seven questions.':
+    'Kestrel מוזכרת ראשונה בארבע מתוך שבע שאלות.',
+  'Receives the recommendation in 31% of decisions and controls the supplier-evaluation stage.':
+    'מקבלת את ההמלצה ב-31% מההחלטות ושולטת בשלב הערכת הספקים.',
+  'Leads on the two most heavily weighted vectors.':
+    'מובילה בשני הווקטורים בעלי המשקל הגבוה ביותר.',
+  'Authority and Visibility are where its investment has concentrated.':
+    'סמכות ונראות הם המקומות שבהם התרכזה ההשקעה שלה.',
+  'Independent validation lets engines recommend it without hedging.':
+    'אימות בלתי תלוי מאפשר למנועים להמליץ עליה בלי להסתייג.',
+  'Advantage compounds in the absence of a response.':
+    'היתרון מצטבר בהיעדר תגובה.',
+  'Holds position while no counter-intervention is running.':
+    'שומרת על העמדה כל עוד לא פועלת התערבות נגדית.',
+  'Meridian publishes specification guidance that engines treat as category-defining language.':
+    'Meridian מפרסמת הנחיות מפרט שהמנועים מתייחסים אליהן כאל השפה שמגדירה את הקטגוריה.',
+  'Atlas is named on procurement checklists that engines cite at the point of purchase.':
+    'Atlas מוזכרת ברשימות תיוג רכש שהמנועים מצטטים בנקודת הרכישה.',
+  'Two of six interventions are low effort with measurable movement inside 60 days.':
+    'שתיים משש ההתערבויות דורשות מאמץ נמוך עם תנועה מדידה בתוך 60 יום.',
+  'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. Unattributed 28.8%':
+    'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. לא מיוחס 28.8%',
+  'Not in top 100 organic. No AI recommendation. 320 searches per month.':
+    'לא ב-100 התוצאות האורגניות הראשונות. אין המלצת AI. 320 חיפושים בחודש.',
+  'Position 1 organic, AI present. Volume 40 per month.':
+    'מקום 1 אורגני, נוכחות ב-AI. נפח 40 בחודש.',
+  'Position 3 and recommended — the pattern that works.':
+    'מקום 3 ומומלץ — הדפוס שעובד.',
+
+  /* --- Tracked commercial keywords. Translated on the same reasoning as the
+         home page's search queries — see the note beside those. ---------------------- */
+  /* Movement units. The seed stores the fragment with its leading space and
+     the component prints the figure beside it — 'X of 20' is what the screen
+     shows, never what the code asks for. */
+  ' of 20': ' מתוך 20',
+  ' of 24': ' מתוך 24',
+  'anchor bolts supplier': 'ספק ברגי עיגון',
+  'fastener catalog request': 'בקשת קטלוג מחברים',
+  'fastener sourcing best practices': 'שיטות עבודה מומלצות לרכש מחברים',
+  'industrial distributor fill rate': 'שיעור אספקת הזמנות של מפיץ תעשייתי',
+  'industrial supply account setup': 'פתיחת חשבון אספקה תעשייתית',
+  'industrial supply near me': 'אספקה תעשייתית בקרבתי',
+  'maintenance repair operations supplier': 'ספק תחזוקה תיקונים ותפעול',
+  'mro consolidation vendor': 'ספק לאיחוד ציוד תחזוקה',
+  'mro supply agreement': 'הסכם אספקת ציוד תחזוקה',
+  'plant maintenance supplies': 'ציוד תחזוקה למפעל',
+  'same day fastener shipping': 'משלוח מחברים באותו יום',
+  'stainless steel fasteners supplier': 'ספק מחברי נירוסטה',
 }

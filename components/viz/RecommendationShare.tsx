@@ -2,6 +2,7 @@
 
 import { count, percent } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
+import { useT } from '@/lib/i18n/content/client'
 import type { Competitor } from '@/lib/api/types'
 
 /* ============================================================================
@@ -25,6 +26,7 @@ export function RecommendationShare({
   const ordered = [...competitors].sort(
     (a, b) => b.recommendationSharePct - a.recommendationSharePct,
   )
+  const t = useT()
   const maxSources = Math.max(...competitors.map((c) => c.authoritySources))
 
   return (
@@ -34,8 +36,8 @@ export function RecommendationShare({
         className="flex h-9 w-full rounded-sm overflow-hidden border border-line"
         role="img"
         aria-label={ordered
-          .map((c) => `${c.name} ${c.recommendationSharePct}%`)
-          .concat(`Unattributed ${unattributedPct}%`)
+          .map((c) => `${t(c.name)} ${c.recommendationSharePct}%`)
+          .concat(`${t('Unattributed')} ${unattributedPct}%`)
           .join('. ')}
       >
         {ordered.map((competitor, i) => (
@@ -72,7 +74,7 @@ export function RecommendationShare({
               }}
             />
             <span className="text-label uppercase text-ink-3">
-              {competitor.name}
+              {t(competitor.name)}
             </span>
           </span>
         ))}
@@ -82,7 +84,9 @@ export function RecommendationShare({
             className="size-2 rounded-[1px]"
             style={{ background: 'var(--gr-surface-inset)' }}
           />
-          <span className="text-label uppercase text-ink-3">Unattributed</span>
+          <span className="text-label uppercase text-ink-3">
+            {t('Unattributed')}
+          </span>
         </span>
       </div>
 
@@ -91,15 +95,17 @@ export function RecommendationShare({
         <table className="w-full min-w-[42rem]">
           <thead>
             <tr className="text-label uppercase text-ink-3">
-              <th className="text-start font-normal p-4">Brand</th>
+              <th className="text-start font-normal p-4">{t('Brand')}</th>
               <th className="text-start font-normal p-4">
-                Recommendation share
+                {t('Recommendation share')}
               </th>
               <th className="text-start font-normal p-4 w-[12rem]">
-                Independent sources
+                {t('Independent sources')}
               </th>
-              <th className="text-start font-normal p-4">Strongest stage</th>
-              <th className="text-start font-normal p-4">Why they win</th>
+              <th className="text-start font-normal p-4">
+                {t('Strongest stage')}
+              </th>
+              <th className="text-start font-normal p-4">{t('Why they win')}</th>
             </tr>
           </thead>
           <tbody>
@@ -117,10 +123,10 @@ export function RecommendationShare({
                 }
               >
                 <td className="p-4">
-                  <span className="text-body text-ink">{competitor.name}</span>
+                  <span className="text-body text-ink">{t(competitor.name)}</span>
                   {competitor.isSelf ? (
                     <span className="block text-label uppercase text-brand-300 mt-1">
-                      You
+                      {t('You')}
                     </span>
                   ) : null}
                 </td>
@@ -151,10 +157,10 @@ export function RecommendationShare({
                   </div>
                 </td>
                 <td className="p-4 text-caption text-ink-2">
-                  {competitor.strongestStage}
+                  {t(competitor.strongestStage)}
                 </td>
                 <td className="p-4 text-caption text-ink-2 max-w-md">
-                  {competitor.whyTheyWin ?? '—'}
+                  {competitor.whyTheyWin ? t(competitor.whyTheyWin) : '—'}
                 </td>
               </tr>
             ))}

@@ -132,12 +132,12 @@ function FullReadout({
 
         <div className="bg-panel p-5">
           <SectionLabel>{copy.readout.timing}</SectionLabel>
-          <p className="text-body text-ink mt-3">{r.timing.window}</p>
+          <p className="text-body text-ink mt-3">{t(r.timing.window)}</p>
           <div className="mt-3">
             <UrgencyChip urgency={r.timing.urgency} />
           </div>
           <p className="text-caption text-ink-3 mt-3">
-            Decision deadline{' '}
+            {t('Decision deadline')}{' '}
             <span className="text-ink-2" data-numeric="">
               {dateFull(r.timing.decisionDeadline, intl)}
             </span>
@@ -157,7 +157,7 @@ function FullReadout({
 
       {/* --- 5. Competitor Context — the "why", given room -------------- */}
       <section className="mt-7">
-        <SectionLabel>Why the competitor wins</SectionLabel>
+        <SectionLabel>{t('Why the competitor wins')}</SectionLabel>
         <blockquote
           className="mt-3 border-s-2 ps-4 text-body text-ink-2 max-w-prose"
           style={{ borderColor: 'var(--gr-brand-500)' }}
@@ -177,23 +177,23 @@ function FullReadout({
           <table className="w-full min-w-[34rem] border-collapse">
             <thead>
               <tr className="text-label uppercase text-ink-3">
-                <th className="text-start font-normal pb-3 pe-4">Observed</th>
-                <th className="text-start font-normal pb-3 pe-4">Source</th>
-                <th className="text-start font-normal pb-3 pe-4">Finding</th>
-                <th className="text-start font-normal pb-3">Date</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Observed')}</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Source')}</th>
+                <th className="text-start font-normal pb-3 pe-4">{t('Finding')}</th>
+                <th className="text-start font-normal pb-3">{t('Date')}</th>
               </tr>
             </thead>
             <tbody>
               {r.evidence.map((e, i) => (
                 <tr key={i} className="border-t border-line align-top">
                   <td className="py-3 pe-4 text-caption text-ink font-mono max-w-[18rem]">
-                    {e.subject}
+                    {t(e.subject)}
                   </td>
                   <td className="py-3 pe-4 text-caption text-ink-2 whitespace-nowrap">
-                    {e.source}
+                    {t(e.source)}
                   </td>
                   <td className="py-3 pe-4 text-caption text-ink-2">
-                    {e.observation}
+                    {t(e.observation)}
                   </td>
                   <td
                     className="py-3 text-caption text-ink-3 whitespace-nowrap"
@@ -273,15 +273,15 @@ function FullReadout({
           <Field label={copy.readout.expectedMovement}>
             <span className="text-data text-ink" data-numeric="">
               {r.expectedMovement.from}
-              {r.expectedMovement.unit}
+              {t(r.expectedMovement.unit)}
               <span className="text-ink-3 px-2">→</span>
               <span style={{ color: 'var(--gr-positive)' }}>
                 {r.expectedMovement.to}
-                {r.expectedMovement.unit}
+                {t(r.expectedMovement.unit)}
               </span>
             </span>
             <span className="block text-caption text-ink-3 mt-1">
-              {r.expectedMovement.signal}
+              {t(r.expectedMovement.signal)}
             </span>
           </Field>
 
