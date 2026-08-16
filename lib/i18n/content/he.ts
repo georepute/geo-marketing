@@ -889,6 +889,132 @@ export const content: ContentOverlay = {
      with the marketing pages and live in the seed section further down.
      ======================================================================= */
 
+  /* --- Executive Mission Control -------------------------------------------
+     Tile labels carry title case here and sentence case elsewhere in the seed
+     ("Narrative Ownership" vs "Narrative ownership"). The overlay keys on the
+     exact source string, so both spellings need an entry. */
+  'Executive Mission Control': 'מרכז הבקרה הניהולי',
+  'Executive Mission Control | GeoRepute': 'מרכז הבקרה הניהולי | GeoRepute',
+  'Not more data. A decision position.': 'לא עוד נתונים. עמדת החלטה.',
+  'Ten measures, each with evidence behind it': 'עשרה מדדים, לכל אחד ראיות מאחוריו',
+  'Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.':
+    'כל נתון מחושב מתוך מידע שנצפה. בחרו כל אריח כדי לפתוח את הקריאה המלאה, את ראיותיה ואת הפעולה שנקבעה לה.',
+  Position: 'עמדה',
+  Explanation: 'הסבר',
+  Execution: 'ביצוע',
+
+  /* Tile labels and their readings */
+  'AI Recognition Position': 'עמדת הזיהוי על ידי AI',
+  'Average entity understanding across six engines. Three misidentify the category.':
+    'הבנת הישות הממוצעת בשישה מנועים. שלושה מזהים את הקטגוריה באופן שגוי.',
+  'Google vs AI Gap': 'הפער בין גוגל ל-AI',
+  'Keywords absent from AI answers and outside the Google top ten. The decision happens on neither surface.':
+    'מילות מפתח שנעדרות מתשובות AI ונמצאות מחוץ לעשירייה הראשונה בגוגל. ההחלטה אינה מתרחשת באף אחד משני המשטחים.',
+  'Decision Presence': 'נוכחות בהחלטה',
+  'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
+    'כיסוי בהערכת ספקים. 19 מתוך 24 החלטות מסתיימות ללא המותג.',
+  'Competitive Capture': 'תפיסה תחרותית',
+  'Kestrel Industrial receives the recommendation. Northwind receives 4.2%.':
+    'Kestrel Industrial מקבלת את ההמלצה. Northwind מקבלת 4.2%.',
+  'Narrative Ownership': 'בעלות על הנרטיב',
+  'Share of the language engines use to define the category. The criteria cited first are a competitor’s.':
+    'הנתח מהשפה שבה משתמשים המנועים כדי להגדיר את הקטגוריה. הקריטריונים המצוטטים ראשונים הם של מתחרה.',
+  'Trust Readiness': 'מוכנות לאמון',
+  'The recommendation goes to the supplier engines can support with evidence.':
+    'ההמלצה הולכת לספק שהמנועים יכולים לתמוך בו בראיות.',
+  'Paid Dependency': 'תלות בתשלום',
+  'Blended CPC runs above break-even. Paid is renting the positions authority would hold.':
+    'העלות המשוקללת לקליק גבוהה מנקודת האיזון. התשלום שוכר את המיקומים שהסמכות הייתה מחזיקה.',
+  'Weighted across six GEON vectors. Authority at 28 is the binding constraint.':
+    'משוקלל על פני שישה וקטורי GEON. הסמכות ברמה 28 היא האילוץ הכובל.',
+  'ChatGPT supplier recommendation presence': 'נוכחות בהמלצות ספקים ב-ChatGPT',
+  'The most-used engine puts Northwind forward in one of twenty-four decision questions.':
+    'המנוע הנפוץ ביותר מציג את Northwind באחת מתוך עשרים וארבע שאלות החלטה.',
+  '3 independent sources against a category median of 14.':
+    '3 מקורות בלתי תלויים מול חציון קטגוריה של 14.',
+  'Authority is the binding constraint, so it is where intervention begins.':
+    'הסמכות היא האילוץ הכובל, ולכן שם מתחילה ההתערבות.',
+  'Paid search is bought to cover the questions authority no longer wins.':
+    'חיפוש ממומן נרכש כדי לכסות את השאלות שהסמכות כבר אינה זוכה בהן.',
+  'Emerging market at 63/100 readiness. Query maturity accelerating.':
+    'שוק מתהווה במוכנות 63/100. נשילות השאילתות מאיצה.',
+  'The window remains open but is narrowing. Displacement cost rises once engines settle on a stable answer set.':
+    'החלון עדיין פתוח אך מצטמצם. עלות ההדחה עולה ברגע שהמנועים מתייצבים על מערך תשובות קבוע.',
+  'Decision deadline': 'מועד ההכרעה',
+  'Timing window': 'חלון התזמון',
+  '7 months': '7 חודשים',
+  months: 'חודשים',
+
+  /* Causal chain and drawer chrome */
+  'Causal signal chain': 'שרשרת האותות הסיבתית',
+  'The measures above are not independent. This is the chain that connects them, ending in the intervention it implies.':
+    'המדדים שלמעלה אינם בלתי תלויים. זו השרשרת שמחברת ביניהם, ומסתיימת בהתערבות הנגזרת מהם.',
+  'One decision. Many signals. One explanation.': 'החלטה אחת. אותות רבים. הסבר אחד.',
+  'Open evidence': 'פתחו את הראיות',
+  'Open Action Center': 'פתחו את מרכז הפעולות',
+  'Reconstruct the decision': 'שחזרו את ההחלטה',
+  'Explore intelligence engines': 'חקרו את מנועי המודיעין',
+
+  /* --- The executive intelligence feed ------------------------------------- */
+  'Executive intelligence feed': 'פיד המודיעין הניהולי',
+  '{n} events': '{n} אירועים',
+  'Competitor surge': 'זינוק של מתחרה',
+  'Kestrel Industrial gained the first recommendation on two more supplier questions':
+    'Kestrel Industrial זכתה בהמלצה הראשונה בשתי שאלות ספקים נוספות',
+  'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
+    'Kestrel מובילה כעת בארבע מתוך שבע תשובות להערכת ספקים, לעומת שתיים. שתי הזכיות החדשות מצטטות פרסום מקצועי שנוסף ביוני.',
+  'Citation lost': 'ציטוט אבד',
+  'Perplexity stopped citing the Northwind capability page':
+    'Perplexity הפסיקה לצטט את עמוד היכולות של Northwind',
+  'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.':
+    'העמוד צוטט בשלוש שאלות ביוני ובאף אחת ביולי. Perplexity מפנה כעת את אותן שאלות למקורות של מתחרים.',
+  /* Feed deltas. The arrow is drawn by the component; the seed holds only the
+     value, so these key on the bare string. */
+  '3 → 0 citations': '3 ← 0 ציטוטים',
+  '25 searches/mo': '25 חיפושים/חודש',
+  '+1 question': '+1 שאלה',
+  '+2 questions': '+2 שאלות',
+  '+8% QoQ': '+8% מרבעון לרבעון',
+  '+8% CPC': '+8% בעלות לקליק',
+  'per month': 'לחודש',
+  /* The causal chain composes this whole line in the seed, so it keys as one
+     string rather than through periodLabel. */
+  '$3,200 – $6,200 per month': '$3,200 – $6,200 לחודש',
+  'per quarter': 'לרבעון',
+  'per year': 'לשנה',
+  'Narrative risk': 'סיכון נרטיבי',
+  'Engines adopted a competitor’s evaluation criteria':
+    'המנועים אימצו את קריטריוני ההערכה של מתחרה',
+  'Fill rate and catalogue breadth are now cited first when engines explain how to choose a distributor. Regional response time is not referenced.':
+    'שיעור אספקה ורוחב קטלוג מצוטטים כעת ראשונים כשהמנועים מסבירים כיצד לבחור מפיץ. זמן תגובה אזורי אינו מוזכר.',
+  'Trust signal decayed': 'אות אמון נשחק',
+  'Category description diverged across two trade directories':
+    'תיאור הקטגוריה נפרד בין שני מדריכי מסחר',
+  'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
+    'שני מדריכים מתארים כעת את Northwind אחרת מהאתר שלה עצמה. חוסר עקביות הוא המנגנון שמאחורי בלבול הישות ב-ChatGPT וב-Copilot.',
+  'Search cost spike': 'זינוק בעלות החיפוש',
+  'Blended CPC moved further above break-even':
+    'העלות המשוקללת לקליק התרחקה עוד מנקודת האיזון',
+  '“industrial supply company” rose to $11.00 with no organic position in the top 100. Paid is covering a question authority does not reach.':
+    '"חברת אספקה תעשייתית" עלתה ל-$11.00 ללא מיקום אורגני ב-100 הראשונים. התשלום מכסה שאלה שהסמכות אינה מגיעה אליה.',
+  'New decision question': 'שאלת החלטה חדשה',
+  'A new supplier-evaluation question entered the tracked set':
+    'שאלת הערכת ספקים חדשה נכנסה למערך הנמדד',
+  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.':
+    '"לאיזה ספק תחזוקה יש שיעור האספקה הטוב ביותר?" הופיעה בנפח מדיד. Northwind נעדרת מכל מנוע שעונה עליה.',
+  'Recommendation gained': 'הושגה המלצה',
+  'Claude began recommending Northwind for regional distributor questions':
+    'Claude החל להמליץ על Northwind בשאלות על מפיצים אזוריים',
+  'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.':
+    'ההמלצה הראשונה על "ספקי אספקה תעשייתית מדורגים גבוה ליד שיקגו". הספציפיות האזורית היא הבידול שהתשובה מצטטת.',
+  'Regional opportunity': 'הזדמנות אזורית',
+  'Midwest regional questions show weaker competitive density':
+    'שאלות אזוריות במערב התיכון מראות צפיפות תחרותית חלשה יותר',
+  'Questions naming a Midwest location carry lower competitor control than national equivalents — the cheapest available entry point.':
+    'שאלות שמציינות מיקום במערב התיכון נושאות שליטה תחרותית נמוכה יותר מהמקבילות הארציות — נקודת הכניסה הזולה ביותר הזמינה.',
+  'Competitive density rose 8% quarter over quarter':
+    'הצפיפות התחרותית עלתה ב-8% מרבעון לרבעון',
+
   /* --- Strategic Action Center --------------------------------------------- */
   'Strategic Action Center': 'מרכז הפעולה האסטרטגי',
   'Prioritised interventions with owner, deadline, expected movement and how impact is verified after execution.':

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getT } from '@/lib/i18n/content/translator'
 import { MissionControl } from './MissionControl'
 import {
   getOrg,
@@ -9,10 +10,16 @@ import {
   getActions,
 } from '@/lib/api/client'
 
-export const metadata: Metadata = {
-  title: 'Executive Mission Control',
-  description:
-    'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.',
+/* generateMetadata, not a static export: a module-scope constant is
+   evaluated once at import time, when no locale exists yet. */
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT()
+  return {
+    title: t('Executive Mission Control'),
+    description: t(
+      'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.',
+    ),
+  }
 }
 
 export default async function MissionControlPage() {

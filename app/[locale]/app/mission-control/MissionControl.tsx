@@ -11,8 +11,9 @@ import { ActionCard } from '@/components/action/ActionCard'
 import { useRoleLens } from '@/components/readout/RoleLens'
 import { ScoreMeter } from '@/components/signal/Indicators'
 import { Button } from '@/components/ui/Button'
-import { useDict } from '@/lib/i18n/context'
+import { useDict, useI18n } from '@/lib/i18n/context'
 import { useT } from '@/lib/i18n/content/client'
+import { dateFull } from '@/lib/format'
 import { cn } from '@/lib/utils/cn'
 import type {
   Action,
@@ -54,6 +55,7 @@ export function MissionControl({
 }) {
   const copy = useDict()
   const t = useT()
+  const { intl } = useI18n()
   const { role, setRole } = useRoleLens('executive')
   const [drawerId, setDrawerId] = useState<string | null>(null)
   const [activeLink, setActiveLink] = useState<string | null>(null)
@@ -75,28 +77,28 @@ export function MissionControl({
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="min-w-0">
             <p className="text-label uppercase text-ink-3">
-              Executive Mission Control
+              {t('Executive Mission Control')}
             </p>
             <h1 className="text-h1 md:text-display-2 text-ink mt-3 text-balance max-w-2xl">
-              Not more data. A decision position.
+              {t('Not more data. A decision position.')}
             </h1>
           </div>
 
           <dl className="flex flex-wrap gap-x-9 gap-y-4">
             <Stat
-              label="Decision Health"
+              label={t('Decision Health')}
               value={`${org.decisionHealthIndex}`}
               suffix="/100"
               score={org.decisionHealthIndex}
             />
             <Stat
-              label="Timing window"
+              label={t('Timing window')}
               value={`${org.timing.windowMonths}`}
-              suffix=" months"
+              suffix={` ${t('months')}`}
             />
             <Stat
-              label="Decision deadline"
-              value={org.timing.decisionDeadline}
+              label={t('Decision deadline')}
+              value={dateFull(org.timing.decisionDeadline, intl)}
               mono
             />
           </dl>
@@ -108,9 +110,9 @@ export function MissionControl({
           ============================================================== */}
       <section className="gr-rail-wide pb-16">
         <SectionHead
-          eyebrow="Position"
-          title="Ten measures, each with evidence behind it"
-          note="Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action."
+          eyebrow={t('Position')}
+          title={t('Ten measures, each with evidence behind it')}
+          note={t('Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.')}
         />
 
         <div className="grid gap-4 lg:grid-cols-2">
@@ -131,16 +133,16 @@ export function MissionControl({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Explanation"
-          title="One decision. Many signals. One explanation."
-          note="The measures above are not independent. This is the chain that connects them, ending in the intervention it implies."
+          eyebrow={t('Explanation')}
+          title={t('One decision. Many signals. One explanation.')}
+          note={t('The measures above are not independent. This is the chain that connects them, ending in the intervention it implies.')}
         />
 
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,30rem)]">
           {/* Causal chain */}
           <div className="rounded-md border border-line bg-panel p-6 md:p-7">
             <p className="text-label uppercase text-ink-3 mb-6">
-              Causal signal chain
+              {t('Causal signal chain')}
             </p>
             <CausalSignalChain
               links={chain}
@@ -165,13 +167,13 @@ export function MissionControl({
                 }}
               />
               <p className="text-label uppercase text-ink-2">
-                Executive intelligence feed
+                {t('Executive intelligence feed')}
               </p>
               <span
                 className="text-label uppercase text-ink-3 ms-auto"
                 data-numeric=""
               >
-                {feed.length} events
+                {t('{n} events', { n: feed.length })}
               </span>
             </div>
             <div className="overflow-y-auto max-h-[42rem]">
@@ -186,9 +188,9 @@ export function MissionControl({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Execution"
+          eyebrow={t('Execution')}
           title={copy.action}
-          note="Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified."
+          note={t('Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.')}
           action={
             <Button asChild variant="secondary" size="sm">
               <Link href="/app/actions">{t('Open Action Center')}</Link>
