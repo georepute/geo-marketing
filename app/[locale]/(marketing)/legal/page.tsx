@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
 import { Link } from '@/components/i18n/Link'
 import { Button } from '@/components/ui/Button'
+import { getT } from '@/lib/i18n/content/translator'
 
-export const metadata: Metadata = {
-  title: 'Legal and data handling',
-  description:
-    'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.',
-  robots: { index: false, follow: true },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT()
+  return {
+    title: t('Legal and data handling'),
+    description: t(
+      'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.',
+    ),
+    robots: { index: false, follow: true },
+  }
 }
 
 /* ============================================================================
@@ -54,28 +59,28 @@ const SECTIONS = [
   },
 ]
 
-export default function LegalPage() {
+export default async function LegalPage() {
+  const t = await getT()
   return (
     <>
       <section className="gr-rail pt-16 pb-12 lg:pt-20">
-        <p className="text-label uppercase text-brand-300">Legal</p>
+        <p className="text-label uppercase text-brand-300">{t('Legal')}</p>
         <h1 className="text-display-2 text-ink mt-6 max-w-3xl text-balance">
-          What this environment does and does not do with data.
+          {t('What this environment does and does not do with data.')}
         </h1>
         <p className="text-body-lg text-ink-2 mt-6 max-w-2xl">
-          This is a demonstration build. Rather than reproduce boilerplate that
-          would not apply to it, each section below states the actual position.
+          {t('This is a demonstration build. Rather than reproduce boilerplate that would not apply to it, each section below states the actual position.')}
         </p>
       </section>
 
       {SECTIONS.map((section) => (
         <section key={section.id} id={section.id} className="gr-hairline">
           <div className="gr-rail py-14 lg:py-16">
-            <h2 className="text-h1 text-ink">{section.title}</h2>
+            <h2 className="text-h1 text-ink">{t(section.title)}</h2>
             <div className="mt-6 space-y-4 max-w-2xl">
               {section.body.map((paragraph) => (
                 <p key={paragraph} className="text-body text-ink-2">
-                  {paragraph}
+                  {t(paragraph)}
                 </p>
               ))}
             </div>
@@ -86,16 +91,14 @@ export default function LegalPage() {
       <section className="gr-hairline">
         <div className="gr-rail py-14 lg:py-16">
           <p className="text-caption text-ink-3 max-w-2xl">
-            Before this platform is operated commercially, these sections must
-            be replaced with reviewed policies covering the real data flows,
-            retention periods, sub-processors and jurisdictions involved.
+            {t('Before this platform is operated commercially, these sections must be replaced with reviewed policies covering the real data flows, retention periods, sub-processors and jurisdictions involved.')}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="secondary">
-              <Link href="/methodology">Read the methodology</Link>
+              <Link href="/methodology">{t('Read the methodology')}</Link>
             </Button>
             <Button asChild variant="ghost">
-              <Link href="/">Return home</Link>
+              <Link href="/">{t('Return home')}</Link>
             </Button>
           </div>
         </div>

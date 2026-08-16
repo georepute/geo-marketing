@@ -7,9 +7,12 @@ import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { Reveal } from '@/components/motion/Reveal'
 import { count } from '@/lib/format'
 import { getEcosystem } from '@/lib/api/client'
+import { getT } from '@/lib/i18n/content/translator'
+import { Rich } from '@/lib/i18n/content/rich'
 
 export async function generateMetadata(): Promise<Metadata> {
   const copy = await getDictionary()
+  const t = await getT()
   return { title: copy.nav.marketplace, description: copy.home.marketplaceSub }
 }
 
@@ -39,6 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
    ========================================================================= */
 
 export default async function MarketplacePage() {
+  const t = await getT()
   const ecosystem = await getEcosystem()
   const { categories, totalModules, liveModules, totalEngines } = ecosystem.data
 
@@ -62,38 +66,34 @@ export default async function MarketplacePage() {
 
         <div className="gr-rail-wide relative pt-20 pb-16 lg:pt-24 lg:pb-20">
           <p className="text-label uppercase text-brand-300">
-            The intelligence ecosystem
+            {t('The intelligence ecosystem')}
           </p>
 
           <h1 className="text-display-1 text-ink mt-6 max-w-4xl text-balance">
-            Whatever the business question, there is already intelligence built
-            for it.
+            {t('Whatever the business question, there is already intelligence built for it.')}
           </h1>
 
           <p className="text-body-lg text-ink-2 mt-6 max-w-2xl">
-            Seven categories of decision intelligence, each holding the models
-            that answer one kind of commercial question. Most of them measure
-            things a business has never been able to see — not because the
-            questions are exotic, but because nothing existed to answer them.
+            {t('Seven categories of decision intelligence, each holding the models that answer one kind of commercial question. Most of them measure things a business has never been able to see — not because the questions are exotic, but because nothing existed to answer them.')}
           </p>
 
           {/* The scale of the thing, stated once and computed. */}
           <dl className="grid gap-px bg-line border border-line rounded-md overflow-hidden mt-10 sm:grid-cols-3 max-w-2xl">
             <Figure
               value={count(categories.length)}
-              label="Intelligence categories"
+              label={t('Intelligence categories')}
             />
-            <Figure value={count(totalModules)} label="Intelligence modules" />
+            <Figure value={count(totalModules)} label={t('Intelligence modules')} />
             <Figure
               value={count(totalEngines)}
-              label="Engines beneath them"
+              label={t('Engines beneath them')}
             />
           </dl>
 
           <p className="text-caption text-ink-3 mt-5 max-w-2xl">
-            <span data-numeric="">{count(liveModules)}</span> of these modules
-            run live in this environment against a real reconstructed business.
-            The rest are available in the platform.
+            <Rich
+              text={t('<b>{n}</b> of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.', { n: count(liveModules) })}
+            />
           </p>
         </div>
       </section>
@@ -105,12 +105,10 @@ export default async function MarketplacePage() {
         <div className="gr-rail-wide gr-section">
           <Reveal>
             <h2 className="text-display-2 text-ink max-w-3xl text-balance">
-              Start with the question you actually have.
+              {t('Start with the question you actually have.')}
             </h2>
             <p className="text-body-lg text-ink-2 mt-5 max-w-2xl">
-              Each category opens into the modules underneath it. Every module
-              answers one business question and returns evidence, an analysis
-              and a recommendation — never a figure on its own.
+              {t('Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.')}
             </p>
           </Reveal>
 
@@ -131,36 +129,36 @@ export default async function MarketplacePage() {
         <div className="gr-rail gr-section">
           <Reveal>
             <p className="text-label uppercase text-brand-300">
-              What you are buying
+              {t('What you are buying')}
             </p>
             <h2 className="text-display-2 text-ink mt-4 max-w-3xl text-balance">
-              The document is the output. The intelligence is the product.
+              {t('The document is the output. The intelligence is the product.')}
             </h2>
 
             <div className="grid gap-6 md:grid-cols-3 mt-10">
               <Plank
-                step="Evidence"
-                body="Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion."
+                step={t('Evidence')}
+                body={t('Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion.')}
               />
               <Plank
-                step="Analysis"
-                body="What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied."
+                step={t('Analysis')}
+                body={t('What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied.')}
               />
               <Plank
-                step="Recommendation"
-                body="What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved."
+                step={t('Recommendation')}
+                body={t('What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved.')}
               />
             </div>
 
             <div className="flex flex-wrap gap-3 mt-10">
               <Button asChild variant="primary" size="lg">
-                <Link href="/app/reconstruct">See a module run live</Link>
+                <Link href="/app/reconstruct">{t('See a module run live')}</Link>
               </Button>
               <Button asChild variant="secondary" size="lg">
-                <Link href="/methodology">How the models work</Link>
+                <Link href="/methodology">{t('How the models work')}</Link>
               </Button>
               <Button asChild variant="ghost" size="lg">
-                <Link href="/pricing">Monitor continuously instead</Link>
+                <Link href="/pricing">{t('Monitor continuously instead')}</Link>
               </Button>
             </div>
           </Reveal>

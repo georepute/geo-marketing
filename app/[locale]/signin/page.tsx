@@ -3,10 +3,14 @@ import { Link } from '@/components/i18n/Link'
 import { Wordmark } from '@/components/shell/Wordmark'
 import { Button } from '@/components/ui/Button'
 import { getDictionary } from '@/lib/i18n/server'
+import { getT } from '@/lib/i18n/content/translator'
 
-export const metadata: Metadata = {
-  title: 'Sign In',
-  robots: { index: false, follow: false },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT()
+  return {
+    title: t('Sign In'),
+    robots: { index: false, follow: false },
+  }
 }
 
 /* ============================================================================
@@ -20,6 +24,7 @@ export const metadata: Metadata = {
 
 export default async function SignInPage() {
   const copy = await getDictionary()
+  const t = await getT()
   return (
     <div className="min-h-dvh flex flex-col bg-canvas">
       <header className="border-b border-line">
@@ -29,7 +34,7 @@ export default async function SignInPage() {
             href="/"
             className="text-caption text-ink-2 hover:text-ink transition-colors"
           >
-            <span aria-hidden className="gr-arrow">←</span> Home
+            <span aria-hidden className="gr-arrow">←</span> {t('Home')}
           </Link>
         </div>
       </header>
@@ -43,30 +48,26 @@ export default async function SignInPage() {
             {copy.nav.signIn}
           </p>
           <h1 className="text-h1 text-ink mt-4">
-            Enter the demonstration workspace
+            {t('Enter the demonstration workspace')}
           </h1>
           <p className="text-body text-ink-2 mt-4">
-            This environment has no authentication. Every visitor sees the same
-            seeded organisation, Northwind Supply, so that every figure stays
-            verifiable against the published methodology.
+            {t('This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.')}
           </p>
 
           <div className="mt-8 rounded-md border border-line bg-panel p-5">
-            <p className="text-label uppercase text-ink-3">Workspace</p>
+            <p className="text-label uppercase text-ink-3">{t('Workspace')}</p>
             <p className="text-body text-ink mt-3">Northwind Supply</p>
             <p className="text-caption text-ink-3 mt-1 font-mono">
-              northwindsupply.com · US Midwest
+              {t('northwindsupply.com · US Midwest')}
             </p>
           </div>
 
           <Button asChild variant="primary" size="lg" className="w-full mt-6">
-            <Link href="/app/mission-control">Continue to Mission Control</Link>
+            <Link href="/app/mission-control">{t('Continue to Mission Control')}</Link>
           </Button>
 
           <p className="text-caption text-ink-3 mt-6">
-            No password is requested because none is checked. Real
-            authentication drops in behind the same route without changing this
-            screen&rsquo;s place in the flow.
+            {t('No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.')}
           </p>
         </div>
       </main>

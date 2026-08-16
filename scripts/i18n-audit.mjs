@@ -66,8 +66,10 @@ const PHRASES = [
 
 const STRIP_PHRASES = new RegExp(PHRASES.join('|'), 'g')
 
+/* Technical identifiers that stay Latin inside translated prose — API names,
+   file formats, the storage API the legal page has to name precisely. */
 const NOUNS =
-  'GeoRepute|GINTEX|Gintex|Google|ChatGPT|Claude|Gemini|Perplexity|Copilot|Grok|GEON|NASA|Unsplash|copyup\\.ai|onlineperception\\.ai|Northwind|Kestrel|Meridian|Atlas|Halvorsen|Industrial|Supply|Trade|Group|Co|Inc|Analytics|CRM|MRO|SEO|CPC|AI|Ads|Intl'
+  'GeoRepute|GINTEX|Gintex|Google|ChatGPT|Claude|Gemini|Perplexity|Copilot|Grok|GEON|NASA|Unsplash|copyup\\.ai|onlineperception\\.ai|Northwind|Kestrel|Meridian|Atlas|Halvorsen|Industrial|Supply|Trade|Group|Co|Inc|Analytics|localStorage|CSS|SVG|MDX|HTML|JSON|API|URL|CRM|MRO|SEO|CPC|AI|Ads|Intl'
 
 const ONLY_NOUN = new RegExp(`^(?:${NOUNS}|Northwind Supply|Google Ads)$`)
 const STRIP_NOUNS = new RegExp(`\\b(?:${NOUNS})\\b`, 'g')

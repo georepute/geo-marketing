@@ -882,6 +882,141 @@ export const content: ContentOverlay = {
   'Leads to': 'מוביל אל',
 
   /* ==========================================================================
+     THE ENGINES OVERVIEW.
+     ======================================================================= */
+  'Intelligence engines': 'מנועי מודיעין',
+  'Each engine answers a board-level business question, produces a connected intelligence readout and routes the user into action. Not a feature list — a set of questions the business needs answered.':
+    'כל מנוע עונה על שאלה עסקית ברמת הדירקטוריון, מפיק קריאת מודיעין מקושרת ומנתב את המשתמש לפעולה. לא רשימת יכולות — מערך של שאלות שהעסק זקוק לתשובות עליהן.',
+  'Built in this environment · 4 of 12': 'בנוי בסביבה זו · 4 מתוך 12',
+  'Four engines, built to full depth': 'ארבעה מנועים, בנויים לעומק מלא',
+  'Each carries a real seeded outcome, its evidence, its commercial consequence and the action it prescribes. They chain into one another — together they form the causal argument rather than four samples of it.':
+    'כל אחד נושא תוצאה אמיתית מבוססת נתוני זרע, את ראיותיה, את השלכתה המסחרית ואת הפעולה שהיא מחייבת. הם משתרשרים זה לזה — יחד הם מרכיבים את הטיעון הסיבתי ולא ארבע דוגמאות שלו.',
+  'The full operating system': 'מערכת ההפעלה המלאה',
+  'Eight further engines available in the platform':
+    'שמונה מנועים נוספים זמינים בפלטפורמה',
+  'These are part of the operating system but are not built in this demonstration environment. Their business questions are listed so the shape of the full system is visible.':
+    'אלה חלק ממערכת ההפעלה אך אינם בנויים בסביבת ההדגמה הזו. השאלות העסקיות שלהם מפורטות כדי שצורת המערכת המלאה תהיה גלויה.',
+  'Available in platform': 'זמין בפלטפורמה',
+  'Is the business present when customers ask AI whom to choose?':
+    'האם העסק נוכח כשלקוחות שואלים את ה-AI במי לבחור?',
+  'Which gap is commercially meaningful enough to fix first?':
+    'איזה פער משמעותי מסחרית דיו כדי לתקן אותו ראשון?',
+  'When does paid search become structurally inefficient?':
+    'מתי חיפוש ממומן הופך לבלתי יעיל מבחינה מבנית?',
+  'Is the business visible but still unsafe to recommend?':
+    'האם העסק נראה אך עדיין לא בטוח להמליץ עליו?',
+  'When the market explains the category, whose language does it use?':
+    'כשהשוק מסביר את הקטגוריה, בלשונו של מי הוא משתמש?',
+  'Is the market ready, and how long is the window open?':
+    'האם השוק בשל, וכמה זמן החלון פתוח?',
+  'How does the business change across countries, languages and markets?':
+    'כיצד העסק משתנה בין מדינות, שפות ושווקים?',
+  'Does the route to market strengthen the brand or transfer power to intermediaries?':
+    'האם הדרך לשוק מחזקת את המותג או מעבירה כוח למתווכים?',
+  'See plans': 'ראו תוכניות',
+
+  /* ==========================================================================
+     THE INTELLIGENCE MARKETPLACE.
+     ======================================================================= */
+  'Seven categories of decision intelligence, each holding the models that answer one kind of commercial question. Most of them measure things a business has never been able to see — not because the questions are exotic, but because nothing existed to answer them.':
+    'שבע קטגוריות של מודיעין החלטות, כל אחת מחזיקה את המודלים שעונים על סוג אחד של שאלה מסחרית. רובם מודדים דברים שעסק מעולם לא היה מסוגל לראות — לא משום שהשאלות אקזוטיות, אלא משום שלא היה קיים דבר שיענה עליהן.',
+  'Intelligence categories': 'קטגוריות מודיעין',
+  'Intelligence modules': 'מודולי מודיעין',
+  'Engines beneath them': 'מנועים שמתחתיהם',
+  'of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    'מהמודולים הללו פועלים חי בסביבה זו מול עסק משוחזר אמיתי. השאר זמינים בפלטפורמה.',
+  'Start with the question you actually have.': 'התחילו מהשאלה שבאמת יש לכם.',
+  'Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.':
+    'כל קטגוריה נפתחת אל המודולים שתחתיה. כל מודול עונה על שאלה עסקית אחת ומחזיר ראיות, ניתוח והמלצה — לעולם לא נתון בפני עצמו.',
+  'What you are buying': 'מה אתם רוכשים',
+  'The document is the output. The intelligence is the product.':
+    'המסמך הוא התפוקה. המודיעין הוא המוצר.',
+  'How the models work': 'כיצד המודלים פועלים',
+  'Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion.':
+    'כל טענה נושאת את התצפית שמאחוריה — איזה מנוע, איזו שאלה, איזה תאריך. מסקנה שאינכם יכולים לבקר היא דעה.',
+  'What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied.':
+    'מה משמעות הראיות מסחרית, מה גורם לכך, ובאיזו מידה המודל יכול להיות בטוח ביושר. המגבלות מוצהרות, לעולם לא נרמזות.',
+  'What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved.':
+    'מה לעשות, מי אחראי, עד מתי, ואיזה אות אמור לזוז כתוצאה מכך. מאומת לאחר מכן מול מה שזז בפועל.',
+  'Whatever the business question, there is already intelligence built for it.':
+    'תהיה השאלה העסקית אשר תהיה, כבר קיים מודיעין שנבנה עבורה.',
+  'See a module run live': 'צפו במודול פועל חי',
+  'Monitor continuously instead': 'עקבו ברציפות במקום זאת',
+  '7 live in demo': '7 פועלים בהדגמה',
+  '4 live in demo': '4 פועלים בהדגמה',
+  Analysis: 'ניתוח',
+  Recommendation: 'המלצה',
+  modules: 'מודולים',
+  Explore: 'חקרו',
+  '+ 1 more': '+ עוד 1',
+  '+ 2 more': '+ עוד 2',
+  '+ 4 more': '+ עוד 4',
+  '+ 6 more': '+ עוד 6',
+  '+ {n} more': '+ עוד {n}',
+  '{n} live in demo': '{n} פועלים בהדגמה',
+  '<b>{n}</b> of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    '<b>{n}</b> מהמודולים הללו פועלים חי בסביבה זו מול עסק משוחזר אמיתי. השאר זמינים בפלטפורמה.',
+  'Built in this environment · {n} of {total}': 'בנוי בסביבה זו · {n} מתוך {total}',
+
+  /* ==========================================================================
+     LEGAL.
+
+     FLAGGED: this page says "Nothing is transmitted anywhere", which stops
+     being true the moment CAL_API_KEY is set and a booking sends a name and
+     an email to Cal.com. The English needs rewriting before launch, and these
+     translations follow it.
+     ======================================================================= */
+  Legal: 'משפטי',
+  'Legal and data handling': 'משפטי וטיפול בנתונים',
+  'Legal and data handling | GeoRepute': 'משפטי וטיפול בנתונים | GeoRepute',
+  'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.':
+    'פרטיות, תנאים, עיבוד נתונים ועמדת אבטחה עבור סביבת ההדגמה של GeoRepute.',
+  'What this environment does and does not do with data.':
+    'מה סביבה זו עושה ומה אינה עושה עם נתונים.',
+  'This is a demonstration build. Rather than reproduce boilerplate that would not apply to it, each section below states the actual position.':
+    'זוהי גרסת הדגמה. במקום לשכפל נוסח סטנדרטי שלא היה חל עליה, כל סעיף למטה מציג את המצב בפועל.',
+  Privacy: 'פרטיות',
+  'This environment collects nothing. There is no analytics script, no tag manager, no session recording and no third-party tracker on any page.':
+    'סביבה זו אינה אוספת דבר. אין סקריפט אנליטיקה, אין מנהל תגיות, אין הקלטת הפעלות ואין גשש צד שלישי באף עמוד.',
+  'The only data stored about you is your theme preference and any demonstration purchases, both held in your browser’s localStorage and readable only by this site. Nothing is transmitted anywhere. Clearing site data removes all of it, and the purchase-confirmation screen offers a reset control.':
+    'הנתונים היחידים שנשמרים עליכם הם העדפת ערכת הנושא שלכם ורכישות הדגמה, שניהם מוחזקים ב-localStorage של הדפדפן שלכם וניתנים לקריאה רק על ידי אתר זה. דבר אינו נשלח לשום מקום. ניקוי נתוני האתר מוחק את כל זה, ומסך אישור הרכישה מציע פקד איפוס.',
+  'Terms of service': 'תנאי שימוש',
+  'No commercial terms apply. Nothing on this site constitutes an offer, and no contract can be formed through it.':
+    'לא חלים תנאים מסחריים. דבר באתר זה אינו מהווה הצעה, ולא ניתן ליצור דרכו חוזה.',
+  'Pricing shown throughout is placeholder and clearly marked as such on the pricing page. The checkout collects no payment details and processes no charge.':
+    'התמחור המוצג לאורך האתר הוא זמני ומסומן ככזה בבירור בעמוד התמחור. תהליך התשלום אינו אוסף פרטי תשלום ואינו מבצע חיוב.',
+  'Data processing': 'עיבוד נתונים',
+  'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
+    'Northwind Supply היא ארגון בדיוני. כל נתון המיוחס לה מבוסס נתוני זרע, עקבי פנימית ונגזר ממערך מפורסם של עובדות עוגן. נתונים של חברה אמיתית אינם מופיעים בשום מקום בסביבה זו.',
+  'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.':
+    'שמות מתחרים, דומיינים ומספרי ציטוטים הומצאו. כל דמיון לעסק פעיל הוא מקרי ולא מכוון.',
+  'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.':
+    'מנועי AI מוזכרים בשמות המוצר הפומביים שלהם לשם דיוק בתיאור. לא נטענת ולא נרמזת שום שותפות, חסות או קשר.',
+  Security: 'אבטחה',
+  'There is no authentication, no user account and no server-side session. The sign-in screen requests no password because none is checked — inviting a real credential into a demonstration would be a hazard, not a convenience.':
+    'אין אימות, אין חשבון משתמש ואין הפעלה בצד השרת. מסך הכניסה אינו מבקש סיסמה משום שאיש אינו בודק אותה — הזמנת אישור גישה אמיתי לתוך הדגמה הייתה מהווה סיכון, לא נוחות.',
+  'No external network requests are made at runtime. Fonts are self-hosted, all visuals are generated in CSS or SVG, and the content security posture assumes no third-party origin is trusted.':
+    'לא מתבצעות בקשות רשת חיצוניות בזמן ריצה. הגופנים מאוחסנים עצמאית, כל החזותיות נוצרת ב-CSS או ב-SVG, ועמדת אבטחת התוכן מניחה שאין מקור צד שלישי מהימן.',
+  'Before this platform is operated commercially, these sections must be replaced with reviewed policies covering the real data flows, retention periods, sub-processors and jurisdictions involved.':
+    'לפני שפלטפורמה זו תופעל מסחרית, יש להחליף את הסעיפים הללו במדיניות שנבדקה ומכסה את זרימות הנתונים האמיתיות, תקופות השמירה, מעבדי המשנה והתחומים המשפטיים המעורבים.',
+  'Return home': 'חזרה לדף הבית',
+
+  /* ==========================================================================
+     SIGN IN.
+     ======================================================================= */
+  'Sign In': 'כניסה',
+  'Sign In | GeoRepute': 'כניסה | GeoRepute',
+  Home: 'דף הבית',
+  'Enter the demonstration workspace': 'היכנסו לסביבת העבודה להדגמה',
+  'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
+    'בסביבה זו אין אימות. כל מבקר רואה את אותו ארגון מבוסס נתוני זרע, Northwind Supply, כך שכל נתון נותר ניתן לאימות מול המתודולוגיה המפורסמת.',
+  Workspace: 'סביבת עבודה',
+  'northwindsupply.com · US Midwest': 'northwindsupply.com · מערב התיכון, ארה"ב',
+  'Continue to Mission Control': 'המשיכו למרכז הבקרה',
+  'No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.':
+    'לא מתבקשת סיסמה משום שאיש אינו בודק אותה. אימות אמיתי נכנס מאחורי אותו נתיב מבלי לשנות את מקומו של מסך זה בזרימה.',
+
+  /* ==========================================================================
      THE PLATFORM PAGES — /app/*.
 
      Mostly seed prose reaching the screen through translateContent, plus the
