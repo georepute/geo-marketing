@@ -1092,6 +1092,361 @@ export const content: ContentOverlay = {
      with the marketing pages and live in the seed section further down.
      ======================================================================= */
 
+  /* --- Public Narrative Intelligence ----------------------------------------- */
+  'Public narrative intelligence': 'מודיעין הנרטיב הציבורי',
+  'Public Narrative Intelligence | GeoRepute': 'מודיעין הנרטיב הציבורי | GeoRepute',
+  'What story is the market telling about us?': 'איזה סיפור השוק מספר עלינו?',
+  'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
+    'לא כמה פעמים העסק מוזכר. אילו גרסאות עליו פעילות, מי הבעלים של כל אחת, ואילו מהן מכריעות אם ייבחר.',
+  'Election mode': 'מצב בחירות',
+  'Political intelligence': 'מודיעין פוליטי',
+
+  /* Health */
+  Health: 'בריאות',
+  'Narrative health': 'בריאות הנרטיב',
+  'Overall public sentiment': 'הסנטימנט הציבורי הכולל',
+  'A weighted read of how much active conversation helps against how much hurts.':
+    'קריאה משוקללת של כמה מהשיח הפעיל מסייע מול כמה פוגע.',
+  'Narrative momentum': 'תנופת הנרטיב',
+  'Narrative stability': 'יציבות הנרטיב',
+  'Narrative balance': 'מאזן הנרטיב',
+  'Positive narrative strength': 'עוצמת הנרטיב החיובי',
+  'Negative narrative strength': 'עוצמת הנרטיב השלילי',
+  'Neutral narrative': 'נרטיב ניטרלי',
+  'The balance between stories that help and stories that hurt, weighted by how much of the conversation each reaches.':
+    'המאזן בין סיפורים שמסייעים לסיפורים שפוגעים, משוקלל לפי כמה מהשיח כל אחד מגיע.',
+  '20% of active category conversation carries a story that favours this business — and both of those narratives are currently unclaimed by anyone.':
+    '20% מהשיח הפעיל בקטגוריה נושא סיפור שמיטיב עם העסק הזה — ושני הנרטיבים הללו אינם בבעלות אף אחד כרגע.',
+  '74% carries a story that works against it, most of it a competitor’s evaluation framing rather than criticism of the business itself.':
+    '74% נושא סיפור שפועל נגדו, רובו מסגור הערכה של מתחרה ולא ביקורת על העסק עצמו.',
+  '6% is category-level conversation attached to no supplier. Neutral is not safe — it is unowned ground with no defender.':
+    '6% הוא שיח ברמת הקטגוריה שאינו מקושר לאף ספק. ניטרלי אינו בטוח — זו קרקע ללא בעלים וללא מגן.',
+  'Sentiment is not hostility. Nothing here is criticism of the business — the adverse weight comes almost entirely from stories written by competitors in which this business does not appear.':
+    'סנטימנט אינו עוינות. שום דבר כאן אינו ביקורת על העסק — המשקל השלילי נובע כמעט כולו מסיפורים שכתבו מתחרים ושבהם העסק הזה אינו מופיע.',
+  '3 adverse narratives are gaining ground against 1 favourable one. Direction matters more than the current balance, because it is what the position will be in two quarters.':
+    '3 נרטיבים שליליים צוברים תאוצה מול אחד חיובי. הכיוון חשוב יותר מהמאזן הנוכחי, משום שהוא מה שתהיה העמדה בעוד שני רבעונים.',
+  '4 of 8 active narratives are still forming or growing. The account of this category is not yet fixed, which is what makes intervention cheap now and expensive later.':
+    '4 מתוך 8 נרטיבים פעילים עדיין מתגבשים או גדלים. הגרסה על הקטגוריה הזו טרם התקבעה, וזה מה שהופך את ההתערבות לזולה עכשיו ויקרה מאוחר יותר.',
+
+  /* Landscape and ownership */
+  Landscape: 'המפה',
+  'Every active narrative in this category': 'כל נרטיב פעיל בקטגוריה הזו',
+  'Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.':
+    'ממוין לפי טווח הגעה. עמודת הבעלים היא זו שחשובה — סיפור חיובי שאיש אינו בעליו הוא נכס שממתין שיתפסו אותו.',
+  'Who owns the story': 'מי הבעלים של הסיפור',
+  'Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.':
+    'נתח מהשיח הפעיל, משוקלל לפי טווח הגעה. ללא בעלים אינו קרקע ניטרלית — זו קרקע ללא מגן.',
+  Business: 'העסק',
+  Competitors: 'מתחרים',
+  Shared: 'משותף',
+  Unclaimed: 'ללא בעלים',
+  'Business: 4%': 'העסק: 4%',
+  'Competitors: 56%': 'מתחרים: 56%',
+  'Shared: 20%': 'משותף: 20%',
+  'Unclaimed: 20%': 'ללא בעלים: 20%',
+  'Category language owned': 'שפת הקטגוריה בבעלות',
+  'The share of the vocabulary engines use to define this category that belongs to this business. Whoever holds this sets the criteria every comparison is scored against.':
+    'נתח אוצר המילים שבו המנועים מגדירים את הקטגוריה הזו ושמצוי בבעלות העסק. מי שמחזיק בו קובע את הקריטריונים שכל השוואה נמדדת מולם.',
+  'The split above measures this specific narrative inventory. This figure measures the category’s language as a whole, and is the same one Mission Control publishes.':
+    'הפילוח שלמעלה מודד את מלאי הנרטיבים הספציפי הזה. הנתון הזה מודד את שפת הקטגוריה כולה, והוא אותו נתון שמרכז הבקרה מפרסם.',
+  'The business holds': 'העסק מחזיק',
+  'Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.':
+    'משוקלל לפי טווח הגעה ולא נספר, כך שסיפור שמגיע לשליש מהקטגוריה אינו שווה לסיפור שמגיע לעשירית ומחצה.',
+
+  Reach: 'טווח הגעה',
+  'Owned by': 'בבעלות',
+  Influence: 'השפעה',
+  Competition: 'תחרות',
+  Opportunity: 'הזדמנות',
+  Strength: 'חוזקה',
+  Weakness: 'חולשה',
+  Risk: 'סיכון',
+  Media: 'מדיה',
+  Questions: 'שאלות',
+  'If ignored': 'אם יתעלמו',
+  'Overlap with us': 'חפיפה איתנו',
+  'Unsettled': 'לא מיוצב',
+  '— absent': '— נעדר',
+  '{level} severity': 'חומרה {level}',
+  '+ {n} more tracked': '+ עוד {n} במעקב',
+  '31 % share': '31% נתח',
+  '18 % share': '18% נתח',
+  '11 % share': '11% נתח',
+  '7 % share': '7% נתח',
+  Growing: 'גדל',
+  Steady: 'יציב',
+  Declining: 'דועך',
+  Contested: 'שנוי במחלוקת',
+  'Favourable · emerging': 'חיובי · מתהווה',
+  'Favourable · steady': 'חיובי · יציב',
+  'Adverse · emerging': 'שלילי · מתהווה',
+  'Adverse · growing': 'שלילי · גדל',
+  'Adverse · steady': 'שלילי · יציב',
+  'Adverse · declining': 'שלילי · דועך',
+  'Neutral · steady': 'ניטרלי · יציב',
+  Favourable: 'חיובי',
+  Adverse: 'שלילי',
+
+  /* Competitors */
+  'The story each competitor is telling': 'הסיפור שכל מתחרה מספר',
+  'Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.':
+    'לכל עמדה יש חולשה מובנית. נרטיב חזק דיו כדי לשלוט הוא בדרך כלל צר דיו כדי לעקוף אותו.',
+  'The safe national choice with published comparisons.':
+    '"הבחירה הארצית הבטוחה עם השוואות מפורסמות."',
+  'The technical authority on specification.':
+    '"הסמכות הטכנית בענייני מפרט."',
+  'The educator that reaches buyers first.':
+    '"המחנך שמגיע לקונים ראשון."',
+  'The procurement-checklist incumbent.':
+    '"הספק המבוסס ברשימת התיוג של הרכש."',
+  'Owns the evaluation criteria itself. Engines cite its comparison library when explaining how to choose a supplier at all.':
+    'מחזיק בקריטריוני ההערכה עצמם. המנועים מצטטים את ספריית ההשוואה שלו כשהם מסבירים כיצד בכלל לבחור ספק.',
+  'Its case rests on breadth and fill rate. It has no response prepared on response time or regional service depth.':
+    'הטיעון שלו נשען על רוחב ועל שיעור אספקה. אין לו תשובה מוכנה בנושא זמן תגובה או עומק שירות אזורי.',
+  'Competes directly on supplier-evaluation questions, where it is named first in four of seven.':
+    'מתחרה ישירות בשאלות הערכת ספקים, ושם הוא נזכר ראשון בארבע מתוך שבע.',
+  'Its vocabulary can be adopted and extended rather than fought. Speaking its language while adding availability outflanks it.':
+    'אפשר לאמץ ולהרחיב את אוצר המילים שלו במקום להילחם בו. דיבור בשפתו תוך הוספת זמינות עוקף אותו.',
+  'Specification depth does not answer availability. It is largely absent from questions about delivery and continuity.':
+    'עומק מפרט אינו עונה על זמינות. הוא נעדר במידה רבה משאלות על אספקה ורציפות.',
+  'Owns solution-evaluation questions upstream of where this business competes.':
+    'מחזיק בשאלות הערכת פתרונות במעלה הזרם מהמקום שבו העסק הזה מתחרה.',
+  'Its own framing concedes that speed is a separate axis. A published response-time standard splits the criterion it defined.':
+    'המסגור שלו עצמו מודה שמהירות היא ציר נפרד. תקן זמן תגובה מפורסם מפצל את הקריטריון שהוא הגדיר.',
+  'Enters the decision at research, before evaluation criteria exist, and shapes them by arriving early.':
+    'נכנס להחלטה בשלב המחקר, לפני שקיימים קריטריוני הערכה, ומעצב אותם בכך שהגיע מוקדם.',
+  'Almost no presence earlier in the journey. Its position is administrative rather than argued.':
+    'כמעט ללא נוכחות מוקדם יותר במסע. עמדתו מנהלתית ולא מנומקת.',
+  'Owns early-stage questions this business is also absent from, but does not convert them.':
+    'מחזיק בשאלות שלב מוקדם שגם העסק הזה נעדר מהן, אך אינו ממיר אותן.',
+  'Thin at the point of purchase. Rarely named when a buyer asks whom to actually choose.':
+    'דליל בנקודת הרכישה. לעיתים רחוקות נזכר כשקונה שואל במי לבחור בפועל.',
+  'Research-stage presence is uncontested at the point where education becomes a shortlist.':
+    'הנוכחות בשלב המחקר אינה מאותגרת בנקודה שבה חינוך הופך לרשימה מצומצמת.',
+  'Named on procurement documentation that engines cite at the moment of purchase.':
+    'נזכר בתיעוד רכש שהמנועים מצטטים ברגע הרכישה.',
+  'Competes only at purchase decision, where this business also has no coverage.':
+    'מתחרה רק בהחלטת הרכישה, שם גם לעסק הזה אין כיסוי.',
+  'A checklist position is winnable through documentation rather than through reputation.':
+    'עמדה ברשימת תיוג ניתנת לזכייה באמצעות תיעוד ולא באמצעות מוניטין.',
+
+  /* Media */
+  'What publications are actually writing about': 'על מה הפרסומים באמת כותבים',
+  'The business appears in none of four active category stories. Two of them — provenance and tariff continuity — have no supplier voice at all.':
+    'העסק אינו מופיע באף אחד מארבעת סיפורי הקטגוריה הפעילים. בשניים מהם — מקוריות ורציפות מכסים — אין קול של ספק כלל.',
+  'The business appears in none of the four active category stories. Media narrative is currently being written entirely by others.':
+    'העסק אינו מופיע באף אחד מארבעת סיפורי הקטגוריה הפעילים. נרטיב המדיה נכתב כרגע כולו על ידי אחרים.',
+  'MRO supplier consolidation across Midwest manufacturing':
+    'איחוד ספקי תחזוקה בייצור במערב התיכון',
+  'Counterfeit fasteners in industrial supply chains':
+    'מחברים מזויפים בשרשראות אספקה תעשייתיות',
+  'Verification and provenance in fastener sourcing':
+    'אימות ומקוריות ברכש מחברים',
+  'Fastener supply continuity after tariff changes':
+    'רציפות אספקת מחברים לאחר שינויי מכסים',
+  'Supply continuity under tariff volatility': 'רציפות אספקה בתנודתיות מכסים',
+  'Vendor-managed inventory adoption in mid-market plants':
+    'אימוץ ניהול מלאי על ידי ספק במפעלי שוק ביניים',
+  'Vendor-managed inventory for mid-market plants':
+    'ניהול מלאי על ידי ספק למפעלי שוק ביניים',
+  'Industrial Distribution · Modern Supply Chain':
+    'Industrial Distribution · Modern Supply Chain',
+  'Fastener Technology · Industrial Distribution':
+    'Fastener Technology · Industrial Distribution',
+  'Fastener Technology · Plant Engineering':
+    'Fastener Technology · Plant Engineering',
+  'Modern Supply Chain · Plant Engineering':
+    'Modern Supply Chain · Plant Engineering',
+  'The most active category story. This business is not quoted in any of the eleven pieces published this quarter.':
+    'סיפור הקטגוריה הפעיל ביותר. העסק הזה אינו מצוטט באף אחת מאחת־עשרה הכתבות שפורסמו ברבעון זה.',
+  'A category-level trust story. Suppliers who comment become the trusted ones; those who stay silent are grouped with the problem.':
+    'סיפור אמון ברמת הקטגוריה. ספקים שמגיבים הופכים לאמינים; אלה ששותקים נכרכים עם הבעיה.',
+  'An emerging story where regional inventory depth is the natural expert angle, and no regional distributor has been quoted yet.':
+    'סיפור מתהווה שבו עומק מלאי אזורי הוא זווית המומחיות הטבעית, ואף מפיץ אזורי טרם צוטט.',
+  'A service already operated but never publicly associated with the business. One competitor is quoted in three of four pieces on it.':
+    'שירות שכבר מופעל אך מעולם לא קושר בפומבי לעסק. מתחרה אחד מצוטט בשלוש מתוך ארבע כתבות עליו.',
+  'A competitor is quoted in three of four pieces. The topic maps directly onto a service this business already operates.':
+    'מתחרה מצוטט בשלוש מתוך ארבע כתבות. הנושא ממופה ישירות לשירות שהעסק הזה כבר מפעיל.',
+  'Regional inventory depth is the natural expert position on a story publications are actively looking for sources on.':
+    'עומק מלאי אזורי הוא עמדת המומחיות הטבעית בסיפור שפרסומים מחפשים עבורו מקורות באופן פעיל.',
+  'An active media story with no supplier voice attached. Commenting converts a category-level trust concern into a reason to choose a specific supplier.':
+    'סיפור מדיה פעיל ללא קול של ספק. תגובה הופכת חשש אמון ברמת הקטגוריה לסיבה לבחור ספק מסוים.',
+  'No quote, contribution or citation in the four topics publications are currently covering.':
+    'אין ציטוט, תרומה או אזכור בארבעת הנושאים שהפרסומים מסקרים כעת.',
+  'Silence is read as absence of expertise. The category continues to be explained by the suppliers willing to explain it.':
+    'שתיקה נקראת כהיעדר מומחיות. הקטגוריה ממשיכה להיות מוסברת על ידי הספקים המוכנים להסביר אותה.',
+
+  /* Questions */
+  'What the market actually wants to know': 'מה השוק באמת רוצה לדעת',
+  'The real question corpus, partitioned by what a buyer is trying to decide when they ask it.':
+    'מאגר השאלות האמיתי, מחולק לפי מה שקונה מנסה להכריע כשהוא שואל.',
+  'Most common questions': 'השאלות הנפוצות ביותר',
+  'Public questions': 'שאלות ציבוריות',
+  'AI buying questions': 'שאלות רכש ב-AI',
+  'Recommendation questions': 'שאלות המלצה',
+  'Comparison questions': 'שאלות השוואה',
+  'Purchase questions': 'שאלות רכישה',
+  'Concerns and objections': 'חששות והתנגדויות',
+  'A buyer asking directly whom to choose. The highest-value question class in the category, and the one that assigns the order.':
+    'קונה ששואל ישירות במי לבחור. מחלקת השאלות בעלת הערך הגבוה ביותר בקטגוריה, וזו שמסנה את ההזמנה.',
+  'A buyer weighing approaches rather than vendors. Whoever frames the comparison sets the criteria the vendor choice will use.':
+    'קונה ששוקל גישות ולא ספקים. מי שממסגר את ההשוואה קובע את הקריטריונים שבהם ייעשה שימוש בבחירת הספק.',
+  'What buyers ask before they have a supplier in mind. Presence here shapes the criteria everything later is judged against.':
+    'מה קונים שואלים לפני שיש להם ספק בראש. נוכחות כאן מעצבת את הקריטריונים שכל מה שבא אחר כך נמדד מולם.',
+  'A buyer who has already chosen. Presence here converts; it does not win anything that was not already won upstream.':
+    'קונה שכבר בחר. נוכחות כאן ממירה; היא אינה זוכה בדבר שלא נזכה בו כבר במעלה הזרם.',
+  'The risks buyers raise before committing. Answering these publicly is how a supplier becomes the safe choice rather than the cheap one.':
+    'הסיכונים שקונים מעלים לפני שהם מתחייבים. מענה עליהם בפומבי הוא הדרך שבה ספק הופך לבחירה הבטוחה ולא לזולה.',
+
+  /* Opportunity */
+  'Stories nobody owns': 'סיפורים שאיש אינו בעליהם',
+  'Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.':
+    'מדורג לפי השפעה מול תחרות. הטובים שבהם הם בעלי השפעה גבוהה ובלתי מאותגרים, וזה הצירוף הנדיר ביותר בכל קטגוריה.',
+  'The single narrative that most favours this business, and nobody owns it. Same-day regional delivery is a genuine capability that no public source currently attaches to this name.':
+    'הנרטיב היחיד שמיטיב ביותר עם העסק הזה, ואיש אינו בעליו. אספקה אזורית באותו יום היא יכולת אמיתית שאף מקור ציבורי אינו מקשר כיום לשם הזה.',
+  'No competitor has claimed it, engines have no vocabulary for it, and it is the capability this business actually leads on. The single highest-return narrative available.':
+    'אף מתחרה לא תפס אותו, למנועים אין אוצר מילים עבורו, וזו היכולת שהעסק הזה באמת מוביל בה. הנרטיב בעל התשואה הגבוהה ביותר הזמין.',
+  'Directly counters the consolidation narrative that currently favours national distributors, and reframes regional scale as risk management rather than as a limitation.':
+    'סותר ישירות את נרטיב האיחוד שמיטיב כיום עם מפיצים ארציים, וממסגר מחדש קנה מידה אזורי כניהול סיכונים ולא כמגבלה.',
+  'Directly contradicts the consolidation narrative and favours a strong secondary supplier. Neither this business nor any competitor has claimed it.':
+    'סותר ישירות את נרטיב האיחוד ומיטיב עם ספק משני חזק. לא העסק הזה ולא אף מתחרה תפסו אותו.',
+  'Consolidation reaches 14% of conversation and favours national distributors. The counter-narrative reaches 11% and is owned by nobody.':
+    'האיחוד מגיע ל-14% מהשיח ומיטיב עם מפיצים ארציים. נרטיב הנגד מגיע ל-11% ואינו בבעלות אף אחד.',
+
+  /* Risk */
+  'Threats before they become the default': 'איומים לפני שיהפכו לברירת מחדל',
+  'An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.':
+    'נרטיב מתהווה ניתן לערעור. נרטיב מקובע צריך להידחק. ההפרש בעלות בין השניים הוא הסיבה שהסעיף הזה קיים.',
+  '3 risks are rated high severity, of which the entity conflation and the emerging regional-limitation narrative are both still cheap to correct.':
+    '3 סיכונים מדורגים בחומרה גבוהה, ומהם ערבוב הישויות ונרטיב המגבלה האזורית המתהווה שניהם עדיין זולים לתיקון.',
+  'The most dangerous emerging narrative on this list. It is not yet dominant and it is factually contestable, which means it is still cheap to answer.':
+    'הנרטיב המתהווה המסוכן ביותר ברשימה. הוא טרם שולט וניתן לערעור עובדתי, ומשמעות הדבר שעדיין זול לענות עליו.',
+  'Becomes the default objection to a regional supplier. Contestable now with published evidence; expensive to reverse once engines treat it as settled.':
+    'הופך להתנגדות ברירת המחדל לספק אזורי. ניתן לערעור עכשיו באמצעות ראיות מפורסמות; יקר להפוך אותו ברגע שהמנועים יתייחסו אליו כמקובע.',
+  'A factual error, carried by one engine, that removes the business from every supplier-evaluation answer it appears in. Declining, but not yet corrected.':
+    'טעות עובדתית, שנישאת על ידי מנוע אחד, שמסירה את העסק מכל תשובת הערכת ספקים שהיא מופיעה בה. דועכת, אך טרם תוקנה.',
+  'A single wrong category record continues to exclude the business from the question class that assigns orders.':
+    'רשומת קטגוריה שגויה אחת ממשיכה להוציא את העסק ממחלקת השאלות שמסנה הזמנות.',
+  'Every future comparison is scored on axes chosen to favour a competitor, whatever the campaign says.':
+    'כל השוואה עתידית נמדדת על צירים שנבחרו כדי להיטיב עם מתחרה, ולא משנה מה הקמפיין אומר.',
+  'Every impression delivered to a Gemini user reinforces an incorrect record. Campaign spend actively strengthens the wrong association.':
+    'כל חשיפה שמוגשת למשתמש Gemini מחזקת רשומה שגויה. הוצאת הקמפיין מחזקת באופן פעיל את השיוך הלא נכון.',
+  'Emerging in two engines and sourced from a competitor comparison page. Still contestable; not yet treated as settled.':
+    'מתהווה בשני מנועים ומקורו בעמוד השוואה של מתחרה. עדיין ניתן לערעור; טרם נחשב מקובע.',
+  'Appearing in Gemini and Copilot answers on multi-site sourcing questions, sourced from a competitor comparison page.':
+    'מופיע בתשובות Gemini ו-Copilot בשאלות רכש רב-אתרי, ומקורו בעמוד השוואה של מתחרה.',
+  'ChatGPT categorises the business as retail rather than MRO distribution, removing it from supplier-evaluation answers.':
+    'ChatGPT מסווג את העסק כקמעונאות ולא כהפצת ציוד תחזוקה, ומסיר אותו מתשובות הערכת ספקים.',
+  'Fill rate and catalogue breadth are cited first by three of six engines when explaining how to choose a distributor.':
+    'שיעור אספקה ורוחב קטלוג מצוטטים ראשונים על ידי שלושה מתוך שישה מנועים כשהם מסבירים כיצד לבחור מפיץ.',
+  'Favours whichever supplier is already largest. A regional specialist is read as the thing being consolidated away rather than the one consolidating.':
+    'מיטיב עם הספק שכבר הגדול ביותר. מומחה אזורי נקרא כדבר שמאחדים אותו החוצה ולא כמי שמאחד.',
+  'Its specification guidance became the category’s default vocabulary because it published first, not because it is more correct.':
+    'הנחיית המפרט שלו הפכה לאוצר המילים ברירת המחדל של הקטגוריה משום שפרסם ראשון, לא משום שהוא נכון יותר.',
+  'Published first by a competitor, so it became the vocabulary engines learned. It positions this business as a reseller by omission rather than by argument.':
+    'פורסם ראשון על ידי מתחרה, ולכן הפך לאוצר המילים שהמנועים למדו. הוא ממצב את העסק הזה כמשווק־משנה בדרך של השמטה ולא בטיעון.',
+  'Neutral on its face, but it removes price as a differentiator and pushes the decision onto evidence — which is the axis this business currently loses on.':
+    'ניטרלי על פניו, אך הוא מסיר את המחיר כגורם מבדל ודוחף את ההחלטה אל הראיות — הציר שבו העסק הזה מפסיד כרגע.',
+  'Contain an emerging high-severity adverse narrative': 'בלמו נרטיב שלילי מתהווה בחומרה גבוהה',
+  'Respond Immediately': 'הגיבו מיד',
+
+  /* Engine divergence */
+  'What each engine currently says this business is':
+    'מה כל מנוע אומר כרגע שהעסק הזה הוא',
+  'Claims machines currently repeat that are wrong. Each one removes the business from answers it should appear in.':
+    'טענות שמכונות חוזרות עליהן כעת והן שגויות. כל אחת מסירה את העסק מתשובות שהוא אמור להופיע בהן.',
+  'Misconceptions repeated as fact': 'תפיסות מוטעות שחוזרות כעובדה',
+  'Gemini resolves a same-named logistics firm; ChatGPT categorises the business as retail. Both remove it from supplier-evaluation answers entirely.':
+    'Gemini מזהה חברת לוגיסטיקה בעלת אותו שם; ChatGPT מסווג את העסק כקמעונאות. שניהם מסירים אותו לחלוטין מתשובות הערכת ספקים.',
+  'Gemini resolves the wrong entity on category questions and recognises the business at 24 of 100.':
+    'Gemini מזהה את הישות השגויה בשאלות קטגוריה ומזהה את העסק ברמה של 24 מתוך 100.',
+  'Accurate. No divergence from the intended account.': 'מדויק. אין סטייה מהגרסה המיועדת.',
+  '4 of 6 diverge': '4 מתוך 6 סוטים',
+  'Machines are repeating 1 factual error about this business that removes it from supplier answers entirely. Argument about positioning is wasted while the underlying record is wrong. Once corrected, 20% of category conversation is unclaimed and the strongest of it favours this business.':
+    'מכונות חוזרות על טעות עובדתית אחת על העסק הזה שמסירה אותו לחלוטין מתשובות על ספקים. ויכוח על מיצוב מבוזבז כל עוד הרשומה הבסיסית שגויה. לאחר התיקון, 20% מהשיח בקטגוריה נותרים ללא בעלים והחזק שבהם מיטיב עם העסק הזה.',
+  ', and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    ', וכל נקודה בו היא טעות "קמעונאית כלי העבודה" ולא משהו שהוא בחר לומר. הבעלות סופרת את הסיפורים הצמודים לשם; היא אינה שואלת אם הם מסייעים.',
+
+  /* Narrative statements */
+  'Fill rate and catalogue breadth are how you choose a distributor.':
+    '"שיעור אספקה ורוחב קטלוג הם הדרך לבחור מפיץ."',
+  'Consolidating MRO suppliers reduces cost and administrative load.':
+    '"איחוד ספקי תחזוקה מפחית עלות ועומס מנהלתי."',
+  'Midwest fastener pricing is broadly comparable across suppliers.':
+    '"תמחור מחברים במערב התיכון דומה במידה רבה בין ספקים."',
+  'Specification depth separates serious suppliers from resellers.':
+    '"עומק מפרט מבחין בין ספקים רציניים למשווקי־משנה."',
+  'Evaluation criteria are increasingly stated in a competitor’s terms.':
+    '"קריטריוני ההערכה מנוסחים יותר ויותר במונחיו של מתחרה."',
+  'The business is conflated with a same-named logistics firm.':
+    '"העסק מעורבב עם חברת לוגיסטיקה בעלת אותו שם."',
+  'Single-source supplier dependency is an operational risk.':
+    '"תלות בספק יחיד היא סיכון תפעולי."',
+  'Regional suppliers cannot support multi-plant operations.':
+    '"ספקים אזוריים אינם יכולים לתמוך בפעילות רב-מפעלית."',
+  'Regional distributors deliver faster than national ones.':
+    '"מפיצים אזוריים מספקים מהר יותר מארציים."',
+  'The business is absent from every active category story.':
+    '"העסק נעדר מכל סיפור פעיל בקטגוריה."',
+  'The business is described as a hardware retailer.':
+    '"העסק מתואר כקמעונאית כלי עבודה."',
+  'Northwind Supply is a hardware retailer.':
+    '"Northwind Supply היא קמעונאית כלי עבודה."',
+  'Observed in {sources}.': 'נצפה ב-{sources}.',
+  'How much of the conversation works for us': 'כמה מהשיח פועל לטובתנו',
+  'Public Narrative Intelligence': 'מודיעין הנרטיב הציבורי',
+  'Quoted in 3 pieces across 2 publications engines cite':
+    'ציטוט ב-3 כתבות בשני פרסומים שהמנועים מצטטים',
+  'Multi-site capability referenced in 2 of 6 engines on multi-plant sourcing questions':
+    'יכולת רב-אתרית מוזכרת ב-2 מתוך 6 מנועים בשאלות רכש רב-מפעלי',
+  'Response time cited among the first three selection criteria by 3 of 6 engines':
+    'זמן תגובה מצוטט בין שלושת קריטריוני הבחירה הראשונים על ידי 3 מתוך 6 מנועים',
+  'Secondary-supplier framing cited by 2 of 6 engines on consolidation questions':
+    'מסגור הספק המשני מצוטט על ידי 2 מתוך 6 מנועים בשאלות איחוד',
+  'The dominant evaluation framing, and it is a competitor’s. Buyers arrive already scoring suppliers on the two criteria where a national distributor wins by default.':
+    'מסגור ההערכה הדומיננטי, והוא של מתחרה. קונים מגיעים כשהם כבר מדרגים ספקים לפי שני הקריטריונים שבהם מפיץ ארצי מנצח כברירת מחדל.',
+  "4 of 6 engines carry a materially different account of this business. A buyer's understanding depends on which assistant they happen to open.":
+    '4 מתוך 6 מנועים נושאים גרסה שונה מהותית על העסק הזה. הבנתו של קונה תלויה באיזה עוזר הוא במקרה פותח.',
+  'Trade forums': 'פורומים מקצועיים',
+  'Buyer discussion': 'שיח קונים',
+  'Procurement publications': 'פרסומי רכש',
+  'Specification guides': 'מדריכי מפרט',
+  'Risk guidance': 'הנחיות סיכון',
+  'Aggregator pages': 'עמודי אגרגטורים',
+  'Trade publications': 'פרסומים מקצועיים',
+  '{pct}% share': '{pct}% נתח',
+  'The business holds <b>{pct}%</b>, and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    'העסק מחזיק ב-<b>{pct}%</b>, וכל נקודה בו היא טעות "קמעונאית כלי העבודה" ולא משהו שהוא בחר לומר. הבעלות סופרת את הסיפורים הצמודים לשם; היא אינה שואלת אם הם מסייעים.',
+  Neutral: 'ניטרלי',
+
+  /* Action plan */
+  'Narrative action plan': 'תוכנית פעולה לנרטיב',
+  'Open narrative action plan': 'פתחו את תוכנית הפעולה לנרטיב',
+  'Monitor narrative changes': 'עקבו אחר שינויי הנרטיב',
+  'Check readiness before campaigning': 'בדקו מוכנות לפני קמפיין',
+  'Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.':
+    'לכל אחת יעד, הראיות שמאחוריה, התזוזה הצפויה, רמת ודאות, אחראי, תאריך יעד, הערכת מאמץ והאופן שבו ההצלחה מאומתת.',
+  'Correct the record first, then claim the narrative nobody owns.':
+    'תקנו קודם את הרשומה, ואז תפסו את הנרטיב שאיש אינו בעליו.',
+  'Correct the entity conflation and the hardware-retailer categorisation.':
+    'תקנו את ערבוב הישויות ואת הסיווג כקמעונאית כלי עבודה.',
+  'Claim response time as a published supplier selection criterion.':
+    'תפסו את זמן התגובה כקריטריון מפורסם לבחירת ספק.',
+  'Answer the regional-limitation narrative with published multi-site evidence.':
+    'ענו על נרטיב המגבלה האזורית בראיות מפורסמות על פעילות רב-אתרית.',
+  'Claim the secondary-supplier argument against the consolidation narrative.':
+    'תפסו את טיעון הספק המשני נגד נרטיב האיחוד.',
+  'Enter the two active media stories with a named expert voice.':
+    'היכנסו לשני סיפורי המדיה הפעילים עם קול מומחה בשמו.',
+  'Reframe regional scale from limitation to risk management':
+    'מסגרו מחדש קנה מידה אזורי ממגבלה לניהול סיכונים',
+  'The narrative is unowned, high influence and uncontested. Same-day regional delivery is a real capability that appears in no category description.':
+    'הנרטיב ללא בעלים, בעל השפעה גבוהה ובלתי מאותגר. אספקה אזורית באותו יום היא יכולת אמיתית שאינה מופיעה באף תיאור קטגוריה.',
+  'Response time as a supplier selection criterion': 'זמן תגובה כקריטריון לבחירת ספק',
+  'The strategic case for a strong secondary supplier': 'הטיעון האסטרטגי לספק משני חזק',
+  'Independent authority sources 3 → 8': 'מקורות סמכות בלתי תלויים 3 ← 8',
+  'Average recognition 38 → 55 of 100': 'זיהוי ממוצע 38 ← 55 מתוך 100',
+
   /* --- Campaign Readiness ---------------------------------------------------- */
   'Campaign readiness intelligence': 'מודיעין מוכנות קמפיין',
   'Campaign Readiness Intelligence | GeoRepute': 'מודיעין מוכנות קמפיין | GeoRepute',
@@ -1242,7 +1597,6 @@ export const content: ContentOverlay = {
   'The same business is described differently across its own site, two directories and six engines. A campaign amplifies whichever version a buyer meets.':
     'אותו עסק מתואר אחרת באתר שלו, בשני מדריכים ובשישה מנועים. קמפיין מגביר את הגרסה שבה הקונה נתקל.',
   'Public narrative': 'הנרטיב הציבורי',
-  Contested: 'שנוי במחלוקת',
   'Machines describe this category using a competitor’s specification framing, so buyers arrive already evaluating against someone else’s criteria.':
     'מכונות מתארות את הקטגוריה הזו במסגור המפרט של מתחרה, כך שקונים מגיעים כשהם כבר מעריכים מול הקריטריונים של מישהו אחר.',
   'Messaging alignment': 'יישור המסרים',
@@ -1486,7 +1840,6 @@ export const content: ContentOverlay = {
   'Supplier-comparison content': 'תוכן להשוואת ספקים',
   'Company website': 'אתר החברה',
   Source: 'מקור',
-  Influence: 'השפעה',
   Favours: 'מעדיף',
   'Why it matters': 'מדוע זה חשוב',
 

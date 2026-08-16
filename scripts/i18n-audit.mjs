@@ -54,6 +54,12 @@ const PHRASES = [
   /* The demonstration domain, which the app shell prints beside the locale's
      own market name — "northwindsupply.com · ארצות הברית". */
   'northwindsupply.com',
+  /* Invented trade-publication titles. Mastheads are proper nouns and stay in
+     Latin script in every locale, like the competitor company names. */
+  'Industrial Distribution',
+  'Modern Supply Chain',
+  'Fastener Technology',
+  'Plant Engineering',
   'Search Console',
   'Google Analytics',
   'Google Ads',

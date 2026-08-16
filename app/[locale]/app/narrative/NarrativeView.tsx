@@ -17,6 +17,8 @@ import type {
 } from '@/lib/api/types'
 import type { Narrative, Polarity } from '@/lib/seed/narrative'
 import { useT } from '@/lib/i18n/content/client'
+import { useI18n } from '@/lib/i18n/context'
+import { Rich } from '@/lib/i18n/content/rich'
 
 /* ============================================================================
    PUBLIC NARRATIVE INTELLIGENCE.
@@ -44,6 +46,25 @@ const POLARITY_TOKEN: Record<Polarity, string> = {
   negative: 'var(--gr-critical)',
 }
 
+/* Display labels, never the raw enum. The content overlay walks every string
+   in the seed graph, so an entry for a bare value like 'high' would rewrite
+   the discriminant itself — see the note in Reconstruct.tsx. Capitalised
+   labels cannot collide with the lowercase values they describe. */
+const LEVEL_LABEL: Record<string, string> = {
+  high: 'High',
+  medium: 'Medium',
+  low: 'Low',
+  none: 'None',
+}
+
+const MOMENTUM_LABEL: Record<string, string> = {
+  emerging: 'Emerging',
+  growing: 'Growing',
+  steady: 'Steady',
+  declining: 'Declining',
+  contested: 'Contested',
+}
+
 const POLARITY_LABEL: Record<Polarity, string> = {
   positive: 'Favourable',
   neutral: 'Neutral',
@@ -62,6 +83,7 @@ export function NarrativeView({
   election: ElectionIntelligence
 }) {
   const t = useT()
+  const { intl } = useI18n()
   const { role, setRole } = useRoleLens('executive')
   const [electionMode, setElectionMode] = useState(false)
 
@@ -74,15 +96,13 @@ export function NarrativeView({
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div className="min-w-0">
             <p className="text-label uppercase text-ink-3">
-              Public narrative intelligence
+              {t('Public narrative intelligence')}
             </p>
             <h1 className="text-h1 md:text-display-2 text-ink mt-3 text-balance max-w-3xl">
-              What story is the market telling about us?
+              {t('What story is the market telling about us?')}
             </h1>
             <p className="text-body text-ink-2 mt-4 max-w-3xl">
-              Not how often the business is mentioned. Which accounts of it are
-              active, who owns each one, and which of them decide whether it
-              gets chosen.
+              {t('Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.')}
             </p>
           </div>
 
@@ -142,7 +162,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight">
         <SectionHead
-          eyebrow="Health"
+          eyebrow={t('Health')}
           title={t('How much of the conversation works for us')}
           note={t('Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.')}
         />
@@ -187,7 +207,7 @@ export function NarrativeView({
               </div>
 
               <p className="text-caption text-ink-2 mt-3">
-                “{engine.narrative}”
+                “{t(engine.narrative)}”
               </p>
 
               {engine.divergence ? (
@@ -199,7 +219,7 @@ export function NarrativeView({
                 </p>
               ) : (
                 <p className="text-caption text-ink-3 mt-3 pt-3 border-t border-line">
-                  Accurate. No divergence from the intended account.
+                  {t('Accurate. No divergence from the intended account.')}
                 </p>
               )}
             </li>
@@ -212,7 +232,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Landscape"
+          eyebrow={t('Landscape')}
           title={t('Every active narrative in this category')}
           note={t('Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.')}
         />
@@ -231,7 +251,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Ownership"
+          eyebrow={t('Ownership')}
           title={t('Who owns the story')}
           note={t('Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.')}
         />
@@ -240,13 +260,9 @@ export function NarrativeView({
             this account the business's entire share is a story that damages
             it, which a bare percentage would hide completely. */}
         <p className="text-caption text-ink-2 -mt-2 mb-6 max-w-3xl">
-          The business holds{' '}
-          <span className="text-ink" data-numeric="">
-            {intel.ownership.business}%
-          </span>
-          , and every point of it is the hardware-retailer error rather than
-          anything it chose to say. Ownership counts the stories attached to a
-          name; it does not ask whether they help.
+          <Rich
+            text={t('The business holds <b>{pct}%</b>, and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.', { pct: intel.ownership.business })}
+          />
         </p>
 
         <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] items-start">
@@ -257,43 +273,43 @@ export function NarrativeView({
               <Segment
                 pct={intel.ownership.business}
                 token="var(--gr-brand-400)"
-                label="Business"
+                label={t('Business')}
               />
               <Segment
                 pct={intel.ownership.competitor}
                 token="var(--gr-critical)"
-                label="Competitors"
+                label={t('Competitors')}
               />
               <Segment
                 pct={intel.ownership.shared}
                 token="var(--gr-neutral)"
-                label="Shared"
+                label={t('Shared')}
               />
               <Segment
                 pct={intel.ownership.unclaimed}
                 token="var(--gr-positive)"
-                label="Unclaimed"
+                label={t('Unclaimed')}
               />
             </div>
 
             <dl className="grid gap-px bg-line border border-line rounded-sm overflow-hidden mt-6 sm:grid-cols-4">
               <Share
-                label="Business"
+                label={t('Business')}
                 pct={intel.ownership.business}
                 token="var(--gr-brand-400)"
               />
               <Share
-                label="Competitors"
+                label={t('Competitors')}
                 pct={intel.ownership.competitor}
                 token="var(--gr-critical)"
               />
               <Share
-                label="Shared"
+                label={t('Shared')}
                 pct={intel.ownership.shared}
                 token="var(--gr-neutral)"
               />
               <Share
-                label="Unclaimed"
+                label={t('Unclaimed')}
                 pct={intel.ownership.unclaimed}
                 token="var(--gr-positive)"
               />
@@ -302,20 +318,16 @@ export function NarrativeView({
 
           <div className="rounded-md border border-line bg-panel p-6">
             <p className="text-label uppercase text-ink-3">
-              Category language owned
+              {t('Category language owned')}
             </p>
             <p className="text-display-2 text-ink mt-3" data-numeric="">
               {percentWhole(intel.ownership.categoryLanguageOwnedPct)}
             </p>
             <p className="text-caption text-ink-2 mt-4">
-              The share of the vocabulary engines use to define this category
-              that belongs to this business. Whoever holds this sets the
-              criteria every comparison is scored against.
+              {t('The share of the vocabulary engines use to define this category that belongs to this business. Whoever holds this sets the criteria every comparison is scored against.')}
             </p>
             <p className="text-caption text-ink-3 mt-4 pt-4 border-t border-line">
-              The split above measures this specific narrative inventory. This
-              figure measures the category’s language as a whole, and is the
-              same one Mission Control publishes.
+              {t('The split above measures this specific narrative inventory. This figure measures the category’s language as a whole, and is the same one Mission Control publishes.')}
             </p>
           </div>
         </div>
@@ -326,7 +338,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Competitors"
+          eyebrow={t('Competitors')}
           title={t('The story each competitor is telling')}
           note={t('Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.')}
         />
@@ -340,17 +352,17 @@ export function NarrativeView({
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-h3 text-ink">{c.name}</p>
                 <p className="text-data text-ink-2 shrink-0" data-numeric="">
-                  {c.narrativeSharePct}% share
+                  {t('{pct}% share', { pct: c.narrativeSharePct })}
                 </p>
               </div>
-              <p className="text-body text-ink-2 mt-3">“{c.positioning}”</p>
+              <p className="text-body text-ink-2 mt-3">“{t(c.positioning)}”</p>
 
               <dl className="grid gap-4 mt-5 pt-5 border-t border-line sm:grid-cols-2">
-                <Facet label="Strength" body={c.strength} />
-                <Facet label="Weakness" body={c.weakness} />
+                <Facet label={t('Strength')} body={c.strength} />
+                <Facet label={t('Weakness')} body={c.weakness} />
                 <Facet label={t('Overlap with us')} body={c.overlap} />
                 <Facet
-                  label="Opportunity"
+                  label={t('Opportunity')}
                   body={c.opportunity}
                   tone="positive"
                 />
@@ -365,7 +377,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Media"
+          eyebrow={t('Media')}
           title={t('What publications are actually writing about')}
           note={intel.mediaMomentum.summary}
         />
@@ -379,7 +391,7 @@ export function NarrativeView({
                   className="text-label uppercase shrink-0"
                   style={{ color: POLARITY_TOKEN[topic.tone] }}
                 >
-                  {topic.momentum}
+                  {t(MOMENTUM_LABEL[topic.momentum] ?? topic.momentum)}
                 </span>
               </div>
               <p className="text-caption text-ink-2 mt-3">{topic.note}</p>
@@ -396,7 +408,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Questions"
+          eyebrow={t('Questions')}
           title={t('What the market actually wants to know')}
           note={t('The real question corpus, partitioned by what a buyer is trying to decide when they ask it.')}
         />
@@ -419,7 +431,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Opportunity"
+          eyebrow={t('Opportunity')}
           title={t('Stories nobody owns')}
           note={t('Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.')}
         />
@@ -441,9 +453,9 @@ export function NarrativeView({
                 <p className="text-caption text-ink-2 mt-2">{o.rationale}</p>
               </div>
               <div className="shrink-0 flex flex-wrap gap-x-8 gap-y-2">
-                <Tag label="Influence" value={o.influence} />
+                <Tag label={t('Influence')} value={o.influence} />
                 <Tag
-                  label="Competition"
+                  label={t('Competition')}
                   value={o.competition}
                   tone={o.competition === 'none' ? 'positive' : undefined}
                 />
@@ -458,7 +470,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Risk"
+          eyebrow={t('Risk')}
           title={t('Threats before they become the default')}
           note={t('An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.')}
         />
@@ -471,7 +483,7 @@ export function NarrativeView({
             >
               <div className="p-5">
                 <div className="flex flex-wrap items-start justify-between gap-4">
-                  <p className="text-body text-ink min-w-0">“{r.statement}”</p>
+                  <p className="text-body text-ink min-w-0">“{t(r.statement)}”</p>
                   <div className="flex items-center gap-3 shrink-0">
                     <span
                       className="text-label uppercase"
@@ -482,10 +494,10 @@ export function NarrativeView({
                             : 'var(--gr-warning)',
                       }}
                     >
-                      {r.severity} severity
+                      {t('{level} severity', { level: t(LEVEL_LABEL[r.severity] ?? r.severity) })}
                     </span>
                     <span className="text-label uppercase text-ink-3">
-                      {r.trajectory}
+                      {t(MOMENTUM_LABEL[r.trajectory] ?? r.trajectory)}
                     </span>
                   </div>
                 </div>
@@ -500,7 +512,7 @@ export function NarrativeView({
               >
                 <p className="text-caption text-ink-2">
                   <span className="text-label uppercase text-ink-3 me-3">
-                    If ignored
+                    {t('If ignored')}
                   </span>
                   {r.ifIgnored}
                 </p>
@@ -515,7 +527,7 @@ export function NarrativeView({
           ============================================================== */}
       <section className="gr-rail-wide gr-section-tight gr-hairline">
         <SectionHead
-          eyebrow="Intervention"
+          eyebrow={t('Intervention')}
           title={t('Narrative action plan')}
           note={t('Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.')}
         />
@@ -546,7 +558,7 @@ export function NarrativeView({
 
               <div className="shrink-0 basis-56">
                 <p className="text-label uppercase text-ink-3">
-                  Expected impact
+                  {t('Expected impact')}
                 </p>
                 <p
                   className="text-body mt-2"
@@ -556,16 +568,16 @@ export function NarrativeView({
                   {r.expectedImpact}
                 </p>
                 <p className="text-caption text-ink-3 mt-3">
-                  Verified by: {r.successMetric}
+                  {t('Verified by: {metric}', { metric: t(r.successMetric) })}
                 </p>
               </div>
 
               <div className="shrink-0 basis-44">
-                <p className="text-label uppercase text-ink-3">Owner</p>
+                <p className="text-label uppercase text-ink-3">{t('Owner')}</p>
                 <p className="text-caption text-ink mt-2">{r.owner}</p>
-                <p className="text-label uppercase text-ink-3 mt-4">Deadline</p>
+                <p className="text-label uppercase text-ink-3 mt-4">{t('Deadline')}</p>
                 <p className="text-caption text-ink mt-2" data-numeric="">
-                  {dateFull(r.deadline)}
+                  {dateFull(r.deadline, intl)}
                 </p>
               </div>
             </li>
@@ -586,7 +598,7 @@ export function NarrativeView({
               'color-mix(in oklab, var(--gr-accent-500) 6%, transparent)',
           }}
         >
-          <p className="text-label uppercase text-ink-3">Executive decision</p>
+          <p className="text-label uppercase text-ink-3">{t('Executive decision')}</p>
           <p
             className="text-label uppercase mt-3"
             style={{ color: 'var(--gr-accent-500)' }}
@@ -627,6 +639,7 @@ function ElectionToggle({
   enabled: boolean
   onChange: (value: boolean) => void
 }) {
+  const t = useT()
   return (
     <button
       type="button"
@@ -656,9 +669,9 @@ function ElectionToggle({
         />
       </span>
       <span className="text-start">
-        <span className="block text-caption text-ink">Election mode</span>
+        <span className="block text-caption text-ink">{t('Election mode')}</span>
         <span className="block text-label uppercase text-ink-3 mt-1">
-          Political intelligence
+          {t('Political intelligence')}
         </span>
       </span>
     </button>
@@ -748,20 +761,21 @@ function NarrativeRow({ narrative: n }: { narrative: Narrative }) {
               style={{ background: POLARITY_TOKEN[n.polarity] }}
             />
             <span className="text-label uppercase text-ink-3">
-              {t(POLARITY_LABEL[n.polarity])} · {n.momentum}
+              {t(POLARITY_LABEL[n.polarity])} ·{' '}
+              {t(MOMENTUM_LABEL[n.momentum] ?? n.momentum)}
             </span>
           </div>
-          <p className="text-body-lg text-ink mt-3">“{n.statement}”</p>
+          <p className="text-body-lg text-ink mt-3">“{t(n.statement)}”</p>
           <p className="text-caption text-ink-2 mt-2 max-w-prose">
             {n.commercialEffect}
           </p>
           <p className="text-caption text-ink-3 mt-3">
-            Observed in {n.sources.join(', ').toLowerCase()}.
+            {t('Observed in {sources}.', { sources: n.sources.map((s) => t(s)).join(', ') })}
           </p>
         </div>
 
         <div className="shrink-0 basis-40">
-          <p className="text-label uppercase text-ink-3">Reach</p>
+          <p className="text-label uppercase text-ink-3">{t('Reach')}</p>
           <p className="text-data-lg text-ink mt-2" data-numeric="">
             {n.reachPct}%
           </p>
@@ -776,7 +790,7 @@ function NarrativeRow({ narrative: n }: { narrative: Narrative }) {
               }}
             />
           </div>
-          <p className="text-label uppercase text-ink-3 mt-4">Owned by</p>
+          <p className="text-label uppercase text-ink-3 mt-4">{t('Owned by')}</p>
           <p
             className="text-caption mt-2"
             style={{
@@ -786,7 +800,7 @@ function NarrativeRow({ narrative: n }: { narrative: Narrative }) {
                   : 'var(--gr-text-primary)',
             }}
           >
-            {ownerLabel}
+            {t(ownerLabel)}
           </p>
         </div>
       </div>
@@ -876,6 +890,7 @@ function Tag({
   value: string
   tone?: 'positive'
 }) {
+  const t = useT()
   return (
     <div>
       <p className="text-label uppercase text-ink-3">{label}</p>
@@ -888,7 +903,7 @@ function Tag({
               : 'var(--gr-text-primary)',
         }}
       >
-        {value}
+        {t(LEVEL_LABEL[value] ?? MOMENTUM_LABEL[value] ?? value)}
       </p>
     </div>
   )
@@ -903,6 +918,7 @@ function QuestionColumn({
   groups: NarrativeIntelligence['publicQuestions']
   misconceptions?: NarrativeIntelligence['misconceptions']
 }) {
+  const t = useT()
   return (
     <div className="rounded-md border border-line bg-panel overflow-hidden">
       <p className="text-label uppercase text-ink-2 p-5 border-b border-line">
@@ -957,7 +973,7 @@ function QuestionColumn({
                       <span className="text-caption text-ink-2">
                         {p.text}
                         {p.northwindRecommendedBy.length === 0 ? (
-                          <span className="text-ink-3"> — absent</span>
+                          <span className="text-ink-3"> {t('— absent')}</span>
                         ) : null}
                       </span>
                     </li>
@@ -966,7 +982,7 @@ function QuestionColumn({
 
             {group.prompts.length > 5 ? (
               <p className="text-caption text-ink-3 mt-3" data-numeric="">
-                + {group.prompts.length - 5} more tracked
+                {t('+ {n} more tracked', { n: group.prompts.length - 5 })}
               </p>
             ) : null}
           </div>
