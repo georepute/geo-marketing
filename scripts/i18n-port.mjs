@@ -39,9 +39,18 @@ function keysOf(file) {
   }
   const keys = []
   for (const line of text.split(/\r?\n/)) {
-    const quoted = line.match(/^\s{2}'((?:[^'\\]|\\.)*)':/)
-    if (quoted) {
-      keys.push(quoted[1].replace(/\\'/g, "'"))
+    const single = line.match(/^\s{2}'((?:[^'\\]|\\.)*)':/)
+    if (single) {
+      keys.push(single[1].replace(/\\'/g, "'"))
+      continue
+    }
+    /* A source string containing an apostrophe is written with double quotes
+       rather than escaped. Reading only single-quoted keys made this script
+       report `missing: 0` on a locale that was in fact missing every one of
+       them — a silent under-count, which is the worst kind. */
+    const double = line.match(/^\s{2}"((?:[^"\\]|\\.)*)":/)
+    if (double) {
+      keys.push(double[1].replace(/\\"/g, '"'))
       continue
     }
     const bare = line.match(/^\s{2}([A-Za-z_$][\w$]*):/)

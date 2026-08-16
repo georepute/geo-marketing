@@ -1765,8 +1765,6 @@ export const content: ContentOverlay = {
   'No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.':
     'שום כלי מקובל אינו צופה בשלב הזה. אין ביקור, קליק, ליד או אירוע CRM לתעד — ולכן החולשה נותרת בלתי נראית עד שההכנסה זזה.',
   Domain: 'דומיין',
-  '24 tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
-    '24 שאלות החלטה נמדדות. שאלות הערכת ספקים מופיעות ראשונות — שם נבחר הספק.',
   'Reconstruction confidence across all ten surfaces.':
     'רמת הוודאות של השחזור על פני עשרת המשטחים.',
 
@@ -1795,18 +1793,6 @@ export const content: ContentOverlay = {
   /* Engine status and understanding */
   'Mentioned only': 'הוזכר בלבד',
   'Wrong entity': 'ישות שגויה',
-  'Understood as: An MRO and fastener distributor serving manufacturers':
-    'הובן כ: מפיץ ציוד תחזוקה ומחברים המשרת יצרנים',
-  'Understood as: Midwest industrial fastener and MRO distributor':
-    'הובן כ: מפיץ מחברים תעשייתיים וציוד תחזוקה במערב התיכון',
-  'Understood as: A regional industrial supplier in the US Midwest':
-    'הובן כ: ספק תעשייתי אזורי במערב התיכון של ארה"ב',
-  'Understood as: Industrial supply company, category association incomplete':
-    'הובן כ: חברת אספקה תעשייתית, שיוך הקטגוריה אינו שלם',
-  'Understood as: Unclear — associates the name with unrelated businesses':
-    'הובן כ: לא ברור — משייך את השם לעסקים שאינם קשורים',
-  'Understood as: Not recognized as a distinct business entity':
-    'הובן כ: אינו מזוהה כישות עסקית נפרדת',
   'Named Northwind in its answer, citing company website.':
     'הזכיר את Northwind בתשובתו, בהסתמך על אתר החברה.',
   'Recognises the business but did not consider it relevant to this question.':
@@ -1826,9 +1812,6 @@ export const content: ContentOverlay = {
     'מכלל ההמלצות במערך ההחלטות הנמדד',
 
   /* Competitor, sources and search */
-  'Kestrel Industrial controls': 'Kestrel Industrial שולטת ב',
-  '21 independent sources support this brand. Northwind has 3.':
-    '21 מקורות בלתי תלויים תומכים במותג הזה. ל-Northwind יש 3.',
   'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
     'Kestrel Industrial מצוטטת על ידי 21 מקורות בלתי תלויים; Northwind על ידי 3.',
   '3 sources vs 14 median': '3 מקורות מול חציון של 14',
@@ -1852,16 +1835,22 @@ export const content: ContentOverlay = {
   'Share of query volume': 'נתח מנפח השאילתות',
   'Share of revenue decided': 'נתח ההכנסה שנקבע',
   'of questions at this stage against': 'מהשאלות בשלב זה מול',
-  'stage 4 of 5': 'שלב 4 מתוך 5',
-  'Observable by פלטפורמות SEO — but only after the decision has already narrowed.':
-    'ניתן לצפייה על ידי פלטפורמות SEO — אך רק לאחר שההחלטה כבר הצטמצמה.',
   'Market position': 'עמדה בשוק',
   'Window remaining': 'החלון שנותר',
-  'across the whole set. Competitive density is shifting at מתון — 8% מרבעון לרבעון .':
-    'על פני כל המערך. הצפיפות התחרותית משתנה בקצב מתון — 8% מרבעון לרבעון.',
-  'This is the exposure attributable to this single question. The full-book figure across all 24 tracked decisions is materially larger and appears in Mission Control.':
-    'זו החשיפה המיוחסת לשאלה הבודדת הזו. הנתון המלא על פני כל 24 ההחלטות הנמדדות גדול משמעותית ומופיע במרכז הבקרה.',
   'Buy this as an intelligence product': 'רכשו זאת כמוצר מודיעין',
+
+  /* Page descriptions. These render into <meta name="description"> rather than
+     into the page, so the render audit cannot see them — it reads visible
+     prose and a short list of perceivable attributes. Four of them sat in
+     English through every clean audit this site has passed. */
+  'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.':
+    'בריאות ההחלטה, חשיפת ההכנסה, לכידה תחרותית, שליטה בנרטיב ותזמון אסטרטגי — בעמדת החלטה אחת.',
+  'Should we launch this campaign today? A pre-campaign assessment of the business rather than the campaign — AI, authority, trust, narrative, competitive position and destination readiness, weighted into one decision.':
+    'האם להשיק את הקמפיין הזה היום? הערכה טרום-קמפיין של העסק ולא של הקמפיין — בינה מלאכותית, סמכות, אמון, נרטיב, עמדה תחרותית ומוכנות היעד, משוקללים להחלטה אחת.',
+  'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
+    'איזה סיפור השוק מספר עלינו, וכיצד הוא משפיע על החלטות? הנרטיבים הפעילים, מי מחזיק בכל אחד מהם, לאן הם מתקדמים ומה צריך להשתנות.',
+  'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
+    'הזינו דומיין ובחרו שאלה מסחרית. שחזרו מה כל מנוע בינה מלאכותית הבין, מי קיבל את ההחלטה, מדוע, ומה חייב להשתנות.',
 
   /* The 24 tracked buyer questions. Translated on the same reasoning as the
      home page's search queries — see the note beside those. */

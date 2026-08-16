@@ -1104,4 +1104,1168 @@ export const content: ContentOverlay = {
   'Demand Gen Manager': 'مدير توليد الطلب',
   'Customer-configured': 'مُهيَّأ من العميل',
   'Derived from §13.1 chain': 'مشتق من سلسلة §13.1',
+  /* A product name. Recorded rather than translated, so its absence from the
+     rest of this file reads as a decision and not an oversight. */
+  'Google Ads': 'Google Ads',
+
+  /* ==========================================================================
+     ELECTION INTELLIGENCE
+     The race, the candidates and the county are invented. Candidate initials
+     stay Latin — they are names, and the page says so on every screen.
+     ====================================================================== */
+  'Demonstration subject': 'موضوع العرض التوضيحي',
+  'Entirely fictional. No real person, party or race.':
+    'خيالي بالكامل. لا يوجد شخص أو حزب أو سباق حقيقي.',
+  Race: 'السباق',
+  'County Commission': 'مجلس المقاطعة',
+  'Riverbend County — District 4': 'مقاطعة Riverbend — الدائرة 4',
+  Candidate: 'المرشح',
+  Opponent: 'المنافس',
+  /* Invented candidates. Transliterated rather than left Latin: a bare Latin
+     run inside an RTL line breaks the reading order of the surrounding name
+     label, and these are names, not product names. */
+  'A. Marchetti': 'أ. مارتشيتي',
+  'D. Okonkwo': 'د. أوكونكو',
+  'Election War Room — the live operational view':
+    'غرفة عمليات الانتخابات — العرض التشغيلي المباشر',
+  'The Election War Room. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'غرفة عمليات الانتخابات. سباق خيالي وبيانات عرض توضيحي — لا يوجد مرشح أو حزب أو حملة حقيقية.',
+  'Candidate / party dashboard — the standing position':
+    'لوحة المرشح/الحزب — الموقع القائم',
+  'Candidate and party position. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'موقع المرشح والحزب. سباق خيالي وبيانات عرض توضيحي — لا يوجد مرشح أو حزب أو حملة حقيقية.',
+  'Election narrative intelligence — positive vs negative narratives':
+    'ذكاء السرديات الانتخابية — السرديات الإيجابية مقابل السلبية',
+  'Which narratives are strengthening the position and which are damaging it. Fictional race, demonstration data.':
+    'أي السرديات تقوّي الموقع وأيها يضرّ به. سباق خيالي وبيانات عرض توضيحي.',
+  'Positive vs negative narratives — the polarity split':
+    'السرديات الإيجابية مقابل السلبية — انقسام الاستقطاب',
+  'Positive against negative, by reach and by direction of travel. Fictional race, demonstration data.':
+    'الإيجابي مقابل السلبي، حسب المدى واتجاه الحركة. سباق خيالي وبيانات عرض توضيحي.',
+  'Audience / segment movement — who is moving toward and away':
+    'حركة الجمهور/الشرائح — من يقترب ومن يبتعد',
+  'Which audiences are moving closer and which are moving away. Fictional race, demonstration data.':
+    'أي الجماهير تقترب وأيها يبتعد. سباق خيالي وبيانات عرض توضيحي.',
+  'Opponent intelligence — competing narratives and ownership':
+    'ذكاء المنافس — السرديات المتنافسة وملكيتها',
+  'What the opposing account is, and which issues it owns. Fictional race, demonstration data.':
+    'ما هي رواية الطرف المقابل، وأي القضايا يمتلكها. سباق خيالي وبيانات عرض توضيحي.',
+  'Influencers and sources shaping the narrative':
+    'المؤثرون والمصادر التي تصوغ السردية',
+  'Who is strengthening the position and who is damaging it. Fictional race, demonstration data.':
+    'من يقوّي الموقع ومن يضرّ به. سباق خيالي وبيانات عرض توضيحي.',
+  'AI + Google election intelligence — per-engine narrative leads':
+    'ذكاء انتخابي من الذكاء الاصطناعي وGoogle — صدارة السردية لكل محرك',
+  'What each AI engine and Google surface leads with. Fictional race, demonstration data.':
+    'بماذا يتصدّر كل محرك ذكاء اصطناعي وكل واجهة من Google. سباق خيالي وبيانات عرض توضيحي.',
+  'Multilingual intelligence — narrative gaps between languages':
+    'ذكاء متعدد اللغات — فجوات السردية بين اللغات',
+  'Where the account of a candidate differs by language. Fictional race, demonstration data.':
+    'أين تختلف رواية المرشح باختلاف اللغة. سباق خيالي وبيانات عرض توضيحي.',
+  'Risks and opportunities — emerging threats and open positions':
+    'المخاطر والفرص — التهديدات الناشئة والمواقع المفتوحة',
+  'Emerging threats and unclaimed positions, ranked. Fictional race, demonstration data.':
+    'التهديدات الناشئة والمواقع غير المُطالَب بها، مرتّبة. سباق خيالي وبيانات عرض توضيحي.',
+  'Recommended actions — the campaign action plan':
+    'الإجراءات الموصى بها — خطة عمل الحملة',
+  'What to do now, who owns it, and how the movement will be measured. Fictional race, demonstration data.':
+    'ما الذي يجب فعله الآن، ومن يملكه، وكيف ستُقاس الحركة. سباق خيالي وبيانات عرض توضيحي.',
+  'Trend over time — narrative movement across the cycle':
+    'الاتجاه عبر الزمن — حركة السردية على امتداد الدورة',
+  'How the position has moved across the cycle. Fictional race, demonstration data.':
+    'كيف تحرّك الموقع على امتداد الدورة. سباق خيالي وبيانات عرض توضيحي.',
+
+  /* ==========================================================================
+     INTELLIGENCE ENGINES
+     ====================================================================== */
+  'Intelligence engines': 'محركات الذكاء',
+  'Each engine answers a board-level business question, produces a connected intelligence readout and routes the user into action. Not a feature list — a set of questions the business needs answered.':
+    'كل محرك يجيب عن سؤال تجاري بمستوى مجلس الإدارة، ويُنتج قراءة ذكاء مترابطة، ويوجّه المستخدم إلى الفعل. ليست قائمة ميزات — بل مجموعة أسئلة يحتاج النشاط التجاري إلى إجابات عنها.',
+  'Built in this environment · 4 of 12': 'مبني في هذه البيئة · 4 من 12',
+  'Four engines, built to full depth': 'أربعة محركات، مبنية بعمق كامل',
+  'Each carries a real seeded outcome, its evidence, its commercial consequence and the action it prescribes. They chain into one another — together they form the causal argument rather than four samples of it.':
+    'كل محرك يحمل نتيجة مزروعة حقيقية، وأدلتها، وأثرها التجاري، والإجراء الذي يصفه. وهي تتسلسل معًا — فتشكّل مجتمعةً الحجة السببية بدلاً من أربع عيّنات منها.',
+  'The full operating system': 'نظام التشغيل الكامل',
+  'Eight further engines available in the platform':
+    'ثمانية محركات إضافية متاحة في المنصة',
+  'These are part of the operating system but are not built in this demonstration environment. Their business questions are listed so the shape of the full system is visible.':
+    'هذه جزء من نظام التشغيل لكنها غير مبنية في بيئة العرض هذه. أسئلتها التجارية مدرجة كي يتضح شكل النظام الكامل.',
+  'Available in platform': 'متاح في المنصة',
+  'Is the business present when customers ask AI whom to choose?':
+    'هل النشاط التجاري حاضر حين يسأل العملاء الذكاء الاصطناعي عمّن يختارون؟',
+  'Which gap is commercially meaningful enough to fix first?':
+    'أي فجوة ذات مغزى تجاري كافٍ لتُعالَج أولاً؟',
+  'When does paid search become structurally inefficient?':
+    'متى يصبح البحث المدفوع غير فعّال بنيويًا؟',
+  'Is the business visible but still unsafe to recommend?':
+    'هل النشاط التجاري مرئي لكنه ما زال غير آمن للتوصية به؟',
+  'When the market explains the category, whose language does it use?':
+    'حين يشرح السوق الفئة، لغة من يستخدم؟',
+  'Is the market ready, and how long is the window open?':
+    'هل السوق جاهز، وكم يبقى النافذة مفتوحة؟',
+  'How does the business change across countries, languages and markets?':
+    'كيف يتغيّر النشاط التجاري عبر الدول واللغات والأسواق؟',
+  'Does the route to market strengthen the brand or transfer power to intermediaries?':
+    'هل يقوّي مسار الوصول إلى السوق العلامة التجارية أم ينقل القوة إلى الوسطاء؟',
+  'See plans': 'اطّلع على الخطط',
+
+  /* ==========================================================================
+     MARKETPLACE
+     ====================================================================== */
+  'Seven categories of decision intelligence, each holding the models that answer one kind of commercial question. Most of them measure things a business has never been able to see — not because the questions are exotic, but because nothing existed to answer them.':
+    'سبع فئات من ذكاء القرار، تحوي كل منها النماذج التي تجيب عن نوع واحد من الأسئلة التجارية. معظمها يقيس أمورًا لم يستطع أي نشاط تجاري رؤيتها من قبل — لا لأن الأسئلة غريبة، بل لأنه لم يوجد ما يجيب عنها.',
+  'Intelligence categories': 'فئات الذكاء',
+  'Intelligence modules': 'وحدات الذكاء',
+  'Engines beneath them': 'المحركات تحتها',
+  'of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    'من هذه الوحدات تعمل مباشرةً في هذه البيئة على نشاط تجاري مُعاد بناؤه فعليًا. والبقية متاحة في المنصة.',
+  'Start with the question you actually have.': 'ابدأ من السؤال الذي لديك فعلاً.',
+  'Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.':
+    'كل فئة تنفتح على الوحدات التي تحتها. وكل وحدة تجيب عن سؤال تجاري واحد وتعيد دليلاً وتحليلاً وتوصية — لا رقمًا مجرّدًا أبدًا.',
+  'What you are buying': 'ما الذي تشتريه',
+  'The document is the output. The intelligence is the product.':
+    'المستند هو المُخرَج. والذكاء هو المنتج.',
+  'How the models work': 'كيف تعمل النماذج',
+  'Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion.':
+    'كل ادّعاء يحمل الملاحظة التي وراءه — أي محرك، وأي سؤال، وأي تاريخ. والاستنتاج الذي لا يمكن تدقيقه رأيٌ لا أكثر.',
+  'What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied.':
+    'ما الذي يعنيه الدليل تجاريًا، وما سببه، وما مستوى الثقة الذي يمكن للنموذج أن يدّعيه بصدق. الحدود تُذكر صراحةً ولا يُلمَّح إليها.',
+  'What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved.':
+    'ما الذي يجب فعله، ومن يملكه، وبحلول متى، وأي إشارة ينبغي أن تتحرك نتيجةً لذلك. ويُتحقَّق منه لاحقًا مقابل ما تحرّك فعلاً.',
+  'Whatever the business question, there is already intelligence built for it.':
+    'مهما كان السؤال التجاري، هناك ذكاء مبني له بالفعل.',
+  'See a module run live': 'شاهد وحدة تعمل مباشرةً',
+  'Monitor continuously instead': 'أو راقب بشكل مستمر بدلاً من ذلك',
+  '7 live in demo': '7 تعمل في العرض التوضيحي',
+  '4 live in demo': '4 تعمل في العرض التوضيحي',
+  Analysis: 'التحليل',
+  Recommendation: 'التوصية',
+  modules: 'وحدات',
+  Explore: 'استكشف',
+  '+ 1 more': '+ 1 إضافية',
+  '+ 2 more': '+ 2 إضافية',
+  '+ 4 more': '+ 4 إضافية',
+  '+ 6 more': '+ 6 إضافية',
+  '+ {n} more': '+ {n} إضافية',
+  '{n} live in demo': '{n} تعمل في العرض التوضيحي',
+  '<b>{n}</b> of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    '<b>{n}</b> من هذه الوحدات تعمل مباشرةً في هذه البيئة على نشاط تجاري مُعاد بناؤه فعليًا. والبقية متاحة في المنصة.',
+  'Built in this environment · {n} of {total}': 'مبني في هذه البيئة · {n} من {total}',
+
+  /* ==========================================================================
+     LEGAL
+     `localStorage` stays Latin — it is the storage API by name, and the page
+     has to name it precisely.
+     ====================================================================== */
+  Legal: 'الشؤون القانونية',
+  'Legal and data handling': 'الشؤون القانونية والتعامل مع البيانات',
+  'Legal and data handling | GeoRepute':
+    'الشؤون القانونية والتعامل مع البيانات | GeoRepute',
+  'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.':
+    'الخصوصية والشروط ومعالجة البيانات والوضع الأمني لبيئة العرض التوضيحي من GeoRepute.',
+  'What this environment does and does not do with data.':
+    'ما تفعله هذه البيئة بالبيانات وما لا تفعله.',
+  'This is a demonstration build. Rather than reproduce boilerplate that would not apply to it, each section below states the actual position.':
+    'هذه نسخة عرض توضيحي. وبدلاً من تكرار صياغات نمطية لا تنطبق عليها، يوضّح كل قسم أدناه الموقف الفعلي.',
+  Privacy: 'الخصوصية',
+  'This environment collects nothing. There is no analytics script, no tag manager, no session recording and no third-party tracker on any page.':
+    'هذه البيئة لا تجمع أي شيء. لا يوجد سكربت تحليلات ولا مدير وسوم ولا تسجيل جلسات ولا أي أداة تتبّع من طرف ثالث في أي صفحة.',
+  'The only data stored about you is your theme preference and any demonstration purchases, both held in your browser’s localStorage and readable only by this site. Nothing is transmitted anywhere. Clearing site data removes all of it, and the purchase-confirmation screen offers a reset control.':
+    'البيانات الوحيدة المخزَّنة عنك هي تفضيل السمة وأي عمليات شراء توضيحية، وكلاهما محفوظ في localStorage بمتصفحك ولا يمكن قراءته إلا من هذا الموقع. ولا يُرسَل أي شيء إلى أي جهة. ومسح بيانات الموقع يزيلها بالكامل، كما توفّر شاشة تأكيد الشراء زر إعادة تعيين.',
+  'Terms of service': 'شروط الخدمة',
+  'No commercial terms apply. Nothing on this site constitutes an offer, and no contract can be formed through it.':
+    'لا تنطبق أي شروط تجارية. ولا يشكّل أي شيء في هذا الموقع عرضًا، ولا يمكن إبرام أي عقد من خلاله.',
+  'Pricing shown throughout is placeholder and clearly marked as such on the pricing page. The checkout collects no payment details and processes no charge.':
+    'الأسعار المعروضة في الموقع هي أسعار نائبة ومُعلَّمة بوضوح كذلك في صفحة الأسعار. وصفحة الدفع لا تجمع أي بيانات دفع ولا تنفّذ أي عملية خصم.',
+  'Data processing': 'معالجة البيانات',
+  'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
+    'Northwind Supply مؤسسة خيالية. وكل رقم منسوب إليها هو رقم مزروع ومتّسق داخليًا ومشتق من مجموعة معلنة من الحقائق المرجعية. ولا تظهر بيانات أي شركة حقيقية في أي موضع من هذه البيئة.',
+  'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.':
+    'أسماء المنافسين ونطاقاتهم وأعداد الاستشهادات كلها من نسج الخيال. وأي تشابه مع نشاط تجاري قائم هو محض مصادفة وغير مقصود.',
+  'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.':
+    'يُشار إلى محركات الذكاء الاصطناعي بأسماء منتجاتها العلنية توخّيًا لدقة الوصف. ولا يُدّعى أي انتساب أو تأييد أو شراكة ولا يُلمَّح إليها.',
+  Security: 'الأمان',
+  'There is no authentication, no user account and no server-side session. The sign-in screen requests no password because none is checked — inviting a real credential into a demonstration would be a hazard, not a convenience.':
+    'لا توجد مصادقة ولا حساب مستخدم ولا جلسة على الخادم. ولا تطلب شاشة تسجيل الدخول كلمة مرور لأنه لا يُتحقَّق من أي كلمة مرور — فدعوة بيانات اعتماد حقيقية إلى عرض توضيحي خطرٌ لا تسهيل.',
+  'No external network requests are made at runtime. Fonts are self-hosted, all visuals are generated in CSS or SVG, and the content security posture assumes no third-party origin is trusted.':
+    'لا تُجرى أي طلبات شبكة خارجية أثناء التشغيل. الخطوط مستضافة ذاتيًا، وجميع العناصر البصرية مُولَّدة بـCSS أو SVG، ويفترض وضع أمان المحتوى أنه لا يُوثَق بأي مصدر خارجي.',
+  'Before this platform is operated commercially, these sections must be replaced with reviewed policies covering the real data flows, retention periods, sub-processors and jurisdictions involved.':
+    'قبل تشغيل هذه المنصة تجاريًا، يجب استبدال هذه الأقسام بسياسات مُراجَعة تغطي تدفقات البيانات الفعلية ومدد الاحتفاظ والمعالِجين الفرعيين والولايات القضائية المعنية.',
+  'Return home': 'العودة إلى الصفحة الرئيسية',
+
+  /* ==========================================================================
+     SIGN IN
+     ====================================================================== */
+  'Sign In': 'تسجيل الدخول',
+  'Sign In | GeoRepute': 'تسجيل الدخول | GeoRepute',
+  Home: 'الرئيسية',
+  'Enter the demonstration workspace': 'ادخل إلى مساحة العمل التوضيحية',
+  'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
+    'لا توجد مصادقة في هذه البيئة. فكل زائر يرى المؤسسة المزروعة نفسها، Northwind Supply، بحيث يبقى كل رقم قابلاً للتحقق مقابل المنهجية المنشورة.',
+  Workspace: 'مساحة العمل',
+  'northwindsupply.com · US Midwest': 'northwindsupply.com · وسط غرب الولايات المتحدة',
+  'Continue to Mission Control': 'المتابعة إلى مركز القيادة',
+  'No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.':
+    'لا تُطلب كلمة مرور لأنه لا يُتحقَّق من أي كلمة مرور. والمصادقة الحقيقية تُركَّب خلف المسار نفسه دون تغيير موضع هذه الشاشة في التدفق.',
+
+  /* ==========================================================================
+     PUBLIC NARRATIVE INTELLIGENCE
+
+     Trade-publication mastheads (Industrial Distribution, Modern Supply
+     Chain, Fastener Technology, Plant Engineering) stay Latin. They are
+     invented proper nouns, like the competitor names.
+
+     Nothing here may be keyed on a bare lowercase enum value — 'emerging',
+     'growing', 'steady', 'declining' are discriminants in the seed graph and
+     translating them rewrites the data. The component maps them to
+     capitalised labels; translate those.
+     ====================================================================== */
+  'Public narrative intelligence': 'ذكاء السردية العامة',
+  'Public Narrative Intelligence | GeoRepute': 'ذكاء السردية العامة | GeoRepute',
+  'Public Narrative Intelligence': 'ذكاء السردية العامة',
+  'What story is the market telling about us?': 'ما القصة التي يرويها السوق عنّا؟',
+  'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
+    'ليس كم مرة يُذكر النشاط التجاري. بل أي الروايات عنه نشطة، ومن يملك كلاً منها، وأيها يحسم ما إذا كان سيُختار.',
+  'Election mode': 'وضع الانتخابات',
+  'Political intelligence': 'الذكاء السياسي',
+  Health: 'الصحة',
+  'Narrative health': 'صحة السردية',
+  'Overall public sentiment': 'المشاعر العامة الإجمالية',
+  'A weighted read of how much active conversation helps against how much hurts.':
+    'قراءة مرجّحة لمقدار ما يساعد من النقاش النشط مقابل ما يضرّ منه.',
+  'Narrative momentum': 'زخم السردية',
+  'Narrative stability': 'استقرار السردية',
+  'Narrative balance': 'توازن السردية',
+  'Positive narrative strength': 'قوة السردية الإيجابية',
+  'Negative narrative strength': 'قوة السردية السلبية',
+  'Neutral narrative': 'سردية محايدة',
+  'The balance between stories that help and stories that hurt, weighted by how much of the conversation each reaches.':
+    'التوازن بين القصص التي تساعد والقصص التي تضرّ، مرجّحًا بمقدار ما يبلغه كل منها من النقاش.',
+  '20% of active category conversation carries a story that favours this business — and both of those narratives are currently unclaimed by anyone.':
+    '20% من النقاش النشط في الفئة يحمل قصة تصبّ في صالح هذا النشاط التجاري — وكلتا السرديتين غير مُطالَب بهما من أحد حاليًا.',
+  '74% carries a story that works against it, most of it a competitor’s evaluation framing rather than criticism of the business itself.':
+    '74% يحمل قصة تعمل ضده، ومعظمها إطار تقييم صاغه منافس وليس نقدًا للنشاط التجاري نفسه.',
+  '6% is category-level conversation attached to no supplier. Neutral is not safe — it is unowned ground with no defender.':
+    '6% نقاش على مستوى الفئة غير مرتبط بأي مورّد. والحياد ليس أمانًا — بل أرض بلا مالك ولا مدافع.',
+  'Sentiment is not hostility. Nothing here is criticism of the business — the adverse weight comes almost entirely from stories written by competitors in which this business does not appear.':
+    'المشاعر ليست عداءً. لا شيء هنا نقدٌ للنشاط التجاري — فالوزن السلبي يأتي كله تقريبًا من قصص كتبها منافسون ولا يظهر فيها هذا النشاط أصلاً.',
+  '3 adverse narratives are gaining ground against 1 favourable one. Direction matters more than the current balance, because it is what the position will be in two quarters.':
+    '3 سرديات سلبية تكسب أرضًا مقابل سردية إيجابية واحدة. والاتجاه أهم من التوازن الحالي، لأنه ما سيكون عليه الموقع بعد ربعين.',
+  '4 of 8 active narratives are still forming or growing. The account of this category is not yet fixed, which is what makes intervention cheap now and expensive later.':
+    '4 من 8 سرديات نشطة ما زالت تتشكّل أو تنمو. ورواية هذه الفئة لم تستقر بعد، وهذا ما يجعل التدخّل رخيصًا الآن ومكلفًا لاحقًا.',
+  Landscape: 'المشهد',
+  'Every active narrative in this category': 'كل سردية نشطة في هذه الفئة',
+  'Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.':
+    'مرتّبة حسب المدى. وعمود المالك هو المهم — فالقصة الإيجابية التي لا يملكها أحد أصلٌ ينتظر من يطالب به.',
+  'Who owns the story': 'من يملك القصة',
+  'Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.':
+    'نصيب من النقاش النشط، مرجّحًا بالمدى. وغير المُطالَب به ليس أرضًا محايدة — بل أرض بلا مدافع.',
+  Business: 'النشاط التجاري',
+  Competitors: 'المنافسون',
+  Shared: 'مشترك',
+  Unclaimed: 'غير مُطالَب به',
+  'Business: 4%': 'النشاط التجاري: 4%',
+  'Competitors: 56%': 'المنافسون: 56%',
+  'Shared: 20%': 'مشترك: 20%',
+  'Unclaimed: 20%': 'غير مُطالَب به: 20%',
+  'Category language owned': 'لغة الفئة المملوكة',
+  'The share of the vocabulary engines use to define this category that belongs to this business. Whoever holds this sets the criteria every comparison is scored against.':
+    'نصيب هذا النشاط التجاري من المفردات التي تستخدمها المحركات لتعريف هذه الفئة. ومن يملكها يحدّد المعايير التي تُقيَّم عليها كل مقارنة.',
+  'The split above measures this specific narrative inventory. This figure measures the category’s language as a whole, and is the same one Mission Control publishes.':
+    'التقسيم أعلاه يقيس مخزون السرديات هذا تحديدًا. أما هذا الرقم فيقيس لغة الفئة ككل، وهو الرقم نفسه الذي ينشره مركز القيادة.',
+  'The business holds': 'يمتلك النشاط التجاري',
+  'The business holds <b>{pct}%</b>, and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    'يمتلك النشاط التجاري <b>{pct}%</b>، وكل نقطة منها هي خطأ تصنيفه كمتجر أدوات لا شيئًا اختار قوله. فالملكية تعدّ القصص المرتبطة بالاسم؛ ولا تسأل ما إذا كانت تساعد.',
+  'Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.':
+    'مرجّحة بالمدى لا معدودة، فالقصة التي تبلغ ثلث الفئة لا تساوي قصة تبلغ عشرها الثاني.',
+  Reach: 'المدى',
+  'Owned by': 'مملوكة لـ',
+  Influence: 'التأثير',
+  Competition: 'المنافسة',
+  Opportunity: 'الفرصة',
+  Strength: 'قوة',
+  Weakness: 'ضعف',
+  Risk: 'خطر',
+  Media: 'الإعلام',
+  Questions: 'الأسئلة',
+  'If ignored': 'إذا أُهمل',
+  'Overlap with us': 'التداخل معنا',
+  Unsettled: 'غير مستقر',
+  '— absent': '— غائب',
+  '{level} severity': 'خطورة {level}',
+  '+ {n} more tracked': '+ {n} أخرى متابَعة',
+  '31 % share': 'حصة 31%',
+  '18 % share': 'حصة 18%',
+  '11 % share': 'حصة 11%',
+  '7 % share': 'حصة 7%',
+  '{pct}% share': 'حصة {pct}%',
+  Growing: 'في نمو',
+  Steady: 'ثابتة',
+  Declining: 'في تراجع',
+  Contested: 'متنازع عليها',
+  Neutral: 'محايدة',
+  Favourable: 'مؤاتية',
+  Adverse: 'معاكسة',
+  'Favourable · emerging': 'مؤاتية · ناشئة',
+  'Favourable · steady': 'مؤاتية · ثابتة',
+  'Adverse · emerging': 'معاكسة · ناشئة',
+  'Adverse · growing': 'معاكسة · في نمو',
+  'Adverse · steady': 'معاكسة · ثابتة',
+  'Adverse · declining': 'معاكسة · في تراجع',
+  'Neutral · steady': 'محايدة · ثابتة',
+
+  /* --- Competitor narratives ------------------------------------------------------- */
+  'The story each competitor is telling': 'القصة التي يرويها كل منافس',
+  'Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.':
+    'كل موقع يحمل في داخله نقطة ضعف. فالسردية القوية بما يكفي للهيمنة تكون عادةً ضيّقة بما يكفي للالتفاف عليها.',
+  'The safe national choice with published comparisons.':
+    'الخيار الوطني الآمن مع مقارنات منشورة.',
+  'The technical authority on specification.': 'المرجع التقني في المواصفات.',
+  'The educator that reaches buyers first.': 'المثقِّف الذي يصل إلى المشترين أولاً.',
+  'The procurement-checklist incumbent.': 'المتمكّن في قوائم تدقيق المشتريات.',
+  'Owns the evaluation criteria itself. Engines cite its comparison library when explaining how to choose a supplier at all.':
+    'يمتلك معايير التقييم نفسها. فالمحركات تستشهد بمكتبة مقارناته عند شرح كيفية اختيار مورّد من الأساس.',
+  'Its case rests on breadth and fill rate. It has no response prepared on response time or regional service depth.':
+    'حجّته قائمة على الاتساع ومعدل تلبية الطلبات. ولا يملك ردًا جاهزًا بشأن زمن الاستجابة أو عمق الخدمة الإقليمية.',
+  'Competes directly on supplier-evaluation questions, where it is named first in four of seven.':
+    'ينافس مباشرةً في أسئلة تقييم المورّدين، حيث يُذكر أولاً في أربعة من سبعة.',
+  'Its vocabulary can be adopted and extended rather than fought. Speaking its language while adding availability outflanks it.':
+    'يمكن تبنّي مفرداته وتوسيعها بدلاً من مقارعتها. فالتحدث بلغته مع إضافة التوافر يلتفّ عليه.',
+  'Specification depth does not answer availability. It is largely absent from questions about delivery and continuity.':
+    'عمق المواصفات لا يجيب عن التوافر. وهو غائب إلى حد كبير عن الأسئلة المتعلقة بالتسليم والاستمرارية.',
+  'Owns solution-evaluation questions upstream of where this business competes.':
+    'يمتلك أسئلة تقييم الحلول في مرحلة تسبق المكان الذي ينافس فيه هذا النشاط التجاري.',
+  'Its own framing concedes that speed is a separate axis. A published response-time standard splits the criterion it defined.':
+    'إطاره الخاص يقرّ بأن السرعة محور منفصل. ومعيار زمن استجابة منشور يشقّ المعيار الذي وضعه هو.',
+  'Enters the decision at research, before evaluation criteria exist, and shapes them by arriving early.':
+    'يدخل القرار في مرحلة البحث، قبل وجود معايير التقييم، ويصوغها بحكم وصوله المبكر.',
+  'Almost no presence earlier in the journey. Its position is administrative rather than argued.':
+    'حضوره شبه معدوم في المراحل الأبكر من الرحلة. وموقعه إداري أكثر منه مُحاجَجًا عنه.',
+  'Owns early-stage questions this business is also absent from, but does not convert them.':
+    'يمتلك أسئلة المرحلة المبكرة التي يغيب عنها هذا النشاط التجاري أيضًا، لكنه لا يحوّلها.',
+  'Thin at the point of purchase. Rarely named when a buyer asks whom to actually choose.':
+    'ضعيف عند نقطة الشراء. ونادرًا ما يُذكر حين يسأل المشتري عمّن يختار فعليًا.',
+  'Research-stage presence is uncontested at the point where education becomes a shortlist.':
+    'حضوره في مرحلة البحث بلا منازع عند النقطة التي يتحوّل فيها التثقيف إلى قائمة مختصرة.',
+  'Named on procurement documentation that engines cite at the moment of purchase.':
+    'مذكور في وثائق المشتريات التي تستشهد بها المحركات لحظة الشراء.',
+  'Competes only at purchase decision, where this business also has no coverage.':
+    'ينافس فقط عند قرار الشراء، حيث لا تغطية لهذا النشاط التجاري أيضًا.',
+  'A checklist position is winnable through documentation rather than through reputation.':
+    'موقع قائمة التدقيق يمكن كسبه بالتوثيق لا بالسمعة.',
+
+  /* --- Media narratives ------------------------------------------------------------ */
+  'What publications are actually writing about': 'عمّا تكتب المنشورات فعليًا',
+  'The business appears in none of four active category stories. Two of them — provenance and tariff continuity — have no supplier voice at all.':
+    'لا يظهر النشاط التجاري في أي من قصص الفئة النشطة الأربع. واثنتان منها — المصدر والاستمرارية في ظل الرسوم — بلا صوت مورّد على الإطلاق.',
+  'The business appears in none of the four active category stories. Media narrative is currently being written entirely by others.':
+    'لا يظهر النشاط التجاري في أي من قصص الفئة النشطة الأربع. والسردية الإعلامية يكتبها الآخرون بالكامل حاليًا.',
+  'MRO supplier consolidation across Midwest manufacturing':
+    'دمج مورّدي MRO في تصنيع وسط الغرب الأمريكي',
+  'Counterfeit fasteners in industrial supply chains':
+    'المثبّتات المقلّدة في سلاسل التوريد الصناعية',
+  'Verification and provenance in fastener sourcing':
+    'التحقق وإثبات المصدر في توريد المثبّتات',
+  'Fastener supply continuity after tariff changes':
+    'استمرارية توريد المثبّتات بعد تغيّر الرسوم الجمركية',
+  'Supply continuity under tariff volatility':
+    'استمرارية التوريد في ظل تقلّب الرسوم الجمركية',
+  'Vendor-managed inventory adoption in mid-market plants':
+    'اعتماد المخزون المُدار من المورّد في مصانع السوق المتوسطة',
+  'Vendor-managed inventory for mid-market plants':
+    'المخزون المُدار من المورّد لمصانع السوق المتوسطة',
+  /* Mastheads. Invented trade publications, and proper nouns like the
+     competitor names — they stay Latin in every locale. Listed so the
+     decision is recorded rather than looking like an omission. */
+  'Industrial Distribution · Modern Supply Chain':
+    'Industrial Distribution · Modern Supply Chain',
+  'Fastener Technology · Industrial Distribution':
+    'Fastener Technology · Industrial Distribution',
+  'Fastener Technology · Plant Engineering':
+    'Fastener Technology · Plant Engineering',
+  'Modern Supply Chain · Plant Engineering': 'Modern Supply Chain · Plant Engineering',
+  'The most active category story. This business is not quoted in any of the eleven pieces published this quarter.':
+    'أنشط قصة في الفئة. ولم يُقتبس عن هذا النشاط التجاري في أي من المواد الإحدى عشرة المنشورة هذا الربع.',
+  'A category-level trust story. Suppliers who comment become the trusted ones; those who stay silent are grouped with the problem.':
+    'قصة ثقة على مستوى الفئة. فالمورّدون الذين يعلّقون يصبحون الموثوقين؛ ومن يصمت يُصنَّف مع المشكلة.',
+  'An emerging story where regional inventory depth is the natural expert angle, and no regional distributor has been quoted yet.':
+    'قصة ناشئة يمثّل فيها عمق المخزون الإقليمي زاوية الخبرة الطبيعية، ولم يُقتبس عن أي موزّع إقليمي بعد.',
+  'A service already operated but never publicly associated with the business. One competitor is quoted in three of four pieces on it.':
+    'خدمة تُشغَّل بالفعل لكنها لم تُربط علنًا بالنشاط التجاري قط. ويُقتبس عن منافس واحد في ثلاث من أربع مواد عنها.',
+  'A competitor is quoted in three of four pieces. The topic maps directly onto a service this business already operates.':
+    'يُقتبس عن منافس في ثلاث من أربع مواد. والموضوع ينطبق مباشرةً على خدمة يشغّلها هذا النشاط التجاري بالفعل.',
+  'Regional inventory depth is the natural expert position on a story publications are actively looking for sources on.':
+    'عمق المخزون الإقليمي هو موقع الخبرة الطبيعي في قصة تبحث المنشورات بنشاط عن مصادر لها.',
+  'An active media story with no supplier voice attached. Commenting converts a category-level trust concern into a reason to choose a specific supplier.':
+    'قصة إعلامية نشطة بلا صوت مورّد مرتبط بها. والتعليق يحوّل قلق ثقة على مستوى الفئة إلى سبب لاختيار مورّد بعينه.',
+  'No quote, contribution or citation in the four topics publications are currently covering.':
+    'لا اقتباس ولا مساهمة ولا استشهاد في المواضيع الأربعة التي تغطيها المنشورات حاليًا.',
+  'Silence is read as absence of expertise. The category continues to be explained by the suppliers willing to explain it.':
+    'يُقرأ الصمت على أنه غياب للخبرة. وتظل الفئة يشرحها المورّدون المستعدون لشرحها.',
+
+  /* --- Question landscape ---------------------------------------------------------- */
+  'What the market actually wants to know': 'ما يريد السوق معرفته فعلاً',
+  'The real question corpus, partitioned by what a buyer is trying to decide when they ask it.':
+    'مجموعة الأسئلة الحقيقية، مقسّمة بحسب ما يحاول المشتري أن يقرّره حين يطرحها.',
+  'Most common questions': 'الأسئلة الأكثر شيوعًا',
+  'Public questions': 'الأسئلة العامة',
+  'AI buying questions': 'أسئلة الشراء عبر الذكاء الاصطناعي',
+  'Recommendation questions': 'أسئلة التوصية',
+  'Comparison questions': 'أسئلة المقارنة',
+  'Purchase questions': 'أسئلة الشراء',
+  'Concerns and objections': 'المخاوف والاعتراضات',
+  'A buyer asking directly whom to choose. The highest-value question class in the category, and the one that assigns the order.':
+    'مشترٍ يسأل مباشرةً عمّن يختار. أعلى فئات الأسئلة قيمةً في هذه الفئة، وهي التي تُسنِد الطلب.',
+  'A buyer weighing approaches rather than vendors. Whoever frames the comparison sets the criteria the vendor choice will use.':
+    'مشترٍ يوازن بين المقاربات لا بين المورّدين. ومن يصوغ المقارنة يحدّد المعايير التي سيُبنى عليها اختيار المورّد.',
+  'What buyers ask before they have a supplier in mind. Presence here shapes the criteria everything later is judged against.':
+    'ما يسأله المشترون قبل أن يكون لديهم مورّد في الذهن. والحضور هنا يصوغ المعايير التي يُحكَم بها على كل ما يليه.',
+  'A buyer who has already chosen. Presence here converts; it does not win anything that was not already won upstream.':
+    'مشترٍ حسم اختياره بالفعل. والحضور هنا يحوّل؛ لكنه لا يكسب شيئًا لم يُكسَب سلفًا في مرحلة أسبق.',
+  'The risks buyers raise before committing. Answering these publicly is how a supplier becomes the safe choice rather than the cheap one.':
+    'المخاطر التي يثيرها المشترون قبل الالتزام. والإجابة عنها علنًا هي ما يجعل المورّد الخيار الآمن لا الخيار الرخيص.',
+
+  /* --- Opportunities and risks ----------------------------------------------------- */
+  'Stories nobody owns': 'قصص لا يملكها أحد',
+  'Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.':
+    'مرتّبة بالتأثير مقابل المنافسة. وأفضلها ما كان عالي التأثير وبلا منازع، وهو أندر تركيبة في أي فئة.',
+  'The single narrative that most favours this business, and nobody owns it. Same-day regional delivery is a genuine capability that no public source currently attaches to this name.':
+    'السردية الأكثر مؤاتاةً لهذا النشاط التجاري، ولا يملكها أحد. فالتسليم الإقليمي في اليوم نفسه قدرة حقيقية لا يربطها أي مصدر عام بهذا الاسم حاليًا.',
+  'No competitor has claimed it, engines have no vocabulary for it, and it is the capability this business actually leads on. The single highest-return narrative available.':
+    'لم يطالب بها أي منافس، ولا تملك المحركات مفردات لها، وهي القدرة التي يتصدّر بها هذا النشاط التجاري فعلاً. أعلى السرديات المتاحة عائدًا.',
+  'Directly counters the consolidation narrative that currently favours national distributors, and reframes regional scale as risk management rather than as a limitation.':
+    'تردّ مباشرةً على سردية الدمج التي تصبّ حاليًا في صالح الموزّعين الوطنيين، وتعيد صياغة النطاق الإقليمي كإدارة مخاطر لا كقيد.',
+  'Directly contradicts the consolidation narrative and favours a strong secondary supplier. Neither this business nor any competitor has claimed it.':
+    'تناقض سردية الدمج مباشرةً وتصبّ في صالح مورّد ثانوي قوي. ولم يطالب بها هذا النشاط التجاري ولا أي منافس.',
+  'Consolidation reaches 14% of conversation and favours national distributors. The counter-narrative reaches 11% and is owned by nobody.':
+    'الدمج يبلغ 14% من النقاش ويصبّ في صالح الموزّعين الوطنيين. والسردية المضادة تبلغ 11% ولا يملكها أحد.',
+  'Threats before they become the default': 'التهديدات قبل أن تصبح هي الافتراض',
+  'An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.':
+    'السردية الناشئة قابلة للمنازعة. أما المستقرة فيجب إزاحتها. والفارق في التكلفة بين الحالتين هو سبب وجود هذا القسم.',
+  '3 risks are rated high severity, of which the entity conflation and the emerging regional-limitation narrative are both still cheap to correct.':
+    '3 مخاطر مصنّفة عالية الخطورة، منها الخلط بين الكيانات وسردية القيد الإقليمي الناشئة، وكلتاهما ما زال تصحيحها رخيصًا.',
+  'The most dangerous emerging narrative on this list. It is not yet dominant and it is factually contestable, which means it is still cheap to answer.':
+    'أخطر سردية ناشئة في هذه القائمة. فهي لم تهيمن بعد وقابلة للدحض وقائعيًا، ما يعني أن الرد عليها ما زال رخيصًا.',
+  'Becomes the default objection to a regional supplier. Contestable now with published evidence; expensive to reverse once engines treat it as settled.':
+    'تصبح الاعتراض الافتراضي على أي مورّد إقليمي. ويمكن دحضها الآن بأدلة منشورة؛ ويكلّف عكسها كثيرًا متى عاملتها المحركات كأمر مستقر.',
+  'A factual error, carried by one engine, that removes the business from every supplier-evaluation answer it appears in. Declining, but not yet corrected.':
+    'خطأ وقائعي يحمله محرك واحد، ويُخرج النشاط التجاري من كل إجابة تقييم مورّدين يظهر فيها. في تراجع، لكنه لم يُصحَّح بعد.',
+  'A single wrong category record continues to exclude the business from the question class that assigns orders.':
+    'سجل فئة خاطئ واحد ما زال يستبعد النشاط التجاري من فئة الأسئلة التي تُسنِد الطلبات.',
+  'Every future comparison is scored on axes chosen to favour a competitor, whatever the campaign says.':
+    'كل مقارنة مستقبلية تُقيَّم على محاور اختيرت لصالح منافس، مهما قالت الحملة.',
+  'Every impression delivered to a Gemini user reinforces an incorrect record. Campaign spend actively strengthens the wrong association.':
+    'كل ظهور يصل إلى مستخدم Gemini يعزّز سجلاً خاطئًا. وإنفاق الحملة يقوّي الارتباط الخاطئ فعليًا.',
+  'Emerging in two engines and sourced from a competitor comparison page. Still contestable; not yet treated as settled.':
+    'ناشئة في محركين ومصدرها صفحة مقارنة لمنافس. وما زالت قابلة للمنازعة؛ ولم تُعامَل كأمر مستقر بعد.',
+  'Appearing in Gemini and Copilot answers on multi-site sourcing questions, sourced from a competitor comparison page.':
+    'تظهر في إجابات Gemini وCopilot على أسئلة التوريد متعدد المواقع، ومصدرها صفحة مقارنة لمنافس.',
+  'ChatGPT categorises the business as retail rather than MRO distribution, removing it from supplier-evaluation answers.':
+    'يصنّف ChatGPT النشاط التجاري كتجزئة لا كتوزيع MRO، فيُخرجه من إجابات تقييم المورّدين.',
+  'Fill rate and catalogue breadth are cited first by three of six engines when explaining how to choose a distributor.':
+    'معدل تلبية الطلبات واتساع الكتالوج يُذكران أولاً لدى ثلاثة من ستة محركات عند شرح كيفية اختيار موزّع.',
+  'Favours whichever supplier is already largest. A regional specialist is read as the thing being consolidated away rather than the one consolidating.':
+    'تصبّ في صالح المورّد الأكبر أصلاً. فالمتخصص الإقليمي يُقرأ بوصفه ما يجري دمجه وإزالته لا الجهة التي تدمج.',
+  'Its specification guidance became the category’s default vocabulary because it published first, not because it is more correct.':
+    'أصبح دليله للمواصفات المفردات الافتراضية للفئة لأنه نشر أولاً، لا لأنه أصحّ.',
+  'Published first by a competitor, so it became the vocabulary engines learned. It positions this business as a reseller by omission rather than by argument.':
+    'نشره منافس أولاً، فصار المفردات التي تعلّمتها المحركات. وهو يضع هذا النشاط التجاري في موضع إعادة البيع بالإغفال لا بالحجة.',
+  'Neutral on its face, but it removes price as a differentiator and pushes the decision onto evidence — which is the axis this business currently loses on.':
+    'محايدة في ظاهرها، لكنها تُلغي السعر كعامل تمييز وتدفع القرار نحو الدليل — وهو المحور الذي يخسر عليه هذا النشاط التجاري حاليًا.',
+  'Contain an emerging high-severity adverse narrative':
+    'احتواء سردية سلبية ناشئة عالية الخطورة',
+  'Respond Immediately': 'الرد فورًا',
+
+  /* --- Misconceptions and engine reads --------------------------------------------- */
+  'What each engine currently says this business is':
+    'ما يقوله كل محرك حاليًا عن ماهية هذا النشاط التجاري',
+  'Claims machines currently repeat that are wrong. Each one removes the business from answers it should appear in.':
+    'ادّعاءات تكررها الآلات حاليًا وهي خاطئة. وكل واحدة منها تُخرج النشاط التجاري من إجابات كان ينبغي أن يظهر فيها.',
+  'Misconceptions repeated as fact': 'مفاهيم خاطئة تُكرَّر كحقائق',
+  'Gemini resolves a same-named logistics firm; ChatGPT categorises the business as retail. Both remove it from supplier-evaluation answers entirely.':
+    'يحيل Gemini الاسم إلى شركة لوجستيات تحمل الاسم نفسه؛ ويصنّف ChatGPT النشاط التجاري كتجزئة. وكلاهما يُخرجه كليًا من إجابات تقييم المورّدين.',
+  'Gemini resolves the wrong entity on category questions and recognises the business at 24 of 100.':
+    'يحيل Gemini إلى الكيان الخاطئ في أسئلة الفئة ويتعرّف على النشاط التجاري بدرجة 24 من 100.',
+  'Accurate. No divergence from the intended account.':
+    'دقيق. لا انحراف عن الرواية المقصودة.',
+  '4 of 6 diverge': '4 من 6 تنحرف',
+  'Machines are repeating 1 factual error about this business that removes it from supplier answers entirely. Argument about positioning is wasted while the underlying record is wrong. Once corrected, 20% of category conversation is unclaimed and the strongest of it favours this business.':
+    'تكرّر الآلات خطأً وقائعيًا واحدًا عن هذا النشاط التجاري يُخرجه كليًا من إجابات المورّدين. والجدال حول التموضع مهدور ما دام السجل الأساسي خاطئًا. وبمجرد تصحيحه، يبقى 20% من نقاش الفئة غير مُطالَب به وأقواه يصبّ في صالح هذا النشاط التجاري.',
+  ', and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    '، وكل نقطة منها هي خطأ تصنيفه كمتجر أدوات لا شيئًا اختار قوله. فالملكية تعدّ القصص المرتبطة بالاسم؛ ولا تسأل ما إذا كانت تساعد.',
+  'Fill rate and catalogue breadth are how you choose a distributor.':
+    'معدل تلبية الطلبات واتساع الكتالوج هما الطريقة التي تختار بها موزّعًا.',
+  'Consolidating MRO suppliers reduces cost and administrative load.':
+    'دمج مورّدي MRO يقلّل التكلفة والعبء الإداري.',
+  'Midwest fastener pricing is broadly comparable across suppliers.':
+    'أسعار المثبّتات في وسط الغرب متقاربة إلى حد بعيد بين المورّدين.',
+  'Specification depth separates serious suppliers from resellers.':
+    'عمق المواصفات يفصل المورّدين الجادّين عن مُعيدي البيع.',
+  'Evaluation criteria are increasingly stated in a competitor’s terms.':
+    'معايير التقييم تُصاغ بصورة متزايدة بمصطلحات منافس.',
+  'The business is conflated with a same-named logistics firm.':
+    'يُخلَط بين النشاط التجاري وشركة لوجستيات تحمل الاسم نفسه.',
+  'Single-source supplier dependency is an operational risk.':
+    'الاعتماد على مورّد وحيد خطر تشغيلي.',
+  'Regional suppliers cannot support multi-plant operations.':
+    'المورّدون الإقليميون لا يستطيعون دعم عمليات متعددة المصانع.',
+  'Regional distributors deliver faster than national ones.':
+    'الموزّعون الإقليميون يسلّمون أسرع من الوطنيين.',
+  'The business is absent from every active category story.':
+    'النشاط التجاري غائب عن كل قصة نشطة في الفئة.',
+  'The business is described as a hardware retailer.':
+    'يُوصف النشاط التجاري بأنه متجر أدوات بالتجزئة.',
+  'Northwind Supply is a hardware retailer.': 'Northwind Supply متجر أدوات بالتجزئة.',
+  'Observed in {sources}.': 'رُصد في {sources}.',
+  'How much of the conversation works for us': 'كم من النقاش يعمل لصالحنا',
+  'Quoted in 3 pieces across 2 publications engines cite':
+    'مُقتبَس في 3 مواد عبر منشورَين تستشهد بهما المحركات',
+  'Multi-site capability referenced in 2 of 6 engines on multi-plant sourcing questions':
+    'قدرة تعدد المواقع مذكورة في 2 من 6 محركات في أسئلة التوريد متعدد المصانع',
+  'Response time cited among the first three selection criteria by 3 of 6 engines':
+    'زمن الاستجابة مذكور ضمن أول ثلاثة معايير اختيار لدى 3 من 6 محركات',
+  'Secondary-supplier framing cited by 2 of 6 engines on consolidation questions':
+    'إطار المورّد الثانوي مذكور لدى 2 من 6 محركات في أسئلة الدمج',
+  'The dominant evaluation framing, and it is a competitor’s. Buyers arrive already scoring suppliers on the two criteria where a national distributor wins by default.':
+    'إطار التقييم المهيمن، وهو إطار منافس. فالمشترون يصلون وهم يقيّمون المورّدين أصلاً على المعيارين اللذين يفوز فيهما الموزّع الوطني تلقائيًا.',
+
+  /* Double-quoted because the source contains an apostrophe. Escaping it into
+     a single-quoted key would work, but every tool that reads this file by
+     line would then have to unescape — and one of them silently did not. */
+  "4 of 6 engines carry a materially different account of this business. A buyer's understanding depends on which assistant they happen to open.":
+    '4 من 6 محركات تحمل رواية مختلفة جوهريًا عن هذا النشاط التجاري. وفهم المشتري يتوقف على المساعد الذي يصادف أن يفتحه.',
+
+  /* --- Source names. Capitalised to match the seed exactly. ------------------------- */
+  'Trade forums': 'منتديات القطاع',
+  'Buyer discussion': 'نقاشات المشترين',
+  'Procurement publications': 'منشورات المشتريات',
+  'Specification guides': 'أدلة المواصفات',
+  'Risk guidance': 'إرشادات المخاطر',
+  'Aggregator pages': 'صفحات التجميع',
+  'Trade publications': 'منشورات القطاع',
+
+  /* --- Narrative action plan ------------------------------------------------------- */
+  'Narrative action plan': 'خطة عمل السردية',
+  'Open narrative action plan': 'افتح خطة عمل السردية',
+  'Monitor narrative changes': 'راقب تغيّرات السردية',
+  'Check readiness before campaigning': 'تحقّق من الجاهزية قبل إطلاق الحملة',
+  'Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.':
+    'كل إجراء يحمل هدفه، والدليل وراءه، والحركة المتوقعة، ومستوى ثقة، ومالكًا، وموعدًا نهائيًا، وتقدير جهد، وطريقة التحقق من نجاحه.',
+  'Correct the record first, then claim the narrative nobody owns.':
+    'صحّح السجل أولاً، ثم طالب بالسردية التي لا يملكها أحد.',
+  'Correct the entity conflation and the hardware-retailer categorisation.':
+    'تصحيح الخلط بين الكيانات وتصنيف متجر الأدوات بالتجزئة.',
+  'Claim response time as a published supplier selection criterion.':
+    'المطالبة بزمن الاستجابة كمعيار منشور لاختيار المورّدين.',
+  'Answer the regional-limitation narrative with published multi-site evidence.':
+    'الرد على سردية القيد الإقليمي بأدلة منشورة عن تعدد المواقع.',
+  'Claim the secondary-supplier argument against the consolidation narrative.':
+    'المطالبة بحجة المورّد الثانوي في مواجهة سردية الدمج.',
+  'Enter the two active media stories with a named expert voice.':
+    'الدخول إلى القصتين الإعلاميتين النشطتين بصوت خبير مُسمّى.',
+  'Reframe regional scale from limitation to risk management':
+    'إعادة تأطير النطاق الإقليمي من قيد إلى إدارة مخاطر',
+  'The narrative is unowned, high influence and uncontested. Same-day regional delivery is a real capability that appears in no category description.':
+    'السردية بلا مالك وعالية التأثير وبلا منازع. فالتسليم الإقليمي في اليوم نفسه قدرة حقيقية لا تظهر في أي وصف للفئة.',
+  'Response time as a supplier selection criterion':
+    'زمن الاستجابة كمعيار لاختيار المورّدين',
+  'The strategic case for a strong secondary supplier':
+    'الحجة الاستراتيجية لوجود مورّد ثانوي قوي',
+  'Independent authority sources 3 → 8': 'مصادر مرجعية مستقلة 3 ← 8',
+  'Average recognition 38 → 55 of 100': 'متوسط التعرّف 38 ← 55 من 100',
+
+  /* ==========================================================================
+     CAMPAIGN READINESS INTELLIGENCE
+     ====================================================================== */
+  'Campaign readiness intelligence': 'ذكاء جاهزية الحملة',
+  'Campaign Readiness Intelligence | GeoRepute': 'ذكاء جاهزية الحملة | GeoRepute',
+  'Campaign Readiness Intelligence': 'ذكاء جاهزية الحملة',
+  'Should we launch this campaign today?': 'هل نطلق هذه الحملة اليوم؟',
+  'This assessment evaluates the business, not the campaign. Creative, targeting and budget can all be correct while the business remains structurally unable to convert the attention they buy.':
+    'هذا التقييم يقيّم النشاط التجاري لا الحملة. فقد يكون التصميم والاستهداف والميزانية كلها صحيحة بينما يظل النشاط التجاري عاجزًا بنيويًا عن تحويل الانتباه الذي تشتريه.',
+  Campaign: 'الحملة',
+  'Q4 Midwest demand generation': 'توليد الطلب في وسط الغرب — الربع الرابع',
+  'Intended launch': 'الإطلاق المزمع',
+  Duration: 'المدة',
+  '6 months': '6 أشهر',
+  '7 months': '7 أشهر',
+  '{n} months': '{n} أشهر',
+  Channels: 'القنوات',
+  'Paid search · Paid social · Trade media · Content syndication':
+    'البحث المدفوع · التواصل الاجتماعي المدفوع · إعلام القطاع · توزيع المحتوى',
+  'Paid search': 'البحث المدفوع',
+  'Paid social': 'التواصل الاجتماعي المدفوع',
+  'Trade media': 'إعلام القطاع',
+  'Content syndication': 'توزيع المحتوى',
+  'Estimated budget at risk': 'الميزانية المقدَّرة المعرَّضة للخطر',
+  'Executive decision': 'قرار تنفيذي',
+  'Executive recommendation': 'التوصية التنفيذية',
+  'Delay Campaign': 'تأجيل الحملة',
+  'Delay the campaign. Fix authority first.': 'أجّل الحملة. عالِج المرجعية أولاً.',
+  'Delay Campaign — readiness reads 32 of 100, held there by authority readiness at 11, which carries 20% of the index.':
+    'تأجيل الحملة — الجاهزية تقرأ 32 من 100، ويثبّتها عندها مستوى جاهزية المرجعية البالغ 11، وهو يحمل 20% من المؤشر.',
+  'Campaign readiness score': 'درجة جاهزية الحملة',
+  'Primary constraint': 'القيد الأساسي',
+  'Authority readiness is the binding constraint at 11 of 100 and carries 20% of the index.':
+    'جاهزية المرجعية هي القيد الحاكم عند 11 من 100 وتحمل 20% من المؤشر.',
+  'Strategic window': 'النافذة الاستراتيجية',
+  'Advantage holds until {date}.': 'تصمد الأفضلية حتى {date}.',
+  'Decision journey gaps': 'فجوات رحلة القرار',
+  'Presence at every stage.': 'حضور في كل مرحلة.',
+  '2 stages uncovered': 'مرحلتان بلا تغطية',
+  'Assessment confidence': 'الثقة في التقييم',
+  'Six of seven dimensions rest on directly observed data.':
+    'ستة من سبعة أبعاد تستند إلى بيانات مرصودة مباشرةً.',
+  Assessment: 'التقييم',
+  'Seven readiness dimensions, weighted into one index':
+    'سبعة أبعاد للجاهزية، مرجّحة في مؤشر واحد',
+  'Every score is computed from observed data rather than assigned. The weights are published and sum to one.':
+    'كل درجة محسوبة من بيانات مرصودة لا مُسنَدة اعتباطًا. والأوزان منشورة ومجموعها واحد.',
+  'Ready at 70 and above. At risk from 45 . Blocking below 45 .':
+    'جاهز عند 70 فأعلى. في خطر ابتداءً من 45. ومُعطِّل دون 45.',
+  'Ready at {ready} and above. At risk from {risk}. Blocking below {risk}.':
+    'جاهز عند {ready} فأعلى. في خطر ابتداءً من {risk}. ومُعطِّل دون {risk}.',
+  Ready: 'جاهز',
+  'At risk': 'في خطر',
+  Blocking: 'مُعطِّل',
+  '{score} of 100 — {status}. Ready at {gate}.': '{score} من 100 — {status}. جاهز عند {gate}.',
+  '{n}% of the readiness index': '{n}% من مؤشر الجاهزية',
+  '{score} of 100 · {weight}% of the index': '{score} من 100 · {weight}% من المؤشر',
+  or: 'أو',
+  None: 'لا شيء',
+  '2 of 5': '2 من 5',
+  '2 of 6': '2 من 6',
+  'Launching remains available and is sometimes correct — a product deadline or a competitive move can outweigh a readiness score. This assessment states the cost of that choice so it is made deliberately rather than by default.':
+    'يظل الإطلاق متاحًا وهو أحيانًا القرار الصحيح — فموعد إطلاق منتج أو تحرّك تنافسي قد يرجح على درجة الجاهزية. وهذا التقييم يوضّح كلفة ذلك الخيار كي يُتخذ عن قصد لا بحكم التقصير.',
+  'Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.':
+    'كل إجراء يحمل أولوية ومالكًا وموعدًا نهائيًا وتقدير جهد وتبعياته والحركة التي ينبغي أن يُحدثها ومستوى ثقة النموذج بذلك.',
+  '{n} tracked questions': '{n} سؤالاً متابَعًا',
+
+  /* --- The seven readiness dimensions ---------------------------------------------- */
+  'AI readiness': 'جاهزية الذكاء الاصطناعي',
+  'Do AI engines understand and recommend this business?':
+    'هل تفهم محركات الذكاء الاصطناعي هذا النشاط التجاري وتوصي به؟',
+  'Across six engines, the business is understood at 38 of 100. Advertising cannot correct a record it does not touch.':
+    'عبر ستة محركات، يُفهم النشاط التجاري بدرجة 38 من 100. والإعلان لا يصحّح سجلاً لا يمسّه.',
+  'Authority readiness': 'جاهزية المرجعية',
+  'Is there enough evidence for AI to recommend this business?':
+    'هل توجد أدلة كافية ليوصي الذكاء الاصطناعي بهذا النشاط التجاري؟',
+  '3 independent sources can verify this business. The category median is 14.':
+    '3 مصادر مستقلة يمكنها التحقق من هذا النشاط التجاري. ووسيط الفئة هو 14.',
+  'Google readiness': 'الجاهزية على Google',
+  'Can buyers find this business through traditional search?':
+    'هل يستطيع المشترون العثور على هذا النشاط التجاري عبر البحث التقليدي؟',
+  '9 of 20 commercial questions place in the top ten. The rest are reachable only by paying for the click.':
+    '9 من 20 سؤالاً تجاريًا تحلّ ضمن العشرة الأوائل. أما البقية فلا تُبلَغ إلا بدفع ثمن النقرة.',
+  'Narrative readiness': 'جاهزية السردية',
+  'Does the market understand what this business stands for?':
+    'هل يفهم السوق ما يمثّله هذا النشاط التجاري؟',
+  'The business owns 12% of the language engines use to define this category. The campaign would be fought on terms a competitor wrote.':
+    'يمتلك النشاط التجاري 12% من اللغة التي تستخدمها المحركات لتعريف هذه الفئة. وستُخاض الحملة بشروط كتبها منافس.',
+  Reputation: 'السمعة',
+  'Is this business safe to recommend to a buyer?':
+    'هل من الآمن التوصية بهذا النشاط التجاري لمشترٍ؟',
+  'Reputation reads 44 of 100 while market fit reads 72. The offer is right; the proof around it is not.':
+    'تقرأ السمعة 44 من 100 بينما تقرأ الملاءمة السوقية 72. فالعرض صحيح؛ لكن الدليل المحيط به ليس كذلك.',
+  'Conversion readiness': 'جاهزية التحويل',
+  'Can the destination convert the intent this campaign buys?':
+    'هل تستطيع الوجهة تحويل النية التي تشتريها هذه الحملة؟',
+  'A single quote form serves every stage. There is no path for a buyer who is still comparing suppliers and not yet requesting a price.':
+    'نموذج تسعير واحد يخدم كل المراحل. ولا يوجد مسار لمشترٍ ما زال يقارن بين المورّدين ولم يطلب سعرًا بعد.',
+  'Competitor readiness': 'جاهزية المنافسين',
+  'Kestrel Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
+    'يحتفظ Kestrel Industrial بمراكز عضوية ضمن الثلاثة الأوائل وبحضور في الذكاء الاصطناعي على أعلى أربعة أسئلة تجارية حجمًا في آنٍ واحد.',
+
+  /* --- Dimension detail signals ---------------------------------------------------- */
+  'Category understanding': 'فهم الفئة',
+  '2 of 6 correct': '2 من 6 صحيحة',
+  'An engine that files the business in the wrong category cannot surface it when a buyer describes this need, regardless of spend.':
+    'المحرك الذي يصنّف النشاط التجاري في الفئة الخاطئة لا يستطيع إظهاره حين يصف المشتري هذه الحاجة، مهما بلغ الإنفاق.',
+  'AI recommendation coverage': 'تغطية توصيات الذكاء الاصطناعي',
+  '6 recommendation events across 144 answer slots. A buyer who asks an assistant for suppliers almost never hears this name.':
+    '6 حالات توصية عبر 144 موضع إجابة. والمشتري الذي يسأل مساعدًا عن مورّدين لا يكاد يسمع هذا الاسم أبدًا.',
+  'Engine consistency': 'اتساق المحركات',
+  '37-point spread': 'تباين بمقدار 37 نقطة',
+  'Recognition ranges from 21 to 58. The campaign would reach buyers whose assistants disagree about what this business is.':
+    'يتراوح التعرّف بين 21 و58. وستصل الحملة إلى مشترين تختلف مساعداتهم على ماهية هذا النشاط التجاري.',
+  'Silent engines': 'محركات صامتة',
+  '2 engines recommend the business in none of the tracked decisions. Spend that drives buyers toward those engines returns nothing.':
+    'محركان لا يوصيان بالنشاط التجاري في أي من القرارات المتابَعة. والإنفاق الذي يدفع المشترين نحوهما لا يعيد شيئًا.',
+  'Independent authority sources': 'مصادر مرجعية مستقلة',
+  '3 sources': '3 مصادر',
+  'Independent corroboration is what lets a system name a supplier first rather than hedge across several.':
+    'التأييد المستقل هو ما يتيح للنظام أن يذكر مورّدًا بعينه أولاً بدل التحوّط بين عدة مورّدين.',
+  'Third-party validation': 'تحقّق من طرف ثالث',
+  '1 of 5 present': '1 من 5 متوفر',
+  'Certifications, named customers, verified outcomes and specification references are absent from the public record.':
+    'الشهادات والعملاء المُسمَّون والنتائج المتحقَّق منها والمراجع الفنية غائبة عن السجل العام.',
+  'Industry references': 'مراجع القطاع',
+  '0 of 3 publications': '0 من 3 منشورات',
+  'The three trade publications engines cite most for this category carry no coverage of the business at all.':
+    'منشورات القطاع الثلاثة الأكثر استشهادًا بها من المحركات في هذه الفئة لا تحمل أي تغطية للنشاط التجاري إطلاقًا.',
+  'Competitor authority': 'مرجعية المنافس',
+  '7× behind': 'متأخر بـ7 أضعاف',
+  'Kestrel Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
+    'يمكن تأييد Kestrel Industrial بسهولة تفوق ذلك بسبعة أضعاف. وتتراكم هذه الأفضلية ما دام لا يوجد برنامج مضاد.',
+  'Commercial keyword coverage': 'تغطية الكلمات المفتاحية التجارية',
+  '9 of 20': '9 من 20',
+  'Weighted by search volume rather than by keyword count, so a strong position on a question nobody asks does not flatter the figure.':
+    'مرجّحة بحجم البحث لا بعدد الكلمات المفتاحية، فلا يجمّل الرقمَ موقعٌ قوي على سؤال لا يطرحه أحد.',
+  'Technical SEO status': 'حالة الـSEO التقني',
+  'No blocking faults': 'لا عيوب مُعطِّلة',
+  'Crawlability, indexation and canonicalisation carry no faults that would prevent a campaign landing page from ranking. This is not the constraint.':
+    'قابلية الزحف والفهرسة والتوحيد القياسي للروابط لا تحمل عيوبًا تمنع صفحة هبوط الحملة من التصدّر. وهذا ليس هو القيد.',
+  'Organic opportunity': 'فرصة عضوية',
+  '6 questions': '6 أسئلة',
+  '6 questions already rank but never reach an AI answer. These are the cheapest positions available and need publishing, not budget.':
+    '6 أسئلة تتصدّر بالفعل لكنها لا تصل قط إلى إجابة ذكاء اصطناعي. وهذه أرخص المواقع المتاحة، وتحتاج إلى نشر لا إلى ميزانية.',
+  'Category clarity': 'وضوح الفئة',
+  Fragmented: 'مجزّأ',
+  'The same business is described differently across its own site, two directories and six engines. A campaign amplifies whichever version a buyer meets.':
+    'يُوصف النشاط التجاري نفسه بصور مختلفة عبر موقعه ودليلَين وستة محركات. والحملة تضخّم أي نسخة يصادفها المشتري.',
+  'Public narrative': 'السردية العامة',
+  'Machines describe this category using a competitor’s specification framing, so buyers arrive already evaluating against someone else’s criteria.':
+    'تصف الآلات هذه الفئة بإطار مواصفات وضعه منافس، فيصل المشترون وهم يقيّمون أصلاً وفق معايير شخص آخر.',
+  'Messaging alignment': 'اتساق الرسائل',
+  Misaligned: 'غير متسق',
+  'The campaign leads with same-day regional delivery. No public source currently associates that capability with this business.':
+    'تتصدّر الحملةَ رسالةُ التسليم الإقليمي في اليوم نفسه. ولا يربط أي مصدر عام حاليًا تلك القدرة بهذا النشاط التجاري.',
+  'Trust signals': 'إشارات الثقة',
+  'Every claim traces back to the company’s own website. Systems treat self-description as a claim rather than as evidence.':
+    'كل ادّعاء يعود إلى موقع الشركة نفسه. والأنظمة تعامل الوصف الذاتي كادّعاء لا كدليل.',
+  Reviews: 'التقييمات',
+  'Adequate volume': 'حجم كافٍ',
+  'Review volume is sufficient and sentiment is positive, but sits on platforms engines do not treat as authoritative for this category.':
+    'حجم التقييمات كافٍ ومشاعرها إيجابية، لكنها على منصات لا تعاملها المحركات كمرجعية لهذه الفئة.',
+  'Brand credibility': 'مصداقية العلامة التجارية',
+  'Expert citations': 'استشهادات الخبراء',
+  'No named expert, engineer or specifier is publicly associated with the business. Machines have nobody to attribute expertise to.':
+    'لا يرتبط أي خبير أو مهندس أو واضع مواصفات مُسمّى بالنشاط التجاري علنًا. ولا تجد الآلات من تنسب إليه الخبرة.',
+  'External validation': 'تحقّق خارجي',
+  'Customer outcomes, third-party validation, certifications and named references are absent. Only review-platform badges appear.':
+    'نتائج العملاء والتحقق من طرف ثالث والشهادات والمراجع المُسمّاة كلها غائبة. ولا تظهر سوى شارات منصات التقييم.',
+  'Landing page quality': 'جودة صفحات الهبوط',
+  '3 of 7 pages': '3 من 7 صفحات',
+  'Three of the seven pages this campaign would drive to state what the business sells above the fold. The rest open with company history.':
+    'ثلاث من الصفحات السبع التي ستوجّه إليها هذه الحملة تذكر ما يبيعه النشاط التجاري في الجزء الظاهر أولاً. أما البقية فتفتتح بتاريخ الشركة.',
+  'Decision support': 'دعم القرار',
+  'No comparison table, specification guidance or selection criteria exists on any destination page. A buyer arriving mid-evaluation has nothing to evaluate with.':
+    'لا يوجد جدول مقارنة ولا دليل مواصفات ولا معايير اختيار في أي صفحة وجهة. والمشتري الذي يصل في منتصف التقييم لا يجد ما يقيّم به.',
+  'Trust elements': 'عناصر الثقة',
+  'Quote form only': 'نموذج تسعير فقط',
+  'Commercial messaging': 'الرسائل التجارية',
+  'Same-day regional delivery — the strongest differentiator — appears on one page and in no page title.':
+    'التسليم الإقليمي في اليوم نفسه — أقوى عامل تمييز — يظهر في صفحة واحدة ولا يظهر في أي عنوان صفحة.',
+  'Market leaders': 'قادة السوق',
+  '4 ahead': '4 متقدمون',
+  '4 of 4 tracked competitors currently receive more recommendations than this business.':
+    '4 من 4 منافسين متابَعين يتلقّون حاليًا توصيات أكثر من هذا النشاط التجاري.',
+  'Competitor visibility': 'ظهور المنافسين',
+  '4 in top three': '4 ضمن الثلاثة الأوائل',
+  'Authority gap': 'فجوة المرجعية',
+  '21 sources': '21 مصدرًا',
+  'Kestrel Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
+    'يمتلك Kestrel Industrial 21 مصدرًا مقابل 3. والإعلان لا يسدّ فجوة أدلة؛ بل يسدّها النشر والتحقق.',
+  'Competitive gap': 'الفجوة التنافسية',
+  '12% owned': '12% مملوكة',
+  'Existing search strength': 'قوة البحث القائمة',
+  'Existing strength sits on questions asked after a vendor has been chosen, not on the questions that choose one.':
+    'القوة القائمة تقع على أسئلة تُطرح بعد اختيار المورّد، لا على الأسئلة التي تختاره.',
+  'The leader is strongest at exactly the stage this campaign is intended to influence, which is where displacement is most expensive.':
+    'المتصدّر أقوى ما يكون في المرحلة نفسها التي تستهدف هذه الحملة التأثير فيها، وهي المرحلة التي تكون فيها الإزاحة أغلى ما تكون.',
+  '4 engines hold a wrong or missing record — one conflates the business with a same-named logistics firm.':
+    '4 محركات تحمل سجلاً خاطئًا أو ناقصًا — وأحدها يخلط بين النشاط التجاري وشركة لوجستيات تحمل الاسم نفسه.',
+  'The category description differs between the website and two trade directories, which reads to a machine as an unreliable record.':
+    'وصف الفئة يختلف بين الموقع ودليلَي قطاع، وهو ما يُقرأ آليًا كسجل غير موثوق.',
+  'No single consistent story exists in the public record for a campaign to reinforce, so each impression starts the explanation over.':
+    'لا توجد قصة واحدة متسقة في السجل العام كي تعزّزها حملة، فيبدأ كل ظهور الشرح من جديد.',
+  'Kestrel Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
+    'يتلقّى Kestrel Industrial 31% من التوصيات مقابل 4.2%. والإطلاق الآن إعلانٌ داخل قرار يسيطر عليه هو.',
+
+  /* --- Journey coverage ------------------------------------------------------------ */
+  Coverage: 'التغطية',
+  'Where the campaign would reach buyers, and where it would not':
+    'أين ستصل الحملة إلى المشترين وأين لن تصل',
+  'Stage 1': 'المرحلة 1',
+  'Stage 2': 'المرحلة 2',
+  'Stage 3': 'المرحلة 3',
+  'Stage 4': 'المرحلة 4',
+  'Stage 5': 'المرحلة 5',
+  'Invisible to every conventional measurement tool.':
+    'غير مرئي لأي أداة قياس تقليدية.',
+  'Visible to {tools}.': 'مرئي لـ{tools}.',
+  'No presence at {stages}.': 'لا حضور في {stages}.',
+  'A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.':
+    'الحملة تخلق طلبًا على امتداد الرحلة كلها. لكنها لا تحوّل إلا في المراحل التي يكون فيها النشاط التجاري حاضرًا فعلاً.',
+
+  /* --- Commercial risk ------------------------------------------------------------- */
+  'Commercial risk': 'المخاطر التجارية',
+  'Commercial risk level': 'مستوى المخاطر التجارية',
+  'What launching today would cost': 'كم سيكلّف الإطلاق اليوم',
+  "Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage.":
+    'الخطر هنا ليس احتمال أن تحقّق الحملة أقل من المتوقع. بل هو الآلية التي يتحوّل بها الإنفاق إلى أفضلية لمنافس.',
+  'Missed decision exposure': 'التعرّض للقرارات الفائتة',
+  '19 of 24': '19 من 24',
+  'Commercial decisions that already complete without this business appearing. A campaign increases how many of these happen, not how many are won.':
+    'قرارات تجارية تكتمل بالفعل دون ظهور هذا النشاط التجاري. والحملة تزيد عدد ما يحدث منها، لا عدد ما يُكسَب.',
+  'Revenue dependent on this stage': 'الإيراد المعتمد على هذه المرحلة',
+  '38% of demand': '38% من الطلب',
+  'The share of revenue arriving through supplier evaluation — the stage where presence is currently lowest and the campaign has least leverage.':
+    'نصيب الإيراد الوارد عبر تقييم المورّدين — وهي المرحلة التي يكون فيها الحضور الأدنى حاليًا وتملك فيها الحملة أقل نفوذ.',
+  'Expected ROI risk': 'مخاطر العائد المتوقع على الاستثمار',
+  'Return depends on buyers completing a journey the business is absent from at these stages. Spend reaches them; the recommendation does not.':
+    'يعتمد العائد على إكمال المشترين رحلةً يغيب عنها النشاط التجاري في هذه المراحل. فالإنفاق يبلغهم؛ أما التوصية فلا.',
+  'Every click is paid for twice: once to acquire it, and again to reacquire the buyer who arrived, found nothing to evaluate with, and left to compare elsewhere.':
+    'ثمن كل نقرة يُدفع مرتين: مرة لاكتسابها، ومرة لإعادة اكتساب المشتري الذي وصل فلم يجد ما يقيّم به، فغادر ليقارن في مكان آخر.',
+  'Paid acquisition buys attention that trust has to convert. Without it the campaign raises awareness for the category and the best-verified supplier in it wins.':
+    'الاكتساب المدفوع يشتري انتباهًا يجب أن تحوّله الثقة. وبدونها ترفع الحملة الوعي بالفئة ويفوز أفضل مورّد فيها من حيث التحقق.',
+  'The campaign generates consideration the business cannot survive. Buyers who check will find nothing independent, and the check happens after the click is paid for.':
+    'تولّد الحملة مرحلة تفكير لا يصمد أمامها النشاط التجاري. فمن يتحقّق من المشترين لن يجد شيئًا مستقلاً، والتحقق يقع بعد دفع ثمن النقرة.',
+  'Campaign attention drives buyers to verify the business through an assistant that cannot describe it correctly. The spend creates the demand and a competitor collects it.':
+    'انتباه الحملة يدفع المشترين للتحقق من النشاط التجاري عبر مساعد لا يستطيع وصفه بشكل صحيح. فالإنفاق يخلق الطلب ويجنيه منافس.',
+  'Campaign messaging contradicts what the market already believes. Spend is consumed correcting the record instead of creating demand.':
+    'رسائل الحملة تناقض ما يعتقده السوق أصلاً. فيُستهلك الإنفاق في تصحيح السجل بدل خلق الطلب.',
+  'Paid search carries the entire commercial keyword set alone, at a blended cost already above break-even, for as long as the campaign runs.':
+    'يحمل البحث المدفوع مجموعة الكلمات المفتاحية التجارية كاملةً وحده، بتكلفة مخلوطة تتجاوز نقطة التعادل أصلاً، طوال مدة تشغيل الحملة.',
+  'The campaign raises category demand that the best-evidenced supplier absorbs. Competitor share can rise as a direct result of this spend.':
+    'ترفع الحملة الطلب على الفئة فيمتصّه المورّد الأقوى دليلاً. وقد ترتفع حصة المنافس كنتيجة مباشرة لهذا الإنفاق.',
+  'Both surfaces': 'كلتا الواجهتين',
+  Partial: 'جزئي',
+
+  /* --- Interventions and the decision ---------------------------------------------- */
+  Intervention: 'التدخّل',
+  'Required before launch': 'مطلوب قبل الإطلاق',
+  'Blocked until priority {n} lands.': 'محجوب حتى تنفيذ الأولوية {n}.',
+  'If you launch anyway': 'إذا أطلقت رغم ذلك',
+  'Launch campaign': 'إطلاق الحملة',
+  'Fix readiness first': 'عالِج الجاهزية أولاً',
+  'Open Executive Action Plan': 'افتح خطة العمل التنفيذية',
+  'Review the full position': 'راجع الموقف الكامل',
+  'Website and conversion readiness': 'جاهزية الموقع والتحويل',
+  'What position are we launching into?': 'إلى أي موقع نُطلق؟',
+  'AI narrative': 'سردية الذكاء الاصطناعي',
+  'Narrative consistency': 'اتساق السردية',
+
+  /* ==========================================================================
+     DECISION RECONSTRUCTION
+
+     Display labels only. 'brand', 'competitor', 'supporting', 'downstream',
+     'high', 'medium', 'low' are enum discriminants in the seed graph — an
+     entry keyed on any of them rewrites the data itself and breaks every
+     lookup. The component maps them to the capitalised labels below.
+     ====================================================================== */
+  'Decision Reconstruction': 'إعادة بناء القرار',
+  'Decision Reconstruction | GeoRepute': 'إعادة بناء القرار | GeoRepute',
+  'Signature experience': 'التجربة المميّزة',
+  'Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.':
+    'أدخل نطاقًا واختر سؤالاً تجاريًا. يعيد النظام بناء ما فهمته كل واجهة، ومن حصل على القرار، ولماذا.',
+  'Seeded environment — this demonstration always reconstructs {org}.':
+    'بيئة مزروعة — هذا العرض التوضيحي يعيد بناء {org} دائمًا.',
+  Domain: 'النطاق',
+  'Understood as: {what}': 'مفهوم على أنه: {what}',
+  Brand: 'العلامة التجارية',
+  Competitor: 'منافس',
+  Low: 'منخفض',
+  Supporting: 'داعم',
+  Downstream: 'لاحق',
+  '{n} tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
+    '{n} سؤال قرار متابَع. أسئلة تقييم المورّدين تظهر أولاً — فهناك يُختار المورّد.',
+  'An MRO and fastener distributor serving manufacturers':
+    'موزّع صيانة وتشغيل ومثبّتات يخدم المصنّعين',
+  'Midwest industrial fastener and MRO distributor':
+    'موزّع مثبّتات صناعية وصيانة وتشغيل في وسط الغرب',
+  'A regional industrial supplier in the US Midwest':
+    'مورّد صناعي إقليمي في وسط غرب الولايات المتحدة',
+  'Industrial supply company, category association incomplete':
+    'شركة توريد صناعي، ارتباط الفئة غير مكتمل',
+  'Unclear — associates the name with unrelated businesses':
+    'غير واضح — يربط الاسم بأنشطة تجارية غير ذات صلة',
+  'Not recognized as a distinct business entity':
+    'غير معترف به ككيان تجاري مستقل',
+  "Engines describe the category using a competitor's framing. Northwind owns 12% of that language.":
+    'تصف المحركات الفئة بإطار وضعه منافس. وتمتلك Northwind 12% من تلك اللغة.',
+  '{n} independent sources support this brand. Northwind has 3.':
+    '{n} مصدرًا مستقلاً تدعم هذه العلامة التجارية. ولدى Northwind 3.',
+  '{name} controls': 'يسيطر {name} على',
+  'across the whole set. Competitive density is shifting at {velocity}.':
+    'على امتداد المجموعة كاملةً. والكثافة التنافسية تتغيّر بوتيرة {velocity}.',
+  'This is the exposure attributable to this single question. The full-book figure across all {n} tracked decisions is materially larger and appears in Mission Control.':
+    'هذه هي الخسارة المنسوبة إلى هذا السؤال وحده. أما الرقم الكامل عبر جميع القرارات المتابَعة البالغة {n} فأكبر بكثير ويظهر في مركز القيادة.',
+  'stage {n} of {total}': 'المرحلة {n} من {total}',
+  Present: 'حاضر',
+  'Observable by {tools} — but only after the decision has already narrowed.':
+    'قابل للرصد عبر {tools} — لكن فقط بعد أن يكون القرار قد ضاق بالفعل.',
+  'No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.':
+    'لا ترصد أي أداة تقليدية هذه المرحلة. فلا زيارة ولا نقرة ولا عميل محتمل ولا حدث CRM يُسجَّل — ولهذا يبقى الضعف غير مرئي حتى يتحرك الإيراد.',
+  'Reconstruction confidence across all ten surfaces.':
+    'مستوى الثقة في إعادة البناء عبر الواجهات العشر كلها.',
+  'What each AI engine understood about the business':
+    'ما فهمه كل محرك ذكاء اصطناعي عن النشاط التجاري',
+  'Whether the brand was recognised, mentioned, cited, recommended or ignored':
+    'ما إذا كانت العلامة التجارية قد عُرفت أو ذُكرت أو استُشهد بها أو أُوصي بها أو أُهملت',
+  'Which competitor was selected instead': 'أي منافس اختير بدلاً منها',
+  'Which sources, trust signals and narratives influenced the answer':
+    'أي المصادر وإشارات الثقة والسرديات أثّرت في الإجابة',
+  'What Google demand, organic position and paid click cost indicate':
+    'ما الذي يشير إليه الطلب على Google والموقع العضوي وتكلفة النقرة المدفوعة',
+  'Where the question sits in the customer decision journey':
+    'أين يقع السؤال في رحلة قرار العميل',
+  'What timing, market maturity and competitive density indicate':
+    'ما الذي يشير إليه التوقيت ونضج السوق والكثافة التنافسية',
+  'What the directional commercial exposure may be':
+    'ما قد تكون عليه الخسارة التجارية التقديرية',
+  'Which connected signals explain the outcome': 'أي الإشارات المترابطة تفسّر النتيجة',
+  'What action is prescribed and how improvement will be measured':
+    'ما الإجراء الموصوف وكيف سيُقاس التحسّن',
+  'Decision intelligence graph': 'مخطط ذكاء القرار',
+  'Mentioned only': 'مذكور فقط',
+  'Wrong entity': 'كيان خاطئ',
+  'Named Northwind in its answer, citing company website.':
+    'ذكر Northwind في إجابته مستشهدًا بموقع الشركة.',
+  'Recognises the business but did not consider it relevant to this question.':
+    'يتعرّف على النشاط التجاري لكنه لم يعتبره ذا صلة بهذا السؤال.',
+  'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
+    'يصف Northwind بأنها متجر أدوات بالتجزئة لا موزّع صيانة وتشغيل، ما يُخرجها من إجابات تقييم المورّدين.',
+  'Knows the company exists but not which product categories it carries, so it is omitted from specification-led questions.':
+    'يعلم بوجود الشركة لكنه يجهل فئات المنتجات التي تحملها، فتُغفَل من الأسئلة التي تقودها المواصفات.',
+  'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.':
+    'يخلط بين Northwind Supply وشركة لوجستيات تحمل الاسم نفسه، فيفشل ارتباط الفئة تمامًا.',
+  '1 of 6 engines named Northwind, and none placed it first.':
+    'محرك واحد من 6 ذكر Northwind، ولم يضعها أي منها في المرتبة الأولى.',
+  '4 of 6 resolve the wrong entity': '4 من 6 تحيل إلى الكيان الخاطئ',
+  'engines recommended the business on this question':
+    'محركات أوصت بالنشاط التجاري في هذا السؤال',
+  'of all recommendations across the tracked decision set':
+    'من مجموع التوصيات عبر مجموعة القرارات المتابَعة',
+  'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
+    'يُستشهد بـKestrel Industrial من 21 مصدرًا مستقلاً؛ وبـNorthwind من 3.',
+  '3 sources vs 14 median': '3 مصادر مقابل وسيط 14',
+  'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
+    'صفحات Northwind نفسها هي المصدر الوحيد الذي تبلغه المحركات لادّعاءاتها — والاستشهاد الذاتي وزنه ضئيل.',
+  'A published comparison library gives engines material they can quote directly.':
+    'مكتبة مقارنات منشورة تمنح المحركات مادة يمكنها اقتباسها مباشرةً.',
+  'Category evaluation criteria': 'معايير تقييم الفئة',
+  'Supplier-comparison content': 'محتوى مقارنة المورّدين',
+  'Company website': 'موقع الشركة',
+  Source: 'المصدر',
+  Favours: 'يصبّ في صالح',
+  'Why it matters': 'لماذا يهم',
+  'Monthly volume': 'الحجم الشهري',
+  'Paid CPC': 'تكلفة النقرة المدفوعة',
+  'AI presence': 'الحضور في الذكاء الاصطناعي',
+  'Closest tracked keyword': 'أقرب كلمة مفتاحية متابَعة',
+  'Above break-even CPC': 'فوق تكلفة النقرة عند نقطة التعادل',
+  'Coverage at this stage': 'التغطية في هذه المرحلة',
+  'Share of query volume': 'الحصة من حجم الاستعلامات',
+  'Share of revenue decided': 'حصة الإيراد الذي يُحسم',
+  'of questions at this stage against': 'من الأسئلة في هذه المرحلة مقابل',
+  'Market position': 'الموقع في السوق',
+  'Window remaining': 'ما تبقّى من النافذة',
+  'Buy this as an intelligence product': 'اشترِ هذا كمنتج ذكاء',
+
+  /* Page descriptions. These render into <meta name="description"> rather than
+     into the page, so the render audit cannot see them — it reads visible
+     prose and a short list of perceivable attributes. Four of them sat in
+     English through every clean audit this site has passed. */
+  'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.':
+    'صحة القرار، والتعرّض للإيراد، والاستحواذ التنافسي، والتحكّم في السردية، والتوقيت الاستراتيجي — في موقف قرار واحد.',
+  'Should we launch this campaign today? A pre-campaign assessment of the business rather than the campaign — AI, authority, trust, narrative, competitive position and destination readiness, weighted into one decision.':
+    'هل نطلق هذه الحملة اليوم؟ تقييم ما قبل الحملة للنشاط التجاري لا للحملة — الذكاء الاصطناعي والمرجعية والثقة والسردية والموقع التنافسي وجاهزية الوجهة، مرجّحة في قرار واحد.',
+  'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
+    'ما القصة التي يرويها السوق عنّا، وكيف تؤثر في القرارات؟ السرديات النشطة، ومن يملك كلاً منها، وإلى أين تتجه، وما الذي ينبغي أن يتغيّر.',
+  'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
+    'أدخل نطاقًا واختر سؤالاً تجاريًا. أعد بناء ما فهمه كل محرك ذكاء اصطناعي، ومن حصل على القرار، ولماذا، وما الذي يجب أن يتغيّر.',
+
+  /* --- The 24 tracked buyer questions. Translated on the same reasoning as the
+         home page's search queries — a buyer in this market asks in Arabic. -- */
+  'Which fastener supplier should we choose for a new plant?':
+    'أي مورّد مثبّتات ينبغي أن نختار لمصنع جديد؟',
+  'Who are the top industrial supply companies for fasteners?':
+    'من هي أفضل شركات التوريد الصناعي للمثبّتات؟',
+  'Best MRO distributors for manufacturing plants':
+    'أفضل موزّعي الصيانة والتشغيل لمصانع التصنيع',
+  'Top rated industrial supply vendors near Chicago':
+    'أعلى مورّدي التوريد الصناعي تقييمًا قرب شيكاغو',
+  'Which MRO supplier has the best fill rate?':
+    'أي مورّد صيانة وتشغيل لديه أفضل معدل تلبية للطلبات؟',
+  'Recommended industrial distributors for hydraulic components':
+    'موزّعون صناعيون موصى بهم للمكوّنات الهيدروليكية',
+  'Compare industrial distributor service levels':
+    'مقارنة مستويات خدمة الموزّعين الصناعيين',
+  'Is a national or regional MRO distributor better?':
+    'أيهما أفضل: موزّع صيانة وتشغيل وطني أم إقليمي؟',
+  'Should we consolidate MRO suppliers or keep multiple vendors?':
+    'هل ندمج مورّدي الصيانة والتشغيل أم نبقي على عدة مورّدين؟',
+  'What should an MRO supply agreement include?':
+    'ما الذي ينبغي أن تتضمّنه اتفاقية توريد الصيانة والتشغيل؟',
+  'Risks of single-source supplier dependency for MRO':
+    'مخاطر الاعتماد على مورّد وحيد للصيانة والتشغيل',
+  'Vendor-managed inventory vs consignment for MRO supplies':
+    'المخزون المُدار من المورّد مقابل البيع بالأمانة لمستلزمات الصيانة والتشغيل',
+  'What is vendor-managed inventory for MRO supplies?':
+    'ما هو المخزون المُدار من المورّد لمستلزمات الصيانة والتشغيل؟',
+  'How do I reduce MRO inventory carrying costs?':
+    'كيف أخفّض تكاليف الاحتفاظ بمخزون الصيانة والتشغيل؟',
+  'Best practices for industrial fastener sourcing':
+    'أفضل الممارسات في توريد المثبّتات الصناعية',
+  'What is the difference between grade 5 and grade 8 fasteners?':
+    'ما الفرق بين مثبّتات الدرجة 5 والدرجة 8؟',
+  'What causes premature bolt failure in high-vibration equipment?':
+    'ما الذي يسبّب الفشل المبكر للبراغي في المعدات عالية الاهتزاز؟',
+  'How often should hydraulic fittings be replaced?':
+    'كم مرة ينبغي استبدال الوصلات الهيدروليكية؟',
+  'How to avoid counterfeit fasteners in the supply chain':
+    'كيف تتجنّب المثبّتات المقلّدة في سلسلة التوريد',
+  'What are the most common industrial supply delivery failures?':
+    'ما أكثر إخفاقات التسليم شيوعًا في التوريد الصناعي؟',
+  'Industrial fastener supplier with same-day shipping':
+    'مورّد مثبّتات صناعية مع شحن في اليوم نفسه',
+  'Get a quote for bulk grade 8 fasteners':
+    'احصل على عرض سعر لمثبّتات الدرجة 8 بالجملة',
+  'Set up an MRO supply account': 'افتح حساب توريد للصيانة والتشغيل',
+
+  /* ==========================================================================
+     EXECUTIVE MISSION CONTROL
+     ====================================================================== */
+  'Executive Mission Control': 'مركز القيادة التنفيذي',
+  'Executive Mission Control | GeoRepute': 'مركز القيادة التنفيذي | GeoRepute',
+  'Not more data. A decision position.': 'ليست بيانات إضافية. بل موقف قرار.',
+  'Ten measures, each with evidence behind it': 'عشرة مقاييس، لكل منها دليل وراءه',
+  'Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.':
+    'كل رقم محسوب من بيانات مرصودة. اختر أي بطاقة لفتح القراءة الكاملة ودليلها والإجراء الموصوف لها.',
+  Position: 'الموقع',
+  Explanation: 'التفسير',
+  Execution: 'التنفيذ',
+  'AI Recognition Position': 'موقع التعرّف في الذكاء الاصطناعي',
+  'Average entity understanding across six engines. Three misidentify the category.':
+    'متوسط فهم الكيان عبر ستة محركات. ثلاثة منها تخطئ في تحديد الفئة.',
+  'Google vs AI Gap': 'الفجوة بين Google والذكاء الاصطناعي',
+  'Keywords absent from AI answers and outside the Google top ten. The decision happens on neither surface.':
+    'كلمات مفتاحية غائبة عن إجابات الذكاء الاصطناعي وخارج العشرة الأوائل في Google. فالقرار لا يحدث على أي من الواجهتين.',
+  'Decision Presence': 'الحضور في القرار',
+  'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
+    'تغطية تقييم المورّدين. 19 من 24 قرارًا تكتمل دون العلامة التجارية.',
+  'Competitive Capture': 'الاستحواذ التنافسي',
+  'Kestrel Industrial receives the recommendation. Northwind receives 4.2%.':
+    'يتلقّى Kestrel Industrial التوصية. وتتلقّى Northwind 4.2%.',
+  'Narrative Ownership': 'ملكية السردية',
+  'Share of the language engines use to define the category. The criteria cited first are a competitor’s.':
+    'الحصة من اللغة التي تستخدمها المحركات لتعريف الفئة. والمعايير المذكورة أولاً هي معايير منافس.',
+  'Trust Readiness': 'جاهزية الثقة',
+  'The recommendation goes to the supplier engines can support with evidence.':
+    'تذهب التوصية إلى المورّد الذي تستطيع المحركات دعمه بالأدلة.',
+  'Paid Dependency': 'الاعتماد على المدفوع',
+  'Blended CPC runs above break-even. Paid is renting the positions authority would hold.':
+    'تكلفة النقرة المخلوطة تفوق نقطة التعادل. فالمدفوع يستأجر المواقع التي كانت المرجعية ستحتفظ بها.',
+  'Weighted across six GEON vectors. Authority at 28 is the binding constraint.':
+    'مرجّح عبر ستة متجهات GEON. والمرجعية عند 28 هي القيد الحاكم.',
+  'ChatGPT supplier recommendation presence': 'حضور توصية المورّد في ChatGPT',
+  'The most-used engine puts Northwind forward in one of twenty-four decision questions.':
+    'المحرك الأكثر استخدامًا يقدّم Northwind في سؤال واحد من أربعة وعشرين سؤال قرار.',
+  '3 independent sources against a category median of 14.':
+    '3 مصادر مستقلة مقابل وسيط للفئة يبلغ 14.',
+  'Authority is the binding constraint, so it is where intervention begins.':
+    'المرجعية هي القيد الحاكم، ولذلك يبدأ التدخّل منها.',
+  'Paid search is bought to cover the questions authority no longer wins.':
+    'يُشترى البحث المدفوع لتغطية الأسئلة التي لم تعد المرجعية تكسبها.',
+  'Emerging market at 63/100 readiness. Query maturity accelerating.':
+    'سوق ناشئ بجاهزية 63/100. ونضج الاستعلامات يتسارع.',
+  'The window remains open but is narrowing. Displacement cost rises once engines settle on a stable answer set.':
+    'ما زالت النافذة مفتوحة لكنها تضيق. وترتفع كلفة الإزاحة متى استقرت المحركات على مجموعة إجابات ثابتة.',
+  'Decision deadline': 'الموعد النهائي للقرار',
+  'Timing window': 'نافذة التوقيت',
+  months: 'أشهر',
+  'Causal signal chain': 'سلسلة الإشارات السببية',
+  'The measures above are not independent. This is the chain that connects them, ending in the intervention it implies.':
+    'المقاييس أعلاه ليست مستقلة. وهذه هي السلسلة التي تربطها، وتنتهي بالتدخّل الذي تستلزمه.',
+  'One decision. Many signals. One explanation.':
+    'قرار واحد. إشارات كثيرة. تفسير واحد.',
+  'Open evidence': 'افتح الأدلة',
+  'Open Action Center': 'افتح مركز الإجراءات',
+  'Reconstruct the decision': 'أعد بناء القرار',
+  'Explore intelligence engines': 'استكشف محركات الذكاء',
+
+  /* --- Executive intelligence feed ------------------------------------------------- */
+  'Executive intelligence feed': 'موجز الذكاء التنفيذي',
+  '{n} events': '{n} أحداث',
+  'Competitor surge': 'اندفاع منافس',
+  'Kestrel Industrial gained the first recommendation on two more supplier questions':
+    'حصل Kestrel Industrial على التوصية الأولى في سؤالَي مورّدين إضافيين',
+  'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
+    'يتصدّر Kestrel الآن أربعًا من سبع إجابات لتقييم المورّدين، صعودًا من اثنتين. وكلا المكسبين الجديدين يستشهد بمنشور قطاعي أُضيف في يونيو.',
+  'Citation lost': 'استشهاد مفقود',
+  'Perplexity stopped citing the Northwind capability page':
+    'توقّف Perplexity عن الاستشهاد بصفحة قدرات Northwind',
+  'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.':
+    'استُشهد بالصفحة في ثلاثة أسئلة في يونيو ولا شيء في يوليو. ويحيل Perplexity الآن الأسئلة نفسها إلى مصادر منافسة.',
+  '3 → 0 citations': '3 ← 0 استشهادات',
+  '25 searches/mo': '25 عملية بحث/شهر',
+  '+1 question': '+1 سؤال',
+  '+2 questions': '+2 سؤالان',
+  '+8% QoQ': '+8% ربعًا على ربع',
+  '+8% CPC': '+8% تكلفة النقرة',
+  'per month': 'شهريًا',
+  '$3,200 – $6,200 per month': '3,200$ – 6,200$ شهريًا',
+  'per quarter': 'ربع سنويًا',
+  'per year': 'سنويًا',
+  'Narrative risk': 'مخاطر السردية',
+  'Engines adopted a competitor’s evaluation criteria':
+    'تبنّت المحركات معايير تقييم وضعها منافس',
+  'Fill rate and catalogue breadth are now cited first when engines explain how to choose a distributor. Regional response time is not referenced.':
+    'يُذكر معدل تلبية الطلبات واتساع الكتالوج أولاً الآن حين تشرح المحركات كيفية اختيار موزّع. ولا يُشار إلى زمن الاستجابة الإقليمي.',
+  'Trust signal decayed': 'تآكل إشارة ثقة',
+  'Category description diverged across two trade directories':
+    'تباين وصف الفئة عبر دليلَي قطاع',
+  'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
+    'يصف دليلان الآن Northwind بصورة مختلفة عن موقعها. وعدم الاتساق هو الآلية وراء الخلط في الكيان لدى ChatGPT وCopilot.',
+  'Search cost spike': 'قفزة في تكلفة البحث',
+  'Blended CPC moved further above break-even':
+    'ارتفعت تكلفة النقرة المخلوطة أكثر فوق نقطة التعادل',
+  '“industrial supply company” rose to $11.00 with no organic position in the top 100. Paid is covering a question authority does not reach.':
+    'ارتفعت «شركة توريد صناعي» إلى 11.00$ دون أي موقع عضوي ضمن أول 100. فالمدفوع يغطّي سؤالاً لا تبلغه المرجعية.',
+  'New decision question': 'سؤال قرار جديد',
+  'A new supplier-evaluation question entered the tracked set':
+    'دخل سؤال جديد لتقييم المورّدين إلى المجموعة المتابَعة',
+  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.':
+    'ظهر «أي مورّد صيانة وتشغيل لديه أفضل معدل تلبية للطلبات؟» بحجم قابل للقياس. وNorthwind غائبة عن كل محرك يجيب عنه.',
+  'Recommendation gained': 'توصية مكتسبة',
+  'Claude began recommending Northwind for regional distributor questions':
+    'بدأ Claude بالتوصية بـNorthwind في أسئلة الموزّعين الإقليميين',
+  'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.':
+    'أول توصية على «أعلى مورّدي التوريد الصناعي تقييمًا قرب شيكاغو». والخصوصية الإقليمية هي عامل التمييز الذي تستشهد به الإجابة.',
+  'Regional opportunity': 'فرصة إقليمية',
+  'Midwest regional questions show weaker competitive density':
+    'أسئلة وسط الغرب الإقليمية تُظهر كثافة تنافسية أضعف',
+  'Questions naming a Midwest location carry lower competitor control than national equivalents — the cheapest available entry point.':
+    'الأسئلة التي تسمّي موقعًا في وسط الغرب تحمل سيطرة أقل للمنافسين مقارنةً بنظيراتها الوطنية — وهي أرخص نقطة دخول متاحة.',
+  'Competitive density rose 8% quarter over quarter':
+    'ارتفعت الكثافة التنافسية 8% ربعًا على ربع',
+
+  /* ==========================================================================
+     STRATEGIC ACTION CENTER
+     ====================================================================== */
+  'Strategic Action Center': 'مركز الإجراءات الاستراتيجية',
+  'Prioritised interventions with owner, deadline, expected movement and how impact is verified after execution.':
+    'تدخّلات مرتّبة بالأولوية مع المالك والموعد النهائي والحركة المتوقعة وكيفية التحقق من الأثر بعد التنفيذ.',
+  '{n}-day': '{n} يومًا',
+  'Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.':
+    'كل تدخّل يسمّي مالكًا وموعدًا نهائيًا والإشارة التي ينبغي أن يحرّكها وكيف سيُتحقَّق من تلك الحركة.',
+  Interventions: 'التدخّلات',
+  Measured: 'مُقاس',
+  'Verified after execution': 'يُتحقَّق منه بعد التنفيذ',
+  View: 'عرض',
+  'Priority queue': 'طابور الأولويات',
+  '30/60/90 roadmap': 'خارطة طريق 30/60/90',
+  'day horizon': 'أفق يومي',
+  'Ranked by urgency, then by effort — cheapest decisive move first':
+    'مرتّبة بالإلحاح ثم بالجهد — أرخص خطوة حاسمة أولاً',
+  'Priority {n}': 'الأولوية {n}',
+  'Not yet measured — verified after execution.':
+    'لم يُقَس بعد — يُتحقَّق منه بعد التنفيذ.',
+  'View evidence': 'عرض الأدلة',
+  'How impact is verified': 'كيف يُتحقَّق من الأثر',
+  'Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.':
+    'الإنجاز ليس أثرًا. فكل إجراء يُتحقَّق منه بإعادة رصد الإشارة التي يستهدفها، عبر المحركات والأسئلة نفسها، بعد التنفيذ. وإلى أن تتم إعادة الرصد تلك، يبقى التغيّر المقاس فارغًا بدل أن يُفترَض.',
+  'Back to Mission Control': 'العودة إلى مركز القيادة',
+  'Read the methodology': 'اقرأ المنهجية',
 }
