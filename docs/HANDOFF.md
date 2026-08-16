@@ -1,7 +1,8 @@
 # Handoff — launch preparation
 
-**Branch:** `feat/launch-prep` · **Written:** 13 Aug 2026 · Nothing pushed;
-this branch exists only locally and has no upstream.
+**Branch:** `feat/launch-prep` · **Written:** 13 Aug 2026 ·
+**Updated:** 16 Aug 2026 · Nothing pushed; this branch exists only locally and
+has no upstream.
 
 Read this first, then `AGENTS.md`, then the requirements PDF if you have it.
 The PDF ("GeoRepute Website — Final Updates Before Launch") is the source of
@@ -22,7 +23,7 @@ waste your afternoon if you do not know them.
 | 5 | Demo booking calendar | **Built, unconfigured.** Cal.com v2; needs two secrets — see §6 |
 | 6 | Production readiness + checklist | `docs/PRE-LAUNCH.md`. **Not deployed**, as instructed |
 | 7 | Do not display pricing publicly | Held by the same flag as §4 |
-| 8 | Full multilingual support | **Routing done for 7 locales. Translation done for Hebrew home page only** — see §2 |
+| 8 | Full multilingual support | **Done.** Routing for 7 locales; every route translated in all six non-English locales. Native review outstanding — see §2 |
 | 9 | The Closed Loop | **Done.** PLAN→DO→CHECK→ACT→REPEAT |
 | 10 | Nav item, homepage band, dedicated page | **Done.** `/how-it-works` |
 
@@ -43,35 +44,62 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**Three pages are complete in all six** — he, ar, ru, fr, es, pt.
+**Every route is translated in all six locales** — he, ar, ru, fr, es, pt.
+Each overlay carries ~1,370 entries and covers the same key set; both blog
+articles exist in all six. `i18n-port.mjs he <locale>` reports `missing: 0`
+for every one, and `i18n-keys.mjs <locale>` reports `MISSING: 0`.
 
-| Page | he · ar · ru (script) | fr | es | pt |
-| --- | --- | --- | --- | --- |
-| home | 1 each | 16 | 1 | 1 |
-| /methodology | 1 each | 1 | 0 | 0 |
-| /how-it-works | 1 each | 4 | 0 | 1 |
+| Route | he | ar | ru | fr | es | pt |
+| --- | --- | --- | --- | --- | --- | --- |
+| `/` | 1 | 1 | 1 | 16 | 1 | 1 |
+| `/how-it-works` | 1 | 1 | 1 | 4 | 0 | 1 |
+| `/methodology` | 1 | 1 | 1 | 1 | 0 | 0 |
+| `/engines` | 1 | 1 | 1 | 2 | 0 | 0 |
+| `/marketplace` | 1 | 1 | 1 | 2 | 0 | 0 |
+| `/briefing` | 1 | 1 | 1 | 3 | 0 | 0 |
+| `/blog` | 1 | 1 | 1 | 1 | 0 | 0 |
+| `/legal` | 1 | 1 | 1 | 1 | 0 | 0 |
+| `/signin` | 0 | 0 | 0 | 0 | 0 | 0 |
+| `/election-intelligence` | 2 | 2 | 1 | 3 | 2 | 2 |
+| `/app/mission-control` | 0 | 0 | 0 | 7 | 0 | 0 |
+| `/app/reconstruct` | 0 | 0 | 0 | 7 | 0 | 0 |
+| `/app/campaign-readiness` | 0 | 0 | 0 | 5 | 0 | 0 |
+| `/app/narrative` | 0 | 0 | 0 | 4 | 1 | 0 |
+| `/app/actions` | 0 | 0 | 0 | 2 | 0 | 0 |
 
-The `1` on he/ar/ru is the ISO code chip in the compact language switcher. The
-Latin-script residue is cognates — `Visible`, `Volume`, `Intelligence`,
-`Action` — words genuinely identical in those languages.
+**None of these numbers is a defect.** he/ar/ru are script mode; fr/es/pt are
+diff mode, and the two do not mean the same thing — read §3 before comparing a
+column against another. Every remaining segment was checked individually:
 
-**Read §3 on the two audit modes before trusting any of those numbers.** The
-Latin-script locales cannot be measured the same way as the others, and the
-default mode says a perfectly translated French page is 100% English.
+- **The `1` across he/ar/ru** is the ISO code chip in the compact language
+  switcher — deliberately Latin.
+- **French's 61** are true cognates (`Classification`, `Prescription`,
+  `Position`, `Volume`, `Absent`, `Action`, `Signal`, `Source`, `Influence`,
+  `Effort`, `Stable`, `Visible`, `Intervention`, `Format`, `Articles`) plus
+  numeric strings identical in both languages (`45 minutes`, `21 sources`,
+  `6 questions`). Spanish shares far fewer of these with English, which is the
+  entire reason its column is near-zero and French's is not.
+- **`/election-intelligence`** carries the fictional county and the two
+  candidate names. he/ar keep `Riverbend` Latin; ru transliterates it, which
+  is why ru reads 1 there and the others read 2. See §7.
+- **`/app/narrative` in Spanish** shows `Media` — which is the Spanish for
+  *Medium*, not the English for *the press*. Diff mode compares a **set** of
+  segments per page, not positions, so a correct translation that collides
+  with a different English string elsewhere on the same page is
+  indistinguishable from an untranslated one.
+- **`Media` in Portuguese** on `/how-it-works` is the pt-PT loanword (*os
+  media*); Spanish uses `Medios`, Russian `Медиа`. Every neighbour in that
+  list is translated, so it is a choice, not an omission.
 
 Only the first locale cost real engineering. **No component changed for any
 locale after Hebrew** — every string that needed wrapping was wrapped once, so
 the rest were translation jobs.
 
-**Everything else is untranslated.** To be precise about what that means:
+### What is still genuinely open
 
-- The **UI dictionaries** (`lib/i18n/dictionaries/*.ts`) are machine-translated
-  into all six languages at ~98% coverage. Every one is marked
-  `reviewed: false`. **None has been read by a native speaker.**
-- The **content overlays** (`lib/i18n/content/*.ts`) — seed prose and inline
-  component prose — now exist for all six, ~580 entries each.
-- All six cover **home, /methodology and /how-it-works**. Other routes will
-  show English wherever they use prose those three did not.
+- Every dictionary and overlay is marked `reviewed: false`. **None has been
+  read by a native speaker.** This is the one remaining launch blocker in the
+  translation workstream and no amount of auditing substitutes for it.
 - **`i18n-keys.mjs` only sees literal `t('…')` calls.** The methodology page
   passes three arrays through `t(variable)`; the script reported 0 missing
   while 25 strings were still English. Treat it as a worklist, never as proof.
@@ -93,6 +121,12 @@ node scripts/i18n-port.mjs he ru   # seed prose a finished locale already covers
 `i18n-port.mjs` is the fast route for a new locale: port `he.ts`'s key set
 across, then let the audit find whatever is left. That is how Arabic went from
 an empty stub to zero in one pass.
+
+It reads both `'single'` and `"double"` quoted keys. It did not until August
+2026, and while it only read single quotes it reported **`missing: 0` on a
+locale missing every double-quoted key** — a source string containing an
+apostrophe is written with double quotes rather than escaped. If you extend
+this script, the failure mode to fear is the silent under-count, not the crash.
 
 ### Three layers, and which one a string belongs to
 
@@ -184,12 +218,41 @@ node scripts/i18n-audit.mjs http://localhost:3000/fr \
 
 Script mode on a French page reports every sentence as English, because French
 *is* Latin script. It scored a finished French home page at 508 segments —
-the same as English. Diff mode has the opposite blind spot: it cannot tell a
-correct identical translation (`Visible`, `Volume`, `Action`) from an absent
-one, so its residue always needs reading by eye rather than trusting the count.
+the same as English.
+
+**Diff mode fails in two directions, both benign, both requiring you to read
+rather than count:**
+
+1. *A correct translation that happens to equal English.* `Visible`, `Volume`,
+   `Action`, `Position` are all correct French. Portuguese `Media` is the
+   pt-PT loanword. These are cognates, and no count can distinguish them from
+   an absent translation.
+2. *A correct translation that equals a **different** English string on the
+   same page.* The Spanish for *Medium* is `Media`; the English page separately
+   shows `Media` meaning the press. Diff mode compares a **set** of segments
+   per page rather than positions, so the two are indistinguishable to it.
+
+I deliberately did not add a cognate allow-list to fix (1): `Intelligence` is
+a cognate in French but not in Spanish (`Inteligencia`) or Portuguese
+(`Inteligência`), so a shared list would suppress real gaps. Nor did I make
+the comparison positional to fix (2) — that is fragile against reordering, and
+would trade a legible false positive for silent drift. **A diff-mode number is
+a reading list, not a score.**
+
+**A cognate can also be reached through the dictionary layer rather than the
+overlay**, so grepping `fr.ts` for it and finding nothing does not mean it was
+missed. French `Intelligence` on the home page is a footer column title in
+`lib/copy/en.ts`, translated in `lib/i18n/dictionaries/fr.ts` — correctly, and
+identically. Check both layers before calling a segment untranslated.
 
 Neither mode is the truth on its own. **Spot-check actual prose** in the target
 language before declaring a locale done.
+
+**The audit cannot see `<meta name="description">`.** It reads visible prose
+plus `alt`, `aria-label`, `title` and `placeholder`. Four page descriptions sat
+in English through every clean audit this site passed, because nothing that
+looks at the rendered body was ever going to find them. If you add a page,
+check its `generateMetadata` by hand.
 
 **`pkill` does not exist in this shell.** It fails silently, the old server
 survives, and every subsequent measurement reads a stale build. Kill by port:
@@ -262,17 +325,26 @@ it on its own before believing it.
 
 In order. Each is a session's work or less.
 
-1. **The remaining routes, per locale.** `/marketplace`, `/engines/*`,
-   `/election-intelligence`, `/briefing`, `/blog`, `/legal`.
-   Expect four categories, all of which have bitten already: unwrapped inline
-   prose, seed prose, dictionary blocks that were never written, and
-   `ProductScreen` slot captions.
-2. **Native review of all six dictionaries and all six overlays.** Flip
+Translation is **done** — all fifteen routes in all six locales. What follows
+needs a person, not more of the same work.
+
+1. **Native review of all six dictionaries and all six overlays.** Flip
    `reviewed: false` only when a human has actually read one. This is a launch
    blocker, not a detail — every one of them is machine-produced. Some carry
    real judgement calls worth a second opinion: Arabic renders "authority" as
    حُجّية (evidentiary weight) rather than سُلطة (power), and Portuguese is
-   European rather than Brazilian.
+   European rather than Brazilian. The reviewer should also be told which
+   proper nouns are deliberately untranslated (§7) so they do not "fix" them.
+2. **The `/legal` page becomes false the moment `CAL_API_KEY` is set.** It
+   currently states "Nothing is transmitted anywhere" in all six languages.
+   Booking a briefing will transmit a name, an email and a time to an external
+   calendar service. Rewrite that section — in six languages — as part of
+   wiring the calendar, not after.
+3. **The remaining non-translation launch items** — §6.
+
+If you add a route or a new string after this point, the loop in §3 still
+applies, and the two things it cannot see (`t(variable)`, `generateMetadata`)
+still need checking by hand.
 
 ---
 
@@ -373,6 +445,28 @@ that nothing is publicly reachable *and* that the code still exists.
 brand assets, screenshots, or data". A fabricated screenshot is a false claim
 about the product, so slots state what is missing and where it goes.
 
+**Proper nouns follow the script, not a single global rule.** The invented
+county (`Riverbend`) and the two candidate names (`A. Marchetti`,
+`D. Okonkwo`) are transliterated in Russian — Ривербенд, А. Маркетти,
+Д. Оконкво — and left Latin in Hebrew and Arabic. That is not drift. A Latin
+run inside RTL prose reads as a foreign quotation, which is roughly what an
+invented American county name *is*; Russian transliterates personal and place
+names as a matter of course, so leaving them Latin would be the odd choice.
+French, Spanish and Portuguese need no change and record them as identity
+mappings so `i18n-port.mjs` reports parity rather than flagging a gap.
+
+**Trade-publication mastheads stay Latin everywhere** — `Industrial
+Distribution`, `Modern Supply Chain`, `Fastener Technology`, `Plant
+Engineering`. They are invented proper nouns, like the competitor company
+names, and they are in `PHRASES` in `scripts/i18n-audit.mjs` so script mode
+does not report them.
+
+**Identity mappings are deliberate.** `'Google Ads': 'Google Ads'` and the
+mastheads are functionally no-ops — an absent key falls through to English
+identically. They exist so the decision is written down in the file a
+translator reads, rather than looking like six locales each forgot the same
+string.
+
 ---
 
 ## 8. Traps
@@ -395,3 +489,27 @@ about the product, so slots state what is missing and where it goes.
 - **Stale `.next/dev` types** can break `typecheck` after a branch switch.
   Delete the directory.
 - **Windows file locks:** a running `next dev` blocks `git mv`. Kill it first.
+- **Never key the content overlay on a bare lowercase enum value.**
+  `translateContent` walks *every* string in the seed graph and cannot tell
+  prose from a discriminant. Adding `high` / `medium` / `low` once rewrote the
+  enum itself, so `copy.confidence['גבוהה'].definition` threw and three pages
+  failed to prerender. The fix in `Reconstruct.tsx` and `NarrativeView.tsx` is
+  a capitalised display-label map — `{ high: 'High', … }` — which cannot
+  collide. I made this mistake twice; the second time with
+  `emerging`/`growing`/`steady`/`declining`.
+- **Do not copy a key out of audit output.** The audit prints what the user
+  sees, which is not what the code asks for. This has produced, repeatedly:
+  keys with React's `&#x27;` in place of a plain apostrophe; keys with the
+  interpolated value baked in (`stage 4 of 5` beside a live
+  `stage {n} of {total}`); and keys with *Hebrew inside the English source*.
+  Each is unreachable and fails silently. Eight such keys were removed from
+  `he.ts` in August 2026. Read the call site.
+- **The seed stores the bare value; the component adds the ornament.**
+  Statements are stored unquoted and wrapped in curly quotes at render;
+  source names are capitalised in the seed and lowercased at render; feed
+  deltas store `3 → 0 citations` and the component draws the arrow. Key on
+  the seed, not the screen.
+- **The same string often renders from more than one call site.** "Primary
+  constraint" lives in both the view and the shared `DimensionPanel`;
+  momentum renders from three places. Wrapping one and seeing the translation
+  appear makes the others look done. Grep before believing it.

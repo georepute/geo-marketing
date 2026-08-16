@@ -1119,4 +1119,1179 @@ export const content: ContentOverlay = {
   'Demand Gen Manager': 'Gestor de geração de procura',
   'Customer-configured': 'Configurado pelo cliente',
   'Derived from §13.1 chain': 'Derivado da cadeia §13.1',
+  /* A product name. Recorded rather than translated, so its absence from the
+     rest of this file reads as a decision and not an oversight. */
+  'Google Ads': 'Google Ads',
+
+  /* ==========================================================================
+     ELECTION INTELLIGENCE
+
+     The race, the candidates and the county are invented. Nothing here is
+     transliterated: Portuguese shares the Latin alphabet, so Riverbend and
+     the candidate initials are already in their Portuguese form. They will
+     show up in a diff-mode audit as identical to English, which is correct
+     rather than a gap — see the note at the head of i18n-audit.mjs.
+     ====================================================================== */
+  'Demonstration subject': 'Sujeito da demonstração',
+  'Entirely fictional. No real person, party or race.':
+    'Inteiramente fictício. Nenhuma pessoa, partido ou disputa reais.',
+  Race: 'Disputa',
+  'County Commission': 'Assembleia do condado',
+  'Riverbend County — District 4': 'Condado de Riverbend — círculo 4',
+  Candidate: 'Candidato',
+  Opponent: 'Adversário',
+  /* Already in their Portuguese form — he, ar and ru transliterate these into
+     their own scripts, Portuguese has nothing to change. Recorded as
+     identities so `i18n-port.mjs he pt` reports parity instead of a gap. */
+  'A. Marchetti': 'A. Marchetti',
+  'D. Okonkwo': 'D. Okonkwo',
+  'Election War Room — the live operational view':
+    'Sala de operações eleitoral — a vista operacional em direto',
+  'The Election War Room. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'A sala de operações eleitoral. Disputa fictícia, dados de demonstração — nenhum candidato, partido ou campanha reais.',
+  'Candidate / party dashboard — the standing position':
+    'Painel de candidato e partido — a posição atual',
+  'Candidate and party position. Fictional race, demonstration data — no real candidate, party or campaign.':
+    'Posição do candidato e do partido. Disputa fictícia, dados de demonstração — nenhum candidato, partido ou campanha reais.',
+  'Election narrative intelligence — positive vs negative narratives':
+    'Inteligência narrativa eleitoral — narrativas positivas contra negativas',
+  'Which narratives are strengthening the position and which are damaging it. Fictional race, demonstration data.':
+    'Que narrativas reforçam a posição e quais a prejudicam. Disputa fictícia, dados de demonstração.',
+  'Positive vs negative narratives — the polarity split':
+    'Narrativas positivas contra negativas — a divisão de polaridade',
+  'Positive against negative, by reach and by direction of travel. Fictional race, demonstration data.':
+    'O positivo contra o negativo, por alcance e por sentido de evolução. Disputa fictícia, dados de demonstração.',
+  'Audience / segment movement — who is moving toward and away':
+    'Movimento de audiências e segmentos — quem se aproxima e quem se afasta',
+  'Which audiences are moving closer and which are moving away. Fictional race, demonstration data.':
+    'Que audiências se aproximam e quais se afastam. Disputa fictícia, dados de demonstração.',
+  'Opponent intelligence — competing narratives and ownership':
+    'Inteligência sobre o adversário — narrativas concorrentes e titularidade',
+  'What the opposing account is, and which issues it owns. Fictional race, demonstration data.':
+    'Qual é o relato do lado oposto e que temas detém. Disputa fictícia, dados de demonstração.',
+  'Influencers and sources shaping the narrative':
+    'Influenciadores e fontes que moldam a narrativa',
+  'Who is strengthening the position and who is damaging it. Fictional race, demonstration data.':
+    'Quem reforça a posição e quem a prejudica. Disputa fictícia, dados de demonstração.',
+  'AI + Google election intelligence — per-engine narrative leads':
+    'Inteligência eleitoral de IA e Google — a narrativa dominante por motor',
+  'What each AI engine and Google surface leads with. Fictional race, demonstration data.':
+    'Com que abre cada motor de IA e cada superfície do Google. Disputa fictícia, dados de demonstração.',
+  'Multilingual intelligence — narrative gaps between languages':
+    'Inteligência multilingue — lacunas narrativas entre línguas',
+  'Where the account of a candidate differs by language. Fictional race, demonstration data.':
+    'Onde o relato de um candidato difere consoante a língua. Disputa fictícia, dados de demonstração.',
+  'Risks and opportunities — emerging threats and open positions':
+    'Riscos e oportunidades — ameaças emergentes e posições livres',
+  'Emerging threats and unclaimed positions, ranked. Fictional race, demonstration data.':
+    'Ameaças emergentes e posições por reclamar, ordenadas. Disputa fictícia, dados de demonstração.',
+  'Recommended actions — the campaign action plan':
+    'Ações recomendadas — o plano de ação da campanha',
+  'What to do now, who owns it, and how the movement will be measured. Fictional race, demonstration data.':
+    'O que fazer agora, quem o assume e como será medido o movimento. Disputa fictícia, dados de demonstração.',
+  'Trend over time — narrative movement across the cycle':
+    'Tendência ao longo do tempo — o movimento narrativo durante o ciclo',
+  'How the position has moved across the cycle. Fictional race, demonstration data.':
+    'Como a posição se moveu ao longo do ciclo. Disputa fictícia, dados de demonstração.',
+
+  /* ==========================================================================
+     INTELLIGENCE ENGINES
+     ====================================================================== */
+  'Intelligence engines': 'Motores de inteligência',
+  'Each engine answers a board-level business question, produces a connected intelligence readout and routes the user into action. Not a feature list — a set of questions the business needs answered.':
+    'Cada motor responde a uma questão de negócio ao nível da administração, produz uma leitura de inteligência interligada e encaminha o utilizador para a ação. Não é uma lista de funcionalidades, mas um conjunto de perguntas a que o negócio precisa de resposta.',
+  'Built in this environment · 4 of 12': 'Construído neste ambiente · 4 de 12',
+  'Four engines, built to full depth': 'Quatro motores, desenvolvidos em toda a profundidade',
+  'Each carries a real seeded outcome, its evidence, its commercial consequence and the action it prescribes. They chain into one another — together they form the causal argument rather than four samples of it.':
+    'Cada um traz um resultado pré-carregado real, as suas provas, a sua consequência comercial e a ação que prescreve. Encadeiam-se uns nos outros: em conjunto formam o argumento causal e não quatro amostras dele.',
+  'The full operating system': 'O sistema operativo completo',
+  'Eight further engines available in the platform':
+    'Mais oito motores disponíveis na plataforma',
+  'These are part of the operating system but are not built in this demonstration environment. Their business questions are listed so the shape of the full system is visible.':
+    'Fazem parte do sistema operativo, mas não estão construídos neste ambiente de demonstração. As suas questões de negócio são listadas para que a forma do sistema completo fique visível.',
+  'Available in platform': 'Disponível na plataforma',
+  'Is the business present when customers ask AI whom to choose?':
+    'O negócio está presente quando os clientes perguntam à IA quem escolher?',
+  'Which gap is commercially meaningful enough to fix first?':
+    'Que lacuna tem relevância comercial suficiente para ser corrigida primeiro?',
+  'When does paid search become structurally inefficient?':
+    'Quando é que a pesquisa paga se torna estruturalmente ineficiente?',
+  'Is the business visible but still unsafe to recommend?':
+    'O negócio é visível mas ainda arriscado de recomendar?',
+  'When the market explains the category, whose language does it use?':
+    'Quando o mercado explica a categoria, de quem é o vocabulário que usa?',
+  'Is the market ready, and how long is the window open?':
+    'O mercado está pronto e durante quanto tempo permanece aberta a janela?',
+  'How does the business change across countries, languages and markets?':
+    'Como muda o negócio de país para país, de língua para língua e de mercado para mercado?',
+  'Does the route to market strengthen the brand or transfer power to intermediaries?':
+    'O canal de chegada ao mercado reforça a marca ou transfere poder para os intermediários?',
+  'See plans': 'Ver planos',
+
+  /* ==========================================================================
+     MARKETPLACE
+     ====================================================================== */
+  'Seven categories of decision intelligence, each holding the models that answer one kind of commercial question. Most of them measure things a business has never been able to see — not because the questions are exotic, but because nothing existed to answer them.':
+    'Sete categorias de inteligência de decisão, cada uma com os modelos que respondem a um tipo de questão comercial. A maioria mede coisas que um negócio nunca conseguiu ver — não porque as perguntas sejam exóticas, mas porque não existia nada que lhes respondesse.',
+  'Intelligence categories': 'Categorias de inteligência',
+  'Intelligence modules': 'Módulos de inteligência',
+  'Engines beneath them': 'Motores subjacentes',
+  'of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    'destes módulos funcionam em direto neste ambiente sobre um negócio realmente reconstruído. Os restantes estão disponíveis na plataforma.',
+  'Start with the question you actually have.':
+    'Comece pela pergunta que realmente tem.',
+  'Each category opens into the modules underneath it. Every module answers one business question and returns evidence, an analysis and a recommendation — never a figure on its own.':
+    'Cada categoria abre nos módulos que contém. Cada módulo responde a uma questão de negócio e devolve provas, uma análise e uma recomendação — nunca um número isolado.',
+  'What you are buying': 'O que está a comprar',
+  'The document is the output. The intelligence is the product.':
+    'O documento é o resultado. A inteligência é o produto.',
+  'How the models work': 'Como funcionam os modelos',
+  'Every claim carries the observation behind it — which engine, which question, which date. A conclusion you cannot audit is an opinion.':
+    'Cada afirmação traz consigo a observação que a sustenta: que motor, que pergunta, que data. Uma conclusão que não se pode auditar é uma opinião.',
+  'What the evidence means commercially, what is causing it, and how confident the model can honestly be. Limits are stated, never implied.':
+    'O que as provas significam em termos comerciais, o que as está a causar e com que confiança o modelo se pode honestamente pronunciar. Os limites são declarados, nunca subentendidos.',
+  'What to do, who owns it, by when, and what signal should move as a result. Verified afterwards against what actually moved.':
+    'O que fazer, quem o assume, até quando e que sinal deve mover-se em consequência. Depois é confrontado com o que realmente se moveu.',
+  'Whatever the business question, there is already intelligence built for it.':
+    'Seja qual for a questão de negócio, já existe inteligência construída para ela.',
+  'See a module run live': 'Ver um módulo em funcionamento',
+  'Monitor continuously instead': 'Ou monitorizar de forma contínua',
+  '7 live in demo': '7 ativos na demonstração',
+  '4 live in demo': '4 ativos na demonstração',
+  Analysis: 'Análise',
+  Recommendation: 'Recomendação',
+  modules: 'módulos',
+  Explore: 'Explorar',
+  '+ 1 more': '+ mais 1',
+  '+ 2 more': '+ mais 2',
+  '+ 4 more': '+ mais 4',
+  '+ 6 more': '+ mais 6',
+  '+ {n} more': '+ mais {n}',
+  '{n} live in demo': '{n} ativos na demonstração',
+  '<b>{n}</b> of these modules run live in this environment against a real reconstructed business. The rest are available in the platform.':
+    '<b>{n}</b> destes módulos funcionam em direto neste ambiente sobre um negócio realmente reconstruído. Os restantes estão disponíveis na plataforma.',
+  'Built in this environment · {n} of {total}': 'Construído neste ambiente · {n} de {total}',
+
+  /* ==========================================================================
+     LEGAL
+     `localStorage` stays Latin — it is the storage API by name, and the page
+     has to name it precisely.
+     ====================================================================== */
+  Legal: 'Informação legal',
+  'Legal and data handling': 'Informação legal e tratamento de dados',
+  'Legal and data handling | GeoRepute': 'Informação legal e tratamento de dados | GeoRepute',
+  'Privacy, terms, data processing and security posture for the GeoRepute demonstration environment.':
+    'Privacidade, condições, tratamento de dados e postura de segurança do ambiente de demonstração da GeoRepute.',
+  'What this environment does and does not do with data.':
+    'O que este ambiente faz com os dados e o que não faz.',
+  'This is a demonstration build. Rather than reproduce boilerplate that would not apply to it, each section below states the actual position.':
+    'Esta é uma versão de demonstração. Em vez de reproduzir fórmulas genéricas que não se lhe aplicariam, cada secção abaixo expõe a situação real.',
+  Privacy: 'Privacidade',
+  'This environment collects nothing. There is no analytics script, no tag manager, no session recording and no third-party tracker on any page.':
+    'Este ambiente não recolhe nada. Nenhuma página contém script de análise, gestor de etiquetas, gravação de sessões ou rastreador de terceiros.',
+  'The only data stored about you is your theme preference and any demonstration purchases, both held in your browser’s localStorage and readable only by this site. Nothing is transmitted anywhere. Clearing site data removes all of it, and the purchase-confirmation screen offers a reset control.':
+    'Os únicos dados guardados sobre si são a preferência de tema e eventuais compras de demonstração, ambos mantidos no localStorage do seu navegador e legíveis apenas por este sítio. Nada é transmitido para lado nenhum. Limpar os dados do sítio remove tudo, e o ecrã de confirmação de compra disponibiliza um controlo de reposição.',
+  'Terms of service': 'Condições do serviço',
+  'No commercial terms apply. Nothing on this site constitutes an offer, and no contract can be formed through it.':
+    'Não se aplicam quaisquer condições comerciais. Nada neste sítio constitui uma oferta, e não pode ser celebrado nenhum contrato através dele.',
+  'Pricing shown throughout is placeholder and clearly marked as such on the pricing page. The checkout collects no payment details and processes no charge.':
+    'Os preços apresentados são provisórios e estão claramente assinalados como tal na página de preços. O processo de pagamento não recolhe dados bancários nem processa qualquer cobrança.',
+  'Data processing': 'Tratamento de dados',
+  'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
+    'A Northwind Supply é uma organização fictícia. Todos os números que lhe são atribuídos estão pré-carregados, são internamente coerentes e derivam de um conjunto publicado de factos de referência. Em nenhum ponto deste ambiente aparecem dados de uma empresa real.',
+  'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.':
+    'Os nomes de concorrentes, os domínios e as contagens de citações são inventados. Qualquer semelhança com um negócio em atividade é casual e não intencional.',
+  'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.':
+    'Os motores de IA são referidos pelos seus nomes públicos de produto por rigor descritivo. Não se reivindica nem se subentende qualquer afiliação, aprovação ou parceria.',
+  Security: 'Segurança',
+  'There is no authentication, no user account and no server-side session. The sign-in screen requests no password because none is checked — inviting a real credential into a demonstration would be a hazard, not a convenience.':
+    'Não há autenticação, conta de utilizador nem sessão do lado do servidor. O ecrã de entrada não pede palavra-passe porque nenhuma é verificada: convidar uma credencial verdadeira para dentro de uma demonstração seria um perigo, não uma comodidade.',
+  'No external network requests are made at runtime. Fonts are self-hosted, all visuals are generated in CSS or SVG, and the content security posture assumes no third-party origin is trusted.':
+    'Não são feitos pedidos de rede externos em tempo de execução. Os tipos de letra estão alojados localmente, todos os elementos visuais são gerados em CSS ou SVG, e a postura de segurança de conteúdo parte do princípio de que nenhuma origem de terceiros é de confiança.',
+  'Before this platform is operated commercially, these sections must be replaced with reviewed policies covering the real data flows, retention periods, sub-processors and jurisdictions involved.':
+    'Antes de esta plataforma ser explorada comercialmente, estas secções terão de ser substituídas por políticas revistas que cubram os fluxos de dados reais, os prazos de conservação, os subcontratantes e as jurisdições envolvidas.',
+  'Return home': 'Voltar ao início',
+
+  /* ==========================================================================
+     SIGN IN
+     ====================================================================== */
+  'Sign In': 'Entrar',
+  'Sign In | GeoRepute': 'Entrar | GeoRepute',
+  Home: 'Início',
+  'Enter the demonstration workspace': 'Entrar na área de trabalho de demonstração',
+  'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
+    'Este ambiente não tem autenticação. Todos os visitantes veem a mesma organização pré-carregada, a Northwind Supply, para que cada número continue verificável face à metodologia publicada.',
+  Workspace: 'Área de trabalho',
+  'northwindsupply.com · US Midwest': 'northwindsupply.com · Midwest dos EUA',
+  'Continue to Mission Control': 'Continuar para o centro de comando',
+  'No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.':
+    'Não é pedida palavra-passe porque nenhuma é verificada. Uma autenticação a sério encaixa por trás da mesma rota sem alterar o lugar deste ecrã no percurso.',
+
+  /* ==========================================================================
+     PUBLIC NARRATIVE INTELLIGENCE
+
+     Trade-publication mastheads (Industrial Distribution, Modern Supply
+     Chain, Fastener Technology, Plant Engineering) stay Latin. They are
+     invented proper nouns, like the competitor names.
+
+     Nothing here may be keyed on a bare lowercase enum value — 'emerging',
+     'growing', 'steady', 'declining' are discriminants in the seed graph and
+     translating them rewrites the data. The component maps them to
+     capitalised labels; translate those.
+     ====================================================================== */
+  'Public narrative intelligence': 'Inteligência de narrativa pública',
+  'Public Narrative Intelligence | GeoRepute': 'Inteligência de narrativa pública | GeoRepute',
+  'Public Narrative Intelligence': 'Inteligência de narrativa pública',
+  'What story is the market telling about us?':
+    'Que história está o mercado a contar sobre nós?',
+  'Not how often the business is mentioned. Which accounts of it are active, who owns each one, and which of them decide whether it gets chosen.':
+    'Não com que frequência o negócio é mencionado. Mas que relatos sobre ele estão ativos, quem detém cada um e quais deles decidem se é escolhido.',
+  'Election mode': 'Modo eleições',
+  'Political intelligence': 'Inteligência política',
+  Health: 'Estado',
+  'Narrative health': 'Estado da narrativa',
+  'Overall public sentiment': 'Sentimento público global',
+  'A weighted read of how much active conversation helps against how much hurts.':
+    'Uma leitura ponderada de quanta conversa ativa ajuda face a quanta prejudica.',
+  'Narrative momentum': 'Dinâmica narrativa',
+  'Narrative stability': 'Estabilidade narrativa',
+  'Narrative balance': 'Equilíbrio narrativo',
+  'Positive narrative strength': 'Força da narrativa positiva',
+  'Negative narrative strength': 'Força da narrativa negativa',
+  'Neutral narrative': 'Narrativa neutra',
+  'The balance between stories that help and stories that hurt, weighted by how much of the conversation each reaches.':
+    'O equilíbrio entre as histórias que ajudam e as que prejudicam, ponderado pela parte da conversa que cada uma alcança.',
+  '20% of active category conversation carries a story that favours this business — and both of those narratives are currently unclaimed by anyone.':
+    '20 % da conversa ativa da categoria transporta uma história que favorece este negócio — e nenhuma dessas duas narrativas está reclamada por quem quer que seja.',
+  '74% carries a story that works against it, most of it a competitor’s evaluation framing rather than criticism of the business itself.':
+    '74 % transporta uma história que joga contra ele, e na maior parte trata-se do enquadramento de avaliação de um concorrente e não de crítica ao próprio negócio.',
+  '6% is category-level conversation attached to no supplier. Neutral is not safe — it is unowned ground with no defender.':
+    '6 % é conversa ao nível da categoria não associada a nenhum fornecedor. Neutro não quer dizer seguro: é terreno sem dono e sem defensor.',
+  'Sentiment is not hostility. Nothing here is criticism of the business — the adverse weight comes almost entirely from stories written by competitors in which this business does not appear.':
+    'O sentimento não é hostilidade. Nada disto é crítica ao negócio: o peso adverso vem quase inteiramente de histórias escritas por concorrentes nas quais este negócio nem sequer aparece.',
+  '3 adverse narratives are gaining ground against 1 favourable one. Direction matters more than the current balance, because it is what the position will be in two quarters.':
+    '3 narrativas adversas ganham terreno face a 1 favorável. A direção importa mais do que o equilíbrio atual, porque é a posição que se terá daqui a dois trimestres.',
+  '4 of 8 active narratives are still forming or growing. The account of this category is not yet fixed, which is what makes intervention cheap now and expensive later.':
+    '4 das 8 narrativas ativas continuam a formar-se ou a crescer. O relato desta categoria ainda não está fixado, e é isso que torna a intervenção barata agora e cara mais tarde.',
+  Landscape: 'Panorama',
+  'Every active narrative in this category': 'Todas as narrativas ativas desta categoria',
+  'Sorted by reach. The owner column is the one that matters — a favourable story nobody owns is an asset waiting to be claimed.':
+    'Ordenadas por alcance. A coluna do detentor é a que importa: uma história favorável que ninguém detém é um ativo à espera de ser reclamado.',
+  'Who owns the story': 'Quem detém a história',
+  'Share of active conversation, weighted by reach. Unclaimed is not neutral ground — it is ground with no defender.':
+    'Quota da conversa ativa, ponderada pelo alcance. Por reclamar não é terreno neutro: é terreno sem defensor.',
+  Business: 'Negócio',
+  Competitors: 'Concorrentes',
+  Shared: 'Partilhado',
+  Unclaimed: 'Por reclamar',
+  'Business: 4%': 'Negócio: 4 %',
+  'Competitors: 56%': 'Concorrentes: 56 %',
+  'Shared: 20%': 'Partilhado: 20 %',
+  'Unclaimed: 20%': 'Por reclamar: 20 %',
+  'Category language owned': 'Vocabulário da categoria detido',
+  'The share of the vocabulary engines use to define this category that belongs to this business. Whoever holds this sets the criteria every comparison is scored against.':
+    'A parte do vocabulário que os motores usam para definir esta categoria que pertence a este negócio. Quem a detém fixa os critérios pelos quais cada comparação é pontuada.',
+  'The split above measures this specific narrative inventory. This figure measures the category’s language as a whole, and is the same one Mission Control publishes.':
+    'A divisão acima mede este inventário narrativo em concreto. Este número mede o vocabulário da categoria no seu todo, e é o mesmo que o centro de comando publica.',
+  'The business holds': 'O negócio detém',
+  'The business holds <b>{pct}%</b>, and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    'O negócio detém <b>{pct} %</b>, e cada ponto disso vem do erro da loja de ferragens e não de algo que ele tenha escolhido dizer. A titularidade conta as histórias associadas a um nome; não pergunta se ajudam.',
+  'Weighted by reach rather than counted, so a story reaching a third of the category is not equal to one reaching a twentieth.':
+    'Ponderado pelo alcance em vez de contado, de modo que uma história que chega a um terço da categoria não equivale a outra que chega a um vigésimo.',
+  Reach: 'Alcance',
+  'Owned by': 'Detida por',
+  Influence: 'Influência',
+  Competition: 'Concorrência',
+  Opportunity: 'Oportunidade',
+  Strength: 'Força',
+  Weakness: 'Fraqueza',
+  Risk: 'Risco',
+  Media: 'Comunicação social',
+  Questions: 'Perguntas',
+  'If ignored': 'Se for ignorado',
+  'Overlap with us': 'Sobreposição connosco',
+  Unsettled: 'Por assentar',
+  '— absent': '— ausente',
+  '{level} severity': 'Gravidade {level}',
+  '+ {n} more tracked': '+ mais {n} em acompanhamento',
+  '31 % share': '31 % de quota',
+  '18 % share': '18 % de quota',
+  '11 % share': '11 % de quota',
+  '7 % share': '7 % de quota',
+  '{pct}% share': '{pct} % de quota',
+  Growing: 'A crescer',
+  Steady: 'Estável',
+  Declining: 'Em recuo',
+  Contested: 'Disputada',
+  Neutral: 'Neutra',
+  Favourable: 'Favorável',
+  Adverse: 'Adversa',
+  'Favourable · emerging': 'Favorável · emergente',
+  'Favourable · steady': 'Favorável · estável',
+  'Adverse · emerging': 'Adversa · emergente',
+  'Adverse · growing': 'Adversa · a crescer',
+  'Adverse · steady': 'Adversa · estável',
+  'Adverse · declining': 'Adversa · em recuo',
+  'Neutral · steady': 'Neutra · estável',
+
+  /* --- Competitor narratives ------------------------------------------------------- */
+  'The story each competitor is telling': 'A história que cada concorrente conta',
+  'Every position has a weakness built into it. A narrative strong enough to dominate is usually narrow enough to outflank.':
+    'Toda a posição traz uma fraqueza incorporada. Uma narrativa forte o suficiente para dominar costuma ser estreita o suficiente para ser contornada.',
+  'The safe national choice with published comparisons.':
+    'A escolha nacional segura, com comparações publicadas.',
+  'The technical authority on specification.': 'A autoridade técnica em especificações.',
+  'The educator that reaches buyers first.':
+    'O divulgador que chega primeiro aos compradores.',
+  'The procurement-checklist incumbent.':
+    'O que já consta nas listas de verificação de compras.',
+  'Owns the evaluation criteria itself. Engines cite its comparison library when explaining how to choose a supplier at all.':
+    'Detém os próprios critérios de avaliação. Os motores citam a sua biblioteca de comparações quando explicam, pura e simplesmente, como escolher um fornecedor.',
+  'Its case rests on breadth and fill rate. It has no response prepared on response time or regional service depth.':
+    'O seu argumento assenta na amplitude de catálogo e na taxa de satisfação de encomendas. Não tem resposta preparada quanto ao tempo de resposta nem à profundidade do serviço regional.',
+  'Competes directly on supplier-evaluation questions, where it is named first in four of seven.':
+    'Concorre diretamente nas perguntas de avaliação de fornecedores, onde é nomeado em primeiro lugar em quatro de sete.',
+  'Its vocabulary can be adopted and extended rather than fought. Speaking its language while adding availability outflanks it.':
+    'O seu vocabulário pode ser adotado e alargado em vez de combatido. Falar a sua língua acrescentando a disponibilidade contorna-o.',
+  'Specification depth does not answer availability. It is largely absent from questions about delivery and continuity.':
+    'A profundidade de especificações não responde à disponibilidade. Está em larga medida ausente das perguntas sobre entrega e continuidade.',
+  'Owns solution-evaluation questions upstream of where this business competes.':
+    'Detém as perguntas de avaliação de soluções, numa fase anterior àquela em que este negócio concorre.',
+  'Its own framing concedes that speed is a separate axis. A published response-time standard splits the criterion it defined.':
+    'O seu próprio enquadramento admite que a rapidez é um eixo à parte. Uma norma publicada de tempo de resposta divide o critério que ele mesmo definiu.',
+  'Enters the decision at research, before evaluation criteria exist, and shapes them by arriving early.':
+    'Entra na decisão na fase de pesquisa, antes de existirem critérios de avaliação, e molda-os por chegar cedo.',
+  'Almost no presence earlier in the journey. Its position is administrative rather than argued.':
+    'Quase sem presença nas fases anteriores do percurso. A sua posição é administrativa e não argumentada.',
+  'Owns early-stage questions this business is also absent from, but does not convert them.':
+    'Detém perguntas de fase inicial de que este negócio também está ausente, mas não as converte.',
+  'Thin at the point of purchase. Rarely named when a buyer asks whom to actually choose.':
+    'Fraco no ponto de compra. Raramente nomeado quando um comprador pergunta quem escolher na prática.',
+  'Research-stage presence is uncontested at the point where education becomes a shortlist.':
+    'A sua presença na fase de pesquisa não é disputada por ninguém exatamente onde a divulgação se transforma em lista restrita.',
+  'Named on procurement documentation that engines cite at the moment of purchase.':
+    'Nomeado na documentação de compras que os motores citam no momento da compra.',
+  'Competes only at purchase decision, where this business also has no coverage.':
+    'Só concorre na decisão de compra, onde este negócio também não tem cobertura.',
+  'A checklist position is winnable through documentation rather than through reputation.':
+    'Uma posição em lista de verificação ganha-se com documentação e não com reputação.',
+
+  /* --- Media narratives ------------------------------------------------------------ */
+  'What publications are actually writing about':
+    'Sobre o que escrevem realmente as publicações',
+  'The business appears in none of four active category stories. Two of them — provenance and tariff continuity — have no supplier voice at all.':
+    'O negócio não aparece em nenhum dos quatro temas ativos da categoria. Dois deles — a proveniência e a continuidade face às tarifas — não têm qualquer voz de fornecedor.',
+  'The business appears in none of the four active category stories. Media narrative is currently being written entirely by others.':
+    'O negócio não aparece em nenhum dos quatro temas ativos da categoria. A narrativa mediática está a ser escrita neste momento inteiramente por outros.',
+  'MRO supplier consolidation across Midwest manufacturing':
+    'Consolidação de fornecedores de MRO na indústria do Midwest',
+  'Counterfeit fasteners in industrial supply chains':
+    'Fixadores contrafeitos nas cadeias de abastecimento industriais',
+  'Verification and provenance in fastener sourcing':
+    'Verificação e proveniência no aprovisionamento de fixadores',
+  'Fastener supply continuity after tariff changes':
+    'Continuidade do fornecimento de fixadores após as alterações tarifárias',
+  'Supply continuity under tariff volatility':
+    'Continuidade do abastecimento perante a volatilidade tarifária',
+  'Vendor-managed inventory adoption in mid-market plants':
+    'Adoção da gestão de stock pelo fornecedor em fábricas de mercado médio',
+  'Vendor-managed inventory for mid-market plants':
+    'Gestão de stock pelo fornecedor para fábricas de mercado médio',
+  'The most active category story. This business is not quoted in any of the eleven pieces published this quarter.':
+    'O tema mais ativo da categoria. Este negócio não é citado em nenhuma das onze peças publicadas neste trimestre.',
+  'A category-level trust story. Suppliers who comment become the trusted ones; those who stay silent are grouped with the problem.':
+    'Um tema de confiança ao nível da categoria. Os fornecedores que comentam passam a ser os fiáveis; os que se calam ficam agrupados com o problema.',
+  'An emerging story where regional inventory depth is the natural expert angle, and no regional distributor has been quoted yet.':
+    'Um tema emergente em que a profundidade do stock regional é o ângulo de perito natural, e no qual ainda não foi citado nenhum distribuidor regional.',
+  'A service already operated but never publicly associated with the business. One competitor is quoted in three of four pieces on it.':
+    'Um serviço já prestado mas nunca associado publicamente ao negócio. Um concorrente é citado em três das quatro peças sobre o assunto.',
+  'A competitor is quoted in three of four pieces. The topic maps directly onto a service this business already operates.':
+    'Um concorrente é citado em três de quatro peças. O tema corresponde diretamente a um serviço que este negócio já presta.',
+  'Regional inventory depth is the natural expert position on a story publications are actively looking for sources on.':
+    'A profundidade do stock regional é a posição de perito natural num tema para o qual as publicações procuram fontes ativamente.',
+  'An active media story with no supplier voice attached. Commenting converts a category-level trust concern into a reason to choose a specific supplier.':
+    'Um tema mediático ativo sem qualquer voz de fornecedor associada. Comentar transforma uma preocupação de confiança ao nível da categoria numa razão para escolher um fornecedor concreto.',
+  'No quote, contribution or citation in the four topics publications are currently covering.':
+    'Nem uma citação, nem um contributo, nem uma referência nos quatro temas que as publicações cobrem atualmente.',
+  'Silence is read as absence of expertise. The category continues to be explained by the suppliers willing to explain it.':
+    'O silêncio é lido como ausência de competência. A categoria continua a ser explicada pelos fornecedores dispostos a explicá-la.',
+
+  /* --- Question landscape ---------------------------------------------------------- */
+  'What the market actually wants to know': 'O que o mercado quer realmente saber',
+  'The real question corpus, partitioned by what a buyer is trying to decide when they ask it.':
+    'O corpo real de perguntas, dividido consoante o que um comprador está a tentar decidir ao formulá-las.',
+  'Most common questions': 'Perguntas mais frequentes',
+  'Public questions': 'Perguntas públicas',
+  'AI buying questions': 'Perguntas de compra à IA',
+  'Recommendation questions': 'Perguntas de recomendação',
+  'Comparison questions': 'Perguntas de comparação',
+  'Purchase questions': 'Perguntas de compra',
+  'Concerns and objections': 'Reservas e objeções',
+  'A buyer asking directly whom to choose. The highest-value question class in the category, and the one that assigns the order.':
+    'Um comprador que pergunta diretamente quem escolher. A classe de perguntas de maior valor da categoria, e aquela que atribui a encomenda.',
+  'A buyer weighing approaches rather than vendors. Whoever frames the comparison sets the criteria the vendor choice will use.':
+    'Um comprador que pondera abordagens em vez de fornecedores. Quem enquadra a comparação fixa os critérios que serão usados para escolher o fornecedor.',
+  'What buyers ask before they have a supplier in mind. Presence here shapes the criteria everything later is judged against.':
+    'O que os compradores perguntam antes de terem um fornecedor em mente. A presença aqui molda os critérios pelos quais tudo o resto será julgado.',
+  'A buyer who has already chosen. Presence here converts; it does not win anything that was not already won upstream.':
+    'Um comprador que já escolheu. A presença aqui converte; não ganha nada que não tenha já sido ganho antes.',
+  'The risks buyers raise before committing. Answering these publicly is how a supplier becomes the safe choice rather than the cheap one.':
+    'Os riscos que os compradores levantam antes de se comprometerem. Responder-lhes em público é o que torna um fornecedor a escolha segura em vez da escolha barata.',
+
+  /* --- Opportunities and risks ----------------------------------------------------- */
+  'Stories nobody owns': 'Histórias que ninguém detém',
+  'Ranked by influence against competition. The best of these are high influence and uncontested, which is the rarest combination in any category.':
+    'Ordenadas por influência face à concorrência. As melhores são de influência elevada e sem disputa, a combinação mais rara em qualquer categoria.',
+  'The single narrative that most favours this business, and nobody owns it. Same-day regional delivery is a genuine capability that no public source currently attaches to this name.':
+    'A narrativa que mais favorece este negócio, e ninguém a detém. A entrega regional no próprio dia é uma capacidade real que nenhuma fonte pública associa hoje a este nome.',
+  'No competitor has claimed it, engines have no vocabulary for it, and it is the capability this business actually leads on. The single highest-return narrative available.':
+    'Nenhum concorrente a reclamou, os motores não têm vocabulário para ela, e é a capacidade em que este negócio realmente lidera. A narrativa disponível de maior retorno.',
+  'Directly counters the consolidation narrative that currently favours national distributors, and reframes regional scale as risk management rather than as a limitation.':
+    'Contraria diretamente a narrativa de consolidação que hoje favorece os distribuidores nacionais e reformula a escala regional como gestão de risco e não como limitação.',
+  'Directly contradicts the consolidation narrative and favours a strong secondary supplier. Neither this business nor any competitor has claimed it.':
+    'Contradiz diretamente a narrativa de consolidação e favorece um segundo fornecedor forte. Não foi reclamada nem por este negócio nem por qualquer concorrente.',
+  'Consolidation reaches 14% of conversation and favours national distributors. The counter-narrative reaches 11% and is owned by nobody.':
+    'A consolidação atinge 14 % da conversa e favorece os distribuidores nacionais. A contranarrativa atinge 11 % e não é detida por ninguém.',
+  'Threats before they become the default': 'As ameaças antes de se tornarem a norma',
+  'An emerging narrative is contestable. A settled one has to be displaced. The difference in cost between the two is the reason this section exists.':
+    'Uma narrativa emergente pode ser contestada. Uma já assente tem de ser deslocada. A diferença de custo entre as duas é a razão de ser desta secção.',
+  '3 risks are rated high severity, of which the entity conflation and the emerging regional-limitation narrative are both still cheap to correct.':
+    '3 riscos estão classificados como de gravidade elevada; destes, a confusão de entidades e a narrativa emergente de limitação regional continuam baratos de corrigir.',
+  'The most dangerous emerging narrative on this list. It is not yet dominant and it is factually contestable, which means it is still cheap to answer.':
+    'A narrativa emergente mais perigosa desta lista. Ainda não é dominante e é factualmente contestável, o que significa que responder-lhe continua a ser barato.',
+  'Becomes the default objection to a regional supplier. Contestable now with published evidence; expensive to reverse once engines treat it as settled.':
+    'Torna-se a objeção por defeito a um fornecedor regional. Contestável agora com provas publicadas; cara de inverter assim que os motores a tratarem como assente.',
+  'A factual error, carried by one engine, that removes the business from every supplier-evaluation answer it appears in. Declining, but not yet corrected.':
+    'Um erro factual, sustentado por um único motor, que retira o negócio de todas as respostas de avaliação de fornecedores em que surge. Em recuo, mas ainda por corrigir.',
+  'A single wrong category record continues to exclude the business from the question class that assigns orders.':
+    'Um único registo de categoria errado continua a excluir o negócio da classe de perguntas que atribui as encomendas.',
+  'Every future comparison is scored on axes chosen to favour a competitor, whatever the campaign says.':
+    'Toda a comparação futura é pontuada em eixos escolhidos para favorecer um concorrente, diga o que disser a campanha.',
+  'Every impression delivered to a Gemini user reinforces an incorrect record. Campaign spend actively strengthens the wrong association.':
+    'Cada impressão entregue a um utilizador do Gemini reforça um registo incorreto. O investimento da campanha consolida ativamente a associação errada.',
+  'Emerging in two engines and sourced from a competitor comparison page. Still contestable; not yet treated as settled.':
+    'Emergente em dois motores e proveniente de uma página comparativa de um concorrente. Ainda contestável; ainda não tratada como assente.',
+  'Appearing in Gemini and Copilot answers on multi-site sourcing questions, sourced from a competitor comparison page.':
+    'Surge nas respostas do Gemini e do Copilot a perguntas de aprovisionamento multiunidade, proveniente de uma página comparativa de um concorrente.',
+  'ChatGPT categorises the business as retail rather than MRO distribution, removing it from supplier-evaluation answers.':
+    'O ChatGPT classifica o negócio como retalho em vez de distribuição de MRO, retirando-o das respostas de avaliação de fornecedores.',
+  'Fill rate and catalogue breadth are cited first by three of six engines when explaining how to choose a distributor.':
+    'A taxa de satisfação de encomendas e a amplitude do catálogo são o primeiro que três de seis motores citam ao explicar como escolher um distribuidor.',
+  'Favours whichever supplier is already largest. A regional specialist is read as the thing being consolidated away rather than the one consolidating.':
+    'Favorece o fornecedor que já é o maior. Um especialista regional é lido como aquilo que a consolidação absorve e não como quem consolida.',
+  'Its specification guidance became the category’s default vocabulary because it published first, not because it is more correct.':
+    'O seu guia de especificações tornou-se o vocabulário por defeito da categoria porque publicou primeiro, não porque esteja mais correto.',
+  'Published first by a competitor, so it became the vocabulary engines learned. It positions this business as a reseller by omission rather than by argument.':
+    'Foi publicado primeiro por um concorrente, pelo que se tornou o vocabulário que os motores aprenderam. Coloca este negócio na posição de revendedor por omissão e não por argumento.',
+  'Neutral on its face, but it removes price as a differentiator and pushes the decision onto evidence — which is the axis this business currently loses on.':
+    'Neutra à superfície, mas retira o preço como fator de diferenciação e empurra a decisão para as provas — que é o eixo em que este negócio perde neste momento.',
+  'Contain an emerging high-severity adverse narrative':
+    'Conter uma narrativa adversa emergente de gravidade elevada',
+  'Respond Immediately': 'Responder de imediato',
+
+  /* --- Misconceptions and engine reads --------------------------------------------- */
+  'What each engine currently says this business is':
+    'O que cada motor diz neste momento que este negócio é',
+  'Claims machines currently repeat that are wrong. Each one removes the business from answers it should appear in.':
+    'Afirmações que as máquinas repetem hoje e que estão erradas. Cada uma retira o negócio de respostas em que deveria constar.',
+  'Misconceptions repeated as fact': 'Ideias erradas repetidas como factos',
+  'Gemini resolves a same-named logistics firm; ChatGPT categorises the business as retail. Both remove it from supplier-evaluation answers entirely.':
+    'O Gemini resolve para uma empresa de logística homónima; o ChatGPT classifica o negócio como retalho. Ambos o retiram por completo das respostas de avaliação de fornecedores.',
+  'Gemini resolves the wrong entity on category questions and recognises the business at 24 of 100.':
+    'Nas perguntas de categoria, o Gemini resolve para a entidade errada e reconhece o negócio com 24 em 100.',
+  'Accurate. No divergence from the intended account.':
+    'Correto. Sem divergência face ao relato pretendido.',
+  '4 of 6 diverge': '4 em 6 divergem',
+  'Machines are repeating 1 factual error about this business that removes it from supplier answers entirely. Argument about positioning is wasted while the underlying record is wrong. Once corrected, 20% of category conversation is unclaimed and the strongest of it favours this business.':
+    'As máquinas repetem 1 erro factual sobre este negócio que o retira por completo das respostas sobre fornecedores. Discutir posicionamento é tempo perdido enquanto o registo de base estiver errado. Depois de corrigido, 20 % da conversa da categoria está por reclamar e a sua parte mais forte favorece este negócio.',
+  ', and every point of it is the hardware-retailer error rather than anything it chose to say. Ownership counts the stories attached to a name; it does not ask whether they help.':
+    ', e cada ponto disso vem do erro da loja de ferragens e não de algo que ele tenha escolhido dizer. A titularidade conta as histórias associadas a um nome; não pergunta se ajudam.',
+  'Fill rate and catalogue breadth are how you choose a distributor.':
+    'Um distribuidor escolhe-se pela taxa de satisfação de encomendas e pela amplitude do catálogo.',
+  'Consolidating MRO suppliers reduces cost and administrative load.':
+    'Consolidar fornecedores de MRO reduz o custo e a carga administrativa.',
+  'Midwest fastener pricing is broadly comparable across suppliers.':
+    'Os preços dos fixadores no Midwest são em geral comparáveis entre fornecedores.',
+  'Specification depth separates serious suppliers from resellers.':
+    'A profundidade de especificações separa os fornecedores sérios dos revendedores.',
+  'Evaluation criteria are increasingly stated in a competitor’s terms.':
+    'Os critérios de avaliação são cada vez mais formulados nos termos de um concorrente.',
+  'The business is conflated with a same-named logistics firm.':
+    'O negócio é confundido com uma empresa de logística homónima.',
+  'Single-source supplier dependency is an operational risk.':
+    'Depender de um único fornecedor é um risco operacional.',
+  'Regional suppliers cannot support multi-plant operations.':
+    'Os fornecedores regionais não conseguem servir operações com várias fábricas.',
+  'Regional distributors deliver faster than national ones.':
+    'Os distribuidores regionais entregam mais depressa do que os nacionais.',
+  'The business is absent from every active category story.':
+    'O negócio está ausente de todos os temas ativos da categoria.',
+  'The business is described as a hardware retailer.':
+    'O negócio é descrito como uma loja de ferragens a retalho.',
+  'Northwind Supply is a hardware retailer.':
+    'A Northwind Supply é uma loja de ferragens a retalho.',
+  'Observed in {sources}.': 'Observado em: {sources}.',
+  'How much of the conversation works for us':
+    'Que parte da conversa joga a nosso favor',
+  'Quoted in 3 pieces across 2 publications engines cite':
+    'Citado em 3 peças distribuídas por 2 publicações a que os motores recorrem',
+  'Multi-site capability referenced in 2 of 6 engines on multi-plant sourcing questions':
+    'Capacidade multiunidade referida em 2 de 6 motores nas perguntas de aprovisionamento com várias fábricas',
+  'Response time cited among the first three selection criteria by 3 of 6 engines':
+    'Tempo de resposta citado entre os três primeiros critérios de seleção por 3 de 6 motores',
+  'Secondary-supplier framing cited by 2 of 6 engines on consolidation questions':
+    'Enquadramento do segundo fornecedor citado por 2 de 6 motores nas perguntas de consolidação',
+  'The dominant evaluation framing, and it is a competitor’s. Buyers arrive already scoring suppliers on the two criteria where a national distributor wins by default.':
+    'O enquadramento de avaliação dominante, e é o de um concorrente. Os compradores chegam já a pontuar fornecedores pelos dois critérios em que um distribuidor nacional ganha por defeito.',
+  "4 of 6 engines carry a materially different account of this business. A buyer's understanding depends on which assistant they happen to open.":
+    '4 de 6 motores sustentam um relato substancialmente diferente deste negócio. O que um comprador entende depende do assistente que calha abrir.',
+
+  /* --- Source names. Capitalised to match the seed exactly. ------------------------- */
+  'Trade forums': 'Fóruns do setor',
+  'Buyer discussion': 'Discussões de compradores',
+  'Procurement publications': 'Publicações de compras',
+  'Specification guides': 'Guias de especificações',
+  'Risk guidance': 'Orientações sobre riscos',
+  'Aggregator pages': 'Páginas de agregadores',
+  'Trade publications': 'Publicações do setor',
+  /* Mastheads. Invented trade publications, and proper nouns like the
+     competitor names — they stay Latin in every locale. In a Latin-script
+     locale they are also byte-identical to English, so a diff-mode audit
+     will list them; that is the audit working, not a gap. */
+  'Industrial Distribution · Modern Supply Chain':
+    'Industrial Distribution · Modern Supply Chain',
+  'Fastener Technology · Industrial Distribution':
+    'Fastener Technology · Industrial Distribution',
+  'Fastener Technology · Plant Engineering': 'Fastener Technology · Plant Engineering',
+  'Modern Supply Chain · Plant Engineering': 'Modern Supply Chain · Plant Engineering',
+
+  /* --- Narrative action plan ------------------------------------------------------- */
+  'Narrative action plan': 'Plano de ação narrativo',
+  'Open narrative action plan': 'Abrir o plano de ação narrativo',
+  'Monitor narrative changes': 'Monitorizar as mudanças narrativas',
+  'Check readiness before campaigning': 'Verificar a preparação antes de fazer campanha',
+  'Each carries its objective, the evidence behind it, the movement expected, a confidence, an owner, a deadline, an effort estimate and how success is verified.':
+    'Cada um traz o seu objetivo, as provas que o sustentam, o movimento esperado, um nível de confiança, um responsável, um prazo, uma estimativa de esforço e a forma como o êxito é verificado.',
+  'Correct the record first, then claim the narrative nobody owns.':
+    'Corrija primeiro o registo e reclame depois a narrativa que ninguém detém.',
+  'Correct the entity conflation and the hardware-retailer categorisation.':
+    'Corrigir a confusão de entidades e a classificação como loja de ferragens a retalho.',
+  'Claim response time as a published supplier selection criterion.':
+    'Reclamar o tempo de resposta como critério publicado de seleção de fornecedores.',
+  'Answer the regional-limitation narrative with published multi-site evidence.':
+    'Responder à narrativa de limitação regional com provas publicadas de operação multiunidade.',
+  'Claim the secondary-supplier argument against the consolidation narrative.':
+    'Reclamar o argumento do segundo fornecedor face à narrativa de consolidação.',
+  'Enter the two active media stories with a named expert voice.':
+    'Entrar nos dois temas mediáticos ativos com uma voz de perito identificada.',
+  'Reframe regional scale from limitation to risk management':
+    'Reformular a escala regional: de limitação a gestão de risco',
+  'The narrative is unowned, high influence and uncontested. Same-day regional delivery is a real capability that appears in no category description.':
+    'A narrativa não tem dono, tem influência elevada e não é disputada. A entrega regional no próprio dia é uma capacidade real que não consta de nenhuma descrição da categoria.',
+  'Response time as a supplier selection criterion':
+    'O tempo de resposta como critério de seleção de fornecedores',
+  'The strategic case for a strong secondary supplier':
+    'O argumento estratégico a favor de um segundo fornecedor forte',
+  'Independent authority sources 3 → 8': 'Fontes de autoridade independentes 3 → 8',
+  'Average recognition 38 → 55 of 100': 'Reconhecimento médio 38 → 55 em 100',
+
+  /* ==========================================================================
+     CAMPAIGN READINESS INTELLIGENCE
+     ====================================================================== */
+  'Campaign readiness intelligence': 'Inteligência de preparação de campanha',
+  'Campaign Readiness Intelligence | GeoRepute':
+    'Inteligência de preparação de campanha | GeoRepute',
+  'Campaign Readiness Intelligence': 'Inteligência de preparação de campanha',
+  'Should we launch this campaign today?': 'Devemos lançar esta campanha hoje?',
+  'This assessment evaluates the business, not the campaign. Creative, targeting and budget can all be correct while the business remains structurally unable to convert the attention they buy.':
+    'Esta avaliação incide sobre o negócio e não sobre a campanha. A criatividade, a segmentação e o orçamento podem estar todos certos enquanto o negócio continua estruturalmente incapaz de converter a atenção que compram.',
+  Campaign: 'Campanha',
+  'Q4 Midwest demand generation': 'Geração de procura no Midwest — 4.º trimestre',
+  'Intended launch': 'Lançamento previsto',
+  Duration: 'Duração',
+  '6 months': '6 meses',
+  '7 months': '7 meses',
+  '{n} months': '{n} meses',
+  Channels: 'Canais',
+  'Paid search · Paid social · Trade media · Content syndication':
+    'Pesquisa paga · Redes sociais pagas · Imprensa do setor · Sindicação de conteúdos',
+  'Paid search': 'Pesquisa paga',
+  'Paid social': 'Redes sociais pagas',
+  'Trade media': 'Imprensa do setor',
+  'Content syndication': 'Sindicação de conteúdos',
+  'Estimated budget at risk': 'Orçamento estimado em risco',
+  'Executive decision': 'Decisão da administração',
+  'Executive recommendation': 'Recomendação à administração',
+  'Delay Campaign': 'Adiar a campanha',
+  'Delay the campaign. Fix authority first.':
+    'Adie a campanha. Trate primeiro da autoridade.',
+  'Delay Campaign — readiness reads 32 of 100, held there by authority readiness at 11, which carries 20% of the index.':
+    'Adiar a campanha — a preparação marca 32 em 100, mantida aí pela preparação em autoridade, que está em 11 e pesa 20 % do índice.',
+  'Campaign readiness score': 'Pontuação de preparação da campanha',
+  'Primary constraint': 'Restrição principal',
+  'Authority readiness is the binding constraint at 11 of 100 and carries 20% of the index.':
+    'A preparação em autoridade é a restrição determinante, com 11 em 100, e pesa 20 % do índice.',
+  'Strategic window': 'Janela estratégica',
+  'Advantage holds until {date}.': 'A vantagem mantém-se até {date}.',
+  'Decision journey gaps': 'Lacunas no percurso de decisão',
+  'Presence at every stage.': 'Presença em todas as fases.',
+  '2 stages uncovered': '2 fases sem cobertura',
+  'Assessment confidence': 'Confiança da avaliação',
+  'Six of seven dimensions rest on directly observed data.':
+    'Seis das sete dimensões assentam em dados observados diretamente.',
+  Assessment: 'Avaliação',
+  'Seven readiness dimensions, weighted into one index':
+    'Sete dimensões de preparação, ponderadas num único índice',
+  'Every score is computed from observed data rather than assigned. The weights are published and sum to one.':
+    'Cada pontuação é calculada a partir de dados observados em vez de atribuída. As ponderações estão publicadas e somam um.',
+  'Ready at 70 and above. At risk from 45 . Blocking below 45 .':
+    'Pronto a partir de 70. Em risco a partir de 45. Bloqueante abaixo de 45.',
+  'Ready at {ready} and above. At risk from {risk}. Blocking below {risk}.':
+    'Pronto a partir de {ready}. Em risco a partir de {risk}. Bloqueante abaixo de {risk}.',
+  Ready: 'Pronto',
+  'At risk': 'Em risco',
+  Blocking: 'Bloqueante',
+  '{score} of 100 — {status}. Ready at {gate}.':
+    '{score} em 100 — {status}. Pronto a partir de {gate}.',
+  '{n}% of the readiness index': '{n} % do índice de preparação',
+  '{score} of 100 · {weight}% of the index': '{score} em 100 · {weight} % do índice',
+  or: 'ou',
+  None: 'Nenhuma',
+  '2 of 5': '2 em 5',
+  '2 of 6': '2 em 6',
+  'Launching remains available and is sometimes correct — a product deadline or a competitive move can outweigh a readiness score. This assessment states the cost of that choice so it is made deliberately rather than by default.':
+    'Lançar continua a ser possível e por vezes acertado: um prazo de produto ou um movimento da concorrência podem pesar mais do que uma pontuação de preparação. Esta avaliação expõe o custo dessa escolha para que seja feita deliberadamente e não por inércia.',
+  'Each carries a priority, an owner, a deadline, an effort estimate, its dependencies, the movement it should produce and how confident the model is in that.':
+    'Cada uma traz uma prioridade, um responsável, um prazo, uma estimativa de esforço, as suas dependências, o movimento que deve produzir e a confiança do modelo nisso.',
+  '{n} tracked questions': '{n} perguntas em acompanhamento',
+
+  /* --- The seven readiness dimensions ---------------------------------------------- */
+  'AI readiness': 'Preparação para a IA',
+  'Do AI engines understand and recommend this business?':
+    'Os motores de IA compreendem este negócio e recomendam-no?',
+  'Across six engines, the business is understood at 38 of 100. Advertising cannot correct a record it does not touch.':
+    'Ao longo de seis motores, o negócio é compreendido com 38 em 100. A publicidade não consegue corrigir um registo em que não toca.',
+  'Authority readiness': 'Preparação em autoridade',
+  'Is there enough evidence for AI to recommend this business?':
+    'Existem provas suficientes para que a IA recomende este negócio?',
+  '3 independent sources can verify this business. The category median is 14.':
+    '3 fontes independentes conseguem verificar este negócio. A mediana da categoria é 14.',
+  'Google readiness': 'Preparação no Google',
+  'Can buyers find this business through traditional search?':
+    'Conseguem os compradores encontrar este negócio pela pesquisa tradicional?',
+  '9 of 20 commercial questions place in the top ten. The rest are reachable only by paying for the click.':
+    '9 de 20 perguntas comerciais ficam entre os dez primeiros resultados. Às restantes só se chega pagando o clique.',
+  'Narrative readiness': 'Preparação narrativa',
+  'Does the market understand what this business stands for?':
+    'O mercado percebe o que este negócio representa?',
+  'The business owns 12% of the language engines use to define this category. The campaign would be fought on terms a competitor wrote.':
+    'O negócio detém 12 % do vocabulário que os motores usam para definir esta categoria. A campanha seria travada em termos escritos por um concorrente.',
+  Reputation: 'Reputação',
+  'Is this business safe to recommend to a buyer?':
+    'É seguro recomendar este negócio a um comprador?',
+  'Reputation reads 44 of 100 while market fit reads 72. The offer is right; the proof around it is not.':
+    'A reputação marca 44 em 100 enquanto a adequação ao mercado marca 72. A oferta está certa; as provas em torno dela não estão.',
+  'Conversion readiness': 'Preparação para a conversão',
+  'Can the destination convert the intent this campaign buys?':
+    'Consegue o destino converter a intenção que esta campanha compra?',
+  'A single quote form serves every stage. There is no path for a buyer who is still comparing suppliers and not yet requesting a price.':
+    'Um único formulário de orçamento serve todas as fases. Não existe percurso para um comprador que ainda está a comparar fornecedores e ainda não pede preço.',
+  'Competitor readiness': 'Preparação dos concorrentes',
+  'Kestrel Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
+    'A Kestrel Industrial mantém em simultâneo posições nos três primeiros lugares orgânicos e presença na IA nas quatro perguntas comerciais de maior volume.',
+
+  /* --- Dimension detail signals ---------------------------------------------------- */
+  'Category understanding': 'Compreensão da categoria',
+  '2 of 6 correct': '2 em 6 corretos',
+  'An engine that files the business in the wrong category cannot surface it when a buyer describes this need, regardless of spend.':
+    'Um motor que arquiva o negócio na categoria errada não o consegue mostrar quando um comprador descreve esta necessidade, por muito que se gaste.',
+  'AI recommendation coverage': 'Cobertura de recomendações da IA',
+  '6 recommendation events across 144 answer slots. A buyer who asks an assistant for suppliers almost never hears this name.':
+    '6 ocorrências como recomendação em 144 lugares de resposta. Um comprador que pede fornecedores a um assistente quase nunca ouve este nome.',
+  'Engine consistency': 'Coerência entre motores',
+  '37-point spread': 'diferença de 37 pontos',
+  'Recognition ranges from 21 to 58. The campaign would reach buyers whose assistants disagree about what this business is.':
+    'O reconhecimento varia entre 21 e 58. A campanha chegaria a compradores cujos assistentes divergem sobre o que este negócio é.',
+  'Silent engines': 'Motores silenciosos',
+  '2 engines recommend the business in none of the tracked decisions. Spend that drives buyers toward those engines returns nothing.':
+    '2 motores não recomendam o negócio em nenhuma das decisões acompanhadas. O investimento que leva compradores até esses motores não devolve nada.',
+  'Independent authority sources': 'Fontes de autoridade independentes',
+  '3 sources': '3 fontes',
+  'Independent corroboration is what lets a system name a supplier first rather than hedge across several.':
+    'É a corroboração independente que permite a um sistema nomear um fornecedor em primeiro lugar em vez de se resguardar entre vários.',
+  'Third-party validation': 'Validação por terceiros',
+  '1 of 5 present': '1 em 5 presente',
+  'Certifications, named customers, verified outcomes and specification references are absent from the public record.':
+    'Certificações, clientes identificados, resultados verificados e referências de especificações estão ausentes do registo público.',
+  'Industry references': 'Referências do setor',
+  '0 of 3 publications': '0 em 3 publicações',
+  'The three trade publications engines cite most for this category carry no coverage of the business at all.':
+    'As três publicações do setor que os motores mais citam nesta categoria não dedicam qualquer cobertura ao negócio.',
+  'Competitor authority': 'Autoridade do concorrente',
+  '7× behind': '7× atrás',
+  'Kestrel Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
+    'A Kestrel Industrial pode ser corroborada 7 vezes mais facilmente. Essa vantagem acumula-se enquanto não houver um programa que a contrarie.',
+  'Commercial keyword coverage': 'Cobertura de pesquisas comerciais',
+  '9 of 20': '9 em 20',
+  'Weighted by search volume rather than by keyword count, so a strong position on a question nobody asks does not flatter the figure.':
+    'Ponderado pelo volume de pesquisa e não pelo número de termos, para que uma posição forte numa pergunta que ninguém faz não embeleze o número.',
+  'Technical SEO status': 'Estado do SEO técnico',
+  'No blocking faults': 'Sem falhas bloqueantes',
+  'Crawlability, indexation and canonicalisation carry no faults that would prevent a campaign landing page from ranking. This is not the constraint.':
+    'O rastreio, a indexação e a canonicalização não apresentam falhas que impeçam uma página de destino de campanha de se posicionar. A restrição não está aqui.',
+  'Organic opportunity': 'Oportunidade orgânica',
+  '6 questions': '6 perguntas',
+  '6 questions already rank but never reach an AI answer. These are the cheapest positions available and need publishing, not budget.':
+    '6 perguntas já se posicionam mas nunca chegam a uma resposta de IA. São as posições mais baratas disponíveis e precisam de publicação, não de orçamento.',
+  'Category clarity': 'Clareza da categoria',
+  Fragmented: 'Fragmentada',
+  'The same business is described differently across its own site, two directories and six engines. A campaign amplifies whichever version a buyer meets.':
+    'O mesmo negócio é descrito de forma diferente no seu próprio sítio, em dois diretórios e em seis motores. Uma campanha amplifica a versão com que o comprador se cruza.',
+  'Public narrative': 'Narrativa pública',
+  'Machines describe this category using a competitor’s specification framing, so buyers arrive already evaluating against someone else’s criteria.':
+    'As máquinas descrevem esta categoria com o enquadramento de especificações de um concorrente, pelo que os compradores chegam já a avaliar segundo os critérios de outro.',
+  'Messaging alignment': 'Alinhamento das mensagens',
+  Misaligned: 'Desalinhadas',
+  'The campaign leads with same-day regional delivery. No public source currently associates that capability with this business.':
+    'A campanha abre com a entrega regional no próprio dia. Nenhuma fonte pública associa hoje essa capacidade a este negócio.',
+  'Trust signals': 'Sinais de confiança',
+  'Every claim traces back to the company’s own website. Systems treat self-description as a claim rather than as evidence.':
+    'Todas as afirmações remetem para o próprio sítio da empresa. Os sistemas tratam a autodescrição como afirmação e não como prova.',
+  Reviews: 'Avaliações',
+  'Adequate volume': 'Volume adequado',
+  'Review volume is sufficient and sentiment is positive, but sits on platforms engines do not treat as authoritative for this category.':
+    'O volume de avaliações é suficiente e o sentimento é positivo, mas estão em plataformas que os motores não tratam como fidedignas para esta categoria.',
+  'Brand credibility': 'Credibilidade da marca',
+  'Expert citations': 'Citações de peritos',
+  'No named expert, engineer or specifier is publicly associated with the business. Machines have nobody to attribute expertise to.':
+    'Nenhum perito, engenheiro ou prescritor identificado está publicamente associado ao negócio. As máquinas não têm a quem atribuir competência.',
+  'External validation': 'Validação externa',
+  'Customer outcomes, third-party validation, certifications and named references are absent. Only review-platform badges appear.':
+    'Os resultados de clientes, a validação por terceiros, as certificações e as referências identificadas estão ausentes. Apenas surgem selos de plataformas de avaliações.',
+  'Landing page quality': 'Qualidade das páginas de destino',
+  '3 of 7 pages': '3 em 7 páginas',
+  'Three of the seven pages this campaign would drive to state what the business sells above the fold. The rest open with company history.':
+    'Três das sete páginas para onde esta campanha encaminharia indicam o que o negócio vende logo no primeiro ecrã. As restantes abrem com a história da empresa.',
+  'Decision support': 'Apoio à decisão',
+  'No comparison table, specification guidance or selection criteria exists on any destination page. A buyer arriving mid-evaluation has nothing to evaluate with.':
+    'Em nenhuma página de destino existe tabela comparativa, guia de especificações ou critérios de seleção. Um comprador que chega a meio da avaliação não tem com que avaliar.',
+  'Trust elements': 'Elementos de confiança',
+  'Quote form only': 'Apenas formulário de orçamento',
+  'Commercial messaging': 'Mensagens comerciais',
+  'Same-day regional delivery — the strongest differentiator — appears on one page and in no page title.':
+    'A entrega regional no próprio dia — o fator de diferenciação mais forte — surge numa única página e em nenhum título de página.',
+  'Market leaders': 'Líderes de mercado',
+  '4 ahead': '4 à frente',
+  '4 of 4 tracked competitors currently receive more recommendations than this business.':
+    'Os 4 concorrentes acompanhados recebem hoje mais recomendações do que este negócio.',
+  'Competitor visibility': 'Visibilidade dos concorrentes',
+  '4 in top three': '4 nos três primeiros',
+  'Authority gap': 'Défice de autoridade',
+  '21 sources': '21 fontes',
+  'Kestrel Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
+    'A Kestrel Industrial tem 21 fontes contra 3. Um défice de provas não se fecha com publicidade, mas com publicação e validação.',
+  'Competitive gap': 'Défice competitivo',
+  '12% owned': '12 % detidos',
+  'Existing search strength': 'Força atual na pesquisa',
+  'Existing strength sits on questions asked after a vendor has been chosen, not on the questions that choose one.':
+    'A força atual assenta em perguntas feitas depois de escolhido o fornecedor, não nas perguntas que escolhem um.',
+  'The leader is strongest at exactly the stage this campaign is intended to influence, which is where displacement is most expensive.':
+    'O líder é mais forte precisamente na fase que esta campanha pretende influenciar, que é onde deslocá-lo custa mais caro.',
+  '4 engines hold a wrong or missing record — one conflates the business with a same-named logistics firm.':
+    '4 motores têm um registo errado ou inexistente — um confunde o negócio com uma empresa de logística homónima.',
+  'The category description differs between the website and two trade directories, which reads to a machine as an unreliable record.':
+    'A descrição da categoria difere entre o sítio e dois diretórios do setor, o que uma máquina lê como um registo pouco fiável.',
+  'No single consistent story exists in the public record for a campaign to reinforce, so each impression starts the explanation over.':
+    'Não existe no registo público um relato único e coerente que uma campanha possa reforçar, pelo que cada impressão recomeça a explicação.',
+  'Kestrel Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
+    'A Kestrel Industrial recebe 31 % das recomendações contra 4,2 %. Lançar agora é anunciar dentro de uma decisão que eles controlam.',
+
+  /* --- Journey coverage ------------------------------------------------------------ */
+  Coverage: 'Cobertura',
+  'Where the campaign would reach buyers, and where it would not':
+    'Onde a campanha chegaria aos compradores e onde não chegaria',
+  'Stage 1': 'Fase 1',
+  'Stage 2': 'Fase 2',
+  'Stage 3': 'Fase 3',
+  'Stage 4': 'Fase 4',
+  'Stage 5': 'Fase 5',
+  'Invisible to every conventional measurement tool.':
+    'Invisível para qualquer ferramenta de medição convencional.',
+  'Visible to {tools}.': 'Visível para {tools}.',
+  'No presence at {stages}.': 'Sem presença em: {stages}.',
+  'A campaign creates demand across the whole journey. It converts only at the stages where the business is actually present.':
+    'Uma campanha cria procura ao longo de todo o percurso. Só converte nas fases em que o negócio está efetivamente presente.',
+
+  /* --- Commercial risk ------------------------------------------------------------- */
+  'Commercial risk': 'Risco comercial',
+  'Commercial risk level': 'Nível de risco comercial',
+  'What launching today would cost': 'O que custaria lançar hoje',
+  'Missed decision exposure': 'Exposição a decisões perdidas',
+  '19 of 24': '19 em 24',
+  'Commercial decisions that already complete without this business appearing. A campaign increases how many of these happen, not how many are won.':
+    'Decisões comerciais que já se concluem sem que este negócio apareça. Uma campanha aumenta quantas delas acontecem, não quantas são ganhas.',
+  'Revenue dependent on this stage': 'Receita dependente desta fase',
+  '38% of demand': '38 % da procura',
+  'The share of revenue arriving through supplier evaluation — the stage where presence is currently lowest and the campaign has least leverage.':
+    'A parte da receita que chega pela avaliação de fornecedores — a fase em que a presença é hoje mais baixa e em que a campanha tem menos alavancagem.',
+  'Expected ROI risk': 'Risco no retorno previsto',
+  'Return depends on buyers completing a journey the business is absent from at these stages. Spend reaches them; the recommendation does not.':
+    'O retorno depende de os compradores completarem um percurso de que o negócio está ausente nestas fases. O investimento chega até eles; a recomendação não.',
+  "Risk here is not the chance the campaign underperforms. It is the mechanism by which spend converts into a competitor's advantage.":
+    'O risco aqui não é a probabilidade de a campanha render abaixo do previsto. É o mecanismo pelo qual o investimento se converte em vantagem para um concorrente.',
+  'Every click is paid for twice: once to acquire it, and again to reacquire the buyer who arrived, found nothing to evaluate with, and left to compare elsewhere.':
+    'Cada clique é pago duas vezes: uma para o obter e outra para voltar a captar o comprador que chegou, não encontrou com que avaliar e foi comparar noutro lado.',
+  'Paid acquisition buys attention that trust has to convert. Without it the campaign raises awareness for the category and the best-verified supplier in it wins.':
+    'A aquisição paga compra uma atenção que a confiança tem de converter. Sem ela, a campanha dá a conhecer a categoria e ganha o fornecedor mais bem verificado dessa categoria.',
+  'The campaign generates consideration the business cannot survive. Buyers who check will find nothing independent, and the check happens after the click is paid for.':
+    'A campanha gera uma fase de ponderação que o negócio não sobrevive. Os compradores que verificarem não encontrarão nada independente, e a verificação acontece depois de o clique estar pago.',
+  'Campaign attention drives buyers to verify the business through an assistant that cannot describe it correctly. The spend creates the demand and a competitor collects it.':
+    'A atenção da campanha leva os compradores a verificar o negócio através de um assistente incapaz de o descrever corretamente. O investimento cria a procura e é um concorrente que a recolhe.',
+  'Campaign messaging contradicts what the market already believes. Spend is consumed correcting the record instead of creating demand.':
+    'As mensagens da campanha contradizem aquilo em que o mercado já acredita. O investimento consome-se a corrigir o registo em vez de criar procura.',
+  'Paid search carries the entire commercial keyword set alone, at a blended cost already above break-even, for as long as the campaign runs.':
+    'A pesquisa paga sustenta sozinha todo o conjunto de termos comerciais, a um custo combinado que já ultrapassa o ponto de equilíbrio, durante todo o tempo em que a campanha decorrer.',
+  'The campaign raises category demand that the best-evidenced supplier absorbs. Competitor share can rise as a direct result of this spend.':
+    'A campanha aumenta a procura da categoria, que é absorvida pelo fornecedor com melhores provas. A quota do concorrente pode subir como consequência direta deste investimento.',
+  'Both surfaces': 'Ambas as superfícies',
+  Partial: 'Parcial',
+
+  /* --- Interventions and the decision ---------------------------------------------- */
+  Intervention: 'Intervenção',
+  'Required before launch': 'Necessário antes do lançamento',
+  'Blocked until priority {n} lands.': 'Bloqueado até a prioridade {n} ficar concluída.',
+  'If you launch anyway': 'Se lançar mesmo assim',
+  'Launch campaign': 'Lançar a campanha',
+  'Fix readiness first': 'Corrigir primeiro a preparação',
+  'Open Executive Action Plan': 'Abrir o plano de ação para a administração',
+  'Review the full position': 'Rever a posição completa',
+  'Website and conversion readiness': 'Preparação do sítio e da conversão',
+  'What position are we launching into?': 'Para que posição estamos a lançar?',
+  'AI narrative': 'Narrativa na IA',
+  'Narrative consistency': 'Coerência narrativa',
+  "Engines describe the category using a competitor's framing. Northwind owns 12% of that language.":
+    'Os motores descrevem a categoria com o enquadramento de um concorrente. A Northwind detém 12 % desse vocabulário.',
+
+  /* ==========================================================================
+     DECISION RECONSTRUCTION
+
+     Display labels only. 'brand', 'competitor', 'supporting', 'downstream',
+     'high', 'medium', 'low' are enum discriminants in the seed graph — an
+     entry keyed on any of them rewrites the data itself and breaks every
+     lookup. The component maps them to the capitalised labels below.
+     ====================================================================== */
+  'Decision Reconstruction': 'Reconstrução da decisão',
+  'Decision Reconstruction | GeoRepute': 'Reconstrução da decisão | GeoRepute',
+  'Signature experience': 'Experiência distintiva',
+  'Enter a domain and choose a commercial question. The system reconstructs what each surface understood, who received the decision and why.':
+    'Introduza um domínio e escolha uma questão comercial. O sistema reconstrói o que cada superfície compreendeu, quem ficou com a decisão e porquê.',
+  'Seeded environment — this demonstration always reconstructs {org}.':
+    'Ambiente pré-carregado — esta demonstração reconstrói sempre a {org}.',
+  Domain: 'Domínio',
+  'Understood as: {what}': 'Compreendido como: {what}',
+  Brand: 'Marca',
+  Competitor: 'Concorrente',
+  Low: 'Baixo',
+  Supporting: 'De apoio',
+  Downstream: 'A jusante',
+  '{n} tracked decision questions. Supplier-evaluation questions appear first — that is where the vendor is chosen.':
+    '{n} perguntas de decisão em acompanhamento. As perguntas de avaliação de fornecedores aparecem primeiro — é aí que o fornecedor é escolhido.',
+  'An MRO and fastener distributor serving manufacturers':
+    'Um distribuidor de MRO e fixadores ao serviço dos fabricantes',
+  'Midwest industrial fastener and MRO distributor':
+    'Distribuidor de fixadores industriais e de MRO do Midwest',
+  'A regional industrial supplier in the US Midwest':
+    'Um fornecedor industrial regional no Midwest dos EUA',
+  'Industrial supply company, category association incomplete':
+    'Empresa de fornecimento industrial, associação de categoria incompleta',
+  'Unclear — associates the name with unrelated businesses':
+    'Pouco claro — associa o nome a negócios sem relação',
+  'Not recognized as a distinct business entity':
+    'Não é reconhecida como uma entidade empresarial distinta',
+  '{n} independent sources support this brand. Northwind has 3.':
+    '{n} fontes independentes sustentam esta marca. A Northwind tem 3.',
+  '{name} controls': 'A {name} controla',
+  'across the whole set. Competitive density is shifting at {velocity}.':
+    'em todo o conjunto. A densidade competitiva está a mudar a um ritmo {velocity}.',
+  'This is the exposure attributable to this single question. The full-book figure across all {n} tracked decisions is materially larger and appears in Mission Control.':
+    'Esta é a exposição imputável apenas a esta pergunta. O número global das {n} decisões em acompanhamento é substancialmente maior e consta do centro de comando.',
+  'stage {n} of {total}': 'fase {n} de {total}',
+  Present: 'Presente',
+  'Observable by {tools} — but only after the decision has already narrowed.':
+    'Observável por {tools} — mas apenas depois de a decisão já se ter estreitado.',
+  'No conventional tool observes this stage. There is no visit, click, lead or CRM event to record — which is why the weakness is invisible until revenue moves.':
+    'Nenhuma ferramenta convencional observa esta fase. Não há visita, clique, contacto ou evento de CRM para registar — e é por isso que a fraqueza permanece invisível até a receita se mexer.',
+  'Reconstruction confidence across all ten surfaces.':
+    'Confiança da reconstrução nas dez superfícies.',
+  'What each AI engine understood about the business':
+    'O que cada motor de IA compreendeu sobre o negócio',
+  'Whether the brand was recognised, mentioned, cited, recommended or ignored':
+    'Se a marca foi reconhecida, mencionada, citada, recomendada ou ignorada',
+  'Which competitor was selected instead': 'Que concorrente foi escolhido em vez dela',
+  'Which sources, trust signals and narratives influenced the answer':
+    'Que fontes, sinais de confiança e narrativas influenciaram a resposta',
+  'What Google demand, organic position and paid click cost indicate':
+    'O que indicam a procura no Google, a posição orgânica e o custo do clique pago',
+  'Where the question sits in the customer decision journey':
+    'Onde se situa a pergunta no percurso de decisão do cliente',
+  'What timing, market maturity and competitive density indicate':
+    'O que indicam o momento, a maturidade do mercado e a densidade competitiva',
+  'What the directional commercial exposure may be':
+    'Qual poderá ser a exposição comercial em ordem de grandeza',
+  'Which connected signals explain the outcome':
+    'Que sinais interligados explicam o resultado',
+  'What action is prescribed and how improvement will be measured':
+    'Que ação é prescrita e como será medida a melhoria',
+  'Decision intelligence graph': 'Grafo de inteligência de decisão',
+  'Mentioned only': 'Apenas mencionada',
+  'Wrong entity': 'Entidade errada',
+  'Named Northwind in its answer, citing company website.':
+    'Nomeou a Northwind na sua resposta, citando o sítio da empresa.',
+  'Recognises the business but did not consider it relevant to this question.':
+    'Reconhece o negócio mas não o considerou relevante para esta pergunta.',
+  'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
+    'Descreve a Northwind como uma loja de ferragens a retalho em vez de um distribuidor de MRO, o que a retira das respostas de avaliação de fornecedores.',
+  'Knows the company exists but not which product categories it carries, so it is omitted from specification-led questions.':
+    'Sabe que a empresa existe mas não que categorias de produto comercializa, pelo que é omitida das perguntas conduzidas por especificações.',
+  'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.':
+    'Confunde a Northwind Supply com uma empresa de logística homónima, pelo que a associação de categoria falha por completo.',
+  '1 of 6 engines named Northwind, and none placed it first.':
+    '1 em 6 motores nomeou a Northwind, e nenhum a colocou em primeiro lugar.',
+  '4 of 6 resolve the wrong entity': '4 em 6 resolvem para a entidade errada',
+  'engines recommended the business on this question':
+    'motores recomendaram o negócio nesta pergunta',
+  'of all recommendations across the tracked decision set':
+    'do total de recomendações no conjunto de decisões em acompanhamento',
+  'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
+    'A Kestrel Industrial é citada por 21 fontes independentes; a Northwind, por 3.',
+  '3 sources vs 14 median': '3 fontes contra uma mediana de 14',
+  'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
+    'As próprias páginas da Northwind são a única fonte a que os motores conseguem chegar para as suas afirmações — e a autocitação pesa pouco.',
+  'A published comparison library gives engines material they can quote directly.':
+    'Uma biblioteca de comparações publicada dá aos motores material que podem citar diretamente.',
+  'Category evaluation criteria': 'Critérios de avaliação da categoria',
+  'Supplier-comparison content': 'Conteúdos de comparação de fornecedores',
+  'Company website': 'Sítio da empresa',
+  Source: 'Fonte',
+  Favours: 'Favorece',
+  'Why it matters': 'Porque importa',
+  'Monthly volume': 'Volume mensal',
+  'Paid CPC': 'CPC pago',
+  'AI presence': 'Presença na IA',
+  'Closest tracked keyword': 'Termo acompanhado mais próximo',
+  'Above break-even CPC': 'Acima do CPC de equilíbrio',
+  'Coverage at this stage': 'Cobertura nesta fase',
+  'Share of query volume': 'Quota do volume de pesquisas',
+  'Share of revenue decided': 'Quota da receita que se decide',
+  'of questions at this stage against': 'das perguntas desta fase contra',
+  'Market position': 'Posição no mercado',
+  'Window remaining': 'Janela restante',
+  'Buy this as an intelligence product': 'Comprar isto como produto de inteligência',
+
+  /* --- The 24 tracked buyer questions. Translated on the same reasoning as the
+         home page's search queries — a buyer in this market asks in Portuguese. */
+  'Which fastener supplier should we choose for a new plant?':
+    'Que fornecedor de fixadores devemos escolher para uma fábrica nova?',
+  'Who are the top industrial supply companies for fasteners?':
+    'Quais são as melhores empresas de fornecimento industrial para fixadores?',
+  'Best MRO distributors for manufacturing plants':
+    'Melhores distribuidores de MRO para fábricas',
+  'Top rated industrial supply vendors near Chicago':
+    'Fornecedores de material industrial mais bem avaliados perto de Chicago',
+  'Which MRO supplier has the best fill rate?':
+    'Que fornecedor de MRO tem a melhor taxa de satisfação de encomendas?',
+  'Recommended industrial distributors for hydraulic components':
+    'Distribuidores industriais recomendados para componentes hidráulicos',
+  'Compare industrial distributor service levels':
+    'Comparar níveis de serviço de distribuidores industriais',
+  'Is a national or regional MRO distributor better?':
+    'É melhor um distribuidor de MRO nacional ou regional?',
+  'Should we consolidate MRO suppliers or keep multiple vendors?':
+    'Devemos consolidar os fornecedores de MRO ou manter vários?',
+  'What should an MRO supply agreement include?':
+    'O que deve incluir um contrato de fornecimento de MRO?',
+  'Risks of single-source supplier dependency for MRO':
+    'Riscos de depender de um único fornecedor de MRO',
+  'Vendor-managed inventory vs consignment for MRO supplies':
+    'Gestão de stock pelo fornecedor ou consignação para consumíveis de MRO',
+  'What is vendor-managed inventory for MRO supplies?':
+    'O que é a gestão de stock pelo fornecedor para consumíveis de MRO?',
+  'How do I reduce MRO inventory carrying costs?':
+    'Como reduzo os custos de manutenção de stock de MRO?',
+  'Best practices for industrial fastener sourcing':
+    'Boas práticas de aprovisionamento de fixadores industriais',
+  'What is the difference between grade 5 and grade 8 fasteners?':
+    'Qual é a diferença entre fixadores de classe 5 e de classe 8?',
+  'What causes premature bolt failure in high-vibration equipment?':
+    'O que provoca a rotura prematura de parafusos em equipamentos de vibração elevada?',
+  'How often should hydraulic fittings be replaced?':
+    'Com que frequência devem ser substituídas as uniões hidráulicas?',
+  'How to avoid counterfeit fasteners in the supply chain':
+    'Como evitar fixadores contrafeitos na cadeia de abastecimento',
+  'What are the most common industrial supply delivery failures?':
+    'Quais são as falhas de entrega mais comuns no fornecimento industrial?',
+  'Industrial fastener supplier with same-day shipping':
+    'Fornecedor de fixadores industriais com expedição no próprio dia',
+  'Get a quote for bulk grade 8 fasteners':
+    'Pedir orçamento para fixadores de classe 8 a granel',
+  'Set up an MRO supply account': 'Abrir uma conta de fornecimento de MRO',
+
+  /* ==========================================================================
+     EXECUTIVE MISSION CONTROL
+     ====================================================================== */
+  'Executive Mission Control': 'Centro de comando executivo',
+  'Executive Mission Control | GeoRepute': 'Centro de comando executivo | GeoRepute',
+  'Not more data. A decision position.': 'Não mais dados. Uma posição de decisão.',
+  'Ten measures, each with evidence behind it': 'Dez medidas, cada uma com provas por trás',
+  'Every figure is computed from observed data. Select any tile to open the full readout, its evidence and its prescribed action.':
+    'Cada número é calculado a partir de dados observados. Selecione qualquer cartão para abrir a leitura completa, as suas provas e a ação prescrita.',
+  Position: 'Posição',
+  Explanation: 'Explicação',
+  Execution: 'Execução',
+  'AI Recognition Position': 'Posição de reconhecimento pela IA',
+  'Average entity understanding across six engines. Three misidentify the category.':
+    'Compreensão média da entidade em seis motores. Três identificam mal a categoria.',
+  'Google vs AI Gap': 'Défice entre o Google e a IA',
+  'Keywords absent from AI answers and outside the Google top ten. The decision happens on neither surface.':
+    'Termos ausentes das respostas de IA e fora dos dez primeiros do Google. A decisão não acontece em nenhuma das superfícies.',
+  'Decision Presence': 'Presença na decisão',
+  'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
+    'Cobertura da avaliação de fornecedores. 19 em 24 decisões concluem-se sem a marca.',
+  'Competitive Capture': 'Captura competitiva',
+  'Kestrel Industrial receives the recommendation. Northwind receives 4.2%.':
+    'A Kestrel Industrial fica com a recomendação. A Northwind recebe 4,2 %.',
+  'Narrative Ownership': 'Titularidade da narrativa',
+  'Share of the language engines use to define the category. The criteria cited first are a competitor’s.':
+    'Quota do vocabulário que os motores usam para definir a categoria. Os critérios citados em primeiro lugar são de um concorrente.',
+  'Trust Readiness': 'Preparação em confiança',
+  'The recommendation goes to the supplier engines can support with evidence.':
+    'A recomendação vai para o fornecedor que os motores conseguem sustentar com provas.',
+  'Paid Dependency': 'Dependência do pago',
+  'Blended CPC runs above break-even. Paid is renting the positions authority would hold.':
+    'O CPC combinado ultrapassa o ponto de equilíbrio. O pago está a alugar as posições que a autoridade ocuparia.',
+  'Weighted across six GEON vectors. Authority at 28 is the binding constraint.':
+    'Ponderado por seis vetores GEON. A autoridade, em 28, é a restrição determinante.',
+  'ChatGPT supplier recommendation presence':
+    'Presença nas recomendações de fornecedores do ChatGPT',
+  'The most-used engine puts Northwind forward in one of twenty-four decision questions.':
+    'O motor mais utilizado propõe a Northwind numa de vinte e quatro perguntas de decisão.',
+  '3 independent sources against a category median of 14.':
+    '3 fontes independentes contra uma mediana de categoria de 14.',
+  'Authority is the binding constraint, so it is where intervention begins.':
+    'A autoridade é a restrição determinante, pelo que é por aí que a intervenção começa.',
+  'Paid search is bought to cover the questions authority no longer wins.':
+    'A pesquisa paga é comprada para cobrir as perguntas que a autoridade já não ganha.',
+  'Emerging market at 63/100 readiness. Query maturity accelerating.':
+    'Mercado emergente com uma preparação de 63/100. A maturidade das pesquisas está a acelerar.',
+  'The window remains open but is narrowing. Displacement cost rises once engines settle on a stable answer set.':
+    'A janela continua aberta mas está a estreitar-se. O custo de deslocação sobe assim que os motores assentam num conjunto estável de respostas.',
+  'Decision deadline': 'Prazo de decisão',
+  'Timing window': 'Janela temporal',
+  months: 'meses',
+  'Causal signal chain': 'Cadeia causal de sinais',
+  'The measures above are not independent. This is the chain that connects them, ending in the intervention it implies.':
+    'As medidas acima não são independentes. Esta é a cadeia que as liga e que termina na intervenção que implica.',
+  'One decision. Many signals. One explanation.':
+    'Uma decisão. Muitos sinais. Uma explicação.',
+  'Open evidence': 'Abrir as provas',
+  'Open Action Center': 'Abrir o centro de ação',
+  'Reconstruct the decision': 'Reconstruir a decisão',
+  'Explore intelligence engines': 'Explorar os motores de inteligência',
+
+  /* --- Executive intelligence feed ------------------------------------------------- */
+  'Executive intelligence feed': 'Fluxo de inteligência para a administração',
+  '{n} events': '{n} eventos',
+  'Competitor surge': 'Avanço de um concorrente',
+  'Kestrel Industrial gained the first recommendation on two more supplier questions':
+    'A Kestrel Industrial ficou com a primeira recomendação em mais duas perguntas sobre fornecedores',
+  'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
+    'A Kestrel lidera agora quatro das sete respostas de avaliação de fornecedores, contra duas anteriormente. Ambas as novas vitórias citam uma publicação do setor acrescentada em junho.',
+  'Citation lost': 'Citação perdida',
+  'Perplexity stopped citing the Northwind capability page':
+    'O Perplexity deixou de citar a página de capacidades da Northwind',
+  'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.':
+    'A página foi citada em três perguntas em junho e em nenhuma em julho. O Perplexity resolve agora essas mesmas perguntas para fontes concorrentes.',
+  '3 → 0 citations': '3 → 0 citações',
+  '25 searches/mo': '25 pesquisas/mês',
+  '+1 question': '+1 pergunta',
+  '+2 questions': '+2 perguntas',
+  '+8% QoQ': '+8 % trimestre a trimestre',
+  '+8% CPC': '+8 % de CPC',
+  'per month': 'por mês',
+  '$3,200 – $6,200 per month': '3 200 $ – 6 200 $ por mês',
+  'per quarter': 'por trimestre',
+  'per year': 'por ano',
+  'Narrative risk': 'Risco narrativo',
+  'Engines adopted a competitor’s evaluation criteria':
+    'Os motores adotaram os critérios de avaliação de um concorrente',
+  'Fill rate and catalogue breadth are now cited first when engines explain how to choose a distributor. Regional response time is not referenced.':
+    'A taxa de satisfação de encomendas e a amplitude do catálogo são agora o primeiro a ser citado quando os motores explicam como escolher um distribuidor. O tempo de resposta regional não é referido.',
+  'Trust signal decayed': 'Sinal de confiança degradado',
+  'Category description diverged across two trade directories':
+    'A descrição da categoria divergiu em dois diretórios do setor',
+  'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
+    'Dois diretórios descrevem agora a Northwind de forma diferente do seu próprio sítio. É essa incoerência que está por trás da confusão de entidade no ChatGPT e no Copilot.',
+  'Search cost spike': 'Subida do custo de pesquisa',
+  'Blended CPC moved further above break-even':
+    'O CPC combinado afastou-se ainda mais acima do ponto de equilíbrio',
+  '“industrial supply company” rose to $11.00 with no organic position in the top 100. Paid is covering a question authority does not reach.':
+    '«empresa de fornecimento industrial» subiu para 11,00 $ sem qualquer posição orgânica entre os 100 primeiros resultados. O pago está a cobrir uma pergunta a que a autoridade não chega.',
+  'New decision question': 'Nova pergunta de decisão',
+  'A new supplier-evaluation question entered the tracked set':
+    'Uma nova pergunta de avaliação de fornecedores entrou no conjunto em acompanhamento',
+  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.':
+    '«Que fornecedor de MRO tem a melhor taxa de satisfação de encomendas?» apareceu com volume mensurável. A Northwind está ausente de todos os motores que lhe respondem.',
+  'Recommendation gained': 'Recomendação ganha',
+  'Claude began recommending Northwind for regional distributor questions':
+    'O Claude começou a recomendar a Northwind em perguntas sobre distribuidores regionais',
+  'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.':
+    'Primeira recomendação em «Fornecedores de material industrial mais bem avaliados perto de Chicago». A especificidade regional é o fator de diferenciação que a resposta cita.',
+  'Regional opportunity': 'Oportunidade regional',
+  'Midwest regional questions show weaker competitive density':
+    'As perguntas regionais do Midwest mostram uma densidade competitiva mais fraca',
+  'Questions naming a Midwest location carry lower competitor control than national equivalents — the cheapest available entry point.':
+    'As perguntas que nomeiam um local do Midwest estão menos controladas pela concorrência do que as equivalentes nacionais — o ponto de entrada mais barato disponível.',
+  'Competitive density rose 8% quarter over quarter':
+    'A densidade competitiva subiu 8 % de um trimestre para o outro',
+
+  /* ==========================================================================
+     STRATEGIC ACTION CENTER
+     ====================================================================== */
+  'Strategic Action Center': 'Centro de ação estratégica',
+  'Prioritised interventions with owner, deadline, expected movement and how impact is verified after execution.':
+    'Intervenções priorizadas com responsável, prazo, movimento esperado e a forma como o impacto é verificado após a execução.',
+  '{n}-day': '{n} dias',
+  'Each intervention names an owner, a deadline, the signal it should move and how that movement will be verified.':
+    'Cada intervenção indica um responsável, um prazo, o sinal que deve mover e como esse movimento será verificado.',
+  Interventions: 'Intervenções',
+  Measured: 'Medido',
+  'Verified after execution': 'Verificado após a execução',
+  View: 'Ver',
+  'Priority queue': 'Fila de prioridades',
+  '30/60/90 roadmap': 'Roteiro 30/60/90',
+  'day horizon': 'dias de horizonte',
+  'Ranked by urgency, then by effort — cheapest decisive move first':
+    'Ordenado por urgência e depois por esforço — primeiro o movimento decisivo mais barato',
+  'Priority {n}': 'Prioridade {n}',
+  'Not yet measured — verified after execution.':
+    'Ainda não medido — verificado após a execução.',
+  'View evidence': 'Ver as provas',
+  'How impact is verified': 'Como se verifica o impacto',
+  'Completion is not impact. Each action is verified by re-observing the signal it targets, across the same engines and questions, after execution. Until that re-observation happens, measured change stays empty rather than assumed.':
+    'Concluir não é ter impacto. Cada ação é verificada voltando a observar o sinal a que se dirige, nos mesmos motores e nas mesmas perguntas, depois de executada. Enquanto essa nova observação não acontecer, a variação medida fica vazia em vez de ser presumida.',
+  'Back to Mission Control': 'Voltar ao centro de comando',
+  'Read the methodology': 'Ler a metodologia',
+
+  /* Page descriptions. These render into <meta name="description"> rather than
+     into the page, so the render audit cannot see them — it reads visible
+     prose and a short list of perceivable attributes. Four of them sat in
+     English through every clean audit this site has passed. */
+  'Decision Health, revenue exposure, competitive capture, narrative control and strategic timing in one decision position.':
+    'Saúde da decisão, exposição da receita, captura competitiva, controlo da narrativa e momento estratégico numa única posição de decisão.',
+  'Should we launch this campaign today? A pre-campaign assessment of the business rather than the campaign — AI, authority, trust, narrative, competitive position and destination readiness, weighted into one decision.':
+    'Devemos lançar esta campanha hoje? Uma avaliação, anterior à campanha, do negócio e não da campanha: IA, autoridade, confiança, narrativa, posição competitiva e preparação do destino, ponderadas numa única decisão.',
+  'What story is the market telling about us, and how is it influencing decisions? Active narratives, who owns each one, where they are heading, and what should change.':
+    'Que história está o mercado a contar sobre nós e como está a influenciar decisões? As narrativas ativas, quem detém cada uma, para onde caminham e o que deve mudar.',
+  'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
+    'Introduza um domínio e selecione uma questão comercial. Reconstrua o que cada motor de IA compreendeu, quem ficou com a decisão, porquê e o que tem de mudar.',
 }
