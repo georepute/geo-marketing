@@ -12,7 +12,6 @@ import { Rich } from '@/lib/i18n/content/rich'
 
 export async function generateMetadata(): Promise<Metadata> {
   const copy = await getDictionary()
-  const t = await getT()
   return { title: copy.nav.marketplace, description: copy.home.marketplaceSub }
 }
 

@@ -13,7 +13,6 @@ import { getT } from '@/lib/i18n/content/translator'
 
 export async function generateMetadata(): Promise<Metadata> {
   const copy = await getDictionary()
-  const t = await getT()
   return { title: copy.nav.engines, description: copy.home.enginesSub }
 }
 
