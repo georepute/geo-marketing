@@ -2274,4 +2274,517 @@ export const content: ContentOverlay = {
     'Какую историю рынок рассказывает о нас и как она влияет на решения? Активные нарративы, кто владеет каждым из них, куда они движутся и что должно измениться.',
   'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
     'Введите домен и выберите коммерческий вопрос. Реконструируйте, что понял каждый движок ИИ, кому досталось решение, почему и что должно измениться.',
+
+  /* ==========================================================================
+     MARKETPLACE AND ENGINE DETAIL PAGES
+
+     Nineteen routes that were never audited until the route list was
+     enumerated properly. Composites the audit prints — "Entry · Snapshot",
+     "12 modules", "Next: …" — are NOT keys; the component joins two
+     translated halves.
+     ====================================================================== */
+
+  /* --- Product page chrome --------------------------------------------------------- */
+  Breadcrumb: 'Хлебные крошки',
+  'Intelligence Marketplace': 'Магазин интеллекта',
+  'Intelligence Engines': 'Движки интеллекта',
+  'Product detail': 'О продукте',
+  'Everything needed to decide, without a sales call':
+    'Всё, что нужно для решения, без звонка менеджеру',
+  'What you receive': 'Что вы получаете',
+  'A real readout from this product, on seeded data':
+    'Настоящая сводка этого продукта на заложенных данных',
+  'Every intelligence product returns the same twelve-section anatomy: executive truth, business meaning, evidence, connected signals, competitor context, commercial exposure, timing, trend, prescription, expected movement, owner and measurement.':
+    'Каждый интеллект-продукт возвращает одну и ту же структуру из двенадцати разделов: управленческая правда, деловой смысл, доказательства, связанные сигналы, контекст конкурентов, коммерческие потери, тайминг, динамика, предписание, ожидаемое движение, ответственный и измерение.',
+  'One-time purchase. Placeholder pricing.': 'Разовая покупка. Цены условные.',
+  'Buy this intelligence product': 'Купить этот интеллект-продукт',
+  'Buy {name}': 'Купить «{name}»',
+  'Compare with a subscription': 'Сравнить с подпиской',
+  'See the full ecosystem': 'Посмотреть всю экосистему',
+  'by {date}': 'к {date}',
+
+  /* --- The eleven product fields --------------------------------------------------- */
+  'Business question': 'Бизнес-вопрос',
+  'Decision consequence': 'Последствие для решения',
+  'What it detects': 'Что выявляет',
+  'Required inputs': 'Необходимые данные',
+  Scope: 'Охват',
+  'Intelligence depth': 'Глубина интеллекта',
+  Delivery: 'Поставка',
+  'Time to delivery': 'Срок поставки',
+  'Commercial terms': 'Коммерческие условия',
+  'Upgrade path': 'Путь расширения',
+  Depth: 'Глубина',
+  Date: 'Дата',
+  Finding: 'Вывод',
+  Engine: 'Движок',
+  Observed: 'Наблюдение',
+  Live: 'Работает',
+  You: 'Вы',
+
+  /* Tier display labels. The component maps the lowercase discriminants
+     (entry / advanced / premium) onto these before translating — see the
+     TIER_LABEL note in marketplace/[slug]/page.tsx. */
+  Entry: 'Базовый',
+  'Advanced tier': 'Продвинутый',
+  Premium: 'Премиум',
+  /* Depth values. Already capitalised in the seed, so no collision. */
+  Snapshot: 'Срез',
+  Advanced: 'Углублённый',
+  Strategic: 'Стратегический',
+  Executive: 'Управленческий',
+
+  /* --- Category page --------------------------------------------------------------- */
+  'All intelligence categories': 'Все категории интеллекта',
+  'Other intelligence categories': 'Другие категории интеллекта',
+  'Every module answers one question.': 'Каждый модуль отвечает на один вопрос.',
+  'Each returns the evidence behind its answer, what that answer means commercially, and what should change as a result.':
+    'Каждый возвращает доказательства, стоящие за его ответом, коммерческий смысл этого ответа и то, что в результате должно измениться.',
+  'Buy this intelligence': 'Купить этот интеллект',
+  'Take one question, or take the whole category.':
+    'Возьмите один вопрос — или всю категорию.',
+  'Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.':
+    'Каждая покупка сообщает, что именно она исследует, что ей нужно от вас, насколько уверенной она может быть и сколько стоит. Чтобы узнать это, звонок менеджеру не нужен.',
+  'One engine produces this category.': 'Эту категорию производит один движок.',
+  '{n} engines produce this category.': 'Эту категорию производят движков: {n}.',
+  'Engines are the machinery, not the offer. Nothing above required you to know one existed.':
+    'Движки — это механика, а не предложение. Ничто выше не требовало от вас знать, что они существуют.',
+  '{n} modules': 'модулей: {n}',
+  '<b>{n}</b> intelligence modules in this category.':
+    '<b>{n}</b> интеллект-модулей в этой категории.',
+  '<b>{n}</b> intelligence modules in this category · <b>{live}</b> running live in this environment.':
+    '<b>{n}</b> интеллект-модулей в этой категории · <b>{live}</b> работают в этой среде вживую.',
+  Built: 'Построен',
+  'In platform': 'В платформе',
+  'In the platform': 'В платформе',
+
+  /* --- Engine detail page ---------------------------------------------------------- */
+  'Intelligence readout': 'Интеллект-сводка',
+  'What this engine concluded': 'К чему пришёл этот движок',
+  'Signal, evidence, consequence, action': 'Сигнал, доказательство, следствие, действие',
+  'Screens this engine provides': 'Экраны, которые даёт этот движок',
+  'Next: {name}': 'Далее: {name}',
+
+  /* --- Delivery, scope and inputs -------------------------------------------------- */
+  'After scan completion — typically under 20 minutes':
+    'По завершении сканирования — обычно менее 20 минут',
+  'After scan completion — typically under 30 minutes':
+    'По завершении сканирования — обычно менее 30 минут',
+  'After scan completion — typically under 60 minutes':
+    'По завершении сканирования — обычно менее 60 минут',
+  'Expert-reviewed — within 3 business days':
+    'С проверкой экспертом — в течение 3 рабочих дней',
+  'Optional: Search Console': 'По желанию: Search Console',
+  'Optional: Search Console and Analytics':
+    'По желанию: Search Console и Google Analytics',
+  'Up to 4 competitors': 'До 4 конкурентов',
+  'Google + 6 engines': 'Google + 6 движков',
+  '6 AI engines · entity and category association · 1 market':
+    '6 движков ИИ · привязка сущности и категории · 1 рынок',
+  '6 AI engines · 20 commercial questions · 4 competitors · 1 market':
+    '6 движков ИИ · 20 коммерческих вопросов · 4 конкурента · 1 рынок',
+  '6 AI engines · 24 decision questions · 4 competitors':
+    '6 движков ИИ · 24 вопроса решения · 4 конкурента',
+  '6 AI engines · 24 decision questions · 5 decision stages':
+    '6 движков ИИ · 24 вопроса решения · 5 этапов решения',
+  '6 AI engines · 24 questions · 20 keywords · 4 competitors · full GEON assessment':
+    '6 движков ИИ · 24 вопроса · 20 запросов · 4 конкурента · полная оценка GEON',
+  '6 AI engines · 24 questions · 4 competitors · citation analysis':
+    '6 движков ИИ · 24 вопроса · 4 конкурента · анализ цитирований',
+  '6 AI engines · 24 questions · 5 stages · 4 competitors':
+    '6 движков ИИ · 24 вопроса · 5 этапов · 4 конкурента',
+  'Public trust and reputation sources · 1 market':
+    'Публичные источники доверия и репутации · 1 рынок',
+  'Continuous monitoring, additional markets, or the full platform with history and alerts.':
+    'Непрерывный мониторинг, дополнительные рынки или полная платформа с историей и оповещениями.',
+  'Continuous monitoring, quarterly executive regeneration, or enterprise implementation.':
+    'Непрерывный мониторинг, ежеквартальное обновление управленческой сводки или корпоративное внедрение.',
+  'Continuous prompt monitoring and visibility trends.':
+    'Непрерывный мониторинг запросов и динамика видимости.',
+  'Continuous competitor monitoring and momentum tracking.':
+    'Непрерывный мониторинг конкурентов и отслеживание импульса.',
+  'Continuous monitoring with stage-level alerting.':
+    'Непрерывный мониторинг с оповещениями на уровне этапа.',
+  'Competitive War Room with continuous monitoring.':
+    'Конкурентный штаб с непрерывным мониторингом.',
+  'Recognition history and decay monitoring.':
+    'История распознавания и мониторинг угасания.',
+  'Reputation momentum and trust decay monitoring.':
+    'Импульс репутации и мониторинг угасания доверия.',
+  'Interactive workspace': 'Интерактивное рабочее пространство',
+  'Downloadable intelligence brief': 'Интеллект-справка для скачивания',
+  'Expert interpretation': 'Экспертная интерпретация',
+  'Evidence pack': 'Пакет доказательств',
+  'Action plan': 'План действий',
+  ' of 20': ' из 20',
+  ' of 24': ' из 24',
+
+  /* --- Product names. Descriptive rather than branded, so translated. -------------- */
+  'AI Recognition Scan': 'Скан распознавания в ИИ',
+  'AI Recognition Scan | GeoRepute': 'Скан распознавания в ИИ | GeoRepute',
+  'AI Search Presence Scan': 'Скан присутствия в поиске ИИ',
+  'AI Search Presence Scan | GeoRepute': 'Скан присутствия в поиске ИИ | GeoRepute',
+  'Google vs AI Gap Scan': 'Скан разрыва между Google и ИИ',
+  'Google vs AI Gap Scan | GeoRepute': 'Скан разрыва между Google и ИИ | GeoRepute',
+  'Competitor Recommendation Scan': 'Скан рекомендаций конкурентов',
+  'Competitor Recommendation Scan | GeoRepute':
+    'Скан рекомендаций конкурентов | GeoRepute',
+  'Trust Signals Scan': 'Скан сигналов доверия',
+  'Trust Signals Scan | GeoRepute': 'Скан сигналов доверия | GeoRepute',
+  'Decision Journey Diagnostic': 'Диагностика пути решения',
+  'Decision Journey Diagnostic | GeoRepute': 'Диагностика пути решения | GeoRepute',
+  'Competitive Position Assessment': 'Оценка конкурентной позиции',
+  'Competitive Position Assessment | GeoRepute':
+    'Оценка конкурентной позиции | GeoRepute',
+  'Executive Intelligence Brief': 'Интеллект-справка для руководства',
+  'Executive Intelligence Brief | GeoRepute':
+    'Интеллект-справка для руководства | GeoRepute',
+  'Decision Reconstruction — a completed reconstruction':
+    'Реконструкция решения — завершённая реконструкция',
+  'Mission Control → the composite Decision Health position panel':
+    'Центр управления → сводная панель позиции «Состояние решения»',
+  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
+    'Один коммерческий вопрос, реконструированный от того, что понял каждый движок, до того, что должно измениться. Обезличенные демонстрационные данные.',
+  'One decision position rather than ten measures. Anonymised demonstration data.':
+    'Одна позиция для решения вместо десяти показателей. Обезличенные демонстрационные данные.',
+
+  /* --- Module business questions ---------------------------------------------------
+     The category page leads with the question, not the module name. */
+  'Does AI understand what the business actually does?':
+    'Понимает ли ИИ, чем бизнес занимается на самом деле?',
+  'Do AI engines understand who the business is and what it offers?':
+    'Понимают ли движки ИИ, что это за бизнес и что он предлагает?',
+  'Which AI systems know the business exists, and which do not?':
+    'Какие системы ИИ знают о существовании бизнеса, а какие нет?',
+  'Is AI confusing the business with someone else?':
+    'Путает ли ИИ бизнес с кем-то другим?',
+  'Is AI describing a version of the business that no longer exists?':
+    'Описывает ли ИИ версию бизнеса, которой больше не существует?',
+  'Is the business becoming less recognised over time?':
+    'Становится ли бизнес со временем менее узнаваемым?',
+  'Is the business visible when customers ask for recommendations?':
+    'Виден ли бизнес, когда клиенты просят рекомендаций?',
+  'When a buyer describes a need, is the business in the set AI considers?':
+    'Когда покупатель описывает потребность, попадает ли бизнес в набор, который рассматривает ИИ?',
+  'Across the questions buyers actually ask, how often does the business appear at all?':
+    'По вопросам, которые покупатели действительно задают, как часто бизнес вообще появляется?',
+  'Of all the recommendations made in this category, what share names the business?':
+    'Из всех рекомендаций в этой категории какая доля называет бизнес?',
+  'On those same questions, does AI put the business forward at all?':
+    'По тем же вопросам — выдвигает ли ИИ бизнес вообще?',
+  'Do the two discovery surfaces tell the same story about us?':
+    'Рассказывают ли две поверхности обнаружения одну и ту же историю о нас?',
+  'Is the business aligned across traditional search and AI discovery?':
+    'Согласован ли бизнес между традиционным поиском и обнаружением через ИИ?',
+  'Which commercial questions are invisible on both surfaces at once?':
+    'Какие коммерческие вопросы невидимы сразу на обеих поверхностях?',
+  'Where does the business rank on the questions that carry commercial intent?':
+    'Как бизнес ранжируется по вопросам с коммерческим намерением?',
+  'Where does existing authority already rank but fail to reach AI?':
+    'Где имеющаяся авторитетность уже ранжируется, но не доходит до ИИ?',
+  'What kind of gap is this, and does it deserve investment?':
+    'Что это за разрыв и заслуживает ли он вложений?',
+  'What is the business actually paying per commercial click?':
+    'Сколько бизнес на самом деле платит за коммерческий клик?',
+  'Above what price does a click stop making money?':
+    'Выше какой цены клик перестаёт приносить деньги?',
+  'How much of current demand would disappear if paid search stopped tomorrow?':
+    'Какая часть текущего спроса исчезнет, если платный поиск остановить завтра?',
+  'Which paid positions could be replaced by owned authority?':
+    'Какие платные позиции можно заменить собственной авторитетностью?',
+  'Is the cost of the same position rising, and how fast?':
+    'Растёт ли стоимость той же позиции и насколько быстро?',
+  'Who is being recommended instead of the business, and how often?':
+    'Кого рекомендуют вместо бизнеса и как часто?',
+  'Who is recommended instead, where and why?':
+    'Кого рекомендуют вместо, где и почему?',
+  'Why do competitors capture the decision?': 'Почему решение достаётся конкурентам?',
+  'What specifically makes a competitor recommendable?':
+    'Что именно делает конкурента достойным рекомендации?',
+  'How much more evidence supports them than supports us?':
+    'Насколько больше доказательств поддерживает их, чем нас?',
+  'Which specific questions does each competitor own?':
+    'Какими конкретными вопросами владеет каждый конкурент?',
+  'At which stage does each competitor take control?':
+    'На каком этапе каждый конкурент берёт контроль?',
+  'Where is the leading competitor actually weak?':
+    'В чём ведущий конкурент на самом деле слаб?',
+  'How easily could a competitor take the narrative from us?':
+    'Насколько легко конкурент может отобрать у нас нарратив?',
+  'Do the sources that mention the business carry any weight?':
+    'Имеют ли вес источники, упоминающие бизнес?',
+  'How much of what the business claims can anyone else confirm?':
+    'Какую часть заявлений бизнеса может подтвердить кто-то ещё?',
+  'When AI cites a source to justify an answer, is any of it yours?':
+    'Когда ИИ ссылается на источник, обосновывая ответ, есть ли среди них ваши?',
+  'Which sources are shaping what AI believes about the business?':
+    'Какие источники формируют представление ИИ о бизнесе?',
+  'Which trust signals strengthen or weaken recommendation readiness?':
+    'Какие сигналы доверия усиливают или ослабляют готовность к рекомендации?',
+  'Is the evidence supporting the business ageing?':
+    'Устаревают ли доказательства, поддерживающие бизнес?',
+  'Where does the business disappear during the buyer decision process?':
+    'Где бизнес исчезает в процессе принятия решения покупателем?',
+  'At which point in the buying journey does presence collapse?':
+    'В какой точке пути покупки присутствие обрушивается?',
+  'Which specific buying questions complete without the business ever being named?':
+    'Какие конкретные закупочные вопросы завершаются так, что бизнес ни разу не назван?',
+  'How many buying decisions are actually in play?':
+    'Сколько закупочных решений реально на кону?',
+  'What is one of those decisions worth to the business?':
+    'Сколько одно такое решение стоит для бизнеса?',
+  'What is the gap worth, and how confident can we be?':
+    'Сколько стоит разрыв и насколько мы можем быть в этом уверены?',
+  'What has to be true for this estimate to hold?':
+    'Что должно быть верно, чтобы эта оценка держалась?',
+  'Which of those blind spots are also high value?':
+    'Какие из этих слепых зон при этом ещё и ценны?',
+  'Which of our genuine advantages does the market never mention?':
+    'Какие из наших настоящих преимуществ рынок никогда не упоминает?',
+  'How much of the language used to describe this category belongs to the business?':
+    'Какая часть языка, которым описывают эту категорию, принадлежит бизнесу?',
+  'Whose framing do machines use when they explain the category?':
+    'Чьей рамкой пользуются машины, объясняя категорию?',
+  'Which criteria do machines cite first when explaining a choice?':
+    'Какие критерии машины называют первыми, объясняя выбор?',
+  'Does the market think the business is expensive?':
+    'Считает ли рынок бизнес дорогим?',
+  'Is this market forming, forming fast, or already settled?':
+    'Этот рынок формируется, формируется быстро или уже устоялся?',
+  'Do buyers know enough yet to be worth persuading?':
+    'Знают ли покупатели уже достаточно, чтобы их стоило убеждать?',
+  'Which markets are ready to be entered now?':
+    'На какие рынки можно выходить уже сейчас?',
+  'How quickly is the position moving, and in which direction?':
+    'Насколько быстро движется позиция и в каком направлении?',
+  'Where in the world is the business strong, and where is it absent?':
+    'Где в мире бизнес силён, а где его нет?',
+  'Does the business mean the same thing in every market?':
+    'Означает ли бизнес одно и то же на каждом рынке?',
+  'Does the business mean something different in each country?':
+    'Означает ли бизнес что-то своё в каждой стране?',
+  'Does the business tell the same story everywhere it appears?':
+    'Рассказывает ли бизнес одну и ту же историю везде, где появляется?',
+  'Do partners describe the business the way it describes itself?':
+    'Описывают ли партнёры бизнес так же, как он описывает себя?',
+  'How much of the market position rests on intermediaries?':
+    'Какая часть рыночной позиции держится на посредниках?',
+  'How easily could the business be swapped out of the channel?':
+    'Насколько легко бизнес можно заменить внутри канала?',
+  'Can the channel explain why the business costs more?':
+    'Может ли канал объяснить, почему бизнес стоит дороже?',
+  'What is the complete management position on risk, opportunity, timing and action?':
+    'Какова полная управленческая позиция по риску, возможностям, таймингу и действиям?',
+  'What should the business do, in what order?':
+    'Что бизнесу следует делать и в каком порядке?',
+  'Which intervention returns most, and what is currently blocked?':
+    'Какое вмешательство даёт наибольшую отдачу и что сейчас заблокировано?',
+  'What lands this month, this quarter, and this year?':
+    'Что будет сделано в этом месяце, в этом квартале и в этом году?',
+  'How long before an intervention shows up in the numbers?':
+    'Сколько пройдёт, прежде чем вмешательство отразится в цифрах?',
+  'Did the work move the signal it was supposed to move?':
+    'Сдвинула ли работа тот сигнал, который должна была сдвинуть?',
+
+  /* --- What each module detects, and why it matters commercially ------------------- */
+  'An engine that cannot categorise a business cannot recommend it. Entity confusion sits upstream of every visibility metric — content investment cannot move an answer while the underlying record is wrong.':
+    'Движок, который не может отнести бизнес к категории, не может его и рекомендовать. Путаница с сущностью находится выше любой метрики видимости: вложения в контент не сдвинут ответ, пока сама запись неверна.',
+  'Name collisions, merged records and mistaken identities — a single unresolved conflation can remove a business from every answer in its category.':
+    'Совпадения имён, слитые записи и ошибочные отождествления: одна неразрешённая путаница способна убрать бизнес из каждого ответа в его категории.',
+  'Discontinued lines, closed locations, former ownership and superseded positioning still being repeated to buyers as current fact.':
+    'Снятые с производства линейки, закрытые площадки, прежние владельцы и устаревшее позиционирование — всё это до сих пор повторяется покупателям как актуальный факт.',
+  'Recognition erodes when competitors keep publishing and you stop. Decay is measurable for months before it shows up as absence.':
+    'Узнаваемость размывается, когда конкуренты продолжают публиковаться, а вы перестаёте. Угасание измеримо за месяцы до того, как проявится как отсутствие.',
+  'Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.':
+    'Понимание сущности и присутствие в рекомендациях — разные показатели. Движок может правильно определять бизнес и при этом ни разу его не выдвинуть: распознавание необходимо для рекомендации, но недостаточно.',
+  'Coverage measured against real buying questions rather than keywords — the difference between being findable and being present.':
+    'Покрытие, измеренное по реальным закупочным вопросам, а не по запросам, — разница между «вас можно найти» и «вы присутствуете».',
+  'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
+    'Показатель доли рынка для рынка, который сейчас никто не измеряет: выданные рекомендации, а не полученные клики.',
+  'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':
+    'Бизнес, ранжирующийся в Google, всё равно может отсутствовать в каждом ответе ИИ, который выбирает поставщика. Обратное встречается не реже. Каждая поверхность — отдельный коммерческий актив, а асимметрия каналов не видна ни SEO-инструментам, ни аналитике.',
+  'Businesses that dominate one surface and disappear on the other — a divergence that stays invisible while each channel is reported separately.':
+    'Компании, которые доминируют на одной поверхности и исчезают на другой, — расхождение, остающееся невидимым, пока каждый канал отчитывается отдельно.',
+  'The most expensive class of gap — absent from both surfaces on a question that carries real volume and real intent.':
+    'Самый дорогой класс разрыва: отсутствие сразу на обеих поверхностях по вопросу с реальным объёмом и реальным намерением.',
+  'The cheapest wins available: questions where you have already done the work and only the machine-readable form of it is missing.':
+    'Самые дешёвые из доступных побед: вопросы, по которым работа уже сделана и не хватает только её машиночитаемой формы.',
+  'Cost per click weighted by the questions that decide purchases, rather than averaged across an account that includes cheap, irrelevant traffic.':
+    'Цена клика, взвешенная по вопросам, которые решают покупки, а не усреднённая по аккаунту, включающему дешёвый нерелевантный трафик.',
+  'A computed ceiling from deal value, margin and conversion — the number most advertising accounts are managed without ever calculating.':
+    'Расчётный потолок из стоимости сделки, маржи и конверсии — число, которое большинство рекламных аккаунтов не вычисляет никогда.',
+  'A costed switch list — which spend can be retired, what has to be published first, and how long the replacement takes to hold.':
+    'Просчитанный список замен: какие расходы можно свернуть, что нужно опубликовать сначала и сколько времени замена набирает устойчивость.',
+  'Competitive density expressed as a price trend, so the structural cost of staying still becomes visible before the budget review.':
+    'Конкурентная плотность, выраженная как ценовой тренд, чтобы структурная стоимость бездействия стала видна до защиты бюджета.',
+  'Whether paid is buying growth or renting positions that authority would otherwise hold for free.':
+    'Покупает ли платный канал рост — или арендует позиции, которые авторитетность удерживала бы бесплатно.',
+  'Knowing a competitor wins is not actionable. Knowing which evidence engines cite when they recommend that competitor is. This separates brand preference from an evidence gap you can close.':
+    'Знание того, что конкурент выигрывает, не даёт повода к действию. Знание того, на какие доказательства ссылаются движки, рекомендуя его, — даёт. Это отделяет предпочтение бренда от разрыва в доказательствах, который можно закрыть.',
+  'The individual assets a machine reaches for when it justifies choosing them — publications, comparisons, specifications, verified outcomes.':
+    'Конкретные активы, к которым обращается машина, обосновывая их выбор: публикации, сравнения, спецификации, подтверждённые результаты.',
+  'Structured comparison of the evidence each competitor supplies to engines, and what it would take to match it. Converts a share gap into a specific, costed evidence programme.':
+    'Структурированное сравнение доказательств, которые каждый конкурент поставляет движкам, и того, что нужно, чтобы с ними сравняться. Превращает разрыв в доле в конкретную просчитанную программу доказательств.',
+  'The questions a dominant rival does not answer, does not cover, or answers badly — the cheapest available places to take share.':
+    'Вопросы, на которые доминирующий соперник не отвечает, не покрывает или отвечает плохо, — самые дешёвые места, где можно взять долю.',
+  'The share of visibility owned by partners rather than by the business, which is the share that leaves if the relationship ends.':
+    'Доля видимости, принадлежащая партнёрам, а не бизнесу, — та самая доля, которая уходит, если отношения заканчиваются.',
+  'Visibility creates attention; trust creates selection. A business can be found and still be filtered out when an engine has to stand behind naming it first.':
+    'Видимость создаёт внимание; доверие создаёт выбор. Бизнес можно найти и всё равно отсеять, когда движку приходится отвечать за то, что он назвал его первым.',
+  'A countable ratio of independent sources, which turns an abstract brand gap into a publishing programme with a known scope and cost.':
+    'Поддающееся счёту соотношение независимых источников, которое превращает абстрактный разрыв бренда в издательскую программу с известным объёмом и стоимостью.',
+  'Being mentioned and being cited are different commercial positions. Only one of them survives into the next answer the system gives.':
+    'Быть упомянутым и быть процитированным — разные коммерческие позиции. Только одна из них доживает до следующего ответа системы.',
+  'The small set of pages that disproportionately determine every answer given — frequently including a directory nobody at the company knows exists.':
+    'Небольшой набор страниц, непропорционально определяющий каждый выдаваемый ответ, — нередко включая каталог, о существовании которого в компании никто не знает.',
+  'Proof has a shelf life. Case studies, coverage and reviews lose weight with age, and the decline is measurable before selection stops.':
+    'У доказательств есть срок годности. Кейсы, публикации и отзывы теряют вес со временем, и спад измерим ещё до того, как выбор прекращается.',
+  'Most businesses lose the decision at one specific stage, not evenly across the journey. Locating that stage tells you where intervention returns most, and where further investment returns nothing.':
+    'Большинство компаний теряют решение на одном конкретном этапе, а не равномерно по всему пути. Определив этот этап, вы узнаете, где вмешательство приносит больше всего, а где дальнейшие вложения не дают ничего.',
+  'Losses concentrate at one stage rather than spreading evenly. Locating that stage tells you where intervention returns, and where it returns nothing.':
+    'Потери концентрируются на одном этапе, а не распределяются равномерно. Определив его, вы узнаете, где вмешательство приносит отдачу, а где не приносит ничего.',
+  'The exact questions where a decision was made and the business was not in the room. These are not lost leads; no lead was ever created.':
+    'Точные вопросы, по которым решение было принято, а бизнеса в комнате не было. Это не потерянные лиды: лид никогда и не создавался.',
+  'Questions where the decision happens entirely without you, and where no channel measurement can show it, because nothing ever reached a channel.':
+    'Вопросы, где решение происходит полностью без вас и где никакое измерение канала этого не покажет, потому что до канала ничего так и не дошло.',
+  'Presence averaged across all questions hides the collapse that matters. What decides revenue is presence at the supplier-evaluation stage, and that figure is usually far lower than the headline.':
+    'Присутствие, усреднённое по всем вопросам, скрывает тот обвал, который важен. Выручку решает присутствие на этапе оценки поставщиков, и эта цифра обычно намного ниже заявленной.',
+  'The size of the decision market itself, counted in decisions rather than in searches, sessions or impressions.':
+    'Размер самого рынка решений, посчитанный в решениях, а не в поисках, сессиях или показах.',
+  'Value per decision by stage and question type, so a high-volume gap is not automatically ranked above a low-volume, high-value one.':
+    'Ценность одного решения по этапу и типу вопроса, чтобы разрыв с большим объёмом не оказывался автоматически выше малообъёмного, но дорогого.',
+  'A directional range with its confidence stated — never a single confident figure, and never described as confirmed lost revenue.':
+    'Ориентировочный диапазон с указанной уверенностью — никогда не единственная уверенная цифра и никогда не «подтверждённая упущенная выручка».',
+  'Every assumption behind an exposure figure, stated and editable — because a number whose assumptions are hidden cannot be argued with or trusted.':
+    'Каждое допущение за цифрой потерь, изложенное и редактируемое, — потому что с числом, чьи допущения скрыты, нельзя ни спорить, ни доверять ему.',
+  'Real differentiators that never appear in any category description — strengths the market currently has no vocabulary to express.':
+    'Настоящие отличия, которые не встречаются ни в одном описании категории, — сильные стороны, для которых у рынка пока нет словаря.',
+  'Whether buyers are evaluating against criteria a competitor published, which quietly decides the outcome before anyone is compared.':
+    'Оценивают ли покупатели по критериям, опубликованным конкурентом, — что тихо решает исход ещё до того, как кого-то начали сравнивать.',
+  'Where the business sits on a price spectrum in the eyes of machines describing it — an assumption that shapes shortlists before any quote is sent.':
+    'Где бизнес находится на ценовой шкале в глазах описывающих его машин — допущение, формирующее короткие списки ещё до отправки любого предложения.',
+  'Demand maturity and competitive density per market, so expansion is sequenced by readiness rather than by proximity or preference.':
+    'Зрелость спроса и конкурентная плотность по каждому рынку, чтобы очередь на экспансию выстраивалась по готовности, а не по близости или симпатиям.',
+  'Rate of change rather than a snapshot, so a strong position that is deteriorating is not mistaken for a safe one.':
+    'Скорость изменения, а не моментальный срез, чтобы сильную, но ухудшающуюся позицию не приняли за безопасную.',
+  'Position measured market by market, which routinely contradicts the single global figure a company believes it has.':
+    'Позиция, измеренная рынок за рынком, что регулярно противоречит единственной глобальной цифре, в которую верит компания.',
+  'How category, positioning and reputation change across borders, including markets where the business is understood as a different kind of company entirely.':
+    'Как категория, позиционирование и репутация меняются за границами, включая рынки, где бизнес понимают как компанию совсем другого рода.',
+  'Where positioning drifts by geography or language, so a business is a category leader in one market and an unknown in the next.':
+    'Где позиционирование расходится по географии или языку, из-за чего бизнес — лидер категории на одном рынке и неизвестен на следующем.',
+  'Where a channel partner’s description of your product is what machines have learned — and where that description is wrong.':
+    'Где описание вашего продукта, данное партнёром по каналу, и есть то, что выучили машины, — и где это описание неверно.',
+  'Whether the brand is specified by name or treated as an interchangeable supplier — usually the more expensive answer of the two.':
+    'Указывают ли бренд по имени или относятся к нему как к взаимозаменяемому поставщику — обычно это более дорогой из двух ответов.',
+  'Whether the reasons for a premium survive the trip through distribution, or arrive at the buyer as an unexplained higher number.':
+    'Переживают ли причины наценки путь через дистрибуцию — или доходят до покупателя как необъяснённое большее число.',
+  'A board-ready position rather than a dashboard. States what is happening, what it means commercially, what the directional exposure is, how long the window stays open, and what must change — with owners and deadlines.':
+    'Позиция, готовая для совета директоров, а не дашборд. Излагает, что происходит, что это значит коммерчески, каковы ориентировочные потери, сколько окно остаётся открытым и что должно измениться — с ответственными и сроками.',
+  'Ranked by exposure, confidence, urgency, effort and competitor pressure.':
+    'Отранжировано по потерям, уверенности, срочности, трудозатратам и давлению конкурентов.',
+  'The lag between doing the work and seeing the movement, which is what stops a working programme from being cancelled a month too early.':
+    'Задержка между выполнением работы и появлением движения — именно она не даёт отменить работающую программу на месяц раньше времени.',
+  'Measured change against the predicted change, including the interventions that did not work — which is the only way the model earns trust.':
+    'Измеренное изменение против предсказанного, включая вмешательства, которые не сработали, — единственный способ, которым модель зарабатывает доверие.',
+  'Corroborated claims reduce the risk an engine takes in naming a supplier first.':
+    'Подтверждённые заявления снижают риск, который движок берёт на себя, называя поставщика первым.',
+
+  /* --- Readout labels and competitor findings -------------------------------------- */
+  'Category description': 'Описание категории',
+  'Category resolved': 'Категория определена',
+  'Confusion and conflation': 'Путаница и смешение',
+  'Recommendation presence': 'Присутствие в рекомендациях',
+  'Recommendation share and momentum': 'Доля рекомендаций и импульс',
+  'Recommendation share by stage': 'Доля рекомендаций по этапам',
+  'Recommendation share across 24 decision questions':
+    'Доля рекомендаций по 24 вопросам решения',
+  'Mentions and citations': 'Упоминания и цитирования',
+  'Social proof quality': 'Качество социального доказательства',
+  'Source advantage analysis': 'Анализ преимущества источников',
+  'Authority driver comparison': 'Сравнение драйверов авторитетности',
+  'Competitor vulnerability': 'Уязвимость конкурента',
+  'Competitor control per stage': 'Контроль конкурентов по этапам',
+  'Competitive threat': 'Конкурентная угроза',
+  'Default vendor threat': 'Угроза поставщика по умолчанию',
+  'Why the competitor wins': 'Почему выигрывает конкурент',
+  'Why they win': 'Почему они выигрывают',
+  'Winning questions': 'Выигрышные вопросы',
+  'Missed decision questions': 'Упущенные вопросы решения',
+  'Gap classification per commercial question':
+    'Классификация разрыва по коммерческим вопросам',
+  'Question-to-stage mapping': 'Сопоставление вопроса с этапом',
+  'Stage-by-stage coverage': 'Покрытие по этапам',
+  'The stage where presence collapses': 'Этап, на котором обрушивается присутствие',
+  'Strongest stage': 'Сильнейший этап',
+  'Decision-journey position': 'Позиция на пути решения',
+  'Revenue concentration by stage': 'Концентрация выручки по этапам',
+  'Revenue split by decision stage': 'Распределение выручки по этапам решения',
+  'Directional revenue exposure': 'Ориентировочные потери выручки',
+  'Paid dependency exposure': 'Зависимость от платного канала',
+  'Strategic blind spots': 'Стратегические слепые зоны',
+  'Strategic timing window': 'Стратегическое временное окно',
+  'Market and language': 'Рынок и язык',
+  'What it believes': 'Во что он верит',
+  'Not resolved': 'Не определено',
+  Resolved: 'Определено',
+  'Never recommends': 'Не рекомендует никогда',
+  Unattributed: 'Не отнесено',
+  'Independent authority evidence — the constraint holding every downstream signal.':
+    'Независимые доказательства авторитетности — ограничение, удерживающее каждый последующий сигнал.',
+  'Classified as a hardware retailer, not an MRO distributor.':
+    'Отнесена к розничной торговле инструментами, а не к дистрибуции MRO.',
+  'Conflated with a same-named logistics firm.':
+    'Смешана с одноимённой логистической фирмой.',
+  'No stable entity record. Category answered without naming any Midwest distributor.':
+    'Устойчивой записи о сущности нет. Ответ по категории дан без упоминания хоть какого-то дистрибьютора Среднего Запада.',
+  'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.':
+    'Ни один движок ИИ не называет Northwind в девятнадцати из двадцати четырёх отслеживаемых вопросов решения.',
+  'Named in seventeen of the nineteen questions where Northwind is absent.':
+    'Названа в семнадцати из девятнадцати вопросов, где Northwind отсутствует.',
+  'Kestrel named first in four of seven questions.':
+    'Kestrel названа первой в четырёх вопросах из семи.',
+  'Receives the recommendation in 31% of decisions and controls the supplier-evaluation stage.':
+    'Получает рекомендацию в 31% решений и контролирует этап оценки поставщиков.',
+  'Leads on the two most heavily weighted vectors.':
+    'Лидирует по двум векторам с наибольшим весом.',
+  'Authority and Visibility are where its investment has concentrated.':
+    'Авторитетность и видимость — там, где сосредоточены её вложения.',
+  'Independent validation lets engines recommend it without hedging.':
+    'Независимое подтверждение позволяет движкам рекомендовать её без оговорок.',
+  'Advantage compounds in the absence of a response.':
+    'В отсутствие ответа преимущество накапливается.',
+  'Holds position while no counter-intervention is running.':
+    'Удерживает позицию, пока не запущено встречное вмешательство.',
+  'Meridian publishes specification guidance that engines treat as category-defining language.':
+    'Meridian публикует руководства по спецификациям, которые движки воспринимают как язык, определяющий категорию.',
+  'Atlas is named on procurement checklists that engines cite at the point of purchase.':
+    'Atlas названа в закупочных чек-листах, на которые движки ссылаются в момент покупки.',
+  'Two of six interventions are low effort with measurable movement inside 60 days.':
+    'Два вмешательства из шести малозатратны и дают измеримое движение в пределах 60 дней.',
+  'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. Unattributed 28.8%':
+    'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4,2%. Не отнесено 28,8%',
+  'Not in top 100 organic. No AI recommendation. 320 searches per month.':
+    'Нет в первой сотне органической выдачи. Рекомендаций ИИ нет. 320 поисков в месяц.',
+  'Position 1 organic, AI present. Volume 40 per month.':
+    'Позиция 1 в органике, присутствие в ИИ. Объём 40 в месяц.',
+  'Position 3 and recommended — the pattern that works.':
+    'Позиция 3 и рекомендация — схема, которая работает.',
+
+  /* --- Tracked commercial keywords. Translated on the same reasoning as the
+         home page's search queries — see the note beside those. ------------------- */
+  'anchor bolts supplier': 'поставщик анкерных болтов',
+  'fastener catalog request': 'запросить каталог крепежа',
+  'fastener sourcing best practices': 'лучшие практики закупки крепежа',
+  'industrial distributor fill rate':
+    'уровень выполнения заказов промышленного дистрибьютора',
+  'industrial supply account setup': 'открыть счёт на промышленное снабжение',
+  'industrial supply near me': 'промышленное снабжение рядом со мной',
+  'maintenance repair operations supplier':
+    'поставщик для обслуживания, ремонта и эксплуатации',
+  'mro consolidation vendor': 'поставщик для консолидации MRO',
+  'mro supply agreement': 'договор на поставку MRO',
+  'plant maintenance supplies': 'расходные материалы для обслуживания завода',
+  'same day fastener shipping': 'отгрузка крепежа в день заказа',
+  'stainless steel fasteners supplier': 'поставщик крепежа из нержавеющей стали',
 }

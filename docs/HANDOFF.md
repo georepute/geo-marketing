@@ -23,7 +23,7 @@ waste your afternoon if you do not know them.
 | 5 | Demo booking calendar | **Built, unconfigured.** Cal.com v2; needs two secrets — see §6 |
 | 6 | Production readiness + checklist | `docs/PRE-LAUNCH.md`. **Not deployed**, as instructed |
 | 7 | Do not display pricing publicly | Held by the same flag as §4 |
-| 8 | Full multilingual support | **Done.** Routing for 7 locales; every route translated in all six non-English locales. Native review outstanding — see §2 |
+| 8 | Full multilingual support | **Done.** Routing for 7 locales; all 42 routes translated in all six non-English locales. Native review outstanding — see §2 |
 | 9 | The Closed Loop | **Done.** PLAN→DO→CHECK→ACT→REPEAT |
 | 10 | Nav item, homepage band, dedicated page | **Done.** `/how-it-works` |
 
@@ -44,28 +44,46 @@ survive translation unchanged.
 
 ## 2. Translation: the actual state
 
-**Every route is translated in all six locales** — he, ar, ru, fr, es, pt.
-Each overlay carries ~1,370 entries and covers the same key set; both blog
+**All 42 routes are translated in all six locales** — he, ar, ru, fr, es, pt.
+Each overlay carries ~1,670 entries and covers the same key set; both blog
 articles exist in all six. `i18n-port.mjs he <locale>` reports `missing: 0`
 for every one, and `i18n-keys.mjs <locale>` reports `MISSING: 0`.
 
-| Route | he | ar | ru | fr | es | pt |
-| --- | --- | --- | --- | --- | --- | --- |
-| `/` | 1 | 1 | 1 | 16 | 1 | 1 |
-| `/how-it-works` | 1 | 1 | 1 | 4 | 0 | 1 |
-| `/methodology` | 1 | 1 | 1 | 1 | 0 | 0 |
-| `/engines` | 1 | 1 | 1 | 2 | 0 | 0 |
-| `/marketplace` | 1 | 1 | 1 | 2 | 0 | 0 |
-| `/briefing` | 1 | 1 | 1 | 3 | 0 | 0 |
-| `/blog` | 1 | 1 | 1 | 1 | 0 | 0 |
-| `/legal` | 1 | 1 | 1 | 1 | 0 | 0 |
-| `/signin` | 0 | 0 | 0 | 0 | 0 | 0 |
-| `/election-intelligence` | 2 | 2 | 1 | 3 | 2 | 2 |
-| `/app/mission-control` | 0 | 0 | 0 | 7 | 0 | 0 |
-| `/app/reconstruct` | 0 | 0 | 0 | 7 | 0 | 0 |
-| `/app/campaign-readiness` | 0 | 0 | 0 | 5 | 0 | 0 |
-| `/app/narrative` | 0 | 0 | 0 | 4 | 1 | 0 |
-| `/app/actions` | 0 | 0 | 0 | 2 | 0 | 0 |
+### Count the routes before you believe a sweep
+
+**The site has 42 routes per locale, not the 15 that are obvious.** An earlier
+pass audited fifteen and declared the site finished; nineteen more —
+`/marketplace/[slug]` ×8, `/marketplace/category/[slug]` ×7 and
+`/engines/[slug]` ×4 — were fully English in every locale, 24–56 segments
+each. Enumerate them, do not list them from memory:
+
+```bash
+curl -s localhost:PORT/sitemap.xml | grep -o '<loc>[^<]*</loc>' | sed 's|</\?loc>||g'
+```
+
+The sitemap omits `/legal`, `/signin`, `/pricing`, `/checkout`,
+`/app/campaign-readiness` and `/app/narrative` — add those by hand. The full
+list used for the last sweep is reproducible from `find "app/[locale]" -name
+page.tsx` plus the four `generateStaticParams` expansions.
+
+`/pricing`, `/checkout` and `/checkout/success` **404 behind the pricing
+flag**, which is doc §4 working, not a gap. `/kitchen-sink`,
+`/kitchen-sink/readout` and `/debug/seed` are `noindex` but still ship in the
+production build and are still English (117, 26 and 91 segments). Whether they
+should ship at all is a client decision, not something to silently delete.
+
+### Where each locale stands
+
+Totals across the 38 audited routes (excluding the flag-gated and dev routes):
+
+| Locale | Mode | Residue | What it is |
+| --- | --- | --- | --- |
+| he | script | 1 per route, 2 on election | ISO chip; `Riverbend` |
+| ar | script | 1 per route, 2 on election | ISO chip; `Riverbend` |
+| ru | script | 1 per route | ISO chip only — `Ривербенд` is transliterated |
+| es | diff | **4 total** | `Visible`, `Media`, two candidate names |
+| pt | diff | **5 total** | `Volume`, `Media`, two candidate names |
+| fr | diff | **158 total** | cognates, `Position N`, `{n} modules` |
 
 **None of these numbers is a defect.** he/ar/ru are script mode; fr/es/pt are
 diff mode, and the two do not mean the same thing — read §3 before comparing a
@@ -73,12 +91,14 @@ column against another. Every remaining segment was checked individually:
 
 - **The `1` across he/ar/ru** is the ISO code chip in the compact language
   switcher — deliberately Latin.
-- **French's 61** are true cognates (`Classification`, `Prescription`,
+- **French's 158** are true cognates (`Classification`, `Prescription`,
   `Position`, `Volume`, `Absent`, `Action`, `Signal`, `Source`, `Influence`,
-  `Effort`, `Stable`, `Visible`, `Intervention`, `Format`, `Articles`) plus
-  numeric strings identical in both languages (`45 minutes`, `21 sources`,
-  `6 questions`). Spanish shares far fewer of these with English, which is the
-  entire reason its column is near-zero and French's is not.
+  `Effort`, `Stable`, `Visible`, `Intervention`, `Format`, `Articles`,
+  `Citations`, `Composite`, `Date`) plus composites the component joins from
+  two translated halves (`Position 14`, `12 modules`, `45 minutes`).
+  **Spanish's 4 against French's 158 is a fact about the two languages, not
+  about the two translations** — French shares that many cognates with
+  English and Spanish does not. Do not "fix" the French column.
 - **`/election-intelligence`** carries the fictional county and the two
   candidate names. he/ar keep `Riverbend` Latin; ru transliterates it, which
   is why ru reads 1 there and the others read 2. See §7.
@@ -91,9 +111,15 @@ column against another. Every remaining segment was checked individually:
   media*); Spanish uses `Medios`, Russian `Медиа`. Every neighbour in that
   list is translated, so it is a choice, not an omission.
 
-Only the first locale cost real engineering. **No component changed for any
-locale after Hebrew** — every string that needed wrapping was wrapped once, so
-the rest were translation jobs.
+Only the first locale costs real engineering. **Once a page is wrapped, no
+component changes for the other five** — so a new locale is a translation job
+and a newly-discovered page is not. The nineteen marketplace and engine routes
+needed five page components and four shared components wrapped before any
+translation could land; `AIRecognitionMatrix`, `RecommendationShare`,
+`ModuleCard` and the evidence table inside `IntelligenceReadout` had never been
+touched. That last one renders on Mission Control, the home page, every
+product page and every engine page — its column headers were English
+everywhere, in every locale, since the table was written.
 
 ### What is still genuinely open
 
@@ -502,8 +528,12 @@ string.
   keys with React's `&#x27;` in place of a plain apostrophe; keys with the
   interpolated value baked in (`stage 4 of 5` beside a live
   `stage {n} of {total}`); and keys with *Hebrew inside the English source*.
-  Each is unreachable and fails silently. Eight such keys were removed from
-  `he.ts` in August 2026. Read the call site.
+  Each is unreachable and fails silently. Eleven such keys were removed from
+  `he.ts` in August 2026 — the last three after this warning was already
+  written, so treat it as a live hazard rather than a historical note. The
+  most recent shape: the audit printed `3 of 20`, but the seed stores
+  `expectedMovement.unit` as `' of 20'` **with its leading space** and the
+  component prints the figure beside it. Read the call site.
 - **The seed stores the bare value; the component adds the ornament.**
   Statements are stored unquoted and wrapped in curly quotes at render;
   source names are capitalised in the seed and lowercased at render; feed
@@ -513,3 +543,16 @@ string.
   constraint" lives in both the view and the shared `DimensionPanel`;
   momentum renders from three places. Wrapping one and seeing the translation
   appear makes the others look done. Grep before believing it.
+- **`useT()` defaults to identity when no provider is present.** It does not
+  throw — that is deliberate, so the design-system routes outside the
+  localized tree keep rendering. The consequence is that a component mounted
+  outside `ContentProvider` renders English *silently*. When a string is
+  demonstrably wrapped and still comes out English, suspect the provider
+  boundary before you suspect the key.
+- **A sync component cannot call `getT()`.** The two row components in
+  `marketplace/category/[slug]` take the page's translator as a prop instead.
+  Making them `async` would also work; passing it down keeps one translator
+  per request rather than one per row.
+- **Adding a `'use client'` directive is sometimes the whole fix.**
+  `ModuleCard` needed one to take `useT()`. Check whether a component is
+  already in the client graph before reaching for `getT()`.

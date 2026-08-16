@@ -2268,4 +2268,513 @@ export const content: ContentOverlay = {
     'الإنجاز ليس أثرًا. فكل إجراء يُتحقَّق منه بإعادة رصد الإشارة التي يستهدفها، عبر المحركات والأسئلة نفسها، بعد التنفيذ. وإلى أن تتم إعادة الرصد تلك، يبقى التغيّر المقاس فارغًا بدل أن يُفترَض.',
   'Back to Mission Control': 'العودة إلى مركز القيادة',
   'Read the methodology': 'اقرأ المنهجية',
+
+  /* ==========================================================================
+     MARKETPLACE AND ENGINE DETAIL PAGES
+
+     Nineteen routes that were never audited until the route list was
+     enumerated properly: /marketplace/[slug] ×8,
+     /marketplace/category/[slug] ×7 and /engines/[slug] ×4.
+
+     Composites the audit prints — "Entry · Snapshot", "12 modules",
+     "Next: …" — are NOT keys. The component joins two translated halves.
+     ====================================================================== */
+
+  /* --- Product page chrome --------------------------------------------------------- */
+  Breadcrumb: 'مسار التنقّل',
+  'Intelligence Marketplace': 'سوق الذكاء',
+  'Intelligence Engines': 'محركات الذكاء',
+  'Product detail': 'تفاصيل المنتج',
+  'Everything needed to decide, without a sales call':
+    'كل ما يلزم لاتخاذ القرار، دون مكالمة مبيعات',
+  'What you receive': 'ما الذي تحصل عليه',
+  'A real readout from this product, on seeded data':
+    'قراءة حقيقية من هذا المنتج، على بيانات مزروعة',
+  'Every intelligence product returns the same twelve-section anatomy: executive truth, business meaning, evidence, connected signals, competitor context, commercial exposure, timing, trend, prescription, expected movement, owner and measurement.':
+    'كل منتج ذكاء يعيد البنية نفسها المكوّنة من اثني عشر قسمًا: الحقيقة التنفيذية، والمعنى التجاري، والأدلة، والإشارات المترابطة، وسياق المنافسين، والخسارة التجارية، والتوقيت، والاتجاه، والوصفة العلاجية، والحركة المتوقعة، والمالك، والقياس.',
+  'One-time purchase. Placeholder pricing.': 'شراء لمرة واحدة. تسعير مبدئي.',
+  'Buy this intelligence product': 'اشترِ منتج الذكاء هذا',
+  'Buy {name}': 'اشترِ {name}',
+  'Compare with a subscription': 'قارن مع اشتراك',
+  'See the full ecosystem': 'اطّلع على المنظومة الكاملة',
+  'by {date}': 'بحلول {date}',
+
+  /* --- The eleven product fields --------------------------------------------------- */
+  'Business question': 'السؤال التجاري',
+  'Decision consequence': 'أثر القرار',
+  'What it detects': 'ما الذي يكشفه',
+  'Required inputs': 'المدخلات المطلوبة',
+  Scope: 'النطاق',
+  'Intelligence depth': 'عمق الذكاء',
+  Delivery: 'التسليم',
+  'Time to delivery': 'مدة التسليم',
+  'Commercial terms': 'الشروط التجارية',
+  'Upgrade path': 'مسار الترقية',
+  Depth: 'العمق',
+  Date: 'التاريخ',
+  Finding: 'الاستنتاج',
+  Engine: 'المحرك',
+  Observed: 'المرصود',
+  Live: 'يعمل',
+  You: 'أنتم',
+
+  /* Tier display labels. The component maps the lowercase discriminants
+     (entry / advanced / premium) onto these before translating — see the
+     TIER_LABEL note in marketplace/[slug]/page.tsx. */
+  Entry: 'أساسي',
+  'Advanced tier': 'متقدّم',
+  Premium: 'مميّز',
+  /* Depth values. Already capitalised in the seed, so no collision. */
+  Snapshot: 'لقطة سريعة',
+  Advanced: 'متقدّم',
+  Strategic: 'استراتيجي',
+  Executive: 'تنفيذي',
+
+  /* --- Category page --------------------------------------------------------------- */
+  'All intelligence categories': 'كل فئات الذكاء',
+  'Other intelligence categories': 'فئات ذكاء أخرى',
+  'Every module answers one question.': 'كل وحدة تجيب عن سؤال واحد.',
+  'Each returns the evidence behind its answer, what that answer means commercially, and what should change as a result.':
+    'كل منها يعيد الأدلة التي تقف خلف إجابته، وما تعنيه تلك الإجابة تجاريًا، وما الذي ينبغي أن يتغيّر نتيجةً لها.',
+  'Buy this intelligence': 'اشترِ هذا الذكاء',
+  'Take one question, or take the whole category.':
+    'خذ سؤالاً واحدًا، أو خذ الفئة بأكملها.',
+  'Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.':
+    'كل عملية شراء تبيّن ما تفحصه، وما تحتاجه منك، ومستوى الثقة الذي تستطيع بلوغه، وكم تكلّف. ولا تلزم مكالمة مبيعات لمعرفة أي من ذلك.',
+  'One engine produces this category.': 'محرك واحد يُنتج هذه الفئة.',
+  '{n} engines produce this category.': '{n} محركات تُنتج هذه الفئة.',
+  'Engines are the machinery, not the offer. Nothing above required you to know one existed.':
+    'المحركات هي الآلة، لا العرض. ولم يتطلّب أي شيء مما سبق أن تعرف بوجود واحد منها.',
+  '{n} modules': '{n} وحدات',
+  '<b>{n}</b> intelligence modules in this category.':
+    '<b>{n}</b> وحدات ذكاء في هذه الفئة.',
+  '<b>{n}</b> intelligence modules in this category · <b>{live}</b> running live in this environment.':
+    '<b>{n}</b> وحدات ذكاء في هذه الفئة · <b>{live}</b> تعمل مباشرةً في هذه البيئة.',
+  Built: 'مبني',
+  'In platform': 'في المنصة',
+  'In the platform': 'في المنصة',
+
+  /* --- Engine detail page ---------------------------------------------------------- */
+  'Intelligence readout': 'قراءة الذكاء',
+  'What this engine concluded': 'ما خلص إليه هذا المحرك',
+  'Signal, evidence, consequence, action': 'إشارة، ودليل، وأثر، وإجراء',
+  'Screens this engine provides': 'الشاشات التي يوفّرها هذا المحرك',
+  'Next: {name}': 'التالي: {name}',
+
+  /* --- Delivery, scope and inputs -------------------------------------------------- */
+  'After scan completion — typically under 20 minutes':
+    'عند اكتمال الفحص — عادةً في أقل من 20 دقيقة',
+  'After scan completion — typically under 30 minutes':
+    'عند اكتمال الفحص — عادةً في أقل من 30 دقيقة',
+  'After scan completion — typically under 60 minutes':
+    'عند اكتمال الفحص — عادةً في أقل من 60 دقيقة',
+  'Expert-reviewed — within 3 business days':
+    'مُراجَع من خبير — خلال 3 أيام عمل',
+  'Optional: Search Console': 'اختياري: Search Console',
+  'Optional: Search Console and Analytics':
+    'اختياري: Search Console وGoogle Analytics',
+  'Up to 4 competitors': 'حتى 4 منافسين',
+  'Google + 6 engines': 'Google + 6 محركات',
+  '6 AI engines · entity and category association · 1 market':
+    '6 محركات ذكاء اصطناعي · ربط الكيان والفئة · سوق واحد',
+  '6 AI engines · 20 commercial questions · 4 competitors · 1 market':
+    '6 محركات ذكاء اصطناعي · 20 سؤالاً تجاريًا · 4 منافسين · سوق واحد',
+  '6 AI engines · 24 decision questions · 4 competitors':
+    '6 محركات ذكاء اصطناعي · 24 سؤال قرار · 4 منافسين',
+  '6 AI engines · 24 decision questions · 5 decision stages':
+    '6 محركات ذكاء اصطناعي · 24 سؤال قرار · 5 مراحل قرار',
+  '6 AI engines · 24 questions · 20 keywords · 4 competitors · full GEON assessment':
+    '6 محركات ذكاء اصطناعي · 24 سؤالاً · 20 كلمة مفتاحية · 4 منافسين · تقييم GEON كامل',
+  '6 AI engines · 24 questions · 4 competitors · citation analysis':
+    '6 محركات ذكاء اصطناعي · 24 سؤالاً · 4 منافسين · تحليل الاستشهادات',
+  '6 AI engines · 24 questions · 5 stages · 4 competitors':
+    '6 محركات ذكاء اصطناعي · 24 سؤالاً · 5 مراحل · 4 منافسين',
+  'Public trust and reputation sources · 1 market':
+    'مصادر الثقة والسمعة العامة · سوق واحد',
+  'Continuous monitoring, additional markets, or the full platform with history and alerts.':
+    'مراقبة مستمرة، أو أسواق إضافية، أو المنصة الكاملة مع السجل والتنبيهات.',
+  'Continuous monitoring, quarterly executive regeneration, or enterprise implementation.':
+    'مراقبة مستمرة، أو إعادة إنتاج تنفيذية ربع سنوية، أو تنفيذ مؤسسي.',
+  'Continuous prompt monitoring and visibility trends.':
+    'مراقبة مستمرة للاستعلامات واتجاهات الظهور.',
+  'Continuous competitor monitoring and momentum tracking.':
+    'مراقبة مستمرة للمنافسين وتتبّع الزخم.',
+  'Continuous monitoring with stage-level alerting.':
+    'مراقبة مستمرة مع تنبيهات على مستوى المرحلة.',
+  'Competitive War Room with continuous monitoring.':
+    'غرفة عمليات تنافسية مع مراقبة مستمرة.',
+  'Recognition history and decay monitoring.': 'سجل التعرّف ومراقبة التآكل.',
+  'Reputation momentum and trust decay monitoring.':
+    'زخم السمعة ومراقبة تآكل الثقة.',
+  'Interactive workspace': 'مساحة عمل تفاعلية',
+  'Downloadable intelligence brief': 'موجز ذكاء قابل للتنزيل',
+  'Expert interpretation': 'تفسير خبير',
+  'Evidence pack': 'حزمة الأدلة',
+  'Action plan': 'خطة العمل',
+  ' of 20': ' من 20',
+  ' of 24': ' من 24',
+
+  /* --- Product names. Descriptive rather than branded, so translated. -------------- */
+  'AI Recognition Scan': 'فحص التعرّف في الذكاء الاصطناعي',
+  'AI Recognition Scan | GeoRepute': 'فحص التعرّف في الذكاء الاصطناعي | GeoRepute',
+  'AI Search Presence Scan': 'فحص الحضور في بحث الذكاء الاصطناعي',
+  'AI Search Presence Scan | GeoRepute':
+    'فحص الحضور في بحث الذكاء الاصطناعي | GeoRepute',
+  'Google vs AI Gap Scan': 'فحص الفجوة بين Google والذكاء الاصطناعي',
+  'Google vs AI Gap Scan | GeoRepute':
+    'فحص الفجوة بين Google والذكاء الاصطناعي | GeoRepute',
+  'Competitor Recommendation Scan': 'فحص توصيات المنافسين',
+  'Competitor Recommendation Scan | GeoRepute': 'فحص توصيات المنافسين | GeoRepute',
+  'Trust Signals Scan': 'فحص إشارات الثقة',
+  'Trust Signals Scan | GeoRepute': 'فحص إشارات الثقة | GeoRepute',
+  'Decision Journey Diagnostic': 'تشخيص رحلة القرار',
+  'Decision Journey Diagnostic | GeoRepute': 'تشخيص رحلة القرار | GeoRepute',
+  'Competitive Position Assessment': 'تقييم الموقع التنافسي',
+  'Competitive Position Assessment | GeoRepute': 'تقييم الموقع التنافسي | GeoRepute',
+  'Executive Intelligence Brief': 'موجز الذكاء التنفيذي',
+  'Executive Intelligence Brief | GeoRepute': 'موجز الذكاء التنفيذي | GeoRepute',
+  'Decision Reconstruction — a completed reconstruction':
+    'إعادة بناء القرار — إعادة بناء مكتملة',
+  'Mission Control → the composite Decision Health position panel':
+    'مركز القيادة ← لوحة الموقف المركّبة لصحة القرار',
+  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
+    'سؤال تجاري واحد، مُعاد بناؤه من ما فهمه كل محرك وصولاً إلى ما يجب أن يتغيّر. بيانات عرض توضيحي مجهّلة.',
+  'One decision position rather than ten measures. Anonymised demonstration data.':
+    'موقف قرار واحد بدلاً من عشرة مقاييس. بيانات عرض توضيحي مجهّلة.',
+
+  /* --- Module business questions ---------------------------------------------------
+     The category page leads with the question, not the module name, so these
+     carry more weight per word than anything else on the page. */
+  'Does AI understand what the business actually does?':
+    'هل يفهم الذكاء الاصطناعي ما يفعله النشاط التجاري فعلاً؟',
+  'Do AI engines understand who the business is and what it offers?':
+    'هل تفهم محركات الذكاء الاصطناعي من هو النشاط التجاري وماذا يقدّم؟',
+  'Which AI systems know the business exists, and which do not?':
+    'أي أنظمة الذكاء الاصطناعي تعرف بوجود النشاط التجاري، وأيها لا تعرف؟',
+  'Is AI confusing the business with someone else?':
+    'هل يخلط الذكاء الاصطناعي بين النشاط التجاري وجهة أخرى؟',
+  'Is AI describing a version of the business that no longer exists?':
+    'هل يصف الذكاء الاصطناعي نسخة من النشاط التجاري لم تعد قائمة؟',
+  'Is the business becoming less recognised over time?':
+    'هل يتراجع التعرّف على النشاط التجاري بمرور الوقت؟',
+  'Is the business visible when customers ask for recommendations?':
+    'هل يظهر النشاط التجاري حين يطلب العملاء توصيات؟',
+  'When a buyer describes a need, is the business in the set AI considers?':
+    'حين يصف مشترٍ حاجةً، هل يكون النشاط التجاري ضمن ما يأخذه الذكاء الاصطناعي بالحسبان؟',
+  'Across the questions buyers actually ask, how often does the business appear at all?':
+    'عبر الأسئلة التي يطرحها المشترون فعلاً، كم مرة يظهر النشاط التجاري أصلاً؟',
+  'Of all the recommendations made in this category, what share names the business?':
+    'من مجموع التوصيات في هذه الفئة، ما النسبة التي تذكر النشاط التجاري؟',
+  'On those same questions, does AI put the business forward at all?':
+    'في تلك الأسئلة نفسها، هل يقدّم الذكاء الاصطناعي النشاط التجاري أصلاً؟',
+  'Do the two discovery surfaces tell the same story about us?':
+    'هل تروي واجهتا الاكتشاف القصة نفسها عنّا؟',
+  'Is the business aligned across traditional search and AI discovery?':
+    'هل النشاط التجاري متسق بين البحث التقليدي والاكتشاف عبر الذكاء الاصطناعي؟',
+  'Which commercial questions are invisible on both surfaces at once?':
+    'أي الأسئلة التجارية غير مرئية على الواجهتين في آنٍ واحد؟',
+  'Where does the business rank on the questions that carry commercial intent?':
+    'أين يترتّب النشاط التجاري في الأسئلة التي تحمل نيّة شرائية؟',
+  'Where does existing authority already rank but fail to reach AI?':
+    'أين تتصدّر المرجعية القائمة بالفعل لكنها لا تبلغ الذكاء الاصطناعي؟',
+  'What kind of gap is this, and does it deserve investment?':
+    'ما نوع هذه الفجوة، وهل تستحق الاستثمار؟',
+  'What is the business actually paying per commercial click?':
+    'كم يدفع النشاط التجاري فعليًا مقابل النقرة التجارية؟',
+  'Above what price does a click stop making money?':
+    'فوق أي سعر تتوقف النقرة عن تحقيق ربح؟',
+  'How much of current demand would disappear if paid search stopped tomorrow?':
+    'كم من الطلب الحالي سيختفي لو توقّف البحث المدفوع غدًا؟',
+  'Which paid positions could be replaced by owned authority?':
+    'أي المواقع المدفوعة يمكن استبدالها بمرجعية مملوكة؟',
+  'Is the cost of the same position rising, and how fast?':
+    'هل ترتفع كلفة الموقع نفسه، وبأي وتيرة؟',
+  'Who is being recommended instead of the business, and how often?':
+    'بمن يُوصى بدلاً من النشاط التجاري، وكم مرة؟',
+  'Who is recommended instead, where and why?': 'بمن يُوصى بدلاً منه، وأين، ولماذا؟',
+  'Why do competitors capture the decision?': 'لماذا يستحوذ المنافسون على القرار؟',
+  'What specifically makes a competitor recommendable?':
+    'ما الذي يجعل منافسًا جديرًا بالتوصية تحديدًا؟',
+  'How much more evidence supports them than supports us?':
+    'كم تزيد الأدلة التي تدعمهم عن تلك التي تدعمنا؟',
+  'Which specific questions does each competitor own?':
+    'أي الأسئلة تحديدًا يمتلكها كل منافس؟',
+  'At which stage does each competitor take control?':
+    'في أي مرحلة يسيطر كل منافس؟',
+  'Where is the leading competitor actually weak?':
+    'أين يكون المنافس المتصدّر ضعيفًا فعلاً؟',
+  'How easily could a competitor take the narrative from us?':
+    'بأي سهولة يمكن لمنافس أن ينتزع منّا السردية؟',
+  'Do the sources that mention the business carry any weight?':
+    'هل تحمل المصادر التي تذكر النشاط التجاري أي وزن؟',
+  'How much of what the business claims can anyone else confirm?':
+    'كم مما يدّعيه النشاط التجاري يمكن لأي جهة أخرى تأكيده؟',
+  'When AI cites a source to justify an answer, is any of it yours?':
+    'حين يستشهد الذكاء الاصطناعي بمصدر لتبرير إجابة، هل منه شيء يخصّكم؟',
+  'Which sources are shaping what AI believes about the business?':
+    'أي المصادر تصوغ ما يعتقده الذكاء الاصطناعي عن النشاط التجاري؟',
+  'Which trust signals strengthen or weaken recommendation readiness?':
+    'أي إشارات الثقة تقوّي جاهزية التوصية أو تضعفها؟',
+  'Is the evidence supporting the business ageing?':
+    'هل تتقادم الأدلة التي تدعم النشاط التجاري؟',
+  'Where does the business disappear during the buyer decision process?':
+    'أين يختفي النشاط التجاري خلال عملية اتخاذ قرار المشتري؟',
+  'At which point in the buying journey does presence collapse?':
+    'عند أي نقطة في رحلة الشراء ينهار الحضور؟',
+  'Which specific buying questions complete without the business ever being named?':
+    'أي أسئلة الشراء تحديدًا تكتمل دون أن يُذكر النشاط التجاري إطلاقًا؟',
+  'How many buying decisions are actually in play?':
+    'كم عدد قرارات الشراء المطروحة فعليًا؟',
+  'What is one of those decisions worth to the business?':
+    'كم يساوي أحد تلك القرارات للنشاط التجاري؟',
+  'What is the gap worth, and how confident can we be?':
+    'كم تساوي الفجوة، وما مستوى الثقة الذي يمكن بلوغه؟',
+  'What has to be true for this estimate to hold?':
+    'ما الذي يجب أن يكون صحيحًا كي يصمد هذا التقدير؟',
+  'Which of those blind spots are also high value?':
+    'أي من تلك النقاط العمياء عالية القيمة أيضًا؟',
+  'Which of our genuine advantages does the market never mention?':
+    'أي من مزايانا الحقيقية لا يذكره السوق أبدًا؟',
+  'How much of the language used to describe this category belongs to the business?':
+    'كم من اللغة المستخدمة لوصف هذه الفئة يخصّ النشاط التجاري؟',
+  'Whose framing do machines use when they explain the category?':
+    'بإطار من تستعين الآلات حين تشرح الفئة؟',
+  'Which criteria do machines cite first when explaining a choice?':
+    'أي المعايير تذكرها الآلات أولاً عند شرح اختيار؟',
+  'Does the market think the business is expensive?':
+    'هل يرى السوق أن النشاط التجاري باهظ؟',
+  'Is this market forming, forming fast, or already settled?':
+    'هل هذا السوق في طور التشكّل، أم يتشكّل بسرعة، أم استقرّ بالفعل؟',
+  'Do buyers know enough yet to be worth persuading?':
+    'هل يعرف المشترون ما يكفي بعد ليستحقوا الإقناع؟',
+  'Which markets are ready to be entered now?': 'أي الأسواق جاهزة للدخول الآن؟',
+  'How quickly is the position moving, and in which direction?':
+    'بأي سرعة يتحرك الموقع، وفي أي اتجاه؟',
+  'Where in the world is the business strong, and where is it absent?':
+    'أين في العالم يكون النشاط التجاري قويًا، وأين يغيب؟',
+  'Does the business mean the same thing in every market?':
+    'هل يعني النشاط التجاري الشيء نفسه في كل سوق؟',
+  'Does the business mean something different in each country?':
+    'هل يعني النشاط التجاري شيئًا مختلفًا في كل بلد؟',
+  'Does the business tell the same story everywhere it appears?':
+    'هل يروي النشاط التجاري القصة نفسها في كل مكان يظهر فيه؟',
+  'Do partners describe the business the way it describes itself?':
+    'هل يصف الشركاء النشاط التجاري كما يصف هو نفسه؟',
+  'How much of the market position rests on intermediaries?':
+    'كم من الموقع في السوق يقوم على الوسطاء؟',
+  'How easily could the business be swapped out of the channel?':
+    'بأي سهولة يمكن استبدال النشاط التجاري داخل القناة؟',
+  'Can the channel explain why the business costs more?':
+    'هل تستطيع القناة تفسير سبب ارتفاع كلفة النشاط التجاري؟',
+  'What is the complete management position on risk, opportunity, timing and action?':
+    'ما موقف الإدارة الكامل من المخاطر والفرص والتوقيت والإجراء؟',
+  'What should the business do, in what order?':
+    'ما الذي ينبغي أن يفعله النشاط التجاري، وبأي ترتيب؟',
+  'Which intervention returns most, and what is currently blocked?':
+    'أي تدخّل يعطي العائد الأكبر، وما المحجوب حاليًا؟',
+  'What lands this month, this quarter, and this year?':
+    'ما الذي يُنجَز هذا الشهر، وهذا الربع، وهذه السنة؟',
+  'How long before an intervention shows up in the numbers?':
+    'كم يمضي قبل أن يظهر التدخّل في الأرقام؟',
+  'Did the work move the signal it was supposed to move?':
+    'هل حرّك العمل الإشارة التي كان يُفترض أن يحرّكها؟',
+
+  /* --- What each module detects, and why it matters commercially ------------------- */
+  'An engine that cannot categorise a business cannot recommend it. Entity confusion sits upstream of every visibility metric — content investment cannot move an answer while the underlying record is wrong.':
+    'المحرك الذي لا يستطيع تصنيف نشاط تجاري لا يستطيع التوصية به. والخلط في الكيان يقع في مرحلة سابقة لكل مقياس ظهور — فالاستثمار في المحتوى لا يحرّك إجابة ما دام السجل الأساسي خاطئًا.',
+  'Name collisions, merged records and mistaken identities — a single unresolved conflation can remove a business from every answer in its category.':
+    'تشابه الأسماء والسجلات المدمجة والهويات الخاطئة — خلطٌ واحد دون حسم قادر على إخراج نشاط تجاري من كل إجابة في فئته.',
+  'Discontinued lines, closed locations, former ownership and superseded positioning still being repeated to buyers as current fact.':
+    'خطوط منتجات أُوقفت، ومواقع أُغلقت، وملكية سابقة، وتموضع تجاوزه الزمن — كلها ما زالت تُكرَّر للمشترين كحقيقة راهنة.',
+  'Recognition erodes when competitors keep publishing and you stop. Decay is measurable for months before it shows up as absence.':
+    'يتآكل التعرّف حين يواصل المنافسون النشر وتتوقفون أنتم. والتآكل قابل للقياس شهورًا قبل أن يظهر على شكل غياب.',
+  'Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.':
+    'فهم الكيان والحضور في التوصيات مقياسان منفصلان. فقد يحيل المحرك إلى النشاط التجاري بشكل صحيح ومع ذلك لا يقدّمه أبدًا — فالتعرّف شرط لازم للتوصية لا كافٍ.',
+  'Coverage measured against real buying questions rather than keywords — the difference between being findable and being present.':
+    'تغطية تُقاس مقابل أسئلة شراء حقيقية لا مقابل كلمات مفتاحية — الفرق بين أن تكون قابلاً للعثور عليك وأن تكون حاضرًا.',
+  'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
+    'رقم حصة سوقية لسوق لا يقيسه أحد حاليًا — توصيات صدرت، لا نقرات وردت.',
+  'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':
+    'النشاط التجاري المتصدّر في Google قد يظل غائبًا عن كل إجابة ذكاء اصطناعي تحسم المورّد. والعكس شائع بالقدر نفسه. فكل واجهة أصل تجاري مستقل، وعدم التماثل بين القنوات غير مرئي لأدوات SEO ولا لأدوات التحليلات.',
+  'Businesses that dominate one surface and disappear on the other — a divergence that stays invisible while each channel is reported separately.':
+    'أنشطة تجارية تهيمن على واجهة وتختفي من الأخرى — تباعد يبقى غير مرئي ما دامت كل قناة تُقاس على حدة.',
+  'The most expensive class of gap — absent from both surfaces on a question that carries real volume and real intent.':
+    'أغلى أصناف الفجوات — غياب عن الواجهتين معًا في سؤال يحمل حجمًا حقيقيًا ونيّة حقيقية.',
+  'The cheapest wins available: questions where you have already done the work and only the machine-readable form of it is missing.':
+    'أرخص المكاسب المتاحة: أسئلة أنجزتم العمل الخاص بها بالفعل ولا ينقص إلا صيغته المقروءة آليًا.',
+  'Cost per click weighted by the questions that decide purchases, rather than averaged across an account that includes cheap, irrelevant traffic.':
+    'تكلفة النقرة مرجّحة بالأسئلة التي تحسم عمليات الشراء، بدل حساب متوسط على حساب يضم زيارات رخيصة وغير ذات صلة.',
+  'A computed ceiling from deal value, margin and conversion — the number most advertising accounts are managed without ever calculating.':
+    'سقف محسوب من قيمة الصفقة والهامش ومعدل التحويل — الرقم الذي تُدار معظم حسابات الإعلانات دون احتسابه قط.',
+  'A costed switch list — which spend can be retired, what has to be published first, and how long the replacement takes to hold.':
+    'قائمة إحلال مُسعَّرة — أي إنفاق يمكن إيقافه، وما الذي يجب نشره أولاً، وكم يستغرق البديل حتى يثبت.',
+  'Competitive density expressed as a price trend, so the structural cost of staying still becomes visible before the budget review.':
+    'الكثافة التنافسية معبَّرًا عنها كاتجاه سعري، بحيث تصبح الكلفة البنيوية للبقاء دون حراك مرئية قبل مراجعة الميزانية.',
+  'Whether paid is buying growth or renting positions that authority would otherwise hold for free.':
+    'هل يشتري الإنفاق المدفوع نموًا أم يستأجر مواقع كانت المرجعية ستحتفظ بها مجانًا.',
+  'Knowing a competitor wins is not actionable. Knowing which evidence engines cite when they recommend that competitor is. This separates brand preference from an evidence gap you can close.':
+    'معرفة أن منافسًا يفوز ليست معلومة قابلة للتنفيذ. أما معرفة الأدلة التي تستشهد بها المحركات حين توصي بذلك المنافس فهي كذلك. وهذا يفصل تفضيل العلامة التجارية عن فجوة أدلة يمكن سدّها.',
+  'The individual assets a machine reaches for when it justifies choosing them — publications, comparisons, specifications, verified outcomes.':
+    'الأصول المفردة التي تلجأ إليها الآلة حين تبرّر اختيارهم — منشورات ومقارنات ومواصفات ونتائج متحقَّق منها.',
+  'Structured comparison of the evidence each competitor supplies to engines, and what it would take to match it. Converts a share gap into a specific, costed evidence programme.':
+    'مقارنة منظّمة للأدلة التي يقدّمها كل منافس للمحركات، وما يلزم لمجاراتها. تحوّل فجوة الحصة إلى برنامج أدلة محدّد ومُسعَّر.',
+  'The questions a dominant rival does not answer, does not cover, or answers badly — the cheapest available places to take share.':
+    'الأسئلة التي لا يجيب عنها منافس مهيمن، أو لا يغطيها، أو يجيب عنها بشكل سيئ — أرخص المواضع المتاحة لانتزاع حصة.',
+  'The share of visibility owned by partners rather than by the business, which is the share that leaves if the relationship ends.':
+    'حصة الظهور التي يملكها الشركاء لا النشاط التجاري — وهي الحصة التي تذهب إذا انتهت العلاقة.',
+  'Visibility creates attention; trust creates selection. A business can be found and still be filtered out when an engine has to stand behind naming it first.':
+    'الظهور يصنع الانتباه؛ والثقة تصنع الاختيار. فقد يُعثَر على نشاط تجاري ومع ذلك يُستبعَد حين يتعيّن على المحرك أن يتحمّل مسؤولية ذكره أولاً.',
+  'A countable ratio of independent sources, which turns an abstract brand gap into a publishing programme with a known scope and cost.':
+    'نسبة قابلة للعدّ من المصادر المستقلة، تحوّل فجوة علامة تجارية مجرّدة إلى برنامج نشر بنطاق وكلفة معلومين.',
+  'Being mentioned and being cited are different commercial positions. Only one of them survives into the next answer the system gives.':
+    'أن تُذكَر وأن يُستشهد بك موقعان تجاريان مختلفان. وواحد منهما فقط يصمد إلى الإجابة التالية التي يقدّمها النظام.',
+  'The small set of pages that disproportionately determine every answer given — frequently including a directory nobody at the company knows exists.':
+    'المجموعة الصغيرة من الصفحات التي تحدّد على نحو غير متناسب كل إجابة تُعطى — وكثيرًا ما تضم دليلاً لا يعرف أحد في الشركة بوجوده.',
+  'Proof has a shelf life. Case studies, coverage and reviews lose weight with age, and the decline is measurable before selection stops.':
+    'للإثبات مدة صلاحية. فدراسات الحالة والتغطية والتقييمات تفقد وزنها مع الزمن، والتراجع قابل للقياس قبل أن يتوقف الاختيار.',
+  'Most businesses lose the decision at one specific stage, not evenly across the journey. Locating that stage tells you where intervention returns most, and where further investment returns nothing.':
+    'معظم الأنشطة التجارية تخسر القرار في مرحلة واحدة بعينها، لا بالتساوي على امتداد الرحلة. وتحديد تلك المرحلة يبيّن أين يعطي التدخّل أكبر عائد، وأين لا يعطي الاستثمار الإضافي شيئًا.',
+  'Losses concentrate at one stage rather than spreading evenly. Locating that stage tells you where intervention returns, and where it returns nothing.':
+    'تتركّز الخسائر في مرحلة واحدة بدل أن تتوزّع بالتساوي. وتحديد تلك المرحلة يبيّن أين يعطي التدخّل عائدًا، وأين لا يعطي شيئًا.',
+  'The exact questions where a decision was made and the business was not in the room. These are not lost leads; no lead was ever created.':
+    'الأسئلة المحدّدة التي اتُّخذ فيها قرار ولم يكن النشاط التجاري حاضرًا. هذه ليست فرصًا ضائعة؛ فلم تُنشأ فرصة أصلاً.',
+  'Questions where the decision happens entirely without you, and where no channel measurement can show it, because nothing ever reached a channel.':
+    'أسئلة يقع فيها القرار بالكامل دونكم، ولا يستطيع أي قياس قناة إظهار ذلك، لأن شيئًا لم يبلغ قناةً أصلاً.',
+  'Presence averaged across all questions hides the collapse that matters. What decides revenue is presence at the supplier-evaluation stage, and that figure is usually far lower than the headline.':
+    'الحضور المحسوب كمتوسط عبر كل الأسئلة يخفي الانهيار الذي يهم. فما يحسم الإيراد هو الحضور في مرحلة تقييم المورّدين، وذلك الرقم أدنى بكثير عادةً من الرقم المعلن.',
+  'The size of the decision market itself, counted in decisions rather than in searches, sessions or impressions.':
+    'حجم سوق القرارات نفسه، محسوبًا بالقرارات لا بعمليات البحث أو الجلسات أو الظهور.',
+  'Value per decision by stage and question type, so a high-volume gap is not automatically ranked above a low-volume, high-value one.':
+    'القيمة لكل قرار بحسب المرحلة ونوع السؤال، حتى لا تُرتَّب فجوة عالية الحجم تلقائيًا فوق فجوة منخفضة الحجم عالية القيمة.',
+  'A directional range with its confidence stated — never a single confident figure, and never described as confirmed lost revenue.':
+    'نطاق تقديري مع بيان مستوى الثقة فيه — لا رقمًا واحدًا قاطعًا أبدًا، ولا يوصف قط بأنه إيراد ضائع مؤكَّد.',
+  'Every assumption behind an exposure figure, stated and editable — because a number whose assumptions are hidden cannot be argued with or trusted.':
+    'كل افتراض خلف رقم الخسارة، معلَن وقابل للتعديل — لأن رقمًا تُخفى افتراضاته لا يمكن مناقشته ولا الوثوق به.',
+  'Real differentiators that never appear in any category description — strengths the market currently has no vocabulary to express.':
+    'عوامل تمييز حقيقية لا تظهر في أي وصف للفئة — نقاط قوة لا يملك السوق حاليًا مفردات للتعبير عنها.',
+  'Whether buyers are evaluating against criteria a competitor published, which quietly decides the outcome before anyone is compared.':
+    'هل يقيّم المشترون وفق معايير نشرها منافس، وهو ما يحسم النتيجة بهدوء قبل أن تجري أي مقارنة.',
+  'Where the business sits on a price spectrum in the eyes of machines describing it — an assumption that shapes shortlists before any quote is sent.':
+    'أين يقع النشاط التجاري على سلّم الأسعار في نظر الآلات التي تصفه — افتراض يصوغ القوائم المختصرة قبل إرسال أي عرض سعر.',
+  'Demand maturity and competitive density per market, so expansion is sequenced by readiness rather than by proximity or preference.':
+    'نضج الطلب والكثافة التنافسية لكل سوق، بحيث يُرتَّب التوسّع بحسب الجاهزية لا بحسب القرب أو التفضيل.',
+  'Rate of change rather than a snapshot, so a strong position that is deteriorating is not mistaken for a safe one.':
+    'معدل التغيّر لا لقطة ثابتة، حتى لا يُخلَط بين موقع قوي آخذ في التدهور وموقع آمن.',
+  'Position measured market by market, which routinely contradicts the single global figure a company believes it has.':
+    'موقع يُقاس سوقًا بسوق، وهو ما يناقض بصورة روتينية الرقم العالمي الواحد الذي تظن الشركة أنها تملكه.',
+  'How category, positioning and reputation change across borders, including markets where the business is understood as a different kind of company entirely.':
+    'كيف تتغيّر الفئة والتموضع والسمعة عبر الحدود، بما في ذلك أسواق يُفهم فيها النشاط التجاري على أنه نوع مختلف تمامًا من الشركات.',
+  'Where positioning drifts by geography or language, so a business is a category leader in one market and an unknown in the next.':
+    'أين ينحرف التموضع بحسب الجغرافيا أو اللغة، فيكون النشاط التجاري متصدّر الفئة في سوق ومجهولاً في السوق التالي.',
+  'Where a channel partner’s description of your product is what machines have learned — and where that description is wrong.':
+    'أين يكون وصف شريك القناة لمنتجكم هو ما تعلّمته الآلات — وأين يكون ذلك الوصف خاطئًا.',
+  'Whether the brand is specified by name or treated as an interchangeable supplier — usually the more expensive answer of the two.':
+    'هل تُحدَّد العلامة التجارية بالاسم أم تُعامَل كمورّد قابل للاستبدال — وهو عادةً الجواب الأغلى بين الاثنين.',
+  'Whether the reasons for a premium survive the trip through distribution, or arrive at the buyer as an unexplained higher number.':
+    'هل تصمد أسباب السعر الأعلى في رحلتها عبر التوزيع، أم تصل إلى المشتري كرقم أكبر بلا تفسير.',
+  'A board-ready position rather than a dashboard. States what is happening, what it means commercially, what the directional exposure is, how long the window stays open, and what must change — with owners and deadlines.':
+    'موقف جاهز لمجلس الإدارة لا لوحة مؤشرات. يبيّن ما يحدث، وما يعنيه تجاريًا، وما حجم الخسارة التقديرية، وكم تبقى النافذة مفتوحة، وما الذي يجب أن يتغيّر — مع المالكين والمواعيد النهائية.',
+  'Ranked by exposure, confidence, urgency, effort and competitor pressure.':
+    'مرتّبة حسب الخسارة والثقة والإلحاح والجهد وضغط المنافسين.',
+  'The lag between doing the work and seeing the movement, which is what stops a working programme from being cancelled a month too early.':
+    'الفارق الزمني بين إنجاز العمل ورؤية الحركة، وهو ما يمنع إلغاء برنامج ناجح قبل أوانه بشهر.',
+  'Measured change against the predicted change, including the interventions that did not work — which is the only way the model earns trust.':
+    'التغيّر المقاس مقابل التغيّر المتوقع، بما في ذلك التدخّلات التي لم تنجح — وهي الطريقة الوحيدة التي يكتسب بها النموذج الثقة.',
+  'Corroborated claims reduce the risk an engine takes in naming a supplier first.':
+    'الادّعاءات المؤيَّدة تقلّل المخاطرة التي يتحمّلها المحرك حين يذكر مورّدًا أولاً.',
+
+  /* --- Readout labels and competitor findings -------------------------------------- */
+  'Category description': 'وصف الفئة',
+  'Category resolved': 'الفئة مُحدَّدة',
+  'Confusion and conflation': 'الخلط والالتباس',
+  'Recommendation share and momentum': 'حصة التوصيات والزخم',
+  'Recommendation share by stage': 'حصة التوصيات بحسب المرحلة',
+  'Recommendation share across 24 decision questions':
+    'حصة التوصيات عبر 24 سؤال قرار',
+  'Mentions and citations': 'الإشارات والاستشهادات',
+  'Social proof quality': 'جودة الدليل الاجتماعي',
+  'Source advantage analysis': 'تحليل أفضلية المصادر',
+  'Authority driver comparison': 'مقارنة محرّكات المرجعية',
+  'Competitor vulnerability': 'مواطن ضعف المنافس',
+  'Competitor control per stage': 'سيطرة المنافسين بحسب المرحلة',
+  'Competitive threat': 'تهديد تنافسي',
+  'Default vendor threat': 'تهديد المورّد الافتراضي',
+  'Why the competitor wins': 'لماذا يفوز المنافس',
+  'Why they win': 'لماذا يفوزون',
+  'Winning questions': 'الأسئلة الرابحة',
+  'Missed decision questions': 'أسئلة القرار الفائتة',
+  'Gap classification per commercial question': 'تصنيف الفجوة لكل سؤال تجاري',
+  'Question-to-stage mapping': 'ربط السؤال بالمرحلة',
+  'Stage-by-stage coverage': 'التغطية مرحلةً بمرحلة',
+  'The stage where presence collapses': 'المرحلة التي ينهار فيها الحضور',
+  'Strongest stage': 'أقوى مرحلة',
+  'Decision-journey position': 'الموقع في رحلة القرار',
+  'Revenue concentration by stage': 'تركّز الإيراد بحسب المرحلة',
+  'Revenue split by decision stage': 'توزيع الإيراد بحسب مرحلة القرار',
+  'Directional revenue exposure': 'خسارة الإيراد التقديرية',
+  'Paid dependency exposure': 'التعرّض للاعتماد على المدفوع',
+  'Strategic blind spots': 'نقاط عمياء استراتيجية',
+  'Strategic timing window': 'نافذة التوقيت الاستراتيجي',
+  'Market and language': 'السوق واللغة',
+  'What it believes': 'بماذا يعتقد',
+  'Recommendation presence': 'الحضور في التوصيات',
+  Unattributed: 'غير منسوب',
+  'Not resolved': 'غير محدَّد',
+  Resolved: 'محدَّد',
+  'Never recommends': 'لا يوصي أبدًا',
+  'Independent authority evidence — the constraint holding every downstream signal.':
+    'أدلة مرجعية مستقلة — القيد الذي يحكم كل إشارة لاحقة.',
+  'Classified as a hardware retailer, not an MRO distributor.':
+    'مصنَّف كمتجر أدوات بالتجزئة، لا كموزّع صيانة وتشغيل.',
+  'Conflated with a same-named logistics firm.':
+    'مخلوط بشركة لوجستيات تحمل الاسم نفسه.',
+  'No stable entity record. Category answered without naming any Midwest distributor.':
+    'لا سجل كيان مستقر. أُجيب عن الفئة دون ذكر أي موزّع في وسط الغرب.',
+  'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.':
+    'لا يذكر أي محرك ذكاء اصطناعي Northwind في تسعة عشر من أصل أربعة وعشرين سؤال قرار متابَعًا.',
+  'Named in seventeen of the nineteen questions where Northwind is absent.':
+    'مذكور في سبعة عشر من التسعة عشر سؤالاً التي تغيب عنها Northwind.',
+  'Kestrel named first in four of seven questions.':
+    'Kestrel تُذكر أولاً في أربعة من سبعة أسئلة.',
+  'Receives the recommendation in 31% of decisions and controls the supplier-evaluation stage.':
+    'تتلقّى التوصية في 31% من القرارات وتسيطر على مرحلة تقييم المورّدين.',
+  'Leads on the two most heavily weighted vectors.':
+    'تتصدّر في المتجهين الأعلى وزنًا.',
+  'Authority and Visibility are where its investment has concentrated.':
+    'المرجعية والظهور هما محورا تركّز استثمارها.',
+  'Independent validation lets engines recommend it without hedging.':
+    'التحقق المستقل يتيح للمحركات التوصية بها دون تحفّظ.',
+  'Advantage compounds in the absence of a response.':
+    'تتراكم الأفضلية في غياب أي رد.',
+  'Holds position while no counter-intervention is running.':
+    'تحافظ على موقعها ما دام لا يجري أي تدخّل مضاد.',
+  'Meridian publishes specification guidance that engines treat as category-defining language.':
+    'تنشر Meridian إرشادات مواصفات تعاملها المحركات كلغة تعرّف الفئة.',
+  'Atlas is named on procurement checklists that engines cite at the point of purchase.':
+    'Atlas مذكورة في قوائم تدقيق المشتريات التي تستشهد بها المحركات عند نقطة الشراء.',
+  'Two of six interventions are low effort with measurable movement inside 60 days.':
+    'اثنان من ستة تدخّلات منخفضا الجهد مع حركة قابلة للقياس خلال 60 يومًا.',
+  'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. Unattributed 28.8%':
+    'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. غير منسوب 28.8%',
+  'Not in top 100 organic. No AI recommendation. 320 searches per month.':
+    'ليس ضمن أول 100 نتيجة عضوية. لا توصية من الذكاء الاصطناعي. 320 عملية بحث شهريًا.',
+  'Position 1 organic, AI present. Volume 40 per month.':
+    'المركز 1 عضويًا، وحضور في الذكاء الاصطناعي. حجم 40 شهريًا.',
+  'Position 3 and recommended — the pattern that works.':
+    'المركز 3 ومُوصى به — النمط الذي ينجح.',
+
+  /* --- Tracked commercial keywords. Translated on the same reasoning as the
+         home page's search queries — see the note beside those. ------------------- */
+  'anchor bolts supplier': 'مورّد مسامير تثبيت',
+  'fastener catalog request': 'طلب كتالوج مثبّتات',
+  'fastener sourcing best practices': 'أفضل ممارسات توريد المثبّتات',
+  'industrial distributor fill rate': 'معدل تلبية الطلبات لدى موزّع صناعي',
+  'industrial supply account setup': 'فتح حساب توريد صناعي',
+  'industrial supply near me': 'توريد صناعي قريب مني',
+  'maintenance repair operations supplier': 'مورّد صيانة وإصلاح وتشغيل',
+  'mro consolidation vendor': 'مورّد لدمج الصيانة والتشغيل',
+  'mro supply agreement': 'اتفاقية توريد صيانة وتشغيل',
+  'plant maintenance supplies': 'مستلزمات صيانة المصانع',
+  'same day fastener shipping': 'شحن مثبّتات في اليوم نفسه',
+  'stainless steel fasteners supplier': 'مورّد مثبّتات من الفولاذ المقاوم للصدأ',
 }

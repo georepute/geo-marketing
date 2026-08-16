@@ -2294,4 +2294,522 @@ export const content: ContentOverlay = {
     'Que história está o mercado a contar sobre nós e como está a influenciar decisões? As narrativas ativas, quem detém cada uma, para onde caminham e o que deve mudar.',
   'Enter a domain and select a commercial question. Reconstruct what each AI engine understood, who received the decision, why, and what must change.':
     'Introduza um domínio e selecione uma questão comercial. Reconstrua o que cada motor de IA compreendeu, quem ficou com a decisão, porquê e o que tem de mudar.',
+
+  /* ==========================================================================
+     MARKETPLACE AND ENGINE DETAIL PAGES
+
+     Nineteen routes that were never audited until the route list was
+     enumerated properly. Composites the audit prints — "Entry · Snapshot",
+     "12 modules", "Next: …" — are NOT keys; the component joins two halves.
+     ====================================================================== */
+
+  /* --- Product page chrome --------------------------------------------------------- */
+  Breadcrumb: 'Trilho de navegação',
+  'Intelligence Marketplace': 'Mercado de inteligência',
+  'Intelligence Engines': 'Motores de inteligência',
+  'Product detail': 'Detalhe do produto',
+  'Everything needed to decide, without a sales call':
+    'Tudo o que é preciso para decidir, sem chamada comercial',
+  'What you receive': 'O que recebe',
+  'A real readout from this product, on seeded data':
+    'Uma leitura real deste produto, sobre dados pré-carregados',
+  'Every intelligence product returns the same twelve-section anatomy: executive truth, business meaning, evidence, connected signals, competitor context, commercial exposure, timing, trend, prescription, expected movement, owner and measurement.':
+    'Todos os produtos de inteligência devolvem a mesma anatomia de doze secções: verdade para a administração, significado de negócio, provas, sinais interligados, contexto dos concorrentes, exposição comercial, timing, tendência, prescrição, movimento esperado, responsável e medição.',
+  'One-time purchase. Placeholder pricing.':
+    'Compra única. Preços provisórios.',
+  'Buy this intelligence product': 'Comprar este produto de inteligência',
+  'Buy {name}': 'Comprar {name}',
+  'Compare with a subscription': 'Comparar com uma subscrição',
+  'See the full ecosystem': 'Ver o ecossistema completo',
+  'by {date}': 'até {date}',
+
+  /* --- The eleven product fields --------------------------------------------------- */
+  'Business question': 'Questão de negócio',
+  'Decision consequence': 'Consequência para a decisão',
+  'What it detects': 'O que deteta',
+  'Required inputs': 'Dados necessários',
+  Scope: 'Âmbito',
+  'Intelligence depth': 'Profundidade de inteligência',
+  Delivery: 'Entrega',
+  'Time to delivery': 'Prazo de entrega',
+  'Commercial terms': 'Condições comerciais',
+  'Upgrade path': 'Caminho de evolução',
+  Depth: 'Profundidade',
+  Date: 'Data',
+  Finding: 'Constatação',
+  Engine: 'Motor',
+  Observed: 'Observado',
+  Live: 'Ativo',
+  You: 'Vocês',
+
+  /* Tier display labels. The component maps the lowercase discriminants
+     (entry / advanced / premium) onto these before translating — see the
+     TIER_LABEL note in marketplace/[slug]/page.tsx. */
+  Entry: 'Base',
+  'Advanced tier': 'Avançado',
+  Premium: 'Premium',
+  /* Depth values. Already capitalised in the seed, so no collision. */
+  Snapshot: 'Instantâneo',
+  Advanced: 'Aprofundado',
+  Strategic: 'Estratégico',
+  Executive: 'Executivo',
+
+  /* --- Category page --------------------------------------------------------------- */
+  'All intelligence categories': 'Todas as categorias de inteligência',
+  'Other intelligence categories': 'Outras categorias de inteligência',
+  'Every module answers one question.': 'Cada módulo responde a uma pergunta.',
+  'Each returns the evidence behind its answer, what that answer means commercially, and what should change as a result.':
+    'Cada um devolve as provas que sustentam a sua resposta, o que essa resposta significa comercialmente e o que deve mudar em consequência.',
+  'Buy this intelligence': 'Comprar esta inteligência',
+  'Take one question, or take the whole category.':
+    'Leve uma pergunta, ou leve a categoria inteira.',
+  'Each purchase states what it examines, what it needs from you, how confident it can be and what it costs. No sales call is required to find any of that out.':
+    'Cada compra indica o que examina, o que precisa de si, com que confiança se pode pronunciar e quanto custa. Não é necessária qualquer chamada comercial para saber nada disso.',
+  'One engine produces this category.': 'Um motor produz esta categoria.',
+  '{n} engines produce this category.': '{n} motores produzem esta categoria.',
+  'Engines are the machinery, not the offer. Nothing above required you to know one existed.':
+    'Os motores são a maquinaria, não a oferta. Nada do que está acima exigia que soubesse que existia algum.',
+  '{n} modules': '{n} módulos',
+  '<b>{n}</b> intelligence modules in this category.':
+    '<b>{n}</b> módulos de inteligência nesta categoria.',
+  '<b>{n}</b> intelligence modules in this category · <b>{live}</b> running live in this environment.':
+    '<b>{n}</b> módulos de inteligência nesta categoria · <b>{live}</b> em funcionamento neste ambiente.',
+  Built: 'Construído',
+  'In platform': 'Na plataforma',
+  'In the platform': 'Na plataforma',
+
+  /* --- Engine detail page ---------------------------------------------------------- */
+  'Intelligence readout': 'Leitura de inteligência',
+  'What this engine concluded': 'A que este motor chegou',
+  'Signal, evidence, consequence, action': 'Sinal, prova, consequência, ação',
+  'Screens this engine provides': 'Ecrãs que este motor disponibiliza',
+  'Next: {name}': 'Seguinte: {name}',
+
+  /* --- Delivery, scope and inputs -------------------------------------------------- */
+  'After scan completion — typically under 20 minutes':
+    'Ao concluir a análise — normalmente em menos de 20 minutos',
+  'After scan completion — typically under 30 minutes':
+    'Ao concluir a análise — normalmente em menos de 30 minutos',
+  'After scan completion — typically under 60 minutes':
+    'Ao concluir a análise — normalmente em menos de 60 minutos',
+  'Expert-reviewed — within 3 business days':
+    'Revisto por um especialista — em 3 dias úteis',
+  'Optional: Search Console': 'Opcional: Search Console',
+  'Optional: Search Console and Analytics':
+    'Opcional: Search Console e Google Analytics',
+  'Up to 4 competitors': 'Até 4 concorrentes',
+  'Google + 6 engines': 'Google + 6 motores',
+  '6 AI engines · entity and category association · 1 market':
+    '6 motores de IA · associação de entidade e categoria · 1 mercado',
+  '6 AI engines · 20 commercial questions · 4 competitors · 1 market':
+    '6 motores de IA · 20 questões comerciais · 4 concorrentes · 1 mercado',
+  '6 AI engines · 24 decision questions · 4 competitors':
+    '6 motores de IA · 24 questões de decisão · 4 concorrentes',
+  '6 AI engines · 24 decision questions · 5 decision stages':
+    '6 motores de IA · 24 questões de decisão · 5 fases de decisão',
+  '6 AI engines · 24 questions · 20 keywords · 4 competitors · full GEON assessment':
+    '6 motores de IA · 24 questões · 20 termos · 4 concorrentes · avaliação GEON completa',
+  '6 AI engines · 24 questions · 4 competitors · citation analysis':
+    '6 motores de IA · 24 questões · 4 concorrentes · análise de citações',
+  '6 AI engines · 24 questions · 5 stages · 4 competitors':
+    '6 motores de IA · 24 questões · 5 fases · 4 concorrentes',
+  'Public trust and reputation sources · 1 market':
+    'Fontes públicas de confiança e reputação · 1 mercado',
+  'Continuous monitoring, additional markets, or the full platform with history and alerts.':
+    'Monitorização contínua, mercados adicionais, ou a plataforma completa com histórico e alertas.',
+  'Continuous monitoring, quarterly executive regeneration, or enterprise implementation.':
+    'Monitorização contínua, regeneração executiva trimestral, ou implementação empresarial.',
+  'Continuous prompt monitoring and visibility trends.':
+    'Monitorização contínua de consultas e tendências de visibilidade.',
+  'Continuous competitor monitoring and momentum tracking.':
+    'Monitorização contínua dos concorrentes e acompanhamento da dinâmica.',
+  'Continuous monitoring with stage-level alerting.':
+    'Monitorização contínua com alertas ao nível da fase.',
+  'Competitive War Room with continuous monitoring.':
+    'Sala de operações competitiva com monitorização contínua.',
+  'Recognition history and decay monitoring.':
+    'Histórico de reconhecimento e monitorização do desgaste.',
+  'Reputation momentum and trust decay monitoring.':
+    'Dinâmica de reputação e monitorização do desgaste da confiança.',
+  'Interactive workspace': 'Área de trabalho interativa',
+  'Downloadable intelligence brief': 'Relatório de inteligência para descarregar',
+  'Expert interpretation': 'Interpretação de especialista',
+  'Evidence pack': 'Dossiê de provas',
+  'Action plan': 'Plano de ação',
+  ' of 20': ' de 20',
+  ' of 24': ' de 24',
+
+  /* --- Product names. Descriptive rather than branded, so translated. -------------- */
+  'AI Recognition Scan': 'Análise de reconhecimento por IA',
+  'AI Recognition Scan | GeoRepute': 'Análise de reconhecimento por IA | GeoRepute',
+  'AI Search Presence Scan': 'Análise de presença na pesquisa com IA',
+  'AI Search Presence Scan | GeoRepute':
+    'Análise de presença na pesquisa com IA | GeoRepute',
+  'Google vs AI Gap Scan': 'Análise do desvio entre o Google e a IA',
+  'Google vs AI Gap Scan | GeoRepute':
+    'Análise do desvio entre o Google e a IA | GeoRepute',
+  'Competitor Recommendation Scan': 'Análise das recomendações da concorrência',
+  'Competitor Recommendation Scan | GeoRepute':
+    'Análise das recomendações da concorrência | GeoRepute',
+  'Trust Signals Scan': 'Análise dos sinais de confiança',
+  'Trust Signals Scan | GeoRepute': 'Análise dos sinais de confiança | GeoRepute',
+  'Decision Journey Diagnostic': 'Diagnóstico do percurso de decisão',
+  'Decision Journey Diagnostic | GeoRepute':
+    'Diagnóstico do percurso de decisão | GeoRepute',
+  'Competitive Position Assessment': 'Avaliação da posição competitiva',
+  'Competitive Position Assessment | GeoRepute':
+    'Avaliação da posição competitiva | GeoRepute',
+  'Executive Intelligence Brief': 'Relatório de inteligência para a administração',
+  'Executive Intelligence Brief | GeoRepute':
+    'Relatório de inteligência para a administração | GeoRepute',
+  'Decision Reconstruction — a completed reconstruction':
+    'Reconstrução da decisão — uma reconstrução concluída',
+  'Mission Control → the composite Decision Health position panel':
+    'Centro de comando → o painel de posição composto de Saúde da decisão',
+  'One commercial question, reconstructed from what each engine understood to what must change. Anonymised demonstration data.':
+    'Uma questão comercial, reconstruída desde o que cada motor compreendeu até ao que tem de mudar. Dados de demonstração anonimizados.',
+  'One decision position rather than ten measures. Anonymised demonstration data.':
+    'Uma posição de decisão em vez de dez medidas. Dados de demonstração anonimizados.',
+
+  /* --- Module business questions ---------------------------------------------------
+     The category page leads with the question, not the module name. */
+  'Does AI understand what the business actually does?':
+    'A IA percebe o que o negócio faz realmente?',
+  'Do AI engines understand who the business is and what it offers?':
+    'Os motores de IA percebem quem é o negócio e o que oferece?',
+  'Which AI systems know the business exists, and which do not?':
+    'Que sistemas de IA sabem que o negócio existe e quais não sabem?',
+  'Is AI confusing the business with someone else?':
+    'A IA está a confundir o negócio com outra entidade?',
+  'Is AI describing a version of the business that no longer exists?':
+    'A IA está a descrever uma versão do negócio que já não existe?',
+  'Is the business becoming less recognised over time?':
+    'O negócio está a ser cada vez menos reconhecido com o tempo?',
+  'Is the business visible when customers ask for recommendations?':
+    'O negócio é visível quando os clientes pedem recomendações?',
+  'When a buyer describes a need, is the business in the set AI considers?':
+    'Quando um comprador descreve uma necessidade, o negócio faz parte do conjunto que a IA considera?',
+  'Across the questions buyers actually ask, how often does the business appear at all?':
+    'Nas perguntas que os compradores realmente fazem, com que frequência o negócio sequer aparece?',
+  'Of all the recommendations made in this category, what share names the business?':
+    'De todas as recomendações feitas nesta categoria, que percentagem nomeia o negócio?',
+  'On those same questions, does AI put the business forward at all?':
+    'Nessas mesmas perguntas, a IA chega sequer a propor o negócio?',
+  'Do the two discovery surfaces tell the same story about us?':
+    'As duas superfícies de descoberta contam a mesma história sobre nós?',
+  'Is the business aligned across traditional search and AI discovery?':
+    'O negócio está alinhado entre a pesquisa tradicional e a descoberta por IA?',
+  'Which commercial questions are invisible on both surfaces at once?':
+    'Que questões comerciais são invisíveis nas duas superfícies ao mesmo tempo?',
+  'Where does the business rank on the questions that carry commercial intent?':
+    'Onde é que o negócio se posiciona nas perguntas com intenção comercial?',
+  'Where does existing authority already rank but fail to reach AI?':
+    'Onde é que a autoridade existente já se posiciona mas não chega à IA?',
+  'What kind of gap is this, and does it deserve investment?':
+    'Que tipo de lacuna é esta e merece investimento?',
+  'What is the business actually paying per commercial click?':
+    'Quanto está o negócio a pagar realmente por clique comercial?',
+  'Above what price does a click stop making money?':
+    'Acima de que preço um clique deixa de dar lucro?',
+  'How much of current demand would disappear if paid search stopped tomorrow?':
+    'Que parte da procura atual desapareceria se a pesquisa paga parasse amanhã?',
+  'Which paid positions could be replaced by owned authority?':
+    'Que posições pagas poderiam ser substituídas por autoridade própria?',
+  'Is the cost of the same position rising, and how fast?':
+    'O custo da mesma posição está a subir, e a que ritmo?',
+  'Who is being recommended instead of the business, and how often?':
+    'Quem está a ser recomendado em vez do negócio, e com que frequência?',
+  'Who is recommended instead, where and why?':
+    'Quem é recomendado em vez dele, onde e porquê?',
+  'Why do competitors capture the decision?':
+    'Porque é que os concorrentes captam a decisão?',
+  'What specifically makes a competitor recommendable?':
+    'O que torna um concorrente recomendável, em concreto?',
+  'How much more evidence supports them than supports us?':
+    'Quanto mais provas os sustentam a eles do que a nós?',
+  'Which specific questions does each competitor own?':
+    'Que perguntas concretas cada concorrente detém?',
+  'At which stage does each competitor take control?':
+    'Em que fase cada concorrente assume o controlo?',
+  'Where is the leading competitor actually weak?':
+    'Onde é que o concorrente líder é realmente fraco?',
+  'How easily could a competitor take the narrative from us?':
+    'Com que facilidade um concorrente nos poderia tirar a narrativa?',
+  'Do the sources that mention the business carry any weight?':
+    'As fontes que mencionam o negócio têm algum peso?',
+  'How much of what the business claims can anyone else confirm?':
+    'Que parte do que o negócio afirma pode ser confirmada por outra pessoa?',
+  'When AI cites a source to justify an answer, is any of it yours?':
+    'Quando a IA cita uma fonte para justificar uma resposta, alguma é vossa?',
+  'Which sources are shaping what AI believes about the business?':
+    'Que fontes estão a moldar o que a IA acredita sobre o negócio?',
+  'Which trust signals strengthen or weaken recommendation readiness?':
+    'Que sinais de confiança reforçam ou enfraquecem a aptidão para ser recomendado?',
+  'Is the evidence supporting the business ageing?':
+    'As provas que sustentam o negócio estão a envelhecer?',
+  'Where does the business disappear during the buyer decision process?':
+    'Onde é que o negócio desaparece durante o processo de decisão do comprador?',
+  'At which point in the buying journey does presence collapse?':
+    'Em que ponto do percurso de compra a presença colapsa?',
+  'Which specific buying questions complete without the business ever being named?':
+    'Que perguntas de compra concretas se concluem sem que o negócio seja alguma vez nomeado?',
+  'How many buying decisions are actually in play?':
+    'Quantas decisões de compra estão realmente em jogo?',
+  'What is one of those decisions worth to the business?':
+    'Quanto vale uma dessas decisões para o negócio?',
+  'What is the gap worth, and how confident can we be?':
+    'Quanto vale a lacuna e com que confiança o podemos afirmar?',
+  'What has to be true for this estimate to hold?':
+    'O que tem de ser verdade para que esta estimativa se mantenha?',
+  'Which of those blind spots are also high value?':
+    'Quais desses pontos cegos são também de valor elevado?',
+  'Which of our genuine advantages does the market never mention?':
+    'Quais das nossas vantagens reais o mercado nunca menciona?',
+  'How much of the language used to describe this category belongs to the business?':
+    'Que parte do vocabulário usado para descrever esta categoria pertence ao negócio?',
+  'Whose framing do machines use when they explain the category?':
+    'De quem é o enquadramento que as máquinas usam quando explicam a categoria?',
+  'Which criteria do machines cite first when explaining a choice?':
+    'Que critérios as máquinas citam primeiro ao explicar uma escolha?',
+  'Does the market think the business is expensive?':
+    'O mercado acha que o negócio é caro?',
+  'Is this market forming, forming fast, or already settled?':
+    'Este mercado está a formar-se, a formar-se depressa, ou já assentou?',
+  'Do buyers know enough yet to be worth persuading?':
+    'Os compradores já sabem o suficiente para valer a pena convencê-los?',
+  'Which markets are ready to be entered now?':
+    'Que mercados estão prontos para se entrar agora?',
+  'How quickly is the position moving, and in which direction?':
+    'Com que rapidez a posição se move, e em que direção?',
+  'Where in the world is the business strong, and where is it absent?':
+    'Onde no mundo é o negócio forte, e onde está ausente?',
+  'Does the business mean the same thing in every market?':
+    'O negócio significa a mesma coisa em todos os mercados?',
+  'Does the business mean something different in each country?':
+    'O negócio significa algo diferente em cada país?',
+  'Does the business tell the same story everywhere it appears?':
+    'O negócio conta a mesma história em todo o lado onde aparece?',
+  'Do partners describe the business the way it describes itself?':
+    'Os parceiros descrevem o negócio como ele se descreve a si próprio?',
+  'How much of the market position rests on intermediaries?':
+    'Que parte da posição no mercado assenta em intermediários?',
+  'How easily could the business be swapped out of the channel?':
+    'Com que facilidade o negócio poderia ser substituído dentro do canal?',
+  'Can the channel explain why the business costs more?':
+    'O canal consegue explicar porque é que o negócio custa mais?',
+  'What is the complete management position on risk, opportunity, timing and action?':
+    'Qual é a posição completa da gestão quanto a risco, oportunidade, timing e ação?',
+  'What should the business do, in what order?':
+    'O que deve o negócio fazer, e por que ordem?',
+  'Which intervention returns most, and what is currently blocked?':
+    'Que intervenção rende mais, e o que está bloqueado neste momento?',
+  'What lands this month, this quarter, and this year?':
+    'O que fica concluído este mês, este trimestre e este ano?',
+  'How long before an intervention shows up in the numbers?':
+    'Quanto tempo até uma intervenção aparecer nos números?',
+  'Did the work move the signal it was supposed to move?':
+    'O trabalho moveu o sinal que era suposto mover?',
+
+  /* --- What each module detects, and why it matters commercially ------------------- */
+  'An engine that cannot categorise a business cannot recommend it. Entity confusion sits upstream of every visibility metric — content investment cannot move an answer while the underlying record is wrong.':
+    'Um motor que não consegue classificar um negócio não o consegue recomendar. A confusão de entidade situa-se a montante de qualquer métrica de visibilidade: investir em conteúdo não move uma resposta enquanto o registo de base estiver errado.',
+  'Name collisions, merged records and mistaken identities — a single unresolved conflation can remove a business from every answer in its category.':
+    'Colisões de nomes, registos fundidos e identidades trocadas: uma única confusão por resolver pode retirar um negócio de todas as respostas da sua categoria.',
+  'Discontinued lines, closed locations, former ownership and superseded positioning still being repeated to buyers as current fact.':
+    'Linhas descontinuadas, instalações encerradas, propriedade anterior e posicionamento ultrapassado, ainda repetidos aos compradores como facto atual.',
+  'Recognition erodes when competitors keep publishing and you stop. Decay is measurable for months before it shows up as absence.':
+    'O reconhecimento erode-se quando os concorrentes continuam a publicar e vocês param. O desgaste é mensurável durante meses antes de se manifestar como ausência.',
+  'Entity understanding and recommendation presence are separate measures. An engine can resolve the business correctly and still never put it forward — recognition is necessary for a recommendation, not sufficient.':
+    'A compreensão da entidade e a presença em recomendações são medidas distintas. Um motor pode identificar corretamente o negócio e mesmo assim nunca o propor: o reconhecimento é necessário para uma recomendação, mas não suficiente.',
+  'Coverage measured against real buying questions rather than keywords — the difference between being findable and being present.':
+    'Cobertura medida face a perguntas de compra reais e não a palavras-chave: a diferença entre poder ser encontrado e estar presente.',
+  'A market-share figure for a market nobody is currently measuring — recommendations issued, not clicks received.':
+    'Um número de quota para um mercado que ninguém está a medir: recomendações emitidas, não cliques recebidos.',
+  'A business ranking in Google can still be absent from every AI answer that decides the vendor. The reverse is equally common. Each surface is a separate commercial asset, and channel asymmetry is invisible to both SEO and analytics tooling.':
+    'Um negócio bem posicionado no Google pode continuar ausente de todas as respostas de IA que decidem o fornecedor. O inverso é igualmente comum. Cada superfície é um ativo comercial distinto, e a assimetria entre canais é invisível tanto para o SEO como para a analítica.',
+  'Businesses that dominate one surface and disappear on the other — a divergence that stays invisible while each channel is reported separately.':
+    'Negócios que dominam uma superfície e desaparecem na outra — uma divergência que permanece invisível enquanto cada canal for reportado em separado.',
+  'The most expensive class of gap — absent from both surfaces on a question that carries real volume and real intent.':
+    'A classe de lacuna mais cara: ausente das duas superfícies numa pergunta com volume real e intenção real.',
+  'The cheapest wins available: questions where you have already done the work and only the machine-readable form of it is missing.':
+    'Os ganhos mais baratos disponíveis: perguntas em que o trabalho já foi feito e só falta a sua forma legível por máquina.',
+  'Cost per click weighted by the questions that decide purchases, rather than averaged across an account that includes cheap, irrelevant traffic.':
+    'Custo por clique ponderado pelas perguntas que decidem compras, em vez de uma média sobre uma conta que inclui tráfego barato e irrelevante.',
+  'A computed ceiling from deal value, margin and conversion — the number most advertising accounts are managed without ever calculating.':
+    'Um teto calculado a partir do valor do negócio, da margem e da conversão — o número que a maioria das contas de publicidade nunca chega a calcular.',
+  'A costed switch list — which spend can be retired, what has to be published first, and how long the replacement takes to hold.':
+    'Uma lista de substituição orçamentada: que despesa pode ser retirada, o que tem de ser publicado primeiro e quanto tempo o substituto demora a firmar-se.',
+  'Competitive density expressed as a price trend, so the structural cost of staying still becomes visible before the budget review.':
+    'A densidade competitiva expressa como tendência de preço, para que o custo estrutural de ficar parado se torne visível antes da revisão orçamental.',
+  'Whether paid is buying growth or renting positions that authority would otherwise hold for free.':
+    'Se o pago está a comprar crescimento ou a alugar posições que a autoridade manteria gratuitamente.',
+  'Knowing a competitor wins is not actionable. Knowing which evidence engines cite when they recommend that competitor is. This separates brand preference from an evidence gap you can close.':
+    'Saber que um concorrente ganha não é acionável. Saber que provas os motores citam quando o recomendam, é. Isso separa a preferência de marca de uma lacuna de provas que se pode fechar.',
+  'The individual assets a machine reaches for when it justifies choosing them — publications, comparisons, specifications, verified outcomes.':
+    'Os elementos concretos a que uma máquina recorre para justificar escolhê-los: publicações, comparações, especificações, resultados verificados.',
+  'Structured comparison of the evidence each competitor supplies to engines, and what it would take to match it. Converts a share gap into a specific, costed evidence programme.':
+    'Comparação estruturada das provas que cada concorrente fornece aos motores e do que seria preciso para as igualar. Converte uma diferença de quota num programa de provas concreto e orçamentado.',
+  'The questions a dominant rival does not answer, does not cover, or answers badly — the cheapest available places to take share.':
+    'As perguntas a que um rival dominante não responde, não cobre ou responde mal — os lugares mais baratos disponíveis para ganhar quota.',
+  'The share of visibility owned by partners rather than by the business, which is the share that leaves if the relationship ends.':
+    'A parte da visibilidade detida por parceiros e não pelo negócio — é a parte que se vai embora se a relação terminar.',
+  'Visibility creates attention; trust creates selection. A business can be found and still be filtered out when an engine has to stand behind naming it first.':
+    'A visibilidade cria atenção; a confiança cria escolha. Um negócio pode ser encontrado e ainda assim ser filtrado quando um motor tem de responder por nomeá-lo em primeiro lugar.',
+  'A countable ratio of independent sources, which turns an abstract brand gap into a publishing programme with a known scope and cost.':
+    'Um rácio contável de fontes independentes, que transforma uma lacuna de marca abstrata num programa editorial com âmbito e custo conhecidos.',
+  'Being mentioned and being cited are different commercial positions. Only one of them survives into the next answer the system gives.':
+    'Ser mencionado e ser citado são posições comerciais diferentes. Só uma delas sobrevive até à resposta seguinte que o sistema dá.',
+  'The small set of pages that disproportionately determine every answer given — frequently including a directory nobody at the company knows exists.':
+    'O pequeno conjunto de páginas que determina de forma desproporcionada cada resposta dada — incluindo frequentemente um diretório cuja existência ninguém na empresa conhece.',
+  'Proof has a shelf life. Case studies, coverage and reviews lose weight with age, and the decline is measurable before selection stops.':
+    'A prova tem prazo de validade. Casos de estudo, cobertura e avaliações perdem peso com a idade, e o declínio é mensurável antes de a escolha cessar.',
+  'Most businesses lose the decision at one specific stage, not evenly across the journey. Locating that stage tells you where intervention returns most, and where further investment returns nothing.':
+    'A maioria dos negócios perde a decisão numa fase específica, e não de forma uniforme ao longo do percurso. Localizar essa fase indica onde a intervenção rende mais e onde continuar a investir não rende nada.',
+  'Losses concentrate at one stage rather than spreading evenly. Locating that stage tells you where intervention returns, and where it returns nothing.':
+    'As perdas concentram-se numa fase em vez de se distribuírem por igual. Localizar essa fase indica onde a intervenção rende e onde não rende nada.',
+  'The exact questions where a decision was made and the business was not in the room. These are not lost leads; no lead was ever created.':
+    'As perguntas exatas em que foi tomada uma decisão e o negócio não estava na sala. Não são contactos perdidos: nunca chegou a ser criado nenhum.',
+  'Questions where the decision happens entirely without you, and where no channel measurement can show it, because nothing ever reached a channel.':
+    'Perguntas em que a decisão acontece inteiramente sem vocês e que nenhuma medição de canal consegue mostrar, porque nada chegou sequer a um canal.',
+  'Presence averaged across all questions hides the collapse that matters. What decides revenue is presence at the supplier-evaluation stage, and that figure is usually far lower than the headline.':
+    'A presença calculada como média de todas as perguntas esconde o colapso que importa. O que decide a receita é a presença na fase de avaliação de fornecedores, e esse número costuma ser muito inferior ao anunciado.',
+  'The size of the decision market itself, counted in decisions rather than in searches, sessions or impressions.':
+    'A dimensão do próprio mercado de decisões, contada em decisões e não em pesquisas, sessões ou impressões.',
+  'Value per decision by stage and question type, so a high-volume gap is not automatically ranked above a low-volume, high-value one.':
+    'Valor por decisão consoante a fase e o tipo de pergunta, para que uma lacuna de grande volume não fique automaticamente acima de outra de baixo volume e valor elevado.',
+  'A directional range with its confidence stated — never a single confident figure, and never described as confirmed lost revenue.':
+    'Um intervalo indicativo com o seu grau de confiança declarado — nunca um número único e categórico, e nunca descrito como receita perdida confirmada.',
+  'Every assumption behind an exposure figure, stated and editable — because a number whose assumptions are hidden cannot be argued with or trusted.':
+    'Cada pressuposto por trás de um número de exposição, declarado e editável — porque com um número cujos pressupostos estão escondidos não se pode discutir nem confiar.',
+  'Real differentiators that never appear in any category description — strengths the market currently has no vocabulary to express.':
+    'Diferenciadores reais que não aparecem em nenhuma descrição da categoria — forças para as quais o mercado ainda não tem vocabulário.',
+  'Whether buyers are evaluating against criteria a competitor published, which quietly decides the outcome before anyone is compared.':
+    'Se os compradores estão a avaliar segundo critérios publicados por um concorrente, o que decide em silêncio o resultado antes de alguém ser comparado.',
+  'Where the business sits on a price spectrum in the eyes of machines describing it — an assumption that shapes shortlists before any quote is sent.':
+    'Onde o negócio se situa na escala de preços aos olhos das máquinas que o descrevem — um pressuposto que molda listas restritas antes de ser enviado qualquer orçamento.',
+  'Demand maturity and competitive density per market, so expansion is sequenced by readiness rather than by proximity or preference.':
+    'Maturidade da procura e densidade competitiva por mercado, para que a expansão seja ordenada por preparação e não por proximidade ou preferência.',
+  'Rate of change rather than a snapshot, so a strong position that is deteriorating is not mistaken for a safe one.':
+    'Ritmo de mudança em vez de um instantâneo, para que uma posição forte mas em deterioração não seja confundida com uma posição segura.',
+  'Position measured market by market, which routinely contradicts the single global figure a company believes it has.':
+    'Posição medida mercado a mercado, o que contradiz rotineiramente o único número global que uma empresa julga ter.',
+  'How category, positioning and reputation change across borders, including markets where the business is understood as a different kind of company entirely.':
+    'Como a categoria, o posicionamento e a reputação mudam de país para país, incluindo mercados onde o negócio é entendido como um tipo de empresa completamente diferente.',
+  'Where positioning drifts by geography or language, so a business is a category leader in one market and an unknown in the next.':
+    'Onde o posicionamento se desvia por geografia ou língua, ao ponto de um negócio ser líder de categoria num mercado e um desconhecido no seguinte.',
+  'Where a channel partner’s description of your product is what machines have learned — and where that description is wrong.':
+    'Onde a descrição que um parceiro de canal faz do vosso produto é aquilo que as máquinas aprenderam — e onde essa descrição está errada.',
+  'Whether the brand is specified by name or treated as an interchangeable supplier — usually the more expensive answer of the two.':
+    'Se a marca é indicada pelo nome ou tratada como fornecedor substituível — normalmente a mais cara das duas respostas.',
+  'Whether the reasons for a premium survive the trip through distribution, or arrive at the buyer as an unexplained higher number.':
+    'Se as razões de um preço superior sobrevivem à passagem pela distribuição ou chegam ao comprador como um número mais alto e sem explicação.',
+  'A board-ready position rather than a dashboard. States what is happening, what it means commercially, what the directional exposure is, how long the window stays open, and what must change — with owners and deadlines.':
+    'Uma posição pronta para a administração, não um painel. Indica o que está a acontecer, o que significa comercialmente, qual a exposição indicativa, quanto tempo a janela permanece aberta e o que tem de mudar — com responsáveis e prazos.',
+  'Ranked by exposure, confidence, urgency, effort and competitor pressure.':
+    'Ordenado por exposição, confiança, urgência, esforço e pressão da concorrência.',
+  'The lag between doing the work and seeing the movement, which is what stops a working programme from being cancelled a month too early.':
+    'O desfasamento entre fazer o trabalho e ver o movimento — é isso que impede que um programa que funciona seja cancelado um mês cedo demais.',
+  'Measured change against the predicted change, including the interventions that did not work — which is the only way the model earns trust.':
+    'A mudança medida face à mudança prevista, incluindo as intervenções que não resultaram — a única forma de o modelo conquistar confiança.',
+  'Corroborated claims reduce the risk an engine takes in naming a supplier first.':
+    'Afirmações corroboradas reduzem o risco que um motor corre ao nomear um fornecedor em primeiro lugar.',
+
+  /* --- Readout labels and competitor findings -------------------------------------- */
+  'Category description': 'Descrição da categoria',
+  'Category resolved': 'Categoria resolvida',
+  'Confusion and conflation': 'Confusão e sobreposição',
+  'Recommendation presence': 'Presença em recomendações',
+  'Recommendation share and momentum': 'Quota de recomendações e dinâmica',
+  'Recommendation share by stage': 'Quota de recomendações por fase',
+  'Recommendation share across 24 decision questions':
+    'Quota de recomendações em 24 questões de decisão',
+  'Mentions and citations': 'Menções e citações',
+  'Social proof quality': 'Qualidade da prova social',
+  'Source advantage analysis': 'Análise da vantagem em fontes',
+  'Authority driver comparison': 'Comparação dos motores de autoridade',
+  'Competitor vulnerability': 'Vulnerabilidade do concorrente',
+  'Competitor control per stage': 'Controlo dos concorrentes por fase',
+  'Competitive threat': 'Ameaça competitiva',
+  'Default vendor threat': 'Ameaça do fornecedor por omissão',
+  'Why the competitor wins': 'Porque é que o concorrente ganha',
+  'Why they win': 'Porque é que ganham',
+  'Winning questions': 'Perguntas ganhas',
+  'Missed decision questions': 'Questões de decisão perdidas',
+  'Gap classification per commercial question':
+    'Classificação da lacuna por questão comercial',
+  'Question-to-stage mapping': 'Correspondência entre pergunta e fase',
+  'Stage-by-stage coverage': 'Cobertura fase a fase',
+  'The stage where presence collapses': 'A fase em que a presença colapsa',
+  'Strongest stage': 'Fase mais forte',
+  'Decision-journey position': 'Posição no percurso de decisão',
+  'Revenue concentration by stage': 'Concentração da receita por fase',
+  'Revenue split by decision stage': 'Repartição da receita por fase de decisão',
+  'Directional revenue exposure': 'Exposição indicativa da receita',
+  'Paid dependency exposure': 'Exposição à dependência do pago',
+  'Strategic blind spots': 'Pontos cegos estratégicos',
+  'Strategic timing window': 'Janela estratégica',
+  'Market and language': 'Mercado e língua',
+  'What it believes': 'No que acredita',
+  'Not resolved': 'Não resolvido',
+  Resolved: 'Resolvido',
+  'Never recommends': 'Nunca recomenda',
+  Unattributed: 'Não atribuído',
+  'Independent authority evidence — the constraint holding every downstream signal.':
+    'Provas de autoridade independentes — a restrição que segura todos os sinais a jusante.',
+  'Classified as a hardware retailer, not an MRO distributor.':
+    'Classificado como loja de ferragens a retalho, e não como distribuidor de MRO.',
+  'Conflated with a same-named logistics firm.':
+    'Confundido com uma empresa de logística homónima.',
+  'No stable entity record. Category answered without naming any Midwest distributor.':
+    'Sem registo estável de entidade. A categoria foi respondida sem nomear qualquer distribuidor do Midwest.',
+  'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.':
+    'Nenhum motor de IA nomeia a Northwind em dezanove das vinte e quatro questões de decisão acompanhadas.',
+  'Named in seventeen of the nineteen questions where Northwind is absent.':
+    'Nomeado em dezassete das dezanove perguntas em que a Northwind está ausente.',
+  'Kestrel named first in four of seven questions.':
+    'Kestrel nomeada em primeiro lugar em quatro de sete perguntas.',
+  'Receives the recommendation in 31% of decisions and controls the supplier-evaluation stage.':
+    'Recebe a recomendação em 31 % das decisões e controla a fase de avaliação de fornecedores.',
+  'Leads on the two most heavily weighted vectors.':
+    'Lidera nos dois vetores de maior peso.',
+  'Authority and Visibility are where its investment has concentrated.':
+    'A autoridade e a visibilidade são onde o seu investimento se concentrou.',
+  'Independent validation lets engines recommend it without hedging.':
+    'A validação independente permite aos motores recomendá-la sem reservas.',
+  'Advantage compounds in the absence of a response.':
+    'A vantagem acumula-se na ausência de resposta.',
+  'Holds position while no counter-intervention is running.':
+    'Mantém a posição enquanto não houver uma contra-intervenção em curso.',
+  'Meridian publishes specification guidance that engines treat as category-defining language.':
+    'A Meridian publica orientações de especificação que os motores tratam como o vocabulário que define a categoria.',
+  'Atlas is named on procurement checklists that engines cite at the point of purchase.':
+    'A Atlas é nomeada em listas de verificação de compras que os motores citam no momento da compra.',
+  'Two of six interventions are low effort with measurable movement inside 60 days.':
+    'Duas das seis intervenções exigem pouco esforço e produzem movimento mensurável em menos de 60 dias.',
+  'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. Unattributed 28.8%':
+    'Kestrel Industrial 31 %. Meridian Supply Co 18 %. Halvorsen Industrial 11 %. Atlas Trade Group 7 %. Northwind Supply 4,2 %. Não atribuído 28,8 %',
+  'Not in top 100 organic. No AI recommendation. 320 searches per month.':
+    'Fora dos 100 primeiros resultados orgânicos. Sem recomendação de IA. 320 pesquisas por mês.',
+  'Position 1 organic, AI present. Volume 40 per month.':
+    'Posição 1 em orgânico, presença na IA. Volume de 40 por mês.',
+  'Position 3 and recommended — the pattern that works.':
+    'Posição 3 e recomendado — o padrão que funciona.',
+
+  /* --- Tracked commercial keywords. Translated on the same reasoning as the
+         home page's search queries — see the note beside those. ------------------- */
+  'anchor bolts supplier': 'fornecedor de chumbadouros',
+  'fastener catalog request': 'pedido de catálogo de fixadores',
+  'fastener sourcing best practices':
+    'boas práticas de aprovisionamento de fixadores',
+  'industrial distributor fill rate':
+    'taxa de satisfação de encomendas de distribuidor industrial',
+  'industrial supply account setup': 'abrir conta de fornecimento industrial',
+  'industrial supply near me': 'fornecimento industrial perto de mim',
+  'maintenance repair operations supplier':
+    'fornecedor de manutenção reparação e operação',
+  'mro consolidation vendor': 'fornecedor para consolidação de MRO',
+  'mro supply agreement': 'contrato de fornecimento de MRO',
+  'plant maintenance supplies': 'consumíveis de manutenção fabril',
+  'same day fastener shipping': 'expedição de fixadores no próprio dia',
+  'stainless steel fasteners supplier': 'fornecedor de fixadores em inox',
 }
