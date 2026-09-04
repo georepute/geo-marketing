@@ -121,14 +121,15 @@ export const SCREEN_SLOTS = {
     alt: 'A rotatable globe showing the geographic footprint of search-engine visibility, with the countries carrying measured commercial demand highlighted and counted beneath it.',
     ready: true,
   },
+  /* WITHDRAWN for the same reason as narrative-intelligence above. */
   'trust-authority': {
     file: '/screens/trust-authority.png',
-    aspect: 561 / 693,
+    aspect: PANEL,
     surface: 'Trust & Authority — independent-source verification view',
     caption:
-      'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.',
-    alt: 'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.',
-    ready: true,
+      'What a system can cite when it has to justify a recommendation. Invented competitors only.',
+    alt: 'A trust and authority panel counting the independent sources that corroborate a business against those corroborating its competitors.',
+    ready: false,
   },
 
   /* ---------------------------------------------------------------------
@@ -170,14 +171,18 @@ export const SCREEN_SLOTS = {
     alt: 'A search intelligence panel relating commercial query coverage to the cost of reaching those queries through paid acquisition.',
     ready: false,
   },
+  /* WITHDRAWN. The export that filled this named eleven real companies with
+     attributed attention-share and narrative-quality scores. Those are
+     factual claims about identifiable third parties, and the slot goes back
+     to empty until a version arrives with invented competitors in it. */
   'narrative-intelligence': {
     file: '/screens/narrative-intelligence.png',
-    aspect: 559 / 713,
+    aspect: WIDE,
     surface: 'Narrative Intelligence — narrative ownership and movement',
     caption:
-      'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.',
-    alt: 'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.',
-    ready: true,
+      'Which account of the category is circulating, and whose language it uses. Invented competitors only.',
+    alt: 'A narrative intelligence screen listing the narratives circulating about a business and its category, each with its polarity, its reach and the direction it is moving in.',
+    ready: false,
   },
 
   /* ---------------------------------------------------------------------

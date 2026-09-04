@@ -286,7 +286,7 @@ export function Reconstruct({
               {data.winner.why}
             </blockquote>
             <p className="text-caption text-ink-3 mt-4" data-numeric="">
-              {t('{n} independent sources support this brand. Northwind has 3.', { n: data.winner.authoritySources })}
+              {t('{n} independent sources support this brand. Ironvale has 3.', { n: data.winner.authoritySources })}
             </p>
           </div>
         </Stage>

@@ -5,7 +5,7 @@ import type { Polarity, Momentum } from './narrative'
    ELECTION MODE — optional political narrative intelligence.
 
    WHY THIS IS A SEPARATE SUBJECT
-   Every other surface in this environment reconstructs Northwind Supply, an
+   Every other surface in this environment reconstructs Ironvale Supply, an
    industrial distributor. A political narrative cannot be reconstructed for an
    MRO distributor without inventing a story that contradicts everything else
    in the seed, so Election Mode switches the SUBJECT rather than adding a

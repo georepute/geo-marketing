@@ -157,7 +157,7 @@ export function reconstruct(promptId: string): Reconstruction | null {
 
   /* --- 1. Engine understanding ---------------------------------------- */
   const engines: ReconstructionEngine[] = AI_ENGINES.map((engine) => {
-    const recommended = prompt.northwindRecommendedBy.includes(engine.id)
+    const recommended = prompt.subjectRecommendedBy.includes(engine.id)
     const status: EngineStatus = recommended
       ? 'recommended'
       : engine.confusion
@@ -171,13 +171,13 @@ export function reconstruct(promptId: string): Reconstruction | null {
       status,
       recognitionScore: engine.recognitionScore,
       note: recommended
-        ? `Named Northwind in its answer, citing ${engine.dominantSources[0]?.toLowerCase() ?? 'a public source'}.`
+        ? `Named Ironvale in its answer, citing ${engine.dominantSources[0]?.toLowerCase() ?? 'a public source'}.`
         : (engine.confusion ??
           'Recognises the business but did not consider it relevant to this question.'),
     }
   })
 
-  const recommendedBy = prompt.northwindRecommendedBy.length
+  const recommendedBy = prompt.subjectRecommendedBy.length
   const coveragePct = Number(
     ((recommendedBy / AI_ENGINES.length) * 100).toFixed(1),
   )
@@ -192,13 +192,13 @@ export function reconstruct(promptId: string): Reconstruction | null {
       name: 'Trade publication coverage',
       influence: 'high',
       favours: 'competitor',
-      note: `${winner.name} is cited by ${winner.authoritySources} independent sources; Northwind by ${POSTURE.independentValidationSources}.`,
+      note: `${winner.name} is cited by ${winner.authoritySources} independent sources; Ironvale by ${POSTURE.independentValidationSources}.`,
     },
     {
       name: 'Company website',
       influence: 'medium',
       favours: 'brand',
-      note: 'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.',
+      note: 'Ironvale’s own pages are the only source engines can reach for its claims — self-citation carries little weight.',
     },
     {
       name: 'Supplier-comparison content',
@@ -210,7 +210,7 @@ export function reconstruct(promptId: string): Reconstruction | null {
       name: 'Category evaluation criteria',
       influence: 'medium',
       favours: 'competitor',
-      note: `Engines describe the category using a competitor's framing. Northwind owns ${POSTURE.narrativeOwnershipPct}% of that language.`,
+      note: `Engines describe the category using a competitor's framing. Ironvale owns ${POSTURE.narrativeOwnershipPct}% of that language.`,
     },
   ]
 
@@ -278,8 +278,8 @@ export function reconstruct(promptId: string): Reconstruction | null {
       coveragePct,
       verdict:
         recommendedBy === 0
-          ? 'No engine put Northwind forward. The decision completed without the brand appearing at all.'
-          : `${recommendedBy} of ${AI_ENGINES.length} engines named Northwind, and none placed it first.`,
+          ? 'No engine put Ironvale forward. The decision completed without the brand appearing at all.'
+          : `${recommendedBy} of ${AI_ENGINES.length} engines named Ironvale, and none placed it first.`,
     },
     winner: {
       name: winner.name,
@@ -381,7 +381,7 @@ export function decisionGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
       row: 1,
       kind: 'input',
       readoutId: 'r-authority',
-      evidence: 'Category median is 14. Kestrel holds 21.',
+      evidence: 'Category median is 14. Cindermark holds 21.',
     },
     {
       id: 'content',
@@ -432,7 +432,7 @@ export function decisionGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
       row: 1,
       kind: 'market',
       readoutId: 'r-competitor',
-      evidence: 'Kestrel Industrial leads five of seven supplier questions.',
+      evidence: 'Cindermark Industrial leads five of seven supplier questions.',
     },
     {
       id: 'narrative',

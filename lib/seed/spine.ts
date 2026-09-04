@@ -14,7 +14,7 @@ export const SPINE = {
   /** ChatGPT supplier-recommendation presence. §13.1 */
   chatgptRecommendationPresencePct: 4.2,
 
-  /** Share of supplier-evaluation answers in which Northwind appears. §13.1 */
+  /** Share of supplier-evaluation answers in which Ironvale appears. §13.1 */
   supplierEvaluationCoveragePct: 7,
 
   /** Independent authority evidence. §13.1 */
@@ -46,7 +46,7 @@ export const SPINE = {
 export const EXPOSURE_INPUTS = {
   /** Monthly decision-stage query volume. Equals the sum of all prompt volumes. */
   monthlyDecisionQueries: 1_240,
-  /** Share of those queries where a competitor is recommended and Northwind is
+  /** Share of those queries where a competitor is recommended and Ironvale is
       a viable but unlisted supplier. */
   decisionGapPct: 26.8,
   /** Estimated query-to-order conversion, as a range. Never a point estimate. */

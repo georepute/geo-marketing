@@ -66,7 +66,7 @@ export function ElectionPanel({
             Election mode analyses a different subject.
           </p>
           <p className="text-caption text-ink-2 mt-2 max-w-3xl">
-            Every other surface in this environment reconstructs Northwind
+            Every other surface in this environment reconstructs Ironvale
             Supply, an industrial distributor. Political narrative has no
             meaning for that subject, so this mode switches to{' '}
             <span className="text-ink">{subject.candidate}</span> in{' '}

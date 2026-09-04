@@ -55,9 +55,9 @@ export const FEED: FeedEvent[] = [
   {
     id: 'f1',
     kind: 'competitor-surge',
-    headline: 'Kestrel Industrial gained the first recommendation on two more supplier questions',
+    headline: 'Cindermark Industrial gained the first recommendation on two more supplier questions',
     detail:
-      'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.',
+      'Cindermark now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.',
     delta: '+2 questions',
     direction: 'up',
     tone: 'negative',
@@ -68,7 +68,7 @@ export const FEED: FeedEvent[] = [
   {
     id: 'f2',
     kind: 'citation-lost',
-    headline: 'Perplexity stopped citing the Northwind capability page',
+    headline: 'Perplexity stopped citing the Ironvale capability page',
     detail:
       'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.',
     delta: '3 → 0 citations',
@@ -81,7 +81,7 @@ export const FEED: FeedEvent[] = [
   {
     id: 'f3',
     kind: 'recommendation-gained',
-    headline: 'Claude began recommending Northwind for regional distributor questions',
+    headline: 'Claude began recommending Ironvale for regional distributor questions',
     detail:
       'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.',
     delta: '+1 question',
@@ -109,7 +109,7 @@ export const FEED: FeedEvent[] = [
     kind: 'trust-decay',
     headline: 'Category description diverged across two trade directories',
     detail:
-      'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.',
+      'Two directories now describe Ironvale differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.',
     delta: null,
     direction: 'neutral',
     tone: 'negative',
@@ -135,7 +135,7 @@ export const FEED: FeedEvent[] = [
     kind: 'question-emerging',
     headline: 'A new supplier-evaluation question entered the tracked set',
     detail:
-      '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.',
+      '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Ironvale is absent from every engine answering it.',
     delta: '25 searches/mo',
     direction: 'up',
     tone: 'neutral',
