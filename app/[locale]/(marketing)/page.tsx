@@ -64,6 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
    ========================================================================= */
 
 export default async function Home() {
+  const copy = await getDictionary()
   const t = await getT()
 
   const [preview, questions, competitors] = await Promise.all([
@@ -104,8 +105,11 @@ export default async function Home() {
             <p className="text-label uppercase text-brand-300">
               {t('Your business')}
             </p>
+            {/* Dictionary, not t(). This heading is copy.home.liveEntry — a
+                DICTIONARY key — and the content overlay has no entry for it,
+                so t() found nothing and rendered English on all six locales. */}
             <h2 className="text-display-2 text-ink mt-5 max-w-3xl text-balance">
-              {t('See what the market understands about your business.')}
+              {copy.home.liveEntry}
             </h2>
             <p className="text-body-lg text-ink-2 mt-6 max-w-2xl">
               {t(
