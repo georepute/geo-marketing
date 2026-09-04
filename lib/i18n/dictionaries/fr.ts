@@ -19,10 +19,9 @@ export const meta: DictionaryMeta = {
 
 export const dictionary: PartialDictionary = {
   /* --- §19 core commercial copy ---------------------------------------- */
-  category: 'LE SYSTÈME D’EXPLOITATION DE L’INTELLIGENCE DÉCISIONNELLE',
-  heroPrimary:
-    'Voyez où votre entreprise est reconnue, recommandée et choisie.',
-  heroContinuation: 'Et où la décision va ailleurs.',
+  category: 'LA COUCHE D’INTELLIGENCE ET D’EXÉCUTION POUR LES AGENCES MODERNES',
+  heroPrimary: 'Vendez plus. Livrez plus. Fidélisez plus longtemps.',
+  heroContinuation: 'Sans faire croître votre équipe au même rythme.',
   categoryPositioning:
     'Les plateformes traditionnelles optimisent des canaux. GeoRepute reconstruit des décisions.',
   analyticsDisruption: 'Vos analyses commencent trop tard.',
@@ -50,9 +49,11 @@ export const dictionary: PartialDictionary = {
 
   /* --- Home ------------------------------------------------------------- */
   home: {
-    heroCtaPrimary: 'Analyser mon entreprise',
-    heroCtaSecondary: 'Explorer les produits d’intelligence',
+    heroCtaPrimary: 'Voir GeoRepute en action',
+    heroCtaSecondary: 'Explorer la plateforme',
     heroCtaEnterprise: 'Réserver un briefing de direction',
+    heroSubheadline: 'GeoRepute donne aux agences marketing les capacités de recherche, d’intelligence, de stratégie et d’exécution d’une équipe bien plus grande, sur une seule plateforme.',
+    heroSupporting: 'Analysez vos clients, votre marché et vos concurrents sur Google et six moteurs d’IA. Menez plus de 100 analyses approfondies, commerciales et marketing. Réalisez une due diligence marketing avant les campagnes. Construisez des stratégies, plans de travail, budgets, besoins en ressources et propositions fondés sur les données. Exécutez sur tous les canaux en sept langues, puis mesurez et améliorez en continu par le PDCA.',
     disruptionSub:
       'La décision du client commence souvent avant qu’une visite, un clic, un contact ou un enregistrement CRM n’existe.',
     liveEntry: 'Voyez ce que le marché comprend de votre entreprise.',

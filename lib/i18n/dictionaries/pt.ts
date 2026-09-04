@@ -23,9 +23,9 @@ export const meta: DictionaryMeta = {
 
 export const dictionary: PartialDictionary = {
   /* --- §19 core commercial copy ---------------------------------------- */
-  category: 'O SISTEMA OPERATIVO DE INTELIGÊNCIA DE DECISÃO',
-  heroPrimary: 'Veja onde a sua empresa é reconhecida, recomendada e escolhida.',
-  heroContinuation: 'E onde a decisão segue para outro lado.',
+  category: 'A CAMADA DE INTELIGÊNCIA E EXECUÇÃO PARA AGÊNCIAS MODERNAS',
+  heroPrimary: 'Venda mais. Entregue mais. Retenha clientes durante mais tempo.',
+  heroContinuation: 'Sem aumentar a sua equipa ao mesmo ritmo.',
   categoryPositioning:
     'As plataformas tradicionais otimizam canais. A GeoRepute reconstrói decisões.',
   analyticsDisruption: 'As suas análises começam demasiado tarde.',
@@ -48,9 +48,11 @@ export const dictionary: PartialDictionary = {
 
   /* --- Home ------------------------------------------------------------- */
   home: {
-    heroCtaPrimary: 'Analisar a minha empresa',
-    heroCtaSecondary: 'Explorar produtos de inteligência',
+    heroCtaPrimary: 'Ver a GeoRepute em ação',
+    heroCtaSecondary: 'Explorar a plataforma',
     heroCtaEnterprise: 'Marcar uma sessão executiva',
+    heroSubheadline: 'A GeoRepute dá às agências de marketing as capacidades de investigação, inteligência, estratégia e execução de uma equipa muito maior, numa só plataforma.',
+    heroSupporting: 'Analise os seus clientes, o mercado e os concorrentes no Google e em seis motores de IA. Execute mais de 100 análises profundas de negócio e marketing. Realize uma diligência prévia de marketing antes das campanhas. Construa estratégias, planos de trabalho, orçamentos, necessidades de recursos e propostas baseadas em dados. Execute em todos os canais em sete línguas e depois meça e melhore continuamente através do PDCA.',
     disruptionSub:
       'A decisão do cliente começa muitas vezes antes de existir uma visita, um clique, um contacto ou um registo no CRM.',
     liveEntry: 'Veja o que o mercado compreende sobre a sua empresa.',

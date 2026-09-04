@@ -217,10 +217,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'Посмотреть методологию',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'Наблюдаются шесть движков ИИ',
-  '24 commercial decisions tracked': 'Отслеживаются 24 коммерческих решения',
-  'Evidence on every claim': 'Доказательство к каждому утверждению',
-  'Confidence and limits stated': 'Уверенность и границы указаны',
   'A buyer asks AI': 'Покупатель спрашивает ИИ',
   'AI looks for proof it can cite':
     'ИИ ищет доказательство, на которое может сослаться',
@@ -2813,4 +2809,23 @@ export const content: ContentOverlay = {
     'Один прогон, реконструированный: что происходит, почему происходит и во что обходится, с прочтением аналитика внизу. Реальный интерфейс, демонстрационный прогон.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'Резюме для руководства, сводящее прогон коммерческих запросов к тому, что происходит, почему и во что обходится, над заметкой аналитика, трактующей результат как разрыв представленности, а не качества.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 движков ИИ',
+  '100+ Deep Business & Marketing Analyses': '100+ глубоких бизнес- и маркетинговых анализов',
+  'Competitor Intelligence': 'Конкурентный интеллект',
+  'Keyword Research': 'Исследование ключевых слов',
+  'Marketing Due Diligence': 'Маркетинговая комплексная проверка',
+  'Strategy': 'Стратегия',
+  'Work Plans': 'Планы работ',
+  'Budgets': 'Бюджеты',
+  'Resource Planning': 'Планирование ресурсов',
+  'Proposals': 'Коммерческие предложения',
+  'Content Execution': 'Реализация контента',
+  'Social': 'Соцсети',
+  '7 Languages': '7 языков',
+  'Continuous PDCA': 'Непрерывный PDCA',
 }

@@ -18,9 +18,9 @@ export const meta: DictionaryMeta = {
 
 export const dictionary: PartialDictionary = {
   /* --- §19 core commercial copy ---------------------------------------- */
-  category: 'EL SISTEMA OPERATIVO DE INTELIGENCIA DE DECISIÓN',
-  heroPrimary: 'Vea dónde su empresa es reconocida, recomendada y elegida.',
-  heroContinuation: 'Y dónde la decisión se va a otra parte.',
+  category: 'LA CAPA DE INTELIGENCIA Y EJECUCIÓN PARA AGENCIAS MODERNAS',
+  heroPrimary: 'Venda más. Entregue más. Retenga clientes más tiempo.',
+  heroContinuation: 'Sin ampliar su equipo al mismo ritmo.',
   categoryPositioning:
     'Las plataformas tradicionales optimizan canales. GeoRepute reconstruye decisiones.',
   analyticsDisruption: 'Su analítica empieza demasiado tarde.',
@@ -43,9 +43,11 @@ export const dictionary: PartialDictionary = {
 
   /* --- Home ------------------------------------------------------------- */
   home: {
-    heroCtaPrimary: 'Analizar mi empresa',
-    heroCtaSecondary: 'Explorar productos de inteligencia',
+    heroCtaPrimary: 'Ver GeoRepute en acción',
+    heroCtaSecondary: 'Explorar la plataforma',
     heroCtaEnterprise: 'Reservar una sesión ejecutiva',
+    heroSubheadline: 'GeoRepute ofrece a las agencias de marketing las capacidades de investigación, inteligencia, estrategia y ejecución de un equipo mucho mayor, en una sola plataforma.',
+    heroSupporting: 'Analice a sus clientes, su mercado y sus competidores en Google y seis motores de IA. Ejecute más de 100 análisis profundos de negocio y marketing. Realice una diligencia debida de marketing antes de las campañas. Construya estrategias, planes de trabajo, presupuestos, necesidades de recursos y propuestas basadas en datos. Ejecute en todos los canales en siete idiomas y después mida y mejore de forma continua mediante PDCA.',
     disruptionSub:
       'La decisión del cliente suele comenzar antes de que exista una visita, un clic, un contacto o un registro en el CRM.',
     liveEntry: 'Vea qué entiende el mercado sobre su empresa.',

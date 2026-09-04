@@ -222,10 +222,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'اطّلعوا على المنهجية',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'ستة محرّكات ذكاء اصطناعي مرصودة',
-  '24 commercial decisions tracked': '24 قرارًا تجاريًا مرصودًا',
-  'Evidence on every claim': 'أدلة على كل ادّعاء',
-  'Confidence and limits stated': 'درجة الثقة والحدود معلنة',
   'A buyer asks AI': 'مشترٍ يسأل الذكاء الاصطناعي',
   'AI looks for proof it can cite': 'الذكاء الاصطناعي يبحث عن دليل يمكنه الاستشهاد به',
   'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
@@ -2804,4 +2800,23 @@ export const content: ContentOverlay = {
     'تشغيل واحد معاد بناؤه: ماذا يحدث، ولماذا يحدث، وكم يكلّف، مع قراءة المحلل أسفله. واجهة حقيقية، تشغيل توضيحي.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'ملخص تنفيذي يختزل تشغيلًا لاستعلامات تجارية إلى ماذا يحدث ولماذا يحدث وكم يكلّف، فوق ملاحظة محلل تؤطّر النتيجة بوصفها فجوة تمثيل لا فجوة جودة.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 محرّكات ذكاء اصطناعي',
+  '100+ Deep Business & Marketing Analyses': 'أكثر من 100 تحليل عميق للأعمال والتسويق',
+  'Competitor Intelligence': 'الذكاء التنافسي',
+  'Keyword Research': 'بحث الكلمات المفتاحية',
+  'Marketing Due Diligence': 'العناية التسويقية الواجبة',
+  'Strategy': 'الاستراتيجية',
+  'Work Plans': 'خطط العمل',
+  'Budgets': 'الميزانيات',
+  'Resource Planning': 'تخطيط الموارد',
+  'Proposals': 'المقترحات',
+  'Content Execution': 'تنفيذ المحتوى',
+  'Social': 'التواصل الاجتماعي',
+  '7 Languages': '7 لغات',
+  'Continuous PDCA': 'PDCA مستمر',
 }

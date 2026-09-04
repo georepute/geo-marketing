@@ -217,10 +217,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'Consulter la méthodologie',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'Six moteurs d’IA observés',
-  '24 commercial decisions tracked': '24 décisions commerciales suivies',
-  'Evidence on every claim': 'Une preuve pour chaque affirmation',
-  'Confidence and limits stated': 'Confiance et limites indiquées',
   'A buyer asks AI': 'Un acheteur interroge l’IA',
   'AI looks for proof it can cite':
     'L’IA cherche une preuve qu’elle peut citer',
@@ -2839,4 +2835,23 @@ export const content: ContentOverlay = {
     'Une exécution reconstruite : ce qui se passe, pourquoi cela se passe et ce que cela coûte, avec la lecture de l’analyste en dessous. Interface réelle, exécution de démonstration.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'Un résumé exécutif ramenant une exécution de requêtes commerciales à ce qui se passe, pourquoi et ce que cela coûte, au-dessus d’une note d’analyste qui qualifie le résultat d’écart de représentation et non de qualité.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 moteurs d’IA',
+  '100+ Deep Business & Marketing Analyses': '100+ analyses approfondies, commerciales et marketing',
+  'Competitor Intelligence': 'Intelligence concurrentielle',
+  'Keyword Research': 'Recherche de mots-clés',
+  'Marketing Due Diligence': 'Due diligence marketing',
+  'Strategy': 'Stratégie',
+  'Work Plans': 'Plans de travail',
+  'Budgets': 'Budgets',
+  'Resource Planning': 'Planification des ressources',
+  'Proposals': 'Propositions',
+  'Content Execution': 'Exécution de contenu',
+  'Social': 'Social',
+  '7 Languages': '7 langues',
+  'Continuous PDCA': 'PDCA continu',
 }

@@ -806,10 +806,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'עיינו במתודולוגיה',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'שישה מנועי AI נצפים',
-  '24 commercial decisions tracked': '24 החלטות מסחריות נמדדות',
-  'Evidence on every claim': 'ראיות לכל טענה',
-  'Confidence and limits stated': 'רמת ודאות וגבולות מוצהרים',
   'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
     'מקורות בלתי תלויים שמנוע יכול לצטט כשהוא ממליץ על ספק. האתר שלכם אינו נספר — מנועים מתייחסים לתיאור עצמי כטענה, לא כראיה.',
   'Your business was named by <b>{named} of {total}</b> engines. Not because the offer is weaker — because <b>{theirs} sources outrank {ours}</b> when a system has to stand behind an answer.':
@@ -2934,4 +2930,23 @@ export const content: ContentOverlay = {
     'הרצה אחת משוחזרת: מה קורה, מדוע זה קורה ומה זה עולה, עם קריאת האנליסט מתחת. ממשק אמיתי, הרצת הדגמה.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'תקציר מנהלים המתמצת הרצה של שאילתות מסחריות למה קורה, מדוע זה קורה ומה זה עולה, מעל הערת אנליסט הממסגרת את התוצאה כפער ייצוג ולא כפער איכות.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 מנועי AI',
+  '100+ Deep Business & Marketing Analyses': 'יותר מ-100 ניתוחים עסקיים ושיווקיים לעומק',
+  'Competitor Intelligence': 'מודיעין תחרותי',
+  'Keyword Research': 'מחקר מילות מפתח',
+  'Marketing Due Diligence': 'בדיקת נאותות שיווקית',
+  'Strategy': 'אסטרטגיה',
+  'Work Plans': 'תוכניות עבודה',
+  'Budgets': 'תקציבים',
+  'Resource Planning': 'תכנון משאבים',
+  'Proposals': 'הצעות',
+  'Content Execution': 'ביצוע תוכן',
+  'Social': 'מדיה חברתית',
+  '7 Languages': '7 שפות',
+  'Continuous PDCA': 'PDCA מתמשך',
 }

@@ -223,10 +223,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'Consultar a metodologia',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'Seis motores de IA observados',
-  '24 commercial decisions tracked': '24 decisões comerciais monitorizadas',
-  'Evidence on every claim': 'Provas em todas as afirmações',
-  'Confidence and limits stated': 'Confiança e limites declarados',
   'A buyer asks AI': 'Um comprador pergunta à IA',
   'AI looks for proof it can cite': 'A IA procura uma prova que possa citar',
   'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
@@ -2838,4 +2834,23 @@ export const content: ContentOverlay = {
     'Uma execução reconstruída: o que está a acontecer, porque está a acontecer e quanto custa, com a leitura do analista por baixo. Interface real, execução de demonstração.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'Um resumo executivo que reduz uma execução de consultas comerciais ao que está a acontecer, porquê e quanto custa, sobre uma nota de analista que enquadra o resultado como uma lacuna de representação e não de qualidade.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 motores de IA',
+  '100+ Deep Business & Marketing Analyses': 'Mais de 100 análises profundas de negócio e marketing',
+  'Competitor Intelligence': 'Inteligência competitiva',
+  'Keyword Research': 'Pesquisa de palavras-chave',
+  'Marketing Due Diligence': 'Diligência prévia de marketing',
+  'Strategy': 'Estratégia',
+  'Work Plans': 'Planos de trabalho',
+  'Budgets': 'Orçamentos',
+  'Resource Planning': 'Planeamento de recursos',
+  'Proposals': 'Propostas',
+  'Content Execution': 'Execução de conteúdo',
+  'Social': 'Social',
+  '7 Languages': '7 línguas',
+  'Continuous PDCA': 'PDCA contínuo',
 }

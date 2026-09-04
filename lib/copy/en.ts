@@ -1,15 +1,22 @@
 /* ============================================================================
-   Core Commercial Copy System — brief §19, VERBATIM.
+   Core Commercial Copy System.
    Non-negotiable #6: use the exact headline copy from the doc's copy system.
-   Do not paraphrase these strings. Every other UI string also lives here so
+   Do not paraphrase these strings.
+
+   THE HERO BLOCK NO LONGER COMES FROM §19. category, heroPrimary and
+   heroContinuation were repositioned to address marketing agencies rather
+   than the end business, on the client's instruction. §19 still governs
+   everything below the hero, and tests/copy-fidelity.test.ts holds the
+   current wording of all eighteen either way — so drift is still caught,
+   it is simply measured against the agency brief for those three. Every other UI string also lives here so
    the app stays localization-safe (plan §1, deviation 2).
    ========================================================================= */
 
 export const copy = {
   /* --- §19 verbatim ------------------------------------------------------ */
-  category: 'THE DECISION INTELLIGENCE OPERATING SYSTEM',
-  heroPrimary: 'See Where Your Business Is Recognized, Recommended and Chosen.',
-  heroContinuation: 'And where the decision goes somewhere else.',
+  category: 'THE INTELLIGENCE & EXECUTION LAYER FOR MODERN AGENCIES',
+  heroPrimary: 'Sell More. Deliver More. Retain Clients Longer.',
+  heroContinuation: 'Without Scaling Your Team at the Same Rate.',
   categoryPositioning:
     'Traditional platforms optimize channels. GeoRepute reconstructs decisions.',
   analyticsDisruption: 'Your analytics start too late.',
@@ -32,9 +39,15 @@ export const copy = {
 
   /* --- Brief §5, home-section headlines (verbatim) ----------------------- */
   home: {
-    heroCtaPrimary: 'Analyze My Business',
-    heroCtaSecondary: 'Explore Intelligence Products',
+    heroCtaPrimary: 'See GeoRepute in Action',
+    heroCtaSecondary: 'Explore the Platform',
     heroCtaEnterprise: 'Book an Executive Briefing',
+    /* Reads under the headline; states who the platform is for. */
+    heroSubheadline:
+      'GeoRepute gives marketing agencies the research, intelligence, strategy and execution capabilities of a much larger team, in one platform.',
+    /* The scope, in one paragraph, before any section elaborates it. */
+    heroSupporting:
+      'Analyze your clients, market and competitors across Google and 6 AI engines. Run 100+ deep business and marketing analyses. Perform Marketing Due Diligence before campaigns. Build data-driven strategies, work plans, budgets, resource requirements and proposals. Execute across channels in 7 languages, then measure and continuously improve through PDCA.',
     disruptionSub:
       'The customer decision often begins before the visit, click, lead or CRM event exists.',
     liveEntry: 'See what the market understands about your business.',
