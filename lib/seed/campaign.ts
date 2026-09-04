@@ -163,7 +163,7 @@ function aiReadiness(): ReadinessDimension {
   /* Recommendation coverage across every answer slot: engines × questions. */
   const slots = PROMPTS.length * AI_ENGINES.length
   const events = PROMPTS.reduce(
-    (sum, p) => sum + p.northwindRecommendedBy.length,
+    (sum, p) => sum + p.subjectRecommendedBy.length,
     0,
   )
   const coveragePct = Number(((events / slots) * 100).toFixed(1))
@@ -704,7 +704,7 @@ export function commercialRisk(): CommercialRisk[] {
   return [
     {
       label: 'Missed decision exposure',
-      value: `${PROMPTS.filter((p) => p.northwindRecommendedBy.length === 0).length} of ${PROMPTS.length}`,
+      value: `${PROMPTS.filter((p) => p.subjectRecommendedBy.length === 0).length} of ${PROMPTS.length}`,
       meaning:
         'Commercial decisions that already complete without this business appearing. A campaign increases how many of these happen, not how many are won.',
       tone: 'critical',

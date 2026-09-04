@@ -147,7 +147,7 @@ export const NARRATIVES: Narrative[] = [
     momentum: 'steady',
     reachPct: 18,
     owner: 'competitor',
-    ownerName: 'Meridian Supply Co',
+    ownerName: 'Hollowpine Supply Co',
     sources: ['ChatGPT', 'Claude', 'Specification guides'],
     commercialEffect:
       'Published first by a competitor, so it became the vocabulary engines learned. It positions this business as a reseller by omission rather than by argument.',
@@ -202,7 +202,7 @@ export const NARRATIVES: Narrative[] = [
   },
   {
     id: 'n-hardware-retail',
-    statement: 'Northwind Supply is a hardware retailer.',
+    statement: 'Ironvale Supply is a hardware retailer.',
     polarity: 'negative',
     momentum: 'declining',
     reachPct: 4,
@@ -268,7 +268,7 @@ export interface CompetitorNarrative {
 
 export function competitorNarratives(): CompetitorNarrative[] {
   const detail: Record<string, Omit<CompetitorNarrative, 'name' | 'narrativeSharePct'>> = {
-    kestrel: {
+    cindermark: {
       positioning: 'The safe national choice with published comparisons.',
       strength:
         'Owns the evaluation criteria itself. Engines cite its comparison library when explaining how to choose a supplier at all.',
@@ -279,7 +279,7 @@ export function competitorNarratives(): CompetitorNarrative[] {
       opportunity:
         'Its own framing concedes that speed is a separate axis. A published response-time standard splits the criterion it defined.',
     },
-    meridian: {
+    hollowpine: {
       positioning: 'The technical authority on specification.',
       strength:
         'Its specification guidance became the category’s default vocabulary because it published first, not because it is more correct.',
@@ -290,7 +290,7 @@ export function competitorNarratives(): CompetitorNarrative[] {
       opportunity:
         'Its vocabulary can be adopted and extended rather than fought. Speaking its language while adding availability outflanks it.',
     },
-    halvorsen: {
+    greyfen: {
       positioning: 'The educator that reaches buyers first.',
       strength:
         'Enters the decision at research, before evaluation criteria exist, and shapes them by arriving early.',
@@ -301,7 +301,7 @@ export function competitorNarratives(): CompetitorNarrative[] {
       opportunity:
         'Research-stage presence is uncontested at the point where education becomes a shortlist.',
     },
-    atlas: {
+    ashcombe: {
       positioning: 'The procurement-checklist incumbent.',
       strength:
         'Named on procurement documentation that engines cite at the moment of purchase.',
@@ -338,28 +338,28 @@ export const MEDIA_TOPICS: MediaTopic[] = [
     topic: 'MRO supplier consolidation across Midwest manufacturing',
     tone: 'neutral',
     momentum: 'growing',
-    publications: ['Industrial Distribution', 'Modern Supply Chain'],
+    publications: ['Distribution Quarterly', 'Supply Chain Ledger'],
     note: 'The most active category story. This business is not quoted in any of the eleven pieces published this quarter.',
   },
   {
     topic: 'Fastener supply continuity after tariff changes',
     tone: 'neutral',
     momentum: 'emerging',
-    publications: ['Fastener Technology', 'Industrial Distribution'],
+    publications: ['The Fastener Ledger', 'Distribution Quarterly'],
     note: 'An emerging story where regional inventory depth is the natural expert angle, and no regional distributor has been quoted yet.',
   },
   {
     topic: 'Counterfeit fasteners in industrial supply chains',
     tone: 'negative',
     momentum: 'growing',
-    publications: ['Fastener Technology', 'Plant Engineering'],
+    publications: ['The Fastener Ledger', 'Plantworks Monthly'],
     note: 'A category-level trust story. Suppliers who comment become the trusted ones; those who stay silent are grouped with the problem.',
   },
   {
     topic: 'Vendor-managed inventory adoption in mid-market plants',
     tone: 'positive',
     momentum: 'steady',
-    publications: ['Modern Supply Chain', 'Plant Engineering'],
+    publications: ['Supply Chain Ledger', 'Plantworks Monthly'],
     note: 'A competitor is quoted in three of four pieces. The topic maps directly onto a service this business already operates.',
   },
 ]

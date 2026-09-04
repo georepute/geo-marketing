@@ -121,7 +121,7 @@ export function missionTiles(): MissionTile[] {
       label: 'Competitive Capture',
       value: percent(TOP_COMPETITOR.recommendationSharePct),
       exposure: null,
-      detail: `${TOP_COMPETITOR.name} receives the recommendation. Northwind receives 4.2%.`,
+      detail: `${TOP_COMPETITOR.name} receives the recommendation. Ironvale receives 4.2%.`,
       score: Math.round(TOP_COMPETITOR.recommendationSharePct),
       tone: 'critical',
       trend: 'deteriorating',

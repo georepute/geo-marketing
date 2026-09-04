@@ -112,8 +112,8 @@ describe('Invariant 3 — supplier-evaluation coverage computes to 7%', () => {
     // The argument is NOT that coverage is lowest here — it is that the
     // stage deciding 60% of revenue is the stage the competitor controls
     // most heavily. Both figures are derived, so neither can be asserted.
-    const atStage = competitorControlPct('supplier-evaluation', 'kestrel')
-    const overall = overallControlPct('kestrel')
+    const atStage = competitorControlPct('supplier-evaluation', 'cindermark')
+    const overall = overallControlPct('cindermark')
     expect(atStage).toBeGreaterThan(overall)
   })
 
@@ -128,7 +128,7 @@ describe('Invariant 3 — supplier-evaluation coverage computes to 7%', () => {
     const supplierPrompts = promptsByStage('supplier-evaluation')
     expect(supplierPrompts.length).toBeGreaterThan(0)
     const won = supplierPrompts.reduce(
-      (s, p) => s + p.northwindRecommendedBy.length,
+      (s, p) => s + p.subjectRecommendedBy.length,
       0,
     )
     expect(won).toBe(3)
@@ -291,7 +291,7 @@ describe('Prompt set integrity', () => {
 
   it('recommendation events total six across 144 answer slots', () => {
     const total = PROMPTS.reduce(
-      (s, p) => s + p.northwindRecommendedBy.length,
+      (s, p) => s + p.subjectRecommendedBy.length,
       0,
     )
     expect(total).toBe(6)
@@ -305,8 +305,8 @@ describe('Prompt set integrity', () => {
 
   it('no question lists an engine twice', () => {
     for (const p of PROMPTS) {
-      expect(new Set(p.northwindRecommendedBy).size).toBe(
-        p.northwindRecommendedBy.length,
+      expect(new Set(p.subjectRecommendedBy).size).toBe(
+        p.subjectRecommendedBy.length,
       )
     }
   })
