@@ -48,7 +48,7 @@ export function CheckoutFlow({
 
     const result = await mockCheckout.submit({
       line: { ...line, priceUsd: amount, billing: isPlan ? billing : undefined },
-      email: email.trim() || 'demo@northwindsupply.com',
+      email: email.trim() || 'demo@ironvale.example',
     })
 
     appendOrder(result.order)
@@ -85,7 +85,7 @@ export function CheckoutFlow({
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="demo@northwindsupply.com"
+              placeholder="demo@ironvale.example"
               autoComplete="email"
               className={cn(
                 'mt-3 w-full rounded-sm border border-line bg-inset px-4 py-3',

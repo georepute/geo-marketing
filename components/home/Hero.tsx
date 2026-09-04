@@ -1,13 +1,7 @@
 'use client'
 
 import { Link } from '@/components/i18n/Link'
-import {
-  ArrowRight,
-  BadgeCheck,
-  Boxes,
-  LineChart,
-  ShieldCheck,
-} from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { ImageWithScrim } from '@/components/visual/ImageWithScrim'
 import { ParticleField } from '@/components/visual/ParticleField'
@@ -34,11 +28,32 @@ import type { Reconstruction } from '@/lib/api/types'
    a performance. Under reduced motion every beat resolves instantly.
    ========================================================================= */
 
-const TRUST = [
-  { icon: BadgeCheck, label: 'Six AI engines observed' },
-  { icon: Boxes, label: '24 commercial decisions tracked' },
-  { icon: LineChart, label: 'Evidence on every claim' },
-  { icon: ShieldCheck, label: 'Confidence and limits stated' },
+/* The capability strip. Kept as a list rather than one long sentence so it
+   wraps cleanly at every width and each term can be translated on its own.
+
+   GEON, SEO, GEO, YouTube and TikTok are deliberately left untranslated —
+   the first is the methodology name and the rest are proper nouns. See
+   lib/i18n/GLOSSARY.md. */
+const CAPABILITIES = [
+  'Google + 6 AI Engines',
+  '100+ Deep Business & Marketing Analyses',
+  'Competitor Intelligence',
+  'Keyword Research',
+  'GEON',
+  'Marketing Due Diligence',
+  'Strategy',
+  'Work Plans',
+  'Budgets',
+  'Resource Planning',
+  'Proposals',
+  'Content Execution',
+  'SEO',
+  'GEO',
+  'Social',
+  'YouTube',
+  'TikTok',
+  '7 Languages',
+  'Continuous PDCA',
 ] as const
 
 export function Hero({
@@ -107,18 +122,29 @@ export function Hero({
               {copy.category}
             </p>
 
+            {/* Both lines are the headline. The second is the qualifier the
+                first would otherwise overpromise without, so it is set in the
+                same element at lower emphasis rather than demoted to body. */}
             <h1
               className="text-display-1 text-ink mt-7 text-balance"
               style={beat(1)}
             >
               {copy.heroPrimary}
+              <span className="block text-ink-2">{copy.heroContinuation}</span>
             </h1>
 
             <p
               className="text-body-lg text-ink-2 mt-6 max-w-xl"
               style={beat(2)}
             >
-              {copy.heroContinuation}
+              {copy.home.heroSubheadline}
+            </p>
+
+            <p
+              className="text-body text-ink-3 mt-5 max-w-2xl"
+              style={beat(2)}
+            >
+              {copy.home.heroSupporting}
             </p>
 
             <div className="flex flex-wrap gap-3 mt-10" style={beat(3)}>
@@ -149,10 +175,7 @@ export function Hero({
               </span>
 
               <Button asChild variant="secondary" size="lg">
-                <Link href="/marketplace">{copy.home.heroCtaSecondary}</Link>
-              </Button>
-              <Button asChild variant="ghost" size="lg">
-                <Link href="/pricing">{copy.home.heroCtaEnterprise}</Link>
+                <Link href="/how-it-works">{copy.home.heroCtaSecondary}</Link>
               </Button>
             </div>
 
@@ -163,18 +186,21 @@ export function Hero({
               {copy.categoryPositioning}
             </p>
 
-            {/* Quiet trust strip — icons carry the scan, text carries meaning. */}
+            {/* Capability strip. Nineteen terms, so no icons — they would
+                turn a scannable line into a wall. The separator is decorative
+                and hidden from assistive technology, which reads the list. */}
             <ul
-              className="flex flex-wrap gap-x-6 gap-y-3 mt-9 pt-8 border-t border-line"
+              className="flex flex-wrap items-center gap-y-2 mt-9 pt-8 border-t border-line"
               style={beat(4)}
             >
-              {TRUST.map(({ icon: Icon, label }) => (
-                <li key={label} className="inline-flex items-center gap-2">
-                  <Icon
-                    className="size-3.5 text-brand-300 shrink-0"
-                    aria-hidden
-                  />
+              {CAPABILITIES.map((label, i) => (
+                <li key={label} className="inline-flex items-center">
                   <span className="text-caption text-ink-2">{t(label)}</span>
+                  {i < CAPABILITIES.length - 1 ? (
+                    <span aria-hidden className="text-caption text-ink-3 mx-2">
+                      ·
+                    </span>
+                  ) : null}
                 </li>
               ))}
             </ul>

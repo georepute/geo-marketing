@@ -167,13 +167,13 @@ EvidenceDrawer ───────── every viz node click
 
 ---
 
-## 4. Seed data — "Northwind Supply"
+## 4. Seed data — "Ironvale Supply"
 
 ### 4.1 The anchor
 §13.1 of the brief already contains a complete, internally consistent causal chain. It becomes the
 **numeric spine** of the entire seed. Every screen derives from it.
 
-**Northwind Supply** — industrial MRO/fasteners distributor, US Midwest, ~$48M revenue, 60% of revenue
+**Ironvale Supply** — industrial MRO/fasteners distributor, US Midwest, ~$48M revenue, 60% of revenue
 through supplier-evaluation RFQs.
 
 ### 4.2 The spine (`lib/seed/spine.ts`) — canonical, immutable, verbatim from §13.1
@@ -203,10 +203,10 @@ Everything else is **derived arithmetic** from those seven facts.
 | Readouts | **12** | ~30 |
 
 - Engine recognition: 4.2 / 6.1 / 3.4 / 11.8 / 5.0 / 2.7 % — ChatGPT pinned to spine. Gemini = highest-risk.
-- Competitor share: **Kestrel Industrial 31%** (spine) · Meridian 18 · Halvorsen 11 · Atlas 7 ·
-  Northwind 4.2 · other 28.8 — **sums to 100**.
+- Competitor share: **Cindermark Industrial 31%** (spine) · Hollowpine 18 · Greyfen 11 · Ashcombe 7 ·
+  Ironvale 4.2 · other 28.8 — **sums to 100**.
 - 24 prompts by stage: Research 7 · Concerns 4 · Solution Evaluation 6 · Supplier Evaluation 4 ·
-  Purchase Decision 3. Northwind appears in 5 of 24 overall but **7% of Supplier Evaluation** ✓ spine.
+  Purchase Decision 3. Ironvale appears in 5 of 24 overall but **7% of Supplier Evaluation** ✓ spine.
   The stage collapse *is* the story.
 - Exposure math shown on-screen (§15.4): `1,240 queries × 26.8% gap × 1.4–2.7% conv × $7,200 ADV
   ≈ $3,200–$6,200/mo` ✓ spine.
@@ -339,7 +339,7 @@ M2 before M3 is deliberate — the readout is the atom. Building a page first me
 6. **Brand assets** — logo, "POWERED BY GINTEX" lockup, licensed fonts? Otherwise Inter wordmark + simple mark.
 7. **Naming real AI products** (ChatGPT, Claude, Gemini…) publicly — plain text, no logos. Confirm, or I'll
    switch to generic labels.
-8. **Northwind Supply / industrial distribution** — approve? Cheap now, expensive later.
+8. **Ironvale Supply / industrial distribution** — approve? Cheap now, expensive later.
 9. **USD / `en-US`** throughout, `localStorage` persistence with a "Reset demo" control?
 
 ---

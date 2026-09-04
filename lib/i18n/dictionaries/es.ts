@@ -18,9 +18,9 @@ export const meta: DictionaryMeta = {
 
 export const dictionary: PartialDictionary = {
   /* --- §19 core commercial copy ---------------------------------------- */
-  category: 'EL SISTEMA OPERATIVO DE INTELIGENCIA DE DECISIÓN',
-  heroPrimary: 'Vea dónde su empresa es reconocida, recomendada y elegida.',
-  heroContinuation: 'Y dónde la decisión se va a otra parte.',
+  category: 'LA CAPA DE INTELIGENCIA Y EJECUCIÓN PARA AGENCIAS MODERNAS',
+  heroPrimary: 'Venda más. Entregue más. Retenga clientes más tiempo.',
+  heroContinuation: 'Sin ampliar su equipo al mismo ritmo.',
   categoryPositioning:
     'Las plataformas tradicionales optimizan canales. GeoRepute reconstruye decisiones.',
   analyticsDisruption: 'Su analítica empieza demasiado tarde.',
@@ -43,9 +43,11 @@ export const dictionary: PartialDictionary = {
 
   /* --- Home ------------------------------------------------------------- */
   home: {
-    heroCtaPrimary: 'Analizar mi empresa',
-    heroCtaSecondary: 'Explorar productos de inteligencia',
+    heroCtaPrimary: 'Ver GeoRepute en acción',
+    heroCtaSecondary: 'Explorar la plataforma',
     heroCtaEnterprise: 'Reservar una sesión ejecutiva',
+    heroSubheadline: 'GeoRepute ofrece a las agencias de marketing las capacidades de investigación, inteligencia, estrategia y ejecución de un equipo mucho mayor, en una sola plataforma.',
+    heroSupporting: 'Analice a sus clientes, su mercado y sus competidores en Google y seis motores de IA. Ejecute más de 100 análisis profundos de negocio y marketing. Realice una diligencia debida de marketing antes de las campañas. Construya estrategias, planes de trabajo, presupuestos, necesidades de recursos y propuestas basadas en datos. Ejecute en todos los canales en siete idiomas y después mida y mejore de forma continua mediante PDCA.',
     disruptionSub:
       'La decisión del cliente suele comenzar antes de que exista una visita, un clic, un contacto o un registro en el CRM.',
     liveEntry: 'Vea qué entiende el mercado sobre su empresa.',
@@ -904,6 +906,203 @@ export const dictionary: PartialDictionary = {
     ctaPrimary: 'Ver qué está moviendo la elección',
     ctaSecondary: 'Reservar una sesión de inteligencia electoral',
   },
+
+  /* --- Agency homepage, sections 2 to 11 ---------------------------- */
+  agency: {
+    value: {
+      headline: 'Construya una agencia más grande sin construir una operación más grande.',
+      intro: 'GeoRepute ayuda a las agencias a ampliar lo que pueden vender y entregar, reduciendo al mismo tiempo la carga operativa necesaria para hacerlo.',
+      cards: [
+        {
+          title: 'Crecer sin contratar al mismo ritmo',
+          body: 'Atienda a más clientes sin añadir investigadores, estrategas y recursos de contenido al mismo ritmo.',
+        },
+        {
+          title: 'Reducir el tiempo de investigación y estrategia',
+          body: 'Sustituya horas de investigación manual por inteligencia estructurada de mercado, competencia y negocio.',
+        },
+        {
+          title: 'Aumentar los ingresos por cliente',
+          body: 'Identifique oportunidades adicionales de SEO, GEO, contenido, reputación, social y mercado dentro de las cuentas existentes.',
+        },
+        {
+          title: 'Aumentar la retención de clientes',
+          body: 'Convierta campañas cortas en hojas de ruta estructuradas de varios meses, con prioridades claras, presupuestos y progreso medible.',
+        },
+        {
+          title: 'Proteger los márgenes de la agencia',
+          body: 'Construya alcances y propuestas a partir de la carga de trabajo, el personal, los canales y las necesidades presupuestarias reales.',
+        },
+        {
+          title: 'Entregar una inteligencia de cliente más profunda',
+          body: 'Ofrezca a los clientes el nivel de lectura de mercado y competencia que normalmente esperan de equipos de consultoría o de inteligencia de negocio.',
+        },
+      ],
+    },
+    flow: {
+      headline: 'Del briefing del cliente al crecimiento continuo. Un solo sistema.',
+      steps: [
+        {
+          label: 'Investigación',
+          detail: 'Google + 6 motores de IA + mercado + competidores + palabras clave',
+        },
+        {
+          label: 'Análisis',
+          detail: 'Más de 100 análisis profundos de negocio y marketing + GEON',
+        },
+        {
+          label: 'Diligencia debida',
+          detail: 'Diligencia debida de marketing antes del lanzamiento de la campaña',
+        },
+        {
+          label: 'Decisión',
+          detail: 'Oportunidades + brechas + prioridades + dirección estratégica',
+        },
+        {
+          label: 'Plan',
+          detail: 'Estrategia + plan de trabajo + canales + personal + presupuesto',
+        },
+        {
+          label: 'Propuesta',
+          detail: 'Alcance respaldado por datos + precios + propuesta',
+        },
+        {
+          label: 'Ejecución',
+          detail: 'SEO + GEO + social + YouTube + TikTok + contenido',
+        },
+        {
+          label: 'Medición y mejora',
+          detail: 'PDCA + seguimiento de competidores + optimización continua',
+        },
+      ],
+    },
+    differentiation: {
+      headline: 'La mayoría de las plataformas de marketing se detienen en el análisis. GeoRepute no.',
+      body: 'La mayoría de las plataformas dan a las agencias paneles, informes o recomendaciones aisladas. GeoRepute continúa desde la inteligencia hacia la toma de decisiones, la planificación, el alcance comercial, la ejecución, la medición y la mejora continua.',
+      typicalLabel: 'Plataforma de marketing habitual',
+      oursLabel: 'GeoRepute',
+      rows: [
+        {
+          typical: 'Datos',
+          ours: 'Inteligencia',
+        },
+        {
+          typical: 'Informes',
+          ours: 'Decisiones',
+        },
+        {
+          typical: 'Recomendaciones',
+          ours: 'Estrategia',
+        },
+        {
+          typical: 'Analítica',
+          ours: 'Plan de trabajo',
+        },
+        {
+          typical: 'Hallazgos',
+          ours: 'Presupuesto y recursos',
+        },
+        {
+          typical: 'Panel de control',
+          ours: 'Propuesta',
+        },
+        {
+          typical: 'Ejecución manual',
+          ours: 'Ejecución conectada',
+        },
+        {
+          typical: 'Informe mensual',
+          ours: 'PDCA continuo',
+        },
+        {
+          typical: 'Herramienta',
+          ours: 'Infraestructura operativa de agencia',
+        },
+      ],
+    },
+    retention: {
+      headline: 'Haga que su agencia sea más difícil de sustituir.',
+      body: 'Cuando su agencia aporta al cliente algo más que la gestión de campañas, la relación cambia.',
+      bodyTwo: 'GeoRepute ayuda a su equipo a entender el negocio del cliente, su mercado, sus competidores y sus oportunidades, a construir la hoja de ruta, a justificar el presupuesto, a ejecutar el plan y a demostrar el progreso a lo largo del tiempo.',
+      highlightLead: 'Deje de ser la agencia que ejecuta campañas.',
+      highlight: 'Conviértase en la agencia que ayuda a los clientes a decidir qué hacer a continuación.',
+    },
+    revenue: {
+      headline: 'Encuentre más ingresos dentro de los clientes que ya tiene.',
+      body: 'GeoRepute identifica oportunidades que su agencia puede convertir en servicios adicionales: SEO, GEO, contenido, reputación, redes sociales, vídeo, expansión de mercado y trabajo estratégico continuo.',
+      items: [
+        'Oportunidad de SEO',
+        'Oportunidad de GEO',
+        'Brecha de contenido',
+        'Brecha de visibilidad en IA',
+        'Brecha de reputación',
+        'Oportunidad en YouTube',
+        'Oportunidad en social',
+        'Expansión de mercado',
+        'Idiomas adicionales',
+      ],
+      highlight: 'Cada brecha identificada puede convertirse en un nuevo servicio, un proyecto o un ingreso recurrente.',
+    },
+    intelligence: {
+      headline: 'Lleve inteligencia de negocio a cada reunión con el cliente.',
+      body: 'Entre en cada reunión con el cliente con pruebas en lugar de suposiciones.',
+      items: [
+        'Demanda del mercado',
+        'Posicionamiento de los competidores',
+        'Inteligencia de palabras clave de Google',
+        'Visibilidad en motores de IA',
+        'GEON',
+        'Brechas de negocio y marketing',
+        'Análisis de oportunidades',
+        'Prioridades estratégicas',
+        'Necesidades presupuestarias',
+        'Necesidades de recursos',
+        'Plan de ejecución previsto',
+      ],
+      supporting: 'Entregue una inteligencia que sus clientes no están acostumbrados a recibir de una agencia de marketing.',
+    },
+    standardization: {
+      headline: 'Lleve pensamiento estratégico sénior a cada cuenta.',
+      body: 'La calidad de una agencia no debería depender de qué estratega lleve al cliente. GeoRepute ayuda a estandarizar la investigación, el pensamiento estratégico, la planificación y la ejecución en cada cuenta.',
+      supporting: 'Convierta el conocimiento del estratega sénior en un proceso de agencia repetible.',
+    },
+    proposal: {
+      headline: 'Construya mejores propuestas con datos reales detrás.',
+      body: 'Pase de alcances estimados y paquetes genéricos a propuestas basadas en la posición real del cliente en su mercado, sus oportunidades, la carga de trabajo, las necesidades de personal, los canales y el presupuesto.',
+      flow: [
+        'Datos',
+        'Oportunidad',
+        'Estrategia',
+        'Carga de trabajo',
+        'Recursos',
+        'Presupuesto',
+        'Propuesta',
+      ],
+    },
+    proof: {
+      headline: 'La inteligencia detrás de la plataforma',
+      modules: [
+        'Google + 6 motores de IA',
+        'Más de 100 análisis profundos de negocio y marketing',
+        'Inteligencia competitiva y de mercado',
+        'Investigación de palabras clave y demanda en Google',
+        'GEON',
+        'Diligencia debida de marketing',
+        'Estrategia basada en datos',
+        'Planes de trabajo',
+        'Planificación de presupuesto y recursos',
+        'Generación de propuestas',
+        'Ejecución SEO · GEO · social · YouTube · TikTok',
+        '7 idiomas',
+        'PDCA continuo',
+      ],
+    },
+    close: {
+      headline: 'No necesita otra herramienta de marketing.',
+      statement: 'Necesita la infraestructura para entregar más valor por cliente.',
+      body: 'GeoRepute ayuda a las agencias a vender más, entregar más, retener clientes más tiempo, proteger sus márgenes y crecer sin aumentar la plantilla al mismo ritmo.',
+    },
+  },
 
   meta: {
     description:

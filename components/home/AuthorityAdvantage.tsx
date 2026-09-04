@@ -14,7 +14,7 @@ import type { Competitor } from '@/lib/api/types'
      Highlight: 7× Authority Advantage
 
    The reasoning behind that instruction is worth stating, because it governs
-   the layout. "Kestrel wins 31%" is a scoreboard: it tells an executive they
+   the layout. "Cindermark wins 31%" is a scoreboard: it tells an executive they
    are losing and gives them nothing to act on. 21 against 3 is a cause, and a
    cause has a price and a plan attached to it. So the source counts take the
    display type and the share percentages drop to supporting captions — the

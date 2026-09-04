@@ -44,7 +44,7 @@ const SECTIONS = [
     id: 'data',
     title: 'Data processing',
     body: [
-      'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.',
+      'Ironvale Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.',
       'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.',
       'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.',
     ],

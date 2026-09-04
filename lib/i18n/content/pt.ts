@@ -6,8 +6,8 @@ import type { ContentOverlay } from './index'
    Keyed by the English source string. See ./index.ts for why.
 
    WHAT IS DELIBERATELY NOT TRANSLATED
-     · Company names in the demonstration — Northwind Supply, Kestrel
-       Industrial, Meridian Supply Co, Atlas Trade Group, Halvorsen
+     · Company names in the demonstration — Ironvale Supply, Cindermark
+       Industrial, Hollowpine Supply Co, Ashcombe Trade Group, Greyfen
        Industrial. They are proper nouns; translating them would make the
        competitor comparison incoherent.
      · AI engine names — ChatGPT, Claude, Gemini, Perplexity, Copilot, Grok —
@@ -177,8 +177,8 @@ export const content: ContentOverlay = {
   'Your domain': 'O seu domínio',
   'Run instant preview': 'Executar pré-visualização instantânea',
   'Re-run preview': 'Executar novamente a pré-visualização',
-  'Seeded demonstration. This environment always reconstructs Northwind Supply, an industrial distributor, so every figure stays verifiable.':
-    'Demonstração com dados iniciais. Este ambiente reconstrói sempre a Northwind Supply, um distribuidor industrial, para que cada número se mantenha verificável.',
+  'Seeded demonstration. This environment always reconstructs Ironvale Supply, an industrial distributor, so every figure stays verifiable.':
+    'Demonstração com dados iniciais. Este ambiente reconstrói sempre a Ironvale Supply, um distribuidor industrial, para que cada número se mantenha verificável.',
   'AI recognition': 'Reconhecimento por IA',
   'Best Google position': 'Melhor posição no Google',
   'Not ranking': 'Sem posicionamento',
@@ -223,10 +223,6 @@ export const content: ContentOverlay = {
   'See the methodology': 'Consultar a metodologia',
 
   /* --- Hero · trust strip and the reconstruction ------------------------- */
-  'Six AI engines observed': 'Seis motores de IA observados',
-  '24 commercial decisions tracked': '24 decisões comerciais monitorizadas',
-  'Evidence on every claim': 'Provas em todas as afirmações',
-  'Confidence and limits stated': 'Confiança e limites declarados',
   'A buyer asks AI': 'Um comprador pergunta à IA',
   'AI looks for proof it can cite': 'A IA procura uma prova que possa citar',
   'Independent sources an engine can cite when it recommends a supplier. Your own website does not count — engines treat self-description as a claim, not as evidence.':
@@ -525,8 +521,8 @@ export const content: ContentOverlay = {
   'Where history is insufficient, predictive conclusions are withheld rather than estimated.':
     'Quando o histórico é insuficiente, as conclusões preditivas são retidas em vez de estimadas.',
   'This demonstration environment': 'Este ambiente de demonstração',
-  'Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
-    'A Northwind Supply é uma organização fictícia. Os seus números partem de dados iniciais, são internamente consistentes e derivam de um único conjunto de factos de referência — <b>{presence}</b> de presença em recomendações, <b>{coverage}</b> de cobertura na avaliação de fornecedores e <b>{share}</b> de quota do concorrente. Todos os outros números deste site são calculados a partir deles, e um conjunto de testes faz falhar a compilação se algum ecrã os contrariar.',
+  'Ironvale Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.':
+    'A Ironvale Supply é uma organização fictícia. Os seus números partem de dados iniciais, são internamente consistentes e derivam de um único conjunto de factos de referência — <b>{presence}</b> de presença em recomendações, <b>{coverage}</b> de cobertura na avaliação de fornecedores e <b>{share}</b> de quota do concorrente. Todos os outros números deste site são calculados a partir deles, e um conjunto de testes faz falhar a compilação se algum ecrã os contrariar.',
   'Open Mission Control': 'Abrir o centro de comando',
   'See the engines': 'Ver os motores',
 
@@ -575,18 +571,18 @@ export const content: ContentOverlay = {
     'A autoridade tem o peso mais elevado do índice e o maior défice.',
   'GEON Authority 28 — the lowest of six vectors.':
     'Autoridade GEON em 28 — o mais baixo dos seis vetores.',
-  'Three independent sources reference Northwind; the competitor median is fourteen.':
-    'Três fontes independentes referem a Northwind; a mediana dos concorrentes é catorze.',
+  'Three independent sources reference Ironvale; the competitor median is fourteen.':
+    'Três fontes independentes referem a Ironvale; a mediana dos concorrentes é catorze.',
   'No published supplier-comparison material for engines to cite.':
     'Não existe material publicado de comparação de fornecedores que os motores possam citar.',
   'Category description differs between the website and two trade directories.':
     'A descrição da categoria difere entre o site e dois diretórios setoriais.',
   'Three of six engines misidentify the category.':
     'Três de seis motores identificam mal a categoria.',
-  'No stable entity record. Answers reference the category without naming Northwind at all.':
-    'Não há registo estável da entidade. As respostas referem a categoria sem sequer nomear a Northwind.',
-  'Kestrel Industrial leads five of seven supplier questions.':
-    'A Kestrel Industrial lidera cinco das sete perguntas sobre fornecedores.',
+  'No stable entity record. Answers reference the category without naming Ironvale at all.':
+    'Não há registo estável da entidade. As respostas referem a categoria sem sequer nomear a Ironvale.',
+  'Cindermark Industrial leads five of seven supplier questions.':
+    'A Cindermark Industrial lidera cinco das sete perguntas sobre fornecedores.',
   'Engines cite a competitor’s evaluation criteria first.':
     'Os motores citam primeiro os critérios de avaliação de um concorrente.',
   'Eleven tracked keywords sit outside the top ten.':
@@ -682,12 +678,12 @@ export const content: ContentOverlay = {
     'A distância entre o que uma empresa diz ser e aquilo que as máquinas concluíram de forma independente que ela é — habitualmente maior do que qualquer gestor espera.',
   'Consistent category language across its own site, trade directories and three independent publications gives engines a single unambiguous record to resolve.':
     'Uma linguagem de categoria consistente no seu próprio site, nos diretórios setoriais e em três publicações independentes dá aos motores um único registo inequívoco a resolver.',
-  'Three of six engines misclassify what Northwind sells. No content investment can move an answer while the entity record is wrong.':
-    'Três de seis motores classificam mal o que a Northwind vende. Nenhum investimento em conteúdo pode mover uma resposta enquanto o registo da entidade estiver errado.',
-  'Three of six AI engines misidentify what Northwind sells, and one does not recognise it as a distinct business at all.':
-    'Três de seis motores de IA identificam mal o que a Northwind vende, e um não a reconhece sequer como uma empresa distinta.',
-  'Gemini recognises Northwind at 24 of 100 and recommends it in zero questions. The cause is a disambiguation failure, not a content gap.':
-    'O Gemini reconhece a Northwind em 24 de 100 e não a recomenda em nenhuma pergunta. A causa é uma falha de desambiguação, não uma lacuna de conteúdo.',
+  'Three of six engines misclassify what Ironvale sells. No content investment can move an answer while the entity record is wrong.':
+    'Três de seis motores classificam mal o que a Ironvale vende. Nenhum investimento em conteúdo pode mover uma resposta enquanto o registo da entidade estiver errado.',
+  'Three of six AI engines misidentify what Ironvale sells, and one does not recognise it as a distinct business at all.':
+    'Três de seis motores de IA identificam mal o que a Ironvale vende, e um não a reconhece sequer como uma empresa distinta.',
+  'Gemini recognises Ironvale at 24 of 100 and recommends it in zero questions. The cause is a disambiguation failure, not a content gap.':
+    'O Gemini reconhece a Ironvale em 24 de 100 e não a recomenda em nenhuma pergunta. A causa é uma falha de desambiguação, não uma lacuna de conteúdo.',
   'Publish a single canonical entity description and propagate identical category language to trade directories and structured data.':
     'Publique uma única descrição canónica da entidade e propague linguagem de categoria idêntica para os diretórios setoriais e os dados estruturados.',
   'Publish a canonical entity description and propagate identical category language to trade directories and structured data.':
@@ -735,8 +731,8 @@ export const content: ContentOverlay = {
     'Não são contactos perdidos, porque nunca foi criado nenhum. A decisão concluiu-se dentro do motor e a analítica convencional não registou nada.',
   'Nineteen of twenty-four decisions complete without the brand. These six carry the largest share of decision-stage demand.':
     'Dezanove de vinte e quatro decisões concluem-se sem a marca. Estas seis concentram a maior parte da procura na fase de decisão.',
-  'Northwind appears in 7% of supplier-evaluation answers — the stage that decides 60% of revenue and that Kestrel controls in five of seven questions.':
-    'A Northwind aparece em 7% das respostas de avaliação de fornecedores — a fase que decide 60% da receita e que a Kestrel controla em cinco de sete perguntas.',
+  'Ironvale appears in 7% of supplier-evaluation answers — the stage that decides 60% of revenue and that Cindermark controls in five of seven questions.':
+    'A Ironvale aparece em 7% das respostas de avaliação de fornecedores — a fase que decide 60% da receita e que a Cindermark controla em cinco de sete perguntas.',
   'The stage that decides 60% of revenue carries under 15% of query volume — so the weakness is invisible to volume-led tooling.':
     'A fase que decide 60% da receita concentra menos de 15% do volume de pesquisas — pelo que a fragilidade é invisível para ferramentas guiadas pelo volume.',
   'The stage where the vendor is chosen. Presence here decides whether the business reaches the shortlist at all.':
@@ -765,9 +761,9 @@ export const content: ContentOverlay = {
   '3 independent sources': '3 fontes independentes',
   '3 sources against a category median of 14.':
     '3 fontes contra uma mediana de categoria de 14.',
-  'Category median is 14. Kestrel holds 21.':
-    'A mediana da categoria é 14. A Kestrel tem 21.',
-  'Kestrel 21 sources, Northwind 3.': 'Kestrel 21 fontes, Northwind 3.',
+  'Category median is 14. Cindermark holds 21.':
+    'A mediana da categoria é 14. A Cindermark tem 21.',
+  'Cindermark 21 sources, Ironvale 3.': 'Cindermark 21 fontes, Ironvale 3.',
   'Weak — 3 sources': 'Fraco — 3 fontes',
   'Authority evidence': 'Provas de autoridade',
   'Authority Signals': 'Sinais de autoridade',
@@ -833,16 +829,16 @@ export const content: ContentOverlay = {
   'Replaceability Index': 'Índice de substituibilidade',
   'Distributor alignment': 'Alinhamento dos distribuidores',
   'Distributor Map': 'Mapa de distribuidores',
-  'Northwind differentiators': 'Fatores de diferenciação da Northwind',
+  'Ironvale differentiators': 'Fatores de diferenciação da Ironvale',
   'Evaluation criteria cited': 'Critérios de avaliação citados',
   'Strength Drivers': 'Motores da força',
   Vulnerability: 'Vulnerabilidade',
   Fragility: 'Fragilidade',
   Dependency: 'Dependência',
   'Dependency Risk': 'Risco de dependência',
-  'Northwind listed fourth of five suppliers.':
-    'A Northwind surge em quarto lugar entre cinco fornecedores.',
-  'Absent. Meridian named first.': 'Ausente. A Meridian é nomeada primeiro.',
+  'Ironvale listed fourth of five suppliers.':
+    'A Ironvale surge em quarto lugar entre cinco fornecedores.',
+  'Absent. Hollowpine named first.': 'Ausente. A Hollowpine é nomeada primeiro.',
   'Absent. 35 searches per month.': 'Ausente. 35 pesquisas por mês.',
   'Not who ranks above you — who gets recommended when a buyer asks a machine whom to choose. The useful output is never the share figure; it is the specific evidence a competitor supplies that you do not, because that is the part you can go and close.':
     'Não quem se posiciona acima de si, mas quem é recomendado quando um comprador pergunta a uma máquina quem escolher. O resultado útil nunca é o número da quota: é a prova concreta que um concorrente fornece e que você não fornece, porque é essa a parte que pode ir fechar.',
@@ -850,28 +846,28 @@ export const content: ContentOverlay = {
     'Alguns rivais ganham cedo, moldando os critérios; outros ganham tarde, na seleção do fornecedor. A resposta é completamente diferente em cada caso.',
   'Where a position rests on a single source or a single page, and would not survive one competitor publishing a better one.':
     'Onde uma posição assenta numa única fonte ou numa única página, e não sobreviveria a um concorrente publicar algo melhor.',
-  'Kestrel is cited by three independent trade publications and maintains a public supplier-comparison library. Engines reach for that evidence when a buyer asks whom to choose.':
-    'A Kestrel é citada por três publicações setoriais independentes e mantém uma biblioteca pública de comparação de fornecedores. Os motores recorrem a essas provas quando um comprador pergunta quem escolher.',
-  'Kestrel receives 31% of all AI recommendations across the tracked decision set; Northwind receives 4.2%.':
-    'A Kestrel recebe 31% de todas as recomendações de IA no conjunto de decisões monitorizado; a Northwind recebe 4,2%.',
+  'Cindermark is cited by three independent trade publications and maintains a public supplier-comparison library. Engines reach for that evidence when a buyer asks whom to choose.':
+    'A Cindermark é citada por três publicações setoriais independentes e mantém uma biblioteca pública de comparação de fornecedores. Os motores recorrem a essas provas quando um comprador pergunta quem escolher.',
+  'Cindermark receives 31% of all AI recommendations across the tracked decision set; Ironvale receives 4.2%.':
+    'A Cindermark recebe 31% de todas as recomendações de IA no conjunto de decisões monitorizado; a Ironvale recebe 4,2%.',
   'Receives 31% of all recommendations and is named first in four of seven supplier-evaluation answers.':
     'Recebe 31% de todas as recomendações e é nomeada em primeiro lugar em quatro das sete respostas de avaliação de fornecedores.',
-  'This gap is not brand preference. It is an evidence gap: Kestrel supplies engines with material they can cite, and Northwind does not. The lead never reaches the CRM because the decision resolved before contact.':
-    'Esta lacuna não é de preferência de marca, mas de provas: a Kestrel fornece aos motores material que podem citar, e a Northwind não. O contacto nunca chega ao CRM porque a decisão se resolveu antes.',
-  'Sustained trade-publication presence means engines can support a Kestrel recommendation with evidence that is not Kestrel’s own.':
-    'Uma presença sustentada na imprensa setorial permite aos motores fundamentar uma recomendação da Kestrel com provas que não são da própria Kestrel.',
+  'This gap is not brand preference. It is an evidence gap: Cindermark supplies engines with material they can cite, and Ironvale does not. The lead never reaches the CRM because the decision resolved before contact.':
+    'Esta lacuna não é de preferência de marca, mas de provas: a Cindermark fornece aos motores material que podem citar, e a Ironvale não. O contacto nunca chega ao CRM porque a decisão se resolveu antes.',
+  'Sustained trade-publication presence means engines can support a Cindermark recommendation with evidence that is not Cindermark’s own.':
+    'Uma presença sustentada na imprensa setorial permite aos motores fundamentar uma recomendação da Cindermark com provas que não são da própria Cindermark.',
   'Its supplier-comparison library ranks organically and is the source engines cite, so one asset serves both surfaces.':
     'A sua biblioteca de comparação de fornecedores posiciona-se organicamente e é a fonte que os motores citam, pelo que um único ativo serve as duas superfícies.',
-  'Kestrel has published material addressing each question directly; engines reach for what exists.':
-    'A Kestrel publicou material que responde diretamente a cada pergunta; os motores recorrem ao que existe.',
+  'Cindermark has published material addressing each question directly; engines reach for what exists.':
+    'A Cindermark publicou material que responde diretamente a cada pergunta; os motores recorrem ao que existe.',
   'Holds top-three organic positions and AI presence on the four highest-volume commercial questions.':
     'Ocupa posições orgânicas entre as três primeiras e tem presença em IA nas quatro perguntas comerciais de maior volume.',
   'Publishing evaluation criteria before competitors did made that framing the one engines learned.':
     'Ter publicado os critérios de avaliação antes dos concorrentes fez desse enquadramento aquele que os motores aprenderam.',
-  'Halvorsen owns early-stage research questions, entering the decision before evaluation begins.':
-    'A Halvorsen domina as perguntas de pesquisa em fase inicial, entrando na decisão antes de a avaliação começar.',
-  'Owned authority removes the need to bid, so Kestrel’s cost per decision falls as Northwind’s rises.':
-    'A autoridade própria elimina a necessidade de licitar, pelo que o custo por decisão da Kestrel desce enquanto o da Northwind sobe.',
+  'Greyfen owns early-stage research questions, entering the decision before evaluation begins.':
+    'A Greyfen domina as perguntas de pesquisa em fase inicial, entrando na decisão antes de a avaliação começar.',
+  'Owned authority removes the need to bid, so Cindermark’s cost per decision falls as Ironvale’s rises.':
+    'A autoridade própria elimina a necessidade de licitar, pelo que o custo por decisão da Cindermark desce enquanto o da Ironvale sobe.',
   'The evaluation criteria the market has settled on, and which competitor published them first.':
     'Os critérios de avaliação que o mercado adotou, e qual o concorrente que os publicou primeiro.',
   'Publish an evaluation framework that makes regional response time a first-class selection criterion.':
@@ -892,8 +888,8 @@ export const content: ContentOverlay = {
   'Blind-spot keywords': 'Palavras-chave em ponto cego',
   'Traditional search and AI-mediated discovery are separate commercial assets that fail independently. This category measures each, classifies every gap between them, and prices what closing the gap is currently costing in paid media.':
     'A pesquisa tradicional e a descoberta mediada por IA são ativos comerciais distintos que falham de forma independente. Esta categoria mede cada um, classifica todas as lacunas entre eles e quantifica o que fechar essa lacuna está a custar atualmente em meios pagos.',
-  'Google rank and AI recommendation are separate commercial assets. Northwind ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.':
-    'A posição no Google e a recomendação da IA são ativos comerciais distintos. A Northwind ocupa o primeiro lugar para a abertura de conta — uma pergunta feita apenas depois de o fornecedor já ter sido escolhido — e está ausente de todas as perguntas que decidem quem é esse fornecedor.',
+  'Google rank and AI recommendation are separate commercial assets. Ironvale ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.':
+    'A posição no Google e a recomendação da IA são ativos comerciais distintos. A Ironvale ocupa o primeiro lugar para a abertura de conta — uma pergunta feita apenas depois de o fornecedor já ter sido escolhido — e está ausente de todas as perguntas que decidem quem é esse fornecedor.',
   'The same question asked of both surfaces, so the two results can finally be compared line by line instead of by anecdote.':
     'A mesma pergunta colocada às duas superfícies, para que os dois resultados possam finalmente ser comparados linha a linha em vez de por anedota.',
   'Every gap sorted into a named class with a different remedy and a different cost. Not all absence is the same problem.':
@@ -958,8 +954,8 @@ export const content: ContentOverlay = {
     'Quem define uma categoria fixa os critérios pelos quais os compradores avaliam. Esta categoria mede que parte dessa definição lhe pertence, onde é frágil e para quais das suas vantagens reais o mercado não tem vocabulário.',
   'Whoever defines the category sets the criteria buyers evaluate against. Competing on someone else’s definition means competing on terms chosen to favour them.':
     'Quem define a categoria fixa os critérios pelos quais os compradores avaliam. Competir com a definição de outro significa competir em termos escolhidos para o favorecer.',
-  'Engines describe the category in a competitor’s language. Northwind’s strongest differentiator is absent from every category description.':
-    'Os motores descrevem a categoria na linguagem de um concorrente. O fator de diferenciação mais forte da Northwind está ausente de todas as descrições da categoria.',
+  'Engines describe the category in a competitor’s language. Ironvale’s strongest differentiator is absent from every category description.':
+    'Os motores descrevem a categoria na linguagem de um concorrente. O fator de diferenciação mais forte da Ironvale está ausente de todas as descrições da categoria.',
   'Whether the market is asking informed comparison questions or still asking what the category is, which decides what content is worth producing.':
     'Se o mercado coloca perguntas comparativas informadas ou ainda pergunta o que é a categoria — o que determina que conteúdo vale a pena produzir.',
   'Category vocabulary as an ownable asset, with a percentage attached — a measure most companies have never seen quantified.':
@@ -1262,8 +1258,8 @@ export const content: ContentOverlay = {
   'Pricing shown throughout is placeholder and clearly marked as such on the pricing page. The checkout collects no payment details and processes no charge.':
     'Os preços apresentados são provisórios e estão claramente assinalados como tal na página de preços. O processo de pagamento não recolhe dados bancários nem processa qualquer cobrança.',
   'Data processing': 'Tratamento de dados',
-  'Northwind Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
-    'A Northwind Supply é uma organização fictícia. Todos os números que lhe são atribuídos estão pré-carregados, são internamente coerentes e derivam de um conjunto publicado de factos de referência. Em nenhum ponto deste ambiente aparecem dados de uma empresa real.',
+  'Ironvale Supply is a fictional organisation. Every figure attributed to it is seeded, internally consistent and derived from a published set of anchor facts. No real company’s data appears anywhere in this environment.':
+    'A Ironvale Supply é uma organização fictícia. Todos os números que lhe são atribuídos estão pré-carregados, são internamente coerentes e derivam de um conjunto publicado de factos de referência. Em nenhum ponto deste ambiente aparecem dados de uma empresa real.',
   'Competitor names, domains and citation counts are invented. Any resemblance to an operating business is coincidental and unintended.':
     'Os nomes de concorrentes, os domínios e as contagens de citações são inventados. Qualquer semelhança com um negócio em atividade é casual e não intencional.',
   'AI engines are referenced by their public product names for accuracy of description. No affiliation, endorsement or partnership is claimed or implied.':
@@ -1284,10 +1280,10 @@ export const content: ContentOverlay = {
   'Sign In | GeoRepute': 'Entrar | GeoRepute',
   Home: 'Início',
   'Enter the demonstration workspace': 'Entrar na área de trabalho de demonstração',
-  'This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.':
-    'Este ambiente não tem autenticação. Todos os visitantes veem a mesma organização pré-carregada, a Northwind Supply, para que cada número continue verificável face à metodologia publicada.',
+  'This environment has no authentication. Every visitor sees the same seeded organisation, Ironvale Supply, so that every figure stays verifiable against the published methodology.':
+    'Este ambiente não tem autenticação. Todos os visitantes veem a mesma organização pré-carregada, a Ironvale Supply, para que cada número continue verificável face à metodologia publicada.',
   Workspace: 'Área de trabalho',
-  'northwindsupply.com · US Midwest': 'northwindsupply.com · Midwest dos EUA',
+  'ironvale.example · US Midwest': 'ironvale.example · Midwest dos EUA',
   'Continue to Mission Control': 'Continuar para o centro de comando',
   'No password is requested because none is checked. Real authentication drops in behind the same route without changing this screen’s place in the flow.':
     'Não é pedida palavra-passe porque nenhuma é verificada. Uma autenticação a sério encaixa por trás da mesma rota sem alterar o lugar deste ecrã no percurso.',
@@ -1295,8 +1291,8 @@ export const content: ContentOverlay = {
   /* ==========================================================================
      PUBLIC NARRATIVE INTELLIGENCE
 
-     Trade-publication mastheads (Industrial Distribution, Modern Supply
-     Chain, Fastener Technology, Plant Engineering) stay Latin. They are
+     Trade-publication mastheads (Distribution Quarterly, Modern Supply
+     Chain, The Fastener Ledger, Plantworks Monthly) stay Latin. They are
      invented proper nouns, like the competitor names.
 
      Nothing here may be keyed on a bare lowercase enum value — 'emerging',
@@ -1593,8 +1589,8 @@ export const content: ContentOverlay = {
     'O negócio está ausente de todos os temas ativos da categoria.',
   'The business is described as a hardware retailer.':
     'O negócio é descrito como uma loja de ferragens a retalho.',
-  'Northwind Supply is a hardware retailer.':
-    'A Northwind Supply é uma loja de ferragens a retalho.',
+  'Ironvale Supply is a hardware retailer.':
+    'A Ironvale Supply é uma loja de ferragens a retalho.',
   'Observed in {sources}.': 'Observado em: {sources}.',
   'How much of the conversation works for us':
     'Que parte da conversa joga a nosso favor',
@@ -1623,12 +1619,12 @@ export const content: ContentOverlay = {
      competitor names — they stay Latin in every locale. In a Latin-script
      locale they are also byte-identical to English, so a diff-mode audit
      will list them; that is the audit working, not a gap. */
-  'Industrial Distribution · Modern Supply Chain':
-    'Industrial Distribution · Modern Supply Chain',
-  'Fastener Technology · Industrial Distribution':
-    'Fastener Technology · Industrial Distribution',
-  'Fastener Technology · Plant Engineering': 'Fastener Technology · Plant Engineering',
-  'Modern Supply Chain · Plant Engineering': 'Modern Supply Chain · Plant Engineering',
+  'Distribution Quarterly · Supply Chain Ledger':
+    'Distribution Quarterly · Supply Chain Ledger',
+  'The Fastener Ledger · Distribution Quarterly':
+    'The Fastener Ledger · Distribution Quarterly',
+  'The Fastener Ledger · Plantworks Monthly': 'The Fastener Ledger · Plantworks Monthly',
+  'Supply Chain Ledger · Plantworks Monthly': 'Supply Chain Ledger · Plantworks Monthly',
 
   /* --- Narrative action plan ------------------------------------------------------- */
   'Narrative action plan': 'Plano de ação narrativo',
@@ -1762,8 +1758,8 @@ export const content: ContentOverlay = {
   'A single quote form serves every stage. There is no path for a buyer who is still comparing suppliers and not yet requesting a price.':
     'Um único formulário de orçamento serve todas as fases. Não existe percurso para um comprador que ainda está a comparar fornecedores e ainda não pede preço.',
   'Competitor readiness': 'Preparação dos concorrentes',
-  'Kestrel Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
-    'A Kestrel Industrial mantém em simultâneo posições nos três primeiros lugares orgânicos e presença na IA nas quatro perguntas comerciais de maior volume.',
+  'Cindermark Industrial holds top-three organic positions and AI presence on the four highest-volume commercial questions simultaneously.':
+    'A Cindermark Industrial mantém em simultâneo posições nos três primeiros lugares orgânicos e presença na IA nas quatro perguntas comerciais de maior volume.',
 
   /* --- Dimension detail signals ---------------------------------------------------- */
   'Category understanding': 'Compreensão da categoria',
@@ -1794,8 +1790,8 @@ export const content: ContentOverlay = {
     'As três publicações do setor que os motores mais citam nesta categoria não dedicam qualquer cobertura ao negócio.',
   'Competitor authority': 'Autoridade do concorrente',
   '7× behind': '7× atrás',
-  'Kestrel Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
-    'A Kestrel Industrial pode ser corroborada 7 vezes mais facilmente. Essa vantagem acumula-se enquanto não houver um programa que a contrarie.',
+  'Cindermark Industrial can be corroborated 7× more readily. That advantage compounds while no counter-programme runs.':
+    'A Cindermark Industrial pode ser corroborada 7 vezes mais facilmente. Essa vantagem acumula-se enquanto não houver um programa que a contrarie.',
   'Commercial keyword coverage': 'Cobertura de pesquisas comerciais',
   '9 of 20': '9 em 20',
   'Weighted by search volume rather than by keyword count, so a strong position on a question nobody asks does not flatter the figure.':
@@ -1853,8 +1849,8 @@ export const content: ContentOverlay = {
   '4 in top three': '4 nos três primeiros',
   'Authority gap': 'Défice de autoridade',
   '21 sources': '21 fontes',
-  'Kestrel Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
-    'A Kestrel Industrial tem 21 fontes contra 3. Um défice de provas não se fecha com publicidade, mas com publicação e validação.',
+  'Cindermark Industrial holds 21 sources against 3. Advertising does not close an evidence gap; publishing and validation do.':
+    'A Cindermark Industrial tem 21 fontes contra 3. Um défice de provas não se fecha com publicidade, mas com publicação e validação.',
   'Competitive gap': 'Défice competitivo',
   '12% owned': '12 % detidos',
   'Existing search strength': 'Força atual na pesquisa',
@@ -1868,8 +1864,8 @@ export const content: ContentOverlay = {
     'A descrição da categoria difere entre o sítio e dois diretórios do setor, o que uma máquina lê como um registo pouco fiável.',
   'No single consistent story exists in the public record for a campaign to reinforce, so each impression starts the explanation over.':
     'Não existe no registo público um relato único e coerente que uma campanha possa reforçar, pelo que cada impressão recomeça a explicação.',
-  'Kestrel Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
-    'A Kestrel Industrial recebe 31 % das recomendações contra 4,2 %. Lançar agora é anunciar dentro de uma decisão que eles controlam.',
+  'Cindermark Industrial receives 31% of recommendations against 4.2%. Launching now advertises into a decision they control.':
+    'A Cindermark Industrial recebe 31 % das recomendações contra 4,2 %. Lançar agora é anunciar dentro de uma decisão que eles controlam.',
 
   /* --- Journey coverage ------------------------------------------------------------ */
   Coverage: 'Cobertura',
@@ -1934,8 +1930,8 @@ export const content: ContentOverlay = {
   'What position are we launching into?': 'Para que posição estamos a lançar?',
   'AI narrative': 'Narrativa na IA',
   'Narrative consistency': 'Coerência narrativa',
-  "Engines describe the category using a competitor's framing. Northwind owns 12% of that language.":
-    'Os motores descrevem a categoria com o enquadramento de um concorrente. A Northwind detém 12 % desse vocabulário.',
+  "Engines describe the category using a competitor's framing. Ironvale owns 12% of that language.":
+    'Os motores descrevem a categoria com o enquadramento de um concorrente. A Ironvale detém 12 % desse vocabulário.',
 
   /* ==========================================================================
      DECISION RECONSTRUCTION
@@ -1973,8 +1969,8 @@ export const content: ContentOverlay = {
     'Pouco claro — associa o nome a negócios sem relação',
   'Not recognized as a distinct business entity':
     'Não é reconhecida como uma entidade empresarial distinta',
-  '{n} independent sources support this brand. Northwind has 3.':
-    '{n} fontes independentes sustentam esta marca. A Northwind tem 3.',
+  '{n} independent sources support this brand. Ironvale has 3.':
+    '{n} fontes independentes sustentam esta marca. A Ironvale tem 3.',
   '{name} controls': 'A {name} controla',
   'across the whole set. Competitive density is shifting at {velocity}.':
     'em todo o conjunto. A densidade competitiva está a mudar a um ritmo {velocity}.',
@@ -2010,28 +2006,28 @@ export const content: ContentOverlay = {
   'Decision intelligence graph': 'Grafo de inteligência de decisão',
   'Mentioned only': 'Apenas mencionada',
   'Wrong entity': 'Entidade errada',
-  'Named Northwind in its answer, citing company website.':
-    'Nomeou a Northwind na sua resposta, citando o sítio da empresa.',
+  'Named Ironvale in its answer, citing company website.':
+    'Nomeou a Ironvale na sua resposta, citando o sítio da empresa.',
   'Recognises the business but did not consider it relevant to this question.':
     'Reconhece o negócio mas não o considerou relevante para esta pergunta.',
-  'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
-    'Descreve a Northwind como uma loja de ferragens a retalho em vez de um distribuidor de MRO, o que a retira das respostas de avaliação de fornecedores.',
+  'Describes Ironvale as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.':
+    'Descreve a Ironvale como uma loja de ferragens a retalho em vez de um distribuidor de MRO, o que a retira das respostas de avaliação de fornecedores.',
   'Knows the company exists but not which product categories it carries, so it is omitted from specification-led questions.':
     'Sabe que a empresa existe mas não que categorias de produto comercializa, pelo que é omitida das perguntas conduzidas por especificações.',
-  'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.':
-    'Confunde a Northwind Supply com uma empresa de logística homónima, pelo que a associação de categoria falha por completo.',
-  '1 of 6 engines named Northwind, and none placed it first.':
-    '1 em 6 motores nomeou a Northwind, e nenhum a colocou em primeiro lugar.',
+  'Conflates Ironvale Supply with a same-named logistics firm, so category association fails entirely.':
+    'Confunde a Ironvale Supply com uma empresa de logística homónima, pelo que a associação de categoria falha por completo.',
+  '1 of 6 engines named Ironvale, and none placed it first.':
+    '1 em 6 motores nomeou a Ironvale, e nenhum a colocou em primeiro lugar.',
   '4 of 6 resolve the wrong entity': '4 em 6 resolvem para a entidade errada',
   'engines recommended the business on this question':
     'motores recomendaram o negócio nesta pergunta',
   'of all recommendations across the tracked decision set':
     'do total de recomendações no conjunto de decisões em acompanhamento',
-  'Kestrel Industrial is cited by 21 independent sources; Northwind by 3.':
-    'A Kestrel Industrial é citada por 21 fontes independentes; a Northwind, por 3.',
+  'Cindermark Industrial is cited by 21 independent sources; Ironvale by 3.':
+    'A Cindermark Industrial é citada por 21 fontes independentes; a Ironvale, por 3.',
   '3 sources vs 14 median': '3 fontes contra uma mediana de 14',
-  'Northwind’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
-    'As próprias páginas da Northwind são a única fonte a que os motores conseguem chegar para as suas afirmações — e a autocitação pesa pouco.',
+  'Ironvale’s own pages are the only source engines can reach for its claims — self-citation carries little weight.':
+    'As próprias páginas da Ironvale são a única fonte a que os motores conseguem chegar para as suas afirmações — e a autocitação pesa pouco.',
   'A published comparison library gives engines material they can quote directly.':
     'Uma biblioteca de comparações publicada dá aos motores material que podem citar diretamente.',
   'Category evaluation criteria': 'Critérios de avaliação da categoria',
@@ -2123,8 +2119,8 @@ export const content: ContentOverlay = {
   'Supplier-evaluation coverage. 19 of 24 decisions complete without the brand.':
     'Cobertura da avaliação de fornecedores. 19 em 24 decisões concluem-se sem a marca.',
   'Competitive Capture': 'Captura competitiva',
-  'Kestrel Industrial receives the recommendation. Northwind receives 4.2%.':
-    'A Kestrel Industrial fica com a recomendação. A Northwind recebe 4,2 %.',
+  'Cindermark Industrial receives the recommendation. Ironvale receives 4.2%.':
+    'A Cindermark Industrial fica com a recomendação. A Ironvale recebe 4,2 %.',
   'Narrative Ownership': 'Titularidade da narrativa',
   'Share of the language engines use to define the category. The criteria cited first are a competitor’s.':
     'Quota do vocabulário que os motores usam para definir a categoria. Os critérios citados em primeiro lugar são de um concorrente.',
@@ -2138,8 +2134,8 @@ export const content: ContentOverlay = {
     'Ponderado por seis vetores GEON. A autoridade, em 28, é a restrição determinante.',
   'ChatGPT supplier recommendation presence':
     'Presença nas recomendações de fornecedores do ChatGPT',
-  'The most-used engine puts Northwind forward in one of twenty-four decision questions.':
-    'O motor mais utilizado propõe a Northwind numa de vinte e quatro perguntas de decisão.',
+  'The most-used engine puts Ironvale forward in one of twenty-four decision questions.':
+    'O motor mais utilizado propõe a Ironvale numa de vinte e quatro perguntas de decisão.',
   '3 independent sources against a category median of 14.':
     '3 fontes independentes contra uma mediana de categoria de 14.',
   'Authority is the binding constraint, so it is where intervention begins.':
@@ -2167,13 +2163,13 @@ export const content: ContentOverlay = {
   'Executive intelligence feed': 'Fluxo de inteligência para a administração',
   '{n} events': '{n} eventos',
   'Competitor surge': 'Avanço de um concorrente',
-  'Kestrel Industrial gained the first recommendation on two more supplier questions':
-    'A Kestrel Industrial ficou com a primeira recomendação em mais duas perguntas sobre fornecedores',
-  'Kestrel now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
-    'A Kestrel lidera agora quatro das sete respostas de avaliação de fornecedores, contra duas anteriormente. Ambas as novas vitórias citam uma publicação do setor acrescentada em junho.',
+  'Cindermark Industrial gained the first recommendation on two more supplier questions':
+    'A Cindermark Industrial ficou com a primeira recomendação em mais duas perguntas sobre fornecedores',
+  'Cindermark now leads four of seven supplier-evaluation answers, up from two. Both new wins cite a trade publication added in June.':
+    'A Cindermark lidera agora quatro das sete respostas de avaliação de fornecedores, contra duas anteriormente. Ambas as novas vitórias citam uma publicação do setor acrescentada em junho.',
   'Citation lost': 'Citação perdida',
-  'Perplexity stopped citing the Northwind capability page':
-    'O Perplexity deixou de citar a página de capacidades da Northwind',
+  'Perplexity stopped citing the Ironvale capability page':
+    'O Perplexity deixou de citar a página de capacidades da Ironvale',
   'The page was cited on three questions in June and none in July. Perplexity now resolves the same questions to competitor sources.':
     'A página foi citada em três perguntas em junho e em nenhuma em julho. O Perplexity resolve agora essas mesmas perguntas para fontes concorrentes.',
   '3 → 0 citations': '3 → 0 citações',
@@ -2194,8 +2190,8 @@ export const content: ContentOverlay = {
   'Trust signal decayed': 'Sinal de confiança degradado',
   'Category description diverged across two trade directories':
     'A descrição da categoria divergiu em dois diretórios do setor',
-  'Two directories now describe Northwind differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
-    'Dois diretórios descrevem agora a Northwind de forma diferente do seu próprio sítio. É essa incoerência que está por trás da confusão de entidade no ChatGPT e no Copilot.',
+  'Two directories now describe Ironvale differently from its own site. Inconsistency is the mechanism behind entity confusion on ChatGPT and Copilot.':
+    'Dois diretórios descrevem agora a Ironvale de forma diferente do seu próprio sítio. É essa incoerência que está por trás da confusão de entidade no ChatGPT e no Copilot.',
   'Search cost spike': 'Subida do custo de pesquisa',
   'Blended CPC moved further above break-even':
     'O CPC combinado afastou-se ainda mais acima do ponto de equilíbrio',
@@ -2204,11 +2200,11 @@ export const content: ContentOverlay = {
   'New decision question': 'Nova pergunta de decisão',
   'A new supplier-evaluation question entered the tracked set':
     'Uma nova pergunta de avaliação de fornecedores entrou no conjunto em acompanhamento',
-  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Northwind is absent from every engine answering it.':
-    '«Que fornecedor de MRO tem a melhor taxa de satisfação de encomendas?» apareceu com volume mensurável. A Northwind está ausente de todos os motores que lhe respondem.',
+  '“Which MRO supplier has the best fill rate?” appeared with measurable volume. Ironvale is absent from every engine answering it.':
+    '«Que fornecedor de MRO tem a melhor taxa de satisfação de encomendas?» apareceu com volume mensurável. A Ironvale está ausente de todos os motores que lhe respondem.',
   'Recommendation gained': 'Recomendação ganha',
-  'Claude began recommending Northwind for regional distributor questions':
-    'O Claude começou a recomendar a Northwind em perguntas sobre distribuidores regionais',
+  'Claude began recommending Ironvale for regional distributor questions':
+    'O Claude começou a recomendar a Ironvale em perguntas sobre distribuidores regionais',
   'First recommendation on “Top rated industrial supply vendors near Chicago”. Regional specificity is the differentiator the answer cites.':
     'Primeira recomendação em «Fornecedores de material industrial mais bem avaliados perto de Chicago». A especificidade regional é o fator de diferenciação que a resposta cita.',
   'Regional opportunity': 'Oportunidade regional',
@@ -2723,12 +2719,12 @@ export const content: ContentOverlay = {
     'Confundido com uma empresa de logística homónima.',
   'No stable entity record. Category answered without naming any Midwest distributor.':
     'Sem registo estável de entidade. A categoria foi respondida sem nomear qualquer distribuidor do Midwest.',
-  'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.':
-    'Nenhum motor de IA nomeia a Northwind em dezanove das vinte e quatro questões de decisão acompanhadas.',
-  'Named in seventeen of the nineteen questions where Northwind is absent.':
-    'Nomeado em dezassete das dezanove perguntas em que a Northwind está ausente.',
-  'Kestrel named first in four of seven questions.':
-    'Kestrel nomeada em primeiro lugar em quatro de sete perguntas.',
+  'No AI engine names Ironvale in nineteen of the twenty-four tracked decision questions.':
+    'Nenhum motor de IA nomeia a Ironvale em dezanove das vinte e quatro questões de decisão acompanhadas.',
+  'Named in seventeen of the nineteen questions where Ironvale is absent.':
+    'Nomeado em dezassete das dezanove perguntas em que a Ironvale está ausente.',
+  'Cindermark named first in four of seven questions.':
+    'Cindermark nomeada em primeiro lugar em quatro de sete perguntas.',
   'Receives the recommendation in 31% of decisions and controls the supplier-evaluation stage.':
     'Recebe a recomendação em 31 % das decisões e controla a fase de avaliação de fornecedores.',
   'Leads on the two most heavily weighted vectors.':
@@ -2741,14 +2737,14 @@ export const content: ContentOverlay = {
     'A vantagem acumula-se na ausência de resposta.',
   'Holds position while no counter-intervention is running.':
     'Mantém a posição enquanto não houver uma contra-intervenção em curso.',
-  'Meridian publishes specification guidance that engines treat as category-defining language.':
-    'A Meridian publica orientações de especificação que os motores tratam como o vocabulário que define a categoria.',
-  'Atlas is named on procurement checklists that engines cite at the point of purchase.':
-    'A Atlas é nomeada em listas de verificação de compras que os motores citam no momento da compra.',
+  'Hollowpine publishes specification guidance that engines treat as category-defining language.':
+    'A Hollowpine publica orientações de especificação que os motores tratam como o vocabulário que define a categoria.',
+  'Ashcombe is named on procurement checklists that engines cite at the point of purchase.':
+    'A Ashcombe é nomeada em listas de verificação de compras que os motores citam no momento da compra.',
   'Two of six interventions are low effort with measurable movement inside 60 days.':
     'Duas das seis intervenções exigem pouco esforço e produzem movimento mensurável em menos de 60 dias.',
-  'Kestrel Industrial 31%. Meridian Supply Co 18%. Halvorsen Industrial 11%. Atlas Trade Group 7%. Northwind Supply 4.2%. Unattributed 28.8%':
-    'Kestrel Industrial 31 %. Meridian Supply Co 18 %. Halvorsen Industrial 11 %. Atlas Trade Group 7 %. Northwind Supply 4,2 %. Não atribuído 28,8 %',
+  'Cindermark Industrial 31%. Hollowpine Supply Co 18%. Greyfen Industrial 11%. Ashcombe Trade Group 7%. Ironvale Supply 4.2%. Unattributed 28.8%':
+    'Cindermark Industrial 31 %. Hollowpine Supply Co 18 %. Greyfen Industrial 11 %. Ashcombe Trade Group 7 %. Ironvale Supply 4,2 %. Não atribuído 28,8 %',
   'Not in top 100 organic. No AI recommendation. 320 searches per month.':
     'Fora dos 100 primeiros resultados orgânicos. Sem recomendação de IA. 320 pesquisas por mês.',
   'Position 1 organic, AI present. Volume 40 per month.':
@@ -2818,14 +2814,6 @@ export const content: ContentOverlay = {
     'O relatório de lacuna tal como é entregue: um veredito enunciado, os motores observados e o índice que as páginas seguintes decompõem. Interface real, execução de demonstração.',
   'The cover of a visibility intelligence gap report carrying a single stated verdict, the AI engines observed, the date of the run and an AI-first reputation index awaiting the pages that decompose it.':
     'A capa de um relatório de lacuna de visibilidade que carrega um único veredito enunciado, os motores de IA observados, a data da execução e um índice de reputação centrado na IA à espera das páginas que o decompõem.',
-  'Narrative quality plotted against attention share — the top-left quadrant is volume without trust. Real interface, demonstration run.':
-    'A qualidade narrativa face à quota de atenção — o quadrante superior esquerdo é volume sem confiança. Interface real, execução de demonstração.',
-  'A scatter plot placing each brand in a category by narrative quality on one axis and attention share on the other, so that high share paired with a weak narrative separates visibly from earned standing.':
-    'Um diagrama de dispersão que coloca cada marca de uma categoria por qualidade narrativa num eixo e quota de atenção no outro, de modo que uma quota alta aliada a uma narrativa fraca se separa visivelmente de uma posição conquistada.',
-  'Combined dominance — share multiplied by narrative and by default routing — sized as area per brand. Real interface, demonstration run.':
-    'O domínio combinado — a quota multiplicada pela narrativa e pelo encaminhamento por omissão — dimensionado como área por marca. Interface real, execução de demonstração.',
-  'A treemap sizing each brand in a category by combined attention dominance, computed from share of attention, narrative quality and how often the engines route to it by default.':
-    'Um treemap que dimensiona cada marca de uma categoria por domínio de atenção combinado, calculado a partir da quota de atenção, da qualidade narrativa e da frequência com que os motores lhe encaminham por omissão.',
   'Where mentions actually land engine by engine, and the addressable volume sitting behind the ones that do not. Real interface, demonstration run.':
     'Onde as menções aterram realmente motor a motor, e o volume abordável que está por trás das que não aterram. Interface real, execução de demonstração.',
   'A bar chart per AI engine comparing the queries that mentioned the brand against those that did not, with the unmentioned mass carrying the larger share on every engine.':
@@ -2838,4 +2826,33 @@ export const content: ContentOverlay = {
     'Uma execução reconstruída: o que está a acontecer, porque está a acontecer e quanto custa, com a leitura do analista por baixo. Interface real, execução de demonstração.',
   'An executive summary resolving a run of commercial queries into what is happening, why it is happening and what it is costing, above an analyst note framing the result as a representation gap rather than a quality gap.':
     'Um resumo executivo que reduz uma execução de consultas comerciais ao que está a acontecer, porquê e quanto custa, sobre uma nota de analista que enquadra o resultado como uma lacuna de representação e não de qualidade.',
+
+  /* --- Hero capability strip — components/home/Hero.tsx.
+     GEON, SEO, GEO, YouTube and TikTok are absent on purpose: the first
+     is the methodology name and the rest are proper nouns, so they fall
+     through to English by construction. ------------------------------ */
+  'Google + 6 AI Engines': 'Google + 6 motores de IA',
+  '100+ Deep Business & Marketing Analyses': 'Mais de 100 análises profundas de negócio e marketing',
+  'Competitor Intelligence': 'Inteligência competitiva',
+  'Keyword Research': 'Pesquisa de palavras-chave',
+  'Marketing Due Diligence': 'Diligência prévia de marketing',
+  'Strategy': 'Estratégia',
+  'Work Plans': 'Planos de trabalho',
+  'Budgets': 'Orçamentos',
+  'Resource Planning': 'Planeamento de recursos',
+  'Proposals': 'Propostas',
+  'Content Execution': 'Execução de conteúdo',
+  'Social': 'Social',
+  '7 Languages': '7 línguas',
+  'Continuous PDCA': 'PDCA contínuo',
+
+  /* --- Replaces the withdrawn competitor-chart captions ------------- */
+  'Which account of the category is circulating, and whose language it uses. Invented competitors only.':
+    'Que versão da categoria circula e de quem é a linguagem que usa. Apenas concorrentes fictícios.',
+  'A narrative intelligence screen listing the narratives circulating about a business and its category, each with its polarity, its reach and the direction it is moving in.':
+    'Um ecrã de inteligência narrativa que lista as narrativas que circulam sobre uma empresa e a sua categoria, cada uma com a sua polaridade, o seu alcance e a direção em que se move.',
+  'What a system can cite when it has to justify a recommendation. Invented competitors only.':
+    'O que um sistema pode citar quando tem de justificar uma recomendação. Apenas concorrentes fictícios.',
+  'A trust and authority panel counting the independent sources that corroborate a business against those corroborating its competitors.':
+    'Um painel de confiança e autoridade que conta as fontes independentes que corroboram uma empresa face às que corroboram os seus concorrentes.',
 }

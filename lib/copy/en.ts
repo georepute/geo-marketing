@@ -1,15 +1,22 @@
 /* ============================================================================
-   Core Commercial Copy System — brief §19, VERBATIM.
+   Core Commercial Copy System.
    Non-negotiable #6: use the exact headline copy from the doc's copy system.
-   Do not paraphrase these strings. Every other UI string also lives here so
+   Do not paraphrase these strings.
+
+   THE HERO BLOCK NO LONGER COMES FROM §19. category, heroPrimary and
+   heroContinuation were repositioned to address marketing agencies rather
+   than the end business, on the client's instruction. §19 still governs
+   everything below the hero, and tests/copy-fidelity.test.ts holds the
+   current wording of all eighteen either way — so drift is still caught,
+   it is simply measured against the agency brief for those three. Every other UI string also lives here so
    the app stays localization-safe (plan §1, deviation 2).
    ========================================================================= */
 
 export const copy = {
   /* --- §19 verbatim ------------------------------------------------------ */
-  category: 'THE DECISION INTELLIGENCE OPERATING SYSTEM',
-  heroPrimary: 'See Where Your Business Is Recognized, Recommended and Chosen.',
-  heroContinuation: 'And where the decision goes somewhere else.',
+  category: 'THE INTELLIGENCE & EXECUTION LAYER FOR MODERN AGENCIES',
+  heroPrimary: 'Sell More. Deliver More. Retain Clients Longer.',
+  heroContinuation: 'Without Scaling Your Team at the Same Rate.',
   categoryPositioning:
     'Traditional platforms optimize channels. GeoRepute reconstructs decisions.',
   analyticsDisruption: 'Your analytics start too late.',
@@ -32,9 +39,15 @@ export const copy = {
 
   /* --- Brief §5, home-section headlines (verbatim) ----------------------- */
   home: {
-    heroCtaPrimary: 'Analyze My Business',
-    heroCtaSecondary: 'Explore Intelligence Products',
+    heroCtaPrimary: 'See GeoRepute in Action',
+    heroCtaSecondary: 'Explore the Platform',
     heroCtaEnterprise: 'Book an Executive Briefing',
+    /* Reads under the headline; states who the platform is for. */
+    heroSubheadline:
+      'GeoRepute gives marketing agencies the research, intelligence, strategy and execution capabilities of a much larger team, in one platform.',
+    /* The scope, in one paragraph, before any section elaborates it. */
+    heroSupporting:
+      'Analyze your clients, market and competitors across Google and 6 AI engines. Run 100+ deep business and marketing analyses. Perform Marketing Due Diligence before campaigns. Build data-driven strategies, work plans, budgets, resource requirements and proposals. Execute across channels in 7 languages, then measure and continuously improve through PDCA.',
     disruptionSub:
       'The customer decision often begins before the visit, click, lead or CRM event exists.',
     liveEntry: 'See what the market understands about your business.',
@@ -1031,6 +1044,204 @@ export const copy = {
         description: 'Perception measurement.',
       },
     ],
+  },
+
+  /* ==========================================================================
+     AGENCY HOMEPAGE — sections 2 to 11.
+
+     The hero says who this is for; these carry the argument. The order is the
+     client's and is deliberate: what an agency gains, how the system runs,
+     why it is not a dashboard, then retention, revenue, intelligence,
+     consistency, commercials, capability and the close.
+     ======================================================================= */
+  agency: {
+    /* --- 2 · core value ------------------------------------------------- */
+    value: {
+      headline: 'Build a Bigger Agency Without Building a Bigger Operation.',
+      intro:
+        'GeoRepute helps agencies expand what they can sell and deliver, while reducing the operational load required to do it.',
+      cards: [
+        {
+          title: 'Scale Without Linear Headcount',
+          body: 'Serve more clients without adding researchers, strategists and content resources at the same rate.',
+        },
+        {
+          title: 'Cut Research & Strategy Time',
+          body: 'Replace hours of manual research with structured market, competitor and business intelligence.',
+        },
+        {
+          title: 'Increase Revenue Per Client',
+          body: 'Identify additional SEO, GEO, content, reputation, social and market opportunities inside existing accounts.',
+        },
+        {
+          title: 'Increase Client Retention',
+          body: 'Turn short campaigns into structured multi-month roadmaps with clear priorities, budgets and measurable progress.',
+        },
+        {
+          title: 'Protect Agency Margins',
+          body: 'Build scopes and proposals based on actual workload, manpower, channels and budget requirements.',
+        },
+        {
+          title: 'Deliver Deeper Client Intelligence',
+          body: 'Give clients the level of market and competitive insight they normally expect from consulting or business intelligence teams.',
+        },
+      ],
+    },
+
+    /* --- 3 · platform flow ---------------------------------------------- */
+    flow: {
+      headline: 'From Client Brief to Continuous Growth. One System.',
+      steps: [
+        {
+          label: 'Research',
+          detail: 'Google + 6 AI Engines + Market + Competitors + Keywords',
+        },
+        {
+          label: 'Analyze',
+          detail: '100+ Deep Business & Marketing Analyses + GEON',
+        },
+        {
+          label: 'Due Diligence',
+          detail: 'Marketing Due Diligence Before Campaign Launch',
+        },
+        {
+          label: 'Decide',
+          detail: 'Opportunities + Gaps + Priorities + Strategic Direction',
+        },
+        {
+          label: 'Plan',
+          detail: 'Strategy + Work Plan + Channels + Manpower + Budget',
+        },
+        { label: 'Propose', detail: 'Data-Backed Scope + Pricing + Proposal' },
+        {
+          label: 'Execute',
+          detail: 'SEO + GEO + Social + YouTube + TikTok + Content',
+        },
+        {
+          label: 'Measure & Improve',
+          detail: 'PDCA + Competitor Tracking + Continuous Optimization',
+        },
+      ],
+    },
+
+    /* --- 4 · differentiation -------------------------------------------- */
+    differentiation: {
+      headline: "Most Marketing Platforms Stop at Analysis. GeoRepute Doesn't.",
+      body: 'Most platforms give agencies dashboards, reports or isolated recommendations. GeoRepute continues from intelligence to decision-making, planning, commercial scope, execution, measurement and continuous improvement.',
+      typicalLabel: 'Typical Marketing Platform',
+      oursLabel: 'GeoRepute',
+      rows: [
+        { typical: 'Data', ours: 'Intelligence' },
+        { typical: 'Reports', ours: 'Decisions' },
+        { typical: 'Recommendations', ours: 'Strategy' },
+        { typical: 'Analytics', ours: 'Work Plan' },
+        { typical: 'Insights', ours: 'Budget & Resources' },
+        { typical: 'Dashboard', ours: 'Proposal' },
+        { typical: 'Manual Execution', ours: 'Connected Execution' },
+        { typical: 'Monthly Reporting', ours: 'Continuous PDCA' },
+        { typical: 'Tool', ours: 'Agency Operating Infrastructure' },
+      ],
+    },
+
+    /* --- 5 · client retention ------------------------------------------- */
+    retention: {
+      headline: 'Make Your Agency Harder to Replace.',
+      body: 'When your agency brings the client more than campaign management, the relationship changes.',
+      bodyTwo:
+        "GeoRepute helps your team understand the client's business, market, competitors and opportunities, build the roadmap, justify the budget, execute the plan and demonstrate progress over time.",
+      highlightLead: 'Stop Being the Agency That Runs Campaigns.',
+      highlight: 'Become the Agency That Helps Clients Decide What to Do Next.',
+    },
+
+    /* --- 6 · revenue expansion ------------------------------------------ */
+    revenue: {
+      headline: 'Find More Revenue Inside the Clients You Already Have.',
+      body: 'GeoRepute identifies opportunities your agency can convert into additional services, including SEO, GEO, content, reputation, social media, video, market expansion and ongoing strategic work.',
+      items: [
+        'SEO Opportunity',
+        'GEO Opportunity',
+        'Content Gap',
+        'AI Visibility Gap',
+        'Reputation Gap',
+        'YouTube Opportunity',
+        'Social Opportunity',
+        'Market Expansion',
+        'Additional Languages',
+      ],
+      highlight:
+        'Every identified gap can become a new service, project or recurring revenue opportunity.',
+    },
+
+    /* --- 7 · agency intelligence ---------------------------------------- */
+    intelligence: {
+      headline: 'Bring Business Intelligence Into Every Client Meeting.',
+      body: 'Walk into every client meeting with evidence instead of assumptions.',
+      items: [
+        'Market demand',
+        'Competitor positioning',
+        'Google keyword intelligence',
+        'AI engine visibility',
+        'GEON',
+        'Business and marketing gaps',
+        'Opportunity analysis',
+        'Strategic priorities',
+        'Budget requirements',
+        'Resource requirements',
+        'Expected execution plan',
+      ],
+      supporting:
+        'Deliver intelligence your clients are not used to receiving from a marketing agency.',
+    },
+
+    /* --- 8 · standardization -------------------------------------------- */
+    standardization: {
+      headline: 'Bring Senior-Level Strategic Thinking to Every Account.',
+      body: 'Agency quality should not depend on which strategist happens to manage the client. GeoRepute helps standardize research, strategic thinking, planning and execution across every account.',
+      supporting:
+        'Turn senior strategist knowledge into a repeatable agency process.',
+    },
+
+    /* --- 9 · proposal and commercials ----------------------------------- */
+    proposal: {
+      headline: 'Build Better Proposals With Real Data Behind Them.',
+      body: "Move from estimated scopes and generic packages to proposals based on the client's actual market position, opportunities, workload, manpower requirements, channels and budget.",
+      flow: [
+        'Data',
+        'Opportunity',
+        'Strategy',
+        'Workload',
+        'Resources',
+        'Budget',
+        'Proposal',
+      ],
+    },
+
+    /* --- 10 · proof of power -------------------------------------------- */
+    proof: {
+      headline: 'The Intelligence Behind the Platform',
+      modules: [
+        'Google + 6 AI Engines',
+        '100+ Deep Business & Marketing Analyses',
+        'Competitor & Market Intelligence',
+        'Google Keyword & Demand Research',
+        'GEON',
+        'Marketing Due Diligence',
+        'Data-Driven Strategy',
+        'Work Plans',
+        'Budget & Resource Planning',
+        'Proposal Generation',
+        'SEO · GEO · Social · YouTube · TikTok Execution',
+        '7 Languages',
+        'Continuous PDCA',
+      ],
+    },
+
+    /* --- 11 · final positioning ----------------------------------------- */
+    close: {
+      headline: "You Don't Need Another Marketing Tool.",
+      statement: 'You Need the Infrastructure to Deliver More Value Per Client.',
+      body: 'GeoRepute helps agencies sell more, deliver more, retain clients longer, protect margins and scale without increasing headcount at the same rate.',
+    },
   },
 
   /* --- Language switcher (doc §8) ---------------------------------------- */

@@ -36,7 +36,7 @@ export const ACTIONS: Action[] = [
     action:
       'Publish a canonical entity description and propagate identical category language to trade directories and structured data.',
     reason:
-      'Three of six engines misclassify what Northwind sells. No content investment can move an answer while the entity record is wrong.',
+      'Three of six engines misclassify what Ironvale sells. No content investment can move an answer while the entity record is wrong.',
     evidenceRef: 'r-recognition',
     expectedImpact: 'Average recognition score 38 → 55',
     confidence: 'high',
@@ -57,7 +57,7 @@ export const ACTIONS: Action[] = [
     action:
       'Resolve the Gemini entity conflation with the same-named logistics firm.',
     reason:
-      'Gemini recognises Northwind at 24 of 100 and recommends it in zero questions. The cause is a disambiguation failure, not a content gap.',
+      'Gemini recognises Ironvale at 24 of 100 and recommends it in zero questions. The cause is a disambiguation failure, not a content gap.',
     evidenceRef: 'r-recognition',
     expectedImpact: 'Gemini recognition 24 → 45',
     confidence: 'medium',
@@ -118,7 +118,7 @@ export const ACTIONS: Action[] = [
     action:
       'Publish an evaluation framework that makes regional response time a first-class selection criterion.',
     reason:
-      'Engines describe the category in a competitor’s language. Northwind’s strongest differentiator is absent from every category description.',
+      'Engines describe the category in a competitor’s language. Ironvale’s strongest differentiator is absent from every category description.',
     evidenceRef: 'r-narrative',
     expectedImpact: 'Narrative ownership 12% → 24%',
     confidence: 'directional',

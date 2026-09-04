@@ -564,7 +564,7 @@ French, Spanish and Portuguese need no change and record them as identity
 mappings so `i18n-port.mjs` reports parity rather than flagging a gap.
 
 **Trade-publication mastheads stay Latin everywhere** — `Industrial
-Distribution`, `Modern Supply Chain`, `Fastener Technology`, `Plant
+Distribution`, `Supply Chain Ledger`, `The Fastener Ledger`, `Plant
 Engineering`. They are invented proper nouns, like the competitor company
 names, and they are in `PHRASES` in `scripts/i18n-audit.mjs` so script mode
 does not report them.

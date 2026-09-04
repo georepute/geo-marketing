@@ -343,7 +343,7 @@ export default async function MethodologyPage() {
             </p>
             <p className="text-caption text-ink-2 mt-3 max-w-3xl">
               <Rich
-                text={t('Northwind Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.', {
+                text={t('Ironvale Supply is a fictional organisation. Its figures are seeded, internally consistent and derived from a single set of anchor facts — <b>{presence}</b> recommendation presence, <b>{coverage}</b> supplier-evaluation coverage, <b>{share}</b> competitor share. Every other number on this site is computed from those, and a test suite fails the build if any screen disagrees.', {
                   presence: percent(4.2),
                   coverage: '7%',
                   share: percent(31),
