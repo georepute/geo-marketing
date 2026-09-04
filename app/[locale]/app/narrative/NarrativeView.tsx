@@ -963,7 +963,7 @@ function QuestionColumn({
                         className="shrink-0"
                         style={{
                           color:
-                            p.northwindRecommendedBy.length === 0
+                            p.subjectRecommendedBy.length === 0
                               ? 'var(--gr-critical)'
                               : 'var(--gr-positive)',
                         }}
@@ -972,7 +972,7 @@ function QuestionColumn({
                       </span>
                       <span className="text-caption text-ink-2">
                         {p.text}
-                        {p.northwindRecommendedBy.length === 0 ? (
+                        {p.subjectRecommendedBy.length === 0 ? (
                           <span className="text-ink-3"> {t('— absent')}</span>
                         ) : null}
                       </span>

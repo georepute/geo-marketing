@@ -16,11 +16,23 @@ import { copy } from '@/lib/copy/en'
         Guarded by scanning app/ and components/ for the literal text.
    ========================================================================= */
 
-/** Transcribed from brief §19, Core Commercial Copy System. Do not edit. */
+/**
+ * Transcribed from brief §19, Core Commercial Copy System. Do not edit.
+ *
+ * THREE EXCEPTIONS, MARKED BELOW. The hero was repositioned from the end
+ * business to the marketing agency on the client's instruction, so category,
+ * heroPrimary and heroContinuation no longer match §19 and are frozen against
+ * the agency brief instead. The guard still does its job — those three are
+ * pinned just as hard, and the other fifteen remain §19 verbatim. Only edit
+ * one of them alongside a written instruction to change the copy; an edit
+ * that arrives on its own is the drift this file exists to catch.
+ */
 const BRIEF_S19: Record<string, string> = {
-  category: 'THE DECISION INTELLIGENCE OPERATING SYSTEM',
-  heroPrimary: 'See Where Your Business Is Recognized, Recommended and Chosen.',
-  heroContinuation: 'And where the decision goes somewhere else.',
+  /* --- agency repositioning, not §19 ----------------------------------- */
+  category: 'THE INTELLIGENCE & EXECUTION LAYER FOR MODERN AGENCIES',
+  heroPrimary: 'Sell More. Deliver More. Retain Clients Longer.',
+  heroContinuation: 'Without Scaling Your Team at the Same Rate.',
+  /* --- §19 verbatim from here ------------------------------------------ */
   categoryPositioning:
     'Traditional platforms optimize channels. GeoRepute reconstructs decisions.',
   analyticsDisruption: 'Your analytics start too late.',

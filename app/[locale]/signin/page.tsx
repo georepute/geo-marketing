@@ -51,14 +51,14 @@ export default async function SignInPage() {
             {t('Enter the demonstration workspace')}
           </h1>
           <p className="text-body text-ink-2 mt-4">
-            {t('This environment has no authentication. Every visitor sees the same seeded organisation, Northwind Supply, so that every figure stays verifiable against the published methodology.')}
+            {t('This environment has no authentication. Every visitor sees the same seeded organisation, Ironvale Supply, so that every figure stays verifiable against the published methodology.')}
           </p>
 
           <div className="mt-8 rounded-md border border-line bg-panel p-5">
             <p className="text-label uppercase text-ink-3">{t('Workspace')}</p>
-            <p className="text-body text-ink mt-3">Northwind Supply</p>
+            <p className="text-body text-ink mt-3">Ironvale Supply</p>
             <p className="text-caption text-ink-3 mt-1 font-mono">
-              {t('northwindsupply.com · US Midwest')}
+              {t('ironvale.example · US Midwest')}
             </p>
           </div>
 

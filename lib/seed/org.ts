@@ -1,13 +1,13 @@
 import { GEON_WEIGHTS, SPINE, AS_OF } from './spine'
 
 /* ============================================================================
-   Northwind Supply — the single fictional organisation. Brief §18 Organization.
+   Ironvale Supply — the single fictional organisation. Brief §18 Organization.
    ========================================================================= */
 
 export const ORG = {
-  id: 'northwind',
-  name: 'Northwind Supply',
-  domain: 'northwindsupply.com',
+  id: 'ironvale',
+  name: 'Ironvale Supply',
+  domain: 'ironvale.example',
   category: 'Industrial MRO and fastener distribution',
   businessType: 'B2B distributor',
   market: 'United States — Midwest',

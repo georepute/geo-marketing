@@ -23,33 +23,33 @@ export const READOUTS: Readout[] = [
     engineId: 'ai-recognition',
     title: 'The revenue-deciding stage is the stage least defended',
     executiveTruth:
-      'Northwind appears in 7% of supplier-evaluation answers — the stage that decides 60% of revenue and that Kestrel controls in five of seven questions.',
+      'Ironvale appears in 7% of supplier-evaluation answers — the stage that decides 60% of revenue and that Cindermark controls in five of seven questions.',
     businessMeaning:
       'Buyers at supplier evaluation have already chosen a solution and are choosing a vendor. This stage carries under 15% of query volume, so volume-led tooling ranks it as unimportant — while it decides most of the revenue. Absence here is exclusion from the shortlist at the moment the order is assigned.',
     evidence: [
       {
         subject: 'Which industrial fastener suppliers are most reliable in the Midwest?',
         source: 'Perplexity',
-        observation: 'Northwind listed fourth of five suppliers.',
+        observation: 'Ironvale listed fourth of five suppliers.',
         observedAt: '2026-07-31',
       },
       {
         subject: 'Best MRO distributors for manufacturing plants',
         source: 'All six engines',
-        observation: 'Northwind absent from every answer. Kestrel named first in four.',
+        observation: 'Ironvale absent from every answer. Cindermark named first in four.',
         observedAt: '2026-07-30',
       },
       {
         subject: 'Who are the top industrial supply companies for fasteners?',
         source: 'All six engines',
-        observation: 'Northwind absent. No engine cited a Northwind source.',
+        observation: 'Ironvale absent. No engine cited a Ironvale source.',
         observedAt: '2026-07-29',
       },
     ],
     connectedSignals: [
       { id: 'r-authority', label: 'Independent authority evidence', relationship: 'supporting', value: 'Weak — 3 sources' },
       { id: 'r-recognition', label: 'Entity understanding', relationship: 'supporting', value: '38 of 100 average' },
-      { id: 'r-competitor', label: 'Competitor recommendation share', relationship: 'downstream', value: '31% — Kestrel Industrial' },
+      { id: 'r-competitor', label: 'Competitor recommendation share', relationship: 'downstream', value: '31% — Cindermark Industrial' },
       { id: 'r-paid-dependency', label: 'Paid dependency', relationship: 'downstream', value: 'High' },
     ],
     competitorContext: {
@@ -80,7 +80,7 @@ export const READOUTS: Readout[] = [
     engineId: 'ai-recognition',
     title: 'Entity understanding is incomplete or wrong',
     executiveTruth:
-      'Three of six AI engines misidentify what Northwind sells, and one does not recognise it as a distinct business at all.',
+      'Three of six AI engines misidentify what Ironvale sells, and one does not recognise it as a distinct business at all.',
     businessMeaning:
       'An engine that cannot categorise a business cannot recommend it. This is upstream of every visibility metric: no amount of content moves an answer if the entity record is wrong.',
     evidence: [
@@ -118,7 +118,7 @@ export const READOUTS: Readout[] = [
     executiveTruth:
       'Eleven of twenty tracked commercial keywords sit outside the Google top ten and receive no AI recommendation — the decision happens on neither surface.',
     businessMeaning:
-      'Google rank and AI recommendation are separate commercial assets. Northwind ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.',
+      'Google rank and AI recommendation are separate commercial assets. Ironvale ranks first for account setup — a question asked only after the vendor has already been chosen — and is absent from every question that decides who that vendor is.',
     evidence: [
       { subject: 'industrial fastener supplier', source: 'Google + 6 engines', observation: 'Not in top 100 organic. No AI recommendation. 320 searches per month.', observedAt: '2026-07-31' },
       { subject: 'industrial supply account setup', source: 'Google + Perplexity', observation: 'Position 1 organic, AI present. Volume 40 per month.', observedAt: '2026-07-31' },
@@ -150,15 +150,15 @@ export const READOUTS: Readout[] = [
   {
     id: 'r-competitor',
     engineId: 'competitor-decision',
-    title: 'Kestrel Industrial captures the decision before the lead exists',
+    title: 'Cindermark Industrial captures the decision before the lead exists',
     executiveTruth:
-      'Kestrel receives 31% of all AI recommendations across the tracked decision set; Northwind receives 4.2%.',
+      'Cindermark receives 31% of all AI recommendations across the tracked decision set; Ironvale receives 4.2%.',
     businessMeaning:
-      'This gap is not brand preference. It is an evidence gap: Kestrel supplies engines with material they can cite, and Northwind does not. The lead never reaches the CRM because the decision resolved before contact.',
+      'This gap is not brand preference. It is an evidence gap: Cindermark supplies engines with material they can cite, and Ironvale does not. The lead never reaches the CRM because the decision resolved before contact.',
     evidence: [
-      { subject: 'Recommendation share across 24 decision questions', source: 'All six engines', observation: 'Kestrel 31%, Meridian 18%, Halvorsen 11%, Atlas 7%, Northwind 4.2%.', observedAt: '2026-07-31' },
-      { subject: 'Independent authority sources cited', source: 'Engine citation analysis', observation: 'Kestrel 21 sources, Northwind 3.', observedAt: '2026-07-30' },
-      { subject: 'Supplier-evaluation first mention', source: 'All six engines', observation: 'Kestrel named first in four of seven questions.', observedAt: '2026-07-30' },
+      { subject: 'Recommendation share across 24 decision questions', source: 'All six engines', observation: 'Cindermark 31%, Hollowpine 18%, Greyfen 11%, Ashcombe 7%, Ironvale 4.2%.', observedAt: '2026-07-31' },
+      { subject: 'Independent authority sources cited', source: 'Engine citation analysis', observation: 'Cindermark 21 sources, Ironvale 3.', observedAt: '2026-07-30' },
+      { subject: 'Supplier-evaluation first mention', source: 'All six engines', observation: 'Cindermark named first in four of seven questions.', observedAt: '2026-07-30' },
     ],
     connectedSignals: [
       { id: 'r-authority', label: 'Authority evidence', relationship: 'supporting', value: 'Weak' },
@@ -189,13 +189,13 @@ export const READOUTS: Readout[] = [
     engineId: 'competitor-decision',
     title: 'Independent authority evidence is weak',
     executiveTruth:
-      'Three independent sources reference Northwind; the competitor median is fourteen.',
+      'Three independent sources reference Ironvale; the competitor median is fourteen.',
     businessMeaning:
       'Engines do not recommend what they cannot corroborate. Authority is the lowest GEON vector at 28 of 100, and it is the constraint that holds every other signal down.',
     evidence: [
-      { subject: 'Independent source count', source: 'Citation analysis', observation: 'Northwind 3. Kestrel 21. Category median 14.', observedAt: '2026-07-31' },
+      { subject: 'Independent source count', source: 'Citation analysis', observation: 'Ironvale 3. Cindermark 21. Category median 14.', observedAt: '2026-07-31' },
       { subject: 'Trade publication coverage', source: 'Public web', observation: 'No coverage in the three publications engines cite most for this category.', observedAt: '2026-07-28' },
-      { subject: 'Source influence', source: 'All six engines', observation: 'Every Northwind mention traces to its own website. No third-party corroboration.', observedAt: '2026-07-30' },
+      { subject: 'Source influence', source: 'All six engines', observation: 'Every Ironvale mention traces to its own website. No third-party corroboration.', observedAt: '2026-07-30' },
     ],
     connectedSignals: [
       { id: 'r-competitor', label: 'Recommendation share', relationship: 'downstream', value: '4.2%' },
@@ -204,7 +204,7 @@ export const READOUTS: Readout[] = [
     competitorContext: {
       competitor: TOP_COMPETITOR.name,
       benefit: 'Twenty-one independent sources give engines corroboration on demand.',
-      why: 'Sustained trade-publication presence means engines can support a Kestrel recommendation with evidence that is not Kestrel’s own.',
+      why: 'Sustained trade-publication presence means engines can support a Cindermark recommendation with evidence that is not Cindermark’s own.',
     },
     commercialExposure: buildExposure({ share: 0.55, confidence: 'medium' }),
     timing: { window: WINDOW, urgency: 'immediate', decisionDeadline: DEADLINE },
@@ -239,8 +239,8 @@ export const READOUTS: Readout[] = [
     ],
     competitorContext: {
       competitor: TOP_COMPETITOR.name,
-      benefit: 'Holds organic and AI presence on the same questions Northwind must buy.',
-      why: 'Owned authority removes the need to bid, so Kestrel’s cost per decision falls as Northwind’s rises.',
+      benefit: 'Holds organic and AI presence on the same questions Ironvale must buy.',
+      why: 'Owned authority removes the need to bid, so Cindermark’s cost per decision falls as Ironvale’s rises.',
     },
     commercialExposure: buildExposure({ share: 0.36, confidence: 'medium' }),
     timing: { window: WINDOW, urgency: 'this-quarter', decisionDeadline: DEADLINE },
@@ -261,12 +261,12 @@ export const READOUTS: Readout[] = [
     engineId: 'ai-recognition',
     title: 'Nineteen of twenty-four decisions occur without the brand',
     executiveTruth:
-      'No AI engine names Northwind in nineteen of the twenty-four tracked decision questions.',
+      'No AI engine names Ironvale in nineteen of the twenty-four tracked decision questions.',
     businessMeaning:
       'These are not lost leads, because no lead was ever created. The decision completed inside the engine, and conventional analytics recorded nothing at all.',
     evidence: [
       { subject: 'Best MRO distributors for manufacturing plants', source: 'All six engines', observation: 'Absent. 35 searches per month.', observedAt: '2026-07-30' },
-      { subject: 'Which MRO supplier has the best fill rate?', source: 'All six engines', observation: 'Absent. Meridian named first.', observedAt: '2026-07-29' },
+      { subject: 'Which MRO supplier has the best fill rate?', source: 'All six engines', observation: 'Absent. Hollowpine named first.', observedAt: '2026-07-29' },
       { subject: 'Industrial fastener supplier with same-day shipping', source: 'All six engines', observation: 'Absent, despite same-day shipping being an operational strength.', observedAt: '2026-07-29' },
     ],
     connectedSignals: [
@@ -275,8 +275,8 @@ export const READOUTS: Readout[] = [
     ],
     competitorContext: {
       competitor: TOP_COMPETITOR.name,
-      benefit: 'Named in seventeen of the nineteen questions where Northwind is absent.',
-      why: 'Kestrel has published material addressing each question directly; engines reach for what exists.',
+      benefit: 'Named in seventeen of the nineteen questions where Ironvale is absent.',
+      why: 'Cindermark has published material addressing each question directly; engines reach for what exists.',
     },
     commercialExposure: buildExposure({ share: 0.79, confidence: 'directional' }),
     timing: { window: WINDOW, urgency: 'immediate', decisionDeadline: DEADLINE },
@@ -297,20 +297,20 @@ export const READOUTS: Readout[] = [
     engineId: 'competitor-decision',
     title: 'The category is described in a competitor’s language',
     executiveTruth:
-      'Northwind owns 12% of the language engines use to define this category.',
+      'Ironvale owns 12% of the language engines use to define this category.',
     businessMeaning:
       'Whoever defines the category sets the criteria buyers evaluate against. Competing on someone else’s definition means competing on terms chosen to favour them.',
     evidence: [
-      { subject: 'Category definition language', source: 'All six engines', observation: 'Engines describe MRO distribution using Meridian’s specification framing.', observedAt: '2026-07-30' },
-      { subject: 'Evaluation criteria cited', source: 'ChatGPT, Claude, Perplexity', observation: 'Fill rate and catalogue breadth cited first — Kestrel’s published criteria.', observedAt: '2026-07-29' },
-      { subject: 'Northwind differentiators', source: 'All six engines', observation: 'Same-day regional delivery not referenced in any category description.', observedAt: '2026-07-30' },
+      { subject: 'Category definition language', source: 'All six engines', observation: 'Engines describe MRO distribution using Hollowpine’s specification framing.', observedAt: '2026-07-30' },
+      { subject: 'Evaluation criteria cited', source: 'ChatGPT, Claude, Perplexity', observation: 'Fill rate and catalogue breadth cited first — Cindermark’s published criteria.', observedAt: '2026-07-29' },
+      { subject: 'Ironvale differentiators', source: 'All six engines', observation: 'Same-day regional delivery not referenced in any category description.', observedAt: '2026-07-30' },
     ],
     connectedSignals: [
       { id: 'r-competitor', label: 'Recommendation share', relationship: 'downstream', value: '4.2%' },
       { id: 'r-authority', label: 'Authority evidence', relationship: 'supporting', value: 'Weak' },
     ],
     competitorContext: {
-      competitor: 'Meridian Supply Co',
+      competitor: 'Hollowpine Supply Co',
       benefit: 'Its specification guidance has become the category’s default vocabulary.',
       why: 'Publishing evaluation criteria before competitors did made that framing the one engines learned.',
     },
