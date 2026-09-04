@@ -44,7 +44,7 @@ export function causalChain(): ChainLink[] {
       readoutId: 'r-recognition',
       kind: 'signal',
       because:
-        'The most-used engine puts Northwind forward in one of twenty-four decision questions.',
+        'The most-used engine puts Ironvale forward in one of twenty-four decision questions.',
     },
     {
       id: 'c2',

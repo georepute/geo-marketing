@@ -6,15 +6,15 @@ import type { AiEngineId, DecisionStage, Prompt } from './types'
    Every headline percentage in the product is computed from this table — none
    is typed twice. Two derivations are load-bearing and pinned to the spine:
 
-     · ChatGPT recommends Northwind in exactly 1 of 24 questions
+     · ChatGPT recommends Ironvale in exactly 1 of 24 questions
        → 1/24 = 4.1667% → 4.2%   (SPINE.chatgptRecommendationPresencePct)
 
-     · Northwind appears in 3 of the 42 supplier-evaluation answer slots
+     · Ironvale appears in 3 of the 42 supplier-evaluation answer slots
        (7 questions × 6 engines)
        → 3/42 = 7.14% → 7%       (SPINE.supplierEvaluationCoveragePct)
 
      · 6 recommendation events across 144 answer slots (24 × 6)
-       → 6/144 = 4.17% → 4.2%    (Northwind's own recommendation share, which
+       → 6/144 = 4.17% → 4.2%    (Ironvale's own recommendation share, which
                                   is why the competitor table cannot drift
                                   from this file)
 
@@ -60,8 +60,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 140,
-    northwindRecommendedBy: [],
-    winner: 'halvorsen',
+    subjectRecommendedBy: [],
+    winner: 'greyfen',
   },
   {
     id: 'q02',
@@ -69,8 +69,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 110,
-    northwindRecommendedBy: [],
-    winner: 'meridian',
+    subjectRecommendedBy: [],
+    winner: 'hollowpine',
   },
   {
     id: 'q03',
@@ -78,8 +78,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 95,
-    northwindRecommendedBy: [],
-    winner: 'halvorsen',
+    subjectRecommendedBy: [],
+    winner: 'greyfen',
   },
   {
     id: 'q04',
@@ -87,8 +87,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 80,
-    northwindRecommendedBy: ['chatgpt'],
-    winner: 'kestrel',
+    subjectRecommendedBy: ['chatgpt'],
+    winner: 'cindermark',
   },
   {
     id: 'q05',
@@ -96,8 +96,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 70,
-    northwindRecommendedBy: [],
-    winner: 'halvorsen',
+    subjectRecommendedBy: [],
+    winner: 'greyfen',
   },
   {
     id: 'q06',
@@ -105,8 +105,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'research',
     intent: 'informational',
     monthlyVolume: 55,
-    northwindRecommendedBy: [],
-    winner: 'meridian',
+    subjectRecommendedBy: [],
+    winner: 'hollowpine',
   },
 
   /* --- Concerns (3) — 140/mo -------------------------------------------- */
@@ -116,8 +116,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'concerns',
     intent: 'informational',
     monthlyVolume: 60,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q08',
@@ -125,8 +125,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'concerns',
     intent: 'informational',
     monthlyVolume: 45,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q09',
@@ -134,8 +134,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'concerns',
     intent: 'informational',
     monthlyVolume: 35,
-    northwindRecommendedBy: [],
-    winner: 'meridian',
+    subjectRecommendedBy: [],
+    winner: 'hollowpine',
   },
 
   /* --- Solution Evaluation (5) — 300/mo --------------------------------- */
@@ -145,8 +145,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'solution-evaluation',
     intent: 'comparative',
     monthlyVolume: 90,
-    northwindRecommendedBy: [],
-    winner: 'meridian',
+    subjectRecommendedBy: [],
+    winner: 'hollowpine',
   },
   {
     id: 'q11',
@@ -154,8 +154,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'solution-evaluation',
     intent: 'comparative',
     monthlyVolume: 75,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q12',
@@ -163,8 +163,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'solution-evaluation',
     intent: 'comparative',
     monthlyVolume: 60,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q13',
@@ -172,8 +172,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'solution-evaluation',
     intent: 'comparative',
     monthlyVolume: 45,
-    northwindRecommendedBy: ['claude', 'copilot'],
-    winner: 'meridian',
+    subjectRecommendedBy: ['claude', 'copilot'],
+    winner: 'hollowpine',
   },
   {
     id: 'q14',
@@ -181,8 +181,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'solution-evaluation',
     intent: 'informational',
     monthlyVolume: 30,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
 
   /* --- Supplier Evaluation (7) — 180/mo. The collapse. ------------------ */
@@ -192,8 +192,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 40,
-    northwindRecommendedBy: ['perplexity'],
-    winner: 'kestrel',
+    subjectRecommendedBy: ['perplexity'],
+    winner: 'cindermark',
   },
   {
     id: 'q16',
@@ -201,8 +201,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 35,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q17',
@@ -210,8 +210,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 30,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q18',
@@ -219,8 +219,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 25,
-    northwindRecommendedBy: [],
-    winner: 'meridian',
+    subjectRecommendedBy: [],
+    winner: 'hollowpine',
   },
   {
     id: 'q19',
@@ -228,8 +228,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 20,
-    northwindRecommendedBy: ['perplexity'],
-    winner: 'kestrel',
+    subjectRecommendedBy: ['perplexity'],
+    winner: 'cindermark',
   },
   {
     id: 'q20',
@@ -237,8 +237,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 18,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
   {
     id: 'q21',
@@ -246,8 +246,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'supplier-evaluation',
     intent: 'comparative',
     monthlyVolume: 12,
-    northwindRecommendedBy: ['claude'],
-    winner: 'atlas',
+    subjectRecommendedBy: ['claude'],
+    winner: 'ashcombe',
   },
 
   /* --- Purchase Decision (3) — 70/mo ------------------------------------ */
@@ -257,8 +257,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'purchase-decision',
     intent: 'transactional',
     monthlyVolume: 30,
-    northwindRecommendedBy: [],
-    winner: 'atlas',
+    subjectRecommendedBy: [],
+    winner: 'ashcombe',
   },
   {
     id: 'q23',
@@ -266,8 +266,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'purchase-decision',
     intent: 'transactional',
     monthlyVolume: 25,
-    northwindRecommendedBy: [],
-    winner: 'atlas',
+    subjectRecommendedBy: [],
+    winner: 'ashcombe',
   },
   {
     id: 'q24',
@@ -275,8 +275,8 @@ export const PROMPTS: Prompt[] = [
     stage: 'purchase-decision',
     intent: 'transactional',
     monthlyVolume: 15,
-    northwindRecommendedBy: [],
-    winner: 'kestrel',
+    subjectRecommendedBy: [],
+    winner: 'cindermark',
   },
 ]
 
@@ -295,10 +295,10 @@ export function promptsByStage(stage: DecisionStage): Prompt[] {
   return PROMPTS.filter((p) => p.stage === stage)
 }
 
-/** Share of all 24 questions in which a given engine recommends Northwind. */
+/** Share of all 24 questions in which a given engine recommends Ironvale. */
 export function enginePresencePct(engine: AiEngineId): number {
   const hits = PROMPTS.filter((p) =>
-    p.northwindRecommendedBy.includes(engine),
+    p.subjectRecommendedBy.includes(engine),
   ).length
   return Number(((hits / PROMPTS.length) * 100).toFixed(1))
 }
@@ -312,29 +312,29 @@ export function stageCoveragePct(stage: DecisionStage): number {
   const inStage = promptsByStage(stage)
   if (inStage.length === 0) return 0
   const slots = inStage.length * ENGINE_COUNT
-  const won = inStage.reduce((sum, p) => sum + p.northwindRecommendedBy.length, 0)
+  const won = inStage.reduce((sum, p) => sum + p.subjectRecommendedBy.length, 0)
   return Number(((won / slots) * 100).toFixed(1))
 }
 
-/** Questions where at least one engine recommends Northwind. */
+/** Questions where at least one engine recommends Ironvale. */
 export function promptsWithPresence(): Prompt[] {
-  return PROMPTS.filter((p) => p.northwindRecommendedBy.length > 0)
+  return PROMPTS.filter((p) => p.subjectRecommendedBy.length > 0)
 }
 
-/** Questions where no engine recommends Northwind — the missed decisions. */
+/** Questions where no engine recommends Ironvale — the missed decisions. */
 export function missedPrompts(): Prompt[] {
-  return PROMPTS.filter((p) => p.northwindRecommendedBy.length === 0)
+  return PROMPTS.filter((p) => p.subjectRecommendedBy.length === 0)
 }
 
 /** Total recommendation events across every engine and question. */
 export function totalRecommendationEvents(): number {
-  return PROMPTS.reduce((sum, p) => sum + p.northwindRecommendedBy.length, 0)
+  return PROMPTS.reduce((sum, p) => sum + p.subjectRecommendedBy.length, 0)
 }
 
 /**
  * Overall recommendation share: events won over every answer slot
  * (24 questions × 6 engines). This is the figure the competitor table quotes
- * for Northwind, so the two cannot disagree.
+ * for Ironvale, so the two cannot disagree.
  */
 export function overallRecommendationSharePct(): number {
   const slots = PROMPTS.length * ENGINE_COUNT
@@ -343,7 +343,7 @@ export function overallRecommendationSharePct(): number {
 
 /**
  * How much of a stage a single competitor controls, by first-named winner.
- * Kestrel's control is highest at supplier evaluation — which is the real
+ * Cindermark's control is highest at supplier evaluation — which is the real
  * argument, rather than a claim that coverage is lowest there.
  */
 export function competitorControlPct(

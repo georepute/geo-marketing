@@ -64,7 +64,7 @@ export function DomainEntry({
           {revealed ? t('Re-run preview') : t('Run instant preview')}
         </Button>
         <p className="text-caption text-ink-3 mt-4">
-          {t('Seeded demonstration. This environment always reconstructs Northwind Supply, an industrial distributor, so every figure stays verifiable.')}
+          {t('Seeded demonstration. This environment always reconstructs Ironvale Supply, an industrial distributor, so every figure stays verifiable.')}
         </p>
       </form>
 

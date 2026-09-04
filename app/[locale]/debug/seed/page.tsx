@@ -116,7 +116,7 @@ export default async function SeedTrace() {
   )
   const totalVolume = prompts.data.reduce((s, p) => s + p.monthlyVolume, 0)
   const events = prompts.data.reduce(
-    (s, p) => s + p.northwindRecommendedBy.length,
+    (s, p) => s + p.subjectRecommendedBy.length,
     0,
   )
 
@@ -172,7 +172,7 @@ export default async function SeedTrace() {
           <Row
             label="Top competitor recommendation share"
             value={percent(31)}
-            derivation="Kestrel Industrial — pinned, balances the share table"
+            derivation="Cindermark Industrial — pinned, balances the share table"
           />
           <Row
             label="Paid dependency"
@@ -332,7 +332,7 @@ export default async function SeedTrace() {
           />
           <Row
             label="Questions with any presence"
-            value={`${prompts.data.filter((p) => p.northwindRecommendedBy.length > 0).length} of 24`}
+            value={`${prompts.data.filter((p) => p.subjectRecommendedBy.length > 0).length} of 24`}
             derivation="19 decisions complete without the brand appearing at all"
           />
         </Table>

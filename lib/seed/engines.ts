@@ -7,11 +7,11 @@ import { enginePresencePct } from './prompts'
    Two distinct metrics, deliberately kept apart:
 
      · recommendationPresencePct — DERIVED from prompts.ts. How often this
-       engine actually puts Northwind forward. ChatGPT's value is the spine's
+       engine actually puts Ironvale forward. ChatGPT's value is the spine's
        4.2%.
 
      · recognitionScore — an entity-understanding score (0–100). A different
-       question: does the engine know who Northwind is at all, regardless of
+       question: does the engine know who Ironvale is at all, regardless of
        whether it recommends them?
 
    Conflating the two is the mistake that makes AI-visibility tools shallow.
@@ -22,7 +22,7 @@ export interface AiEngine {
   name: string
   /** 0–100. Does the engine understand the entity? Brief §7 AI Recognition. */
   recognitionScore: number
-  /** What the engine believes Northwind is. Brief §7 entity understanding. */
+  /** What the engine believes Ironvale is. Brief §7 entity understanding. */
   understoodAs: string
   /** Where that understanding is wrong or stale. */
   confusion: string | null
@@ -38,7 +38,7 @@ export const AI_ENGINES: AiEngine[] = [
     recognitionScore: 41,
     understoodAs: 'A regional industrial supplier in the US Midwest',
     confusion:
-      'Describes Northwind as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.',
+      'Describes Ironvale as a hardware retailer rather than an MRO distributor, which removes it from supplier-evaluation answers.',
     dominantSources: ['Trade directories', 'Company website', 'Wikipedia'],
     lastObserved: '2026-07-29',
   },
@@ -57,7 +57,7 @@ export const AI_ENGINES: AiEngine[] = [
     recognitionScore: 24,
     understoodAs: 'Unclear — associates the name with unrelated businesses',
     confusion:
-      'Conflates Northwind Supply with a same-named logistics firm, so category association fails entirely.',
+      'Conflates Ironvale Supply with a same-named logistics firm, so category association fails entirely.',
     dominantSources: ['Local listings', 'Aggregator pages'],
     lastObserved: '2026-07-28',
   },
@@ -90,7 +90,7 @@ export const AI_ENGINES: AiEngine[] = [
     recognitionScore: 21,
     understoodAs: 'Not recognized as a distinct business entity',
     confusion:
-      'No stable entity record. Answers reference the category without naming Northwind at all.',
+      'No stable entity record. Answers reference the category without naming Ironvale at all.',
     dominantSources: ['Social discussion', 'Aggregator pages'],
     lastObserved: '2026-07-27',
   },
@@ -106,7 +106,7 @@ export function engineMatrix() {
 
 /**
  * The engine carrying the most commercial risk: lowest recognition among
- * those that never recommend Northwind. Surfaced on the Home preview.
+ * those that never recommend Ironvale. Surfaced on the Home preview.
  */
 export function highestRiskEngine(): AiEngine {
   const silent = engineMatrix().filter((e) => e.recommendationPresencePct === 0)

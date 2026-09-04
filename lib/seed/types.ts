@@ -31,11 +31,11 @@ export type AiEngineId =
   | 'grok'
 
 export type CompetitorId =
-  | 'kestrel'
-  | 'meridian'
-  | 'halvorsen'
-  | 'atlas'
-  | 'northwind'
+  | 'cindermark'
+  | 'hollowpine'
+  | 'greyfen'
+  | 'ashcombe'
+  | 'ironvale'
 
 /* --------------------------------------------------------------------------
    Commercial exposure. Non-negotiable #5: never "confirmed lost revenue".
@@ -142,8 +142,8 @@ export interface Prompt {
   stage: DecisionStage
   intent: 'informational' | 'comparative' | 'transactional'
   monthlyVolume: number
-  /** Engines that recommended Northwind in their answer. */
-  northwindRecommendedBy: AiEngineId[]
+  /** Engines that recommended Ironvale in their answer. */
+  subjectRecommendedBy: AiEngineId[]
   /** Which competitor the majority of engines put forward instead. */
   winner: CompetitorId
 }
@@ -158,7 +158,7 @@ export interface SearchObservation {
   monthlyVolume: number
   cpc: number
   competition: 'low' | 'medium' | 'high'
-  /** Whether any AI engine surfaces Northwind for this keyword. */
+  /** Whether any AI engine surfaces Ironvale for this keyword. */
   aiPresence: boolean
 }
 

@@ -68,7 +68,7 @@ export default async function Home() {
   const t = await getT()
 
   const [preview, questions, competitors] = await Promise.all([
-    getDomainPreview('northwindsupply.com'),
+    getDomainPreview('ironvale.example'),
     getReconstructableQuestions(),
     getCompetitors(),
   ])

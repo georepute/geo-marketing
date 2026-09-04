@@ -126,7 +126,7 @@ export const promptSchema = z.object({
   stage: decisionStageSchema,
   intent: z.enum(['informational', 'comparative', 'transactional']),
   monthlyVolume: z.number().int().positive(),
-  northwindRecommendedBy: z.array(aiEngineIdSchema),
+  subjectRecommendedBy: z.array(aiEngineIdSchema),
   winner: z.string().min(1),
 })
 

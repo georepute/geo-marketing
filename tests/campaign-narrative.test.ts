@@ -284,11 +284,11 @@ describe('Election mode never passes seeded data off as a real record', () => {
   })
 
   it('analyses a different subject from every other surface', () => {
-    /* The commercial pages reconstruct Northwind Supply. If election mode ever
+    /* The commercial pages reconstruct Ironvale Supply. If election mode ever
        started analysing the same subject, it would be inventing a political
        record for a company that has none. */
-    expect(ELECTION_SUBJECT.candidate).not.toContain('Northwind')
-    expect(ELECTION_SUBJECT.name).not.toContain('Northwind')
+    expect(ELECTION_SUBJECT.candidate).not.toContain('Ironvale')
+    expect(ELECTION_SUBJECT.name).not.toContain('Ironvale')
   })
 
   it('names both a candidate and an opponent', () => {
